@@ -26,6 +26,8 @@
 #include <aws/ec2/model/HibernationOptions.h>
 #include <aws/ec2/model/InstanceMetadataOptionsResponse.h>
 #include <aws/ec2/model/EnclaveOptions.h>
+#include <aws/ec2/model/BootModeValues.h>
+#include <aws/ec2/model/PrivateDnsNameOptionsResponse.h>
 #include <aws/ec2/model/ProductCode.h>
 #include <aws/ec2/model/InstanceBlockDeviceMapping.h>
 #include <aws/ec2/model/ElasticGpuAssociation.h>
@@ -1476,46 +1478,22 @@ namespace Model
 
 
     /**
-     * <p>Specifies whether to enable an instance launched in a VPC to perform NAT.
-     * This controls whether source/destination checking is enabled on the instance. A
-     * value of <code>true</code> means that checking is enabled, and
-     * <code>false</code> means that checking is disabled. The value must be
-     * <code>false</code> for the instance to perform NAT. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html">NAT
-     * Instances</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
+     * <p>Indicates whether source/destination checking is enabled.</p>
      */
     inline bool GetSourceDestCheck() const{ return m_sourceDestCheck; }
 
     /**
-     * <p>Specifies whether to enable an instance launched in a VPC to perform NAT.
-     * This controls whether source/destination checking is enabled on the instance. A
-     * value of <code>true</code> means that checking is enabled, and
-     * <code>false</code> means that checking is disabled. The value must be
-     * <code>false</code> for the instance to perform NAT. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html">NAT
-     * Instances</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
+     * <p>Indicates whether source/destination checking is enabled.</p>
      */
     inline bool SourceDestCheckHasBeenSet() const { return m_sourceDestCheckHasBeenSet; }
 
     /**
-     * <p>Specifies whether to enable an instance launched in a VPC to perform NAT.
-     * This controls whether source/destination checking is enabled on the instance. A
-     * value of <code>true</code> means that checking is enabled, and
-     * <code>false</code> means that checking is disabled. The value must be
-     * <code>false</code> for the instance to perform NAT. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html">NAT
-     * Instances</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
+     * <p>Indicates whether source/destination checking is enabled.</p>
      */
     inline void SetSourceDestCheck(bool value) { m_sourceDestCheckHasBeenSet = true; m_sourceDestCheck = value; }
 
     /**
-     * <p>Specifies whether to enable an instance launched in a VPC to perform NAT.
-     * This controls whether source/destination checking is enabled on the instance. A
-     * value of <code>true</code> means that checking is enabled, and
-     * <code>false</code> means that checking is disabled. The value must be
-     * <code>false</code> for the instance to perform NAT. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html">NAT
-     * Instances</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
+     * <p>Indicates whether source/destination checking is enabled.</p>
      */
     inline Instance& WithSourceDestCheck(bool value) { SetSourceDestCheck(value); return *this;}
 
@@ -1848,42 +1826,42 @@ namespace Model
 
 
     /**
-     * <p>The license configurations.</p>
+     * <p>The license configurations for the instance.</p>
      */
     inline const Aws::Vector<LicenseConfiguration>& GetLicenses() const{ return m_licenses; }
 
     /**
-     * <p>The license configurations.</p>
+     * <p>The license configurations for the instance.</p>
      */
     inline bool LicensesHasBeenSet() const { return m_licensesHasBeenSet; }
 
     /**
-     * <p>The license configurations.</p>
+     * <p>The license configurations for the instance.</p>
      */
     inline void SetLicenses(const Aws::Vector<LicenseConfiguration>& value) { m_licensesHasBeenSet = true; m_licenses = value; }
 
     /**
-     * <p>The license configurations.</p>
+     * <p>The license configurations for the instance.</p>
      */
     inline void SetLicenses(Aws::Vector<LicenseConfiguration>&& value) { m_licensesHasBeenSet = true; m_licenses = std::move(value); }
 
     /**
-     * <p>The license configurations.</p>
+     * <p>The license configurations for the instance.</p>
      */
     inline Instance& WithLicenses(const Aws::Vector<LicenseConfiguration>& value) { SetLicenses(value); return *this;}
 
     /**
-     * <p>The license configurations.</p>
+     * <p>The license configurations for the instance.</p>
      */
     inline Instance& WithLicenses(Aws::Vector<LicenseConfiguration>&& value) { SetLicenses(std::move(value)); return *this;}
 
     /**
-     * <p>The license configurations.</p>
+     * <p>The license configurations for the instance.</p>
      */
     inline Instance& AddLicenses(const LicenseConfiguration& value) { m_licensesHasBeenSet = true; m_licenses.push_back(value); return *this; }
 
     /**
-     * <p>The license configurations.</p>
+     * <p>The license configurations for the instance.</p>
      */
     inline Instance& AddLicenses(LicenseConfiguration&& value) { m_licensesHasBeenSet = true; m_licenses.push_back(std::move(value)); return *this; }
 
@@ -1920,34 +1898,300 @@ namespace Model
 
 
     /**
-     * <p>Indicates whether the instance is enabled for AWS Nitro Enclaves.</p>
+     * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
+     * Enclaves.</p>
      */
     inline const EnclaveOptions& GetEnclaveOptions() const{ return m_enclaveOptions; }
 
     /**
-     * <p>Indicates whether the instance is enabled for AWS Nitro Enclaves.</p>
+     * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
+     * Enclaves.</p>
      */
     inline bool EnclaveOptionsHasBeenSet() const { return m_enclaveOptionsHasBeenSet; }
 
     /**
-     * <p>Indicates whether the instance is enabled for AWS Nitro Enclaves.</p>
+     * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
+     * Enclaves.</p>
      */
     inline void SetEnclaveOptions(const EnclaveOptions& value) { m_enclaveOptionsHasBeenSet = true; m_enclaveOptions = value; }
 
     /**
-     * <p>Indicates whether the instance is enabled for AWS Nitro Enclaves.</p>
+     * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
+     * Enclaves.</p>
      */
     inline void SetEnclaveOptions(EnclaveOptions&& value) { m_enclaveOptionsHasBeenSet = true; m_enclaveOptions = std::move(value); }
 
     /**
-     * <p>Indicates whether the instance is enabled for AWS Nitro Enclaves.</p>
+     * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
+     * Enclaves.</p>
      */
     inline Instance& WithEnclaveOptions(const EnclaveOptions& value) { SetEnclaveOptions(value); return *this;}
 
     /**
-     * <p>Indicates whether the instance is enabled for AWS Nitro Enclaves.</p>
+     * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro
+     * Enclaves.</p>
      */
     inline Instance& WithEnclaveOptions(EnclaveOptions&& value) { SetEnclaveOptions(std::move(value)); return *this;}
+
+
+    /**
+     * <p>The boot mode of the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline const BootModeValues& GetBootMode() const{ return m_bootMode; }
+
+    /**
+     * <p>The boot mode of the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline bool BootModeHasBeenSet() const { return m_bootModeHasBeenSet; }
+
+    /**
+     * <p>The boot mode of the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline void SetBootMode(const BootModeValues& value) { m_bootModeHasBeenSet = true; m_bootMode = value; }
+
+    /**
+     * <p>The boot mode of the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline void SetBootMode(BootModeValues&& value) { m_bootModeHasBeenSet = true; m_bootMode = std::move(value); }
+
+    /**
+     * <p>The boot mode of the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline Instance& WithBootMode(const BootModeValues& value) { SetBootMode(value); return *this;}
+
+    /**
+     * <p>The boot mode of the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline Instance& WithBootMode(BootModeValues&& value) { SetBootMode(std::move(value)); return *this;}
+
+
+    /**
+     * <p>The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline const Aws::String& GetPlatformDetails() const{ return m_platformDetails; }
+
+    /**
+     * <p>The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline bool PlatformDetailsHasBeenSet() const { return m_platformDetailsHasBeenSet; }
+
+    /**
+     * <p>The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline void SetPlatformDetails(const Aws::String& value) { m_platformDetailsHasBeenSet = true; m_platformDetails = value; }
+
+    /**
+     * <p>The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline void SetPlatformDetails(Aws::String&& value) { m_platformDetailsHasBeenSet = true; m_platformDetails = std::move(value); }
+
+    /**
+     * <p>The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline void SetPlatformDetails(const char* value) { m_platformDetailsHasBeenSet = true; m_platformDetails.assign(value); }
+
+    /**
+     * <p>The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline Instance& WithPlatformDetails(const Aws::String& value) { SetPlatformDetails(value); return *this;}
+
+    /**
+     * <p>The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline Instance& WithPlatformDetails(Aws::String&& value) { SetPlatformDetails(std::move(value)); return *this;}
+
+    /**
+     * <p>The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline Instance& WithPlatformDetails(const char* value) { SetPlatformDetails(value); return *this;}
+
+
+    /**
+     * <p>The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline const Aws::String& GetUsageOperation() const{ return m_usageOperation; }
+
+    /**
+     * <p>The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline bool UsageOperationHasBeenSet() const { return m_usageOperationHasBeenSet; }
+
+    /**
+     * <p>The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline void SetUsageOperation(const Aws::String& value) { m_usageOperationHasBeenSet = true; m_usageOperation = value; }
+
+    /**
+     * <p>The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline void SetUsageOperation(Aws::String&& value) { m_usageOperationHasBeenSet = true; m_usageOperation = std::move(value); }
+
+    /**
+     * <p>The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline void SetUsageOperation(const char* value) { m_usageOperationHasBeenSet = true; m_usageOperation.assign(value); }
+
+    /**
+     * <p>The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline Instance& WithUsageOperation(const Aws::String& value) { SetUsageOperation(value); return *this;}
+
+    /**
+     * <p>The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline Instance& WithUsageOperation(Aws::String&& value) { SetUsageOperation(std::move(value)); return *this;}
+
+    /**
+     * <p>The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI
+     * billing information fields</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     */
+    inline Instance& WithUsageOperation(const char* value) { SetUsageOperation(value); return *this;}
+
+
+    /**
+     * <p>The time that the usage operation was last updated.</p>
+     */
+    inline const Aws::Utils::DateTime& GetUsageOperationUpdateTime() const{ return m_usageOperationUpdateTime; }
+
+    /**
+     * <p>The time that the usage operation was last updated.</p>
+     */
+    inline bool UsageOperationUpdateTimeHasBeenSet() const { return m_usageOperationUpdateTimeHasBeenSet; }
+
+    /**
+     * <p>The time that the usage operation was last updated.</p>
+     */
+    inline void SetUsageOperationUpdateTime(const Aws::Utils::DateTime& value) { m_usageOperationUpdateTimeHasBeenSet = true; m_usageOperationUpdateTime = value; }
+
+    /**
+     * <p>The time that the usage operation was last updated.</p>
+     */
+    inline void SetUsageOperationUpdateTime(Aws::Utils::DateTime&& value) { m_usageOperationUpdateTimeHasBeenSet = true; m_usageOperationUpdateTime = std::move(value); }
+
+    /**
+     * <p>The time that the usage operation was last updated.</p>
+     */
+    inline Instance& WithUsageOperationUpdateTime(const Aws::Utils::DateTime& value) { SetUsageOperationUpdateTime(value); return *this;}
+
+    /**
+     * <p>The time that the usage operation was last updated.</p>
+     */
+    inline Instance& WithUsageOperationUpdateTime(Aws::Utils::DateTime&& value) { SetUsageOperationUpdateTime(std::move(value)); return *this;}
+
+
+    /**
+     * <p>The options for the instance hostname.</p>
+     */
+    inline const PrivateDnsNameOptionsResponse& GetPrivateDnsNameOptions() const{ return m_privateDnsNameOptions; }
+
+    /**
+     * <p>The options for the instance hostname.</p>
+     */
+    inline bool PrivateDnsNameOptionsHasBeenSet() const { return m_privateDnsNameOptionsHasBeenSet; }
+
+    /**
+     * <p>The options for the instance hostname.</p>
+     */
+    inline void SetPrivateDnsNameOptions(const PrivateDnsNameOptionsResponse& value) { m_privateDnsNameOptionsHasBeenSet = true; m_privateDnsNameOptions = value; }
+
+    /**
+     * <p>The options for the instance hostname.</p>
+     */
+    inline void SetPrivateDnsNameOptions(PrivateDnsNameOptionsResponse&& value) { m_privateDnsNameOptionsHasBeenSet = true; m_privateDnsNameOptions = std::move(value); }
+
+    /**
+     * <p>The options for the instance hostname.</p>
+     */
+    inline Instance& WithPrivateDnsNameOptions(const PrivateDnsNameOptionsResponse& value) { SetPrivateDnsNameOptions(value); return *this;}
+
+    /**
+     * <p>The options for the instance hostname.</p>
+     */
+    inline Instance& WithPrivateDnsNameOptions(PrivateDnsNameOptionsResponse&& value) { SetPrivateDnsNameOptions(std::move(value)); return *this;}
+
+
+    /**
+     * <p>The IPv6 address assigned to the instance.</p>
+     */
+    inline const Aws::String& GetIpv6Address() const{ return m_ipv6Address; }
+
+    /**
+     * <p>The IPv6 address assigned to the instance.</p>
+     */
+    inline bool Ipv6AddressHasBeenSet() const { return m_ipv6AddressHasBeenSet; }
+
+    /**
+     * <p>The IPv6 address assigned to the instance.</p>
+     */
+    inline void SetIpv6Address(const Aws::String& value) { m_ipv6AddressHasBeenSet = true; m_ipv6Address = value; }
+
+    /**
+     * <p>The IPv6 address assigned to the instance.</p>
+     */
+    inline void SetIpv6Address(Aws::String&& value) { m_ipv6AddressHasBeenSet = true; m_ipv6Address = std::move(value); }
+
+    /**
+     * <p>The IPv6 address assigned to the instance.</p>
+     */
+    inline void SetIpv6Address(const char* value) { m_ipv6AddressHasBeenSet = true; m_ipv6Address.assign(value); }
+
+    /**
+     * <p>The IPv6 address assigned to the instance.</p>
+     */
+    inline Instance& WithIpv6Address(const Aws::String& value) { SetIpv6Address(value); return *this;}
+
+    /**
+     * <p>The IPv6 address assigned to the instance.</p>
+     */
+    inline Instance& WithIpv6Address(Aws::String&& value) { SetIpv6Address(std::move(value)); return *this;}
+
+    /**
+     * <p>The IPv6 address assigned to the instance.</p>
+     */
+    inline Instance& WithIpv6Address(const char* value) { SetIpv6Address(value); return *this;}
 
   private:
 
@@ -2094,6 +2338,24 @@ namespace Model
 
     EnclaveOptions m_enclaveOptions;
     bool m_enclaveOptionsHasBeenSet;
+
+    BootModeValues m_bootMode;
+    bool m_bootModeHasBeenSet;
+
+    Aws::String m_platformDetails;
+    bool m_platformDetailsHasBeenSet;
+
+    Aws::String m_usageOperation;
+    bool m_usageOperationHasBeenSet;
+
+    Aws::Utils::DateTime m_usageOperationUpdateTime;
+    bool m_usageOperationUpdateTimeHasBeenSet;
+
+    PrivateDnsNameOptionsResponse m_privateDnsNameOptions;
+    bool m_privateDnsNameOptionsHasBeenSet;
+
+    Aws::String m_ipv6Address;
+    bool m_ipv6AddressHasBeenSet;
   };
 
 } // namespace Model

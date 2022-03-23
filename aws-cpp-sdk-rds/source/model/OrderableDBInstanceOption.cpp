@@ -64,8 +64,11 @@ OrderableDBInstanceOption::OrderableDBInstanceOption() :
     m_supportsKerberosAuthenticationHasBeenSet(false),
     m_outpostCapable(false),
     m_outpostCapableHasBeenSet(false),
+    m_supportedActivityStreamModesHasBeenSet(false),
     m_supportsGlobalDatabases(false),
-    m_supportsGlobalDatabasesHasBeenSet(false)
+    m_supportsGlobalDatabasesHasBeenSet(false),
+    m_supportsClusters(false),
+    m_supportsClustersHasBeenSet(false)
 {
 }
 
@@ -113,8 +116,11 @@ OrderableDBInstanceOption::OrderableDBInstanceOption(const XmlNode& xmlNode) :
     m_supportsKerberosAuthenticationHasBeenSet(false),
     m_outpostCapable(false),
     m_outpostCapableHasBeenSet(false),
+    m_supportedActivityStreamModesHasBeenSet(false),
     m_supportsGlobalDatabases(false),
-    m_supportsGlobalDatabasesHasBeenSet(false)
+    m_supportsGlobalDatabasesHasBeenSet(false),
+    m_supportsClusters(false),
+    m_supportsClustersHasBeenSet(false)
 {
   *this = xmlNode;
 }
@@ -299,11 +305,29 @@ OrderableDBInstanceOption& OrderableDBInstanceOption::operator =(const XmlNode& 
       m_outpostCapable = StringUtils::ConvertToBool(StringUtils::Trim(Aws::Utils::Xml::DecodeEscapedXmlText(outpostCapableNode.GetText()).c_str()).c_str());
       m_outpostCapableHasBeenSet = true;
     }
+    XmlNode supportedActivityStreamModesNode = resultNode.FirstChild("SupportedActivityStreamModes");
+    if(!supportedActivityStreamModesNode.IsNull())
+    {
+      XmlNode supportedActivityStreamModesMember = supportedActivityStreamModesNode.FirstChild("member");
+      while(!supportedActivityStreamModesMember.IsNull())
+      {
+        m_supportedActivityStreamModes.push_back(supportedActivityStreamModesMember.GetText());
+        supportedActivityStreamModesMember = supportedActivityStreamModesMember.NextNode("member");
+      }
+
+      m_supportedActivityStreamModesHasBeenSet = true;
+    }
     XmlNode supportsGlobalDatabasesNode = resultNode.FirstChild("SupportsGlobalDatabases");
     if(!supportsGlobalDatabasesNode.IsNull())
     {
       m_supportsGlobalDatabases = StringUtils::ConvertToBool(StringUtils::Trim(Aws::Utils::Xml::DecodeEscapedXmlText(supportsGlobalDatabasesNode.GetText()).c_str()).c_str());
       m_supportsGlobalDatabasesHasBeenSet = true;
+    }
+    XmlNode supportsClustersNode = resultNode.FirstChild("SupportsClusters");
+    if(!supportsClustersNode.IsNull())
+    {
+      m_supportsClusters = StringUtils::ConvertToBool(StringUtils::Trim(Aws::Utils::Xml::DecodeEscapedXmlText(supportsClustersNode.GetText()).c_str()).c_str());
+      m_supportsClustersHasBeenSet = true;
     }
   }
 
@@ -458,9 +482,23 @@ void OrderableDBInstanceOption::OutputToStream(Aws::OStream& oStream, const char
       oStream << location << index << locationValue << ".OutpostCapable=" << std::boolalpha << m_outpostCapable << "&";
   }
 
+  if(m_supportedActivityStreamModesHasBeenSet)
+  {
+      unsigned supportedActivityStreamModesIdx = 1;
+      for(auto& item : m_supportedActivityStreamModes)
+      {
+        oStream << location << index << locationValue << ".SupportedActivityStreamModes.member." << supportedActivityStreamModesIdx++ << "=" << StringUtils::URLEncode(item.c_str()) << "&";
+      }
+  }
+
   if(m_supportsGlobalDatabasesHasBeenSet)
   {
       oStream << location << index << locationValue << ".SupportsGlobalDatabases=" << std::boolalpha << m_supportsGlobalDatabases << "&";
+  }
+
+  if(m_supportsClustersHasBeenSet)
+  {
+      oStream << location << index << locationValue << ".SupportsClusters=" << std::boolalpha << m_supportsClusters << "&";
   }
 
 }
@@ -587,9 +625,21 @@ void OrderableDBInstanceOption::OutputToStream(Aws::OStream& oStream, const char
   {
       oStream << location << ".OutpostCapable=" << std::boolalpha << m_outpostCapable << "&";
   }
+  if(m_supportedActivityStreamModesHasBeenSet)
+  {
+      unsigned supportedActivityStreamModesIdx = 1;
+      for(auto& item : m_supportedActivityStreamModes)
+      {
+        oStream << location << ".SupportedActivityStreamModes.member." << supportedActivityStreamModesIdx++ << "=" << StringUtils::URLEncode(item.c_str()) << "&";
+      }
+  }
   if(m_supportsGlobalDatabasesHasBeenSet)
   {
       oStream << location << ".SupportsGlobalDatabases=" << std::boolalpha << m_supportsGlobalDatabases << "&";
+  }
+  if(m_supportsClustersHasBeenSet)
+  {
+      oStream << location << ".SupportsClusters=" << std::boolalpha << m_supportsClusters << "&";
   }
 }
 

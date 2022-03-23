@@ -180,8 +180,9 @@ namespace Model
 
     /**
      * <p>The name of the method within your code that Lambda calls to execute your
-     * function. The format includes the file name. It can also include namespaces and
-     * other qualifiers, depending on the runtime. For more information, see <a
+     * function. Handler is required if the deployment package is a .zip file archive.
+     * The format includes the file name. It can also include namespaces and other
+     * qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming
      * Model</a>.</p>
      */
@@ -189,8 +190,9 @@ namespace Model
 
     /**
      * <p>The name of the method within your code that Lambda calls to execute your
-     * function. The format includes the file name. It can also include namespaces and
-     * other qualifiers, depending on the runtime. For more information, see <a
+     * function. Handler is required if the deployment package is a .zip file archive.
+     * The format includes the file name. It can also include namespaces and other
+     * qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming
      * Model</a>.</p>
      */
@@ -198,8 +200,9 @@ namespace Model
 
     /**
      * <p>The name of the method within your code that Lambda calls to execute your
-     * function. The format includes the file name. It can also include namespaces and
-     * other qualifiers, depending on the runtime. For more information, see <a
+     * function. Handler is required if the deployment package is a .zip file archive.
+     * The format includes the file name. It can also include namespaces and other
+     * qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming
      * Model</a>.</p>
      */
@@ -207,8 +210,9 @@ namespace Model
 
     /**
      * <p>The name of the method within your code that Lambda calls to execute your
-     * function. The format includes the file name. It can also include namespaces and
-     * other qualifiers, depending on the runtime. For more information, see <a
+     * function. Handler is required if the deployment package is a .zip file archive.
+     * The format includes the file name. It can also include namespaces and other
+     * qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming
      * Model</a>.</p>
      */
@@ -216,8 +220,9 @@ namespace Model
 
     /**
      * <p>The name of the method within your code that Lambda calls to execute your
-     * function. The format includes the file name. It can also include namespaces and
-     * other qualifiers, depending on the runtime. For more information, see <a
+     * function. Handler is required if the deployment package is a .zip file archive.
+     * The format includes the file name. It can also include namespaces and other
+     * qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming
      * Model</a>.</p>
      */
@@ -225,8 +230,9 @@ namespace Model
 
     /**
      * <p>The name of the method within your code that Lambda calls to execute your
-     * function. The format includes the file name. It can also include namespaces and
-     * other qualifiers, depending on the runtime. For more information, see <a
+     * function. Handler is required if the deployment package is a .zip file archive.
+     * The format includes the file name. It can also include namespaces and other
+     * qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming
      * Model</a>.</p>
      */
@@ -234,8 +240,9 @@ namespace Model
 
     /**
      * <p>The name of the method within your code that Lambda calls to execute your
-     * function. The format includes the file name. It can also include namespaces and
-     * other qualifiers, depending on the runtime. For more information, see <a
+     * function. Handler is required if the deployment package is a .zip file archive.
+     * The format includes the file name. It can also include namespaces and other
+     * qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming
      * Model</a>.</p>
      */
@@ -243,8 +250,9 @@ namespace Model
 
     /**
      * <p>The name of the method within your code that Lambda calls to execute your
-     * function. The format includes the file name. It can also include namespaces and
-     * other qualifiers, depending on the runtime. For more information, see <a
+     * function. Handler is required if the deployment package is a .zip file archive.
+     * The format includes the file name. It can also include namespaces and other
+     * qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming
      * Model</a>.</p>
      */
@@ -293,63 +301,83 @@ namespace Model
 
 
     /**
-     * <p>The amount of time that Lambda allows a function to run before stopping it.
-     * The default is 3 seconds. The maximum allowed value is 900 seconds.</p>
+     * <p>The amount of time (in seconds) that Lambda allows a function to run before
+     * stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+     * For additional information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda
+     * execution environment</a>.</p>
      */
     inline int GetTimeout() const{ return m_timeout; }
 
     /**
-     * <p>The amount of time that Lambda allows a function to run before stopping it.
-     * The default is 3 seconds. The maximum allowed value is 900 seconds.</p>
+     * <p>The amount of time (in seconds) that Lambda allows a function to run before
+     * stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+     * For additional information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda
+     * execution environment</a>.</p>
      */
     inline bool TimeoutHasBeenSet() const { return m_timeoutHasBeenSet; }
 
     /**
-     * <p>The amount of time that Lambda allows a function to run before stopping it.
-     * The default is 3 seconds. The maximum allowed value is 900 seconds.</p>
+     * <p>The amount of time (in seconds) that Lambda allows a function to run before
+     * stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+     * For additional information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda
+     * execution environment</a>.</p>
      */
     inline void SetTimeout(int value) { m_timeoutHasBeenSet = true; m_timeout = value; }
 
     /**
-     * <p>The amount of time that Lambda allows a function to run before stopping it.
-     * The default is 3 seconds. The maximum allowed value is 900 seconds.</p>
+     * <p>The amount of time (in seconds) that Lambda allows a function to run before
+     * stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+     * For additional information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda
+     * execution environment</a>.</p>
      */
     inline UpdateFunctionConfigurationRequest& WithTimeout(int value) { SetTimeout(value); return *this;}
 
 
     /**
-     * <p>The amount of memory available to the function at runtime. Increasing the
-     * function's memory also increases its CPU allocation. The default value is 128
-     * MB. The value can be any multiple of 1 MB.</p>
+     * <p>The amount of <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-memory.html">memory
+     * available to the function</a> at runtime. Increasing the function memory also
+     * increases its CPU allocation. The default value is 128 MB. The value can be any
+     * multiple of 1 MB.</p>
      */
     inline int GetMemorySize() const{ return m_memorySize; }
 
     /**
-     * <p>The amount of memory available to the function at runtime. Increasing the
-     * function's memory also increases its CPU allocation. The default value is 128
-     * MB. The value can be any multiple of 1 MB.</p>
+     * <p>The amount of <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-memory.html">memory
+     * available to the function</a> at runtime. Increasing the function memory also
+     * increases its CPU allocation. The default value is 128 MB. The value can be any
+     * multiple of 1 MB.</p>
      */
     inline bool MemorySizeHasBeenSet() const { return m_memorySizeHasBeenSet; }
 
     /**
-     * <p>The amount of memory available to the function at runtime. Increasing the
-     * function's memory also increases its CPU allocation. The default value is 128
-     * MB. The value can be any multiple of 1 MB.</p>
+     * <p>The amount of <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-memory.html">memory
+     * available to the function</a> at runtime. Increasing the function memory also
+     * increases its CPU allocation. The default value is 128 MB. The value can be any
+     * multiple of 1 MB.</p>
      */
     inline void SetMemorySize(int value) { m_memorySizeHasBeenSet = true; m_memorySize = value; }
 
     /**
-     * <p>The amount of memory available to the function at runtime. Increasing the
-     * function's memory also increases its CPU allocation. The default value is 128
-     * MB. The value can be any multiple of 1 MB.</p>
+     * <p>The amount of <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-memory.html">memory
+     * available to the function</a> at runtime. Increasing the function memory also
+     * increases its CPU allocation. The default value is 128 MB. The value can be any
+     * multiple of 1 MB.</p>
      */
     inline UpdateFunctionConfigurationRequest& WithMemorySize(int value) { SetMemorySize(value); return *this;}
 
 
     /**
-     * <p>For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. When you connect a function to a VPC, it
-     * can only access resources and the internet through that VPC. For more
+     * <p>For network connectivity to Amazon Web Services resources in a VPC, specify a
+     * list of security groups and subnets in the VPC. When you connect a function to a
+     * VPC, it can only access resources and the internet through that VPC. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC
      * Settings</a>.</p>
@@ -357,9 +385,9 @@ namespace Model
     inline const VpcConfig& GetVpcConfig() const{ return m_vpcConfig; }
 
     /**
-     * <p>For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. When you connect a function to a VPC, it
-     * can only access resources and the internet through that VPC. For more
+     * <p>For network connectivity to Amazon Web Services resources in a VPC, specify a
+     * list of security groups and subnets in the VPC. When you connect a function to a
+     * VPC, it can only access resources and the internet through that VPC. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC
      * Settings</a>.</p>
@@ -367,9 +395,9 @@ namespace Model
     inline bool VpcConfigHasBeenSet() const { return m_vpcConfigHasBeenSet; }
 
     /**
-     * <p>For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. When you connect a function to a VPC, it
-     * can only access resources and the internet through that VPC. For more
+     * <p>For network connectivity to Amazon Web Services resources in a VPC, specify a
+     * list of security groups and subnets in the VPC. When you connect a function to a
+     * VPC, it can only access resources and the internet through that VPC. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC
      * Settings</a>.</p>
@@ -377,9 +405,9 @@ namespace Model
     inline void SetVpcConfig(const VpcConfig& value) { m_vpcConfigHasBeenSet = true; m_vpcConfig = value; }
 
     /**
-     * <p>For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. When you connect a function to a VPC, it
-     * can only access resources and the internet through that VPC. For more
+     * <p>For network connectivity to Amazon Web Services resources in a VPC, specify a
+     * list of security groups and subnets in the VPC. When you connect a function to a
+     * VPC, it can only access resources and the internet through that VPC. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC
      * Settings</a>.</p>
@@ -387,9 +415,9 @@ namespace Model
     inline void SetVpcConfig(VpcConfig&& value) { m_vpcConfigHasBeenSet = true; m_vpcConfig = std::move(value); }
 
     /**
-     * <p>For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. When you connect a function to a VPC, it
-     * can only access resources and the internet through that VPC. For more
+     * <p>For network connectivity to Amazon Web Services resources in a VPC, specify a
+     * list of security groups and subnets in the VPC. When you connect a function to a
+     * VPC, it can only access resources and the internet through that VPC. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC
      * Settings</a>.</p>
@@ -397,9 +425,9 @@ namespace Model
     inline UpdateFunctionConfigurationRequest& WithVpcConfig(const VpcConfig& value) { SetVpcConfig(value); return *this;}
 
     /**
-     * <p>For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. When you connect a function to a VPC, it
-     * can only access resources and the internet through that VPC. For more
+     * <p>For network connectivity to Amazon Web Services resources in a VPC, specify a
+     * list of security groups and subnets in the VPC. When you connect a function to a
+     * VPC, it can only access resources and the internet through that VPC. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html">VPC
      * Settings</a>.</p>
@@ -446,37 +474,43 @@ namespace Model
 
     /**
      * <p>The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.</p>
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * Runtime is required if the deployment package is a .zip file archive. </p>
      */
     inline const Runtime& GetRuntime() const{ return m_runtime; }
 
     /**
      * <p>The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.</p>
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * Runtime is required if the deployment package is a .zip file archive. </p>
      */
     inline bool RuntimeHasBeenSet() const { return m_runtimeHasBeenSet; }
 
     /**
      * <p>The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.</p>
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * Runtime is required if the deployment package is a .zip file archive. </p>
      */
     inline void SetRuntime(const Runtime& value) { m_runtimeHasBeenSet = true; m_runtime = value; }
 
     /**
      * <p>The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.</p>
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * Runtime is required if the deployment package is a .zip file archive. </p>
      */
     inline void SetRuntime(Runtime&& value) { m_runtimeHasBeenSet = true; m_runtime = std::move(value); }
 
     /**
      * <p>The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.</p>
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * Runtime is required if the deployment package is a .zip file archive. </p>
      */
     inline UpdateFunctionConfigurationRequest& WithRuntime(const Runtime& value) { SetRuntime(value); return *this;}
 
     /**
      * <p>The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.</p>
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * Runtime is required if the deployment package is a .zip file archive. </p>
      */
     inline UpdateFunctionConfigurationRequest& WithRuntime(Runtime&& value) { SetRuntime(std::move(value)); return *this;}
 
@@ -537,95 +571,101 @@ namespace Model
 
 
     /**
-     * <p>The ARN of the AWS Key Management Service (AWS KMS) key that's used to
-     * encrypt your function's environment variables. If it's not provided, AWS Lambda
-     * uses a default service key.</p>
+     * <p>The ARN of the Amazon Web Services Key Management Service (KMS) key that's
+     * used to encrypt your function's environment variables. If it's not provided,
+     * Lambda uses a default service key.</p>
      */
     inline const Aws::String& GetKMSKeyArn() const{ return m_kMSKeyArn; }
 
     /**
-     * <p>The ARN of the AWS Key Management Service (AWS KMS) key that's used to
-     * encrypt your function's environment variables. If it's not provided, AWS Lambda
-     * uses a default service key.</p>
+     * <p>The ARN of the Amazon Web Services Key Management Service (KMS) key that's
+     * used to encrypt your function's environment variables. If it's not provided,
+     * Lambda uses a default service key.</p>
      */
     inline bool KMSKeyArnHasBeenSet() const { return m_kMSKeyArnHasBeenSet; }
 
     /**
-     * <p>The ARN of the AWS Key Management Service (AWS KMS) key that's used to
-     * encrypt your function's environment variables. If it's not provided, AWS Lambda
-     * uses a default service key.</p>
+     * <p>The ARN of the Amazon Web Services Key Management Service (KMS) key that's
+     * used to encrypt your function's environment variables. If it's not provided,
+     * Lambda uses a default service key.</p>
      */
     inline void SetKMSKeyArn(const Aws::String& value) { m_kMSKeyArnHasBeenSet = true; m_kMSKeyArn = value; }
 
     /**
-     * <p>The ARN of the AWS Key Management Service (AWS KMS) key that's used to
-     * encrypt your function's environment variables. If it's not provided, AWS Lambda
-     * uses a default service key.</p>
+     * <p>The ARN of the Amazon Web Services Key Management Service (KMS) key that's
+     * used to encrypt your function's environment variables. If it's not provided,
+     * Lambda uses a default service key.</p>
      */
     inline void SetKMSKeyArn(Aws::String&& value) { m_kMSKeyArnHasBeenSet = true; m_kMSKeyArn = std::move(value); }
 
     /**
-     * <p>The ARN of the AWS Key Management Service (AWS KMS) key that's used to
-     * encrypt your function's environment variables. If it's not provided, AWS Lambda
-     * uses a default service key.</p>
+     * <p>The ARN of the Amazon Web Services Key Management Service (KMS) key that's
+     * used to encrypt your function's environment variables. If it's not provided,
+     * Lambda uses a default service key.</p>
      */
     inline void SetKMSKeyArn(const char* value) { m_kMSKeyArnHasBeenSet = true; m_kMSKeyArn.assign(value); }
 
     /**
-     * <p>The ARN of the AWS Key Management Service (AWS KMS) key that's used to
-     * encrypt your function's environment variables. If it's not provided, AWS Lambda
-     * uses a default service key.</p>
+     * <p>The ARN of the Amazon Web Services Key Management Service (KMS) key that's
+     * used to encrypt your function's environment variables. If it's not provided,
+     * Lambda uses a default service key.</p>
      */
     inline UpdateFunctionConfigurationRequest& WithKMSKeyArn(const Aws::String& value) { SetKMSKeyArn(value); return *this;}
 
     /**
-     * <p>The ARN of the AWS Key Management Service (AWS KMS) key that's used to
-     * encrypt your function's environment variables. If it's not provided, AWS Lambda
-     * uses a default service key.</p>
+     * <p>The ARN of the Amazon Web Services Key Management Service (KMS) key that's
+     * used to encrypt your function's environment variables. If it's not provided,
+     * Lambda uses a default service key.</p>
      */
     inline UpdateFunctionConfigurationRequest& WithKMSKeyArn(Aws::String&& value) { SetKMSKeyArn(std::move(value)); return *this;}
 
     /**
-     * <p>The ARN of the AWS Key Management Service (AWS KMS) key that's used to
-     * encrypt your function's environment variables. If it's not provided, AWS Lambda
-     * uses a default service key.</p>
+     * <p>The ARN of the Amazon Web Services Key Management Service (KMS) key that's
+     * used to encrypt your function's environment variables. If it's not provided,
+     * Lambda uses a default service key.</p>
      */
     inline UpdateFunctionConfigurationRequest& WithKMSKeyArn(const char* value) { SetKMSKeyArn(value); return *this;}
 
 
     /**
      * <p>Set <code>Mode</code> to <code>Active</code> to sample and trace a subset of
-     * incoming requests with AWS X-Ray.</p>
+     * incoming requests with <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html">X-Ray</a>.</p>
      */
     inline const TracingConfig& GetTracingConfig() const{ return m_tracingConfig; }
 
     /**
      * <p>Set <code>Mode</code> to <code>Active</code> to sample and trace a subset of
-     * incoming requests with AWS X-Ray.</p>
+     * incoming requests with <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html">X-Ray</a>.</p>
      */
     inline bool TracingConfigHasBeenSet() const { return m_tracingConfigHasBeenSet; }
 
     /**
      * <p>Set <code>Mode</code> to <code>Active</code> to sample and trace a subset of
-     * incoming requests with AWS X-Ray.</p>
+     * incoming requests with <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html">X-Ray</a>.</p>
      */
     inline void SetTracingConfig(const TracingConfig& value) { m_tracingConfigHasBeenSet = true; m_tracingConfig = value; }
 
     /**
      * <p>Set <code>Mode</code> to <code>Active</code> to sample and trace a subset of
-     * incoming requests with AWS X-Ray.</p>
+     * incoming requests with <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html">X-Ray</a>.</p>
      */
     inline void SetTracingConfig(TracingConfig&& value) { m_tracingConfigHasBeenSet = true; m_tracingConfig = std::move(value); }
 
     /**
      * <p>Set <code>Mode</code> to <code>Active</code> to sample and trace a subset of
-     * incoming requests with AWS X-Ray.</p>
+     * incoming requests with <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html">X-Ray</a>.</p>
      */
     inline UpdateFunctionConfigurationRequest& WithTracingConfig(const TracingConfig& value) { SetTracingConfig(value); return *this;}
 
     /**
      * <p>Set <code>Mode</code> to <code>Active</code> to sample and trace a subset of
-     * incoming requests with AWS X-Ray.</p>
+     * incoming requests with <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html">X-Ray</a>.</p>
      */
     inline UpdateFunctionConfigurationRequest& WithTracingConfig(TracingConfig&& value) { SetTracingConfig(std::move(value)); return *this;}
 
@@ -802,32 +842,50 @@ namespace Model
 
 
     /**
-     * <p>Configuration values that override the container image Dockerfile.</p>
+     * <p> <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/images-parms.html">Container
+     * image configuration values</a> that override the values in the container image
+     * Docker file.</p>
      */
     inline const ImageConfig& GetImageConfig() const{ return m_imageConfig; }
 
     /**
-     * <p>Configuration values that override the container image Dockerfile.</p>
+     * <p> <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/images-parms.html">Container
+     * image configuration values</a> that override the values in the container image
+     * Docker file.</p>
      */
     inline bool ImageConfigHasBeenSet() const { return m_imageConfigHasBeenSet; }
 
     /**
-     * <p>Configuration values that override the container image Dockerfile.</p>
+     * <p> <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/images-parms.html">Container
+     * image configuration values</a> that override the values in the container image
+     * Docker file.</p>
      */
     inline void SetImageConfig(const ImageConfig& value) { m_imageConfigHasBeenSet = true; m_imageConfig = value; }
 
     /**
-     * <p>Configuration values that override the container image Dockerfile.</p>
+     * <p> <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/images-parms.html">Container
+     * image configuration values</a> that override the values in the container image
+     * Docker file.</p>
      */
     inline void SetImageConfig(ImageConfig&& value) { m_imageConfigHasBeenSet = true; m_imageConfig = std::move(value); }
 
     /**
-     * <p>Configuration values that override the container image Dockerfile.</p>
+     * <p> <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/images-parms.html">Container
+     * image configuration values</a> that override the values in the container image
+     * Docker file.</p>
      */
     inline UpdateFunctionConfigurationRequest& WithImageConfig(const ImageConfig& value) { SetImageConfig(value); return *this;}
 
     /**
-     * <p>Configuration values that override the container image Dockerfile.</p>
+     * <p> <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/images-parms.html">Container
+     * image configuration values</a> that override the values in the container image
+     * Docker file.</p>
      */
     inline UpdateFunctionConfigurationRequest& WithImageConfig(ImageConfig&& value) { SetImageConfig(std::move(value)); return *this;}
 

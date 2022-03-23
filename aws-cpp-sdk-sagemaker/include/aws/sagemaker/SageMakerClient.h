@@ -14,6 +14,7 @@
 #include <aws/sagemaker/model/AddAssociationResult.h>
 #include <aws/sagemaker/model/AddTagsResult.h>
 #include <aws/sagemaker/model/AssociateTrialComponentResult.h>
+#include <aws/sagemaker/model/BatchDescribeModelPackageResult.h>
 #include <aws/sagemaker/model/CreateActionResult.h>
 #include <aws/sagemaker/model/CreateAlgorithmResult.h>
 #include <aws/sagemaker/model/CreateAppResult.h>
@@ -34,6 +35,7 @@
 #include <aws/sagemaker/model/CreateHyperParameterTuningJobResult.h>
 #include <aws/sagemaker/model/CreateImageResult.h>
 #include <aws/sagemaker/model/CreateImageVersionResult.h>
+#include <aws/sagemaker/model/CreateInferenceRecommendationsJobResult.h>
 #include <aws/sagemaker/model/CreateLabelingJobResult.h>
 #include <aws/sagemaker/model/CreateModelResult.h>
 #include <aws/sagemaker/model/CreateModelBiasJobDefinitionResult.h>
@@ -49,6 +51,7 @@
 #include <aws/sagemaker/model/CreatePresignedNotebookInstanceUrlResult.h>
 #include <aws/sagemaker/model/CreateProcessingJobResult.h>
 #include <aws/sagemaker/model/CreateProjectResult.h>
+#include <aws/sagemaker/model/CreateStudioLifecycleConfigResult.h>
 #include <aws/sagemaker/model/CreateTrainingJobResult.h>
 #include <aws/sagemaker/model/CreateTransformJobResult.h>
 #include <aws/sagemaker/model/CreateTrialResult.h>
@@ -94,7 +97,9 @@
 #include <aws/sagemaker/model/DescribeHyperParameterTuningJobResult.h>
 #include <aws/sagemaker/model/DescribeImageResult.h>
 #include <aws/sagemaker/model/DescribeImageVersionResult.h>
+#include <aws/sagemaker/model/DescribeInferenceRecommendationsJobResult.h>
 #include <aws/sagemaker/model/DescribeLabelingJobResult.h>
+#include <aws/sagemaker/model/DescribeLineageGroupResult.h>
 #include <aws/sagemaker/model/DescribeModelResult.h>
 #include <aws/sagemaker/model/DescribeModelBiasJobDefinitionResult.h>
 #include <aws/sagemaker/model/DescribeModelExplainabilityJobDefinitionResult.h>
@@ -109,6 +114,7 @@
 #include <aws/sagemaker/model/DescribePipelineExecutionResult.h>
 #include <aws/sagemaker/model/DescribeProcessingJobResult.h>
 #include <aws/sagemaker/model/DescribeProjectResult.h>
+#include <aws/sagemaker/model/DescribeStudioLifecycleConfigResult.h>
 #include <aws/sagemaker/model/DescribeSubscribedWorkteamResult.h>
 #include <aws/sagemaker/model/DescribeTrainingJobResult.h>
 #include <aws/sagemaker/model/DescribeTransformJobResult.h>
@@ -121,6 +127,7 @@
 #include <aws/sagemaker/model/DisassociateTrialComponentResult.h>
 #include <aws/sagemaker/model/EnableSagemakerServicecatalogPortfolioResult.h>
 #include <aws/sagemaker/model/GetDeviceFleetReportResult.h>
+#include <aws/sagemaker/model/GetLineageGroupPolicyResult.h>
 #include <aws/sagemaker/model/GetModelPackageGroupPolicyResult.h>
 #include <aws/sagemaker/model/GetSagemakerServicecatalogPortfolioStatusResult.h>
 #include <aws/sagemaker/model/GetSearchSuggestionsResult.h>
@@ -149,10 +156,13 @@
 #include <aws/sagemaker/model/ListHyperParameterTuningJobsResult.h>
 #include <aws/sagemaker/model/ListImageVersionsResult.h>
 #include <aws/sagemaker/model/ListImagesResult.h>
+#include <aws/sagemaker/model/ListInferenceRecommendationsJobsResult.h>
 #include <aws/sagemaker/model/ListLabelingJobsResult.h>
 #include <aws/sagemaker/model/ListLabelingJobsForWorkteamResult.h>
+#include <aws/sagemaker/model/ListLineageGroupsResult.h>
 #include <aws/sagemaker/model/ListModelBiasJobDefinitionsResult.h>
 #include <aws/sagemaker/model/ListModelExplainabilityJobDefinitionsResult.h>
+#include <aws/sagemaker/model/ListModelMetadataResult.h>
 #include <aws/sagemaker/model/ListModelPackageGroupsResult.h>
 #include <aws/sagemaker/model/ListModelPackagesResult.h>
 #include <aws/sagemaker/model/ListModelQualityJobDefinitionsResult.h>
@@ -167,6 +177,7 @@
 #include <aws/sagemaker/model/ListPipelinesResult.h>
 #include <aws/sagemaker/model/ListProcessingJobsResult.h>
 #include <aws/sagemaker/model/ListProjectsResult.h>
+#include <aws/sagemaker/model/ListStudioLifecycleConfigsResult.h>
 #include <aws/sagemaker/model/ListSubscribedWorkteamsResult.h>
 #include <aws/sagemaker/model/ListTagsResult.h>
 #include <aws/sagemaker/model/ListTrainingJobsResult.h>
@@ -178,8 +189,12 @@
 #include <aws/sagemaker/model/ListWorkforcesResult.h>
 #include <aws/sagemaker/model/ListWorkteamsResult.h>
 #include <aws/sagemaker/model/PutModelPackageGroupPolicyResult.h>
+#include <aws/sagemaker/model/QueryLineageResult.h>
 #include <aws/sagemaker/model/RenderUiTemplateResult.h>
+#include <aws/sagemaker/model/RetryPipelineExecutionResult.h>
 #include <aws/sagemaker/model/SearchResult.h>
+#include <aws/sagemaker/model/SendPipelineExecutionStepFailureResult.h>
+#include <aws/sagemaker/model/SendPipelineExecutionStepSuccessResult.h>
 #include <aws/sagemaker/model/StartPipelineExecutionResult.h>
 #include <aws/sagemaker/model/StopPipelineExecutionResult.h>
 #include <aws/sagemaker/model/UpdateActionResult.h>
@@ -198,6 +213,7 @@
 #include <aws/sagemaker/model/UpdateNotebookInstanceLifecycleConfigResult.h>
 #include <aws/sagemaker/model/UpdatePipelineResult.h>
 #include <aws/sagemaker/model/UpdatePipelineExecutionResult.h>
+#include <aws/sagemaker/model/UpdateProjectResult.h>
 #include <aws/sagemaker/model/UpdateTrainingJobResult.h>
 #include <aws/sagemaker/model/UpdateTrialResult.h>
 #include <aws/sagemaker/model/UpdateTrialComponentResult.h>
@@ -247,6 +263,7 @@ namespace Model
         class AddAssociationRequest;
         class AddTagsRequest;
         class AssociateTrialComponentRequest;
+        class BatchDescribeModelPackageRequest;
         class CreateActionRequest;
         class CreateAlgorithmRequest;
         class CreateAppRequest;
@@ -269,6 +286,7 @@ namespace Model
         class CreateHyperParameterTuningJobRequest;
         class CreateImageRequest;
         class CreateImageVersionRequest;
+        class CreateInferenceRecommendationsJobRequest;
         class CreateLabelingJobRequest;
         class CreateModelRequest;
         class CreateModelBiasJobDefinitionRequest;
@@ -284,6 +302,7 @@ namespace Model
         class CreatePresignedNotebookInstanceUrlRequest;
         class CreateProcessingJobRequest;
         class CreateProjectRequest;
+        class CreateStudioLifecycleConfigRequest;
         class CreateTrainingJobRequest;
         class CreateTransformJobRequest;
         class CreateTrialRequest;
@@ -322,6 +341,7 @@ namespace Model
         class DeleteNotebookInstanceLifecycleConfigRequest;
         class DeletePipelineRequest;
         class DeleteProjectRequest;
+        class DeleteStudioLifecycleConfigRequest;
         class DeleteTagsRequest;
         class DeleteTrialRequest;
         class DeleteTrialComponentRequest;
@@ -352,7 +372,9 @@ namespace Model
         class DescribeHyperParameterTuningJobRequest;
         class DescribeImageRequest;
         class DescribeImageVersionRequest;
+        class DescribeInferenceRecommendationsJobRequest;
         class DescribeLabelingJobRequest;
+        class DescribeLineageGroupRequest;
         class DescribeModelRequest;
         class DescribeModelBiasJobDefinitionRequest;
         class DescribeModelExplainabilityJobDefinitionRequest;
@@ -367,6 +389,7 @@ namespace Model
         class DescribePipelineExecutionRequest;
         class DescribeProcessingJobRequest;
         class DescribeProjectRequest;
+        class DescribeStudioLifecycleConfigRequest;
         class DescribeSubscribedWorkteamRequest;
         class DescribeTrainingJobRequest;
         class DescribeTransformJobRequest;
@@ -379,6 +402,7 @@ namespace Model
         class DisassociateTrialComponentRequest;
         class EnableSagemakerServicecatalogPortfolioRequest;
         class GetDeviceFleetReportRequest;
+        class GetLineageGroupPolicyRequest;
         class GetModelPackageGroupPolicyRequest;
         class GetSagemakerServicecatalogPortfolioStatusRequest;
         class GetSearchSuggestionsRequest;
@@ -407,10 +431,13 @@ namespace Model
         class ListHyperParameterTuningJobsRequest;
         class ListImageVersionsRequest;
         class ListImagesRequest;
+        class ListInferenceRecommendationsJobsRequest;
         class ListLabelingJobsRequest;
         class ListLabelingJobsForWorkteamRequest;
+        class ListLineageGroupsRequest;
         class ListModelBiasJobDefinitionsRequest;
         class ListModelExplainabilityJobDefinitionsRequest;
+        class ListModelMetadataRequest;
         class ListModelPackageGroupsRequest;
         class ListModelPackagesRequest;
         class ListModelQualityJobDefinitionsRequest;
@@ -425,6 +452,7 @@ namespace Model
         class ListPipelinesRequest;
         class ListProcessingJobsRequest;
         class ListProjectsRequest;
+        class ListStudioLifecycleConfigsRequest;
         class ListSubscribedWorkteamsRequest;
         class ListTagsRequest;
         class ListTrainingJobsRequest;
@@ -436,9 +464,13 @@ namespace Model
         class ListWorkforcesRequest;
         class ListWorkteamsRequest;
         class PutModelPackageGroupPolicyRequest;
+        class QueryLineageRequest;
         class RegisterDevicesRequest;
         class RenderUiTemplateRequest;
+        class RetryPipelineExecutionRequest;
         class SearchRequest;
+        class SendPipelineExecutionStepFailureRequest;
+        class SendPipelineExecutionStepSuccessRequest;
         class StartMonitoringScheduleRequest;
         class StartNotebookInstanceRequest;
         class StartPipelineExecutionRequest;
@@ -446,6 +478,7 @@ namespace Model
         class StopCompilationJobRequest;
         class StopEdgePackagingJobRequest;
         class StopHyperParameterTuningJobRequest;
+        class StopInferenceRecommendationsJobRequest;
         class StopLabelingJobRequest;
         class StopMonitoringScheduleRequest;
         class StopNotebookInstanceRequest;
@@ -471,6 +504,7 @@ namespace Model
         class UpdateNotebookInstanceLifecycleConfigRequest;
         class UpdatePipelineRequest;
         class UpdatePipelineExecutionRequest;
+        class UpdateProjectRequest;
         class UpdateTrainingJobRequest;
         class UpdateTrialRequest;
         class UpdateTrialComponentRequest;
@@ -481,6 +515,7 @@ namespace Model
         typedef Aws::Utils::Outcome<AddAssociationResult, SageMakerError> AddAssociationOutcome;
         typedef Aws::Utils::Outcome<AddTagsResult, SageMakerError> AddTagsOutcome;
         typedef Aws::Utils::Outcome<AssociateTrialComponentResult, SageMakerError> AssociateTrialComponentOutcome;
+        typedef Aws::Utils::Outcome<BatchDescribeModelPackageResult, SageMakerError> BatchDescribeModelPackageOutcome;
         typedef Aws::Utils::Outcome<CreateActionResult, SageMakerError> CreateActionOutcome;
         typedef Aws::Utils::Outcome<CreateAlgorithmResult, SageMakerError> CreateAlgorithmOutcome;
         typedef Aws::Utils::Outcome<CreateAppResult, SageMakerError> CreateAppOutcome;
@@ -503,6 +538,7 @@ namespace Model
         typedef Aws::Utils::Outcome<CreateHyperParameterTuningJobResult, SageMakerError> CreateHyperParameterTuningJobOutcome;
         typedef Aws::Utils::Outcome<CreateImageResult, SageMakerError> CreateImageOutcome;
         typedef Aws::Utils::Outcome<CreateImageVersionResult, SageMakerError> CreateImageVersionOutcome;
+        typedef Aws::Utils::Outcome<CreateInferenceRecommendationsJobResult, SageMakerError> CreateInferenceRecommendationsJobOutcome;
         typedef Aws::Utils::Outcome<CreateLabelingJobResult, SageMakerError> CreateLabelingJobOutcome;
         typedef Aws::Utils::Outcome<CreateModelResult, SageMakerError> CreateModelOutcome;
         typedef Aws::Utils::Outcome<CreateModelBiasJobDefinitionResult, SageMakerError> CreateModelBiasJobDefinitionOutcome;
@@ -518,6 +554,7 @@ namespace Model
         typedef Aws::Utils::Outcome<CreatePresignedNotebookInstanceUrlResult, SageMakerError> CreatePresignedNotebookInstanceUrlOutcome;
         typedef Aws::Utils::Outcome<CreateProcessingJobResult, SageMakerError> CreateProcessingJobOutcome;
         typedef Aws::Utils::Outcome<CreateProjectResult, SageMakerError> CreateProjectOutcome;
+        typedef Aws::Utils::Outcome<CreateStudioLifecycleConfigResult, SageMakerError> CreateStudioLifecycleConfigOutcome;
         typedef Aws::Utils::Outcome<CreateTrainingJobResult, SageMakerError> CreateTrainingJobOutcome;
         typedef Aws::Utils::Outcome<CreateTransformJobResult, SageMakerError> CreateTransformJobOutcome;
         typedef Aws::Utils::Outcome<CreateTrialResult, SageMakerError> CreateTrialOutcome;
@@ -556,6 +593,7 @@ namespace Model
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> DeleteNotebookInstanceLifecycleConfigOutcome;
         typedef Aws::Utils::Outcome<DeletePipelineResult, SageMakerError> DeletePipelineOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> DeleteProjectOutcome;
+        typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> DeleteStudioLifecycleConfigOutcome;
         typedef Aws::Utils::Outcome<DeleteTagsResult, SageMakerError> DeleteTagsOutcome;
         typedef Aws::Utils::Outcome<DeleteTrialResult, SageMakerError> DeleteTrialOutcome;
         typedef Aws::Utils::Outcome<DeleteTrialComponentResult, SageMakerError> DeleteTrialComponentOutcome;
@@ -586,7 +624,9 @@ namespace Model
         typedef Aws::Utils::Outcome<DescribeHyperParameterTuningJobResult, SageMakerError> DescribeHyperParameterTuningJobOutcome;
         typedef Aws::Utils::Outcome<DescribeImageResult, SageMakerError> DescribeImageOutcome;
         typedef Aws::Utils::Outcome<DescribeImageVersionResult, SageMakerError> DescribeImageVersionOutcome;
+        typedef Aws::Utils::Outcome<DescribeInferenceRecommendationsJobResult, SageMakerError> DescribeInferenceRecommendationsJobOutcome;
         typedef Aws::Utils::Outcome<DescribeLabelingJobResult, SageMakerError> DescribeLabelingJobOutcome;
+        typedef Aws::Utils::Outcome<DescribeLineageGroupResult, SageMakerError> DescribeLineageGroupOutcome;
         typedef Aws::Utils::Outcome<DescribeModelResult, SageMakerError> DescribeModelOutcome;
         typedef Aws::Utils::Outcome<DescribeModelBiasJobDefinitionResult, SageMakerError> DescribeModelBiasJobDefinitionOutcome;
         typedef Aws::Utils::Outcome<DescribeModelExplainabilityJobDefinitionResult, SageMakerError> DescribeModelExplainabilityJobDefinitionOutcome;
@@ -601,6 +641,7 @@ namespace Model
         typedef Aws::Utils::Outcome<DescribePipelineExecutionResult, SageMakerError> DescribePipelineExecutionOutcome;
         typedef Aws::Utils::Outcome<DescribeProcessingJobResult, SageMakerError> DescribeProcessingJobOutcome;
         typedef Aws::Utils::Outcome<DescribeProjectResult, SageMakerError> DescribeProjectOutcome;
+        typedef Aws::Utils::Outcome<DescribeStudioLifecycleConfigResult, SageMakerError> DescribeStudioLifecycleConfigOutcome;
         typedef Aws::Utils::Outcome<DescribeSubscribedWorkteamResult, SageMakerError> DescribeSubscribedWorkteamOutcome;
         typedef Aws::Utils::Outcome<DescribeTrainingJobResult, SageMakerError> DescribeTrainingJobOutcome;
         typedef Aws::Utils::Outcome<DescribeTransformJobResult, SageMakerError> DescribeTransformJobOutcome;
@@ -613,6 +654,7 @@ namespace Model
         typedef Aws::Utils::Outcome<DisassociateTrialComponentResult, SageMakerError> DisassociateTrialComponentOutcome;
         typedef Aws::Utils::Outcome<EnableSagemakerServicecatalogPortfolioResult, SageMakerError> EnableSagemakerServicecatalogPortfolioOutcome;
         typedef Aws::Utils::Outcome<GetDeviceFleetReportResult, SageMakerError> GetDeviceFleetReportOutcome;
+        typedef Aws::Utils::Outcome<GetLineageGroupPolicyResult, SageMakerError> GetLineageGroupPolicyOutcome;
         typedef Aws::Utils::Outcome<GetModelPackageGroupPolicyResult, SageMakerError> GetModelPackageGroupPolicyOutcome;
         typedef Aws::Utils::Outcome<GetSagemakerServicecatalogPortfolioStatusResult, SageMakerError> GetSagemakerServicecatalogPortfolioStatusOutcome;
         typedef Aws::Utils::Outcome<GetSearchSuggestionsResult, SageMakerError> GetSearchSuggestionsOutcome;
@@ -641,10 +683,13 @@ namespace Model
         typedef Aws::Utils::Outcome<ListHyperParameterTuningJobsResult, SageMakerError> ListHyperParameterTuningJobsOutcome;
         typedef Aws::Utils::Outcome<ListImageVersionsResult, SageMakerError> ListImageVersionsOutcome;
         typedef Aws::Utils::Outcome<ListImagesResult, SageMakerError> ListImagesOutcome;
+        typedef Aws::Utils::Outcome<ListInferenceRecommendationsJobsResult, SageMakerError> ListInferenceRecommendationsJobsOutcome;
         typedef Aws::Utils::Outcome<ListLabelingJobsResult, SageMakerError> ListLabelingJobsOutcome;
         typedef Aws::Utils::Outcome<ListLabelingJobsForWorkteamResult, SageMakerError> ListLabelingJobsForWorkteamOutcome;
+        typedef Aws::Utils::Outcome<ListLineageGroupsResult, SageMakerError> ListLineageGroupsOutcome;
         typedef Aws::Utils::Outcome<ListModelBiasJobDefinitionsResult, SageMakerError> ListModelBiasJobDefinitionsOutcome;
         typedef Aws::Utils::Outcome<ListModelExplainabilityJobDefinitionsResult, SageMakerError> ListModelExplainabilityJobDefinitionsOutcome;
+        typedef Aws::Utils::Outcome<ListModelMetadataResult, SageMakerError> ListModelMetadataOutcome;
         typedef Aws::Utils::Outcome<ListModelPackageGroupsResult, SageMakerError> ListModelPackageGroupsOutcome;
         typedef Aws::Utils::Outcome<ListModelPackagesResult, SageMakerError> ListModelPackagesOutcome;
         typedef Aws::Utils::Outcome<ListModelQualityJobDefinitionsResult, SageMakerError> ListModelQualityJobDefinitionsOutcome;
@@ -659,6 +704,7 @@ namespace Model
         typedef Aws::Utils::Outcome<ListPipelinesResult, SageMakerError> ListPipelinesOutcome;
         typedef Aws::Utils::Outcome<ListProcessingJobsResult, SageMakerError> ListProcessingJobsOutcome;
         typedef Aws::Utils::Outcome<ListProjectsResult, SageMakerError> ListProjectsOutcome;
+        typedef Aws::Utils::Outcome<ListStudioLifecycleConfigsResult, SageMakerError> ListStudioLifecycleConfigsOutcome;
         typedef Aws::Utils::Outcome<ListSubscribedWorkteamsResult, SageMakerError> ListSubscribedWorkteamsOutcome;
         typedef Aws::Utils::Outcome<ListTagsResult, SageMakerError> ListTagsOutcome;
         typedef Aws::Utils::Outcome<ListTrainingJobsResult, SageMakerError> ListTrainingJobsOutcome;
@@ -670,9 +716,13 @@ namespace Model
         typedef Aws::Utils::Outcome<ListWorkforcesResult, SageMakerError> ListWorkforcesOutcome;
         typedef Aws::Utils::Outcome<ListWorkteamsResult, SageMakerError> ListWorkteamsOutcome;
         typedef Aws::Utils::Outcome<PutModelPackageGroupPolicyResult, SageMakerError> PutModelPackageGroupPolicyOutcome;
+        typedef Aws::Utils::Outcome<QueryLineageResult, SageMakerError> QueryLineageOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> RegisterDevicesOutcome;
         typedef Aws::Utils::Outcome<RenderUiTemplateResult, SageMakerError> RenderUiTemplateOutcome;
+        typedef Aws::Utils::Outcome<RetryPipelineExecutionResult, SageMakerError> RetryPipelineExecutionOutcome;
         typedef Aws::Utils::Outcome<SearchResult, SageMakerError> SearchOutcome;
+        typedef Aws::Utils::Outcome<SendPipelineExecutionStepFailureResult, SageMakerError> SendPipelineExecutionStepFailureOutcome;
+        typedef Aws::Utils::Outcome<SendPipelineExecutionStepSuccessResult, SageMakerError> SendPipelineExecutionStepSuccessOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> StartMonitoringScheduleOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> StartNotebookInstanceOutcome;
         typedef Aws::Utils::Outcome<StartPipelineExecutionResult, SageMakerError> StartPipelineExecutionOutcome;
@@ -680,6 +730,7 @@ namespace Model
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> StopCompilationJobOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> StopEdgePackagingJobOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> StopHyperParameterTuningJobOutcome;
+        typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> StopInferenceRecommendationsJobOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> StopLabelingJobOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> StopMonitoringScheduleOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SageMakerError> StopNotebookInstanceOutcome;
@@ -705,6 +756,7 @@ namespace Model
         typedef Aws::Utils::Outcome<UpdateNotebookInstanceLifecycleConfigResult, SageMakerError> UpdateNotebookInstanceLifecycleConfigOutcome;
         typedef Aws::Utils::Outcome<UpdatePipelineResult, SageMakerError> UpdatePipelineOutcome;
         typedef Aws::Utils::Outcome<UpdatePipelineExecutionResult, SageMakerError> UpdatePipelineExecutionOutcome;
+        typedef Aws::Utils::Outcome<UpdateProjectResult, SageMakerError> UpdateProjectOutcome;
         typedef Aws::Utils::Outcome<UpdateTrainingJobResult, SageMakerError> UpdateTrainingJobOutcome;
         typedef Aws::Utils::Outcome<UpdateTrialResult, SageMakerError> UpdateTrialOutcome;
         typedef Aws::Utils::Outcome<UpdateTrialComponentResult, SageMakerError> UpdateTrialComponentOutcome;
@@ -715,6 +767,7 @@ namespace Model
         typedef std::future<AddAssociationOutcome> AddAssociationOutcomeCallable;
         typedef std::future<AddTagsOutcome> AddTagsOutcomeCallable;
         typedef std::future<AssociateTrialComponentOutcome> AssociateTrialComponentOutcomeCallable;
+        typedef std::future<BatchDescribeModelPackageOutcome> BatchDescribeModelPackageOutcomeCallable;
         typedef std::future<CreateActionOutcome> CreateActionOutcomeCallable;
         typedef std::future<CreateAlgorithmOutcome> CreateAlgorithmOutcomeCallable;
         typedef std::future<CreateAppOutcome> CreateAppOutcomeCallable;
@@ -737,6 +790,7 @@ namespace Model
         typedef std::future<CreateHyperParameterTuningJobOutcome> CreateHyperParameterTuningJobOutcomeCallable;
         typedef std::future<CreateImageOutcome> CreateImageOutcomeCallable;
         typedef std::future<CreateImageVersionOutcome> CreateImageVersionOutcomeCallable;
+        typedef std::future<CreateInferenceRecommendationsJobOutcome> CreateInferenceRecommendationsJobOutcomeCallable;
         typedef std::future<CreateLabelingJobOutcome> CreateLabelingJobOutcomeCallable;
         typedef std::future<CreateModelOutcome> CreateModelOutcomeCallable;
         typedef std::future<CreateModelBiasJobDefinitionOutcome> CreateModelBiasJobDefinitionOutcomeCallable;
@@ -752,6 +806,7 @@ namespace Model
         typedef std::future<CreatePresignedNotebookInstanceUrlOutcome> CreatePresignedNotebookInstanceUrlOutcomeCallable;
         typedef std::future<CreateProcessingJobOutcome> CreateProcessingJobOutcomeCallable;
         typedef std::future<CreateProjectOutcome> CreateProjectOutcomeCallable;
+        typedef std::future<CreateStudioLifecycleConfigOutcome> CreateStudioLifecycleConfigOutcomeCallable;
         typedef std::future<CreateTrainingJobOutcome> CreateTrainingJobOutcomeCallable;
         typedef std::future<CreateTransformJobOutcome> CreateTransformJobOutcomeCallable;
         typedef std::future<CreateTrialOutcome> CreateTrialOutcomeCallable;
@@ -790,6 +845,7 @@ namespace Model
         typedef std::future<DeleteNotebookInstanceLifecycleConfigOutcome> DeleteNotebookInstanceLifecycleConfigOutcomeCallable;
         typedef std::future<DeletePipelineOutcome> DeletePipelineOutcomeCallable;
         typedef std::future<DeleteProjectOutcome> DeleteProjectOutcomeCallable;
+        typedef std::future<DeleteStudioLifecycleConfigOutcome> DeleteStudioLifecycleConfigOutcomeCallable;
         typedef std::future<DeleteTagsOutcome> DeleteTagsOutcomeCallable;
         typedef std::future<DeleteTrialOutcome> DeleteTrialOutcomeCallable;
         typedef std::future<DeleteTrialComponentOutcome> DeleteTrialComponentOutcomeCallable;
@@ -820,7 +876,9 @@ namespace Model
         typedef std::future<DescribeHyperParameterTuningJobOutcome> DescribeHyperParameterTuningJobOutcomeCallable;
         typedef std::future<DescribeImageOutcome> DescribeImageOutcomeCallable;
         typedef std::future<DescribeImageVersionOutcome> DescribeImageVersionOutcomeCallable;
+        typedef std::future<DescribeInferenceRecommendationsJobOutcome> DescribeInferenceRecommendationsJobOutcomeCallable;
         typedef std::future<DescribeLabelingJobOutcome> DescribeLabelingJobOutcomeCallable;
+        typedef std::future<DescribeLineageGroupOutcome> DescribeLineageGroupOutcomeCallable;
         typedef std::future<DescribeModelOutcome> DescribeModelOutcomeCallable;
         typedef std::future<DescribeModelBiasJobDefinitionOutcome> DescribeModelBiasJobDefinitionOutcomeCallable;
         typedef std::future<DescribeModelExplainabilityJobDefinitionOutcome> DescribeModelExplainabilityJobDefinitionOutcomeCallable;
@@ -835,6 +893,7 @@ namespace Model
         typedef std::future<DescribePipelineExecutionOutcome> DescribePipelineExecutionOutcomeCallable;
         typedef std::future<DescribeProcessingJobOutcome> DescribeProcessingJobOutcomeCallable;
         typedef std::future<DescribeProjectOutcome> DescribeProjectOutcomeCallable;
+        typedef std::future<DescribeStudioLifecycleConfigOutcome> DescribeStudioLifecycleConfigOutcomeCallable;
         typedef std::future<DescribeSubscribedWorkteamOutcome> DescribeSubscribedWorkteamOutcomeCallable;
         typedef std::future<DescribeTrainingJobOutcome> DescribeTrainingJobOutcomeCallable;
         typedef std::future<DescribeTransformJobOutcome> DescribeTransformJobOutcomeCallable;
@@ -847,6 +906,7 @@ namespace Model
         typedef std::future<DisassociateTrialComponentOutcome> DisassociateTrialComponentOutcomeCallable;
         typedef std::future<EnableSagemakerServicecatalogPortfolioOutcome> EnableSagemakerServicecatalogPortfolioOutcomeCallable;
         typedef std::future<GetDeviceFleetReportOutcome> GetDeviceFleetReportOutcomeCallable;
+        typedef std::future<GetLineageGroupPolicyOutcome> GetLineageGroupPolicyOutcomeCallable;
         typedef std::future<GetModelPackageGroupPolicyOutcome> GetModelPackageGroupPolicyOutcomeCallable;
         typedef std::future<GetSagemakerServicecatalogPortfolioStatusOutcome> GetSagemakerServicecatalogPortfolioStatusOutcomeCallable;
         typedef std::future<GetSearchSuggestionsOutcome> GetSearchSuggestionsOutcomeCallable;
@@ -875,10 +935,13 @@ namespace Model
         typedef std::future<ListHyperParameterTuningJobsOutcome> ListHyperParameterTuningJobsOutcomeCallable;
         typedef std::future<ListImageVersionsOutcome> ListImageVersionsOutcomeCallable;
         typedef std::future<ListImagesOutcome> ListImagesOutcomeCallable;
+        typedef std::future<ListInferenceRecommendationsJobsOutcome> ListInferenceRecommendationsJobsOutcomeCallable;
         typedef std::future<ListLabelingJobsOutcome> ListLabelingJobsOutcomeCallable;
         typedef std::future<ListLabelingJobsForWorkteamOutcome> ListLabelingJobsForWorkteamOutcomeCallable;
+        typedef std::future<ListLineageGroupsOutcome> ListLineageGroupsOutcomeCallable;
         typedef std::future<ListModelBiasJobDefinitionsOutcome> ListModelBiasJobDefinitionsOutcomeCallable;
         typedef std::future<ListModelExplainabilityJobDefinitionsOutcome> ListModelExplainabilityJobDefinitionsOutcomeCallable;
+        typedef std::future<ListModelMetadataOutcome> ListModelMetadataOutcomeCallable;
         typedef std::future<ListModelPackageGroupsOutcome> ListModelPackageGroupsOutcomeCallable;
         typedef std::future<ListModelPackagesOutcome> ListModelPackagesOutcomeCallable;
         typedef std::future<ListModelQualityJobDefinitionsOutcome> ListModelQualityJobDefinitionsOutcomeCallable;
@@ -893,6 +956,7 @@ namespace Model
         typedef std::future<ListPipelinesOutcome> ListPipelinesOutcomeCallable;
         typedef std::future<ListProcessingJobsOutcome> ListProcessingJobsOutcomeCallable;
         typedef std::future<ListProjectsOutcome> ListProjectsOutcomeCallable;
+        typedef std::future<ListStudioLifecycleConfigsOutcome> ListStudioLifecycleConfigsOutcomeCallable;
         typedef std::future<ListSubscribedWorkteamsOutcome> ListSubscribedWorkteamsOutcomeCallable;
         typedef std::future<ListTagsOutcome> ListTagsOutcomeCallable;
         typedef std::future<ListTrainingJobsOutcome> ListTrainingJobsOutcomeCallable;
@@ -904,9 +968,13 @@ namespace Model
         typedef std::future<ListWorkforcesOutcome> ListWorkforcesOutcomeCallable;
         typedef std::future<ListWorkteamsOutcome> ListWorkteamsOutcomeCallable;
         typedef std::future<PutModelPackageGroupPolicyOutcome> PutModelPackageGroupPolicyOutcomeCallable;
+        typedef std::future<QueryLineageOutcome> QueryLineageOutcomeCallable;
         typedef std::future<RegisterDevicesOutcome> RegisterDevicesOutcomeCallable;
         typedef std::future<RenderUiTemplateOutcome> RenderUiTemplateOutcomeCallable;
+        typedef std::future<RetryPipelineExecutionOutcome> RetryPipelineExecutionOutcomeCallable;
         typedef std::future<SearchOutcome> SearchOutcomeCallable;
+        typedef std::future<SendPipelineExecutionStepFailureOutcome> SendPipelineExecutionStepFailureOutcomeCallable;
+        typedef std::future<SendPipelineExecutionStepSuccessOutcome> SendPipelineExecutionStepSuccessOutcomeCallable;
         typedef std::future<StartMonitoringScheduleOutcome> StartMonitoringScheduleOutcomeCallable;
         typedef std::future<StartNotebookInstanceOutcome> StartNotebookInstanceOutcomeCallable;
         typedef std::future<StartPipelineExecutionOutcome> StartPipelineExecutionOutcomeCallable;
@@ -914,6 +982,7 @@ namespace Model
         typedef std::future<StopCompilationJobOutcome> StopCompilationJobOutcomeCallable;
         typedef std::future<StopEdgePackagingJobOutcome> StopEdgePackagingJobOutcomeCallable;
         typedef std::future<StopHyperParameterTuningJobOutcome> StopHyperParameterTuningJobOutcomeCallable;
+        typedef std::future<StopInferenceRecommendationsJobOutcome> StopInferenceRecommendationsJobOutcomeCallable;
         typedef std::future<StopLabelingJobOutcome> StopLabelingJobOutcomeCallable;
         typedef std::future<StopMonitoringScheduleOutcome> StopMonitoringScheduleOutcomeCallable;
         typedef std::future<StopNotebookInstanceOutcome> StopNotebookInstanceOutcomeCallable;
@@ -939,6 +1008,7 @@ namespace Model
         typedef std::future<UpdateNotebookInstanceLifecycleConfigOutcome> UpdateNotebookInstanceLifecycleConfigOutcomeCallable;
         typedef std::future<UpdatePipelineOutcome> UpdatePipelineOutcomeCallable;
         typedef std::future<UpdatePipelineExecutionOutcome> UpdatePipelineExecutionOutcomeCallable;
+        typedef std::future<UpdateProjectOutcome> UpdateProjectOutcomeCallable;
         typedef std::future<UpdateTrainingJobOutcome> UpdateTrainingJobOutcomeCallable;
         typedef std::future<UpdateTrialOutcome> UpdateTrialOutcomeCallable;
         typedef std::future<UpdateTrialComponentOutcome> UpdateTrialComponentOutcomeCallable;
@@ -952,6 +1022,7 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::AddAssociationRequest&, const Model::AddAssociationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > AddAssociationResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::AddTagsRequest&, const Model::AddTagsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > AddTagsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::AssociateTrialComponentRequest&, const Model::AssociateTrialComponentOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > AssociateTrialComponentResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::BatchDescribeModelPackageRequest&, const Model::BatchDescribeModelPackageOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > BatchDescribeModelPackageResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateActionRequest&, const Model::CreateActionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateActionResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateAlgorithmRequest&, const Model::CreateAlgorithmOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateAlgorithmResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateAppRequest&, const Model::CreateAppOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateAppResponseReceivedHandler;
@@ -974,6 +1045,7 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::CreateHyperParameterTuningJobRequest&, const Model::CreateHyperParameterTuningJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateHyperParameterTuningJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateImageRequest&, const Model::CreateImageOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateImageResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateImageVersionRequest&, const Model::CreateImageVersionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateImageVersionResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::CreateInferenceRecommendationsJobRequest&, const Model::CreateInferenceRecommendationsJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateInferenceRecommendationsJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateLabelingJobRequest&, const Model::CreateLabelingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateLabelingJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateModelRequest&, const Model::CreateModelOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateModelResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateModelBiasJobDefinitionRequest&, const Model::CreateModelBiasJobDefinitionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateModelBiasJobDefinitionResponseReceivedHandler;
@@ -989,6 +1061,7 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::CreatePresignedNotebookInstanceUrlRequest&, const Model::CreatePresignedNotebookInstanceUrlOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreatePresignedNotebookInstanceUrlResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateProcessingJobRequest&, const Model::CreateProcessingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateProcessingJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateProjectRequest&, const Model::CreateProjectOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateProjectResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::CreateStudioLifecycleConfigRequest&, const Model::CreateStudioLifecycleConfigOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateStudioLifecycleConfigResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateTrainingJobRequest&, const Model::CreateTrainingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateTrainingJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateTransformJobRequest&, const Model::CreateTransformJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateTransformJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::CreateTrialRequest&, const Model::CreateTrialOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateTrialResponseReceivedHandler;
@@ -1027,6 +1100,7 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::DeleteNotebookInstanceLifecycleConfigRequest&, const Model::DeleteNotebookInstanceLifecycleConfigOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteNotebookInstanceLifecycleConfigResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DeletePipelineRequest&, const Model::DeletePipelineOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeletePipelineResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DeleteProjectRequest&, const Model::DeleteProjectOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteProjectResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::DeleteStudioLifecycleConfigRequest&, const Model::DeleteStudioLifecycleConfigOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteStudioLifecycleConfigResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DeleteTagsRequest&, const Model::DeleteTagsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteTagsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DeleteTrialRequest&, const Model::DeleteTrialOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteTrialResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DeleteTrialComponentRequest&, const Model::DeleteTrialComponentOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteTrialComponentResponseReceivedHandler;
@@ -1057,7 +1131,9 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::DescribeHyperParameterTuningJobRequest&, const Model::DescribeHyperParameterTuningJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeHyperParameterTuningJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeImageRequest&, const Model::DescribeImageOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeImageResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeImageVersionRequest&, const Model::DescribeImageVersionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeImageVersionResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::DescribeInferenceRecommendationsJobRequest&, const Model::DescribeInferenceRecommendationsJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeInferenceRecommendationsJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeLabelingJobRequest&, const Model::DescribeLabelingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeLabelingJobResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::DescribeLineageGroupRequest&, const Model::DescribeLineageGroupOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeLineageGroupResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeModelRequest&, const Model::DescribeModelOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeModelResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeModelBiasJobDefinitionRequest&, const Model::DescribeModelBiasJobDefinitionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeModelBiasJobDefinitionResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeModelExplainabilityJobDefinitionRequest&, const Model::DescribeModelExplainabilityJobDefinitionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeModelExplainabilityJobDefinitionResponseReceivedHandler;
@@ -1072,6 +1148,7 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::DescribePipelineExecutionRequest&, const Model::DescribePipelineExecutionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribePipelineExecutionResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeProcessingJobRequest&, const Model::DescribeProcessingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeProcessingJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeProjectRequest&, const Model::DescribeProjectOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeProjectResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::DescribeStudioLifecycleConfigRequest&, const Model::DescribeStudioLifecycleConfigOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeStudioLifecycleConfigResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeSubscribedWorkteamRequest&, const Model::DescribeSubscribedWorkteamOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeSubscribedWorkteamResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeTrainingJobRequest&, const Model::DescribeTrainingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeTrainingJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::DescribeTransformJobRequest&, const Model::DescribeTransformJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeTransformJobResponseReceivedHandler;
@@ -1084,6 +1161,7 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::DisassociateTrialComponentRequest&, const Model::DisassociateTrialComponentOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DisassociateTrialComponentResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::EnableSagemakerServicecatalogPortfolioRequest&, const Model::EnableSagemakerServicecatalogPortfolioOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > EnableSagemakerServicecatalogPortfolioResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::GetDeviceFleetReportRequest&, const Model::GetDeviceFleetReportOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetDeviceFleetReportResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::GetLineageGroupPolicyRequest&, const Model::GetLineageGroupPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetLineageGroupPolicyResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::GetModelPackageGroupPolicyRequest&, const Model::GetModelPackageGroupPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetModelPackageGroupPolicyResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::GetSagemakerServicecatalogPortfolioStatusRequest&, const Model::GetSagemakerServicecatalogPortfolioStatusOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetSagemakerServicecatalogPortfolioStatusResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::GetSearchSuggestionsRequest&, const Model::GetSearchSuggestionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetSearchSuggestionsResponseReceivedHandler;
@@ -1112,10 +1190,13 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::ListHyperParameterTuningJobsRequest&, const Model::ListHyperParameterTuningJobsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListHyperParameterTuningJobsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListImageVersionsRequest&, const Model::ListImageVersionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListImageVersionsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListImagesRequest&, const Model::ListImagesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListImagesResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::ListInferenceRecommendationsJobsRequest&, const Model::ListInferenceRecommendationsJobsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListInferenceRecommendationsJobsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListLabelingJobsRequest&, const Model::ListLabelingJobsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListLabelingJobsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListLabelingJobsForWorkteamRequest&, const Model::ListLabelingJobsForWorkteamOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListLabelingJobsForWorkteamResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::ListLineageGroupsRequest&, const Model::ListLineageGroupsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListLineageGroupsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListModelBiasJobDefinitionsRequest&, const Model::ListModelBiasJobDefinitionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListModelBiasJobDefinitionsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListModelExplainabilityJobDefinitionsRequest&, const Model::ListModelExplainabilityJobDefinitionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListModelExplainabilityJobDefinitionsResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::ListModelMetadataRequest&, const Model::ListModelMetadataOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListModelMetadataResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListModelPackageGroupsRequest&, const Model::ListModelPackageGroupsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListModelPackageGroupsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListModelPackagesRequest&, const Model::ListModelPackagesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListModelPackagesResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListModelQualityJobDefinitionsRequest&, const Model::ListModelQualityJobDefinitionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListModelQualityJobDefinitionsResponseReceivedHandler;
@@ -1130,6 +1211,7 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::ListPipelinesRequest&, const Model::ListPipelinesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListPipelinesResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListProcessingJobsRequest&, const Model::ListProcessingJobsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListProcessingJobsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListProjectsRequest&, const Model::ListProjectsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListProjectsResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::ListStudioLifecycleConfigsRequest&, const Model::ListStudioLifecycleConfigsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListStudioLifecycleConfigsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListSubscribedWorkteamsRequest&, const Model::ListSubscribedWorkteamsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListSubscribedWorkteamsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListTagsRequest&, const Model::ListTagsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListTagsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListTrainingJobsRequest&, const Model::ListTrainingJobsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListTrainingJobsResponseReceivedHandler;
@@ -1141,9 +1223,13 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::ListWorkforcesRequest&, const Model::ListWorkforcesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListWorkforcesResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::ListWorkteamsRequest&, const Model::ListWorkteamsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListWorkteamsResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::PutModelPackageGroupPolicyRequest&, const Model::PutModelPackageGroupPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutModelPackageGroupPolicyResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::QueryLineageRequest&, const Model::QueryLineageOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > QueryLineageResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::RegisterDevicesRequest&, const Model::RegisterDevicesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RegisterDevicesResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::RenderUiTemplateRequest&, const Model::RenderUiTemplateOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RenderUiTemplateResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::RetryPipelineExecutionRequest&, const Model::RetryPipelineExecutionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RetryPipelineExecutionResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::SearchRequest&, const Model::SearchOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > SearchResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::SendPipelineExecutionStepFailureRequest&, const Model::SendPipelineExecutionStepFailureOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > SendPipelineExecutionStepFailureResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::SendPipelineExecutionStepSuccessRequest&, const Model::SendPipelineExecutionStepSuccessOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > SendPipelineExecutionStepSuccessResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::StartMonitoringScheduleRequest&, const Model::StartMonitoringScheduleOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartMonitoringScheduleResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::StartNotebookInstanceRequest&, const Model::StartNotebookInstanceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartNotebookInstanceResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::StartPipelineExecutionRequest&, const Model::StartPipelineExecutionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartPipelineExecutionResponseReceivedHandler;
@@ -1151,6 +1237,7 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::StopCompilationJobRequest&, const Model::StopCompilationJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopCompilationJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::StopEdgePackagingJobRequest&, const Model::StopEdgePackagingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopEdgePackagingJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::StopHyperParameterTuningJobRequest&, const Model::StopHyperParameterTuningJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopHyperParameterTuningJobResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::StopInferenceRecommendationsJobRequest&, const Model::StopInferenceRecommendationsJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopInferenceRecommendationsJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::StopLabelingJobRequest&, const Model::StopLabelingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopLabelingJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::StopMonitoringScheduleRequest&, const Model::StopMonitoringScheduleOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopMonitoringScheduleResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::StopNotebookInstanceRequest&, const Model::StopNotebookInstanceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopNotebookInstanceResponseReceivedHandler;
@@ -1176,6 +1263,7 @@ namespace Model
     typedef std::function<void(const SageMakerClient*, const Model::UpdateNotebookInstanceLifecycleConfigRequest&, const Model::UpdateNotebookInstanceLifecycleConfigOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateNotebookInstanceLifecycleConfigResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::UpdatePipelineRequest&, const Model::UpdatePipelineOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdatePipelineResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::UpdatePipelineExecutionRequest&, const Model::UpdatePipelineExecutionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdatePipelineExecutionResponseReceivedHandler;
+    typedef std::function<void(const SageMakerClient*, const Model::UpdateProjectRequest&, const Model::UpdateProjectOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateProjectResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::UpdateTrainingJobRequest&, const Model::UpdateTrainingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateTrainingJobResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::UpdateTrialRequest&, const Model::UpdateTrialOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateTrialResponseReceivedHandler;
     typedef std::function<void(const SageMakerClient*, const Model::UpdateTrialComponentRequest&, const Model::UpdateTrialComponentOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateTrialComponentResponseReceivedHandler;
@@ -1265,16 +1353,24 @@ namespace Model
          * configurations, and endpoints.</p> <p>Each tag consists of a key and an optional
          * value. Tag keys must be unique per resource. For more information about tags,
          * see For more information, see <a
-         * href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS
-         * Tagging Strategies</a>.</p>  <p>Tags that you add to a hyperparameter
-         * tuning job by calling this API are also added to any training jobs that the
-         * hyperparameter tuning job launches after you call this API, but not to training
-         * jobs that the hyperparameter tuning job launched before you called this API. To
-         * make sure that the tags associated with a hyperparameter tuning job are also
-         * added to all training jobs that the hyperparameter tuning job launches, add the
-         * tags when you first create the tuning job by specifying them in the
-         * <code>Tags</code> parameter of <a>CreateHyperParameterTuningJob</a> </p>
-         * <p><h3>See Also:</h3>   <a
+         * href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">Amazon
+         * Web Services Tagging Strategies</a>.</p>  <p>Tags that you add to a
+         * hyperparameter tuning job by calling this API are also added to any training
+         * jobs that the hyperparameter tuning job launches after you call this API, but
+         * not to training jobs that the hyperparameter tuning job launched before you
+         * called this API. To make sure that the tags associated with a hyperparameter
+         * tuning job are also added to all training jobs that the hyperparameter tuning
+         * job launches, add the tags when you first create the tuning job by specifying
+         * them in the <code>Tags</code> parameter of <a>CreateHyperParameterTuningJob</a>
+         * </p>   <p>Tags that you add to a SageMaker Studio Domain or User
+         * Profile by calling this API are also added to any Apps that the Domain or User
+         * Profile launches after you call this API, but not to Apps that the Domain or
+         * User Profile launched before you called this API. To make sure that the tags
+         * associated with a Domain or User Profile are also added to all Apps that the
+         * Domain or User Profile launches, add the tags when you first create the Domain
+         * or User Profile by specifying them in the <code>Tags</code> parameter of
+         * <a>CreateDomain</a> or <a>CreateUserProfile</a>.</p> <p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/AddTags">AWS
          * API Reference</a></p>
          */
@@ -1287,16 +1383,24 @@ namespace Model
          * configurations, and endpoints.</p> <p>Each tag consists of a key and an optional
          * value. Tag keys must be unique per resource. For more information about tags,
          * see For more information, see <a
-         * href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS
-         * Tagging Strategies</a>.</p>  <p>Tags that you add to a hyperparameter
-         * tuning job by calling this API are also added to any training jobs that the
-         * hyperparameter tuning job launches after you call this API, but not to training
-         * jobs that the hyperparameter tuning job launched before you called this API. To
-         * make sure that the tags associated with a hyperparameter tuning job are also
-         * added to all training jobs that the hyperparameter tuning job launches, add the
-         * tags when you first create the tuning job by specifying them in the
-         * <code>Tags</code> parameter of <a>CreateHyperParameterTuningJob</a> </p>
-         * <p><h3>See Also:</h3>   <a
+         * href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">Amazon
+         * Web Services Tagging Strategies</a>.</p>  <p>Tags that you add to a
+         * hyperparameter tuning job by calling this API are also added to any training
+         * jobs that the hyperparameter tuning job launches after you call this API, but
+         * not to training jobs that the hyperparameter tuning job launched before you
+         * called this API. To make sure that the tags associated with a hyperparameter
+         * tuning job are also added to all training jobs that the hyperparameter tuning
+         * job launches, add the tags when you first create the tuning job by specifying
+         * them in the <code>Tags</code> parameter of <a>CreateHyperParameterTuningJob</a>
+         * </p>   <p>Tags that you add to a SageMaker Studio Domain or User
+         * Profile by calling this API are also added to any Apps that the Domain or User
+         * Profile launches after you call this API, but not to Apps that the Domain or
+         * User Profile launched before you called this API. To make sure that the tags
+         * associated with a Domain or User Profile are also added to all Apps that the
+         * Domain or User Profile launches, add the tags when you first create the Domain
+         * or User Profile by specifying them in the <code>Tags</code> parameter of
+         * <a>CreateDomain</a> or <a>CreateUserProfile</a>.</p> <p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/AddTags">AWS
          * API Reference</a></p>
          *
@@ -1311,16 +1415,24 @@ namespace Model
          * configurations, and endpoints.</p> <p>Each tag consists of a key and an optional
          * value. Tag keys must be unique per resource. For more information about tags,
          * see For more information, see <a
-         * href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS
-         * Tagging Strategies</a>.</p>  <p>Tags that you add to a hyperparameter
-         * tuning job by calling this API are also added to any training jobs that the
-         * hyperparameter tuning job launches after you call this API, but not to training
-         * jobs that the hyperparameter tuning job launched before you called this API. To
-         * make sure that the tags associated with a hyperparameter tuning job are also
-         * added to all training jobs that the hyperparameter tuning job launches, add the
-         * tags when you first create the tuning job by specifying them in the
-         * <code>Tags</code> parameter of <a>CreateHyperParameterTuningJob</a> </p>
-         * <p><h3>See Also:</h3>   <a
+         * href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">Amazon
+         * Web Services Tagging Strategies</a>.</p>  <p>Tags that you add to a
+         * hyperparameter tuning job by calling this API are also added to any training
+         * jobs that the hyperparameter tuning job launches after you call this API, but
+         * not to training jobs that the hyperparameter tuning job launched before you
+         * called this API. To make sure that the tags associated with a hyperparameter
+         * tuning job are also added to all training jobs that the hyperparameter tuning
+         * job launches, add the tags when you first create the tuning job by specifying
+         * them in the <code>Tags</code> parameter of <a>CreateHyperParameterTuningJob</a>
+         * </p>   <p>Tags that you add to a SageMaker Studio Domain or User
+         * Profile by calling this API are also added to any Apps that the Domain or User
+         * Profile launches after you call this API, but not to Apps that the Domain or
+         * User Profile launched before you called this API. To make sure that the tags
+         * associated with a Domain or User Profile are also added to all Apps that the
+         * Domain or User Profile launches, add the tags when you first create the Domain
+         * or User Profile by specifying them in the <code>Tags</code> parameter of
+         * <a>CreateDomain</a> or <a>CreateUserProfile</a>.</p> <p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/AddTags">AWS
          * API Reference</a></p>
          *
@@ -1358,6 +1470,34 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void AssociateTrialComponentAsync(const Model::AssociateTrialComponentRequest& request, const AssociateTrialComponentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>This action batch describes a list of versioned model packages</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/BatchDescribeModelPackage">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::BatchDescribeModelPackageOutcome BatchDescribeModelPackage(const Model::BatchDescribeModelPackageRequest& request) const;
+
+        /**
+         * <p>This action batch describes a list of versioned model packages</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/BatchDescribeModelPackage">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::BatchDescribeModelPackageOutcomeCallable BatchDescribeModelPackageCallable(const Model::BatchDescribeModelPackageRequest& request) const;
+
+        /**
+         * <p>This action batch describes a list of versioned model packages</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/BatchDescribeModelPackage">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void BatchDescribeModelPackageAsync(const Model::BatchDescribeModelPackageRequest& request, const BatchDescribeModelPackageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Creates an <i>action</i>. An action is a lineage tracking entity that
@@ -1401,7 +1541,7 @@ namespace Model
 
         /**
          * <p>Create a machine learning algorithm that you can use in Amazon SageMaker and
-         * list in the AWS Marketplace.</p><p><h3>See Also:</h3>   <a
+         * list in the Amazon Web Services Marketplace.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAlgorithm">AWS
          * API Reference</a></p>
          */
@@ -1409,7 +1549,7 @@ namespace Model
 
         /**
          * <p>Create a machine learning algorithm that you can use in Amazon SageMaker and
-         * list in the AWS Marketplace.</p><p><h3>See Also:</h3>   <a
+         * list in the Amazon Web Services Marketplace.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAlgorithm">AWS
          * API Reference</a></p>
          *
@@ -1419,7 +1559,7 @@ namespace Model
 
         /**
          * <p>Create a machine learning algorithm that you can use in Amazon SageMaker and
-         * list in the AWS Marketplace.</p><p><h3>See Also:</h3>   <a
+         * list in the Amazon Web Services Marketplace.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAlgorithm">AWS
          * API Reference</a></p>
          *
@@ -1428,22 +1568,22 @@ namespace Model
         virtual void CreateAlgorithmAsync(const Model::CreateAlgorithmRequest& request, const CreateAlgorithmResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates a running App for the specified UserProfile. Supported Apps are
-         * JupyterServer and KernelGateway. This operation is automatically invoked by
-         * Amazon SageMaker Studio upon access to the associated Domain, and when new
-         * kernel configurations are selected by the user. A user may have multiple Apps
-         * active simultaneously.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates a running app for the specified UserProfile. Supported apps are
+         * <code>JupyterServer</code> and <code>KernelGateway</code>. This operation is
+         * automatically invoked by Amazon SageMaker Studio upon access to the associated
+         * Domain, and when new kernel configurations are selected by the user. A user may
+         * have multiple Apps active simultaneously.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateApp">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateAppOutcome CreateApp(const Model::CreateAppRequest& request) const;
 
         /**
-         * <p>Creates a running App for the specified UserProfile. Supported Apps are
-         * JupyterServer and KernelGateway. This operation is automatically invoked by
-         * Amazon SageMaker Studio upon access to the associated Domain, and when new
-         * kernel configurations are selected by the user. A user may have multiple Apps
-         * active simultaneously.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates a running app for the specified UserProfile. Supported apps are
+         * <code>JupyterServer</code> and <code>KernelGateway</code>. This operation is
+         * automatically invoked by Amazon SageMaker Studio upon access to the associated
+         * Domain, and when new kernel configurations are selected by the user. A user may
+         * have multiple Apps active simultaneously.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateApp">AWS
          * API Reference</a></p>
          *
@@ -1452,11 +1592,11 @@ namespace Model
         virtual Model::CreateAppOutcomeCallable CreateAppCallable(const Model::CreateAppRequest& request) const;
 
         /**
-         * <p>Creates a running App for the specified UserProfile. Supported Apps are
-         * JupyterServer and KernelGateway. This operation is automatically invoked by
-         * Amazon SageMaker Studio upon access to the associated Domain, and when new
-         * kernel configurations are selected by the user. A user may have multiple Apps
-         * active simultaneously.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates a running app for the specified UserProfile. Supported apps are
+         * <code>JupyterServer</code> and <code>KernelGateway</code>. This operation is
+         * automatically invoked by Amazon SageMaker Studio upon access to the associated
+         * Domain, and when new kernel configurations are selected by the user. A user may
+         * have multiple Apps active simultaneously.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateApp">AWS
          * API Reference</a></p>
          *
@@ -1536,30 +1676,24 @@ namespace Model
         virtual void CreateArtifactAsync(const Model::CreateArtifactRequest& request, const CreateArtifactResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates an Autopilot job.</p> <p>Find the best performing model after you run
-         * an Autopilot job by calling . Deploy that model by following the steps described
-         * in <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html">Step
-         * 6.1: Deploy the Model to Amazon SageMaker Hosting Services</a>.</p> <p>For
-         * information about how to use Autopilot, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html">
-         * Automate Model Development with Amazon SageMaker Autopilot</a>.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Creates an Autopilot job.</p> <p>Find the best-performing model after you run
+         * an Autopilot job by calling .</p> <p>For information about how to use Autopilot,
+         * see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html">Automate
+         * Model Development with Amazon SageMaker Autopilot</a>.</p><p><h3>See Also:</h3> 
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAutoMLJob">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateAutoMLJobOutcome CreateAutoMLJob(const Model::CreateAutoMLJobRequest& request) const;
 
         /**
-         * <p>Creates an Autopilot job.</p> <p>Find the best performing model after you run
-         * an Autopilot job by calling . Deploy that model by following the steps described
-         * in <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html">Step
-         * 6.1: Deploy the Model to Amazon SageMaker Hosting Services</a>.</p> <p>For
-         * information about how to use Autopilot, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html">
-         * Automate Model Development with Amazon SageMaker Autopilot</a>.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Creates an Autopilot job.</p> <p>Find the best-performing model after you run
+         * an Autopilot job by calling .</p> <p>For information about how to use Autopilot,
+         * see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html">Automate
+         * Model Development with Amazon SageMaker Autopilot</a>.</p><p><h3>See Also:</h3> 
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAutoMLJob">AWS
          * API Reference</a></p>
          *
@@ -1568,15 +1702,12 @@ namespace Model
         virtual Model::CreateAutoMLJobOutcomeCallable CreateAutoMLJobCallable(const Model::CreateAutoMLJobRequest& request) const;
 
         /**
-         * <p>Creates an Autopilot job.</p> <p>Find the best performing model after you run
-         * an Autopilot job by calling . Deploy that model by following the steps described
-         * in <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html">Step
-         * 6.1: Deploy the Model to Amazon SageMaker Hosting Services</a>.</p> <p>For
-         * information about how to use Autopilot, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html">
-         * Automate Model Development with Amazon SageMaker Autopilot</a>.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Creates an Autopilot job.</p> <p>Find the best-performing model after you run
+         * an Autopilot job by calling .</p> <p>For information about how to use Autopilot,
+         * see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html">Automate
+         * Model Development with Amazon SageMaker Autopilot</a>.</p><p><h3>See Also:</h3> 
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAutoMLJob">AWS
          * API Reference</a></p>
          *
@@ -1592,8 +1723,9 @@ namespace Model
          * notebook instance, and it persists independently from the lifecycle of any
          * notebook instances it is associated with.</p> <p>The repository can be hosted
          * either in <a
-         * href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">AWS
-         * CodeCommit</a> or in any other Git repository.</p><p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">Amazon
+         * Web Services CodeCommit</a> or in any other Git repository.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateCodeRepository">AWS
          * API Reference</a></p>
          */
@@ -1607,8 +1739,9 @@ namespace Model
          * notebook instance, and it persists independently from the lifecycle of any
          * notebook instances it is associated with.</p> <p>The repository can be hosted
          * either in <a
-         * href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">AWS
-         * CodeCommit</a> or in any other Git repository.</p><p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">Amazon
+         * Web Services CodeCommit</a> or in any other Git repository.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateCodeRepository">AWS
          * API Reference</a></p>
          *
@@ -1624,8 +1757,9 @@ namespace Model
          * notebook instance, and it persists independently from the lifecycle of any
          * notebook instances it is associated with.</p> <p>The repository can be hosted
          * either in <a
-         * href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">AWS
-         * CodeCommit</a> or in any other Git repository.</p><p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">Amazon
+         * Web Services CodeCommit</a> or in any other Git repository.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateCodeRepository">AWS
          * API Reference</a></p>
          *
@@ -1638,18 +1772,18 @@ namespace Model
          * SageMaker saves the resulting model artifacts to an Amazon Simple Storage
          * Service (Amazon S3) bucket that you specify. </p> <p>If you choose to host your
          * model using Amazon SageMaker hosting services, you can use the resulting model
-         * artifacts as part of the model. You can also use the artifacts with AWS IoT
-         * Greengrass. In that case, deploy them as an ML resource.</p> <p>In the request
-         * body, you provide the following:</p> <ul> <li> <p>A name for the compilation
-         * job</p> </li> <li> <p> Information about the input model artifacts </p> </li>
-         * <li> <p>The output location for the compiled model and the device (target) that
-         * the model runs on </p> </li> <li> <p>The Amazon Resource Name (ARN) of the IAM
-         * role that Amazon SageMaker assumes to perform the model compilation job. </p>
-         * </li> </ul> <p>You can also provide a <code>Tag</code> to track the model
-         * compilation job's resource use and costs. The response body contains the
-         * <code>CompilationJobArn</code> for the compiled job.</p> <p>To stop a model
-         * compilation job, use <a>StopCompilationJob</a>. To get information about a
-         * particular model compilation job, use <a>DescribeCompilationJob</a>. To get
+         * artifacts as part of the model. You can also use the artifacts with Amazon Web
+         * Services IoT Greengrass. In that case, deploy them as an ML resource.</p> <p>In
+         * the request body, you provide the following:</p> <ul> <li> <p>A name for the
+         * compilation job</p> </li> <li> <p> Information about the input model artifacts
+         * </p> </li> <li> <p>The output location for the compiled model and the device
+         * (target) that the model runs on </p> </li> <li> <p>The Amazon Resource Name
+         * (ARN) of the IAM role that Amazon SageMaker assumes to perform the model
+         * compilation job. </p> </li> </ul> <p>You can also provide a <code>Tag</code> to
+         * track the model compilation job's resource use and costs. The response body
+         * contains the <code>CompilationJobArn</code> for the compiled job.</p> <p>To stop
+         * a model compilation job, use <a>StopCompilationJob</a>. To get information about
+         * a particular model compilation job, use <a>DescribeCompilationJob</a>. To get
          * information about multiple model compilation jobs, use
          * <a>ListCompilationJobs</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateCompilationJob">AWS
@@ -1662,18 +1796,18 @@ namespace Model
          * SageMaker saves the resulting model artifacts to an Amazon Simple Storage
          * Service (Amazon S3) bucket that you specify. </p> <p>If you choose to host your
          * model using Amazon SageMaker hosting services, you can use the resulting model
-         * artifacts as part of the model. You can also use the artifacts with AWS IoT
-         * Greengrass. In that case, deploy them as an ML resource.</p> <p>In the request
-         * body, you provide the following:</p> <ul> <li> <p>A name for the compilation
-         * job</p> </li> <li> <p> Information about the input model artifacts </p> </li>
-         * <li> <p>The output location for the compiled model and the device (target) that
-         * the model runs on </p> </li> <li> <p>The Amazon Resource Name (ARN) of the IAM
-         * role that Amazon SageMaker assumes to perform the model compilation job. </p>
-         * </li> </ul> <p>You can also provide a <code>Tag</code> to track the model
-         * compilation job's resource use and costs. The response body contains the
-         * <code>CompilationJobArn</code> for the compiled job.</p> <p>To stop a model
-         * compilation job, use <a>StopCompilationJob</a>. To get information about a
-         * particular model compilation job, use <a>DescribeCompilationJob</a>. To get
+         * artifacts as part of the model. You can also use the artifacts with Amazon Web
+         * Services IoT Greengrass. In that case, deploy them as an ML resource.</p> <p>In
+         * the request body, you provide the following:</p> <ul> <li> <p>A name for the
+         * compilation job</p> </li> <li> <p> Information about the input model artifacts
+         * </p> </li> <li> <p>The output location for the compiled model and the device
+         * (target) that the model runs on </p> </li> <li> <p>The Amazon Resource Name
+         * (ARN) of the IAM role that Amazon SageMaker assumes to perform the model
+         * compilation job. </p> </li> </ul> <p>You can also provide a <code>Tag</code> to
+         * track the model compilation job's resource use and costs. The response body
+         * contains the <code>CompilationJobArn</code> for the compiled job.</p> <p>To stop
+         * a model compilation job, use <a>StopCompilationJob</a>. To get information about
+         * a particular model compilation job, use <a>DescribeCompilationJob</a>. To get
          * information about multiple model compilation jobs, use
          * <a>ListCompilationJobs</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateCompilationJob">AWS
@@ -1688,18 +1822,18 @@ namespace Model
          * SageMaker saves the resulting model artifacts to an Amazon Simple Storage
          * Service (Amazon S3) bucket that you specify. </p> <p>If you choose to host your
          * model using Amazon SageMaker hosting services, you can use the resulting model
-         * artifacts as part of the model. You can also use the artifacts with AWS IoT
-         * Greengrass. In that case, deploy them as an ML resource.</p> <p>In the request
-         * body, you provide the following:</p> <ul> <li> <p>A name for the compilation
-         * job</p> </li> <li> <p> Information about the input model artifacts </p> </li>
-         * <li> <p>The output location for the compiled model and the device (target) that
-         * the model runs on </p> </li> <li> <p>The Amazon Resource Name (ARN) of the IAM
-         * role that Amazon SageMaker assumes to perform the model compilation job. </p>
-         * </li> </ul> <p>You can also provide a <code>Tag</code> to track the model
-         * compilation job's resource use and costs. The response body contains the
-         * <code>CompilationJobArn</code> for the compiled job.</p> <p>To stop a model
-         * compilation job, use <a>StopCompilationJob</a>. To get information about a
-         * particular model compilation job, use <a>DescribeCompilationJob</a>. To get
+         * artifacts as part of the model. You can also use the artifacts with Amazon Web
+         * Services IoT Greengrass. In that case, deploy them as an ML resource.</p> <p>In
+         * the request body, you provide the following:</p> <ul> <li> <p>A name for the
+         * compilation job</p> </li> <li> <p> Information about the input model artifacts
+         * </p> </li> <li> <p>The output location for the compiled model and the device
+         * (target) that the model runs on </p> </li> <li> <p>The Amazon Resource Name
+         * (ARN) of the IAM role that Amazon SageMaker assumes to perform the model
+         * compilation job. </p> </li> </ul> <p>You can also provide a <code>Tag</code> to
+         * track the model compilation job's resource use and costs. The response body
+         * contains the <code>CompilationJobArn</code> for the compiled job.</p> <p>To stop
+         * a model compilation job, use <a>StopCompilationJob</a>. To get information about
+         * a particular model compilation job, use <a>DescribeCompilationJob</a>. To get
          * information about multiple model compilation jobs, use
          * <a>ListCompilationJobs</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateCompilationJob">AWS
@@ -1809,15 +1943,16 @@ namespace Model
          * <p>Creates a <code>Domain</code> used by Amazon SageMaker Studio. A domain
          * consists of an associated Amazon Elastic File System (EFS) volume, a list of
          * authorized users, and a variety of security, application, policy, and Amazon
-         * Virtual Private Cloud (VPC) configurations. An AWS account is limited to one
-         * domain per region. Users within a domain can share notebook files and other
-         * artifacts with each other.</p> <p> <b>EFS storage</b> </p> <p>When a domain is
-         * created, an EFS volume is created for use by all of the users within the domain.
-         * Each user receives a private home directory within the EFS volume for notebooks,
-         * Git repositories, and data files.</p> <p>SageMaker uses the AWS Key Management
-         * Service (AWS KMS) to encrypt the EFS volume attached to the domain with an AWS
-         * managed customer master key (CMK) by default. For more control, you can specify
-         * a customer managed CMK. For more information, see <a
+         * Virtual Private Cloud (VPC) configurations. An Amazon Web Services account is
+         * limited to one domain per region. Users within a domain can share notebook files
+         * and other artifacts with each other.</p> <p> <b>EFS storage</b> </p> <p>When a
+         * domain is created, an EFS volume is created for use by all of the users within
+         * the domain. Each user receives a private home directory within the EFS volume
+         * for notebooks, Git repositories, and data files.</p> <p>SageMaker uses the
+         * Amazon Web Services Key Management Service (Amazon Web Services KMS) to encrypt
+         * the EFS volume attached to the domain with an Amazon Web Services managed key by
+         * default. For more control, you can specify a customer managed key. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html">Protect
          * Data at Rest Using Encryption</a>.</p> <p> <b>VPC configuration</b> </p> <p>All
          * SageMaker Studio traffic between the domain and the EFS volume is through the
@@ -1833,7 +1968,9 @@ namespace Model
          * disabled, you won't be able to run a Studio notebook or to train or host models
          * unless your VPC has an interface endpoint to the SageMaker API and runtime or a
          * NAT gateway and your security groups allow outbound connections.</p> </li> </ul>
-         * <p>For more information, see <a
+         *  <p>NFS traffic over TCP on port 2049 needs to be allowed in both
+         * inbound and outbound rules in order to launch a SageMaker Studio app
+         * successfully.</p>  <p>For more information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html">Connect
          * SageMaker Studio Notebooks to Resources in a VPC</a>.</p><p><h3>See Also:</h3>  
          * <a
@@ -1846,15 +1983,16 @@ namespace Model
          * <p>Creates a <code>Domain</code> used by Amazon SageMaker Studio. A domain
          * consists of an associated Amazon Elastic File System (EFS) volume, a list of
          * authorized users, and a variety of security, application, policy, and Amazon
-         * Virtual Private Cloud (VPC) configurations. An AWS account is limited to one
-         * domain per region. Users within a domain can share notebook files and other
-         * artifacts with each other.</p> <p> <b>EFS storage</b> </p> <p>When a domain is
-         * created, an EFS volume is created for use by all of the users within the domain.
-         * Each user receives a private home directory within the EFS volume for notebooks,
-         * Git repositories, and data files.</p> <p>SageMaker uses the AWS Key Management
-         * Service (AWS KMS) to encrypt the EFS volume attached to the domain with an AWS
-         * managed customer master key (CMK) by default. For more control, you can specify
-         * a customer managed CMK. For more information, see <a
+         * Virtual Private Cloud (VPC) configurations. An Amazon Web Services account is
+         * limited to one domain per region. Users within a domain can share notebook files
+         * and other artifacts with each other.</p> <p> <b>EFS storage</b> </p> <p>When a
+         * domain is created, an EFS volume is created for use by all of the users within
+         * the domain. Each user receives a private home directory within the EFS volume
+         * for notebooks, Git repositories, and data files.</p> <p>SageMaker uses the
+         * Amazon Web Services Key Management Service (Amazon Web Services KMS) to encrypt
+         * the EFS volume attached to the domain with an Amazon Web Services managed key by
+         * default. For more control, you can specify a customer managed key. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html">Protect
          * Data at Rest Using Encryption</a>.</p> <p> <b>VPC configuration</b> </p> <p>All
          * SageMaker Studio traffic between the domain and the EFS volume is through the
@@ -1870,7 +2008,9 @@ namespace Model
          * disabled, you won't be able to run a Studio notebook or to train or host models
          * unless your VPC has an interface endpoint to the SageMaker API and runtime or a
          * NAT gateway and your security groups allow outbound connections.</p> </li> </ul>
-         * <p>For more information, see <a
+         *  <p>NFS traffic over TCP on port 2049 needs to be allowed in both
+         * inbound and outbound rules in order to launch a SageMaker Studio app
+         * successfully.</p>  <p>For more information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html">Connect
          * SageMaker Studio Notebooks to Resources in a VPC</a>.</p><p><h3>See Also:</h3>  
          * <a
@@ -1885,15 +2025,16 @@ namespace Model
          * <p>Creates a <code>Domain</code> used by Amazon SageMaker Studio. A domain
          * consists of an associated Amazon Elastic File System (EFS) volume, a list of
          * authorized users, and a variety of security, application, policy, and Amazon
-         * Virtual Private Cloud (VPC) configurations. An AWS account is limited to one
-         * domain per region. Users within a domain can share notebook files and other
-         * artifacts with each other.</p> <p> <b>EFS storage</b> </p> <p>When a domain is
-         * created, an EFS volume is created for use by all of the users within the domain.
-         * Each user receives a private home directory within the EFS volume for notebooks,
-         * Git repositories, and data files.</p> <p>SageMaker uses the AWS Key Management
-         * Service (AWS KMS) to encrypt the EFS volume attached to the domain with an AWS
-         * managed customer master key (CMK) by default. For more control, you can specify
-         * a customer managed CMK. For more information, see <a
+         * Virtual Private Cloud (VPC) configurations. An Amazon Web Services account is
+         * limited to one domain per region. Users within a domain can share notebook files
+         * and other artifacts with each other.</p> <p> <b>EFS storage</b> </p> <p>When a
+         * domain is created, an EFS volume is created for use by all of the users within
+         * the domain. Each user receives a private home directory within the EFS volume
+         * for notebooks, Git repositories, and data files.</p> <p>SageMaker uses the
+         * Amazon Web Services Key Management Service (Amazon Web Services KMS) to encrypt
+         * the EFS volume attached to the domain with an Amazon Web Services managed key by
+         * default. For more control, you can specify a customer managed key. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html">Protect
          * Data at Rest Using Encryption</a>.</p> <p> <b>VPC configuration</b> </p> <p>All
          * SageMaker Studio traffic between the domain and the EFS volume is through the
@@ -1909,7 +2050,9 @@ namespace Model
          * disabled, you won't be able to run a Studio notebook or to train or host models
          * unless your VPC has an interface endpoint to the SageMaker API and runtime or a
          * NAT gateway and your security groups allow outbound connections.</p> </li> </ul>
-         * <p>For more information, see <a
+         *  <p>NFS traffic over TCP on port 2049 needs to be allowed in both
+         * inbound and outbound rules in order to launch a SageMaker Studio app
+         * successfully.</p>  <p>For more information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html">Connect
          * SageMaker Studio Notebooks to Resources in a VPC</a>.</p><p><h3>See Also:</h3>  
          * <a
@@ -1960,19 +2103,19 @@ namespace Model
          * models. You create the endpoint configuration with the
          * <a>CreateEndpointConfig</a> API. </p> <p> Use this API to deploy models using
          * Amazon SageMaker hosting services. </p> <p>For an example that calls this method
-         * when deploying a model to Amazon SageMaker hosting services, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy
-         * the Model to Amazon SageMaker Hosting Services (AWS SDK for Python (Boto
-         * 3)).</a> </p>  <p> You must not delete an <code>EndpointConfig</code> that
-         * is in use by an endpoint that is live or while the <code>UpdateEndpoint</code>
-         * or <code>CreateEndpoint</code> operations are being performed on the endpoint.
-         * To update an endpoint, you must create a new <code>EndpointConfig</code>.</p>
-         *  <p>The endpoint name must be unique within an AWS Region in your AWS
-         * account. </p> <p>When it receives the request, Amazon SageMaker creates the
-         * endpoint, launches the resources (ML compute instances), and deploys the
-         * model(s) on them. </p>  <p>When you call <a>CreateEndpoint</a>, a load
-         * call is made to DynamoDB to verify that your endpoint configuration exists. When
-         * you read data from a DynamoDB table supporting <a
+         * when deploying a model to Amazon SageMaker hosting services, see the <a
+         * href="https://github.com/aws/amazon-sagemaker-examples/blob/master/sagemaker-fundamentals/create-endpoint/create_endpoint.ipynb">Create
+         * Endpoint example notebook.</a> </p>  <p> You must not delete an
+         * <code>EndpointConfig</code> that is in use by an endpoint that is live or while
+         * the <code>UpdateEndpoint</code> or <code>CreateEndpoint</code> operations are
+         * being performed on the endpoint. To update an endpoint, you must create a new
+         * <code>EndpointConfig</code>.</p>  <p>The endpoint name must be unique
+         * within an Amazon Web Services Region in your Amazon Web Services account. </p>
+         * <p>When it receives the request, Amazon SageMaker creates the endpoint, launches
+         * the resources (ML compute instances), and deploys the model(s) on them. </p>
+         *  <p>When you call <a>CreateEndpoint</a>, a load call is made to DynamoDB
+         * to verify that your endpoint configuration exists. When you read data from a
+         * DynamoDB table supporting <a
          * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
          * <code>Eventually Consistent Reads</code> </a>, the response might not reflect
          * the results of a recently completed write operation. The response might include
@@ -1987,31 +2130,32 @@ namespace Model
          * <code>InService</code>. Amazon SageMaker can then process incoming requests for
          * inferences. To check the status of an endpoint, use the <a>DescribeEndpoint</a>
          * API.</p> <p>If any of the models hosted at this endpoint get model data from an
-         * Amazon S3 location, Amazon SageMaker uses AWS Security Token Service to download
-         * model artifacts from the S3 path you provided. AWS STS is activated in your IAM
-         * user account by default. If you previously deactivated AWS STS for a region, you
-         * need to reactivate AWS STS for that region. For more information, see <a
+         * Amazon S3 location, Amazon SageMaker uses Amazon Web Services Security Token
+         * Service to download model artifacts from the S3 path you provided. Amazon Web
+         * Services STS is activated in your IAM user account by default. If you previously
+         * deactivated Amazon Web Services STS for a region, you need to reactivate Amazon
+         * Web Services STS for that region. For more information, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p>  <p> To add the IAM role policies for using
-         * this API operation, go to the <a href="https://console.aws.amazon.com/iam/">IAM
-         * console</a>, and choose Roles in the left navigation pane. Search the IAM role
-         * that you want to grant access to use the <a>CreateEndpoint</a> and
-         * <a>CreateEndpointConfig</a> API operations, add the following policies to the
-         * role. </p> <ul> <li> <p>Option 1: For a full Amazon SageMaker access, search and
-         * attach the <code>AmazonSageMakerFullAccess</code> policy.</p> </li> <li>
-         * <p>Option 2: For granting a limited access to an IAM role, paste the following
-         * Action elements manually into the JSON file of the IAM role: </p> <p>
-         * <code>"Action": ["sagemaker:CreateEndpoint",
+         * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+         *  <p> To add the IAM role policies for using this API operation, go to the
+         * <a href="https://console.aws.amazon.com/iam/">IAM console</a>, and choose Roles
+         * in the left navigation pane. Search the IAM role that you want to grant access
+         * to use the <a>CreateEndpoint</a> and <a>CreateEndpointConfig</a> API operations,
+         * add the following policies to the role. </p> <ul> <li> <p>Option 1: For a full
+         * SageMaker access, search and attach the <code>AmazonSageMakerFullAccess</code>
+         * policy.</p> </li> <li> <p>Option 2: For granting a limited access to an IAM
+         * role, paste the following Action elements manually into the JSON file of the IAM
+         * role: </p> <p> <code>"Action": ["sagemaker:CreateEndpoint",
          * "sagemaker:CreateEndpointConfig"]</code> </p> <p> <code>"Resource": [</code>
          * </p> <p>
          * <code>"arn:aws:sagemaker:region:account-id:endpoint/endpointName"</code> </p>
          * <p>
          * <code>"arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName"</code>
          * </p> <p> <code>]</code> </p> <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">Amazon
-         * SageMaker API Permissions: Actions, Permissions, and Resources
-         * Reference</a>.</p> </li> </ul> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">SageMaker
+         * API Permissions: Actions, Permissions, and Resources Reference</a>.</p> </li>
+         * </ul> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEndpoint">AWS
          * API Reference</a></p>
          */
@@ -2023,19 +2167,19 @@ namespace Model
          * models. You create the endpoint configuration with the
          * <a>CreateEndpointConfig</a> API. </p> <p> Use this API to deploy models using
          * Amazon SageMaker hosting services. </p> <p>For an example that calls this method
-         * when deploying a model to Amazon SageMaker hosting services, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy
-         * the Model to Amazon SageMaker Hosting Services (AWS SDK for Python (Boto
-         * 3)).</a> </p>  <p> You must not delete an <code>EndpointConfig</code> that
-         * is in use by an endpoint that is live or while the <code>UpdateEndpoint</code>
-         * or <code>CreateEndpoint</code> operations are being performed on the endpoint.
-         * To update an endpoint, you must create a new <code>EndpointConfig</code>.</p>
-         *  <p>The endpoint name must be unique within an AWS Region in your AWS
-         * account. </p> <p>When it receives the request, Amazon SageMaker creates the
-         * endpoint, launches the resources (ML compute instances), and deploys the
-         * model(s) on them. </p>  <p>When you call <a>CreateEndpoint</a>, a load
-         * call is made to DynamoDB to verify that your endpoint configuration exists. When
-         * you read data from a DynamoDB table supporting <a
+         * when deploying a model to Amazon SageMaker hosting services, see the <a
+         * href="https://github.com/aws/amazon-sagemaker-examples/blob/master/sagemaker-fundamentals/create-endpoint/create_endpoint.ipynb">Create
+         * Endpoint example notebook.</a> </p>  <p> You must not delete an
+         * <code>EndpointConfig</code> that is in use by an endpoint that is live or while
+         * the <code>UpdateEndpoint</code> or <code>CreateEndpoint</code> operations are
+         * being performed on the endpoint. To update an endpoint, you must create a new
+         * <code>EndpointConfig</code>.</p>  <p>The endpoint name must be unique
+         * within an Amazon Web Services Region in your Amazon Web Services account. </p>
+         * <p>When it receives the request, Amazon SageMaker creates the endpoint, launches
+         * the resources (ML compute instances), and deploys the model(s) on them. </p>
+         *  <p>When you call <a>CreateEndpoint</a>, a load call is made to DynamoDB
+         * to verify that your endpoint configuration exists. When you read data from a
+         * DynamoDB table supporting <a
          * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
          * <code>Eventually Consistent Reads</code> </a>, the response might not reflect
          * the results of a recently completed write operation. The response might include
@@ -2050,31 +2194,32 @@ namespace Model
          * <code>InService</code>. Amazon SageMaker can then process incoming requests for
          * inferences. To check the status of an endpoint, use the <a>DescribeEndpoint</a>
          * API.</p> <p>If any of the models hosted at this endpoint get model data from an
-         * Amazon S3 location, Amazon SageMaker uses AWS Security Token Service to download
-         * model artifacts from the S3 path you provided. AWS STS is activated in your IAM
-         * user account by default. If you previously deactivated AWS STS for a region, you
-         * need to reactivate AWS STS for that region. For more information, see <a
+         * Amazon S3 location, Amazon SageMaker uses Amazon Web Services Security Token
+         * Service to download model artifacts from the S3 path you provided. Amazon Web
+         * Services STS is activated in your IAM user account by default. If you previously
+         * deactivated Amazon Web Services STS for a region, you need to reactivate Amazon
+         * Web Services STS for that region. For more information, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p>  <p> To add the IAM role policies for using
-         * this API operation, go to the <a href="https://console.aws.amazon.com/iam/">IAM
-         * console</a>, and choose Roles in the left navigation pane. Search the IAM role
-         * that you want to grant access to use the <a>CreateEndpoint</a> and
-         * <a>CreateEndpointConfig</a> API operations, add the following policies to the
-         * role. </p> <ul> <li> <p>Option 1: For a full Amazon SageMaker access, search and
-         * attach the <code>AmazonSageMakerFullAccess</code> policy.</p> </li> <li>
-         * <p>Option 2: For granting a limited access to an IAM role, paste the following
-         * Action elements manually into the JSON file of the IAM role: </p> <p>
-         * <code>"Action": ["sagemaker:CreateEndpoint",
+         * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+         *  <p> To add the IAM role policies for using this API operation, go to the
+         * <a href="https://console.aws.amazon.com/iam/">IAM console</a>, and choose Roles
+         * in the left navigation pane. Search the IAM role that you want to grant access
+         * to use the <a>CreateEndpoint</a> and <a>CreateEndpointConfig</a> API operations,
+         * add the following policies to the role. </p> <ul> <li> <p>Option 1: For a full
+         * SageMaker access, search and attach the <code>AmazonSageMakerFullAccess</code>
+         * policy.</p> </li> <li> <p>Option 2: For granting a limited access to an IAM
+         * role, paste the following Action elements manually into the JSON file of the IAM
+         * role: </p> <p> <code>"Action": ["sagemaker:CreateEndpoint",
          * "sagemaker:CreateEndpointConfig"]</code> </p> <p> <code>"Resource": [</code>
          * </p> <p>
          * <code>"arn:aws:sagemaker:region:account-id:endpoint/endpointName"</code> </p>
          * <p>
          * <code>"arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName"</code>
          * </p> <p> <code>]</code> </p> <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">Amazon
-         * SageMaker API Permissions: Actions, Permissions, and Resources
-         * Reference</a>.</p> </li> </ul> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">SageMaker
+         * API Permissions: Actions, Permissions, and Resources Reference</a>.</p> </li>
+         * </ul> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEndpoint">AWS
          * API Reference</a></p>
          *
@@ -2088,19 +2233,19 @@ namespace Model
          * models. You create the endpoint configuration with the
          * <a>CreateEndpointConfig</a> API. </p> <p> Use this API to deploy models using
          * Amazon SageMaker hosting services. </p> <p>For an example that calls this method
-         * when deploying a model to Amazon SageMaker hosting services, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy
-         * the Model to Amazon SageMaker Hosting Services (AWS SDK for Python (Boto
-         * 3)).</a> </p>  <p> You must not delete an <code>EndpointConfig</code> that
-         * is in use by an endpoint that is live or while the <code>UpdateEndpoint</code>
-         * or <code>CreateEndpoint</code> operations are being performed on the endpoint.
-         * To update an endpoint, you must create a new <code>EndpointConfig</code>.</p>
-         *  <p>The endpoint name must be unique within an AWS Region in your AWS
-         * account. </p> <p>When it receives the request, Amazon SageMaker creates the
-         * endpoint, launches the resources (ML compute instances), and deploys the
-         * model(s) on them. </p>  <p>When you call <a>CreateEndpoint</a>, a load
-         * call is made to DynamoDB to verify that your endpoint configuration exists. When
-         * you read data from a DynamoDB table supporting <a
+         * when deploying a model to Amazon SageMaker hosting services, see the <a
+         * href="https://github.com/aws/amazon-sagemaker-examples/blob/master/sagemaker-fundamentals/create-endpoint/create_endpoint.ipynb">Create
+         * Endpoint example notebook.</a> </p>  <p> You must not delete an
+         * <code>EndpointConfig</code> that is in use by an endpoint that is live or while
+         * the <code>UpdateEndpoint</code> or <code>CreateEndpoint</code> operations are
+         * being performed on the endpoint. To update an endpoint, you must create a new
+         * <code>EndpointConfig</code>.</p>  <p>The endpoint name must be unique
+         * within an Amazon Web Services Region in your Amazon Web Services account. </p>
+         * <p>When it receives the request, Amazon SageMaker creates the endpoint, launches
+         * the resources (ML compute instances), and deploys the model(s) on them. </p>
+         *  <p>When you call <a>CreateEndpoint</a>, a load call is made to DynamoDB
+         * to verify that your endpoint configuration exists. When you read data from a
+         * DynamoDB table supporting <a
          * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
          * <code>Eventually Consistent Reads</code> </a>, the response might not reflect
          * the results of a recently completed write operation. The response might include
@@ -2115,31 +2260,32 @@ namespace Model
          * <code>InService</code>. Amazon SageMaker can then process incoming requests for
          * inferences. To check the status of an endpoint, use the <a>DescribeEndpoint</a>
          * API.</p> <p>If any of the models hosted at this endpoint get model data from an
-         * Amazon S3 location, Amazon SageMaker uses AWS Security Token Service to download
-         * model artifacts from the S3 path you provided. AWS STS is activated in your IAM
-         * user account by default. If you previously deactivated AWS STS for a region, you
-         * need to reactivate AWS STS for that region. For more information, see <a
+         * Amazon S3 location, Amazon SageMaker uses Amazon Web Services Security Token
+         * Service to download model artifacts from the S3 path you provided. Amazon Web
+         * Services STS is activated in your IAM user account by default. If you previously
+         * deactivated Amazon Web Services STS for a region, you need to reactivate Amazon
+         * Web Services STS for that region. For more information, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p>  <p> To add the IAM role policies for using
-         * this API operation, go to the <a href="https://console.aws.amazon.com/iam/">IAM
-         * console</a>, and choose Roles in the left navigation pane. Search the IAM role
-         * that you want to grant access to use the <a>CreateEndpoint</a> and
-         * <a>CreateEndpointConfig</a> API operations, add the following policies to the
-         * role. </p> <ul> <li> <p>Option 1: For a full Amazon SageMaker access, search and
-         * attach the <code>AmazonSageMakerFullAccess</code> policy.</p> </li> <li>
-         * <p>Option 2: For granting a limited access to an IAM role, paste the following
-         * Action elements manually into the JSON file of the IAM role: </p> <p>
-         * <code>"Action": ["sagemaker:CreateEndpoint",
+         * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+         *  <p> To add the IAM role policies for using this API operation, go to the
+         * <a href="https://console.aws.amazon.com/iam/">IAM console</a>, and choose Roles
+         * in the left navigation pane. Search the IAM role that you want to grant access
+         * to use the <a>CreateEndpoint</a> and <a>CreateEndpointConfig</a> API operations,
+         * add the following policies to the role. </p> <ul> <li> <p>Option 1: For a full
+         * SageMaker access, search and attach the <code>AmazonSageMakerFullAccess</code>
+         * policy.</p> </li> <li> <p>Option 2: For granting a limited access to an IAM
+         * role, paste the following Action elements manually into the JSON file of the IAM
+         * role: </p> <p> <code>"Action": ["sagemaker:CreateEndpoint",
          * "sagemaker:CreateEndpointConfig"]</code> </p> <p> <code>"Resource": [</code>
          * </p> <p>
          * <code>"arn:aws:sagemaker:region:account-id:endpoint/endpointName"</code> </p>
          * <p>
          * <code>"arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName"</code>
          * </p> <p> <code>]</code> </p> <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">Amazon
-         * SageMaker API Permissions: Actions, Permissions, and Resources
-         * Reference</a>.</p> </li> </ul> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">SageMaker
+         * API Permissions: Actions, Permissions, and Resources Reference</a>.</p> </li>
+         * </ul> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEndpoint">AWS
          * API Reference</a></p>
          *
@@ -2162,11 +2308,7 @@ namespace Model
          * allocate to each model. For example, suppose that you want to host two models, A
          * and B, and you assign traffic weight 2 for model A and 1 for model B. Amazon
          * SageMaker distributes two-thirds of the traffic to Model A, and one-third to
-         * model B. </p> <p>For an example that calls this method when deploying a model to
-         * Amazon SageMaker hosting services, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy
-         * the Model to Amazon SageMaker Hosting Services (AWS SDK for Python (Boto
-         * 3)).</a> </p>  <p>When you call <a>CreateEndpoint</a>, a load call is made
+         * model B. </p>  <p>When you call <a>CreateEndpoint</a>, a load call is made
          * to DynamoDB to verify that your endpoint configuration exists. When you read
          * data from a DynamoDB table supporting <a
          * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
@@ -2199,11 +2341,7 @@ namespace Model
          * allocate to each model. For example, suppose that you want to host two models, A
          * and B, and you assign traffic weight 2 for model A and 1 for model B. Amazon
          * SageMaker distributes two-thirds of the traffic to Model A, and one-third to
-         * model B. </p> <p>For an example that calls this method when deploying a model to
-         * Amazon SageMaker hosting services, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy
-         * the Model to Amazon SageMaker Hosting Services (AWS SDK for Python (Boto
-         * 3)).</a> </p>  <p>When you call <a>CreateEndpoint</a>, a load call is made
+         * model B. </p>  <p>When you call <a>CreateEndpoint</a>, a load call is made
          * to DynamoDB to verify that your endpoint configuration exists. When you read
          * data from a DynamoDB table supporting <a
          * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
@@ -2238,11 +2376,7 @@ namespace Model
          * allocate to each model. For example, suppose that you want to host two models, A
          * and B, and you assign traffic weight 2 for model A and 1 for model B. Amazon
          * SageMaker distributes two-thirds of the traffic to Model A, and one-third to
-         * model B. </p> <p>For an example that calls this method when deploying a model to
-         * Amazon SageMaker hosting services, see <a
-         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy
-         * the Model to Amazon SageMaker Hosting Services (AWS SDK for Python (Boto
-         * 3)).</a> </p>  <p>When you call <a>CreateEndpoint</a>, a load call is made
+         * model B. </p>  <p>When you call <a>CreateEndpoint</a>, a load call is made
          * to DynamoDB to verify that your endpoint configuration exists. When you read
          * data from a DynamoDB table supporting <a
          * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html">
@@ -2269,18 +2403,19 @@ namespace Model
          * model.</p> <p>The goal of an experiment is to determine the components that
          * produce the best model. Multiple trials are performed, each one isolating and
          * measuring the impact of a change to one or more inputs, while keeping the
-         * remaining inputs constant.</p> <p>When you use Amazon SageMaker Studio or the
-         * Amazon SageMaker Python SDK, all experiments, trials, and trial components are
-         * automatically tracked, logged, and indexed. When you use the AWS SDK for Python
-         * (Boto), you must use the logging APIs provided by the SDK.</p> <p>You can add
-         * tags to experiments, trials, trial components and then use the <a>Search</a> API
-         * to search for the tags.</p> <p>To add a description to an experiment, specify
-         * the optional <code>Description</code> parameter. To add a description later, or
-         * to change the description, call the <a>UpdateExperiment</a> API.</p> <p>To get a
-         * list of all your experiments, call the <a>ListExperiments</a> API. To view an
-         * experiment's properties, call the <a>DescribeExperiment</a> API. To get a list
-         * of all the trials associated with an experiment, call the <a>ListTrials</a> API.
-         * To create a trial call the <a>CreateTrial</a> API.</p><p><h3>See Also:</h3>   <a
+         * remaining inputs constant.</p> <p>When you use SageMaker Studio or the SageMaker
+         * Python SDK, all experiments, trials, and trial components are automatically
+         * tracked, logged, and indexed. When you use the Amazon Web Services SDK for
+         * Python (Boto), you must use the logging APIs provided by the SDK.</p> <p>You can
+         * add tags to experiments, trials, trial components and then use the <a>Search</a>
+         * API to search for the tags.</p> <p>To add a description to an experiment,
+         * specify the optional <code>Description</code> parameter. To add a description
+         * later, or to change the description, call the <a>UpdateExperiment</a> API.</p>
+         * <p>To get a list of all your experiments, call the <a>ListExperiments</a> API.
+         * To view an experiment's properties, call the <a>DescribeExperiment</a> API. To
+         * get a list of all the trials associated with an experiment, call the
+         * <a>ListTrials</a> API. To create a trial call the <a>CreateTrial</a>
+         * API.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateExperiment">AWS
          * API Reference</a></p>
          */
@@ -2293,18 +2428,19 @@ namespace Model
          * model.</p> <p>The goal of an experiment is to determine the components that
          * produce the best model. Multiple trials are performed, each one isolating and
          * measuring the impact of a change to one or more inputs, while keeping the
-         * remaining inputs constant.</p> <p>When you use Amazon SageMaker Studio or the
-         * Amazon SageMaker Python SDK, all experiments, trials, and trial components are
-         * automatically tracked, logged, and indexed. When you use the AWS SDK for Python
-         * (Boto), you must use the logging APIs provided by the SDK.</p> <p>You can add
-         * tags to experiments, trials, trial components and then use the <a>Search</a> API
-         * to search for the tags.</p> <p>To add a description to an experiment, specify
-         * the optional <code>Description</code> parameter. To add a description later, or
-         * to change the description, call the <a>UpdateExperiment</a> API.</p> <p>To get a
-         * list of all your experiments, call the <a>ListExperiments</a> API. To view an
-         * experiment's properties, call the <a>DescribeExperiment</a> API. To get a list
-         * of all the trials associated with an experiment, call the <a>ListTrials</a> API.
-         * To create a trial call the <a>CreateTrial</a> API.</p><p><h3>See Also:</h3>   <a
+         * remaining inputs constant.</p> <p>When you use SageMaker Studio or the SageMaker
+         * Python SDK, all experiments, trials, and trial components are automatically
+         * tracked, logged, and indexed. When you use the Amazon Web Services SDK for
+         * Python (Boto), you must use the logging APIs provided by the SDK.</p> <p>You can
+         * add tags to experiments, trials, trial components and then use the <a>Search</a>
+         * API to search for the tags.</p> <p>To add a description to an experiment,
+         * specify the optional <code>Description</code> parameter. To add a description
+         * later, or to change the description, call the <a>UpdateExperiment</a> API.</p>
+         * <p>To get a list of all your experiments, call the <a>ListExperiments</a> API.
+         * To view an experiment's properties, call the <a>DescribeExperiment</a> API. To
+         * get a list of all the trials associated with an experiment, call the
+         * <a>ListTrials</a> API. To create a trial call the <a>CreateTrial</a>
+         * API.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateExperiment">AWS
          * API Reference</a></p>
          *
@@ -2319,18 +2455,19 @@ namespace Model
          * model.</p> <p>The goal of an experiment is to determine the components that
          * produce the best model. Multiple trials are performed, each one isolating and
          * measuring the impact of a change to one or more inputs, while keeping the
-         * remaining inputs constant.</p> <p>When you use Amazon SageMaker Studio or the
-         * Amazon SageMaker Python SDK, all experiments, trials, and trial components are
-         * automatically tracked, logged, and indexed. When you use the AWS SDK for Python
-         * (Boto), you must use the logging APIs provided by the SDK.</p> <p>You can add
-         * tags to experiments, trials, trial components and then use the <a>Search</a> API
-         * to search for the tags.</p> <p>To add a description to an experiment, specify
-         * the optional <code>Description</code> parameter. To add a description later, or
-         * to change the description, call the <a>UpdateExperiment</a> API.</p> <p>To get a
-         * list of all your experiments, call the <a>ListExperiments</a> API. To view an
-         * experiment's properties, call the <a>DescribeExperiment</a> API. To get a list
-         * of all the trials associated with an experiment, call the <a>ListTrials</a> API.
-         * To create a trial call the <a>CreateTrial</a> API.</p><p><h3>See Also:</h3>   <a
+         * remaining inputs constant.</p> <p>When you use SageMaker Studio or the SageMaker
+         * Python SDK, all experiments, trials, and trial components are automatically
+         * tracked, logged, and indexed. When you use the Amazon Web Services SDK for
+         * Python (Boto), you must use the logging APIs provided by the SDK.</p> <p>You can
+         * add tags to experiments, trials, trial components and then use the <a>Search</a>
+         * API to search for the tags.</p> <p>To add a description to an experiment,
+         * specify the optional <code>Description</code> parameter. To add a description
+         * later, or to change the description, call the <a>UpdateExperiment</a> API.</p>
+         * <p>To get a list of all your experiments, call the <a>ListExperiments</a> API.
+         * To view an experiment's properties, call the <a>DescribeExperiment</a> API. To
+         * get a list of all the trials associated with an experiment, call the
+         * <a>ListTrials</a> API. To create a trial call the <a>CreateTrial</a>
+         * API.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateExperiment">AWS
          * API Reference</a></p>
          *
@@ -2347,11 +2484,11 @@ namespace Model
          * <code>Features</code>, a <code>RecordIdentifierFeatureName</code>, an
          * <code>EventTimeFeatureName</code> and configurations for its
          * <code>OnlineStore</code> and <code>OfflineStore</code>. Check <a
-         * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS
-         * service quotas</a> to see the <code>FeatureGroup</code>s quota for your AWS
-         * account.</p>  <p>You must include at least one of
-         * <code>OnlineStoreConfig</code> and <code>OfflineStoreConfig</code> to create a
-         * <code>FeatureGroup</code>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">Amazon
+         * Web Services service quotas</a> to see the <code>FeatureGroup</code>s quota for
+         * your Amazon Web Services account.</p>  <p>You must include at least
+         * one of <code>OnlineStoreConfig</code> and <code>OfflineStoreConfig</code> to
+         * create a <code>FeatureGroup</code>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateFeatureGroup">AWS
          * API Reference</a></p>
          */
@@ -2366,11 +2503,11 @@ namespace Model
          * <code>Features</code>, a <code>RecordIdentifierFeatureName</code>, an
          * <code>EventTimeFeatureName</code> and configurations for its
          * <code>OnlineStore</code> and <code>OfflineStore</code>. Check <a
-         * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS
-         * service quotas</a> to see the <code>FeatureGroup</code>s quota for your AWS
-         * account.</p>  <p>You must include at least one of
-         * <code>OnlineStoreConfig</code> and <code>OfflineStoreConfig</code> to create a
-         * <code>FeatureGroup</code>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">Amazon
+         * Web Services service quotas</a> to see the <code>FeatureGroup</code>s quota for
+         * your Amazon Web Services account.</p>  <p>You must include at least
+         * one of <code>OnlineStoreConfig</code> and <code>OfflineStoreConfig</code> to
+         * create a <code>FeatureGroup</code>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateFeatureGroup">AWS
          * API Reference</a></p>
          *
@@ -2387,11 +2524,11 @@ namespace Model
          * <code>Features</code>, a <code>RecordIdentifierFeatureName</code>, an
          * <code>EventTimeFeatureName</code> and configurations for its
          * <code>OnlineStore</code> and <code>OfflineStore</code>. Check <a
-         * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS
-         * service quotas</a> to see the <code>FeatureGroup</code>s quota for your AWS
-         * account.</p>  <p>You must include at least one of
-         * <code>OnlineStoreConfig</code> and <code>OfflineStoreConfig</code> to create a
-         * <code>FeatureGroup</code>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">Amazon
+         * Web Services service quotas</a> to see the <code>FeatureGroup</code>s quota for
+         * your Amazon Web Services account.</p>  <p>You must include at least
+         * one of <code>OnlineStoreConfig</code> and <code>OfflineStoreConfig</code> to
+         * create a <code>FeatureGroup</code>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateFeatureGroup">AWS
          * API Reference</a></p>
          *
@@ -2564,29 +2701,68 @@ namespace Model
         virtual void CreateImageVersionAsync(const Model::CreateImageVersionRequest& request, const CreateImageVersionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Starts a recommendation job. You can create either an instance recommendation
+         * or load test job.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateInferenceRecommendationsJob">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreateInferenceRecommendationsJobOutcome CreateInferenceRecommendationsJob(const Model::CreateInferenceRecommendationsJobRequest& request) const;
+
+        /**
+         * <p>Starts a recommendation job. You can create either an instance recommendation
+         * or load test job.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateInferenceRecommendationsJob">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::CreateInferenceRecommendationsJobOutcomeCallable CreateInferenceRecommendationsJobCallable(const Model::CreateInferenceRecommendationsJobRequest& request) const;
+
+        /**
+         * <p>Starts a recommendation job. You can create either an instance recommendation
+         * or load test job.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateInferenceRecommendationsJob">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void CreateInferenceRecommendationsJobAsync(const Model::CreateInferenceRecommendationsJobRequest& request, const CreateInferenceRecommendationsJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Creates a job that uses workers to label the data objects in your input
-         * dataset. You can use the labeled data to train machine learning models.</p>
+         * dataset. You can use the labeled data to train machine learning models. </p>
          * <p>You can select your workforce from one of three providers:</p> <ul> <li> <p>A
          * private workforce that you create. It can include employees, contractors, and
          * outside experts. Use a private workforce when want the data to stay within your
          * organization or when a specific set of skills is required.</p> </li> <li> <p>One
-         * or more vendors that you select from the AWS Marketplace. Vendors provide
-         * expertise in specific areas. </p> </li> <li> <p>The Amazon Mechanical Turk
-         * workforce. This is the largest workforce, but it should only be used for public
-         * data or data that has been stripped of any personally identifiable
-         * information.</p> </li> </ul> <p>You can also use <i>automated data labeling</i>
-         * to reduce the number of data objects that need to be labeled by a human.
-         * Automated data labeling uses <i>active learning</i> to determine if a data
-         * object can be labeled by machine or if it needs to be sent to a human worker.
-         * For more information, see <a
+         * or more vendors that you select from the Amazon Web Services Marketplace.
+         * Vendors provide expertise in specific areas. </p> </li> <li> <p>The Amazon
+         * Mechanical Turk workforce. This is the largest workforce, but it should only be
+         * used for public data or data that has been stripped of any personally
+         * identifiable information.</p> </li> </ul> <p>You can also use <i>automated data
+         * labeling</i> to reduce the number of data objects that need to be labeled by a
+         * human. Automated data labeling uses <i>active learning</i> to determine if a
+         * data object can be labeled by machine or if it needs to be sent to a human
+         * worker. For more information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-automated-labeling.html">Using
          * Automated Data Labeling</a>.</p> <p>The data objects to be labeled are contained
          * in an Amazon S3 bucket. You create a <i>manifest file</i> that describes the
          * location of each object. For more information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-data.html">Using Input
          * and Output Data</a>.</p> <p>The output can be used as the manifest file for
-         * another labeling job or as training data for your machine learning
-         * models.</p><p><h3>See Also:</h3>   <a
+         * another labeling job or as training data for your machine learning models.</p>
+         * <p>You can use this operation to create a static labeling job or a streaming
+         * labeling job. A static labeling job stops if all data objects in the input
+         * manifest file identified in <code>ManifestS3Uri</code> have been labeled. A
+         * streaming labeling job runs perpetually until it is manually stopped, or remains
+         * idle for 10 days. You can send new data objects to an active
+         * (<code>InProgress</code>) streaming labeling job in real time. To learn how to
+         * create a static labeling job, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-create-labeling-job-api.html">Create
+         * a Labeling Job (API) </a> in the Amazon SageMaker Developer Guide. To learn how
+         * to create a streaming labeling job, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-streaming-create-job.html">Create
+         * a Streaming Labeling Job</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateLabelingJob">AWS
          * API Reference</a></p>
          */
@@ -2594,28 +2770,39 @@ namespace Model
 
         /**
          * <p>Creates a job that uses workers to label the data objects in your input
-         * dataset. You can use the labeled data to train machine learning models.</p>
+         * dataset. You can use the labeled data to train machine learning models. </p>
          * <p>You can select your workforce from one of three providers:</p> <ul> <li> <p>A
          * private workforce that you create. It can include employees, contractors, and
          * outside experts. Use a private workforce when want the data to stay within your
          * organization or when a specific set of skills is required.</p> </li> <li> <p>One
-         * or more vendors that you select from the AWS Marketplace. Vendors provide
-         * expertise in specific areas. </p> </li> <li> <p>The Amazon Mechanical Turk
-         * workforce. This is the largest workforce, but it should only be used for public
-         * data or data that has been stripped of any personally identifiable
-         * information.</p> </li> </ul> <p>You can also use <i>automated data labeling</i>
-         * to reduce the number of data objects that need to be labeled by a human.
-         * Automated data labeling uses <i>active learning</i> to determine if a data
-         * object can be labeled by machine or if it needs to be sent to a human worker.
-         * For more information, see <a
+         * or more vendors that you select from the Amazon Web Services Marketplace.
+         * Vendors provide expertise in specific areas. </p> </li> <li> <p>The Amazon
+         * Mechanical Turk workforce. This is the largest workforce, but it should only be
+         * used for public data or data that has been stripped of any personally
+         * identifiable information.</p> </li> </ul> <p>You can also use <i>automated data
+         * labeling</i> to reduce the number of data objects that need to be labeled by a
+         * human. Automated data labeling uses <i>active learning</i> to determine if a
+         * data object can be labeled by machine or if it needs to be sent to a human
+         * worker. For more information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-automated-labeling.html">Using
          * Automated Data Labeling</a>.</p> <p>The data objects to be labeled are contained
          * in an Amazon S3 bucket. You create a <i>manifest file</i> that describes the
          * location of each object. For more information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-data.html">Using Input
          * and Output Data</a>.</p> <p>The output can be used as the manifest file for
-         * another labeling job or as training data for your machine learning
-         * models.</p><p><h3>See Also:</h3>   <a
+         * another labeling job or as training data for your machine learning models.</p>
+         * <p>You can use this operation to create a static labeling job or a streaming
+         * labeling job. A static labeling job stops if all data objects in the input
+         * manifest file identified in <code>ManifestS3Uri</code> have been labeled. A
+         * streaming labeling job runs perpetually until it is manually stopped, or remains
+         * idle for 10 days. You can send new data objects to an active
+         * (<code>InProgress</code>) streaming labeling job in real time. To learn how to
+         * create a static labeling job, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-create-labeling-job-api.html">Create
+         * a Labeling Job (API) </a> in the Amazon SageMaker Developer Guide. To learn how
+         * to create a streaming labeling job, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-streaming-create-job.html">Create
+         * a Streaming Labeling Job</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateLabelingJob">AWS
          * API Reference</a></p>
          *
@@ -2625,28 +2812,39 @@ namespace Model
 
         /**
          * <p>Creates a job that uses workers to label the data objects in your input
-         * dataset. You can use the labeled data to train machine learning models.</p>
+         * dataset. You can use the labeled data to train machine learning models. </p>
          * <p>You can select your workforce from one of three providers:</p> <ul> <li> <p>A
          * private workforce that you create. It can include employees, contractors, and
          * outside experts. Use a private workforce when want the data to stay within your
          * organization or when a specific set of skills is required.</p> </li> <li> <p>One
-         * or more vendors that you select from the AWS Marketplace. Vendors provide
-         * expertise in specific areas. </p> </li> <li> <p>The Amazon Mechanical Turk
-         * workforce. This is the largest workforce, but it should only be used for public
-         * data or data that has been stripped of any personally identifiable
-         * information.</p> </li> </ul> <p>You can also use <i>automated data labeling</i>
-         * to reduce the number of data objects that need to be labeled by a human.
-         * Automated data labeling uses <i>active learning</i> to determine if a data
-         * object can be labeled by machine or if it needs to be sent to a human worker.
-         * For more information, see <a
+         * or more vendors that you select from the Amazon Web Services Marketplace.
+         * Vendors provide expertise in specific areas. </p> </li> <li> <p>The Amazon
+         * Mechanical Turk workforce. This is the largest workforce, but it should only be
+         * used for public data or data that has been stripped of any personally
+         * identifiable information.</p> </li> </ul> <p>You can also use <i>automated data
+         * labeling</i> to reduce the number of data objects that need to be labeled by a
+         * human. Automated data labeling uses <i>active learning</i> to determine if a
+         * data object can be labeled by machine or if it needs to be sent to a human
+         * worker. For more information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-automated-labeling.html">Using
          * Automated Data Labeling</a>.</p> <p>The data objects to be labeled are contained
          * in an Amazon S3 bucket. You create a <i>manifest file</i> that describes the
          * location of each object. For more information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-data.html">Using Input
          * and Output Data</a>.</p> <p>The output can be used as the manifest file for
-         * another labeling job or as training data for your machine learning
-         * models.</p><p><h3>See Also:</h3>   <a
+         * another labeling job or as training data for your machine learning models.</p>
+         * <p>You can use this operation to create a static labeling job or a streaming
+         * labeling job. A static labeling job stops if all data objects in the input
+         * manifest file identified in <code>ManifestS3Uri</code> have been labeled. A
+         * streaming labeling job runs perpetually until it is manually stopped, or remains
+         * idle for 10 days. You can send new data objects to an active
+         * (<code>InProgress</code>) streaming labeling job in real time. To learn how to
+         * create a static labeling job, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-create-labeling-job-api.html">Create
+         * a Labeling Job (API) </a> in the Amazon SageMaker Developer Guide. To learn how
+         * to create a streaming labeling job, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-streaming-create-job.html">Create
+         * a Streaming Labeling Job</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateLabelingJob">AWS
          * API Reference</a></p>
          *
@@ -2668,18 +2866,18 @@ namespace Model
          * <p>For an example that calls this method when deploying a model to Amazon
          * SageMaker hosting services, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy
-         * the Model to Amazon SageMaker Hosting Services (AWS SDK for Python (Boto
-         * 3)).</a> </p> <p>To run a batch transform using your model, you start a job with
-         * the <code>CreateTransformJob</code> API. Amazon SageMaker uses your model and
-         * your dataset to get inferences which are then saved to a specified S3
-         * location.</p> <p>In the <code>CreateModel</code> request, you must define a
-         * container with the <code>PrimaryContainer</code> parameter.</p> <p>In the
-         * request, you also provide an IAM role that Amazon SageMaker can assume to access
-         * model artifacts and docker image for deployment on ML compute hosting instances
-         * or for batch transform jobs. In addition, you also use the IAM role to manage
-         * permissions the inference code needs. For example, if the inference code access
-         * any other AWS resources, you grant necessary permissions via this
-         * role.</p><p><h3>See Also:</h3>   <a
+         * the Model to Amazon SageMaker Hosting Services (Amazon Web Services SDK for
+         * Python (Boto 3)).</a> </p> <p>To run a batch transform using your model, you
+         * start a job with the <code>CreateTransformJob</code> API. Amazon SageMaker uses
+         * your model and your dataset to get inferences which are then saved to a
+         * specified S3 location.</p> <p>In the <code>CreateModel</code> request, you must
+         * define a container with the <code>PrimaryContainer</code> parameter.</p> <p>In
+         * the request, you also provide an IAM role that Amazon SageMaker can assume to
+         * access model artifacts and docker image for deployment on ML compute hosting
+         * instances or for batch transform jobs. In addition, you also use the IAM role to
+         * manage permissions the inference code needs. For example, if the inference code
+         * access any other Amazon Web Services resources, you grant necessary permissions
+         * via this role.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModel">AWS
          * API Reference</a></p>
          */
@@ -2699,18 +2897,18 @@ namespace Model
          * <p>For an example that calls this method when deploying a model to Amazon
          * SageMaker hosting services, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy
-         * the Model to Amazon SageMaker Hosting Services (AWS SDK for Python (Boto
-         * 3)).</a> </p> <p>To run a batch transform using your model, you start a job with
-         * the <code>CreateTransformJob</code> API. Amazon SageMaker uses your model and
-         * your dataset to get inferences which are then saved to a specified S3
-         * location.</p> <p>In the <code>CreateModel</code> request, you must define a
-         * container with the <code>PrimaryContainer</code> parameter.</p> <p>In the
-         * request, you also provide an IAM role that Amazon SageMaker can assume to access
-         * model artifacts and docker image for deployment on ML compute hosting instances
-         * or for batch transform jobs. In addition, you also use the IAM role to manage
-         * permissions the inference code needs. For example, if the inference code access
-         * any other AWS resources, you grant necessary permissions via this
-         * role.</p><p><h3>See Also:</h3>   <a
+         * the Model to Amazon SageMaker Hosting Services (Amazon Web Services SDK for
+         * Python (Boto 3)).</a> </p> <p>To run a batch transform using your model, you
+         * start a job with the <code>CreateTransformJob</code> API. Amazon SageMaker uses
+         * your model and your dataset to get inferences which are then saved to a
+         * specified S3 location.</p> <p>In the <code>CreateModel</code> request, you must
+         * define a container with the <code>PrimaryContainer</code> parameter.</p> <p>In
+         * the request, you also provide an IAM role that Amazon SageMaker can assume to
+         * access model artifacts and docker image for deployment on ML compute hosting
+         * instances or for batch transform jobs. In addition, you also use the IAM role to
+         * manage permissions the inference code needs. For example, if the inference code
+         * access any other Amazon Web Services resources, you grant necessary permissions
+         * via this role.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModel">AWS
          * API Reference</a></p>
          *
@@ -2732,18 +2930,18 @@ namespace Model
          * <p>For an example that calls this method when deploying a model to Amazon
          * SageMaker hosting services, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy
-         * the Model to Amazon SageMaker Hosting Services (AWS SDK for Python (Boto
-         * 3)).</a> </p> <p>To run a batch transform using your model, you start a job with
-         * the <code>CreateTransformJob</code> API. Amazon SageMaker uses your model and
-         * your dataset to get inferences which are then saved to a specified S3
-         * location.</p> <p>In the <code>CreateModel</code> request, you must define a
-         * container with the <code>PrimaryContainer</code> parameter.</p> <p>In the
-         * request, you also provide an IAM role that Amazon SageMaker can assume to access
-         * model artifacts and docker image for deployment on ML compute hosting instances
-         * or for batch transform jobs. In addition, you also use the IAM role to manage
-         * permissions the inference code needs. For example, if the inference code access
-         * any other AWS resources, you grant necessary permissions via this
-         * role.</p><p><h3>See Also:</h3>   <a
+         * the Model to Amazon SageMaker Hosting Services (Amazon Web Services SDK for
+         * Python (Boto 3)).</a> </p> <p>To run a batch transform using your model, you
+         * start a job with the <code>CreateTransformJob</code> API. Amazon SageMaker uses
+         * your model and your dataset to get inferences which are then saved to a
+         * specified S3 location.</p> <p>In the <code>CreateModel</code> request, you must
+         * define a container with the <code>PrimaryContainer</code> parameter.</p> <p>In
+         * the request, you also provide an IAM role that Amazon SageMaker can assume to
+         * access model artifacts and docker image for deployment on ML compute hosting
+         * instances or for batch transform jobs. In addition, you also use the IAM role to
+         * manage permissions the inference code needs. For example, if the inference code
+         * access any other Amazon Web Services resources, you grant necessary permissions
+         * via this role.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModel">AWS
          * API Reference</a></p>
          *
@@ -2806,18 +3004,18 @@ namespace Model
 
         /**
          * <p>Creates a model package that you can use to create Amazon SageMaker models or
-         * list on AWS Marketplace, or a versioned model that is part of a model group.
-         * Buyers can subscribe to model packages listed on AWS Marketplace to create
-         * models in Amazon SageMaker.</p> <p>To create a model package by specifying a
-         * Docker container that contains your inference code and the Amazon S3 location of
-         * your model artifacts, provide values for <code>InferenceSpecification</code>. To
-         * create a model from an algorithm resource that you created or subscribed to in
-         * AWS Marketplace, provide a value for
-         * <code>SourceAlgorithmSpecification</code>.</p>  <p>There are two types of
-         * model packages:</p> <ul> <li> <p>Versioned - a model that is part of a model
-         * group in the model registry.</p> </li> <li> <p>Unversioned - a model package
-         * that is not part of a model group.</p> </li> </ul> <p><h3>See Also:</h3> 
-         * <a
+         * list on Amazon Web Services Marketplace, or a versioned model that is part of a
+         * model group. Buyers can subscribe to model packages listed on Amazon Web
+         * Services Marketplace to create models in Amazon SageMaker.</p> <p>To create a
+         * model package by specifying a Docker container that contains your inference code
+         * and the Amazon S3 location of your model artifacts, provide values for
+         * <code>InferenceSpecification</code>. To create a model from an algorithm
+         * resource that you created or subscribed to in Amazon Web Services Marketplace,
+         * provide a value for <code>SourceAlgorithmSpecification</code>.</p> 
+         * <p>There are two types of model packages:</p> <ul> <li> <p>Versioned - a model
+         * that is part of a model group in the model registry.</p> </li> <li>
+         * <p>Unversioned - a model package that is not part of a model group.</p> </li>
+         * </ul> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModelPackage">AWS
          * API Reference</a></p>
          */
@@ -2825,18 +3023,18 @@ namespace Model
 
         /**
          * <p>Creates a model package that you can use to create Amazon SageMaker models or
-         * list on AWS Marketplace, or a versioned model that is part of a model group.
-         * Buyers can subscribe to model packages listed on AWS Marketplace to create
-         * models in Amazon SageMaker.</p> <p>To create a model package by specifying a
-         * Docker container that contains your inference code and the Amazon S3 location of
-         * your model artifacts, provide values for <code>InferenceSpecification</code>. To
-         * create a model from an algorithm resource that you created or subscribed to in
-         * AWS Marketplace, provide a value for
-         * <code>SourceAlgorithmSpecification</code>.</p>  <p>There are two types of
-         * model packages:</p> <ul> <li> <p>Versioned - a model that is part of a model
-         * group in the model registry.</p> </li> <li> <p>Unversioned - a model package
-         * that is not part of a model group.</p> </li> </ul> <p><h3>See Also:</h3> 
-         * <a
+         * list on Amazon Web Services Marketplace, or a versioned model that is part of a
+         * model group. Buyers can subscribe to model packages listed on Amazon Web
+         * Services Marketplace to create models in Amazon SageMaker.</p> <p>To create a
+         * model package by specifying a Docker container that contains your inference code
+         * and the Amazon S3 location of your model artifacts, provide values for
+         * <code>InferenceSpecification</code>. To create a model from an algorithm
+         * resource that you created or subscribed to in Amazon Web Services Marketplace,
+         * provide a value for <code>SourceAlgorithmSpecification</code>.</p> 
+         * <p>There are two types of model packages:</p> <ul> <li> <p>Versioned - a model
+         * that is part of a model group in the model registry.</p> </li> <li>
+         * <p>Unversioned - a model package that is not part of a model group.</p> </li>
+         * </ul> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModelPackage">AWS
          * API Reference</a></p>
          *
@@ -2846,18 +3044,18 @@ namespace Model
 
         /**
          * <p>Creates a model package that you can use to create Amazon SageMaker models or
-         * list on AWS Marketplace, or a versioned model that is part of a model group.
-         * Buyers can subscribe to model packages listed on AWS Marketplace to create
-         * models in Amazon SageMaker.</p> <p>To create a model package by specifying a
-         * Docker container that contains your inference code and the Amazon S3 location of
-         * your model artifacts, provide values for <code>InferenceSpecification</code>. To
-         * create a model from an algorithm resource that you created or subscribed to in
-         * AWS Marketplace, provide a value for
-         * <code>SourceAlgorithmSpecification</code>.</p>  <p>There are two types of
-         * model packages:</p> <ul> <li> <p>Versioned - a model that is part of a model
-         * group in the model registry.</p> </li> <li> <p>Unversioned - a model package
-         * that is not part of a model group.</p> </li> </ul> <p><h3>See Also:</h3> 
-         * <a
+         * list on Amazon Web Services Marketplace, or a versioned model that is part of a
+         * model group. Buyers can subscribe to model packages listed on Amazon Web
+         * Services Marketplace to create models in Amazon SageMaker.</p> <p>To create a
+         * model package by specifying a Docker container that contains your inference code
+         * and the Amazon S3 location of your model artifacts, provide values for
+         * <code>InferenceSpecification</code>. To create a model from an algorithm
+         * resource that you created or subscribed to in Amazon Web Services Marketplace,
+         * provide a value for <code>SourceAlgorithmSpecification</code>.</p> 
+         * <p>There are two types of model packages:</p> <ul> <li> <p>Versioned - a model
+         * that is part of a model group in the model registry.</p> </li> <li>
+         * <p>Unversioned - a model package that is not part of a model group.</p> </li>
+         * </ul> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateModelPackage">AWS
          * API Reference</a></p>
          *
@@ -3164,10 +3362,21 @@ namespace Model
          * browser, the user will be automatically signed in to Amazon SageMaker Studio,
          * and granted access to all of the Apps and files associated with the Domain's
          * Amazon Elastic File System (EFS) volume. This operation can only be called when
-         * the authentication mode equals IAM. </p>  <p>The URL that you get from a
-         * call to <code>CreatePresignedDomainUrl</code> is valid only for 5 minutes. If
-         * you try to use the URL after the 5-minute limit expires, you are directed to the
-         * AWS console sign-in page.</p> <p><h3>See Also:</h3>   <a
+         * the authentication mode equals IAM. </p> <p>The IAM role or user used to call
+         * this API defines the permissions to access the app. Once the presigned URL is
+         * created, no additional permission is required to access this URL. IAM
+         * authorization policies for this API are also enforced for every HTTP request and
+         * WebSocket frame that attempts to connect to the app.</p> <p>You can restrict
+         * access to this API and to the URL that it returns to a list of IP addresses,
+         * Amazon VPCs or Amazon VPC Endpoints that you specify. For more information, see
+         * <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-interface-endpoint.html">Connect
+         * to SageMaker Studio Through an Interface VPC Endpoint</a> .</p>  <p>The
+         * URL that you get from a call to <code>CreatePresignedDomainUrl</code> has a
+         * default timeout of 5 minutes. You can configure this value using
+         * <code>ExpiresInSeconds</code>. If you try to use the URL after the timeout limit
+         * expires, you are directed to the Amazon Web Services console sign-in page.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedDomainUrl">AWS
          * API Reference</a></p>
          */
@@ -3178,10 +3387,21 @@ namespace Model
          * browser, the user will be automatically signed in to Amazon SageMaker Studio,
          * and granted access to all of the Apps and files associated with the Domain's
          * Amazon Elastic File System (EFS) volume. This operation can only be called when
-         * the authentication mode equals IAM. </p>  <p>The URL that you get from a
-         * call to <code>CreatePresignedDomainUrl</code> is valid only for 5 minutes. If
-         * you try to use the URL after the 5-minute limit expires, you are directed to the
-         * AWS console sign-in page.</p> <p><h3>See Also:</h3>   <a
+         * the authentication mode equals IAM. </p> <p>The IAM role or user used to call
+         * this API defines the permissions to access the app. Once the presigned URL is
+         * created, no additional permission is required to access this URL. IAM
+         * authorization policies for this API are also enforced for every HTTP request and
+         * WebSocket frame that attempts to connect to the app.</p> <p>You can restrict
+         * access to this API and to the URL that it returns to a list of IP addresses,
+         * Amazon VPCs or Amazon VPC Endpoints that you specify. For more information, see
+         * <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-interface-endpoint.html">Connect
+         * to SageMaker Studio Through an Interface VPC Endpoint</a> .</p>  <p>The
+         * URL that you get from a call to <code>CreatePresignedDomainUrl</code> has a
+         * default timeout of 5 minutes. You can configure this value using
+         * <code>ExpiresInSeconds</code>. If you try to use the URL after the timeout limit
+         * expires, you are directed to the Amazon Web Services console sign-in page.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedDomainUrl">AWS
          * API Reference</a></p>
          *
@@ -3194,10 +3414,21 @@ namespace Model
          * browser, the user will be automatically signed in to Amazon SageMaker Studio,
          * and granted access to all of the Apps and files associated with the Domain's
          * Amazon Elastic File System (EFS) volume. This operation can only be called when
-         * the authentication mode equals IAM. </p>  <p>The URL that you get from a
-         * call to <code>CreatePresignedDomainUrl</code> is valid only for 5 minutes. If
-         * you try to use the URL after the 5-minute limit expires, you are directed to the
-         * AWS console sign-in page.</p> <p><h3>See Also:</h3>   <a
+         * the authentication mode equals IAM. </p> <p>The IAM role or user used to call
+         * this API defines the permissions to access the app. Once the presigned URL is
+         * created, no additional permission is required to access this URL. IAM
+         * authorization policies for this API are also enforced for every HTTP request and
+         * WebSocket frame that attempts to connect to the app.</p> <p>You can restrict
+         * access to this API and to the URL that it returns to a list of IP addresses,
+         * Amazon VPCs or Amazon VPC Endpoints that you specify. For more information, see
+         * <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-interface-endpoint.html">Connect
+         * to SageMaker Studio Through an Interface VPC Endpoint</a> .</p>  <p>The
+         * URL that you get from a call to <code>CreatePresignedDomainUrl</code> has a
+         * default timeout of 5 minutes. You can configure this value using
+         * <code>ExpiresInSeconds</code>. If you try to use the URL after the timeout limit
+         * expires, you are directed to the Amazon Web Services console sign-in page.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedDomainUrl">AWS
          * API Reference</a></p>
          *
@@ -3224,7 +3455,8 @@ namespace Model
          * Access to a Notebook Instance by IP Address</a>.</p>  <p>The URL that you
          * get from a call to <a>CreatePresignedNotebookInstanceUrl</a> is valid only for 5
          * minutes. If you try to use the URL after the 5-minute limit expires, you are
-         * directed to the AWS console sign-in page.</p> <p><h3>See Also:</h3>   <a
+         * directed to the Amazon Web Services console sign-in page.</p> <p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedNotebookInstanceUrl">AWS
          * API Reference</a></p>
          */
@@ -3249,7 +3481,8 @@ namespace Model
          * Access to a Notebook Instance by IP Address</a>.</p>  <p>The URL that you
          * get from a call to <a>CreatePresignedNotebookInstanceUrl</a> is valid only for 5
          * minutes. If you try to use the URL after the 5-minute limit expires, you are
-         * directed to the AWS console sign-in page.</p> <p><h3>See Also:</h3>   <a
+         * directed to the Amazon Web Services console sign-in page.</p> <p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedNotebookInstanceUrl">AWS
          * API Reference</a></p>
          *
@@ -3276,7 +3509,8 @@ namespace Model
          * Access to a Notebook Instance by IP Address</a>.</p>  <p>The URL that you
          * get from a call to <a>CreatePresignedNotebookInstanceUrl</a> is valid only for 5
          * minutes. If you try to use the URL after the 5-minute limit expires, you are
-         * directed to the AWS console sign-in page.</p> <p><h3>See Also:</h3>   <a
+         * directed to the Amazon Web Services console sign-in page.</p> <p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedNotebookInstanceUrl">AWS
          * API Reference</a></p>
          *
@@ -3341,6 +3575,31 @@ namespace Model
         virtual void CreateProjectAsync(const Model::CreateProjectRequest& request, const CreateProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Creates a new Studio Lifecycle Configuration.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateStudioLifecycleConfig">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreateStudioLifecycleConfigOutcome CreateStudioLifecycleConfig(const Model::CreateStudioLifecycleConfigRequest& request) const;
+
+        /**
+         * <p>Creates a new Studio Lifecycle Configuration.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateStudioLifecycleConfig">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::CreateStudioLifecycleConfigOutcomeCallable CreateStudioLifecycleConfigCallable(const Model::CreateStudioLifecycleConfigRequest& request) const;
+
+        /**
+         * <p>Creates a new Studio Lifecycle Configuration.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateStudioLifecycleConfig">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void CreateStudioLifecycleConfigAsync(const Model::CreateStudioLifecycleConfigRequest& request, const CreateStudioLifecycleConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Starts a model training job. After training completes, Amazon SageMaker saves
          * the resulting model artifacts to an Amazon S3 location that you specify. </p>
          * <p>If you choose to host your model using Amazon SageMaker hosting services, you
@@ -3357,8 +3616,8 @@ namespace Model
          * </p> </li> <li> <p> <code>InputDataConfig</code> - Describes the training
          * dataset and the Amazon S3, EFS, or FSx location where it is stored.</p> </li>
          * <li> <p> <code>OutputDataConfig</code> - Identifies the Amazon S3 bucket where
-         * you want Amazon SageMaker to save the results of model training. </p> <p/> </li>
-         * <li> <p> <code>ResourceConfig</code> - Identifies the resources, ML compute
+         * you want Amazon SageMaker to save the results of model training. </p> </li> <li>
+         * <p> <code>ResourceConfig</code> - Identifies the resources, ML compute
          * instances, and ML storage volumes to deploy for model training. In distributed
          * training, you specify more than one instance. </p> </li> <li> <p>
          * <code>EnableManagedSpotTraining</code> - Optimize the cost of training machine
@@ -3366,13 +3625,16 @@ namespace Model
          * information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-managed-spot-training.html">Managed
          * Spot Training</a>. </p> </li> <li> <p> <code>RoleArn</code> - The Amazon
-         * Resource Number (ARN) that Amazon SageMaker assumes to perform tasks on your
+         * Resource Name (ARN) that Amazon SageMaker assumes to perform tasks on your
          * behalf during model training. You must grant this role the necessary permissions
          * so that Amazon SageMaker can successfully complete model training. </p> </li>
          * <li> <p> <code>StoppingCondition</code> - To help cap training costs, use
          * <code>MaxRuntimeInSeconds</code> to set a time limit for training. Use
-         * <code>MaxWaitTimeInSeconds</code> to specify how long you are willing to wait
-         * for a managed spot training job to complete. </p> </li> </ul> <p> For more
+         * <code>MaxWaitTimeInSeconds</code> to specify how long a managed spot training
+         * job has to complete. </p> </li> <li> <p> <code>Environment</code> - The
+         * environment variables to set in the Docker container.</p> </li> <li> <p>
+         * <code>RetryStrategy</code> - The number of times to retry the job when the job
+         * fails due to an <code>InternalServerError</code>.</p> </li> </ul> <p> For more
          * information about Amazon SageMaker, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How It
          * Works</a>. </p><p><h3>See Also:</h3>   <a
@@ -3398,8 +3660,8 @@ namespace Model
          * </p> </li> <li> <p> <code>InputDataConfig</code> - Describes the training
          * dataset and the Amazon S3, EFS, or FSx location where it is stored.</p> </li>
          * <li> <p> <code>OutputDataConfig</code> - Identifies the Amazon S3 bucket where
-         * you want Amazon SageMaker to save the results of model training. </p> <p/> </li>
-         * <li> <p> <code>ResourceConfig</code> - Identifies the resources, ML compute
+         * you want Amazon SageMaker to save the results of model training. </p> </li> <li>
+         * <p> <code>ResourceConfig</code> - Identifies the resources, ML compute
          * instances, and ML storage volumes to deploy for model training. In distributed
          * training, you specify more than one instance. </p> </li> <li> <p>
          * <code>EnableManagedSpotTraining</code> - Optimize the cost of training machine
@@ -3407,13 +3669,16 @@ namespace Model
          * information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-managed-spot-training.html">Managed
          * Spot Training</a>. </p> </li> <li> <p> <code>RoleArn</code> - The Amazon
-         * Resource Number (ARN) that Amazon SageMaker assumes to perform tasks on your
+         * Resource Name (ARN) that Amazon SageMaker assumes to perform tasks on your
          * behalf during model training. You must grant this role the necessary permissions
          * so that Amazon SageMaker can successfully complete model training. </p> </li>
          * <li> <p> <code>StoppingCondition</code> - To help cap training costs, use
          * <code>MaxRuntimeInSeconds</code> to set a time limit for training. Use
-         * <code>MaxWaitTimeInSeconds</code> to specify how long you are willing to wait
-         * for a managed spot training job to complete. </p> </li> </ul> <p> For more
+         * <code>MaxWaitTimeInSeconds</code> to specify how long a managed spot training
+         * job has to complete. </p> </li> <li> <p> <code>Environment</code> - The
+         * environment variables to set in the Docker container.</p> </li> <li> <p>
+         * <code>RetryStrategy</code> - The number of times to retry the job when the job
+         * fails due to an <code>InternalServerError</code>.</p> </li> </ul> <p> For more
          * information about Amazon SageMaker, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How It
          * Works</a>. </p><p><h3>See Also:</h3>   <a
@@ -3441,8 +3706,8 @@ namespace Model
          * </p> </li> <li> <p> <code>InputDataConfig</code> - Describes the training
          * dataset and the Amazon S3, EFS, or FSx location where it is stored.</p> </li>
          * <li> <p> <code>OutputDataConfig</code> - Identifies the Amazon S3 bucket where
-         * you want Amazon SageMaker to save the results of model training. </p> <p/> </li>
-         * <li> <p> <code>ResourceConfig</code> - Identifies the resources, ML compute
+         * you want Amazon SageMaker to save the results of model training. </p> </li> <li>
+         * <p> <code>ResourceConfig</code> - Identifies the resources, ML compute
          * instances, and ML storage volumes to deploy for model training. In distributed
          * training, you specify more than one instance. </p> </li> <li> <p>
          * <code>EnableManagedSpotTraining</code> - Optimize the cost of training machine
@@ -3450,13 +3715,16 @@ namespace Model
          * information, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-managed-spot-training.html">Managed
          * Spot Training</a>. </p> </li> <li> <p> <code>RoleArn</code> - The Amazon
-         * Resource Number (ARN) that Amazon SageMaker assumes to perform tasks on your
+         * Resource Name (ARN) that Amazon SageMaker assumes to perform tasks on your
          * behalf during model training. You must grant this role the necessary permissions
          * so that Amazon SageMaker can successfully complete model training. </p> </li>
          * <li> <p> <code>StoppingCondition</code> - To help cap training costs, use
          * <code>MaxRuntimeInSeconds</code> to set a time limit for training. Use
-         * <code>MaxWaitTimeInSeconds</code> to specify how long you are willing to wait
-         * for a managed spot training job to complete. </p> </li> </ul> <p> For more
+         * <code>MaxWaitTimeInSeconds</code> to specify how long a managed spot training
+         * job has to complete. </p> </li> <li> <p> <code>Environment</code> - The
+         * environment variables to set in the Docker container.</p> </li> <li> <p>
+         * <code>RetryStrategy</code> - The number of times to retry the job when the job
+         * fails due to an <code>InternalServerError</code>.</p> </li> </ul> <p> For more
          * information about Amazon SageMaker, see <a
          * href="https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How It
          * Works</a>. </p><p><h3>See Also:</h3>   <a
@@ -3473,10 +3741,11 @@ namespace Model
          * you specify.</p> <p>To perform batch transformations, you create a transform job
          * and use the data that you have readily available.</p> <p>In the request body,
          * you provide the following:</p> <ul> <li> <p> <code>TransformJobName</code> -
-         * Identifies the transform job. The name must be unique within an AWS Region in an
-         * AWS account.</p> </li> <li> <p> <code>ModelName</code> - Identifies the model to
-         * use. <code>ModelName</code> must be the name of an existing Amazon SageMaker
-         * model in the same AWS Region and AWS account. For information on creating a
+         * Identifies the transform job. The name must be unique within an Amazon Web
+         * Services Region in an Amazon Web Services account.</p> </li> <li> <p>
+         * <code>ModelName</code> - Identifies the model to use. <code>ModelName</code>
+         * must be the name of an existing Amazon SageMaker model in the same Amazon Web
+         * Services Region and Amazon Web Services account. For information on creating a
          * model, see <a>CreateModel</a>.</p> </li> <li> <p> <code>TransformInput</code> -
          * Describes the dataset to be transformed and the Amazon S3 location where it is
          * stored.</p> </li> <li> <p> <code>TransformOutput</code> - Identifies the Amazon
@@ -3497,10 +3766,11 @@ namespace Model
          * you specify.</p> <p>To perform batch transformations, you create a transform job
          * and use the data that you have readily available.</p> <p>In the request body,
          * you provide the following:</p> <ul> <li> <p> <code>TransformJobName</code> -
-         * Identifies the transform job. The name must be unique within an AWS Region in an
-         * AWS account.</p> </li> <li> <p> <code>ModelName</code> - Identifies the model to
-         * use. <code>ModelName</code> must be the name of an existing Amazon SageMaker
-         * model in the same AWS Region and AWS account. For information on creating a
+         * Identifies the transform job. The name must be unique within an Amazon Web
+         * Services Region in an Amazon Web Services account.</p> </li> <li> <p>
+         * <code>ModelName</code> - Identifies the model to use. <code>ModelName</code>
+         * must be the name of an existing Amazon SageMaker model in the same Amazon Web
+         * Services Region and Amazon Web Services account. For information on creating a
          * model, see <a>CreateModel</a>.</p> </li> <li> <p> <code>TransformInput</code> -
          * Describes the dataset to be transformed and the Amazon S3 location where it is
          * stored.</p> </li> <li> <p> <code>TransformOutput</code> - Identifies the Amazon
@@ -3523,10 +3793,11 @@ namespace Model
          * you specify.</p> <p>To perform batch transformations, you create a transform job
          * and use the data that you have readily available.</p> <p>In the request body,
          * you provide the following:</p> <ul> <li> <p> <code>TransformJobName</code> -
-         * Identifies the transform job. The name must be unique within an AWS Region in an
-         * AWS account.</p> </li> <li> <p> <code>ModelName</code> - Identifies the model to
-         * use. <code>ModelName</code> must be the name of an existing Amazon SageMaker
-         * model in the same AWS Region and AWS account. For information on creating a
+         * Identifies the transform job. The name must be unique within an Amazon Web
+         * Services Region in an Amazon Web Services account.</p> </li> <li> <p>
+         * <code>ModelName</code> - Identifies the model to use. <code>ModelName</code>
+         * must be the name of an existing Amazon SageMaker model in the same Amazon Web
+         * Services Region and Amazon Web Services account. For information on creating a
          * model, see <a>CreateModel</a>.</p> </li> <li> <p> <code>TransformInput</code> -
          * Describes the dataset to be transformed and the Amazon S3 location where it is
          * stored.</p> </li> <li> <p> <code>TransformOutput</code> - Identifies the Amazon
@@ -3544,34 +3815,34 @@ namespace Model
         virtual void CreateTransformJobAsync(const Model::CreateTransformJobRequest& request, const CreateTransformJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates an Amazon SageMaker <i>trial</i>. A trial is a set of steps called
-         * <i>trial components</i> that produce a machine learning model. A trial is part
-         * of a single Amazon SageMaker <i>experiment</i>.</p> <p>When you use Amazon
-         * SageMaker Studio or the Amazon SageMaker Python SDK, all experiments, trials,
-         * and trial components are automatically tracked, logged, and indexed. When you
-         * use the AWS SDK for Python (Boto), you must use the logging APIs provided by the
-         * SDK.</p> <p>You can add tags to a trial and then use the <a>Search</a> API to
-         * search for the tags.</p> <p>To get a list of all your trials, call the
-         * <a>ListTrials</a> API. To view a trial's properties, call the
-         * <a>DescribeTrial</a> API. To create a trial component, call the
-         * <a>CreateTrialComponent</a> API.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates an SageMaker <i>trial</i>. A trial is a set of steps called <i>trial
+         * components</i> that produce a machine learning model. A trial is part of a
+         * single SageMaker <i>experiment</i>.</p> <p>When you use SageMaker Studio or the
+         * SageMaker Python SDK, all experiments, trials, and trial components are
+         * automatically tracked, logged, and indexed. When you use the Amazon Web Services
+         * SDK for Python (Boto), you must use the logging APIs provided by the SDK.</p>
+         * <p>You can add tags to a trial and then use the <a>Search</a> API to search for
+         * the tags.</p> <p>To get a list of all your trials, call the <a>ListTrials</a>
+         * API. To view a trial's properties, call the <a>DescribeTrial</a> API. To create
+         * a trial component, call the <a>CreateTrialComponent</a> API.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateTrial">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateTrialOutcome CreateTrial(const Model::CreateTrialRequest& request) const;
 
         /**
-         * <p>Creates an Amazon SageMaker <i>trial</i>. A trial is a set of steps called
-         * <i>trial components</i> that produce a machine learning model. A trial is part
-         * of a single Amazon SageMaker <i>experiment</i>.</p> <p>When you use Amazon
-         * SageMaker Studio or the Amazon SageMaker Python SDK, all experiments, trials,
-         * and trial components are automatically tracked, logged, and indexed. When you
-         * use the AWS SDK for Python (Boto), you must use the logging APIs provided by the
-         * SDK.</p> <p>You can add tags to a trial and then use the <a>Search</a> API to
-         * search for the tags.</p> <p>To get a list of all your trials, call the
-         * <a>ListTrials</a> API. To view a trial's properties, call the
-         * <a>DescribeTrial</a> API. To create a trial component, call the
-         * <a>CreateTrialComponent</a> API.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates an SageMaker <i>trial</i>. A trial is a set of steps called <i>trial
+         * components</i> that produce a machine learning model. A trial is part of a
+         * single SageMaker <i>experiment</i>.</p> <p>When you use SageMaker Studio or the
+         * SageMaker Python SDK, all experiments, trials, and trial components are
+         * automatically tracked, logged, and indexed. When you use the Amazon Web Services
+         * SDK for Python (Boto), you must use the logging APIs provided by the SDK.</p>
+         * <p>You can add tags to a trial and then use the <a>Search</a> API to search for
+         * the tags.</p> <p>To get a list of all your trials, call the <a>ListTrials</a>
+         * API. To view a trial's properties, call the <a>DescribeTrial</a> API. To create
+         * a trial component, call the <a>CreateTrialComponent</a> API.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateTrial">AWS
          * API Reference</a></p>
          *
@@ -3580,17 +3851,17 @@ namespace Model
         virtual Model::CreateTrialOutcomeCallable CreateTrialCallable(const Model::CreateTrialRequest& request) const;
 
         /**
-         * <p>Creates an Amazon SageMaker <i>trial</i>. A trial is a set of steps called
-         * <i>trial components</i> that produce a machine learning model. A trial is part
-         * of a single Amazon SageMaker <i>experiment</i>.</p> <p>When you use Amazon
-         * SageMaker Studio or the Amazon SageMaker Python SDK, all experiments, trials,
-         * and trial components are automatically tracked, logged, and indexed. When you
-         * use the AWS SDK for Python (Boto), you must use the logging APIs provided by the
-         * SDK.</p> <p>You can add tags to a trial and then use the <a>Search</a> API to
-         * search for the tags.</p> <p>To get a list of all your trials, call the
-         * <a>ListTrials</a> API. To view a trial's properties, call the
-         * <a>DescribeTrial</a> API. To create a trial component, call the
-         * <a>CreateTrialComponent</a> API.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates an SageMaker <i>trial</i>. A trial is a set of steps called <i>trial
+         * components</i> that produce a machine learning model. A trial is part of a
+         * single SageMaker <i>experiment</i>.</p> <p>When you use SageMaker Studio or the
+         * SageMaker Python SDK, all experiments, trials, and trial components are
+         * automatically tracked, logged, and indexed. When you use the Amazon Web Services
+         * SDK for Python (Boto), you must use the logging APIs provided by the SDK.</p>
+         * <p>You can add tags to a trial and then use the <a>Search</a> API to search for
+         * the tags.</p> <p>To get a list of all your trials, call the <a>ListTrials</a>
+         * API. To view a trial's properties, call the <a>DescribeTrial</a> API. To create
+         * a trial component, call the <a>CreateTrialComponent</a> API.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateTrial">AWS
          * API Reference</a></p>
          *
@@ -3603,16 +3874,11 @@ namespace Model
          * <i>trial</i>. A trial is composed of one or more trial components. A trial
          * component can be used in multiple trials.</p> <p>Trial components include
          * pre-processing jobs, training jobs, and batch transform jobs.</p> <p>When you
-         * use Amazon SageMaker Studio or the Amazon SageMaker Python SDK, all experiments,
-         * trials, and trial components are automatically tracked, logged, and indexed.
-         * When you use the AWS SDK for Python (Boto), you must use the logging APIs
+         * use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and
+         * trial components are automatically tracked, logged, and indexed. When you use
+         * the Amazon Web Services SDK for Python (Boto), you must use the logging APIs
          * provided by the SDK.</p> <p>You can add tags to a trial component and then use
-         * the <a>Search</a> API to search for the tags.</p>  <p>
-         * <code>CreateTrialComponent</code> can only be invoked from within an Amazon
-         * SageMaker managed environment. This includes Amazon SageMaker training jobs,
-         * processing jobs, transform jobs, and Amazon SageMaker notebooks. A call to
-         * <code>CreateTrialComponent</code> from outside one of these environments results
-         * in an error.</p> <p><h3>See Also:</h3>   <a
+         * the <a>Search</a> API to search for the tags.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateTrialComponent">AWS
          * API Reference</a></p>
          */
@@ -3623,16 +3889,11 @@ namespace Model
          * <i>trial</i>. A trial is composed of one or more trial components. A trial
          * component can be used in multiple trials.</p> <p>Trial components include
          * pre-processing jobs, training jobs, and batch transform jobs.</p> <p>When you
-         * use Amazon SageMaker Studio or the Amazon SageMaker Python SDK, all experiments,
-         * trials, and trial components are automatically tracked, logged, and indexed.
-         * When you use the AWS SDK for Python (Boto), you must use the logging APIs
+         * use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and
+         * trial components are automatically tracked, logged, and indexed. When you use
+         * the Amazon Web Services SDK for Python (Boto), you must use the logging APIs
          * provided by the SDK.</p> <p>You can add tags to a trial component and then use
-         * the <a>Search</a> API to search for the tags.</p>  <p>
-         * <code>CreateTrialComponent</code> can only be invoked from within an Amazon
-         * SageMaker managed environment. This includes Amazon SageMaker training jobs,
-         * processing jobs, transform jobs, and Amazon SageMaker notebooks. A call to
-         * <code>CreateTrialComponent</code> from outside one of these environments results
-         * in an error.</p> <p><h3>See Also:</h3>   <a
+         * the <a>Search</a> API to search for the tags.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateTrialComponent">AWS
          * API Reference</a></p>
          *
@@ -3645,16 +3906,11 @@ namespace Model
          * <i>trial</i>. A trial is composed of one or more trial components. A trial
          * component can be used in multiple trials.</p> <p>Trial components include
          * pre-processing jobs, training jobs, and batch transform jobs.</p> <p>When you
-         * use Amazon SageMaker Studio or the Amazon SageMaker Python SDK, all experiments,
-         * trials, and trial components are automatically tracked, logged, and indexed.
-         * When you use the AWS SDK for Python (Boto), you must use the logging APIs
+         * use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and
+         * trial components are automatically tracked, logged, and indexed. When you use
+         * the Amazon Web Services SDK for Python (Boto), you must use the logging APIs
          * provided by the SDK.</p> <p>You can add tags to a trial component and then use
-         * the <a>Search</a> API to search for the tags.</p>  <p>
-         * <code>CreateTrialComponent</code> can only be invoked from within an Amazon
-         * SageMaker managed environment. This includes Amazon SageMaker training jobs,
-         * processing jobs, transform jobs, and Amazon SageMaker notebooks. A call to
-         * <code>CreateTrialComponent</code> from outside one of these environments results
-         * in an error.</p> <p><h3>See Also:</h3>   <a
+         * the <a>Search</a> API to search for the tags.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateTrialComponent">AWS
          * API Reference</a></p>
          *
@@ -3710,10 +3966,11 @@ namespace Model
 
         /**
          * <p>Use this operation to create a workforce. This operation will return an error
-         * if a workforce already exists in the AWS Region that you specify. You can only
-         * create one workforce in each AWS Region per AWS account.</p> <p>If you want to
-         * create a new workforce in an AWS Region where a workforce already exists, use
-         * the API operation to delete the existing workforce and then use
+         * if a workforce already exists in the Amazon Web Services Region that you
+         * specify. You can only create one workforce in each Amazon Web Services Region
+         * per Amazon Web Services account.</p> <p>If you want to create a new workforce in
+         * an Amazon Web Services Region where a workforce already exists, use the API
+         * operation to delete the existing workforce and then use
          * <code>CreateWorkforce</code> to create a new workforce.</p> <p>To create a
          * private workforce using Amazon Cognito, you must specify a Cognito user pool in
          * <code>CognitoConfig</code>. You can also create an Amazon Cognito workforce
@@ -3733,10 +3990,11 @@ namespace Model
 
         /**
          * <p>Use this operation to create a workforce. This operation will return an error
-         * if a workforce already exists in the AWS Region that you specify. You can only
-         * create one workforce in each AWS Region per AWS account.</p> <p>If you want to
-         * create a new workforce in an AWS Region where a workforce already exists, use
-         * the API operation to delete the existing workforce and then use
+         * if a workforce already exists in the Amazon Web Services Region that you
+         * specify. You can only create one workforce in each Amazon Web Services Region
+         * per Amazon Web Services account.</p> <p>If you want to create a new workforce in
+         * an Amazon Web Services Region where a workforce already exists, use the API
+         * operation to delete the existing workforce and then use
          * <code>CreateWorkforce</code> to create a new workforce.</p> <p>To create a
          * private workforce using Amazon Cognito, you must specify a Cognito user pool in
          * <code>CognitoConfig</code>. You can also create an Amazon Cognito workforce
@@ -3758,10 +4016,11 @@ namespace Model
 
         /**
          * <p>Use this operation to create a workforce. This operation will return an error
-         * if a workforce already exists in the AWS Region that you specify. You can only
-         * create one workforce in each AWS Region per AWS account.</p> <p>If you want to
-         * create a new workforce in an AWS Region where a workforce already exists, use
-         * the API operation to delete the existing workforce and then use
+         * if a workforce already exists in the Amazon Web Services Region that you
+         * specify. You can only create one workforce in each Amazon Web Services Region
+         * per Amazon Web Services account.</p> <p>If you want to create a new workforce in
+         * an Amazon Web Services Region where a workforce already exists, use the API
+         * operation to delete the existing workforce and then use
          * <code>CreateWorkforce</code> to create a new workforce.</p> <p>To create a
          * private workforce using Amazon Cognito, you must specify a Cognito user pool in
          * <code>CognitoConfig</code>. You can also create an Amazon Cognito workforce
@@ -4201,18 +4460,18 @@ namespace Model
         virtual void DeleteEndpointConfigAsync(const Model::DeleteEndpointConfigRequest& request, const DeleteEndpointConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Deletes an Amazon SageMaker experiment. All trials associated with the
-         * experiment must be deleted first. Use the <a>ListTrials</a> API to get a list of
-         * the trials associated with the experiment.</p><p><h3>See Also:</h3>   <a
+         * <p>Deletes an SageMaker experiment. All trials associated with the experiment
+         * must be deleted first. Use the <a>ListTrials</a> API to get a list of the trials
+         * associated with the experiment.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteExperiment">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteExperimentOutcome DeleteExperiment(const Model::DeleteExperimentRequest& request) const;
 
         /**
-         * <p>Deletes an Amazon SageMaker experiment. All trials associated with the
-         * experiment must be deleted first. Use the <a>ListTrials</a> API to get a list of
-         * the trials associated with the experiment.</p><p><h3>See Also:</h3>   <a
+         * <p>Deletes an SageMaker experiment. All trials associated with the experiment
+         * must be deleted first. Use the <a>ListTrials</a> API to get a list of the trials
+         * associated with the experiment.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteExperiment">AWS
          * API Reference</a></p>
          *
@@ -4221,9 +4480,9 @@ namespace Model
         virtual Model::DeleteExperimentOutcomeCallable DeleteExperimentCallable(const Model::DeleteExperimentRequest& request) const;
 
         /**
-         * <p>Deletes an Amazon SageMaker experiment. All trials associated with the
-         * experiment must be deleted first. Use the <a>ListTrials</a> API to get a list of
-         * the trials associated with the experiment.</p><p><h3>See Also:</h3>   <a
+         * <p>Deletes an SageMaker experiment. All trials associated with the experiment
+         * must be deleted first. Use the <a>ListTrials</a> API to get a list of the trials
+         * associated with the experiment.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteExperiment">AWS
          * API Reference</a></p>
          *
@@ -4236,9 +4495,9 @@ namespace Model
          * <code>OnlineStore</code> of the <code>FeatureGroup</code>. Data cannot be
          * accessed from the <code>OnlineStore</code> immediately after
          * <code>DeleteFeatureGroup</code> is called. </p> <p>Data written into the
-         * <code>OfflineStore</code> will not be deleted. The AWS Glue database and tables
-         * that are automatically created for your <code>OfflineStore</code> are not
-         * deleted. </p><p><h3>See Also:</h3>   <a
+         * <code>OfflineStore</code> will not be deleted. The Amazon Web Services Glue
+         * database and tables that are automatically created for your
+         * <code>OfflineStore</code> are not deleted. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteFeatureGroup">AWS
          * API Reference</a></p>
          */
@@ -4249,9 +4508,9 @@ namespace Model
          * <code>OnlineStore</code> of the <code>FeatureGroup</code>. Data cannot be
          * accessed from the <code>OnlineStore</code> immediately after
          * <code>DeleteFeatureGroup</code> is called. </p> <p>Data written into the
-         * <code>OfflineStore</code> will not be deleted. The AWS Glue database and tables
-         * that are automatically created for your <code>OfflineStore</code> are not
-         * deleted. </p><p><h3>See Also:</h3>   <a
+         * <code>OfflineStore</code> will not be deleted. The Amazon Web Services Glue
+         * database and tables that are automatically created for your
+         * <code>OfflineStore</code> are not deleted. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteFeatureGroup">AWS
          * API Reference</a></p>
          *
@@ -4264,9 +4523,9 @@ namespace Model
          * <code>OnlineStore</code> of the <code>FeatureGroup</code>. Data cannot be
          * accessed from the <code>OnlineStore</code> immediately after
          * <code>DeleteFeatureGroup</code> is called. </p> <p>Data written into the
-         * <code>OfflineStore</code> will not be deleted. The AWS Glue database and tables
-         * that are automatically created for your <code>OfflineStore</code> are not
-         * deleted. </p><p><h3>See Also:</h3>   <a
+         * <code>OfflineStore</code> will not be deleted. The Amazon Web Services Glue
+         * database and tables that are automatically created for your
+         * <code>OfflineStore</code> are not deleted. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteFeatureGroup">AWS
          * API Reference</a></p>
          *
@@ -4395,8 +4654,8 @@ namespace Model
         /**
          * <p>Deletes a model. The <code>DeleteModel</code> API deletes only the model
          * entry that was created in Amazon SageMaker when you called the
-         * <a>CreateModel</a> API. It does not delete model artifacts, inference code, or
-         * the IAM role that you specified when creating the model. </p><p><h3>See
+         * <code>CreateModel</code> API. It does not delete model artifacts, inference
+         * code, or the IAM role that you specified when creating the model. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModel">AWS
          * API Reference</a></p>
@@ -4406,8 +4665,8 @@ namespace Model
         /**
          * <p>Deletes a model. The <code>DeleteModel</code> API deletes only the model
          * entry that was created in Amazon SageMaker when you called the
-         * <a>CreateModel</a> API. It does not delete model artifacts, inference code, or
-         * the IAM role that you specified when creating the model. </p><p><h3>See
+         * <code>CreateModel</code> API. It does not delete model artifacts, inference
+         * code, or the IAM role that you specified when creating the model. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModel">AWS
          * API Reference</a></p>
@@ -4419,8 +4678,8 @@ namespace Model
         /**
          * <p>Deletes a model. The <code>DeleteModel</code> API deletes only the model
          * entry that was created in Amazon SageMaker when you called the
-         * <a>CreateModel</a> API. It does not delete model artifacts, inference code, or
-         * the IAM role that you specified when creating the model. </p><p><h3>See
+         * <code>CreateModel</code> API. It does not delete model artifacts, inference
+         * code, or the IAM role that you specified when creating the model. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModel">AWS
          * API Reference</a></p>
@@ -4487,9 +4746,9 @@ namespace Model
 
         /**
          * <p>Deletes a model package.</p> <p>A model package is used to create Amazon
-         * SageMaker models or list on AWS Marketplace. Buyers can subscribe to model
-         * packages listed on AWS Marketplace to create models in Amazon
-         * SageMaker.</p><p><h3>See Also:</h3>   <a
+         * SageMaker models or list on Amazon Web Services Marketplace. Buyers can
+         * subscribe to model packages listed on Amazon Web Services Marketplace to create
+         * models in Amazon SageMaker.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModelPackage">AWS
          * API Reference</a></p>
          */
@@ -4497,9 +4756,9 @@ namespace Model
 
         /**
          * <p>Deletes a model package.</p> <p>A model package is used to create Amazon
-         * SageMaker models or list on AWS Marketplace. Buyers can subscribe to model
-         * packages listed on AWS Marketplace to create models in Amazon
-         * SageMaker.</p><p><h3>See Also:</h3>   <a
+         * SageMaker models or list on Amazon Web Services Marketplace. Buyers can
+         * subscribe to model packages listed on Amazon Web Services Marketplace to create
+         * models in Amazon SageMaker.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModelPackage">AWS
          * API Reference</a></p>
          *
@@ -4509,9 +4768,9 @@ namespace Model
 
         /**
          * <p>Deletes a model package.</p> <p>A model package is used to create Amazon
-         * SageMaker models or list on AWS Marketplace. Buyers can subscribe to model
-         * packages listed on AWS Marketplace to create models in Amazon
-         * SageMaker.</p><p><h3>See Also:</h3>   <a
+         * SageMaker models or list on Amazon Web Services Marketplace. Buyers can
+         * subscribe to model packages listed on Amazon Web Services Marketplace to create
+         * models in Amazon SageMaker.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteModelPackage">AWS
          * API Reference</a></p>
          *
@@ -4697,16 +4956,20 @@ namespace Model
         virtual void DeleteNotebookInstanceLifecycleConfigAsync(const Model::DeleteNotebookInstanceLifecycleConfigRequest& request, const DeleteNotebookInstanceLifecycleConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Deletes a pipeline if there are no in-progress executions.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Deletes a pipeline if there are no running instances of the pipeline. To
+         * delete a pipeline, you must stop all running instances of the pipeline using the
+         * <code>StopPipelineExecution</code> API. When you delete a pipeline, all
+         * instances of the pipeline are deleted.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeletePipeline">AWS
          * API Reference</a></p>
          */
         virtual Model::DeletePipelineOutcome DeletePipeline(const Model::DeletePipelineRequest& request) const;
 
         /**
-         * <p>Deletes a pipeline if there are no in-progress executions.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Deletes a pipeline if there are no running instances of the pipeline. To
+         * delete a pipeline, you must stop all running instances of the pipeline using the
+         * <code>StopPipelineExecution</code> API. When you delete a pipeline, all
+         * instances of the pipeline are deleted.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeletePipeline">AWS
          * API Reference</a></p>
          *
@@ -4715,8 +4978,10 @@ namespace Model
         virtual Model::DeletePipelineOutcomeCallable DeletePipelineCallable(const Model::DeletePipelineRequest& request) const;
 
         /**
-         * <p>Deletes a pipeline if there are no in-progress executions.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Deletes a pipeline if there are no running instances of the pipeline. To
+         * delete a pipeline, you must stop all running instances of the pipeline using the
+         * <code>StopPipelineExecution</code> API. When you delete a pipeline, all
+         * instances of the pipeline are deleted.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeletePipeline">AWS
          * API Reference</a></p>
          *
@@ -4750,10 +5015,47 @@ namespace Model
         virtual void DeleteProjectAsync(const Model::DeleteProjectRequest& request, const DeleteProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Deletes the Studio Lifecycle Configuration. In order to delete the Lifecycle
+         * Configuration, there must be no running apps using the Lifecycle Configuration.
+         * You must also remove the Lifecycle Configuration from UserSettings in all
+         * Domains and UserProfiles.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteStudioLifecycleConfig">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteStudioLifecycleConfigOutcome DeleteStudioLifecycleConfig(const Model::DeleteStudioLifecycleConfigRequest& request) const;
+
+        /**
+         * <p>Deletes the Studio Lifecycle Configuration. In order to delete the Lifecycle
+         * Configuration, there must be no running apps using the Lifecycle Configuration.
+         * You must also remove the Lifecycle Configuration from UserSettings in all
+         * Domains and UserProfiles.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteStudioLifecycleConfig">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DeleteStudioLifecycleConfigOutcomeCallable DeleteStudioLifecycleConfigCallable(const Model::DeleteStudioLifecycleConfigRequest& request) const;
+
+        /**
+         * <p>Deletes the Studio Lifecycle Configuration. In order to delete the Lifecycle
+         * Configuration, there must be no running apps using the Lifecycle Configuration.
+         * You must also remove the Lifecycle Configuration from UserSettings in all
+         * Domains and UserProfiles.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteStudioLifecycleConfig">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DeleteStudioLifecycleConfigAsync(const Model::DeleteStudioLifecycleConfigRequest& request, const DeleteStudioLifecycleConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Deletes the specified tags from an Amazon SageMaker resource.</p> <p>To list
          * a resource's tags, use the <code>ListTags</code> API. </p>  <p>When you
          * call this API to delete tags from a hyperparameter tuning job, the deleted tags
          * are not removed from training jobs that the hyperparameter tuning job launched
+         * before you called this API.</p>   <p>When you call this API to
+         * delete tags from a SageMaker Studio Domain or User Profile, the deleted tags are
+         * not removed from Apps that the SageMaker Studio Domain or User Profile launched
          * before you called this API.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteTags">AWS
          * API Reference</a></p>
@@ -4765,6 +5067,9 @@ namespace Model
          * a resource's tags, use the <code>ListTags</code> API. </p>  <p>When you
          * call this API to delete tags from a hyperparameter tuning job, the deleted tags
          * are not removed from training jobs that the hyperparameter tuning job launched
+         * before you called this API.</p>   <p>When you call this API to
+         * delete tags from a SageMaker Studio Domain or User Profile, the deleted tags are
+         * not removed from Apps that the SageMaker Studio Domain or User Profile launched
          * before you called this API.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteTags">AWS
          * API Reference</a></p>
@@ -4778,6 +5083,9 @@ namespace Model
          * a resource's tags, use the <code>ListTags</code> API. </p>  <p>When you
          * call this API to delete tags from a hyperparameter tuning job, the deleted tags
          * are not removed from training jobs that the hyperparameter tuning job launched
+         * before you called this API.</p>   <p>When you call this API to
+         * delete tags from a SageMaker Studio Domain or User Profile, the deleted tags are
+         * not removed from Apps that the SageMaker Studio Domain or User Profile launched
          * before you called this API.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteTags">AWS
          * API Reference</a></p>
@@ -4884,13 +5192,13 @@ namespace Model
 
         /**
          * <p>Use this operation to delete a workforce.</p> <p>If you want to create a new
-         * workforce in an AWS Region where a workforce already exists, use this operation
-         * to delete the existing workforce and then use to create a new workforce.</p>
-         *  <p>If a private workforce contains one or more work teams, you must
-         * use the operation to delete all work teams before you delete the workforce. If
-         * you try to delete a workforce that contains one or more work teams, you will
-         * recieve a <code>ResourceInUse</code> error.</p> <p><h3>See
-         * Also:</h3>   <a
+         * workforce in an Amazon Web Services Region where a workforce already exists, use
+         * this operation to delete the existing workforce and then use to create a new
+         * workforce.</p>  <p>If a private workforce contains one or more work
+         * teams, you must use the operation to delete all work teams before you delete the
+         * workforce. If you try to delete a workforce that contains one or more work
+         * teams, you will recieve a <code>ResourceInUse</code> error.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteWorkforce">AWS
          * API Reference</a></p>
          */
@@ -4898,13 +5206,13 @@ namespace Model
 
         /**
          * <p>Use this operation to delete a workforce.</p> <p>If you want to create a new
-         * workforce in an AWS Region where a workforce already exists, use this operation
-         * to delete the existing workforce and then use to create a new workforce.</p>
-         *  <p>If a private workforce contains one or more work teams, you must
-         * use the operation to delete all work teams before you delete the workforce. If
-         * you try to delete a workforce that contains one or more work teams, you will
-         * recieve a <code>ResourceInUse</code> error.</p> <p><h3>See
-         * Also:</h3>   <a
+         * workforce in an Amazon Web Services Region where a workforce already exists, use
+         * this operation to delete the existing workforce and then use to create a new
+         * workforce.</p>  <p>If a private workforce contains one or more work
+         * teams, you must use the operation to delete all work teams before you delete the
+         * workforce. If you try to delete a workforce that contains one or more work
+         * teams, you will recieve a <code>ResourceInUse</code> error.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteWorkforce">AWS
          * API Reference</a></p>
          *
@@ -4914,13 +5222,13 @@ namespace Model
 
         /**
          * <p>Use this operation to delete a workforce.</p> <p>If you want to create a new
-         * workforce in an AWS Region where a workforce already exists, use this operation
-         * to delete the existing workforce and then use to create a new workforce.</p>
-         *  <p>If a private workforce contains one or more work teams, you must
-         * use the operation to delete all work teams before you delete the workforce. If
-         * you try to delete a workforce that contains one or more work teams, you will
-         * recieve a <code>ResourceInUse</code> error.</p> <p><h3>See
-         * Also:</h3>   <a
+         * workforce in an Amazon Web Services Region where a workforce already exists, use
+         * this operation to delete the existing workforce and then use to create a new
+         * workforce.</p>  <p>If a private workforce contains one or more work
+         * teams, you must use the operation to delete all work teams before you delete the
+         * workforce. If you try to delete a workforce that contains one or more work
+         * teams, you will recieve a <code>ResourceInUse</code> error.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteWorkforce">AWS
          * API Reference</a></p>
          *
@@ -5113,16 +5421,16 @@ namespace Model
         virtual void DescribeArtifactAsync(const Model::DescribeArtifactRequest& request, const DescribeArtifactResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Returns information about an Amazon SageMaker job.</p><p><h3>See Also:</h3>  
-         * <a
+         * <p>Returns information about an Amazon SageMaker AutoML job.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAutoMLJob">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeAutoMLJobOutcome DescribeAutoMLJob(const Model::DescribeAutoMLJobRequest& request) const;
 
         /**
-         * <p>Returns information about an Amazon SageMaker job.</p><p><h3>See Also:</h3>  
-         * <a
+         * <p>Returns information about an Amazon SageMaker AutoML job.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAutoMLJob">AWS
          * API Reference</a></p>
          *
@@ -5131,8 +5439,8 @@ namespace Model
         virtual Model::DescribeAutoMLJobOutcomeCallable DescribeAutoMLJobCallable(const Model::DescribeAutoMLJobRequest& request) const;
 
         /**
-         * <p>Returns information about an Amazon SageMaker job.</p><p><h3>See Also:</h3>  
-         * <a
+         * <p>Returns information about an Amazon SageMaker AutoML job.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAutoMLJob">AWS
          * API Reference</a></p>
          *
@@ -5605,6 +5913,34 @@ namespace Model
         virtual void DescribeImageVersionAsync(const Model::DescribeImageVersionRequest& request, const DescribeImageVersionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Provides the results of the Inference Recommender job. One or more
+         * recommendation jobs are returned.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeInferenceRecommendationsJob">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeInferenceRecommendationsJobOutcome DescribeInferenceRecommendationsJob(const Model::DescribeInferenceRecommendationsJobRequest& request) const;
+
+        /**
+         * <p>Provides the results of the Inference Recommender job. One or more
+         * recommendation jobs are returned.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeInferenceRecommendationsJob">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeInferenceRecommendationsJobOutcomeCallable DescribeInferenceRecommendationsJobCallable(const Model::DescribeInferenceRecommendationsJobRequest& request) const;
+
+        /**
+         * <p>Provides the results of the Inference Recommender job. One or more
+         * recommendation jobs are returned.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeInferenceRecommendationsJob">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeInferenceRecommendationsJobAsync(const Model::DescribeInferenceRecommendationsJobRequest& request, const DescribeInferenceRecommendationsJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Gets information about a labeling job.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeLabelingJob">AWS
          * API Reference</a></p>
@@ -5628,6 +5964,43 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void DescribeLabelingJobAsync(const Model::DescribeLabelingJobRequest& request, const DescribeLabelingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Provides a list of properties for the requested lineage group. For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html">
+         * Cross-Account Lineage Tracking </a> in the <i>Amazon SageMaker Developer
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeLineageGroup">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeLineageGroupOutcome DescribeLineageGroup(const Model::DescribeLineageGroupRequest& request) const;
+
+        /**
+         * <p>Provides a list of properties for the requested lineage group. For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html">
+         * Cross-Account Lineage Tracking </a> in the <i>Amazon SageMaker Developer
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeLineageGroup">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeLineageGroupOutcomeCallable DescribeLineageGroupCallable(const Model::DescribeLineageGroupRequest& request) const;
+
+        /**
+         * <p>Provides a list of properties for the requested lineage group. For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html">
+         * Cross-Account Lineage Tracking </a> in the <i>Amazon SageMaker Developer
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeLineageGroup">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeLineageGroupAsync(const Model::DescribeLineageGroupRequest& request, const DescribeLineageGroupResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Describes a model that you created using the <code>CreateModel</code>
@@ -5715,9 +6088,9 @@ namespace Model
 
         /**
          * <p>Returns a description of the specified model package, which is used to create
-         * Amazon SageMaker models or list them on AWS Marketplace.</p> <p>To create models
-         * in Amazon SageMaker, buyers can subscribe to model packages listed on AWS
-         * Marketplace.</p><p><h3>See Also:</h3>   <a
+         * SageMaker models or list them on Amazon Web Services Marketplace.</p> <p>To
+         * create models in SageMaker, buyers can subscribe to model packages listed on
+         * Amazon Web Services Marketplace.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeModelPackage">AWS
          * API Reference</a></p>
          */
@@ -5725,9 +6098,9 @@ namespace Model
 
         /**
          * <p>Returns a description of the specified model package, which is used to create
-         * Amazon SageMaker models or list them on AWS Marketplace.</p> <p>To create models
-         * in Amazon SageMaker, buyers can subscribe to model packages listed on AWS
-         * Marketplace.</p><p><h3>See Also:</h3>   <a
+         * SageMaker models or list them on Amazon Web Services Marketplace.</p> <p>To
+         * create models in SageMaker, buyers can subscribe to model packages listed on
+         * Amazon Web Services Marketplace.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeModelPackage">AWS
          * API Reference</a></p>
          *
@@ -5737,9 +6110,9 @@ namespace Model
 
         /**
          * <p>Returns a description of the specified model package, which is used to create
-         * Amazon SageMaker models or list them on AWS Marketplace.</p> <p>To create models
-         * in Amazon SageMaker, buyers can subscribe to model packages listed on AWS
-         * Marketplace.</p><p><h3>See Also:</h3>   <a
+         * SageMaker models or list them on Amazon Web Services Marketplace.</p> <p>To
+         * create models in SageMaker, buyers can subscribe to model packages listed on
+         * Amazon Web Services Marketplace.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeModelPackage">AWS
          * API Reference</a></p>
          *
@@ -6016,9 +6389,34 @@ namespace Model
         virtual void DescribeProjectAsync(const Model::DescribeProjectRequest& request, const DescribeProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Describes the Studio Lifecycle Configuration.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeStudioLifecycleConfig">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeStudioLifecycleConfigOutcome DescribeStudioLifecycleConfig(const Model::DescribeStudioLifecycleConfigRequest& request) const;
+
+        /**
+         * <p>Describes the Studio Lifecycle Configuration.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeStudioLifecycleConfig">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeStudioLifecycleConfigOutcomeCallable DescribeStudioLifecycleConfigCallable(const Model::DescribeStudioLifecycleConfigRequest& request) const;
+
+        /**
+         * <p>Describes the Studio Lifecycle Configuration.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeStudioLifecycleConfig">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeStudioLifecycleConfigAsync(const Model::DescribeStudioLifecycleConfigRequest& request, const DescribeStudioLifecycleConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Gets information about a work team provided by a vendor. It returns details
-         * about the subscription with a vendor in the AWS Marketplace.</p><p><h3>See
-         * Also:</h3>   <a
+         * about the subscription with a vendor in the Amazon Web Services
+         * Marketplace.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeSubscribedWorkteam">AWS
          * API Reference</a></p>
          */
@@ -6026,8 +6424,8 @@ namespace Model
 
         /**
          * <p>Gets information about a work team provided by a vendor. It returns details
-         * about the subscription with a vendor in the AWS Marketplace.</p><p><h3>See
-         * Also:</h3>   <a
+         * about the subscription with a vendor in the Amazon Web Services
+         * Marketplace.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeSubscribedWorkteam">AWS
          * API Reference</a></p>
          *
@@ -6037,8 +6435,8 @@ namespace Model
 
         /**
          * <p>Gets information about a work team provided by a vendor. It returns details
-         * about the subscription with a vendor in the AWS Marketplace.</p><p><h3>See
-         * Also:</h3>   <a
+         * about the subscription with a vendor in the Amazon Web Services
+         * Marketplace.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeSubscribedWorkteam">AWS
          * API Reference</a></p>
          *
@@ -6047,14 +6445,26 @@ namespace Model
         virtual void DescribeSubscribedWorkteamAsync(const Model::DescribeSubscribedWorkteamRequest& request, const DescribeSubscribedWorkteamResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Returns information about a training job.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns information about a training job. </p> <p>Some of the attributes
+         * below only appear if the training job successfully starts. If the training job
+         * fails, <code>TrainingJobStatus</code> is <code>Failed</code> and, depending on
+         * the <code>FailureReason</code>, attributes like <code>TrainingStartTime</code>,
+         * <code>TrainingTimeInSeconds</code>, <code>TrainingEndTime</code>, and
+         * <code>BillableTimeInSeconds</code> may not be present in the
+         * response.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeTrainingJob">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeTrainingJobOutcome DescribeTrainingJob(const Model::DescribeTrainingJobRequest& request) const;
 
         /**
-         * <p>Returns information about a training job.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns information about a training job. </p> <p>Some of the attributes
+         * below only appear if the training job successfully starts. If the training job
+         * fails, <code>TrainingJobStatus</code> is <code>Failed</code> and, depending on
+         * the <code>FailureReason</code>, attributes like <code>TrainingStartTime</code>,
+         * <code>TrainingTimeInSeconds</code>, <code>TrainingEndTime</code>, and
+         * <code>BillableTimeInSeconds</code> may not be present in the
+         * response.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeTrainingJob">AWS
          * API Reference</a></p>
          *
@@ -6063,7 +6473,13 @@ namespace Model
         virtual Model::DescribeTrainingJobOutcomeCallable DescribeTrainingJobCallable(const Model::DescribeTrainingJobRequest& request) const;
 
         /**
-         * <p>Returns information about a training job.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns information about a training job. </p> <p>Some of the attributes
+         * below only appear if the training job successfully starts. If the training job
+         * fails, <code>TrainingJobStatus</code> is <code>Failed</code> and, depending on
+         * the <code>FailureReason</code>, attributes like <code>TrainingStartTime</code>,
+         * <code>TrainingTimeInSeconds</code>, <code>TrainingEndTime</code>, and
+         * <code>BillableTimeInSeconds</code> may not be present in the
+         * response.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeTrainingJob">AWS
          * API Reference</a></p>
          *
@@ -6379,11 +6795,36 @@ namespace Model
         virtual void GetDeviceFleetReportAsync(const Model::GetDeviceFleetReportRequest& request, const GetDeviceFleetReportResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>The resource policy for the lineage group.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetLineageGroupPolicy">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetLineageGroupPolicyOutcome GetLineageGroupPolicy(const Model::GetLineageGroupPolicyRequest& request) const;
+
+        /**
+         * <p>The resource policy for the lineage group.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetLineageGroupPolicy">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetLineageGroupPolicyOutcomeCallable GetLineageGroupPolicyCallable(const Model::GetLineageGroupPolicyRequest& request) const;
+
+        /**
+         * <p>The resource policy for the lineage group.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetLineageGroupPolicy">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetLineageGroupPolicyAsync(const Model::GetLineageGroupPolicyRequest& request, const GetLineageGroupPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Gets a resource policy that manages access for a model group. For information
          * about resource policies, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
-         * policies and resource-based policies</a> in the <i>AWS Identity and Access
-         * Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
+         * policies and resource-based policies</a> in the <i>Amazon Web Services Identity
+         * and Access Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetModelPackageGroupPolicy">AWS
          * API Reference</a></p>
          */
@@ -6393,8 +6834,8 @@ namespace Model
          * <p>Gets a resource policy that manages access for a model group. For information
          * about resource policies, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
-         * policies and resource-based policies</a> in the <i>AWS Identity and Access
-         * Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
+         * policies and resource-based policies</a> in the <i>Amazon Web Services Identity
+         * and Access Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetModelPackageGroupPolicy">AWS
          * API Reference</a></p>
          *
@@ -6406,8 +6847,8 @@ namespace Model
          * <p>Gets a resource policy that manages access for a model group. For information
          * about resource policies, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
-         * policies and resource-based policies</a> in the <i>AWS Identity and Access
-         * Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
+         * policies and resource-based policies</a> in the <i>Amazon Web Services Identity
+         * and Access Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetModelPackageGroupPolicy">AWS
          * API Reference</a></p>
          *
@@ -6674,14 +7115,14 @@ namespace Model
         virtual void ListAutoMLJobsAsync(const Model::ListAutoMLJobsRequest& request, const ListAutoMLJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>List the Candidates created for the job.</p><p><h3>See Also:</h3>   <a
+         * <p>List the candidates created for the job.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListCandidatesForAutoMLJob">AWS
          * API Reference</a></p>
          */
         virtual Model::ListCandidatesForAutoMLJobOutcome ListCandidatesForAutoMLJob(const Model::ListCandidatesForAutoMLJobRequest& request) const;
 
         /**
-         * <p>List the Candidates created for the job.</p><p><h3>See Also:</h3>   <a
+         * <p>List the candidates created for the job.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListCandidatesForAutoMLJob">AWS
          * API Reference</a></p>
          *
@@ -6690,7 +7131,7 @@ namespace Model
         virtual Model::ListCandidatesForAutoMLJobOutcomeCallable ListCandidatesForAutoMLJobCallable(const Model::ListCandidatesForAutoMLJobRequest& request) const;
 
         /**
-         * <p>List the Candidates created for the job.</p><p><h3>See Also:</h3>   <a
+         * <p>List the candidates created for the job.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListCandidatesForAutoMLJob">AWS
          * API Reference</a></p>
          *
@@ -7172,6 +7613,34 @@ namespace Model
         virtual void ListImagesAsync(const Model::ListImagesRequest& request, const ListImagesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Lists recommendation jobs that satisfy various filters.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListInferenceRecommendationsJobs">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListInferenceRecommendationsJobsOutcome ListInferenceRecommendationsJobs(const Model::ListInferenceRecommendationsJobsRequest& request) const;
+
+        /**
+         * <p>Lists recommendation jobs that satisfy various filters.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListInferenceRecommendationsJobs">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListInferenceRecommendationsJobsOutcomeCallable ListInferenceRecommendationsJobsCallable(const Model::ListInferenceRecommendationsJobsRequest& request) const;
+
+        /**
+         * <p>Lists recommendation jobs that satisfy various filters.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListInferenceRecommendationsJobs">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListInferenceRecommendationsJobsAsync(const Model::ListInferenceRecommendationsJobsRequest& request, const ListInferenceRecommendationsJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Gets a list of labeling jobs.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListLabelingJobs">AWS
          * API Reference</a></p>
@@ -7223,6 +7692,43 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void ListLabelingJobsForWorkteamAsync(const Model::ListLabelingJobsForWorkteamRequest& request, const ListLabelingJobsForWorkteamResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>A list of lineage groups shared with your Amazon Web Services account. For
+         * more information, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html">
+         * Cross-Account Lineage Tracking </a> in the <i>Amazon SageMaker Developer
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListLineageGroups">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListLineageGroupsOutcome ListLineageGroups(const Model::ListLineageGroupsRequest& request) const;
+
+        /**
+         * <p>A list of lineage groups shared with your Amazon Web Services account. For
+         * more information, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html">
+         * Cross-Account Lineage Tracking </a> in the <i>Amazon SageMaker Developer
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListLineageGroups">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListLineageGroupsOutcomeCallable ListLineageGroupsCallable(const Model::ListLineageGroupsRequest& request) const;
+
+        /**
+         * <p>A list of lineage groups shared with your Amazon Web Services account. For
+         * more information, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html">
+         * Cross-Account Lineage Tracking </a> in the <i>Amazon SageMaker Developer
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListLineageGroups">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListLineageGroupsAsync(const Model::ListLineageGroupsRequest& request, const ListLineageGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Lists model bias jobs definitions that satisfy various filters.</p><p><h3>See
@@ -7281,16 +7787,44 @@ namespace Model
         virtual void ListModelExplainabilityJobDefinitionsAsync(const Model::ListModelExplainabilityJobDefinitionsRequest& request, const ListModelExplainabilityJobDefinitionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Gets a list of the model groups in your AWS account.</p><p><h3>See Also:</h3>
-         * <a
+         * <p>Lists the domain, framework, task, and model name of standard machine
+         * learning models found in common model zoos.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelMetadata">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListModelMetadataOutcome ListModelMetadata(const Model::ListModelMetadataRequest& request) const;
+
+        /**
+         * <p>Lists the domain, framework, task, and model name of standard machine
+         * learning models found in common model zoos.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelMetadata">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListModelMetadataOutcomeCallable ListModelMetadataCallable(const Model::ListModelMetadataRequest& request) const;
+
+        /**
+         * <p>Lists the domain, framework, task, and model name of standard machine
+         * learning models found in common model zoos.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelMetadata">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListModelMetadataAsync(const Model::ListModelMetadataRequest& request, const ListModelMetadataResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Gets a list of the model groups in your Amazon Web Services
+         * account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelPackageGroups">AWS
          * API Reference</a></p>
          */
         virtual Model::ListModelPackageGroupsOutcome ListModelPackageGroups(const Model::ListModelPackageGroupsRequest& request) const;
 
         /**
-         * <p>Gets a list of the model groups in your AWS account.</p><p><h3>See Also:</h3>
-         * <a
+         * <p>Gets a list of the model groups in your Amazon Web Services
+         * account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelPackageGroups">AWS
          * API Reference</a></p>
          *
@@ -7299,8 +7833,8 @@ namespace Model
         virtual Model::ListModelPackageGroupsOutcomeCallable ListModelPackageGroupsCallable(const Model::ListModelPackageGroupsRequest& request) const;
 
         /**
-         * <p>Gets a list of the model groups in your AWS account.</p><p><h3>See Also:</h3>
-         * <a
+         * <p>Gets a list of the model groups in your Amazon Web Services
+         * account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModelPackageGroups">AWS
          * API Reference</a></p>
          *
@@ -7365,7 +7899,7 @@ namespace Model
         virtual void ListModelQualityJobDefinitionsAsync(const Model::ListModelQualityJobDefinitionsRequest& request, const ListModelQualityJobDefinitionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Lists models created with the <a>CreateModel</a> API.</p><p><h3>See
+         * <p>Lists models created with the <code>CreateModel</code> API.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModels">AWS
          * API Reference</a></p>
@@ -7373,7 +7907,7 @@ namespace Model
         virtual Model::ListModelsOutcome ListModels(const Model::ListModelsRequest& request) const;
 
         /**
-         * <p>Lists models created with the <a>CreateModel</a> API.</p><p><h3>See
+         * <p>Lists models created with the <code>CreateModel</code> API.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModels">AWS
          * API Reference</a></p>
@@ -7383,7 +7917,7 @@ namespace Model
         virtual Model::ListModelsOutcomeCallable ListModelsCallable(const Model::ListModelsRequest& request) const;
 
         /**
-         * <p>Lists models created with the <a>CreateModel</a> API.</p><p><h3>See
+         * <p>Lists models created with the <code>CreateModel</code> API.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListModels">AWS
          * API Reference</a></p>
@@ -7472,7 +8006,7 @@ namespace Model
 
         /**
          * <p>Returns a list of the Amazon SageMaker notebook instances in the requester's
-         * account in an AWS Region. </p><p><h3>See Also:</h3>   <a
+         * account in an Amazon Web Services Region. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListNotebookInstances">AWS
          * API Reference</a></p>
          */
@@ -7480,7 +8014,7 @@ namespace Model
 
         /**
          * <p>Returns a list of the Amazon SageMaker notebook instances in the requester's
-         * account in an AWS Region. </p><p><h3>See Also:</h3>   <a
+         * account in an Amazon Web Services Region. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListNotebookInstances">AWS
          * API Reference</a></p>
          *
@@ -7490,7 +8024,7 @@ namespace Model
 
         /**
          * <p>Returns a list of the Amazon SageMaker notebook instances in the requester's
-         * account in an AWS Region. </p><p><h3>See Also:</h3>   <a
+         * account in an Amazon Web Services Region. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListNotebookInstances">AWS
          * API Reference</a></p>
          *
@@ -7633,14 +8167,16 @@ namespace Model
         virtual void ListProcessingJobsAsync(const Model::ListProcessingJobsRequest& request, const ListProcessingJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Gets a list of the projects in an AWS account.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets a list of the projects in an Amazon Web Services account.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListProjects">AWS
          * API Reference</a></p>
          */
         virtual Model::ListProjectsOutcome ListProjects(const Model::ListProjectsRequest& request) const;
 
         /**
-         * <p>Gets a list of the projects in an AWS account.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets a list of the projects in an Amazon Web Services account.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListProjects">AWS
          * API Reference</a></p>
          *
@@ -7649,7 +8185,8 @@ namespace Model
         virtual Model::ListProjectsOutcomeCallable ListProjectsCallable(const Model::ListProjectsRequest& request) const;
 
         /**
-         * <p>Gets a list of the projects in an AWS account.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets a list of the projects in an Amazon Web Services account.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListProjects">AWS
          * API Reference</a></p>
          *
@@ -7658,8 +8195,36 @@ namespace Model
         virtual void ListProjectsAsync(const Model::ListProjectsRequest& request, const ListProjectsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Gets a list of the work teams that you are subscribed to in the AWS
-         * Marketplace. The list may be empty if no work team satisfies the filter
+         * <p>Lists the Studio Lifecycle Configurations in your Amazon Web Services
+         * Account.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListStudioLifecycleConfigs">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListStudioLifecycleConfigsOutcome ListStudioLifecycleConfigs(const Model::ListStudioLifecycleConfigsRequest& request) const;
+
+        /**
+         * <p>Lists the Studio Lifecycle Configurations in your Amazon Web Services
+         * Account.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListStudioLifecycleConfigs">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListStudioLifecycleConfigsOutcomeCallable ListStudioLifecycleConfigsCallable(const Model::ListStudioLifecycleConfigsRequest& request) const;
+
+        /**
+         * <p>Lists the Studio Lifecycle Configurations in your Amazon Web Services
+         * Account.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListStudioLifecycleConfigs">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListStudioLifecycleConfigsAsync(const Model::ListStudioLifecycleConfigsRequest& request, const ListStudioLifecycleConfigsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Gets a list of the work teams that you are subscribed to in the Amazon Web
+         * Services Marketplace. The list may be empty if no work team satisfies the filter
          * specified in the <code>NameContains</code> parameter.</p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListSubscribedWorkteams">AWS
@@ -7668,8 +8233,8 @@ namespace Model
         virtual Model::ListSubscribedWorkteamsOutcome ListSubscribedWorkteams(const Model::ListSubscribedWorkteamsRequest& request) const;
 
         /**
-         * <p>Gets a list of the work teams that you are subscribed to in the AWS
-         * Marketplace. The list may be empty if no work team satisfies the filter
+         * <p>Gets a list of the work teams that you are subscribed to in the Amazon Web
+         * Services Marketplace. The list may be empty if no work team satisfies the filter
          * specified in the <code>NameContains</code> parameter.</p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListSubscribedWorkteams">AWS
@@ -7680,8 +8245,8 @@ namespace Model
         virtual Model::ListSubscribedWorkteamsOutcomeCallable ListSubscribedWorkteamsCallable(const Model::ListSubscribedWorkteamsRequest& request) const;
 
         /**
-         * <p>Gets a list of the work teams that you are subscribed to in the AWS
-         * Marketplace. The list may be empty if no work team satisfies the filter
+         * <p>Gets a list of the work teams that you are subscribed to in the Amazon Web
+         * Services Marketplace. The list may be empty if no work team satisfies the filter
          * specified in the <code>NameContains</code> parameter.</p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListSubscribedWorkteams">AWS
@@ -7720,14 +8285,40 @@ namespace Model
         virtual void ListTagsAsync(const Model::ListTagsRequest& request, const ListTagsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Lists training jobs.</p><p><h3>See Also:</h3>   <a
+         * <p>Lists training jobs.</p>  <p>When <code>StatusEquals</code> and
+         * <code>MaxResults</code> are set at the same time, the <code>MaxResults</code>
+         * number of training jobs are first retrieved ignoring the
+         * <code>StatusEquals</code> parameter and then they are filtered by the
+         * <code>StatusEquals</code> parameter, which is returned as a response.</p> <p>For
+         * example, if <code>ListTrainingJobs</code> is invoked with the following
+         * parameters:</p> <p> <code>{ ... MaxResults: 100, StatusEquals: InProgress ...
+         * }</code> </p> <p>First, 100 trainings jobs with any status, including those
+         * other than <code>InProgress</code>, are selected (sorted according to the
+         * creation time, from the most current to the oldest). Next, those with a status
+         * of <code>InProgress</code> are returned.</p> <p>You can quickly test the API
+         * using the following Amazon Web Services CLI code.</p> <p> <code>aws sagemaker
+         * list-training-jobs --max-results 100 --status-equals InProgress</code> </p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListTrainingJobs">AWS
          * API Reference</a></p>
          */
         virtual Model::ListTrainingJobsOutcome ListTrainingJobs(const Model::ListTrainingJobsRequest& request) const;
 
         /**
-         * <p>Lists training jobs.</p><p><h3>See Also:</h3>   <a
+         * <p>Lists training jobs.</p>  <p>When <code>StatusEquals</code> and
+         * <code>MaxResults</code> are set at the same time, the <code>MaxResults</code>
+         * number of training jobs are first retrieved ignoring the
+         * <code>StatusEquals</code> parameter and then they are filtered by the
+         * <code>StatusEquals</code> parameter, which is returned as a response.</p> <p>For
+         * example, if <code>ListTrainingJobs</code> is invoked with the following
+         * parameters:</p> <p> <code>{ ... MaxResults: 100, StatusEquals: InProgress ...
+         * }</code> </p> <p>First, 100 trainings jobs with any status, including those
+         * other than <code>InProgress</code>, are selected (sorted according to the
+         * creation time, from the most current to the oldest). Next, those with a status
+         * of <code>InProgress</code> are returned.</p> <p>You can quickly test the API
+         * using the following Amazon Web Services CLI code.</p> <p> <code>aws sagemaker
+         * list-training-jobs --max-results 100 --status-equals InProgress</code> </p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListTrainingJobs">AWS
          * API Reference</a></p>
          *
@@ -7736,7 +8327,20 @@ namespace Model
         virtual Model::ListTrainingJobsOutcomeCallable ListTrainingJobsCallable(const Model::ListTrainingJobsRequest& request) const;
 
         /**
-         * <p>Lists training jobs.</p><p><h3>See Also:</h3>   <a
+         * <p>Lists training jobs.</p>  <p>When <code>StatusEquals</code> and
+         * <code>MaxResults</code> are set at the same time, the <code>MaxResults</code>
+         * number of training jobs are first retrieved ignoring the
+         * <code>StatusEquals</code> parameter and then they are filtered by the
+         * <code>StatusEquals</code> parameter, which is returned as a response.</p> <p>For
+         * example, if <code>ListTrainingJobs</code> is invoked with the following
+         * parameters:</p> <p> <code>{ ... MaxResults: 100, StatusEquals: InProgress ...
+         * }</code> </p> <p>First, 100 trainings jobs with any status, including those
+         * other than <code>InProgress</code>, are selected (sorted according to the
+         * creation time, from the most current to the oldest). Next, those with a status
+         * of <code>InProgress</code> are returned.</p> <p>You can quickly test the API
+         * using the following Amazon Web Services CLI code.</p> <p> <code>aws sagemaker
+         * list-training-jobs --max-results 100 --status-equals InProgress</code> </p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListTrainingJobs">AWS
          * API Reference</a></p>
          *
@@ -7903,18 +8507,18 @@ namespace Model
         virtual void ListUserProfilesAsync(const Model::ListUserProfilesRequest& request, const ListUserProfilesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Use this operation to list all private and vendor workforces in an AWS
-         * Region. Note that you can only have one private workforce per AWS
-         * Region.</p><p><h3>See Also:</h3>   <a
+         * <p>Use this operation to list all private and vendor workforces in an Amazon Web
+         * Services Region. Note that you can only have one private workforce per Amazon
+         * Web Services Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListWorkforces">AWS
          * API Reference</a></p>
          */
         virtual Model::ListWorkforcesOutcome ListWorkforces(const Model::ListWorkforcesRequest& request) const;
 
         /**
-         * <p>Use this operation to list all private and vendor workforces in an AWS
-         * Region. Note that you can only have one private workforce per AWS
-         * Region.</p><p><h3>See Also:</h3>   <a
+         * <p>Use this operation to list all private and vendor workforces in an Amazon Web
+         * Services Region. Note that you can only have one private workforce per Amazon
+         * Web Services Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListWorkforces">AWS
          * API Reference</a></p>
          *
@@ -7923,9 +8527,9 @@ namespace Model
         virtual Model::ListWorkforcesOutcomeCallable ListWorkforcesCallable(const Model::ListWorkforcesRequest& request) const;
 
         /**
-         * <p>Use this operation to list all private and vendor workforces in an AWS
-         * Region. Note that you can only have one private workforce per AWS
-         * Region.</p><p><h3>See Also:</h3>   <a
+         * <p>Use this operation to list all private and vendor workforces in an Amazon Web
+         * Services Region. Note that you can only have one private workforce per Amazon
+         * Web Services Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListWorkforces">AWS
          * API Reference</a></p>
          *
@@ -7968,8 +8572,8 @@ namespace Model
          * <p>Adds a resouce policy to control access to a model group. For information
          * about resoure policies, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
-         * policies and resource-based policies</a> in the <i>AWS Identity and Access
-         * Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
+         * policies and resource-based policies</a> in the <i>Amazon Web Services Identity
+         * and Access Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/PutModelPackageGroupPolicy">AWS
          * API Reference</a></p>
          */
@@ -7979,8 +8583,8 @@ namespace Model
          * <p>Adds a resouce policy to control access to a model group. For information
          * about resoure policies, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
-         * policies and resource-based policies</a> in the <i>AWS Identity and Access
-         * Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
+         * policies and resource-based policies</a> in the <i>Amazon Web Services Identity
+         * and Access Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/PutModelPackageGroupPolicy">AWS
          * API Reference</a></p>
          *
@@ -7992,14 +8596,51 @@ namespace Model
          * <p>Adds a resouce policy to control access to a model group. For information
          * about resoure policies, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
-         * policies and resource-based policies</a> in the <i>AWS Identity and Access
-         * Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
+         * policies and resource-based policies</a> in the <i>Amazon Web Services Identity
+         * and Access Management User Guide.</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/PutModelPackageGroupPolicy">AWS
          * API Reference</a></p>
          *
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void PutModelPackageGroupPolicyAsync(const Model::PutModelPackageGroupPolicyRequest& request, const PutModelPackageGroupPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Use this action to inspect your lineage and discover relationships between
+         * entities. For more information, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/querying-lineage-entities.html">
+         * Querying Lineage Entities</a> in the <i>Amazon SageMaker Developer
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/QueryLineage">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::QueryLineageOutcome QueryLineage(const Model::QueryLineageRequest& request) const;
+
+        /**
+         * <p>Use this action to inspect your lineage and discover relationships between
+         * entities. For more information, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/querying-lineage-entities.html">
+         * Querying Lineage Entities</a> in the <i>Amazon SageMaker Developer
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/QueryLineage">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::QueryLineageOutcomeCallable QueryLineageCallable(const Model::QueryLineageRequest& request) const;
+
+        /**
+         * <p>Use this action to inspect your lineage and discover relationships between
+         * entities. For more information, see <a
+         * href="https://docs.aws.amazon.com/sagemaker/latest/dg/querying-lineage-entities.html">
+         * Querying Lineage Entities</a> in the <i>Amazon SageMaker Developer
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/QueryLineage">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void QueryLineageAsync(const Model::QueryLineageRequest& request, const QueryLineageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Register devices.</p><p><h3>See Also:</h3>   <a
@@ -8055,6 +8696,31 @@ namespace Model
         virtual void RenderUiTemplateAsync(const Model::RenderUiTemplateRequest& request, const RenderUiTemplateResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Retry the execution of the pipeline.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/RetryPipelineExecution">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::RetryPipelineExecutionOutcome RetryPipelineExecution(const Model::RetryPipelineExecutionRequest& request) const;
+
+        /**
+         * <p>Retry the execution of the pipeline.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/RetryPipelineExecution">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::RetryPipelineExecutionOutcomeCallable RetryPipelineExecutionCallable(const Model::RetryPipelineExecutionRequest& request) const;
+
+        /**
+         * <p>Retry the execution of the pipeline.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/RetryPipelineExecution">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void RetryPipelineExecutionAsync(const Model::RetryPipelineExecutionRequest& request, const RetryPipelineExecutionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Finds Amazon SageMaker resources that match a search query. Matching
          * resources are returned as a list of <code>SearchRecord</code> objects in the
          * response. You can sort the search results by any resource property in a
@@ -8090,6 +8756,74 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void SearchAsync(const Model::SearchRequest& request, const SearchResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Notifies the pipeline that the execution of a callback step failed, along
+         * with a message describing why. When a callback step is run, the pipeline
+         * generates a callback token and includes the token in a message sent to Amazon
+         * Simple Queue Service (Amazon SQS).</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/SendPipelineExecutionStepFailure">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::SendPipelineExecutionStepFailureOutcome SendPipelineExecutionStepFailure(const Model::SendPipelineExecutionStepFailureRequest& request) const;
+
+        /**
+         * <p>Notifies the pipeline that the execution of a callback step failed, along
+         * with a message describing why. When a callback step is run, the pipeline
+         * generates a callback token and includes the token in a message sent to Amazon
+         * Simple Queue Service (Amazon SQS).</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/SendPipelineExecutionStepFailure">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::SendPipelineExecutionStepFailureOutcomeCallable SendPipelineExecutionStepFailureCallable(const Model::SendPipelineExecutionStepFailureRequest& request) const;
+
+        /**
+         * <p>Notifies the pipeline that the execution of a callback step failed, along
+         * with a message describing why. When a callback step is run, the pipeline
+         * generates a callback token and includes the token in a message sent to Amazon
+         * Simple Queue Service (Amazon SQS).</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/SendPipelineExecutionStepFailure">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void SendPipelineExecutionStepFailureAsync(const Model::SendPipelineExecutionStepFailureRequest& request, const SendPipelineExecutionStepFailureResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Notifies the pipeline that the execution of a callback step succeeded and
+         * provides a list of the step's output parameters. When a callback step is run,
+         * the pipeline generates a callback token and includes the token in a message sent
+         * to Amazon Simple Queue Service (Amazon SQS).</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/SendPipelineExecutionStepSuccess">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::SendPipelineExecutionStepSuccessOutcome SendPipelineExecutionStepSuccess(const Model::SendPipelineExecutionStepSuccessRequest& request) const;
+
+        /**
+         * <p>Notifies the pipeline that the execution of a callback step succeeded and
+         * provides a list of the step's output parameters. When a callback step is run,
+         * the pipeline generates a callback token and includes the token in a message sent
+         * to Amazon Simple Queue Service (Amazon SQS).</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/SendPipelineExecutionStepSuccess">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::SendPipelineExecutionStepSuccessOutcomeCallable SendPipelineExecutionStepSuccessCallable(const Model::SendPipelineExecutionStepSuccessRequest& request) const;
+
+        /**
+         * <p>Notifies the pipeline that the execution of a callback step succeeded and
+         * provides a list of the step's output parameters. When a callback step is run,
+         * the pipeline generates a callback token and includes the token in a message sent
+         * to Amazon Simple Queue Service (Amazon SQS).</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/SendPipelineExecutionStepSuccess">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void SendPipelineExecutionStepSuccessAsync(const Model::SendPipelineExecutionStepSuccessRequest& request, const SendPipelineExecutionStepSuccessResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Starts a previously stopped monitoring schedule.</p>  <p>By default,
@@ -8324,6 +9058,31 @@ namespace Model
         virtual void StopHyperParameterTuningJobAsync(const Model::StopHyperParameterTuningJobRequest& request, const StopHyperParameterTuningJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Stops an Inference Recommender job.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopInferenceRecommendationsJob">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::StopInferenceRecommendationsJobOutcome StopInferenceRecommendationsJob(const Model::StopInferenceRecommendationsJobRequest& request) const;
+
+        /**
+         * <p>Stops an Inference Recommender job.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopInferenceRecommendationsJob">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::StopInferenceRecommendationsJobOutcomeCallable StopInferenceRecommendationsJobCallable(const Model::StopInferenceRecommendationsJobRequest& request) const;
+
+        /**
+         * <p>Stops an Inference Recommender job.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopInferenceRecommendationsJob">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void StopInferenceRecommendationsJobAsync(const Model::StopInferenceRecommendationsJobRequest& request, const StopInferenceRecommendationsJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Stops a running labeling job. A job that is stopped cannot be restarted. Any
          * results obtained before the job is stopped are placed in the Amazon S3 output
          * bucket.</p><p><h3>See Also:</h3>   <a
@@ -8426,14 +9185,50 @@ namespace Model
         virtual void StopNotebookInstanceAsync(const Model::StopNotebookInstanceRequest& request, const StopNotebookInstanceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Stops a pipeline execution.</p><p><h3>See Also:</h3>   <a
+         * <p>Stops a pipeline execution.</p> <p> <b>Callback Step</b> </p> <p>A pipeline
+         * execution won't stop while a callback step is running. When you call
+         * <code>StopPipelineExecution</code> on a pipeline execution with a running
+         * callback step, SageMaker Pipelines sends an additional Amazon SQS message to the
+         * specified SQS queue. The body of the SQS message contains a "Status" field which
+         * is set to "Stopping".</p> <p>You should add logic to your Amazon SQS message
+         * consumer to take any needed action (for example, resource cleanup) upon receipt
+         * of the message followed by a call to
+         * <code>SendPipelineExecutionStepSuccess</code> or
+         * <code>SendPipelineExecutionStepFailure</code>.</p> <p>Only when SageMaker
+         * Pipelines receives one of these calls will it stop the pipeline execution.</p>
+         * <p> <b>Lambda Step</b> </p> <p>A pipeline execution can't be stopped while a
+         * lambda step is running because the Lambda function invoked by the lambda step
+         * can't be stopped. If you attempt to stop the execution while the Lambda function
+         * is running, the pipeline waits for the Lambda function to finish or until the
+         * timeout is hit, whichever occurs first, and then stops. If the Lambda function
+         * finishes, the pipeline execution status is <code>Stopped</code>. If the timeout
+         * is hit the pipeline execution status is <code>Failed</code>.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopPipelineExecution">AWS
          * API Reference</a></p>
          */
         virtual Model::StopPipelineExecutionOutcome StopPipelineExecution(const Model::StopPipelineExecutionRequest& request) const;
 
         /**
-         * <p>Stops a pipeline execution.</p><p><h3>See Also:</h3>   <a
+         * <p>Stops a pipeline execution.</p> <p> <b>Callback Step</b> </p> <p>A pipeline
+         * execution won't stop while a callback step is running. When you call
+         * <code>StopPipelineExecution</code> on a pipeline execution with a running
+         * callback step, SageMaker Pipelines sends an additional Amazon SQS message to the
+         * specified SQS queue. The body of the SQS message contains a "Status" field which
+         * is set to "Stopping".</p> <p>You should add logic to your Amazon SQS message
+         * consumer to take any needed action (for example, resource cleanup) upon receipt
+         * of the message followed by a call to
+         * <code>SendPipelineExecutionStepSuccess</code> or
+         * <code>SendPipelineExecutionStepFailure</code>.</p> <p>Only when SageMaker
+         * Pipelines receives one of these calls will it stop the pipeline execution.</p>
+         * <p> <b>Lambda Step</b> </p> <p>A pipeline execution can't be stopped while a
+         * lambda step is running because the Lambda function invoked by the lambda step
+         * can't be stopped. If you attempt to stop the execution while the Lambda function
+         * is running, the pipeline waits for the Lambda function to finish or until the
+         * timeout is hit, whichever occurs first, and then stops. If the Lambda function
+         * finishes, the pipeline execution status is <code>Stopped</code>. If the timeout
+         * is hit the pipeline execution status is <code>Failed</code>.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopPipelineExecution">AWS
          * API Reference</a></p>
          *
@@ -8442,7 +9237,25 @@ namespace Model
         virtual Model::StopPipelineExecutionOutcomeCallable StopPipelineExecutionCallable(const Model::StopPipelineExecutionRequest& request) const;
 
         /**
-         * <p>Stops a pipeline execution.</p><p><h3>See Also:</h3>   <a
+         * <p>Stops a pipeline execution.</p> <p> <b>Callback Step</b> </p> <p>A pipeline
+         * execution won't stop while a callback step is running. When you call
+         * <code>StopPipelineExecution</code> on a pipeline execution with a running
+         * callback step, SageMaker Pipelines sends an additional Amazon SQS message to the
+         * specified SQS queue. The body of the SQS message contains a "Status" field which
+         * is set to "Stopping".</p> <p>You should add logic to your Amazon SQS message
+         * consumer to take any needed action (for example, resource cleanup) upon receipt
+         * of the message followed by a call to
+         * <code>SendPipelineExecutionStepSuccess</code> or
+         * <code>SendPipelineExecutionStepFailure</code>.</p> <p>Only when SageMaker
+         * Pipelines receives one of these calls will it stop the pipeline execution.</p>
+         * <p> <b>Lambda Step</b> </p> <p>A pipeline execution can't be stopped while a
+         * lambda step is running because the Lambda function invoked by the lambda step
+         * can't be stopped. If you attempt to stop the execution while the Lambda function
+         * is running, the pipeline waits for the Lambda function to finish or until the
+         * timeout is hit, whichever occurs first, and then stops. If the Lambda function
+         * finishes, the pipeline execution status is <code>Stopped</code>. If the timeout
+         * is hit the pipeline execution status is <code>Failed</code>.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopPipelineExecution">AWS
          * API Reference</a></p>
          *
@@ -8519,24 +9332,24 @@ namespace Model
         virtual void StopTrainingJobAsync(const Model::StopTrainingJobRequest& request, const StopTrainingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Stops a transform job.</p> <p>When Amazon SageMaker receives a
+         * <p>Stops a batch transform job.</p> <p>When Amazon SageMaker receives a
          * <code>StopTransformJob</code> request, the status of the job changes to
          * <code>Stopping</code>. After Amazon SageMaker stops the job, the status is set
-         * to <code>Stopped</code>. When you stop a transform job before it is completed,
-         * Amazon SageMaker doesn't store the job's output in Amazon S3.</p><p><h3>See
-         * Also:</h3>   <a
+         * to <code>Stopped</code>. When you stop a batch transform job before it is
+         * completed, Amazon SageMaker doesn't store the job's output in Amazon
+         * S3.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopTransformJob">AWS
          * API Reference</a></p>
          */
         virtual Model::StopTransformJobOutcome StopTransformJob(const Model::StopTransformJobRequest& request) const;
 
         /**
-         * <p>Stops a transform job.</p> <p>When Amazon SageMaker receives a
+         * <p>Stops a batch transform job.</p> <p>When Amazon SageMaker receives a
          * <code>StopTransformJob</code> request, the status of the job changes to
          * <code>Stopping</code>. After Amazon SageMaker stops the job, the status is set
-         * to <code>Stopped</code>. When you stop a transform job before it is completed,
-         * Amazon SageMaker doesn't store the job's output in Amazon S3.</p><p><h3>See
-         * Also:</h3>   <a
+         * to <code>Stopped</code>. When you stop a batch transform job before it is
+         * completed, Amazon SageMaker doesn't store the job's output in Amazon
+         * S3.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopTransformJob">AWS
          * API Reference</a></p>
          *
@@ -8545,12 +9358,12 @@ namespace Model
         virtual Model::StopTransformJobOutcomeCallable StopTransformJobCallable(const Model::StopTransformJobRequest& request) const;
 
         /**
-         * <p>Stops a transform job.</p> <p>When Amazon SageMaker receives a
+         * <p>Stops a batch transform job.</p> <p>When Amazon SageMaker receives a
          * <code>StopTransformJob</code> request, the status of the job changes to
          * <code>Stopping</code>. After Amazon SageMaker stops the job, the status is set
-         * to <code>Stopped</code>. When you stop a transform job before it is completed,
-         * Amazon SageMaker doesn't store the job's output in Amazon S3.</p><p><h3>See
-         * Also:</h3>   <a
+         * to <code>Stopped</code>. When you stop a batch transform job before it is
+         * completed, Amazon SageMaker doesn't store the job's output in Amazon
+         * S3.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopTransformJob">AWS
          * API Reference</a></p>
          *
@@ -9087,6 +9900,46 @@ namespace Model
         virtual void UpdatePipelineExecutionAsync(const Model::UpdatePipelineExecutionRequest& request, const UpdatePipelineExecutionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Updates a machine learning (ML) project that is created from a template that
+         * sets up an ML pipeline from training to deploying an approved model.</p> 
+         * <p>You must not update a project that is in use. If you update the
+         * <code>ServiceCatalogProvisioningUpdateDetails</code> of a project that is active
+         * or being created, or updated, you may lose resources already created by the
+         * project.</p> <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateProject">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UpdateProjectOutcome UpdateProject(const Model::UpdateProjectRequest& request) const;
+
+        /**
+         * <p>Updates a machine learning (ML) project that is created from a template that
+         * sets up an ML pipeline from training to deploying an approved model.</p> 
+         * <p>You must not update a project that is in use. If you update the
+         * <code>ServiceCatalogProvisioningUpdateDetails</code> of a project that is active
+         * or being created, or updated, you may lose resources already created by the
+         * project.</p> <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateProject">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::UpdateProjectOutcomeCallable UpdateProjectCallable(const Model::UpdateProjectRequest& request) const;
+
+        /**
+         * <p>Updates a machine learning (ML) project that is created from a template that
+         * sets up an ML pipeline from training to deploying an approved model.</p> 
+         * <p>You must not update a project that is in use. If you update the
+         * <code>ServiceCatalogProvisioningUpdateDetails</code> of a project that is active
+         * or being created, or updated, you may lose resources already created by the
+         * project.</p> <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateProject">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void UpdateProjectAsync(const Model::UpdateProjectRequest& request, const UpdateProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Update a model training job to request a new Debugger profiling
          * configuration.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateTrainingJob">AWS
@@ -9306,6 +10159,7 @@ namespace Model
         void AddAssociationAsyncHelper(const Model::AddAssociationRequest& request, const AddAssociationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void AddTagsAsyncHelper(const Model::AddTagsRequest& request, const AddTagsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void AssociateTrialComponentAsyncHelper(const Model::AssociateTrialComponentRequest& request, const AssociateTrialComponentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void BatchDescribeModelPackageAsyncHelper(const Model::BatchDescribeModelPackageRequest& request, const BatchDescribeModelPackageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateActionAsyncHelper(const Model::CreateActionRequest& request, const CreateActionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateAlgorithmAsyncHelper(const Model::CreateAlgorithmRequest& request, const CreateAlgorithmResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateAppAsyncHelper(const Model::CreateAppRequest& request, const CreateAppResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9328,6 +10182,7 @@ namespace Model
         void CreateHyperParameterTuningJobAsyncHelper(const Model::CreateHyperParameterTuningJobRequest& request, const CreateHyperParameterTuningJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateImageAsyncHelper(const Model::CreateImageRequest& request, const CreateImageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateImageVersionAsyncHelper(const Model::CreateImageVersionRequest& request, const CreateImageVersionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void CreateInferenceRecommendationsJobAsyncHelper(const Model::CreateInferenceRecommendationsJobRequest& request, const CreateInferenceRecommendationsJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateLabelingJobAsyncHelper(const Model::CreateLabelingJobRequest& request, const CreateLabelingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateModelAsyncHelper(const Model::CreateModelRequest& request, const CreateModelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateModelBiasJobDefinitionAsyncHelper(const Model::CreateModelBiasJobDefinitionRequest& request, const CreateModelBiasJobDefinitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9343,6 +10198,7 @@ namespace Model
         void CreatePresignedNotebookInstanceUrlAsyncHelper(const Model::CreatePresignedNotebookInstanceUrlRequest& request, const CreatePresignedNotebookInstanceUrlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateProcessingJobAsyncHelper(const Model::CreateProcessingJobRequest& request, const CreateProcessingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateProjectAsyncHelper(const Model::CreateProjectRequest& request, const CreateProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void CreateStudioLifecycleConfigAsyncHelper(const Model::CreateStudioLifecycleConfigRequest& request, const CreateStudioLifecycleConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateTrainingJobAsyncHelper(const Model::CreateTrainingJobRequest& request, const CreateTrainingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateTransformJobAsyncHelper(const Model::CreateTransformJobRequest& request, const CreateTransformJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateTrialAsyncHelper(const Model::CreateTrialRequest& request, const CreateTrialResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9381,6 +10237,7 @@ namespace Model
         void DeleteNotebookInstanceLifecycleConfigAsyncHelper(const Model::DeleteNotebookInstanceLifecycleConfigRequest& request, const DeleteNotebookInstanceLifecycleConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeletePipelineAsyncHelper(const Model::DeletePipelineRequest& request, const DeletePipelineResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteProjectAsyncHelper(const Model::DeleteProjectRequest& request, const DeleteProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DeleteStudioLifecycleConfigAsyncHelper(const Model::DeleteStudioLifecycleConfigRequest& request, const DeleteStudioLifecycleConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteTagsAsyncHelper(const Model::DeleteTagsRequest& request, const DeleteTagsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteTrialAsyncHelper(const Model::DeleteTrialRequest& request, const DeleteTrialResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteTrialComponentAsyncHelper(const Model::DeleteTrialComponentRequest& request, const DeleteTrialComponentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9411,7 +10268,9 @@ namespace Model
         void DescribeHyperParameterTuningJobAsyncHelper(const Model::DescribeHyperParameterTuningJobRequest& request, const DescribeHyperParameterTuningJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeImageAsyncHelper(const Model::DescribeImageRequest& request, const DescribeImageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeImageVersionAsyncHelper(const Model::DescribeImageVersionRequest& request, const DescribeImageVersionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeInferenceRecommendationsJobAsyncHelper(const Model::DescribeInferenceRecommendationsJobRequest& request, const DescribeInferenceRecommendationsJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeLabelingJobAsyncHelper(const Model::DescribeLabelingJobRequest& request, const DescribeLabelingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeLineageGroupAsyncHelper(const Model::DescribeLineageGroupRequest& request, const DescribeLineageGroupResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeModelAsyncHelper(const Model::DescribeModelRequest& request, const DescribeModelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeModelBiasJobDefinitionAsyncHelper(const Model::DescribeModelBiasJobDefinitionRequest& request, const DescribeModelBiasJobDefinitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeModelExplainabilityJobDefinitionAsyncHelper(const Model::DescribeModelExplainabilityJobDefinitionRequest& request, const DescribeModelExplainabilityJobDefinitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9426,6 +10285,7 @@ namespace Model
         void DescribePipelineExecutionAsyncHelper(const Model::DescribePipelineExecutionRequest& request, const DescribePipelineExecutionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeProcessingJobAsyncHelper(const Model::DescribeProcessingJobRequest& request, const DescribeProcessingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeProjectAsyncHelper(const Model::DescribeProjectRequest& request, const DescribeProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeStudioLifecycleConfigAsyncHelper(const Model::DescribeStudioLifecycleConfigRequest& request, const DescribeStudioLifecycleConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeSubscribedWorkteamAsyncHelper(const Model::DescribeSubscribedWorkteamRequest& request, const DescribeSubscribedWorkteamResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeTrainingJobAsyncHelper(const Model::DescribeTrainingJobRequest& request, const DescribeTrainingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeTransformJobAsyncHelper(const Model::DescribeTransformJobRequest& request, const DescribeTransformJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9438,6 +10298,7 @@ namespace Model
         void DisassociateTrialComponentAsyncHelper(const Model::DisassociateTrialComponentRequest& request, const DisassociateTrialComponentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void EnableSagemakerServicecatalogPortfolioAsyncHelper(const Model::EnableSagemakerServicecatalogPortfolioRequest& request, const EnableSagemakerServicecatalogPortfolioResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetDeviceFleetReportAsyncHelper(const Model::GetDeviceFleetReportRequest& request, const GetDeviceFleetReportResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetLineageGroupPolicyAsyncHelper(const Model::GetLineageGroupPolicyRequest& request, const GetLineageGroupPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetModelPackageGroupPolicyAsyncHelper(const Model::GetModelPackageGroupPolicyRequest& request, const GetModelPackageGroupPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetSagemakerServicecatalogPortfolioStatusAsyncHelper(const Model::GetSagemakerServicecatalogPortfolioStatusRequest& request, const GetSagemakerServicecatalogPortfolioStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetSearchSuggestionsAsyncHelper(const Model::GetSearchSuggestionsRequest& request, const GetSearchSuggestionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9466,10 +10327,13 @@ namespace Model
         void ListHyperParameterTuningJobsAsyncHelper(const Model::ListHyperParameterTuningJobsRequest& request, const ListHyperParameterTuningJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListImageVersionsAsyncHelper(const Model::ListImageVersionsRequest& request, const ListImageVersionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListImagesAsyncHelper(const Model::ListImagesRequest& request, const ListImagesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListInferenceRecommendationsJobsAsyncHelper(const Model::ListInferenceRecommendationsJobsRequest& request, const ListInferenceRecommendationsJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListLabelingJobsAsyncHelper(const Model::ListLabelingJobsRequest& request, const ListLabelingJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListLabelingJobsForWorkteamAsyncHelper(const Model::ListLabelingJobsForWorkteamRequest& request, const ListLabelingJobsForWorkteamResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListLineageGroupsAsyncHelper(const Model::ListLineageGroupsRequest& request, const ListLineageGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListModelBiasJobDefinitionsAsyncHelper(const Model::ListModelBiasJobDefinitionsRequest& request, const ListModelBiasJobDefinitionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListModelExplainabilityJobDefinitionsAsyncHelper(const Model::ListModelExplainabilityJobDefinitionsRequest& request, const ListModelExplainabilityJobDefinitionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListModelMetadataAsyncHelper(const Model::ListModelMetadataRequest& request, const ListModelMetadataResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListModelPackageGroupsAsyncHelper(const Model::ListModelPackageGroupsRequest& request, const ListModelPackageGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListModelPackagesAsyncHelper(const Model::ListModelPackagesRequest& request, const ListModelPackagesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListModelQualityJobDefinitionsAsyncHelper(const Model::ListModelQualityJobDefinitionsRequest& request, const ListModelQualityJobDefinitionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9484,6 +10348,7 @@ namespace Model
         void ListPipelinesAsyncHelper(const Model::ListPipelinesRequest& request, const ListPipelinesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListProcessingJobsAsyncHelper(const Model::ListProcessingJobsRequest& request, const ListProcessingJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListProjectsAsyncHelper(const Model::ListProjectsRequest& request, const ListProjectsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListStudioLifecycleConfigsAsyncHelper(const Model::ListStudioLifecycleConfigsRequest& request, const ListStudioLifecycleConfigsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListSubscribedWorkteamsAsyncHelper(const Model::ListSubscribedWorkteamsRequest& request, const ListSubscribedWorkteamsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListTagsAsyncHelper(const Model::ListTagsRequest& request, const ListTagsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListTrainingJobsAsyncHelper(const Model::ListTrainingJobsRequest& request, const ListTrainingJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9495,9 +10360,13 @@ namespace Model
         void ListWorkforcesAsyncHelper(const Model::ListWorkforcesRequest& request, const ListWorkforcesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListWorkteamsAsyncHelper(const Model::ListWorkteamsRequest& request, const ListWorkteamsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutModelPackageGroupPolicyAsyncHelper(const Model::PutModelPackageGroupPolicyRequest& request, const PutModelPackageGroupPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void QueryLineageAsyncHelper(const Model::QueryLineageRequest& request, const QueryLineageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RegisterDevicesAsyncHelper(const Model::RegisterDevicesRequest& request, const RegisterDevicesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RenderUiTemplateAsyncHelper(const Model::RenderUiTemplateRequest& request, const RenderUiTemplateResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void RetryPipelineExecutionAsyncHelper(const Model::RetryPipelineExecutionRequest& request, const RetryPipelineExecutionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void SearchAsyncHelper(const Model::SearchRequest& request, const SearchResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void SendPipelineExecutionStepFailureAsyncHelper(const Model::SendPipelineExecutionStepFailureRequest& request, const SendPipelineExecutionStepFailureResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void SendPipelineExecutionStepSuccessAsyncHelper(const Model::SendPipelineExecutionStepSuccessRequest& request, const SendPipelineExecutionStepSuccessResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StartMonitoringScheduleAsyncHelper(const Model::StartMonitoringScheduleRequest& request, const StartMonitoringScheduleResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StartNotebookInstanceAsyncHelper(const Model::StartNotebookInstanceRequest& request, const StartNotebookInstanceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StartPipelineExecutionAsyncHelper(const Model::StartPipelineExecutionRequest& request, const StartPipelineExecutionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9505,6 +10374,7 @@ namespace Model
         void StopCompilationJobAsyncHelper(const Model::StopCompilationJobRequest& request, const StopCompilationJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopEdgePackagingJobAsyncHelper(const Model::StopEdgePackagingJobRequest& request, const StopEdgePackagingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopHyperParameterTuningJobAsyncHelper(const Model::StopHyperParameterTuningJobRequest& request, const StopHyperParameterTuningJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void StopInferenceRecommendationsJobAsyncHelper(const Model::StopInferenceRecommendationsJobRequest& request, const StopInferenceRecommendationsJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopLabelingJobAsyncHelper(const Model::StopLabelingJobRequest& request, const StopLabelingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopMonitoringScheduleAsyncHelper(const Model::StopMonitoringScheduleRequest& request, const StopMonitoringScheduleResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopNotebookInstanceAsyncHelper(const Model::StopNotebookInstanceRequest& request, const StopNotebookInstanceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -9530,6 +10400,7 @@ namespace Model
         void UpdateNotebookInstanceLifecycleConfigAsyncHelper(const Model::UpdateNotebookInstanceLifecycleConfigRequest& request, const UpdateNotebookInstanceLifecycleConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdatePipelineAsyncHelper(const Model::UpdatePipelineRequest& request, const UpdatePipelineResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdatePipelineExecutionAsyncHelper(const Model::UpdatePipelineExecutionRequest& request, const UpdatePipelineExecutionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void UpdateProjectAsyncHelper(const Model::UpdateProjectRequest& request, const UpdateProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateTrainingJobAsyncHelper(const Model::UpdateTrainingJobRequest& request, const UpdateTrainingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateTrialAsyncHelper(const Model::UpdateTrialRequest& request, const UpdateTrialResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateTrialComponentAsyncHelper(const Model::UpdateTrialComponentRequest& request, const UpdateTrialComponentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

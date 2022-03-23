@@ -33,6 +33,7 @@ namespace Model
     Enrique,
     Ewa,
     Filiz,
+    Gabrielle,
     Geraint,
     Giorgio,
     Gwyneth,
@@ -77,7 +78,10 @@ namespace Model
     Vicki,
     Vitoria,
     Zeina,
-    Zhiyu
+    Zhiyu,
+    Aria,
+    Ayanda,
+    Arlet
   };
 
 namespace VoiceIdMapper

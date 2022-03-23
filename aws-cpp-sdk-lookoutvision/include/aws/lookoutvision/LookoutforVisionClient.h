@@ -19,13 +19,19 @@
 #include <aws/lookoutvision/model/DeleteProjectResult.h>
 #include <aws/lookoutvision/model/DescribeDatasetResult.h>
 #include <aws/lookoutvision/model/DescribeModelResult.h>
+#include <aws/lookoutvision/model/DescribeModelPackagingJobResult.h>
 #include <aws/lookoutvision/model/DescribeProjectResult.h>
 #include <aws/lookoutvision/model/DetectAnomaliesResult.h>
 #include <aws/lookoutvision/model/ListDatasetEntriesResult.h>
+#include <aws/lookoutvision/model/ListModelPackagingJobsResult.h>
 #include <aws/lookoutvision/model/ListModelsResult.h>
 #include <aws/lookoutvision/model/ListProjectsResult.h>
+#include <aws/lookoutvision/model/ListTagsForResourceResult.h>
 #include <aws/lookoutvision/model/StartModelResult.h>
+#include <aws/lookoutvision/model/StartModelPackagingJobResult.h>
 #include <aws/lookoutvision/model/StopModelResult.h>
+#include <aws/lookoutvision/model/TagResourceResult.h>
+#include <aws/lookoutvision/model/UntagResourceResult.h>
 #include <aws/lookoutvision/model/UpdateDatasetEntriesResult.h>
 #include <aws/core/client/AsyncCallerContext.h>
 #include <aws/core/http/HttpTypes.h>
@@ -74,13 +80,19 @@ namespace Model
         class DeleteProjectRequest;
         class DescribeDatasetRequest;
         class DescribeModelRequest;
+        class DescribeModelPackagingJobRequest;
         class DescribeProjectRequest;
         class DetectAnomaliesRequest;
         class ListDatasetEntriesRequest;
+        class ListModelPackagingJobsRequest;
         class ListModelsRequest;
         class ListProjectsRequest;
+        class ListTagsForResourceRequest;
         class StartModelRequest;
+        class StartModelPackagingJobRequest;
         class StopModelRequest;
+        class TagResourceRequest;
+        class UntagResourceRequest;
         class UpdateDatasetEntriesRequest;
 
         typedef Aws::Utils::Outcome<CreateDatasetResult, LookoutforVisionError> CreateDatasetOutcome;
@@ -91,13 +103,19 @@ namespace Model
         typedef Aws::Utils::Outcome<DeleteProjectResult, LookoutforVisionError> DeleteProjectOutcome;
         typedef Aws::Utils::Outcome<DescribeDatasetResult, LookoutforVisionError> DescribeDatasetOutcome;
         typedef Aws::Utils::Outcome<DescribeModelResult, LookoutforVisionError> DescribeModelOutcome;
+        typedef Aws::Utils::Outcome<DescribeModelPackagingJobResult, LookoutforVisionError> DescribeModelPackagingJobOutcome;
         typedef Aws::Utils::Outcome<DescribeProjectResult, LookoutforVisionError> DescribeProjectOutcome;
         typedef Aws::Utils::Outcome<DetectAnomaliesResult, LookoutforVisionError> DetectAnomaliesOutcome;
         typedef Aws::Utils::Outcome<ListDatasetEntriesResult, LookoutforVisionError> ListDatasetEntriesOutcome;
+        typedef Aws::Utils::Outcome<ListModelPackagingJobsResult, LookoutforVisionError> ListModelPackagingJobsOutcome;
         typedef Aws::Utils::Outcome<ListModelsResult, LookoutforVisionError> ListModelsOutcome;
         typedef Aws::Utils::Outcome<ListProjectsResult, LookoutforVisionError> ListProjectsOutcome;
+        typedef Aws::Utils::Outcome<ListTagsForResourceResult, LookoutforVisionError> ListTagsForResourceOutcome;
         typedef Aws::Utils::Outcome<StartModelResult, LookoutforVisionError> StartModelOutcome;
+        typedef Aws::Utils::Outcome<StartModelPackagingJobResult, LookoutforVisionError> StartModelPackagingJobOutcome;
         typedef Aws::Utils::Outcome<StopModelResult, LookoutforVisionError> StopModelOutcome;
+        typedef Aws::Utils::Outcome<TagResourceResult, LookoutforVisionError> TagResourceOutcome;
+        typedef Aws::Utils::Outcome<UntagResourceResult, LookoutforVisionError> UntagResourceOutcome;
         typedef Aws::Utils::Outcome<UpdateDatasetEntriesResult, LookoutforVisionError> UpdateDatasetEntriesOutcome;
 
         typedef std::future<CreateDatasetOutcome> CreateDatasetOutcomeCallable;
@@ -108,13 +126,19 @@ namespace Model
         typedef std::future<DeleteProjectOutcome> DeleteProjectOutcomeCallable;
         typedef std::future<DescribeDatasetOutcome> DescribeDatasetOutcomeCallable;
         typedef std::future<DescribeModelOutcome> DescribeModelOutcomeCallable;
+        typedef std::future<DescribeModelPackagingJobOutcome> DescribeModelPackagingJobOutcomeCallable;
         typedef std::future<DescribeProjectOutcome> DescribeProjectOutcomeCallable;
         typedef std::future<DetectAnomaliesOutcome> DetectAnomaliesOutcomeCallable;
         typedef std::future<ListDatasetEntriesOutcome> ListDatasetEntriesOutcomeCallable;
+        typedef std::future<ListModelPackagingJobsOutcome> ListModelPackagingJobsOutcomeCallable;
         typedef std::future<ListModelsOutcome> ListModelsOutcomeCallable;
         typedef std::future<ListProjectsOutcome> ListProjectsOutcomeCallable;
+        typedef std::future<ListTagsForResourceOutcome> ListTagsForResourceOutcomeCallable;
         typedef std::future<StartModelOutcome> StartModelOutcomeCallable;
+        typedef std::future<StartModelPackagingJobOutcome> StartModelPackagingJobOutcomeCallable;
         typedef std::future<StopModelOutcome> StopModelOutcomeCallable;
+        typedef std::future<TagResourceOutcome> TagResourceOutcomeCallable;
+        typedef std::future<UntagResourceOutcome> UntagResourceOutcomeCallable;
         typedef std::future<UpdateDatasetEntriesOutcome> UpdateDatasetEntriesOutcomeCallable;
 } // namespace Model
 
@@ -128,13 +152,19 @@ namespace Model
     typedef std::function<void(const LookoutforVisionClient*, const Model::DeleteProjectRequest&, const Model::DeleteProjectOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteProjectResponseReceivedHandler;
     typedef std::function<void(const LookoutforVisionClient*, const Model::DescribeDatasetRequest&, const Model::DescribeDatasetOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeDatasetResponseReceivedHandler;
     typedef std::function<void(const LookoutforVisionClient*, const Model::DescribeModelRequest&, const Model::DescribeModelOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeModelResponseReceivedHandler;
+    typedef std::function<void(const LookoutforVisionClient*, const Model::DescribeModelPackagingJobRequest&, const Model::DescribeModelPackagingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeModelPackagingJobResponseReceivedHandler;
     typedef std::function<void(const LookoutforVisionClient*, const Model::DescribeProjectRequest&, const Model::DescribeProjectOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeProjectResponseReceivedHandler;
     typedef std::function<void(const LookoutforVisionClient*, const Model::DetectAnomaliesRequest&, const Model::DetectAnomaliesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DetectAnomaliesResponseReceivedHandler;
     typedef std::function<void(const LookoutforVisionClient*, const Model::ListDatasetEntriesRequest&, const Model::ListDatasetEntriesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListDatasetEntriesResponseReceivedHandler;
+    typedef std::function<void(const LookoutforVisionClient*, const Model::ListModelPackagingJobsRequest&, const Model::ListModelPackagingJobsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListModelPackagingJobsResponseReceivedHandler;
     typedef std::function<void(const LookoutforVisionClient*, const Model::ListModelsRequest&, const Model::ListModelsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListModelsResponseReceivedHandler;
     typedef std::function<void(const LookoutforVisionClient*, const Model::ListProjectsRequest&, const Model::ListProjectsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListProjectsResponseReceivedHandler;
+    typedef std::function<void(const LookoutforVisionClient*, const Model::ListTagsForResourceRequest&, const Model::ListTagsForResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListTagsForResourceResponseReceivedHandler;
     typedef std::function<void(const LookoutforVisionClient*, const Model::StartModelRequest&, const Model::StartModelOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartModelResponseReceivedHandler;
+    typedef std::function<void(const LookoutforVisionClient*, const Model::StartModelPackagingJobRequest&, const Model::StartModelPackagingJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartModelPackagingJobResponseReceivedHandler;
     typedef std::function<void(const LookoutforVisionClient*, const Model::StopModelRequest&, const Model::StopModelOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopModelResponseReceivedHandler;
+    typedef std::function<void(const LookoutforVisionClient*, const Model::TagResourceRequest&, const Model::TagResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > TagResourceResponseReceivedHandler;
+    typedef std::function<void(const LookoutforVisionClient*, const Model::UntagResourceRequest&, const Model::UntagResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UntagResourceResponseReceivedHandler;
     typedef std::function<void(const LookoutforVisionClient*, const Model::UpdateDatasetEntriesRequest&, const Model::UpdateDatasetEntriesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateDatasetEntriesResponseReceivedHandler;
 
   /**
@@ -182,8 +212,10 @@ namespace Model
          * <code>DatasetType</code>.</p> <p>To have a project with separate training and
          * test datasets, call <code>CreateDataset</code> twice. On the first call, specify
          * <code>train</code> for the value of <code>DatasetType</code>. On the second
-         * call, specify <code>test</code> for the value of <code>DatasetType</code>. of
-         * dataset with </p><p><h3>See Also:</h3>   <a
+         * call, specify <code>test</code> for the value of <code>DatasetType</code>. </p>
+         * <p>This operation requires permissions to perform the
+         * <code>lookoutvision:CreateDataset</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateDataset">AWS
          * API Reference</a></p>
          */
@@ -197,8 +229,10 @@ namespace Model
          * <code>DatasetType</code>.</p> <p>To have a project with separate training and
          * test datasets, call <code>CreateDataset</code> twice. On the first call, specify
          * <code>train</code> for the value of <code>DatasetType</code>. On the second
-         * call, specify <code>test</code> for the value of <code>DatasetType</code>. of
-         * dataset with </p><p><h3>See Also:</h3>   <a
+         * call, specify <code>test</code> for the value of <code>DatasetType</code>. </p>
+         * <p>This operation requires permissions to perform the
+         * <code>lookoutvision:CreateDataset</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateDataset">AWS
          * API Reference</a></p>
          *
@@ -214,8 +248,10 @@ namespace Model
          * <code>DatasetType</code>.</p> <p>To have a project with separate training and
          * test datasets, call <code>CreateDataset</code> twice. On the first call, specify
          * <code>train</code> for the value of <code>DatasetType</code>. On the second
-         * call, specify <code>test</code> for the value of <code>DatasetType</code>. of
-         * dataset with </p><p><h3>See Also:</h3>   <a
+         * call, specify <code>test</code> for the value of <code>DatasetType</code>. </p>
+         * <p>This operation requires permissions to perform the
+         * <code>lookoutvision:CreateDataset</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateDataset">AWS
          * API Reference</a></p>
          *
@@ -233,7 +269,10 @@ namespace Model
          * training and a test dataset. If the project has a training and a test dataset,
          * Lookout for Vision uses the respective datasets to train and test the model.
          * </p> <p>After training completes, the evaluation metrics are stored at the
-         * location specified in <code>OutputConfig</code>. </p><p><h3>See Also:</h3>   <a
+         * location specified in <code>OutputConfig</code>. </p> <p>This operation requires
+         * permissions to perform the <code>lookoutvision:CreateModel</code> operation. If
+         * you want to tag your model, you also require permission to the
+         * <code>lookoutvision:TagResource</code> operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateModel">AWS
          * API Reference</a></p>
          */
@@ -249,7 +288,10 @@ namespace Model
          * training and a test dataset. If the project has a training and a test dataset,
          * Lookout for Vision uses the respective datasets to train and test the model.
          * </p> <p>After training completes, the evaluation metrics are stored at the
-         * location specified in <code>OutputConfig</code>. </p><p><h3>See Also:</h3>   <a
+         * location specified in <code>OutputConfig</code>. </p> <p>This operation requires
+         * permissions to perform the <code>lookoutvision:CreateModel</code> operation. If
+         * you want to tag your model, you also require permission to the
+         * <code>lookoutvision:TagResource</code> operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateModel">AWS
          * API Reference</a></p>
          *
@@ -267,7 +309,10 @@ namespace Model
          * training and a test dataset. If the project has a training and a test dataset,
          * Lookout for Vision uses the respective datasets to train and test the model.
          * </p> <p>After training completes, the evaluation metrics are stored at the
-         * location specified in <code>OutputConfig</code>. </p><p><h3>See Also:</h3>   <a
+         * location specified in <code>OutputConfig</code>. </p> <p>This operation requires
+         * permissions to perform the <code>lookoutvision:CreateModel</code> operation. If
+         * you want to tag your model, you also require permission to the
+         * <code>lookoutvision:TagResource</code> operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateModel">AWS
          * API Reference</a></p>
          *
@@ -277,8 +322,9 @@ namespace Model
 
         /**
          * <p>Creates an empty Amazon Lookout for Vision project. After you create the
-         * project, add a dataset by calling <a>CreateDataset</a>.</p><p><h3>See Also:</h3>
-         * <a
+         * project, add a dataset by calling <a>CreateDataset</a>.</p> <p>This operation
+         * requires permissions to perform the <code>lookoutvision:CreateProject</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateProject">AWS
          * API Reference</a></p>
          */
@@ -286,8 +332,9 @@ namespace Model
 
         /**
          * <p>Creates an empty Amazon Lookout for Vision project. After you create the
-         * project, add a dataset by calling <a>CreateDataset</a>.</p><p><h3>See Also:</h3>
-         * <a
+         * project, add a dataset by calling <a>CreateDataset</a>.</p> <p>This operation
+         * requires permissions to perform the <code>lookoutvision:CreateProject</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateProject">AWS
          * API Reference</a></p>
          *
@@ -297,8 +344,9 @@ namespace Model
 
         /**
          * <p>Creates an empty Amazon Lookout for Vision project. After you create the
-         * project, add a dataset by calling <a>CreateDataset</a>.</p><p><h3>See Also:</h3>
-         * <a
+         * project, add a dataset by calling <a>CreateDataset</a>.</p> <p>This operation
+         * requires permissions to perform the <code>lookoutvision:CreateProject</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/CreateProject">AWS
          * API Reference</a></p>
          *
@@ -315,9 +363,9 @@ namespace Model
          * model, Amazon Lookout for Vision internally splits the remaining dataset into a
          * training and test dataset.</p> </li> <li> <p>If you delete the training dataset,
          * you must create a training dataset before you can create a model.</p> </li>
-         * </ul> <p>It might take a while to delete the dataset. To check the current
-         * status, check the <code>Status</code> field in the response from a call to
-         * <a>DescribeDataset</a>. </p><p><h3>See Also:</h3>   <a
+         * </ul> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:DeleteDataset</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteDataset">AWS
          * API Reference</a></p>
          */
@@ -332,9 +380,9 @@ namespace Model
          * model, Amazon Lookout for Vision internally splits the remaining dataset into a
          * training and test dataset.</p> </li> <li> <p>If you delete the training dataset,
          * you must create a training dataset before you can create a model.</p> </li>
-         * </ul> <p>It might take a while to delete the dataset. To check the current
-         * status, check the <code>Status</code> field in the response from a call to
-         * <a>DescribeDataset</a>. </p><p><h3>See Also:</h3>   <a
+         * </ul> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:DeleteDataset</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteDataset">AWS
          * API Reference</a></p>
          *
@@ -351,9 +399,9 @@ namespace Model
          * model, Amazon Lookout for Vision internally splits the remaining dataset into a
          * training and test dataset.</p> </li> <li> <p>If you delete the training dataset,
          * you must create a training dataset before you can create a model.</p> </li>
-         * </ul> <p>It might take a while to delete the dataset. To check the current
-         * status, check the <code>Status</code> field in the response from a call to
-         * <a>DescribeDataset</a>. </p><p><h3>See Also:</h3>   <a
+         * </ul> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:DeleteDataset</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteDataset">AWS
          * API Reference</a></p>
          *
@@ -363,8 +411,12 @@ namespace Model
 
         /**
          * <p>Deletes an Amazon Lookout for Vision model. You can't delete a running model.
-         * To stop a running model, use the <a>StopModel</a> operation.</p><p><h3>See
-         * Also:</h3>   <a
+         * To stop a running model, use the <a>StopModel</a> operation.</p> <p>It might
+         * take a few seconds to delete a model. To determine if a model has been deleted,
+         * call <a>ListModels</a> and check if the version of the model
+         * (<code>ModelVersion</code>) is in the <code>Models</code> array. </p> <p/>
+         * <p>This operation requires permissions to perform the
+         * <code>lookoutvision:DeleteModel</code> operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteModel">AWS
          * API Reference</a></p>
          */
@@ -372,8 +424,12 @@ namespace Model
 
         /**
          * <p>Deletes an Amazon Lookout for Vision model. You can't delete a running model.
-         * To stop a running model, use the <a>StopModel</a> operation.</p><p><h3>See
-         * Also:</h3>   <a
+         * To stop a running model, use the <a>StopModel</a> operation.</p> <p>It might
+         * take a few seconds to delete a model. To determine if a model has been deleted,
+         * call <a>ListModels</a> and check if the version of the model
+         * (<code>ModelVersion</code>) is in the <code>Models</code> array. </p> <p/>
+         * <p>This operation requires permissions to perform the
+         * <code>lookoutvision:DeleteModel</code> operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteModel">AWS
          * API Reference</a></p>
          *
@@ -383,8 +439,12 @@ namespace Model
 
         /**
          * <p>Deletes an Amazon Lookout for Vision model. You can't delete a running model.
-         * To stop a running model, use the <a>StopModel</a> operation.</p><p><h3>See
-         * Also:</h3>   <a
+         * To stop a running model, use the <a>StopModel</a> operation.</p> <p>It might
+         * take a few seconds to delete a model. To determine if a model has been deleted,
+         * call <a>ListModels</a> and check if the version of the model
+         * (<code>ModelVersion</code>) is in the <code>Models</code> array. </p> <p/>
+         * <p>This operation requires permissions to perform the
+         * <code>lookoutvision:DeleteModel</code> operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteModel">AWS
          * API Reference</a></p>
          *
@@ -395,9 +455,12 @@ namespace Model
         /**
          * <p>Deletes an Amazon Lookout for Vision project.</p> <p>To delete a project, you
          * must first delete each version of the model associated with the project. To
-         * delete a model use the <a>DeleteModel</a> operation.</p> <p>The training and
-         * test datasets are deleted automatically for you. The images referenced by the
-         * training and test datasets aren't deleted. </p><p><h3>See Also:</h3>   <a
+         * delete a model use the <a>DeleteModel</a> operation.</p> <p>You also have to
+         * delete the dataset(s) associated with the model. For more information, see
+         * <a>DeleteDataset</a>. The images referenced by the training and test datasets
+         * aren't deleted. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:DeleteProject</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteProject">AWS
          * API Reference</a></p>
          */
@@ -406,9 +469,12 @@ namespace Model
         /**
          * <p>Deletes an Amazon Lookout for Vision project.</p> <p>To delete a project, you
          * must first delete each version of the model associated with the project. To
-         * delete a model use the <a>DeleteModel</a> operation.</p> <p>The training and
-         * test datasets are deleted automatically for you. The images referenced by the
-         * training and test datasets aren't deleted. </p><p><h3>See Also:</h3>   <a
+         * delete a model use the <a>DeleteModel</a> operation.</p> <p>You also have to
+         * delete the dataset(s) associated with the model. For more information, see
+         * <a>DeleteDataset</a>. The images referenced by the training and test datasets
+         * aren't deleted. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:DeleteProject</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteProject">AWS
          * API Reference</a></p>
          *
@@ -419,9 +485,12 @@ namespace Model
         /**
          * <p>Deletes an Amazon Lookout for Vision project.</p> <p>To delete a project, you
          * must first delete each version of the model associated with the project. To
-         * delete a model use the <a>DeleteModel</a> operation.</p> <p>The training and
-         * test datasets are deleted automatically for you. The images referenced by the
-         * training and test datasets aren't deleted. </p><p><h3>See Also:</h3>   <a
+         * delete a model use the <a>DeleteModel</a> operation.</p> <p>You also have to
+         * delete the dataset(s) associated with the model. For more information, see
+         * <a>DeleteDataset</a>. The images referenced by the training and test datasets
+         * aren't deleted. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:DeleteProject</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DeleteProject">AWS
          * API Reference</a></p>
          *
@@ -430,14 +499,18 @@ namespace Model
         virtual void DeleteProjectAsync(const Model::DeleteProjectRequest& request, const DeleteProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describe an Amazon Lookout for Vision dataset.</p><p><h3>See Also:</h3>   <a
+         * <p>Describe an Amazon Lookout for Vision dataset.</p> <p>This operation requires
+         * permissions to perform the <code>lookoutvision:DescribeDataset</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeDataset">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeDatasetOutcome DescribeDataset(const Model::DescribeDatasetRequest& request) const;
 
         /**
-         * <p>Describe an Amazon Lookout for Vision dataset.</p><p><h3>See Also:</h3>   <a
+         * <p>Describe an Amazon Lookout for Vision dataset.</p> <p>This operation requires
+         * permissions to perform the <code>lookoutvision:DescribeDataset</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeDataset">AWS
          * API Reference</a></p>
          *
@@ -446,7 +519,9 @@ namespace Model
         virtual Model::DescribeDatasetOutcomeCallable DescribeDatasetCallable(const Model::DescribeDatasetRequest& request) const;
 
         /**
-         * <p>Describe an Amazon Lookout for Vision dataset.</p><p><h3>See Also:</h3>   <a
+         * <p>Describe an Amazon Lookout for Vision dataset.</p> <p>This operation requires
+         * permissions to perform the <code>lookoutvision:DescribeDataset</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeDataset">AWS
          * API Reference</a></p>
          *
@@ -455,16 +530,20 @@ namespace Model
         virtual void DescribeDatasetAsync(const Model::DescribeDatasetRequest& request, const DescribeDatasetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes a version of an Amazon Lookout for Vision model.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Describes a version of an Amazon Lookout for Vision model.</p> <p>This
+         * operation requires permissions to perform the
+         * <code>lookoutvision:DescribeModel</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeModel">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeModelOutcome DescribeModel(const Model::DescribeModelRequest& request) const;
 
         /**
-         * <p>Describes a version of an Amazon Lookout for Vision model.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Describes a version of an Amazon Lookout for Vision model.</p> <p>This
+         * operation requires permissions to perform the
+         * <code>lookoutvision:DescribeModel</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeModel">AWS
          * API Reference</a></p>
          *
@@ -473,8 +552,10 @@ namespace Model
         virtual Model::DescribeModelOutcomeCallable DescribeModelCallable(const Model::DescribeModelRequest& request) const;
 
         /**
-         * <p>Describes a version of an Amazon Lookout for Vision model.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Describes a version of an Amazon Lookout for Vision model.</p> <p>This
+         * operation requires permissions to perform the
+         * <code>lookoutvision:DescribeModel</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeModel">AWS
          * API Reference</a></p>
          *
@@ -483,14 +564,58 @@ namespace Model
         virtual void DescribeModelAsync(const Model::DescribeModelRequest& request, const DescribeModelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes an Amazon Lookout for Vision project.</p><p><h3>See Also:</h3>   <a
+         * <p>Describes an Amazon Lookout for Vision model packaging job. </p> <p>This
+         * operation requires permissions to perform the
+         * <code>lookoutvision:DescribeModelPackagingJob</code> operation.</p> <p>For more
+         * information, see <i>Using your Amazon Lookout for Vision model on an edge
+         * device</i> in the Amazon Lookout for Vision Developer Guide. </p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeModelPackagingJob">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeModelPackagingJobOutcome DescribeModelPackagingJob(const Model::DescribeModelPackagingJobRequest& request) const;
+
+        /**
+         * <p>Describes an Amazon Lookout for Vision model packaging job. </p> <p>This
+         * operation requires permissions to perform the
+         * <code>lookoutvision:DescribeModelPackagingJob</code> operation.</p> <p>For more
+         * information, see <i>Using your Amazon Lookout for Vision model on an edge
+         * device</i> in the Amazon Lookout for Vision Developer Guide. </p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeModelPackagingJob">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeModelPackagingJobOutcomeCallable DescribeModelPackagingJobCallable(const Model::DescribeModelPackagingJobRequest& request) const;
+
+        /**
+         * <p>Describes an Amazon Lookout for Vision model packaging job. </p> <p>This
+         * operation requires permissions to perform the
+         * <code>lookoutvision:DescribeModelPackagingJob</code> operation.</p> <p>For more
+         * information, see <i>Using your Amazon Lookout for Vision model on an edge
+         * device</i> in the Amazon Lookout for Vision Developer Guide. </p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeModelPackagingJob">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeModelPackagingJobAsync(const Model::DescribeModelPackagingJobRequest& request, const DescribeModelPackagingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Describes an Amazon Lookout for Vision project.</p> <p>This operation
+         * requires permissions to perform the <code>lookoutvision:DescribeProject</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeProject">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeProjectOutcome DescribeProject(const Model::DescribeProjectRequest& request) const;
 
         /**
-         * <p>Describes an Amazon Lookout for Vision project.</p><p><h3>See Also:</h3>   <a
+         * <p>Describes an Amazon Lookout for Vision project.</p> <p>This operation
+         * requires permissions to perform the <code>lookoutvision:DescribeProject</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeProject">AWS
          * API Reference</a></p>
          *
@@ -499,7 +624,9 @@ namespace Model
         virtual Model::DescribeProjectOutcomeCallable DescribeProjectCallable(const Model::DescribeProjectRequest& request) const;
 
         /**
-         * <p>Describes an Amazon Lookout for Vision project.</p><p><h3>See Also:</h3>   <a
+         * <p>Describes an Amazon Lookout for Vision project.</p> <p>This operation
+         * requires permissions to perform the <code>lookoutvision:DescribeProject</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DescribeProject">AWS
          * API Reference</a></p>
          *
@@ -515,8 +642,9 @@ namespace Model
          * model with the <a>StartModel</a> operation. You are charged for the amount of
          * time, in minutes, that a model runs and for the number of anomaly detection
          * units that your model uses. If you are not using a model, use the
-         * <a>StopModel</a> operation to stop your model. </p> <p><h3>See Also:</h3>
-         * <a
+         * <a>StopModel</a> operation to stop your model. </p>  <p>This operation
+         * requires permissions to perform the <code>lookoutvision:DetectAnomalies</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DetectAnomalies">AWS
          * API Reference</a></p>
          */
@@ -530,8 +658,9 @@ namespace Model
          * model with the <a>StartModel</a> operation. You are charged for the amount of
          * time, in minutes, that a model runs and for the number of anomaly detection
          * units that your model uses. If you are not using a model, use the
-         * <a>StopModel</a> operation to stop your model. </p> <p><h3>See Also:</h3>
-         * <a
+         * <a>StopModel</a> operation to stop your model. </p>  <p>This operation
+         * requires permissions to perform the <code>lookoutvision:DetectAnomalies</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DetectAnomalies">AWS
          * API Reference</a></p>
          *
@@ -547,8 +676,9 @@ namespace Model
          * model with the <a>StartModel</a> operation. You are charged for the amount of
          * time, in minutes, that a model runs and for the number of anomaly detection
          * units that your model uses. If you are not using a model, use the
-         * <a>StopModel</a> operation to stop your model. </p> <p><h3>See Also:</h3>
-         * <a
+         * <a>StopModel</a> operation to stop your model. </p>  <p>This operation
+         * requires permissions to perform the <code>lookoutvision:DetectAnomalies</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/DetectAnomalies">AWS
          * API Reference</a></p>
          *
@@ -559,7 +689,9 @@ namespace Model
         /**
          * <p>Lists the JSON Lines within a dataset. An Amazon Lookout for Vision JSON Line
          * contains the anomaly information for a single image, including the image
-         * location and the assigned label.</p><p><h3>See Also:</h3>   <a
+         * location and the assigned label.</p> <p>This operation requires permissions to
+         * perform the <code>lookoutvision:ListDatasetEntries</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListDatasetEntries">AWS
          * API Reference</a></p>
          */
@@ -568,7 +700,9 @@ namespace Model
         /**
          * <p>Lists the JSON Lines within a dataset. An Amazon Lookout for Vision JSON Line
          * contains the anomaly information for a single image, including the image
-         * location and the assigned label.</p><p><h3>See Also:</h3>   <a
+         * location and the assigned label.</p> <p>This operation requires permissions to
+         * perform the <code>lookoutvision:ListDatasetEntries</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListDatasetEntries">AWS
          * API Reference</a></p>
          *
@@ -579,7 +713,9 @@ namespace Model
         /**
          * <p>Lists the JSON Lines within a dataset. An Amazon Lookout for Vision JSON Line
          * contains the anomaly information for a single image, including the image
-         * location and the assigned label.</p><p><h3>See Also:</h3>   <a
+         * location and the assigned label.</p> <p>This operation requires permissions to
+         * perform the <code>lookoutvision:ListDatasetEntries</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListDatasetEntries">AWS
          * API Reference</a></p>
          *
@@ -588,16 +724,64 @@ namespace Model
         virtual void ListDatasetEntriesAsync(const Model::ListDatasetEntriesRequest& request, const ListDatasetEntriesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Lists the versions of a model in an Amazon Lookout for Vision
-         * project.</p><p><h3>See Also:</h3>   <a
+         * <p> Lists the model packaging jobs created for an Amazon Lookout for Vision
+         * project. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:ListModelPackagingJobs</code> operation. </p> <p>For more
+         * information, see <i>Using your Amazon Lookout for Vision model on an edge
+         * device</i> in the Amazon Lookout for Vision Developer Guide. </p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListModelPackagingJobs">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListModelPackagingJobsOutcome ListModelPackagingJobs(const Model::ListModelPackagingJobsRequest& request) const;
+
+        /**
+         * <p> Lists the model packaging jobs created for an Amazon Lookout for Vision
+         * project. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:ListModelPackagingJobs</code> operation. </p> <p>For more
+         * information, see <i>Using your Amazon Lookout for Vision model on an edge
+         * device</i> in the Amazon Lookout for Vision Developer Guide. </p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListModelPackagingJobs">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListModelPackagingJobsOutcomeCallable ListModelPackagingJobsCallable(const Model::ListModelPackagingJobsRequest& request) const;
+
+        /**
+         * <p> Lists the model packaging jobs created for an Amazon Lookout for Vision
+         * project. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:ListModelPackagingJobs</code> operation. </p> <p>For more
+         * information, see <i>Using your Amazon Lookout for Vision model on an edge
+         * device</i> in the Amazon Lookout for Vision Developer Guide. </p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListModelPackagingJobs">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListModelPackagingJobsAsync(const Model::ListModelPackagingJobsRequest& request, const ListModelPackagingJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Lists the versions of a model in an Amazon Lookout for Vision project.</p>
+         * <p>The <code>ListModels</code> operation is eventually consistent. Recent calls
+         * to <code>CreateModel</code> might take a while to appear in the response from
+         * <code>ListProjects</code>.</p> <p>This operation requires permissions to perform
+         * the <code>lookoutvision:ListModels</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListModels">AWS
          * API Reference</a></p>
          */
         virtual Model::ListModelsOutcome ListModels(const Model::ListModelsRequest& request) const;
 
         /**
-         * <p>Lists the versions of a model in an Amazon Lookout for Vision
-         * project.</p><p><h3>See Also:</h3>   <a
+         * <p>Lists the versions of a model in an Amazon Lookout for Vision project.</p>
+         * <p>The <code>ListModels</code> operation is eventually consistent. Recent calls
+         * to <code>CreateModel</code> might take a while to appear in the response from
+         * <code>ListProjects</code>.</p> <p>This operation requires permissions to perform
+         * the <code>lookoutvision:ListModels</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListModels">AWS
          * API Reference</a></p>
          *
@@ -606,8 +790,12 @@ namespace Model
         virtual Model::ListModelsOutcomeCallable ListModelsCallable(const Model::ListModelsRequest& request) const;
 
         /**
-         * <p>Lists the versions of a model in an Amazon Lookout for Vision
-         * project.</p><p><h3>See Also:</h3>   <a
+         * <p>Lists the versions of a model in an Amazon Lookout for Vision project.</p>
+         * <p>The <code>ListModels</code> operation is eventually consistent. Recent calls
+         * to <code>CreateModel</code> might take a while to appear in the response from
+         * <code>ListProjects</code>.</p> <p>This operation requires permissions to perform
+         * the <code>lookoutvision:ListModels</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListModels">AWS
          * API Reference</a></p>
          *
@@ -616,16 +804,24 @@ namespace Model
         virtual void ListModelsAsync(const Model::ListModelsRequest& request, const ListModelsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Lists the Amazon Lookout for Vision projects in your AWS
-         * account.</p><p><h3>See Also:</h3>   <a
+         * <p>Lists the Amazon Lookout for Vision projects in your AWS account.</p> <p>The
+         * <code>ListProjects</code> operation is eventually consistent. Recent calls to
+         * <code>CreateProject</code> and <code>DeleteProject</code> might take a while to
+         * appear in the response from <code>ListProjects</code>.</p> <p>This operation
+         * requires permissions to perform the <code>lookoutvision:ListProjects</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListProjects">AWS
          * API Reference</a></p>
          */
         virtual Model::ListProjectsOutcome ListProjects(const Model::ListProjectsRequest& request) const;
 
         /**
-         * <p>Lists the Amazon Lookout for Vision projects in your AWS
-         * account.</p><p><h3>See Also:</h3>   <a
+         * <p>Lists the Amazon Lookout for Vision projects in your AWS account.</p> <p>The
+         * <code>ListProjects</code> operation is eventually consistent. Recent calls to
+         * <code>CreateProject</code> and <code>DeleteProject</code> might take a while to
+         * appear in the response from <code>ListProjects</code>.</p> <p>This operation
+         * requires permissions to perform the <code>lookoutvision:ListProjects</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListProjects">AWS
          * API Reference</a></p>
          *
@@ -634,8 +830,12 @@ namespace Model
         virtual Model::ListProjectsOutcomeCallable ListProjectsCallable(const Model::ListProjectsRequest& request) const;
 
         /**
-         * <p>Lists the Amazon Lookout for Vision projects in your AWS
-         * account.</p><p><h3>See Also:</h3>   <a
+         * <p>Lists the Amazon Lookout for Vision projects in your AWS account.</p> <p>The
+         * <code>ListProjects</code> operation is eventually consistent. Recent calls to
+         * <code>CreateProject</code> and <code>DeleteProject</code> might take a while to
+         * appear in the response from <code>ListProjects</code>.</p> <p>This operation
+         * requires permissions to perform the <code>lookoutvision:ListProjects</code>
+         * operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListProjects">AWS
          * API Reference</a></p>
          *
@@ -644,12 +844,49 @@ namespace Model
         virtual void ListProjectsAsync(const Model::ListProjectsRequest& request, const ListProjectsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Returns a list of tags attached to the specified Amazon Lookout for Vision
+         * model.</p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:ListTagsForResource</code> operation.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListTagsForResource">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListTagsForResourceOutcome ListTagsForResource(const Model::ListTagsForResourceRequest& request) const;
+
+        /**
+         * <p>Returns a list of tags attached to the specified Amazon Lookout for Vision
+         * model.</p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:ListTagsForResource</code> operation.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListTagsForResource">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListTagsForResourceOutcomeCallable ListTagsForResourceCallable(const Model::ListTagsForResourceRequest& request) const;
+
+        /**
+         * <p>Returns a list of tags attached to the specified Amazon Lookout for Vision
+         * model.</p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:ListTagsForResource</code> operation.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/ListTagsForResource">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListTagsForResourceAsync(const Model::ListTagsForResourceRequest& request, const ListTagsForResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Starts the running of the version of an Amazon Lookout for Vision model.
          * Starting a model takes a while to complete. To check the current state of the
-         * model, use <a>DescribeModel</a>.</p> <p>Once the model is running, you can
-         * detect custom labels in new images by calling <a>DetectAnomalies</a>.</p> 
-         * <p>You are charged for the amount of time that the model is running. To stop a
-         * running model, call <a>StopModel</a>.</p> <p><h3>See Also:</h3>   <a
+         * model, use <a>DescribeModel</a>.</p> <p>A model is ready to use when its status
+         * is <code>HOSTED</code>.</p> <p>Once the model is running, you can detect custom
+         * labels in new images by calling <a>DetectAnomalies</a>.</p>  <p>You are
+         * charged for the amount of time that the model is running. To stop a running
+         * model, call <a>StopModel</a>.</p>  <p>This operation requires permissions
+         * to perform the <code>lookoutvision:StartModel</code> operation.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StartModel">AWS
          * API Reference</a></p>
          */
@@ -658,10 +895,13 @@ namespace Model
         /**
          * <p>Starts the running of the version of an Amazon Lookout for Vision model.
          * Starting a model takes a while to complete. To check the current state of the
-         * model, use <a>DescribeModel</a>.</p> <p>Once the model is running, you can
-         * detect custom labels in new images by calling <a>DetectAnomalies</a>.</p> 
-         * <p>You are charged for the amount of time that the model is running. To stop a
-         * running model, call <a>StopModel</a>.</p> <p><h3>See Also:</h3>   <a
+         * model, use <a>DescribeModel</a>.</p> <p>A model is ready to use when its status
+         * is <code>HOSTED</code>.</p> <p>Once the model is running, you can detect custom
+         * labels in new images by calling <a>DetectAnomalies</a>.</p>  <p>You are
+         * charged for the amount of time that the model is running. To stop a running
+         * model, call <a>StopModel</a>.</p>  <p>This operation requires permissions
+         * to perform the <code>lookoutvision:StartModel</code> operation.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StartModel">AWS
          * API Reference</a></p>
          *
@@ -672,10 +912,13 @@ namespace Model
         /**
          * <p>Starts the running of the version of an Amazon Lookout for Vision model.
          * Starting a model takes a while to complete. To check the current state of the
-         * model, use <a>DescribeModel</a>.</p> <p>Once the model is running, you can
-         * detect custom labels in new images by calling <a>DetectAnomalies</a>.</p> 
-         * <p>You are charged for the amount of time that the model is running. To stop a
-         * running model, call <a>StopModel</a>.</p> <p><h3>See Also:</h3>   <a
+         * model, use <a>DescribeModel</a>.</p> <p>A model is ready to use when its status
+         * is <code>HOSTED</code>.</p> <p>Once the model is running, you can detect custom
+         * labels in new images by calling <a>DetectAnomalies</a>.</p>  <p>You are
+         * charged for the amount of time that the model is running. To stop a running
+         * model, call <a>StopModel</a>.</p>  <p>This operation requires permissions
+         * to perform the <code>lookoutvision:StartModel</code> operation.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StartModel">AWS
          * API Reference</a></p>
          *
@@ -684,16 +927,98 @@ namespace Model
         virtual void StartModelAsync(const Model::StartModelRequest& request, const StartModelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Stops a running model. The operation might take a while to complete. To check
-         * the current status, call <a>DescribeModel</a>. </p><p><h3>See Also:</h3>   <a
+         * <p>Starts an Amazon Lookout for Vision model packaging job. A model packaging
+         * job creates an AWS IoT Greengrass component for a Lookout for Vision model. You
+         * can use the component to deploy your model to an edge device managed by
+         * Greengrass. </p> <p>Use the <a>DescribeModelPackagingJob</a> API to determine
+         * the current status of the job. The model packaging job is complete if the value
+         * of <code>Status</code> is <code>SUCCEEDED</code>.</p> <p>To deploy the component
+         * to the target device, use the component name and component version with the AWS
+         * IoT Greengrass <a
+         * href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_CreateDeployment.html">CreateDeployment</a>
+         * API.</p> <p>This operation requires the following permissions:</p> <ul> <li> <p>
+         * <code>lookoutvision:StartModelPackagingJob</code> </p> </li> <li> <p>
+         * <code>s3:PutObject</code> </p> </li> <li> <p> <code>s3:GetBucketLocation</code>
+         * </p> </li> <li> <p> <code>greengrass:CreateComponentVersion</code> </p> </li>
+         * <li> <p> <code>greengrass:DescribeComponent</code> </p> </li> <li> <p>(Optional)
+         * <code>greengrass:TagResource</code>. Only required if you want to tag the
+         * component.</p> </li> </ul> <p>For more information, see <i>Using your Amazon
+         * Lookout for Vision model on an edge device</i> in the Amazon Lookout for Vision
+         * Developer Guide. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StartModelPackagingJob">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::StartModelPackagingJobOutcome StartModelPackagingJob(const Model::StartModelPackagingJobRequest& request) const;
+
+        /**
+         * <p>Starts an Amazon Lookout for Vision model packaging job. A model packaging
+         * job creates an AWS IoT Greengrass component for a Lookout for Vision model. You
+         * can use the component to deploy your model to an edge device managed by
+         * Greengrass. </p> <p>Use the <a>DescribeModelPackagingJob</a> API to determine
+         * the current status of the job. The model packaging job is complete if the value
+         * of <code>Status</code> is <code>SUCCEEDED</code>.</p> <p>To deploy the component
+         * to the target device, use the component name and component version with the AWS
+         * IoT Greengrass <a
+         * href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_CreateDeployment.html">CreateDeployment</a>
+         * API.</p> <p>This operation requires the following permissions:</p> <ul> <li> <p>
+         * <code>lookoutvision:StartModelPackagingJob</code> </p> </li> <li> <p>
+         * <code>s3:PutObject</code> </p> </li> <li> <p> <code>s3:GetBucketLocation</code>
+         * </p> </li> <li> <p> <code>greengrass:CreateComponentVersion</code> </p> </li>
+         * <li> <p> <code>greengrass:DescribeComponent</code> </p> </li> <li> <p>(Optional)
+         * <code>greengrass:TagResource</code>. Only required if you want to tag the
+         * component.</p> </li> </ul> <p>For more information, see <i>Using your Amazon
+         * Lookout for Vision model on an edge device</i> in the Amazon Lookout for Vision
+         * Developer Guide. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StartModelPackagingJob">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::StartModelPackagingJobOutcomeCallable StartModelPackagingJobCallable(const Model::StartModelPackagingJobRequest& request) const;
+
+        /**
+         * <p>Starts an Amazon Lookout for Vision model packaging job. A model packaging
+         * job creates an AWS IoT Greengrass component for a Lookout for Vision model. You
+         * can use the component to deploy your model to an edge device managed by
+         * Greengrass. </p> <p>Use the <a>DescribeModelPackagingJob</a> API to determine
+         * the current status of the job. The model packaging job is complete if the value
+         * of <code>Status</code> is <code>SUCCEEDED</code>.</p> <p>To deploy the component
+         * to the target device, use the component name and component version with the AWS
+         * IoT Greengrass <a
+         * href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_CreateDeployment.html">CreateDeployment</a>
+         * API.</p> <p>This operation requires the following permissions:</p> <ul> <li> <p>
+         * <code>lookoutvision:StartModelPackagingJob</code> </p> </li> <li> <p>
+         * <code>s3:PutObject</code> </p> </li> <li> <p> <code>s3:GetBucketLocation</code>
+         * </p> </li> <li> <p> <code>greengrass:CreateComponentVersion</code> </p> </li>
+         * <li> <p> <code>greengrass:DescribeComponent</code> </p> </li> <li> <p>(Optional)
+         * <code>greengrass:TagResource</code>. Only required if you want to tag the
+         * component.</p> </li> </ul> <p>For more information, see <i>Using your Amazon
+         * Lookout for Vision model on an edge device</i> in the Amazon Lookout for Vision
+         * Developer Guide. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StartModelPackagingJob">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void StartModelPackagingJobAsync(const Model::StartModelPackagingJobRequest& request, const StartModelPackagingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Stops the hosting of a running model. The operation might take a while to
+         * complete. To check the current status, call <a>DescribeModel</a>. </p> <p>After
+         * the model hosting stops, the <code>Status</code> of the model is
+         * <code>TRAINED</code>.</p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:StopModel</code> operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StopModel">AWS
          * API Reference</a></p>
          */
         virtual Model::StopModelOutcome StopModel(const Model::StopModelRequest& request) const;
 
         /**
-         * <p>Stops a running model. The operation might take a while to complete. To check
-         * the current status, call <a>DescribeModel</a>. </p><p><h3>See Also:</h3>   <a
+         * <p>Stops the hosting of a running model. The operation might take a while to
+         * complete. To check the current status, call <a>DescribeModel</a>. </p> <p>After
+         * the model hosting stops, the <code>Status</code> of the model is
+         * <code>TRAINED</code>.</p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:StopModel</code> operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StopModel">AWS
          * API Reference</a></p>
          *
@@ -702,8 +1027,11 @@ namespace Model
         virtual Model::StopModelOutcomeCallable StopModelCallable(const Model::StopModelRequest& request) const;
 
         /**
-         * <p>Stops a running model. The operation might take a while to complete. To check
-         * the current status, call <a>DescribeModel</a>. </p><p><h3>See Also:</h3>   <a
+         * <p>Stops the hosting of a running model. The operation might take a while to
+         * complete. To check the current status, call <a>DescribeModel</a>. </p> <p>After
+         * the model hosting stops, the <code>Status</code> of the model is
+         * <code>TRAINED</code>.</p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:StopModel</code> operation.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/StopModel">AWS
          * API Reference</a></p>
          *
@@ -712,24 +1040,113 @@ namespace Model
         virtual void StopModelAsync(const Model::StopModelRequest& request, const StopModelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Adds one or more JSON Line entries to a dataset. A JSON Line includes
-         * information about an image used for training or testing an Amazon Lookout for
-         * Vision model. The following is an example JSON Line.</p> <p>Updating a dataset
-         * might take a while to complete. To check the current status, call
+         * <p>Adds one or more key-value tags to an Amazon Lookout for Vision model. For
+         * more information, see <i>Tagging a model</i> in the <i>Amazon Lookout for Vision
+         * Developer Guide</i>. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:TagResource</code> operation.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/TagResource">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::TagResourceOutcome TagResource(const Model::TagResourceRequest& request) const;
+
+        /**
+         * <p>Adds one or more key-value tags to an Amazon Lookout for Vision model. For
+         * more information, see <i>Tagging a model</i> in the <i>Amazon Lookout for Vision
+         * Developer Guide</i>. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:TagResource</code> operation.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/TagResource">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::TagResourceOutcomeCallable TagResourceCallable(const Model::TagResourceRequest& request) const;
+
+        /**
+         * <p>Adds one or more key-value tags to an Amazon Lookout for Vision model. For
+         * more information, see <i>Tagging a model</i> in the <i>Amazon Lookout for Vision
+         * Developer Guide</i>. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:TagResource</code> operation.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/TagResource">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void TagResourceAsync(const Model::TagResourceRequest& request, const TagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Removes one or more tags from an Amazon Lookout for Vision model. For more
+         * information, see <i>Tagging a model</i> in the <i>Amazon Lookout for Vision
+         * Developer Guide</i>. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:UntagResource</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/UntagResource">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UntagResourceOutcome UntagResource(const Model::UntagResourceRequest& request) const;
+
+        /**
+         * <p>Removes one or more tags from an Amazon Lookout for Vision model. For more
+         * information, see <i>Tagging a model</i> in the <i>Amazon Lookout for Vision
+         * Developer Guide</i>. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:UntagResource</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/UntagResource">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::UntagResourceOutcomeCallable UntagResourceCallable(const Model::UntagResourceRequest& request) const;
+
+        /**
+         * <p>Removes one or more tags from an Amazon Lookout for Vision model. For more
+         * information, see <i>Tagging a model</i> in the <i>Amazon Lookout for Vision
+         * Developer Guide</i>. </p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:UntagResource</code> operation.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/UntagResource">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void UntagResourceAsync(const Model::UntagResourceRequest& request, const UntagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Adds or updates one or more JSON Line entries in a dataset. A JSON Line
+         * includes information about an image used for training or testing an Amazon
+         * Lookout for Vision model.</p> <p>To update an existing JSON Line, use the
+         * <code>source-ref</code> field to identify the JSON Line. The JSON line that you
+         * supply replaces the existing JSON line. Any existing annotations that are not in
+         * the new JSON line are removed from the dataset. </p> <p>For more information,
+         * see <i>Defining JSON lines for anomaly classification</i> in the Amazon Lookout
+         * for Vision Developer Guide. </p>  <p>The images you reference in the
+         * <code>source-ref</code> field of a JSON line, must be in the same S3 bucket as
+         * the existing images in the dataset. </p>  <p>Updating a dataset might
+         * take a while to complete. To check the current status, call
          * <a>DescribeDataset</a> and check the <code>Status</code> field in the
-         * response.</p><p><h3>See Also:</h3>   <a
+         * response.</p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:UpdateDatasetEntries</code> operation.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/UpdateDatasetEntries">AWS
          * API Reference</a></p>
          */
         virtual Model::UpdateDatasetEntriesOutcome UpdateDatasetEntries(const Model::UpdateDatasetEntriesRequest& request) const;
 
         /**
-         * <p>Adds one or more JSON Line entries to a dataset. A JSON Line includes
-         * information about an image used for training or testing an Amazon Lookout for
-         * Vision model. The following is an example JSON Line.</p> <p>Updating a dataset
-         * might take a while to complete. To check the current status, call
+         * <p>Adds or updates one or more JSON Line entries in a dataset. A JSON Line
+         * includes information about an image used for training or testing an Amazon
+         * Lookout for Vision model.</p> <p>To update an existing JSON Line, use the
+         * <code>source-ref</code> field to identify the JSON Line. The JSON line that you
+         * supply replaces the existing JSON line. Any existing annotations that are not in
+         * the new JSON line are removed from the dataset. </p> <p>For more information,
+         * see <i>Defining JSON lines for anomaly classification</i> in the Amazon Lookout
+         * for Vision Developer Guide. </p>  <p>The images you reference in the
+         * <code>source-ref</code> field of a JSON line, must be in the same S3 bucket as
+         * the existing images in the dataset. </p>  <p>Updating a dataset might
+         * take a while to complete. To check the current status, call
          * <a>DescribeDataset</a> and check the <code>Status</code> field in the
-         * response.</p><p><h3>See Also:</h3>   <a
+         * response.</p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:UpdateDatasetEntries</code> operation.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/UpdateDatasetEntries">AWS
          * API Reference</a></p>
          *
@@ -738,12 +1155,21 @@ namespace Model
         virtual Model::UpdateDatasetEntriesOutcomeCallable UpdateDatasetEntriesCallable(const Model::UpdateDatasetEntriesRequest& request) const;
 
         /**
-         * <p>Adds one or more JSON Line entries to a dataset. A JSON Line includes
-         * information about an image used for training or testing an Amazon Lookout for
-         * Vision model. The following is an example JSON Line.</p> <p>Updating a dataset
-         * might take a while to complete. To check the current status, call
+         * <p>Adds or updates one or more JSON Line entries in a dataset. A JSON Line
+         * includes information about an image used for training or testing an Amazon
+         * Lookout for Vision model.</p> <p>To update an existing JSON Line, use the
+         * <code>source-ref</code> field to identify the JSON Line. The JSON line that you
+         * supply replaces the existing JSON line. Any existing annotations that are not in
+         * the new JSON line are removed from the dataset. </p> <p>For more information,
+         * see <i>Defining JSON lines for anomaly classification</i> in the Amazon Lookout
+         * for Vision Developer Guide. </p>  <p>The images you reference in the
+         * <code>source-ref</code> field of a JSON line, must be in the same S3 bucket as
+         * the existing images in the dataset. </p>  <p>Updating a dataset might
+         * take a while to complete. To check the current status, call
          * <a>DescribeDataset</a> and check the <code>Status</code> field in the
-         * response.</p><p><h3>See Also:</h3>   <a
+         * response.</p> <p>This operation requires permissions to perform the
+         * <code>lookoutvision:UpdateDatasetEntries</code> operation.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/lookoutvision-2020-11-20/UpdateDatasetEntries">AWS
          * API Reference</a></p>
          *
@@ -763,13 +1189,19 @@ namespace Model
         void DeleteProjectAsyncHelper(const Model::DeleteProjectRequest& request, const DeleteProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeDatasetAsyncHelper(const Model::DescribeDatasetRequest& request, const DescribeDatasetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeModelAsyncHelper(const Model::DescribeModelRequest& request, const DescribeModelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeModelPackagingJobAsyncHelper(const Model::DescribeModelPackagingJobRequest& request, const DescribeModelPackagingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeProjectAsyncHelper(const Model::DescribeProjectRequest& request, const DescribeProjectResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DetectAnomaliesAsyncHelper(const Model::DetectAnomaliesRequest& request, const DetectAnomaliesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListDatasetEntriesAsyncHelper(const Model::ListDatasetEntriesRequest& request, const ListDatasetEntriesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListModelPackagingJobsAsyncHelper(const Model::ListModelPackagingJobsRequest& request, const ListModelPackagingJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListModelsAsyncHelper(const Model::ListModelsRequest& request, const ListModelsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListProjectsAsyncHelper(const Model::ListProjectsRequest& request, const ListProjectsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListTagsForResourceAsyncHelper(const Model::ListTagsForResourceRequest& request, const ListTagsForResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StartModelAsyncHelper(const Model::StartModelRequest& request, const StartModelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void StartModelPackagingJobAsyncHelper(const Model::StartModelPackagingJobRequest& request, const StartModelPackagingJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopModelAsyncHelper(const Model::StopModelRequest& request, const StopModelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void TagResourceAsyncHelper(const Model::TagResourceRequest& request, const TagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void UntagResourceAsyncHelper(const Model::UntagResourceRequest& request, const UntagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateDatasetEntriesAsyncHelper(const Model::UpdateDatasetEntriesRequest& request, const UpdateDatasetEntriesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
 
       Aws::String m_uri;

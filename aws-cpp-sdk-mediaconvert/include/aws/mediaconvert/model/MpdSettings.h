@@ -10,6 +10,7 @@
 #include <aws/mediaconvert/model/MpdCaptionContainerType.h>
 #include <aws/mediaconvert/model/MpdScte35Esam.h>
 #include <aws/mediaconvert/model/MpdScte35Source.h>
+#include <aws/mediaconvert/model/MpdTimedMetadata.h>
 #include <utility>
 
 namespace Aws
@@ -28,7 +29,8 @@ namespace Model
 {
 
   /**
-   * Settings for MP4 segments in DASH<p><h3>See Also:</h3>   <a
+   * These settings relate to the fragmented MP4 container for the segments in your
+   * DASH outputs.<p><h3>See Also:</h3>   <a
    * href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/MpdSettings">AWS
    * API Reference</a></p>
    */
@@ -363,6 +365,61 @@ namespace Model
      */
     inline MpdSettings& WithScte35Source(MpdScte35Source&& value) { SetScte35Source(std::move(value)); return *this;}
 
+
+    /**
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to
+     * Passthrough (PASSTHROUGH). Specify this ID3 metadata in Custom ID3 metadata
+     * inserter (timedMetadataInsertion). MediaConvert writes each instance of ID3
+     * metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata:
+     * Set ID3 metadata to None (NONE) or leave blank.
+     */
+    inline const MpdTimedMetadata& GetTimedMetadata() const{ return m_timedMetadata; }
+
+    /**
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to
+     * Passthrough (PASSTHROUGH). Specify this ID3 metadata in Custom ID3 metadata
+     * inserter (timedMetadataInsertion). MediaConvert writes each instance of ID3
+     * metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata:
+     * Set ID3 metadata to None (NONE) or leave blank.
+     */
+    inline bool TimedMetadataHasBeenSet() const { return m_timedMetadataHasBeenSet; }
+
+    /**
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to
+     * Passthrough (PASSTHROUGH). Specify this ID3 metadata in Custom ID3 metadata
+     * inserter (timedMetadataInsertion). MediaConvert writes each instance of ID3
+     * metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata:
+     * Set ID3 metadata to None (NONE) or leave blank.
+     */
+    inline void SetTimedMetadata(const MpdTimedMetadata& value) { m_timedMetadataHasBeenSet = true; m_timedMetadata = value; }
+
+    /**
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to
+     * Passthrough (PASSTHROUGH). Specify this ID3 metadata in Custom ID3 metadata
+     * inserter (timedMetadataInsertion). MediaConvert writes each instance of ID3
+     * metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata:
+     * Set ID3 metadata to None (NONE) or leave blank.
+     */
+    inline void SetTimedMetadata(MpdTimedMetadata&& value) { m_timedMetadataHasBeenSet = true; m_timedMetadata = std::move(value); }
+
+    /**
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to
+     * Passthrough (PASSTHROUGH). Specify this ID3 metadata in Custom ID3 metadata
+     * inserter (timedMetadataInsertion). MediaConvert writes each instance of ID3
+     * metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata:
+     * Set ID3 metadata to None (NONE) or leave blank.
+     */
+    inline MpdSettings& WithTimedMetadata(const MpdTimedMetadata& value) { SetTimedMetadata(value); return *this;}
+
+    /**
+     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to
+     * Passthrough (PASSTHROUGH). Specify this ID3 metadata in Custom ID3 metadata
+     * inserter (timedMetadataInsertion). MediaConvert writes each instance of ID3
+     * metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata:
+     * Set ID3 metadata to None (NONE) or leave blank.
+     */
+    inline MpdSettings& WithTimedMetadata(MpdTimedMetadata&& value) { SetTimedMetadata(std::move(value)); return *this;}
+
   private:
 
     MpdAccessibilityCaptionHints m_accessibilityCaptionHints;
@@ -379,6 +436,9 @@ namespace Model
 
     MpdScte35Source m_scte35Source;
     bool m_scte35SourceHasBeenSet;
+
+    MpdTimedMetadata m_timedMetadata;
+    bool m_timedMetadataHasBeenSet;
   };
 
 } // namespace Model

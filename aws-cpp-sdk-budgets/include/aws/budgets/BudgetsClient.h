@@ -24,6 +24,7 @@
 #include <aws/budgets/model/DescribeBudgetActionHistoriesResult.h>
 #include <aws/budgets/model/DescribeBudgetActionsForAccountResult.h>
 #include <aws/budgets/model/DescribeBudgetActionsForBudgetResult.h>
+#include <aws/budgets/model/DescribeBudgetNotificationsForAccountResult.h>
 #include <aws/budgets/model/DescribeBudgetPerformanceHistoryResult.h>
 #include <aws/budgets/model/DescribeBudgetsResult.h>
 #include <aws/budgets/model/DescribeNotificationsForBudgetResult.h>
@@ -85,6 +86,7 @@ namespace Model
         class DescribeBudgetActionHistoriesRequest;
         class DescribeBudgetActionsForAccountRequest;
         class DescribeBudgetActionsForBudgetRequest;
+        class DescribeBudgetNotificationsForAccountRequest;
         class DescribeBudgetPerformanceHistoryRequest;
         class DescribeBudgetsRequest;
         class DescribeNotificationsForBudgetRequest;
@@ -108,6 +110,7 @@ namespace Model
         typedef Aws::Utils::Outcome<DescribeBudgetActionHistoriesResult, BudgetsError> DescribeBudgetActionHistoriesOutcome;
         typedef Aws::Utils::Outcome<DescribeBudgetActionsForAccountResult, BudgetsError> DescribeBudgetActionsForAccountOutcome;
         typedef Aws::Utils::Outcome<DescribeBudgetActionsForBudgetResult, BudgetsError> DescribeBudgetActionsForBudgetOutcome;
+        typedef Aws::Utils::Outcome<DescribeBudgetNotificationsForAccountResult, BudgetsError> DescribeBudgetNotificationsForAccountOutcome;
         typedef Aws::Utils::Outcome<DescribeBudgetPerformanceHistoryResult, BudgetsError> DescribeBudgetPerformanceHistoryOutcome;
         typedef Aws::Utils::Outcome<DescribeBudgetsResult, BudgetsError> DescribeBudgetsOutcome;
         typedef Aws::Utils::Outcome<DescribeNotificationsForBudgetResult, BudgetsError> DescribeNotificationsForBudgetOutcome;
@@ -131,6 +134,7 @@ namespace Model
         typedef std::future<DescribeBudgetActionHistoriesOutcome> DescribeBudgetActionHistoriesOutcomeCallable;
         typedef std::future<DescribeBudgetActionsForAccountOutcome> DescribeBudgetActionsForAccountOutcomeCallable;
         typedef std::future<DescribeBudgetActionsForBudgetOutcome> DescribeBudgetActionsForBudgetOutcomeCallable;
+        typedef std::future<DescribeBudgetNotificationsForAccountOutcome> DescribeBudgetNotificationsForAccountOutcomeCallable;
         typedef std::future<DescribeBudgetPerformanceHistoryOutcome> DescribeBudgetPerformanceHistoryOutcomeCallable;
         typedef std::future<DescribeBudgetsOutcome> DescribeBudgetsOutcomeCallable;
         typedef std::future<DescribeNotificationsForBudgetOutcome> DescribeNotificationsForBudgetOutcomeCallable;
@@ -157,6 +161,7 @@ namespace Model
     typedef std::function<void(const BudgetsClient*, const Model::DescribeBudgetActionHistoriesRequest&, const Model::DescribeBudgetActionHistoriesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeBudgetActionHistoriesResponseReceivedHandler;
     typedef std::function<void(const BudgetsClient*, const Model::DescribeBudgetActionsForAccountRequest&, const Model::DescribeBudgetActionsForAccountOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeBudgetActionsForAccountResponseReceivedHandler;
     typedef std::function<void(const BudgetsClient*, const Model::DescribeBudgetActionsForBudgetRequest&, const Model::DescribeBudgetActionsForBudgetOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeBudgetActionsForBudgetResponseReceivedHandler;
+    typedef std::function<void(const BudgetsClient*, const Model::DescribeBudgetNotificationsForAccountRequest&, const Model::DescribeBudgetNotificationsForAccountOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeBudgetNotificationsForAccountResponseReceivedHandler;
     typedef std::function<void(const BudgetsClient*, const Model::DescribeBudgetPerformanceHistoryRequest&, const Model::DescribeBudgetPerformanceHistoryOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeBudgetPerformanceHistoryResponseReceivedHandler;
     typedef std::function<void(const BudgetsClient*, const Model::DescribeBudgetsRequest&, const Model::DescribeBudgetsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeBudgetsResponseReceivedHandler;
     typedef std::function<void(const BudgetsClient*, const Model::DescribeNotificationsForBudgetRequest&, const Model::DescribeNotificationsForBudgetOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeNotificationsForBudgetResponseReceivedHandler;
@@ -168,16 +173,17 @@ namespace Model
     typedef std::function<void(const BudgetsClient*, const Model::UpdateSubscriberRequest&, const Model::UpdateSubscriberOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateSubscriberResponseReceivedHandler;
 
   /**
-   * <p>The AWS Budgets API enables you to use AWS Budgets to plan your service
-   * usage, service costs, and instance reservations. The API reference provides
-   * descriptions, syntax, and usage examples for each of the actions and data types
-   * for AWS Budgets. </p> <p>Budgets provide you with a way to see the following
-   * information:</p> <ul> <li> <p>How close your plan is to your budgeted amount or
-   * to the free tier limits</p> </li> <li> <p>Your usage-to-date, including how much
-   * you've used of your Reserved Instances (RIs)</p> </li> <li> <p>Your current
-   * estimated charges from AWS, and how much your predicted usage will accrue in
-   * charges by the end of the month</p> </li> <li> <p>How much of your budget has
-   * been used</p> </li> </ul> <p>AWS updates your budget status several times a day.
+   * <p>The Amazon Web Services Budgets API enables you to use Amazon Web Services
+   * Budgets to plan your service usage, service costs, and instance reservations.
+   * The API reference provides descriptions, syntax, and usage examples for each of
+   * the actions and data types for Amazon Web Services Budgets. </p> <p>Budgets
+   * provide you with a way to see the following information:</p> <ul> <li> <p>How
+   * close your plan is to your budgeted amount or to the free tier limits</p> </li>
+   * <li> <p>Your usage-to-date, including how much you've used of your Reserved
+   * Instances (RIs)</p> </li> <li> <p>Your current estimated charges from Amazon Web
+   * Services, and how much your predicted usage will accrue in charges by the end of
+   * the month</p> </li> <li> <p>How much of your budget has been used</p> </li>
+   * </ul> <p>Amazon Web Services updates your budget status several times a day.
    * Budgets track your unblended costs, subscriptions, refunds, and RIs. You can
    * create the following types of budgets:</p> <ul> <li> <p> <b>Cost budgets</b> -
    * Plan how much you want to spend on a service.</p> </li> <li> <p> <b>Usage
@@ -188,11 +194,12 @@ namespace Model
    * - Define a coverage threshold, and receive alerts when the number of your
    * instance hours that are covered by RIs fall below that threshold. This lets you
    * see how much of your instance usage is covered by a reservation.</p> </li> </ul>
-   * <p>Service Endpoint</p> <p>The AWS Budgets API provides the following
-   * endpoint:</p> <ul> <li> <p>https://budgets.amazonaws.com</p> </li> </ul> <p>For
-   * information about costs that are associated with the AWS Budgets API, see <a
-   * href="https://aws.amazon.com/aws-cost-management/pricing/">AWS Cost Management
-   * Pricing</a>.</p>
+   * <p>Service Endpoint</p> <p>The Amazon Web Services Budgets API provides the
+   * following endpoint:</p> <ul> <li> <p>https://budgets.amazonaws.com</p> </li>
+   * </ul> <p>For information about costs that are associated with the Amazon Web
+   * Services Budgets API, see <a
+   * href="https://aws.amazon.com/aws-cost-management/pricing/">Amazon Web Services
+   * Cost Management Pricing</a>.</p>
    */
   class AWS_BUDGETS_API BudgetsClient : public Aws::Client::AWSJsonClient
   {
@@ -610,6 +617,34 @@ namespace Model
         virtual void DescribeBudgetActionsForBudgetAsync(const Model::DescribeBudgetActionsForBudgetRequest& request, const DescribeBudgetActionsForBudgetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p> Lists the budget names and notifications that are associated with an
+         * account. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/budgets-2016-10-20/DescribeBudgetNotificationsForAccount">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeBudgetNotificationsForAccountOutcome DescribeBudgetNotificationsForAccount(const Model::DescribeBudgetNotificationsForAccountRequest& request) const;
+
+        /**
+         * <p> Lists the budget names and notifications that are associated with an
+         * account. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/budgets-2016-10-20/DescribeBudgetNotificationsForAccount">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeBudgetNotificationsForAccountOutcomeCallable DescribeBudgetNotificationsForAccountCallable(const Model::DescribeBudgetNotificationsForAccountRequest& request) const;
+
+        /**
+         * <p> Lists the budget names and notifications that are associated with an
+         * account. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/budgets-2016-10-20/DescribeBudgetNotificationsForAccount">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeBudgetNotificationsForAccountAsync(const Model::DescribeBudgetNotificationsForAccountRequest& request, const DescribeBudgetNotificationsForAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Describes the history for <code>DAILY</code>, <code>MONTHLY</code>, and
          * <code>QUARTERLY</code> budgets. Budget history isn't available for
          * <code>ANNUAL</code> budgets.</p><p><h3>See Also:</h3>   <a
@@ -761,8 +796,8 @@ namespace Model
         /**
          * <p>Updates a budget. You can change every part of a budget except for the
          * <code>budgetName</code> and the <code>calculatedSpend</code>. When you modify a
-         * budget, the <code>calculatedSpend</code> drops to zero until AWS has new usage
-         * data to use for forecasting.</p>  <p>Only one of
+         * budget, the <code>calculatedSpend</code> drops to zero until Amazon Web Services
+         * has new usage data to use for forecasting.</p>  <p>Only one of
          * <code>BudgetLimit</code> or <code>PlannedBudgetLimits</code> can be present in
          * the syntax at one time. Use the syntax that matches your case. The Request
          * Syntax section shows the <code>BudgetLimit</code> syntax. For
@@ -777,8 +812,8 @@ namespace Model
         /**
          * <p>Updates a budget. You can change every part of a budget except for the
          * <code>budgetName</code> and the <code>calculatedSpend</code>. When you modify a
-         * budget, the <code>calculatedSpend</code> drops to zero until AWS has new usage
-         * data to use for forecasting.</p>  <p>Only one of
+         * budget, the <code>calculatedSpend</code> drops to zero until Amazon Web Services
+         * has new usage data to use for forecasting.</p>  <p>Only one of
          * <code>BudgetLimit</code> or <code>PlannedBudgetLimits</code> can be present in
          * the syntax at one time. Use the syntax that matches your case. The Request
          * Syntax section shows the <code>BudgetLimit</code> syntax. For
@@ -795,8 +830,8 @@ namespace Model
         /**
          * <p>Updates a budget. You can change every part of a budget except for the
          * <code>budgetName</code> and the <code>calculatedSpend</code>. When you modify a
-         * budget, the <code>calculatedSpend</code> drops to zero until AWS has new usage
-         * data to use for forecasting.</p>  <p>Only one of
+         * budget, the <code>calculatedSpend</code> drops to zero until Amazon Web Services
+         * has new usage data to use for forecasting.</p>  <p>Only one of
          * <code>BudgetLimit</code> or <code>PlannedBudgetLimits</code> can be present in
          * the syntax at one time. Use the syntax that matches your case. The Request
          * Syntax section shows the <code>BudgetLimit</code> syntax. For
@@ -902,6 +937,7 @@ namespace Model
         void DescribeBudgetActionHistoriesAsyncHelper(const Model::DescribeBudgetActionHistoriesRequest& request, const DescribeBudgetActionHistoriesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeBudgetActionsForAccountAsyncHelper(const Model::DescribeBudgetActionsForAccountRequest& request, const DescribeBudgetActionsForAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeBudgetActionsForBudgetAsyncHelper(const Model::DescribeBudgetActionsForBudgetRequest& request, const DescribeBudgetActionsForBudgetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeBudgetNotificationsForAccountAsyncHelper(const Model::DescribeBudgetNotificationsForAccountRequest& request, const DescribeBudgetNotificationsForAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeBudgetPerformanceHistoryAsyncHelper(const Model::DescribeBudgetPerformanceHistoryRequest& request, const DescribeBudgetPerformanceHistoryResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeBudgetsAsyncHelper(const Model::DescribeBudgetsRequest& request, const DescribeBudgetsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeNotificationsForBudgetAsyncHelper(const Model::DescribeNotificationsForBudgetRequest& request, const DescribeNotificationsForBudgetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

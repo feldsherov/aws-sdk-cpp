@@ -7,6 +7,7 @@
 #include <aws/athena/Athena_EXPORTS.h>
 #include <aws/core/utils/memory/stl/AWSString.h>
 #include <aws/athena/model/EncryptionConfiguration.h>
+#include <aws/athena/model/AclConfiguration.h>
 #include <utility>
 
 namespace Aws
@@ -232,6 +233,222 @@ namespace Model
      */
     inline ResultConfiguration& WithEncryptionConfiguration(EncryptionConfiguration&& value) { SetEncryptionConfiguration(std::move(value)); return *this;}
 
+
+    /**
+     * <p>The Amazon Web Services account ID that you expect to be the owner of the
+     * Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set,
+     * Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon
+     * S3 calls to your specified output location. If the
+     * <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match
+     * the actual owner of the Amazon S3 bucket, the call fails with a permissions
+     * error.</p> <p>This is a client-side setting. If workgroup settings override
+     * client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline const Aws::String& GetExpectedBucketOwner() const{ return m_expectedBucketOwner; }
+
+    /**
+     * <p>The Amazon Web Services account ID that you expect to be the owner of the
+     * Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set,
+     * Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon
+     * S3 calls to your specified output location. If the
+     * <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match
+     * the actual owner of the Amazon S3 bucket, the call fails with a permissions
+     * error.</p> <p>This is a client-side setting. If workgroup settings override
+     * client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline bool ExpectedBucketOwnerHasBeenSet() const { return m_expectedBucketOwnerHasBeenSet; }
+
+    /**
+     * <p>The Amazon Web Services account ID that you expect to be the owner of the
+     * Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set,
+     * Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon
+     * S3 calls to your specified output location. If the
+     * <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match
+     * the actual owner of the Amazon S3 bucket, the call fails with a permissions
+     * error.</p> <p>This is a client-side setting. If workgroup settings override
+     * client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline void SetExpectedBucketOwner(const Aws::String& value) { m_expectedBucketOwnerHasBeenSet = true; m_expectedBucketOwner = value; }
+
+    /**
+     * <p>The Amazon Web Services account ID that you expect to be the owner of the
+     * Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set,
+     * Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon
+     * S3 calls to your specified output location. If the
+     * <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match
+     * the actual owner of the Amazon S3 bucket, the call fails with a permissions
+     * error.</p> <p>This is a client-side setting. If workgroup settings override
+     * client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline void SetExpectedBucketOwner(Aws::String&& value) { m_expectedBucketOwnerHasBeenSet = true; m_expectedBucketOwner = std::move(value); }
+
+    /**
+     * <p>The Amazon Web Services account ID that you expect to be the owner of the
+     * Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set,
+     * Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon
+     * S3 calls to your specified output location. If the
+     * <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match
+     * the actual owner of the Amazon S3 bucket, the call fails with a permissions
+     * error.</p> <p>This is a client-side setting. If workgroup settings override
+     * client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline void SetExpectedBucketOwner(const char* value) { m_expectedBucketOwnerHasBeenSet = true; m_expectedBucketOwner.assign(value); }
+
+    /**
+     * <p>The Amazon Web Services account ID that you expect to be the owner of the
+     * Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set,
+     * Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon
+     * S3 calls to your specified output location. If the
+     * <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match
+     * the actual owner of the Amazon S3 bucket, the call fails with a permissions
+     * error.</p> <p>This is a client-side setting. If workgroup settings override
+     * client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline ResultConfiguration& WithExpectedBucketOwner(const Aws::String& value) { SetExpectedBucketOwner(value); return *this;}
+
+    /**
+     * <p>The Amazon Web Services account ID that you expect to be the owner of the
+     * Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set,
+     * Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon
+     * S3 calls to your specified output location. If the
+     * <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match
+     * the actual owner of the Amazon S3 bucket, the call fails with a permissions
+     * error.</p> <p>This is a client-side setting. If workgroup settings override
+     * client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline ResultConfiguration& WithExpectedBucketOwner(Aws::String&& value) { SetExpectedBucketOwner(std::move(value)); return *this;}
+
+    /**
+     * <p>The Amazon Web Services account ID that you expect to be the owner of the
+     * Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set,
+     * Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon
+     * S3 calls to your specified output location. If the
+     * <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match
+     * the actual owner of the Amazon S3 bucket, the call fails with a permissions
+     * error.</p> <p>This is a client-side setting. If workgroup settings override
+     * client-side settings, then the query uses the <code>ExpectedBucketOwner</code>
+     * setting that is specified for the workgroup, and also uses the location for
+     * storing query results specified in the workgroup. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline ResultConfiguration& WithExpectedBucketOwner(const char* value) { SetExpectedBucketOwner(value); return *this;}
+
+
+    /**
+     * <p>Indicates that an Amazon S3 canned ACL should be set to control ownership of
+     * stored query results. Currently the only supported canned ACL is
+     * <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If
+     * workgroup settings override client-side settings, then the query uses the ACL
+     * configuration that is specified for the workgroup, and also uses the location
+     * for storing query results specified in the workgroup. For more information, see
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline const AclConfiguration& GetAclConfiguration() const{ return m_aclConfiguration; }
+
+    /**
+     * <p>Indicates that an Amazon S3 canned ACL should be set to control ownership of
+     * stored query results. Currently the only supported canned ACL is
+     * <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If
+     * workgroup settings override client-side settings, then the query uses the ACL
+     * configuration that is specified for the workgroup, and also uses the location
+     * for storing query results specified in the workgroup. For more information, see
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline bool AclConfigurationHasBeenSet() const { return m_aclConfigurationHasBeenSet; }
+
+    /**
+     * <p>Indicates that an Amazon S3 canned ACL should be set to control ownership of
+     * stored query results. Currently the only supported canned ACL is
+     * <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If
+     * workgroup settings override client-side settings, then the query uses the ACL
+     * configuration that is specified for the workgroup, and also uses the location
+     * for storing query results specified in the workgroup. For more information, see
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline void SetAclConfiguration(const AclConfiguration& value) { m_aclConfigurationHasBeenSet = true; m_aclConfiguration = value; }
+
+    /**
+     * <p>Indicates that an Amazon S3 canned ACL should be set to control ownership of
+     * stored query results. Currently the only supported canned ACL is
+     * <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If
+     * workgroup settings override client-side settings, then the query uses the ACL
+     * configuration that is specified for the workgroup, and also uses the location
+     * for storing query results specified in the workgroup. For more information, see
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline void SetAclConfiguration(AclConfiguration&& value) { m_aclConfigurationHasBeenSet = true; m_aclConfiguration = std::move(value); }
+
+    /**
+     * <p>Indicates that an Amazon S3 canned ACL should be set to control ownership of
+     * stored query results. Currently the only supported canned ACL is
+     * <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If
+     * workgroup settings override client-side settings, then the query uses the ACL
+     * configuration that is specified for the workgroup, and also uses the location
+     * for storing query results specified in the workgroup. For more information, see
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline ResultConfiguration& WithAclConfiguration(const AclConfiguration& value) { SetAclConfiguration(value); return *this;}
+
+    /**
+     * <p>Indicates that an Amazon S3 canned ACL should be set to control ownership of
+     * stored query results. Currently the only supported canned ACL is
+     * <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If
+     * workgroup settings override client-side settings, then the query uses the ACL
+     * configuration that is specified for the workgroup, and also uses the location
+     * for storing query results specified in the workgroup. For more information, see
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     * Settings Override Client-Side Settings</a>.</p>
+     */
+    inline ResultConfiguration& WithAclConfiguration(AclConfiguration&& value) { SetAclConfiguration(std::move(value)); return *this;}
+
   private:
 
     Aws::String m_outputLocation;
@@ -239,6 +456,12 @@ namespace Model
 
     EncryptionConfiguration m_encryptionConfiguration;
     bool m_encryptionConfigurationHasBeenSet;
+
+    Aws::String m_expectedBucketOwner;
+    bool m_expectedBucketOwnerHasBeenSet;
+
+    AclConfiguration m_aclConfiguration;
+    bool m_aclConfigurationHasBeenSet;
   };
 
 } // namespace Model

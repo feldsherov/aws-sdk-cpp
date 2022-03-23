@@ -29,6 +29,10 @@ namespace Aws
         static const int CUSTOM_HASH = HashingUtils::HashString("CUSTOM");
         static const int CONFLUENCE_HASH = HashingUtils::HashString("CONFLUENCE");
         static const int GOOGLEDRIVE_HASH = HashingUtils::HashString("GOOGLEDRIVE");
+        static const int WEBCRAWLER_HASH = HashingUtils::HashString("WEBCRAWLER");
+        static const int WORKDOCS_HASH = HashingUtils::HashString("WORKDOCS");
+        static const int FSX_HASH = HashingUtils::HashString("FSX");
+        static const int SLACK_HASH = HashingUtils::HashString("SLACK");
 
 
         DataSourceType GetDataSourceTypeForName(const Aws::String& name)
@@ -70,6 +74,22 @@ namespace Aws
           {
             return DataSourceType::GOOGLEDRIVE;
           }
+          else if (hashCode == WEBCRAWLER_HASH)
+          {
+            return DataSourceType::WEBCRAWLER;
+          }
+          else if (hashCode == WORKDOCS_HASH)
+          {
+            return DataSourceType::WORKDOCS;
+          }
+          else if (hashCode == FSX_HASH)
+          {
+            return DataSourceType::FSX;
+          }
+          else if (hashCode == SLACK_HASH)
+          {
+            return DataSourceType::SLACK;
+          }
           EnumParseOverflowContainer* overflowContainer = Aws::GetEnumOverflowContainer();
           if(overflowContainer)
           {
@@ -102,6 +122,14 @@ namespace Aws
             return "CONFLUENCE";
           case DataSourceType::GOOGLEDRIVE:
             return "GOOGLEDRIVE";
+          case DataSourceType::WEBCRAWLER:
+            return "WEBCRAWLER";
+          case DataSourceType::WORKDOCS:
+            return "WORKDOCS";
+          case DataSourceType::FSX:
+            return "FSX";
+          case DataSourceType::SLACK:
+            return "SLACK";
           default:
             EnumParseOverflowContainer* overflowContainer = Aws::GetEnumOverflowContainer();
             if(overflowContainer)

@@ -15,27 +15,41 @@
 #include <aws/core/utils/xml/XmlSerializer.h>
 #include <aws/core/utils/DNS.h>
 #include <aws/s3control/model/CreateAccessPointResult.h>
+#include <aws/s3control/model/CreateAccessPointForObjectLambdaResult.h>
 #include <aws/s3control/model/CreateBucketResult.h>
 #include <aws/s3control/model/CreateJobResult.h>
+#include <aws/s3control/model/CreateMultiRegionAccessPointResult.h>
 #include <aws/s3control/model/DeleteJobTaggingResult.h>
+#include <aws/s3control/model/DeleteMultiRegionAccessPointResult.h>
 #include <aws/s3control/model/DeleteStorageLensConfigurationTaggingResult.h>
 #include <aws/s3control/model/DescribeJobResult.h>
+#include <aws/s3control/model/DescribeMultiRegionAccessPointOperationResult.h>
 #include <aws/s3control/model/GetAccessPointResult.h>
+#include <aws/s3control/model/GetAccessPointConfigurationForObjectLambdaResult.h>
+#include <aws/s3control/model/GetAccessPointForObjectLambdaResult.h>
 #include <aws/s3control/model/GetAccessPointPolicyResult.h>
+#include <aws/s3control/model/GetAccessPointPolicyForObjectLambdaResult.h>
 #include <aws/s3control/model/GetAccessPointPolicyStatusResult.h>
+#include <aws/s3control/model/GetAccessPointPolicyStatusForObjectLambdaResult.h>
 #include <aws/s3control/model/GetBucketResult.h>
 #include <aws/s3control/model/GetBucketLifecycleConfigurationResult.h>
 #include <aws/s3control/model/GetBucketPolicyResult.h>
 #include <aws/s3control/model/GetBucketTaggingResult.h>
 #include <aws/s3control/model/GetJobTaggingResult.h>
+#include <aws/s3control/model/GetMultiRegionAccessPointResult.h>
+#include <aws/s3control/model/GetMultiRegionAccessPointPolicyResult.h>
+#include <aws/s3control/model/GetMultiRegionAccessPointPolicyStatusResult.h>
 #include <aws/s3control/model/GetPublicAccessBlockResult.h>
 #include <aws/s3control/model/GetStorageLensConfigurationResult.h>
 #include <aws/s3control/model/GetStorageLensConfigurationTaggingResult.h>
 #include <aws/s3control/model/ListAccessPointsResult.h>
+#include <aws/s3control/model/ListAccessPointsForObjectLambdaResult.h>
 #include <aws/s3control/model/ListJobsResult.h>
+#include <aws/s3control/model/ListMultiRegionAccessPointsResult.h>
 #include <aws/s3control/model/ListRegionalBucketsResult.h>
 #include <aws/s3control/model/ListStorageLensConfigurationsResult.h>
 #include <aws/s3control/model/PutJobTaggingResult.h>
+#include <aws/s3control/model/PutMultiRegionAccessPointPolicyResult.h>
 #include <aws/s3control/model/PutStorageLensConfigurationTaggingResult.h>
 #include <aws/s3control/model/UpdateJobPriorityResult.h>
 #include <aws/s3control/model/UpdateJobStatusResult.h>
@@ -84,39 +98,57 @@ namespace Aws
     namespace Model
     {
         class CreateAccessPointRequest;
+        class CreateAccessPointForObjectLambdaRequest;
         class CreateBucketRequest;
         class CreateJobRequest;
+        class CreateMultiRegionAccessPointRequest;
         class DeleteAccessPointRequest;
+        class DeleteAccessPointForObjectLambdaRequest;
         class DeleteAccessPointPolicyRequest;
+        class DeleteAccessPointPolicyForObjectLambdaRequest;
         class DeleteBucketRequest;
         class DeleteBucketLifecycleConfigurationRequest;
         class DeleteBucketPolicyRequest;
         class DeleteBucketTaggingRequest;
         class DeleteJobTaggingRequest;
+        class DeleteMultiRegionAccessPointRequest;
         class DeletePublicAccessBlockRequest;
         class DeleteStorageLensConfigurationRequest;
         class DeleteStorageLensConfigurationTaggingRequest;
         class DescribeJobRequest;
+        class DescribeMultiRegionAccessPointOperationRequest;
         class GetAccessPointRequest;
+        class GetAccessPointConfigurationForObjectLambdaRequest;
+        class GetAccessPointForObjectLambdaRequest;
         class GetAccessPointPolicyRequest;
+        class GetAccessPointPolicyForObjectLambdaRequest;
         class GetAccessPointPolicyStatusRequest;
+        class GetAccessPointPolicyStatusForObjectLambdaRequest;
         class GetBucketRequest;
         class GetBucketLifecycleConfigurationRequest;
         class GetBucketPolicyRequest;
         class GetBucketTaggingRequest;
         class GetJobTaggingRequest;
+        class GetMultiRegionAccessPointRequest;
+        class GetMultiRegionAccessPointPolicyRequest;
+        class GetMultiRegionAccessPointPolicyStatusRequest;
         class GetPublicAccessBlockRequest;
         class GetStorageLensConfigurationRequest;
         class GetStorageLensConfigurationTaggingRequest;
         class ListAccessPointsRequest;
+        class ListAccessPointsForObjectLambdaRequest;
         class ListJobsRequest;
+        class ListMultiRegionAccessPointsRequest;
         class ListRegionalBucketsRequest;
         class ListStorageLensConfigurationsRequest;
+        class PutAccessPointConfigurationForObjectLambdaRequest;
         class PutAccessPointPolicyRequest;
+        class PutAccessPointPolicyForObjectLambdaRequest;
         class PutBucketLifecycleConfigurationRequest;
         class PutBucketPolicyRequest;
         class PutBucketTaggingRequest;
         class PutJobTaggingRequest;
+        class PutMultiRegionAccessPointPolicyRequest;
         class PutPublicAccessBlockRequest;
         class PutStorageLensConfigurationRequest;
         class PutStorageLensConfigurationTaggingRequest;
@@ -124,39 +156,57 @@ namespace Aws
         class UpdateJobStatusRequest;
 
         typedef Aws::Utils::Outcome<CreateAccessPointResult, S3ControlError> CreateAccessPointOutcome;
+        typedef Aws::Utils::Outcome<CreateAccessPointForObjectLambdaResult, S3ControlError> CreateAccessPointForObjectLambdaOutcome;
         typedef Aws::Utils::Outcome<CreateBucketResult, S3ControlError> CreateBucketOutcome;
         typedef Aws::Utils::Outcome<CreateJobResult, S3ControlError> CreateJobOutcome;
+        typedef Aws::Utils::Outcome<CreateMultiRegionAccessPointResult, S3ControlError> CreateMultiRegionAccessPointOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> DeleteAccessPointOutcome;
+        typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> DeleteAccessPointForObjectLambdaOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> DeleteAccessPointPolicyOutcome;
+        typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> DeleteAccessPointPolicyForObjectLambdaOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> DeleteBucketOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> DeleteBucketLifecycleConfigurationOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> DeleteBucketPolicyOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> DeleteBucketTaggingOutcome;
         typedef Aws::Utils::Outcome<DeleteJobTaggingResult, S3ControlError> DeleteJobTaggingOutcome;
+        typedef Aws::Utils::Outcome<DeleteMultiRegionAccessPointResult, S3ControlError> DeleteMultiRegionAccessPointOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> DeletePublicAccessBlockOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> DeleteStorageLensConfigurationOutcome;
         typedef Aws::Utils::Outcome<DeleteStorageLensConfigurationTaggingResult, S3ControlError> DeleteStorageLensConfigurationTaggingOutcome;
         typedef Aws::Utils::Outcome<DescribeJobResult, S3ControlError> DescribeJobOutcome;
+        typedef Aws::Utils::Outcome<DescribeMultiRegionAccessPointOperationResult, S3ControlError> DescribeMultiRegionAccessPointOperationOutcome;
         typedef Aws::Utils::Outcome<GetAccessPointResult, S3ControlError> GetAccessPointOutcome;
+        typedef Aws::Utils::Outcome<GetAccessPointConfigurationForObjectLambdaResult, S3ControlError> GetAccessPointConfigurationForObjectLambdaOutcome;
+        typedef Aws::Utils::Outcome<GetAccessPointForObjectLambdaResult, S3ControlError> GetAccessPointForObjectLambdaOutcome;
         typedef Aws::Utils::Outcome<GetAccessPointPolicyResult, S3ControlError> GetAccessPointPolicyOutcome;
+        typedef Aws::Utils::Outcome<GetAccessPointPolicyForObjectLambdaResult, S3ControlError> GetAccessPointPolicyForObjectLambdaOutcome;
         typedef Aws::Utils::Outcome<GetAccessPointPolicyStatusResult, S3ControlError> GetAccessPointPolicyStatusOutcome;
+        typedef Aws::Utils::Outcome<GetAccessPointPolicyStatusForObjectLambdaResult, S3ControlError> GetAccessPointPolicyStatusForObjectLambdaOutcome;
         typedef Aws::Utils::Outcome<GetBucketResult, S3ControlError> GetBucketOutcome;
         typedef Aws::Utils::Outcome<GetBucketLifecycleConfigurationResult, S3ControlError> GetBucketLifecycleConfigurationOutcome;
         typedef Aws::Utils::Outcome<GetBucketPolicyResult, S3ControlError> GetBucketPolicyOutcome;
         typedef Aws::Utils::Outcome<GetBucketTaggingResult, S3ControlError> GetBucketTaggingOutcome;
         typedef Aws::Utils::Outcome<GetJobTaggingResult, S3ControlError> GetJobTaggingOutcome;
+        typedef Aws::Utils::Outcome<GetMultiRegionAccessPointResult, S3ControlError> GetMultiRegionAccessPointOutcome;
+        typedef Aws::Utils::Outcome<GetMultiRegionAccessPointPolicyResult, S3ControlError> GetMultiRegionAccessPointPolicyOutcome;
+        typedef Aws::Utils::Outcome<GetMultiRegionAccessPointPolicyStatusResult, S3ControlError> GetMultiRegionAccessPointPolicyStatusOutcome;
         typedef Aws::Utils::Outcome<GetPublicAccessBlockResult, S3ControlError> GetPublicAccessBlockOutcome;
         typedef Aws::Utils::Outcome<GetStorageLensConfigurationResult, S3ControlError> GetStorageLensConfigurationOutcome;
         typedef Aws::Utils::Outcome<GetStorageLensConfigurationTaggingResult, S3ControlError> GetStorageLensConfigurationTaggingOutcome;
         typedef Aws::Utils::Outcome<ListAccessPointsResult, S3ControlError> ListAccessPointsOutcome;
+        typedef Aws::Utils::Outcome<ListAccessPointsForObjectLambdaResult, S3ControlError> ListAccessPointsForObjectLambdaOutcome;
         typedef Aws::Utils::Outcome<ListJobsResult, S3ControlError> ListJobsOutcome;
+        typedef Aws::Utils::Outcome<ListMultiRegionAccessPointsResult, S3ControlError> ListMultiRegionAccessPointsOutcome;
         typedef Aws::Utils::Outcome<ListRegionalBucketsResult, S3ControlError> ListRegionalBucketsOutcome;
         typedef Aws::Utils::Outcome<ListStorageLensConfigurationsResult, S3ControlError> ListStorageLensConfigurationsOutcome;
+        typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> PutAccessPointConfigurationForObjectLambdaOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> PutAccessPointPolicyOutcome;
+        typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> PutAccessPointPolicyForObjectLambdaOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> PutBucketLifecycleConfigurationOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> PutBucketPolicyOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> PutBucketTaggingOutcome;
         typedef Aws::Utils::Outcome<PutJobTaggingResult, S3ControlError> PutJobTaggingOutcome;
+        typedef Aws::Utils::Outcome<PutMultiRegionAccessPointPolicyResult, S3ControlError> PutMultiRegionAccessPointPolicyOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> PutPublicAccessBlockOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, S3ControlError> PutStorageLensConfigurationOutcome;
         typedef Aws::Utils::Outcome<PutStorageLensConfigurationTaggingResult, S3ControlError> PutStorageLensConfigurationTaggingOutcome;
@@ -164,39 +214,57 @@ namespace Aws
         typedef Aws::Utils::Outcome<UpdateJobStatusResult, S3ControlError> UpdateJobStatusOutcome;
 
         typedef std::future<CreateAccessPointOutcome> CreateAccessPointOutcomeCallable;
+        typedef std::future<CreateAccessPointForObjectLambdaOutcome> CreateAccessPointForObjectLambdaOutcomeCallable;
         typedef std::future<CreateBucketOutcome> CreateBucketOutcomeCallable;
         typedef std::future<CreateJobOutcome> CreateJobOutcomeCallable;
+        typedef std::future<CreateMultiRegionAccessPointOutcome> CreateMultiRegionAccessPointOutcomeCallable;
         typedef std::future<DeleteAccessPointOutcome> DeleteAccessPointOutcomeCallable;
+        typedef std::future<DeleteAccessPointForObjectLambdaOutcome> DeleteAccessPointForObjectLambdaOutcomeCallable;
         typedef std::future<DeleteAccessPointPolicyOutcome> DeleteAccessPointPolicyOutcomeCallable;
+        typedef std::future<DeleteAccessPointPolicyForObjectLambdaOutcome> DeleteAccessPointPolicyForObjectLambdaOutcomeCallable;
         typedef std::future<DeleteBucketOutcome> DeleteBucketOutcomeCallable;
         typedef std::future<DeleteBucketLifecycleConfigurationOutcome> DeleteBucketLifecycleConfigurationOutcomeCallable;
         typedef std::future<DeleteBucketPolicyOutcome> DeleteBucketPolicyOutcomeCallable;
         typedef std::future<DeleteBucketTaggingOutcome> DeleteBucketTaggingOutcomeCallable;
         typedef std::future<DeleteJobTaggingOutcome> DeleteJobTaggingOutcomeCallable;
+        typedef std::future<DeleteMultiRegionAccessPointOutcome> DeleteMultiRegionAccessPointOutcomeCallable;
         typedef std::future<DeletePublicAccessBlockOutcome> DeletePublicAccessBlockOutcomeCallable;
         typedef std::future<DeleteStorageLensConfigurationOutcome> DeleteStorageLensConfigurationOutcomeCallable;
         typedef std::future<DeleteStorageLensConfigurationTaggingOutcome> DeleteStorageLensConfigurationTaggingOutcomeCallable;
         typedef std::future<DescribeJobOutcome> DescribeJobOutcomeCallable;
+        typedef std::future<DescribeMultiRegionAccessPointOperationOutcome> DescribeMultiRegionAccessPointOperationOutcomeCallable;
         typedef std::future<GetAccessPointOutcome> GetAccessPointOutcomeCallable;
+        typedef std::future<GetAccessPointConfigurationForObjectLambdaOutcome> GetAccessPointConfigurationForObjectLambdaOutcomeCallable;
+        typedef std::future<GetAccessPointForObjectLambdaOutcome> GetAccessPointForObjectLambdaOutcomeCallable;
         typedef std::future<GetAccessPointPolicyOutcome> GetAccessPointPolicyOutcomeCallable;
+        typedef std::future<GetAccessPointPolicyForObjectLambdaOutcome> GetAccessPointPolicyForObjectLambdaOutcomeCallable;
         typedef std::future<GetAccessPointPolicyStatusOutcome> GetAccessPointPolicyStatusOutcomeCallable;
+        typedef std::future<GetAccessPointPolicyStatusForObjectLambdaOutcome> GetAccessPointPolicyStatusForObjectLambdaOutcomeCallable;
         typedef std::future<GetBucketOutcome> GetBucketOutcomeCallable;
         typedef std::future<GetBucketLifecycleConfigurationOutcome> GetBucketLifecycleConfigurationOutcomeCallable;
         typedef std::future<GetBucketPolicyOutcome> GetBucketPolicyOutcomeCallable;
         typedef std::future<GetBucketTaggingOutcome> GetBucketTaggingOutcomeCallable;
         typedef std::future<GetJobTaggingOutcome> GetJobTaggingOutcomeCallable;
+        typedef std::future<GetMultiRegionAccessPointOutcome> GetMultiRegionAccessPointOutcomeCallable;
+        typedef std::future<GetMultiRegionAccessPointPolicyOutcome> GetMultiRegionAccessPointPolicyOutcomeCallable;
+        typedef std::future<GetMultiRegionAccessPointPolicyStatusOutcome> GetMultiRegionAccessPointPolicyStatusOutcomeCallable;
         typedef std::future<GetPublicAccessBlockOutcome> GetPublicAccessBlockOutcomeCallable;
         typedef std::future<GetStorageLensConfigurationOutcome> GetStorageLensConfigurationOutcomeCallable;
         typedef std::future<GetStorageLensConfigurationTaggingOutcome> GetStorageLensConfigurationTaggingOutcomeCallable;
         typedef std::future<ListAccessPointsOutcome> ListAccessPointsOutcomeCallable;
+        typedef std::future<ListAccessPointsForObjectLambdaOutcome> ListAccessPointsForObjectLambdaOutcomeCallable;
         typedef std::future<ListJobsOutcome> ListJobsOutcomeCallable;
+        typedef std::future<ListMultiRegionAccessPointsOutcome> ListMultiRegionAccessPointsOutcomeCallable;
         typedef std::future<ListRegionalBucketsOutcome> ListRegionalBucketsOutcomeCallable;
         typedef std::future<ListStorageLensConfigurationsOutcome> ListStorageLensConfigurationsOutcomeCallable;
+        typedef std::future<PutAccessPointConfigurationForObjectLambdaOutcome> PutAccessPointConfigurationForObjectLambdaOutcomeCallable;
         typedef std::future<PutAccessPointPolicyOutcome> PutAccessPointPolicyOutcomeCallable;
+        typedef std::future<PutAccessPointPolicyForObjectLambdaOutcome> PutAccessPointPolicyForObjectLambdaOutcomeCallable;
         typedef std::future<PutBucketLifecycleConfigurationOutcome> PutBucketLifecycleConfigurationOutcomeCallable;
         typedef std::future<PutBucketPolicyOutcome> PutBucketPolicyOutcomeCallable;
         typedef std::future<PutBucketTaggingOutcome> PutBucketTaggingOutcomeCallable;
         typedef std::future<PutJobTaggingOutcome> PutJobTaggingOutcomeCallable;
+        typedef std::future<PutMultiRegionAccessPointPolicyOutcome> PutMultiRegionAccessPointPolicyOutcomeCallable;
         typedef std::future<PutPublicAccessBlockOutcome> PutPublicAccessBlockOutcomeCallable;
         typedef std::future<PutStorageLensConfigurationOutcome> PutStorageLensConfigurationOutcomeCallable;
         typedef std::future<PutStorageLensConfigurationTaggingOutcome> PutStorageLensConfigurationTaggingOutcomeCallable;
@@ -207,39 +275,57 @@ namespace Aws
     class S3ControlClient;
 
     typedef std::function<void(const S3ControlClient*, const Model::CreateAccessPointRequest&, const Model::CreateAccessPointOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateAccessPointResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::CreateAccessPointForObjectLambdaRequest&, const Model::CreateAccessPointForObjectLambdaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateAccessPointForObjectLambdaResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::CreateBucketRequest&, const Model::CreateBucketOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateBucketResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::CreateJobRequest&, const Model::CreateJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateJobResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::CreateMultiRegionAccessPointRequest&, const Model::CreateMultiRegionAccessPointOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateMultiRegionAccessPointResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DeleteAccessPointRequest&, const Model::DeleteAccessPointOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteAccessPointResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::DeleteAccessPointForObjectLambdaRequest&, const Model::DeleteAccessPointForObjectLambdaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteAccessPointForObjectLambdaResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DeleteAccessPointPolicyRequest&, const Model::DeleteAccessPointPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteAccessPointPolicyResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::DeleteAccessPointPolicyForObjectLambdaRequest&, const Model::DeleteAccessPointPolicyForObjectLambdaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteAccessPointPolicyForObjectLambdaResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DeleteBucketRequest&, const Model::DeleteBucketOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteBucketResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DeleteBucketLifecycleConfigurationRequest&, const Model::DeleteBucketLifecycleConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteBucketLifecycleConfigurationResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DeleteBucketPolicyRequest&, const Model::DeleteBucketPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteBucketPolicyResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DeleteBucketTaggingRequest&, const Model::DeleteBucketTaggingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteBucketTaggingResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DeleteJobTaggingRequest&, const Model::DeleteJobTaggingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteJobTaggingResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::DeleteMultiRegionAccessPointRequest&, const Model::DeleteMultiRegionAccessPointOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteMultiRegionAccessPointResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DeletePublicAccessBlockRequest&, const Model::DeletePublicAccessBlockOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeletePublicAccessBlockResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DeleteStorageLensConfigurationRequest&, const Model::DeleteStorageLensConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteStorageLensConfigurationResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DeleteStorageLensConfigurationTaggingRequest&, const Model::DeleteStorageLensConfigurationTaggingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteStorageLensConfigurationTaggingResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::DescribeJobRequest&, const Model::DescribeJobOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeJobResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::DescribeMultiRegionAccessPointOperationRequest&, const Model::DescribeMultiRegionAccessPointOperationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeMultiRegionAccessPointOperationResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetAccessPointRequest&, const Model::GetAccessPointOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetAccessPointResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::GetAccessPointConfigurationForObjectLambdaRequest&, const Model::GetAccessPointConfigurationForObjectLambdaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetAccessPointConfigurationForObjectLambdaResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::GetAccessPointForObjectLambdaRequest&, const Model::GetAccessPointForObjectLambdaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetAccessPointForObjectLambdaResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetAccessPointPolicyRequest&, const Model::GetAccessPointPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetAccessPointPolicyResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::GetAccessPointPolicyForObjectLambdaRequest&, const Model::GetAccessPointPolicyForObjectLambdaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetAccessPointPolicyForObjectLambdaResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetAccessPointPolicyStatusRequest&, const Model::GetAccessPointPolicyStatusOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetAccessPointPolicyStatusResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::GetAccessPointPolicyStatusForObjectLambdaRequest&, const Model::GetAccessPointPolicyStatusForObjectLambdaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetAccessPointPolicyStatusForObjectLambdaResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetBucketRequest&, const Model::GetBucketOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetBucketResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetBucketLifecycleConfigurationRequest&, const Model::GetBucketLifecycleConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetBucketLifecycleConfigurationResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetBucketPolicyRequest&, const Model::GetBucketPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetBucketPolicyResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetBucketTaggingRequest&, const Model::GetBucketTaggingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetBucketTaggingResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetJobTaggingRequest&, const Model::GetJobTaggingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetJobTaggingResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::GetMultiRegionAccessPointRequest&, const Model::GetMultiRegionAccessPointOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetMultiRegionAccessPointResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::GetMultiRegionAccessPointPolicyRequest&, const Model::GetMultiRegionAccessPointPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetMultiRegionAccessPointPolicyResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::GetMultiRegionAccessPointPolicyStatusRequest&, const Model::GetMultiRegionAccessPointPolicyStatusOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetMultiRegionAccessPointPolicyStatusResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetPublicAccessBlockRequest&, const Model::GetPublicAccessBlockOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetPublicAccessBlockResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetStorageLensConfigurationRequest&, const Model::GetStorageLensConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetStorageLensConfigurationResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::GetStorageLensConfigurationTaggingRequest&, const Model::GetStorageLensConfigurationTaggingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetStorageLensConfigurationTaggingResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::ListAccessPointsRequest&, const Model::ListAccessPointsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAccessPointsResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::ListAccessPointsForObjectLambdaRequest&, const Model::ListAccessPointsForObjectLambdaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAccessPointsForObjectLambdaResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::ListJobsRequest&, const Model::ListJobsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListJobsResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::ListMultiRegionAccessPointsRequest&, const Model::ListMultiRegionAccessPointsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListMultiRegionAccessPointsResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::ListRegionalBucketsRequest&, const Model::ListRegionalBucketsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListRegionalBucketsResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::ListStorageLensConfigurationsRequest&, const Model::ListStorageLensConfigurationsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListStorageLensConfigurationsResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::PutAccessPointConfigurationForObjectLambdaRequest&, const Model::PutAccessPointConfigurationForObjectLambdaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutAccessPointConfigurationForObjectLambdaResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::PutAccessPointPolicyRequest&, const Model::PutAccessPointPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutAccessPointPolicyResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::PutAccessPointPolicyForObjectLambdaRequest&, const Model::PutAccessPointPolicyForObjectLambdaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutAccessPointPolicyForObjectLambdaResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::PutBucketLifecycleConfigurationRequest&, const Model::PutBucketLifecycleConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutBucketLifecycleConfigurationResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::PutBucketPolicyRequest&, const Model::PutBucketPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutBucketPolicyResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::PutBucketTaggingRequest&, const Model::PutBucketTaggingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutBucketTaggingResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::PutJobTaggingRequest&, const Model::PutJobTaggingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutJobTaggingResponseReceivedHandler;
+    typedef std::function<void(const S3ControlClient*, const Model::PutMultiRegionAccessPointPolicyRequest&, const Model::PutMultiRegionAccessPointPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutMultiRegionAccessPointPolicyResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::PutPublicAccessBlockRequest&, const Model::PutPublicAccessBlockOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutPublicAccessBlockResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::PutStorageLensConfigurationRequest&, const Model::PutStorageLensConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutStorageLensConfigurationResponseReceivedHandler;
     typedef std::function<void(const S3ControlClient*, const Model::PutStorageLensConfigurationTaggingRequest&, const Model::PutStorageLensConfigurationTaggingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutStorageLensConfigurationTaggingResponseReceivedHandler;
@@ -249,8 +335,8 @@ namespace Aws
     // Get endpoint, signer region and signer service name after computing the endpoint.
     struct ComputeEndpointResult
     {
-      ComputeEndpointResult(const Aws::String& endpoint = "", const Aws::String& signerRegion = "", const Aws::String& signerServiceName = "") :
-        endpoint(endpoint), signerRegion(signerRegion), signerServiceName(signerServiceName) {}
+      ComputeEndpointResult(const Aws::String& iEndpointName = "", const Aws::String& iSignerRegion = "", const Aws::String& iSignerServiceName = "") :
+        endpoint(iEndpointName), signerRegion(iSignerRegion), signerServiceName(iSignerServiceName) {}
 
       Aws::String endpoint;
       Aws::String signerRegion;
@@ -259,7 +345,8 @@ namespace Aws
     typedef Aws::Utils::Outcome<ComputeEndpointResult, Aws::Client::AWSError<S3ControlErrors>> ComputeEndpointOutcome;
 
     /**
-     * <p> AWS S3 Control provides access to Amazon S3 control plane operations. </p>
+     * <p> Amazon Web Services S3 Control provides access to Amazon S3 control plane
+   * actions. </p>
      */
     class AWS_S3CONTROL_API S3ControlClient : public Aws::Client::AWSXMLClient
     {
@@ -291,18 +378,14 @@ namespace Aws
         /**
          * <p>Creates an access point and associates it with the specified bucket. For more
          * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html">Managing
-         * Data Access with Amazon S3 Access Points</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p/> <p> <b>Using this action with Amazon S3 on
-         * Outposts</b> </p> <p>This action: </p> <ul> <li> <p>Requires a virtual private
-         * cloud (VPC) configuration as S3 on Outposts only supports VPC style access
-         * points.</p> </li> <li> <p>Does not support ACL on S3 on Outposts buckets.</p>
-         * </li> <li> <p>Does not support Public Access on S3 on Outposts buckets.</p>
-         * </li> <li> <p>Does not support object lock for S3 on Outposts buckets.</p> </li>
-         * </ul> <p>For more information, see <a
-         * href="AmazonS3/latest/dev/S3onOutposts.html">Using Amazon S3 on Outposts</a> in
-         * the <i>Amazon Simple Storage Service Developer Guide </i>.</p> <p>All Amazon S3
-         * on Outposts REST API requests for this action require an additional parameter of
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html">Managing
+         * Data Access with Amazon S3 Access Points</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p/>  <p>S3 on Outposts only supports VPC-style access
+         * points. </p> <p>For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">
+         * Accessing Amazon S3 on Outposts using virtual private cloud (VPC) only access
+         * points</a> in the <i>Amazon S3 User Guide</i>.</p>  <p>All Amazon S3 on
+         * Outposts REST API requests for this action require an additional parameter of
          * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
          * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
          * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
@@ -325,18 +408,14 @@ namespace Aws
         /**
          * <p>Creates an access point and associates it with the specified bucket. For more
          * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html">Managing
-         * Data Access with Amazon S3 Access Points</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p/> <p> <b>Using this action with Amazon S3 on
-         * Outposts</b> </p> <p>This action: </p> <ul> <li> <p>Requires a virtual private
-         * cloud (VPC) configuration as S3 on Outposts only supports VPC style access
-         * points.</p> </li> <li> <p>Does not support ACL on S3 on Outposts buckets.</p>
-         * </li> <li> <p>Does not support Public Access on S3 on Outposts buckets.</p>
-         * </li> <li> <p>Does not support object lock for S3 on Outposts buckets.</p> </li>
-         * </ul> <p>For more information, see <a
-         * href="AmazonS3/latest/dev/S3onOutposts.html">Using Amazon S3 on Outposts</a> in
-         * the <i>Amazon Simple Storage Service Developer Guide </i>.</p> <p>All Amazon S3
-         * on Outposts REST API requests for this action require an additional parameter of
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html">Managing
+         * Data Access with Amazon S3 Access Points</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p/>  <p>S3 on Outposts only supports VPC-style access
+         * points. </p> <p>For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">
+         * Accessing Amazon S3 on Outposts using virtual private cloud (VPC) only access
+         * points</a> in the <i>Amazon S3 User Guide</i>.</p>  <p>All Amazon S3 on
+         * Outposts REST API requests for this action require an additional parameter of
          * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
          * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
          * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
@@ -361,18 +440,14 @@ namespace Aws
         /**
          * <p>Creates an access point and associates it with the specified bucket. For more
          * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html">Managing
-         * Data Access with Amazon S3 Access Points</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p/> <p> <b>Using this action with Amazon S3 on
-         * Outposts</b> </p> <p>This action: </p> <ul> <li> <p>Requires a virtual private
-         * cloud (VPC) configuration as S3 on Outposts only supports VPC style access
-         * points.</p> </li> <li> <p>Does not support ACL on S3 on Outposts buckets.</p>
-         * </li> <li> <p>Does not support Public Access on S3 on Outposts buckets.</p>
-         * </li> <li> <p>Does not support object lock for S3 on Outposts buckets.</p> </li>
-         * </ul> <p>For more information, see <a
-         * href="AmazonS3/latest/dev/S3onOutposts.html">Using Amazon S3 on Outposts</a> in
-         * the <i>Amazon Simple Storage Service Developer Guide </i>.</p> <p>All Amazon S3
-         * on Outposts REST API requests for this action require an additional parameter of
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html">Managing
+         * Data Access with Amazon S3 Access Points</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p/>  <p>S3 on Outposts only supports VPC-style access
+         * points. </p> <p>For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">
+         * Accessing Amazon S3 on Outposts using virtual private cloud (VPC) only access
+         * points</a> in the <i>Amazon S3 User Guide</i>.</p>  <p>All Amazon S3 on
+         * Outposts REST API requests for this action require an additional parameter of
          * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
          * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
          * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
@@ -395,22 +470,78 @@ namespace Aws
         virtual void CreateAccessPointAsync(const Model::CreateAccessPointRequest& request, const CreateAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>This API operation creates an Amazon S3 on Outposts bucket. To create
-         * an S3 bucket, see <a
+         * <p>Creates an Object Lambda Access Point. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/transforming-objects.html">Transforming
+         * objects with Object Lambda Access Points</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p>The following actions are related to
+         * <code>CreateAccessPointForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointForObjectLambda.html">DeleteAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointForObjectLambda.html">GetAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPointsForObjectLambda.html">ListAccessPointsForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessPointForObjectLambda">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreateAccessPointForObjectLambdaOutcome CreateAccessPointForObjectLambda(const Model::CreateAccessPointForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Creates an Object Lambda Access Point. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/transforming-objects.html">Transforming
+         * objects with Object Lambda Access Points</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p>The following actions are related to
+         * <code>CreateAccessPointForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointForObjectLambda.html">DeleteAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointForObjectLambda.html">GetAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPointsForObjectLambda.html">ListAccessPointsForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessPointForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::CreateAccessPointForObjectLambdaOutcomeCallable CreateAccessPointForObjectLambdaCallable(const Model::CreateAccessPointForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Creates an Object Lambda Access Point. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/transforming-objects.html">Transforming
+         * objects with Object Lambda Access Points</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p>The following actions are related to
+         * <code>CreateAccessPointForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointForObjectLambda.html">DeleteAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointForObjectLambda.html">GetAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPointsForObjectLambda.html">ListAccessPointsForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessPointForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void CreateAccessPointForObjectLambdaAsync(const Model::CreateAccessPointForObjectLambdaRequest& request, const CreateAccessPointForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         *  <p>This action creates an Amazon S3 on Outposts bucket. To create an S3
+         * bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_CreateBucket.html">Create
-         * Bucket</a> in the <i>Amazon Simple Storage Service API</i>. </p> 
-         * <p>Creates a new Outposts bucket. By creating the bucket, you become the bucket
-         * owner. To create an Outposts bucket, you must have S3 on Outposts. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>Not every string is an acceptable bucket name. For information
-         * on bucket naming restrictions, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules">Working
-         * with Amazon S3 Buckets</a>.</p> <p>S3 on Outposts buckets do not support </p>
-         * <ul> <li> <p>ACLs. Instead, configure access point policies to manage access to
-         * buckets.</p> </li> <li> <p>Public access. </p> </li> <li> <p>Object Lock</p>
-         * </li> <li> <p>Bucket Location constraint</p> </li> </ul> <p>For an example of
+         * Bucket</a> in the <i>Amazon S3 API Reference</i>. </p>  <p>Creates a new
+         * Outposts bucket. By creating the bucket, you become the bucket owner. To create
+         * an Outposts bucket, you must have S3 on Outposts. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>Not every
+         * string is an acceptable bucket name. For information on bucket naming
+         * restrictions, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html#bucketnamingrules">Working
+         * with Amazon S3 Buckets</a>.</p> <p>S3 on Outposts buckets support:</p> <ul> <li>
+         * <p>Tags</p> </li> <li> <p>LifecycleConfigurations for deleting expired
+         * objects</p> </li> </ul> <p>For a complete list of restrictions and Amazon S3
+         * feature limitations on S3 on Outposts, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OnOutpostsRestrictionsLimitations.html">
+         * Amazon S3 on Outposts Restrictions and Limitations</a>.</p> <p>For an example of
          * the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
          * endpoint hostname prefix and <code>x-amz-outpost-id</code> in your API request,
          * see the <a
@@ -433,22 +564,23 @@ namespace Aws
         virtual Model::CreateBucketOutcome CreateBucket(const Model::CreateBucketRequest& request) const;
 
         /**
-         *  <p>This API operation creates an Amazon S3 on Outposts bucket. To create
-         * an S3 bucket, see <a
+         *  <p>This action creates an Amazon S3 on Outposts bucket. To create an S3
+         * bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_CreateBucket.html">Create
-         * Bucket</a> in the <i>Amazon Simple Storage Service API</i>. </p> 
-         * <p>Creates a new Outposts bucket. By creating the bucket, you become the bucket
-         * owner. To create an Outposts bucket, you must have S3 on Outposts. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>Not every string is an acceptable bucket name. For information
-         * on bucket naming restrictions, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules">Working
-         * with Amazon S3 Buckets</a>.</p> <p>S3 on Outposts buckets do not support </p>
-         * <ul> <li> <p>ACLs. Instead, configure access point policies to manage access to
-         * buckets.</p> </li> <li> <p>Public access. </p> </li> <li> <p>Object Lock</p>
-         * </li> <li> <p>Bucket Location constraint</p> </li> </ul> <p>For an example of
+         * Bucket</a> in the <i>Amazon S3 API Reference</i>. </p>  <p>Creates a new
+         * Outposts bucket. By creating the bucket, you become the bucket owner. To create
+         * an Outposts bucket, you must have S3 on Outposts. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>Not every
+         * string is an acceptable bucket name. For information on bucket naming
+         * restrictions, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html#bucketnamingrules">Working
+         * with Amazon S3 Buckets</a>.</p> <p>S3 on Outposts buckets support:</p> <ul> <li>
+         * <p>Tags</p> </li> <li> <p>LifecycleConfigurations for deleting expired
+         * objects</p> </li> </ul> <p>For a complete list of restrictions and Amazon S3
+         * feature limitations on S3 on Outposts, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OnOutpostsRestrictionsLimitations.html">
+         * Amazon S3 on Outposts Restrictions and Limitations</a>.</p> <p>For an example of
          * the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
          * endpoint hostname prefix and <code>x-amz-outpost-id</code> in your API request,
          * see the <a
@@ -473,22 +605,23 @@ namespace Aws
         virtual Model::CreateBucketOutcomeCallable CreateBucketCallable(const Model::CreateBucketRequest& request) const;
 
         /**
-         *  <p>This API operation creates an Amazon S3 on Outposts bucket. To create
-         * an S3 bucket, see <a
+         *  <p>This action creates an Amazon S3 on Outposts bucket. To create an S3
+         * bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_CreateBucket.html">Create
-         * Bucket</a> in the <i>Amazon Simple Storage Service API</i>. </p> 
-         * <p>Creates a new Outposts bucket. By creating the bucket, you become the bucket
-         * owner. To create an Outposts bucket, you must have S3 on Outposts. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>Not every string is an acceptable bucket name. For information
-         * on bucket naming restrictions, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules">Working
-         * with Amazon S3 Buckets</a>.</p> <p>S3 on Outposts buckets do not support </p>
-         * <ul> <li> <p>ACLs. Instead, configure access point policies to manage access to
-         * buckets.</p> </li> <li> <p>Public access. </p> </li> <li> <p>Object Lock</p>
-         * </li> <li> <p>Bucket Location constraint</p> </li> </ul> <p>For an example of
+         * Bucket</a> in the <i>Amazon S3 API Reference</i>. </p>  <p>Creates a new
+         * Outposts bucket. By creating the bucket, you become the bucket owner. To create
+         * an Outposts bucket, you must have S3 on Outposts. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>Not every
+         * string is an acceptable bucket name. For information on bucket naming
+         * restrictions, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html#bucketnamingrules">Working
+         * with Amazon S3 Buckets</a>.</p> <p>S3 on Outposts buckets support:</p> <ul> <li>
+         * <p>Tags</p> </li> <li> <p>LifecycleConfigurations for deleting expired
+         * objects</p> </li> </ul> <p>For a complete list of restrictions and Amazon S3
+         * feature limitations on S3 on Outposts, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OnOutpostsRestrictionsLimitations.html">
+         * Amazon S3 on Outposts Restrictions and Limitations</a>.</p> <p>For an example of
          * the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
          * endpoint hostname prefix and <code>x-amz-outpost-id</code> in your API request,
          * see the <a
@@ -513,13 +646,13 @@ namespace Aws
         virtual void CreateBucketAsync(const Model::CreateBucketRequest& request, const CreateBucketResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>S3 Batch Operations performs large-scale Batch Operations on Amazon S3
-         * objects. Batch Operations can run a single operation or action on lists of
-         * Amazon S3 objects that you specify. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>This operation creates an S3 Batch Operations job.</p> <p/>
-         * <p>Related actions include:</p> <ul> <li> <p> <a
+         * <p>You can use S3 Batch Operations to perform large-scale batch actions on
+         * Amazon S3 objects. Batch Operations can run a single action on lists of Amazon
+         * S3 objects that you specify. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This action
+         * creates a S3 Batch Operations job.</p> <p/> <p>Related actions include:</p> <ul>
+         * <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeJob.html">DescribeJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -527,6 +660,8 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_UpdateJobPriority.html">UpdateJobPriority</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_UpdateJobStatus.html">UpdateJobStatus</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_JobOperation.html">JobOperation</a>
          * </p> </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateJob">AWS
          * API Reference</a></p>
@@ -534,13 +669,13 @@ namespace Aws
         virtual Model::CreateJobOutcome CreateJob(const Model::CreateJobRequest& request) const;
 
         /**
-         * <p>S3 Batch Operations performs large-scale Batch Operations on Amazon S3
-         * objects. Batch Operations can run a single operation or action on lists of
-         * Amazon S3 objects that you specify. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>This operation creates an S3 Batch Operations job.</p> <p/>
-         * <p>Related actions include:</p> <ul> <li> <p> <a
+         * <p>You can use S3 Batch Operations to perform large-scale batch actions on
+         * Amazon S3 objects. Batch Operations can run a single action on lists of Amazon
+         * S3 objects that you specify. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This action
+         * creates a S3 Batch Operations job.</p> <p/> <p>Related actions include:</p> <ul>
+         * <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeJob.html">DescribeJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -548,6 +683,8 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_UpdateJobPriority.html">UpdateJobPriority</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_UpdateJobStatus.html">UpdateJobStatus</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_JobOperation.html">JobOperation</a>
          * </p> </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateJob">AWS
          * API Reference</a></p>
@@ -557,13 +694,13 @@ namespace Aws
         virtual Model::CreateJobOutcomeCallable CreateJobCallable(const Model::CreateJobRequest& request) const;
 
         /**
-         * <p>S3 Batch Operations performs large-scale Batch Operations on Amazon S3
-         * objects. Batch Operations can run a single operation or action on lists of
-         * Amazon S3 objects that you specify. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>This operation creates an S3 Batch Operations job.</p> <p/>
-         * <p>Related actions include:</p> <ul> <li> <p> <a
+         * <p>You can use S3 Batch Operations to perform large-scale batch actions on
+         * Amazon S3 objects. Batch Operations can run a single action on lists of Amazon
+         * S3 objects that you specify. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This action
+         * creates a S3 Batch Operations job.</p> <p/> <p>Related actions include:</p> <ul>
+         * <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeJob.html">DescribeJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -571,6 +708,8 @@ namespace Aws
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_UpdateJobPriority.html">UpdateJobPriority</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_UpdateJobStatus.html">UpdateJobStatus</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_JobOperation.html">JobOperation</a>
          * </p> </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateJob">AWS
          * API Reference</a></p>
@@ -578,6 +717,97 @@ namespace Aws
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void CreateJobAsync(const Model::CreateJobRequest& request, const CreateJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Creates a Multi-Region Access Point and associates it with the specified
+         * buckets. For more information about creating Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html">Creating
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This
+         * action will always be routed to the US West (Oregon) Region. For more
+         * information about the restrictions around managing Multi-Region Access Points,
+         * see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This
+         * request is asynchronous, meaning that you might receive a response before the
+         * command has completed. When this request provides a response, it provides a
+         * token that you can use to monitor the status of the request with
+         * <code>DescribeMultiRegionAccessPointOperation</code>.</p> <p>The following
+         * actions are related to <code>CreateMultiRegionAccessPoint</code>:</p> <ul> <li>
+         * <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateMultiRegionAccessPoint">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreateMultiRegionAccessPointOutcome CreateMultiRegionAccessPoint(const Model::CreateMultiRegionAccessPointRequest& request) const;
+
+        /**
+         * <p>Creates a Multi-Region Access Point and associates it with the specified
+         * buckets. For more information about creating Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html">Creating
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This
+         * action will always be routed to the US West (Oregon) Region. For more
+         * information about the restrictions around managing Multi-Region Access Points,
+         * see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This
+         * request is asynchronous, meaning that you might receive a response before the
+         * command has completed. When this request provides a response, it provides a
+         * token that you can use to monitor the status of the request with
+         * <code>DescribeMultiRegionAccessPointOperation</code>.</p> <p>The following
+         * actions are related to <code>CreateMultiRegionAccessPoint</code>:</p> <ul> <li>
+         * <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateMultiRegionAccessPoint">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::CreateMultiRegionAccessPointOutcomeCallable CreateMultiRegionAccessPointCallable(const Model::CreateMultiRegionAccessPointRequest& request) const;
+
+        /**
+         * <p>Creates a Multi-Region Access Point and associates it with the specified
+         * buckets. For more information about creating Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html">Creating
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This
+         * action will always be routed to the US West (Oregon) Region. For more
+         * information about the restrictions around managing Multi-Region Access Points,
+         * see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This
+         * request is asynchronous, meaning that you might receive a response before the
+         * command has completed. When this request provides a response, it provides a
+         * token that you can use to monitor the status of the request with
+         * <code>DescribeMultiRegionAccessPointOperation</code>.</p> <p>The following
+         * actions are related to <code>CreateMultiRegionAccessPoint</code>:</p> <ul> <li>
+         * <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateMultiRegionAccessPoint">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void CreateMultiRegionAccessPointAsync(const Model::CreateMultiRegionAccessPointRequest& request, const CreateMultiRegionAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Deletes the specified access point.</p> <p>All Amazon S3 on Outposts REST API
@@ -650,6 +880,55 @@ namespace Aws
         virtual void DeleteAccessPointAsync(const Model::DeleteAccessPointRequest& request, const DeleteAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Deletes the specified Object Lambda Access Point.</p> <p>The following
+         * actions are related to <code>DeleteAccessPointForObjectLambda</code>:</p> <ul>
+         * <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPointForObjectLambda.html">CreateAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointForObjectLambda.html">GetAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPointsForObjectLambda.html">ListAccessPointsForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessPointForObjectLambda">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteAccessPointForObjectLambdaOutcome DeleteAccessPointForObjectLambda(const Model::DeleteAccessPointForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Deletes the specified Object Lambda Access Point.</p> <p>The following
+         * actions are related to <code>DeleteAccessPointForObjectLambda</code>:</p> <ul>
+         * <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPointForObjectLambda.html">CreateAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointForObjectLambda.html">GetAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPointsForObjectLambda.html">ListAccessPointsForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessPointForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DeleteAccessPointForObjectLambdaOutcomeCallable DeleteAccessPointForObjectLambdaCallable(const Model::DeleteAccessPointForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Deletes the specified Object Lambda Access Point.</p> <p>The following
+         * actions are related to <code>DeleteAccessPointForObjectLambda</code>:</p> <ul>
+         * <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPointForObjectLambda.html">CreateAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointForObjectLambda.html">GetAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPointsForObjectLambda.html">ListAccessPointsForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessPointForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DeleteAccessPointForObjectLambdaAsync(const Model::DeleteAccessPointForObjectLambdaRequest& request, const DeleteAccessPointForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Deletes the access point policy for the specified access point.</p> <p/>
          * <p>All Amazon S3 on Outposts REST API requests for this action require an
          * additional parameter of <code>x-amz-outpost-id</code> to be passed with the
@@ -714,21 +993,64 @@ namespace Aws
         virtual void DeleteAccessPointPolicyAsync(const Model::DeleteAccessPointPolicyRequest& request, const DeleteAccessPointPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>This API operation deletes an Amazon S3 on Outposts bucket. To delete
-         * an S3 bucket, see <a
+         * <p>Removes the resource policy for an Object Lambda Access Point.</p> <p>The
+         * following actions are related to
+         * <code>DeleteAccessPointPolicyForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointPolicyForObjectLambda.html">GetAccessPointPolicyForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointPolicyForObjectLambda.html">PutAccessPointPolicyForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessPointPolicyForObjectLambda">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteAccessPointPolicyForObjectLambdaOutcome DeleteAccessPointPolicyForObjectLambda(const Model::DeleteAccessPointPolicyForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Removes the resource policy for an Object Lambda Access Point.</p> <p>The
+         * following actions are related to
+         * <code>DeleteAccessPointPolicyForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointPolicyForObjectLambda.html">GetAccessPointPolicyForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointPolicyForObjectLambda.html">PutAccessPointPolicyForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessPointPolicyForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DeleteAccessPointPolicyForObjectLambdaOutcomeCallable DeleteAccessPointPolicyForObjectLambdaCallable(const Model::DeleteAccessPointPolicyForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Removes the resource policy for an Object Lambda Access Point.</p> <p>The
+         * following actions are related to
+         * <code>DeleteAccessPointPolicyForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointPolicyForObjectLambda.html">GetAccessPointPolicyForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointPolicyForObjectLambda.html">PutAccessPointPolicyForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessPointPolicyForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DeleteAccessPointPolicyForObjectLambdaAsync(const Model::DeleteAccessPointPolicyForObjectLambdaRequest& request, const DeleteAccessPointPolicyForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         *  <p>This action deletes an Amazon S3 on Outposts bucket. To delete an S3
+         * bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucket.html">DeleteBucket</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Deletes the
-         * Amazon S3 on Outposts bucket. All objects (including all object versions and
-         * delete markers) in the bucket must be deleted before the bucket itself can be
-         * deleted. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>All Amazon S3 on Outposts REST API requests for this action
-         * require an additional parameter of <code>x-amz-outpost-id</code> to be passed
-         * with the request and an S3 on Outposts endpoint hostname prefix instead of
-         * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on
-         * Outposts that uses the S3 on Outposts endpoint hostname prefix and the
-         * <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Deletes the Amazon S3 on
+         * Outposts bucket. All objects (including all object versions and delete markers)
+         * in the bucket must be deleted before the bucket itself can be deleted. For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>All Amazon S3
+         * on Outposts REST API requests for this action require an additional parameter of
+         * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
+         * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
+         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
+         * Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived
+         * using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucket.html#API_control_DeleteBucket_Examples">Examples</a>
          * section.</p> <p class="title"> <b>Related Resources</b> </p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateBucket.html">CreateBucket</a>
@@ -743,21 +1065,21 @@ namespace Aws
         virtual Model::DeleteBucketOutcome DeleteBucket(const Model::DeleteBucketRequest& request) const;
 
         /**
-         *  <p>This API operation deletes an Amazon S3 on Outposts bucket. To delete
-         * an S3 bucket, see <a
+         *  <p>This action deletes an Amazon S3 on Outposts bucket. To delete an S3
+         * bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucket.html">DeleteBucket</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Deletes the
-         * Amazon S3 on Outposts bucket. All objects (including all object versions and
-         * delete markers) in the bucket must be deleted before the bucket itself can be
-         * deleted. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>All Amazon S3 on Outposts REST API requests for this action
-         * require an additional parameter of <code>x-amz-outpost-id</code> to be passed
-         * with the request and an S3 on Outposts endpoint hostname prefix instead of
-         * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on
-         * Outposts that uses the S3 on Outposts endpoint hostname prefix and the
-         * <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Deletes the Amazon S3 on
+         * Outposts bucket. All objects (including all object versions and delete markers)
+         * in the bucket must be deleted before the bucket itself can be deleted. For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>All Amazon S3
+         * on Outposts REST API requests for this action require an additional parameter of
+         * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
+         * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
+         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
+         * Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived
+         * using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucket.html#API_control_DeleteBucket_Examples">Examples</a>
          * section.</p> <p class="title"> <b>Related Resources</b> </p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateBucket.html">CreateBucket</a>
@@ -774,21 +1096,21 @@ namespace Aws
         virtual Model::DeleteBucketOutcomeCallable DeleteBucketCallable(const Model::DeleteBucketRequest& request) const;
 
         /**
-         *  <p>This API operation deletes an Amazon S3 on Outposts bucket. To delete
-         * an S3 bucket, see <a
+         *  <p>This action deletes an Amazon S3 on Outposts bucket. To delete an S3
+         * bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucket.html">DeleteBucket</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Deletes the
-         * Amazon S3 on Outposts bucket. All objects (including all object versions and
-         * delete markers) in the bucket must be deleted before the bucket itself can be
-         * deleted. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>All Amazon S3 on Outposts REST API requests for this action
-         * require an additional parameter of <code>x-amz-outpost-id</code> to be passed
-         * with the request and an S3 on Outposts endpoint hostname prefix instead of
-         * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on
-         * Outposts that uses the S3 on Outposts endpoint hostname prefix and the
-         * <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Deletes the Amazon S3 on
+         * Outposts bucket. All objects (including all object versions and delete markers)
+         * in the bucket must be deleted before the bucket itself can be deleted. For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>All Amazon S3
+         * on Outposts REST API requests for this action require an additional parameter of
+         * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
+         * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
+         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
+         * Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived
+         * using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucket.html#API_control_DeleteBucket_Examples">Examples</a>
          * section.</p> <p class="title"> <b>Related Resources</b> </p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateBucket.html">CreateBucket</a>
@@ -805,18 +1127,18 @@ namespace Aws
         virtual void DeleteBucketAsync(const Model::DeleteBucketRequest& request, const DeleteBucketResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>This API action deletes an Amazon S3 on Outposts bucket's lifecycle
+         *  <p>This action deletes an Amazon S3 on Outposts bucket's lifecycle
          * configuration. To delete an S3 bucket's lifecycle configuration, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketLifecycle.html">DeleteBucketLifecycle</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Deletes the
-         * lifecycle configuration from the specified Outposts bucket. Amazon S3 on
-         * Outposts removes all the lifecycle configuration rules in the lifecycle
-         * subresource associated with the bucket. Your objects never expire, and Amazon S3
-         * on Outposts no longer automatically deletes any objects on the basis of rules
-         * contained in the deleted lifecycle configuration. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Deletes the lifecycle
+         * configuration from the specified Outposts bucket. Amazon S3 on Outposts removes
+         * all the lifecycle configuration rules in the lifecycle subresource associated
+         * with the bucket. Your objects never expire, and Amazon S3 on Outposts no longer
+         * automatically deletes any objects on the basis of rules contained in the deleted
+         * lifecycle configuration. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>To use this
+         * action, you must have permission to perform the
          * <code>s3-outposts:DeleteLifecycleConfiguration</code> action. By default, the
          * bucket owner has this permission and the Outposts bucket owner can grant this
          * permission to others.</p> <p>All Amazon S3 on Outposts REST API requests for
@@ -827,9 +1149,9 @@ namespace Aws
          * the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucketLifecycleConfiguration.html#API_control_DeleteBucketLifecycleConfiguration_Examples">Examples</a>
          * section.</p> <p>For more information about object expiration, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#intro-lifecycle-rules-actions">
-         * Elements to Describe Lifecycle Actions</a>.</p> <p>Related actions include:</p>
-         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#intro-lifecycle-rules-actions">Elements
+         * to Describe Lifecycle Actions</a>.</p> <p>Related actions include:</p> <ul> <li>
+         * <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketLifecycleConfiguration.html">GetBucketLifecycleConfiguration</a>
@@ -840,18 +1162,18 @@ namespace Aws
         virtual Model::DeleteBucketLifecycleConfigurationOutcome DeleteBucketLifecycleConfiguration(const Model::DeleteBucketLifecycleConfigurationRequest& request) const;
 
         /**
-         *  <p>This API action deletes an Amazon S3 on Outposts bucket's lifecycle
+         *  <p>This action deletes an Amazon S3 on Outposts bucket's lifecycle
          * configuration. To delete an S3 bucket's lifecycle configuration, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketLifecycle.html">DeleteBucketLifecycle</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Deletes the
-         * lifecycle configuration from the specified Outposts bucket. Amazon S3 on
-         * Outposts removes all the lifecycle configuration rules in the lifecycle
-         * subresource associated with the bucket. Your objects never expire, and Amazon S3
-         * on Outposts no longer automatically deletes any objects on the basis of rules
-         * contained in the deleted lifecycle configuration. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Deletes the lifecycle
+         * configuration from the specified Outposts bucket. Amazon S3 on Outposts removes
+         * all the lifecycle configuration rules in the lifecycle subresource associated
+         * with the bucket. Your objects never expire, and Amazon S3 on Outposts no longer
+         * automatically deletes any objects on the basis of rules contained in the deleted
+         * lifecycle configuration. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>To use this
+         * action, you must have permission to perform the
          * <code>s3-outposts:DeleteLifecycleConfiguration</code> action. By default, the
          * bucket owner has this permission and the Outposts bucket owner can grant this
          * permission to others.</p> <p>All Amazon S3 on Outposts REST API requests for
@@ -862,9 +1184,9 @@ namespace Aws
          * the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucketLifecycleConfiguration.html#API_control_DeleteBucketLifecycleConfiguration_Examples">Examples</a>
          * section.</p> <p>For more information about object expiration, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#intro-lifecycle-rules-actions">
-         * Elements to Describe Lifecycle Actions</a>.</p> <p>Related actions include:</p>
-         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#intro-lifecycle-rules-actions">Elements
+         * to Describe Lifecycle Actions</a>.</p> <p>Related actions include:</p> <ul> <li>
+         * <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketLifecycleConfiguration.html">GetBucketLifecycleConfiguration</a>
@@ -877,18 +1199,18 @@ namespace Aws
         virtual Model::DeleteBucketLifecycleConfigurationOutcomeCallable DeleteBucketLifecycleConfigurationCallable(const Model::DeleteBucketLifecycleConfigurationRequest& request) const;
 
         /**
-         *  <p>This API action deletes an Amazon S3 on Outposts bucket's lifecycle
+         *  <p>This action deletes an Amazon S3 on Outposts bucket's lifecycle
          * configuration. To delete an S3 bucket's lifecycle configuration, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketLifecycle.html">DeleteBucketLifecycle</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Deletes the
-         * lifecycle configuration from the specified Outposts bucket. Amazon S3 on
-         * Outposts removes all the lifecycle configuration rules in the lifecycle
-         * subresource associated with the bucket. Your objects never expire, and Amazon S3
-         * on Outposts no longer automatically deletes any objects on the basis of rules
-         * contained in the deleted lifecycle configuration. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Deletes the lifecycle
+         * configuration from the specified Outposts bucket. Amazon S3 on Outposts removes
+         * all the lifecycle configuration rules in the lifecycle subresource associated
+         * with the bucket. Your objects never expire, and Amazon S3 on Outposts no longer
+         * automatically deletes any objects on the basis of rules contained in the deleted
+         * lifecycle configuration. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>To use this
+         * action, you must have permission to perform the
          * <code>s3-outposts:DeleteLifecycleConfiguration</code> action. By default, the
          * bucket owner has this permission and the Outposts bucket owner can grant this
          * permission to others.</p> <p>All Amazon S3 on Outposts REST API requests for
@@ -899,9 +1221,9 @@ namespace Aws
          * the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucketLifecycleConfiguration.html#API_control_DeleteBucketLifecycleConfiguration_Examples">Examples</a>
          * section.</p> <p>For more information about object expiration, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#intro-lifecycle-rules-actions">
-         * Elements to Describe Lifecycle Actions</a>.</p> <p>Related actions include:</p>
-         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#intro-lifecycle-rules-actions">Elements
+         * to Describe Lifecycle Actions</a>.</p> <p>Related actions include:</p> <ul> <li>
+         * <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketLifecycleConfiguration.html">GetBucketLifecycleConfiguration</a>
@@ -914,27 +1236,27 @@ namespace Aws
         virtual void DeleteBucketLifecycleConfigurationAsync(const Model::DeleteBucketLifecycleConfigurationRequest& request, const DeleteBucketLifecycleConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>This API operation deletes an Amazon S3 on Outposts bucket policy. To
-         * delete an S3 bucket policy, see <a
+         *  <p>This action deletes an Amazon S3 on Outposts bucket policy. To delete
+         * an S3 bucket policy, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketPolicy.html">DeleteBucketPolicy</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>This
-         * implementation of the DELETE operation uses the policy subresource to delete the
-         * policy of a specified Amazon S3 on Outposts bucket. If you are using an identity
-         * other than the root user of the AWS account that owns the bucket, the calling
-         * identity must have the <code>s3-outposts:DeleteBucketPolicy</code> permissions
-         * on the specified Outposts bucket and belong to the bucket owner's account to use
-         * this operation. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you don't have <code>DeleteBucketPolicy</code> permissions,
-         * Amazon S3 returns a <code>403 Access Denied</code> error. If you have the
-         * correct permissions, but you're not using an identity that belongs to the bucket
-         * owner's account, Amazon S3 returns a <code>405 Method Not Allowed</code> error.
-         * </p>  <p>As a security precaution, the root user of the AWS account
-         * that owns a bucket can always use this operation, even if the policy explicitly
-         * denies the root user the ability to perform this action.</p>  <p>For
-         * more information about bucket policies, see <a href="
-         * https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>This implementation of
+         * the DELETE action uses the policy subresource to delete the policy of a
+         * specified Amazon S3 on Outposts bucket. If you are using an identity other than
+         * the root user of the Amazon Web Services account that owns the bucket, the
+         * calling identity must have the <code>s3-outposts:DeleteBucketPolicy</code>
+         * permissions on the specified Outposts bucket and belong to the bucket owner's
+         * account to use this action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>If you don't
+         * have <code>DeleteBucketPolicy</code> permissions, Amazon S3 returns a <code>403
+         * Access Denied</code> error. If you have the correct permissions, but you're not
+         * using an identity that belongs to the bucket owner's account, Amazon S3 returns
+         * a <code>405 Method Not Allowed</code> error. </p>  <p>As a security
+         * precaution, the root user of the Amazon Web Services account that owns a bucket
+         * can always use this action, even if the policy explicitly denies the root user
+         * the ability to perform this action.</p>  <p>For more information
+         * about bucket policies, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>. </p> <p>All Amazon S3 on Outposts REST
          * API requests for this action require an additional parameter of
          * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
@@ -955,27 +1277,27 @@ namespace Aws
         virtual Model::DeleteBucketPolicyOutcome DeleteBucketPolicy(const Model::DeleteBucketPolicyRequest& request) const;
 
         /**
-         *  <p>This API operation deletes an Amazon S3 on Outposts bucket policy. To
-         * delete an S3 bucket policy, see <a
+         *  <p>This action deletes an Amazon S3 on Outposts bucket policy. To delete
+         * an S3 bucket policy, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketPolicy.html">DeleteBucketPolicy</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>This
-         * implementation of the DELETE operation uses the policy subresource to delete the
-         * policy of a specified Amazon S3 on Outposts bucket. If you are using an identity
-         * other than the root user of the AWS account that owns the bucket, the calling
-         * identity must have the <code>s3-outposts:DeleteBucketPolicy</code> permissions
-         * on the specified Outposts bucket and belong to the bucket owner's account to use
-         * this operation. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you don't have <code>DeleteBucketPolicy</code> permissions,
-         * Amazon S3 returns a <code>403 Access Denied</code> error. If you have the
-         * correct permissions, but you're not using an identity that belongs to the bucket
-         * owner's account, Amazon S3 returns a <code>405 Method Not Allowed</code> error.
-         * </p>  <p>As a security precaution, the root user of the AWS account
-         * that owns a bucket can always use this operation, even if the policy explicitly
-         * denies the root user the ability to perform this action.</p>  <p>For
-         * more information about bucket policies, see <a href="
-         * https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>This implementation of
+         * the DELETE action uses the policy subresource to delete the policy of a
+         * specified Amazon S3 on Outposts bucket. If you are using an identity other than
+         * the root user of the Amazon Web Services account that owns the bucket, the
+         * calling identity must have the <code>s3-outposts:DeleteBucketPolicy</code>
+         * permissions on the specified Outposts bucket and belong to the bucket owner's
+         * account to use this action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>If you don't
+         * have <code>DeleteBucketPolicy</code> permissions, Amazon S3 returns a <code>403
+         * Access Denied</code> error. If you have the correct permissions, but you're not
+         * using an identity that belongs to the bucket owner's account, Amazon S3 returns
+         * a <code>405 Method Not Allowed</code> error. </p>  <p>As a security
+         * precaution, the root user of the Amazon Web Services account that owns a bucket
+         * can always use this action, even if the policy explicitly denies the root user
+         * the ability to perform this action.</p>  <p>For more information
+         * about bucket policies, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>. </p> <p>All Amazon S3 on Outposts REST
          * API requests for this action require an additional parameter of
          * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
@@ -998,27 +1320,27 @@ namespace Aws
         virtual Model::DeleteBucketPolicyOutcomeCallable DeleteBucketPolicyCallable(const Model::DeleteBucketPolicyRequest& request) const;
 
         /**
-         *  <p>This API operation deletes an Amazon S3 on Outposts bucket policy. To
-         * delete an S3 bucket policy, see <a
+         *  <p>This action deletes an Amazon S3 on Outposts bucket policy. To delete
+         * an S3 bucket policy, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketPolicy.html">DeleteBucketPolicy</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>This
-         * implementation of the DELETE operation uses the policy subresource to delete the
-         * policy of a specified Amazon S3 on Outposts bucket. If you are using an identity
-         * other than the root user of the AWS account that owns the bucket, the calling
-         * identity must have the <code>s3-outposts:DeleteBucketPolicy</code> permissions
-         * on the specified Outposts bucket and belong to the bucket owner's account to use
-         * this operation. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you don't have <code>DeleteBucketPolicy</code> permissions,
-         * Amazon S3 returns a <code>403 Access Denied</code> error. If you have the
-         * correct permissions, but you're not using an identity that belongs to the bucket
-         * owner's account, Amazon S3 returns a <code>405 Method Not Allowed</code> error.
-         * </p>  <p>As a security precaution, the root user of the AWS account
-         * that owns a bucket can always use this operation, even if the policy explicitly
-         * denies the root user the ability to perform this action.</p>  <p>For
-         * more information about bucket policies, see <a href="
-         * https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>This implementation of
+         * the DELETE action uses the policy subresource to delete the policy of a
+         * specified Amazon S3 on Outposts bucket. If you are using an identity other than
+         * the root user of the Amazon Web Services account that owns the bucket, the
+         * calling identity must have the <code>s3-outposts:DeleteBucketPolicy</code>
+         * permissions on the specified Outposts bucket and belong to the bucket owner's
+         * account to use this action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>If you don't
+         * have <code>DeleteBucketPolicy</code> permissions, Amazon S3 returns a <code>403
+         * Access Denied</code> error. If you have the correct permissions, but you're not
+         * using an identity that belongs to the bucket owner's account, Amazon S3 returns
+         * a <code>405 Method Not Allowed</code> error. </p>  <p>As a security
+         * precaution, the root user of the Amazon Web Services account that owns a bucket
+         * can always use this action, even if the policy explicitly denies the root user
+         * the ability to perform this action.</p>  <p>For more information
+         * about bucket policies, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>. </p> <p>All Amazon S3 on Outposts REST
          * API requests for this action require an additional parameter of
          * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
@@ -1041,22 +1363,21 @@ namespace Aws
         virtual void DeleteBucketPolicyAsync(const Model::DeleteBucketPolicyRequest& request, const DeleteBucketPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>This operation deletes an Amazon S3 on Outposts bucket's tags. To
-         * delete an S3 bucket tags, see <a
+         *  <p>This action deletes an Amazon S3 on Outposts bucket's tags. To delete
+         * an S3 bucket tags, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketTagging.html">DeleteBucketTagging</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Deletes the
-         * tags from the Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
-         * <code>PutBucketTagging</code> action. By default, the bucket owner has this
-         * permission and can grant this permission to others. </p> <p>All Amazon S3 on
-         * Outposts REST API requests for this action require an additional parameter of
-         * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
-         * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
-         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
-         * Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived
-         * using the access point ARN, see the <a
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Deletes the tags from the
+         * Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>To use this
+         * action, you must have permission to perform the <code>PutBucketTagging</code>
+         * action. By default, the bucket owner has this permission and can grant this
+         * permission to others. </p> <p>All Amazon S3 on Outposts REST API requests for
+         * this action require an additional parameter of <code>x-amz-outpost-id</code> to
+         * be passed with the request and an S3 on Outposts endpoint hostname prefix
+         * instead of <code>s3-control</code>. For an example of the request syntax for
+         * Amazon S3 on Outposts that uses the S3 on Outposts endpoint hostname prefix and
+         * the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucketTagging.html#API_control_DeleteBucketTagging_Examples">Examples</a>
          * section.</p> <p>The following actions are related to
          * <code>DeleteBucketTagging</code>:</p> <ul> <li> <p> <a
@@ -1070,22 +1391,21 @@ namespace Aws
         virtual Model::DeleteBucketTaggingOutcome DeleteBucketTagging(const Model::DeleteBucketTaggingRequest& request) const;
 
         /**
-         *  <p>This operation deletes an Amazon S3 on Outposts bucket's tags. To
-         * delete an S3 bucket tags, see <a
+         *  <p>This action deletes an Amazon S3 on Outposts bucket's tags. To delete
+         * an S3 bucket tags, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketTagging.html">DeleteBucketTagging</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Deletes the
-         * tags from the Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
-         * <code>PutBucketTagging</code> action. By default, the bucket owner has this
-         * permission and can grant this permission to others. </p> <p>All Amazon S3 on
-         * Outposts REST API requests for this action require an additional parameter of
-         * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
-         * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
-         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
-         * Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived
-         * using the access point ARN, see the <a
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Deletes the tags from the
+         * Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>To use this
+         * action, you must have permission to perform the <code>PutBucketTagging</code>
+         * action. By default, the bucket owner has this permission and can grant this
+         * permission to others. </p> <p>All Amazon S3 on Outposts REST API requests for
+         * this action require an additional parameter of <code>x-amz-outpost-id</code> to
+         * be passed with the request and an S3 on Outposts endpoint hostname prefix
+         * instead of <code>s3-control</code>. For an example of the request syntax for
+         * Amazon S3 on Outposts that uses the S3 on Outposts endpoint hostname prefix and
+         * the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucketTagging.html#API_control_DeleteBucketTagging_Examples">Examples</a>
          * section.</p> <p>The following actions are related to
          * <code>DeleteBucketTagging</code>:</p> <ul> <li> <p> <a
@@ -1101,22 +1421,21 @@ namespace Aws
         virtual Model::DeleteBucketTaggingOutcomeCallable DeleteBucketTaggingCallable(const Model::DeleteBucketTaggingRequest& request) const;
 
         /**
-         *  <p>This operation deletes an Amazon S3 on Outposts bucket's tags. To
-         * delete an S3 bucket tags, see <a
+         *  <p>This action deletes an Amazon S3 on Outposts bucket's tags. To delete
+         * an S3 bucket tags, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketTagging.html">DeleteBucketTagging</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Deletes the
-         * tags from the Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
-         * <code>PutBucketTagging</code> action. By default, the bucket owner has this
-         * permission and can grant this permission to others. </p> <p>All Amazon S3 on
-         * Outposts REST API requests for this action require an additional parameter of
-         * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
-         * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
-         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
-         * Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived
-         * using the access point ARN, see the <a
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Deletes the tags from the
+         * Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in <i>Amazon S3 User Guide</i>.</p> <p>To use this
+         * action, you must have permission to perform the <code>PutBucketTagging</code>
+         * action. By default, the bucket owner has this permission and can grant this
+         * permission to others. </p> <p>All Amazon S3 on Outposts REST API requests for
+         * this action require an additional parameter of <code>x-amz-outpost-id</code> to
+         * be passed with the request and an S3 on Outposts endpoint hostname prefix
+         * instead of <code>s3-control</code>. For an example of the request syntax for
+         * Amazon S3 on Outposts that uses the S3 on Outposts endpoint hostname prefix and
+         * the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucketTagging.html#API_control_DeleteBucketTagging_Examples">Examples</a>
          * section.</p> <p>The following actions are related to
          * <code>DeleteBucketTagging</code>:</p> <ul> <li> <p> <a
@@ -1136,8 +1455,8 @@ namespace Aws
          * this operation, you must have permission to perform the
          * <code>s3:DeleteJobTagging</code> action. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
-         * access and labeling jobs using tags</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.</p>
+         * <p/> <p>Related actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetJobTagging.html">GetJobTagging</a>
@@ -1154,8 +1473,8 @@ namespace Aws
          * this operation, you must have permission to perform the
          * <code>s3:DeleteJobTagging</code> action. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
-         * access and labeling jobs using tags</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.</p>
+         * <p/> <p>Related actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetJobTagging.html">GetJobTagging</a>
@@ -1174,8 +1493,8 @@ namespace Aws
          * this operation, you must have permission to perform the
          * <code>s3:DeleteJobTagging</code> action. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
-         * access and labeling jobs using tags</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.</p>
+         * <p/> <p>Related actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetJobTagging.html">GetJobTagging</a>
@@ -1190,8 +1509,93 @@ namespace Aws
         virtual void DeleteJobTaggingAsync(const Model::DeleteJobTaggingRequest& request, const DeleteJobTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Removes the <code>PublicAccessBlock</code> configuration for an AWS account.
-         * For more information, see <a
+         * <p>Deletes a Multi-Region Access Point. This action does not delete the buckets
+         * associated with the Multi-Region Access Point, only the Multi-Region Access
+         * Point itself.</p> <p>This action will always be routed to the US West (Oregon)
+         * Region. For more information about the restrictions around managing Multi-Region
+         * Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This
+         * request is asynchronous, meaning that you might receive a response before the
+         * command has completed. When this request provides a response, it provides a
+         * token that you can use to monitor the status of the request with
+         * <code>DescribeMultiRegionAccessPointOperation</code>.</p> <p>The following
+         * actions are related to <code>DeleteMultiRegionAccessPoint</code>:</p> <ul> <li>
+         * <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteMultiRegionAccessPoint">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteMultiRegionAccessPointOutcome DeleteMultiRegionAccessPoint(const Model::DeleteMultiRegionAccessPointRequest& request) const;
+
+        /**
+         * <p>Deletes a Multi-Region Access Point. This action does not delete the buckets
+         * associated with the Multi-Region Access Point, only the Multi-Region Access
+         * Point itself.</p> <p>This action will always be routed to the US West (Oregon)
+         * Region. For more information about the restrictions around managing Multi-Region
+         * Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This
+         * request is asynchronous, meaning that you might receive a response before the
+         * command has completed. When this request provides a response, it provides a
+         * token that you can use to monitor the status of the request with
+         * <code>DescribeMultiRegionAccessPointOperation</code>.</p> <p>The following
+         * actions are related to <code>DeleteMultiRegionAccessPoint</code>:</p> <ul> <li>
+         * <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteMultiRegionAccessPoint">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DeleteMultiRegionAccessPointOutcomeCallable DeleteMultiRegionAccessPointCallable(const Model::DeleteMultiRegionAccessPointRequest& request) const;
+
+        /**
+         * <p>Deletes a Multi-Region Access Point. This action does not delete the buckets
+         * associated with the Multi-Region Access Point, only the Multi-Region Access
+         * Point itself.</p> <p>This action will always be routed to the US West (Oregon)
+         * Region. For more information about the restrictions around managing Multi-Region
+         * Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>This
+         * request is asynchronous, meaning that you might receive a response before the
+         * command has completed. When this request provides a response, it provides a
+         * token that you can use to monitor the status of the request with
+         * <code>DescribeMultiRegionAccessPointOperation</code>.</p> <p>The following
+         * actions are related to <code>DeleteMultiRegionAccessPoint</code>:</p> <ul> <li>
+         * <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteMultiRegionAccessPoint">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DeleteMultiRegionAccessPointAsync(const Model::DeleteMultiRegionAccessPointRequest& request, const DeleteMultiRegionAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Removes the <code>PublicAccessBlock</code> configuration for an Amazon Web
+         * Services account. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">
          * Using Amazon S3 block public access</a>.</p> <p>Related actions include:</p>
          * <ul> <li> <p> <a
@@ -1205,8 +1609,8 @@ namespace Aws
         virtual Model::DeletePublicAccessBlockOutcome DeletePublicAccessBlock(const Model::DeletePublicAccessBlockRequest& request) const;
 
         /**
-         * <p>Removes the <code>PublicAccessBlock</code> configuration for an AWS account.
-         * For more information, see <a
+         * <p>Removes the <code>PublicAccessBlock</code> configuration for an Amazon Web
+         * Services account. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">
          * Using Amazon S3 block public access</a>.</p> <p>Related actions include:</p>
          * <ul> <li> <p> <a
@@ -1222,8 +1626,8 @@ namespace Aws
         virtual Model::DeletePublicAccessBlockOutcomeCallable DeletePublicAccessBlockCallable(const Model::DeletePublicAccessBlockRequest& request) const;
 
         /**
-         * <p>Removes the <code>PublicAccessBlock</code> configuration for an AWS account.
-         * For more information, see <a
+         * <p>Removes the <code>PublicAccessBlock</code> configuration for an Amazon Web
+         * Services account. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">
          * Using Amazon S3 block public access</a>.</p> <p>Related actions include:</p>
          * <ul> <li> <p> <a
@@ -1241,14 +1645,14 @@ namespace Aws
         /**
          * <p>Deletes the Amazon S3 Storage Lens configuration. For more information about
          * S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:DeleteStorageLensConfiguration</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:DeleteStorageLensConfiguration</code> action.
+         * For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensConfiguration">AWS
          * API Reference</a></p>
          */
@@ -1257,14 +1661,14 @@ namespace Aws
         /**
          * <p>Deletes the Amazon S3 Storage Lens configuration. For more information about
          * S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:DeleteStorageLensConfiguration</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:DeleteStorageLensConfiguration</code> action.
+         * For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensConfiguration">AWS
          * API Reference</a></p>
          *
@@ -1275,14 +1679,14 @@ namespace Aws
         /**
          * <p>Deletes the Amazon S3 Storage Lens configuration. For more information about
          * S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:DeleteStorageLensConfiguration</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:DeleteStorageLensConfiguration</code> action.
+         * For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensConfiguration">AWS
          * API Reference</a></p>
          *
@@ -1293,14 +1697,14 @@ namespace Aws
         /**
          * <p>Deletes the Amazon S3 Storage Lens configuration tags. For more information
          * about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:DeleteStorageLensConfigurationTagging</code> action. For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:DeleteStorageLensConfigurationTagging</code>
+         * action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensConfigurationTagging">AWS
          * API Reference</a></p>
          */
@@ -1309,14 +1713,14 @@ namespace Aws
         /**
          * <p>Deletes the Amazon S3 Storage Lens configuration tags. For more information
          * about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:DeleteStorageLensConfigurationTagging</code> action. For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:DeleteStorageLensConfigurationTagging</code>
+         * action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensConfigurationTagging">AWS
          * API Reference</a></p>
          *
@@ -1327,14 +1731,14 @@ namespace Aws
         /**
          * <p>Deletes the Amazon S3 Storage Lens configuration tags. For more information
          * about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:DeleteStorageLensConfigurationTagging</code> action. For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:DeleteStorageLensConfigurationTagging</code>
+         * action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensConfigurationTagging">AWS
          * API Reference</a></p>
          *
@@ -1345,9 +1749,9 @@ namespace Aws
         /**
          * <p>Retrieves the configuration parameters and status for a Batch Operations job.
          * For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p/> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -1364,9 +1768,9 @@ namespace Aws
         /**
          * <p>Retrieves the configuration parameters and status for a Batch Operations job.
          * For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p/> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -1385,9 +1789,9 @@ namespace Aws
         /**
          * <p>Retrieves the configuration parameters and status for a Batch Operations job.
          * For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p/> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -1402,6 +1806,73 @@ namespace Aws
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void DescribeJobAsync(const Model::DescribeJobRequest& request, const DescribeJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves the status of an asynchronous request to manage a Multi-Region
+         * Access Point. For more information about managing Multi-Region Access Points and
+         * how asynchronous requests work, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to <code>GetMultiRegionAccessPoint</code>:</p>
+         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DescribeMultiRegionAccessPointOperation">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeMultiRegionAccessPointOperationOutcome DescribeMultiRegionAccessPointOperation(const Model::DescribeMultiRegionAccessPointOperationRequest& request) const;
+
+        /**
+         * <p>Retrieves the status of an asynchronous request to manage a Multi-Region
+         * Access Point. For more information about managing Multi-Region Access Points and
+         * how asynchronous requests work, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to <code>GetMultiRegionAccessPoint</code>:</p>
+         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DescribeMultiRegionAccessPointOperation">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeMultiRegionAccessPointOperationOutcomeCallable DescribeMultiRegionAccessPointOperationCallable(const Model::DescribeMultiRegionAccessPointOperationRequest& request) const;
+
+        /**
+         * <p>Retrieves the status of an asynchronous request to manage a Multi-Region
+         * Access Point. For more information about managing Multi-Region Access Points and
+         * how asynchronous requests work, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to <code>GetMultiRegionAccessPoint</code>:</p>
+         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DescribeMultiRegionAccessPointOperation">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeMultiRegionAccessPointOperationAsync(const Model::DescribeMultiRegionAccessPointOperationRequest& request, const DescribeMultiRegionAccessPointOperationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Returns configuration information about the specified access point.</p> <p/>
@@ -1474,6 +1945,92 @@ namespace Aws
         virtual void GetAccessPointAsync(const Model::GetAccessPointRequest& request, const GetAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Returns configuration for an Object Lambda Access Point.</p> <p>The following
+         * actions are related to
+         * <code>GetAccessPointConfigurationForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointConfigurationForObjectLambda.html">PutAccessPointConfigurationForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointConfigurationForObjectLambda">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetAccessPointConfigurationForObjectLambdaOutcome GetAccessPointConfigurationForObjectLambda(const Model::GetAccessPointConfigurationForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Returns configuration for an Object Lambda Access Point.</p> <p>The following
+         * actions are related to
+         * <code>GetAccessPointConfigurationForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointConfigurationForObjectLambda.html">PutAccessPointConfigurationForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointConfigurationForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetAccessPointConfigurationForObjectLambdaOutcomeCallable GetAccessPointConfigurationForObjectLambdaCallable(const Model::GetAccessPointConfigurationForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Returns configuration for an Object Lambda Access Point.</p> <p>The following
+         * actions are related to
+         * <code>GetAccessPointConfigurationForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointConfigurationForObjectLambda.html">PutAccessPointConfigurationForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointConfigurationForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetAccessPointConfigurationForObjectLambdaAsync(const Model::GetAccessPointConfigurationForObjectLambdaRequest& request, const GetAccessPointConfigurationForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Returns configuration information about the specified Object Lambda Access
+         * Point</p> <p>The following actions are related to
+         * <code>GetAccessPointForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPointForObjectLambda.html">CreateAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointForObjectLambda.html">DeleteAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPointsForObjectLambda.html">ListAccessPointsForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointForObjectLambda">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetAccessPointForObjectLambdaOutcome GetAccessPointForObjectLambda(const Model::GetAccessPointForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Returns configuration information about the specified Object Lambda Access
+         * Point</p> <p>The following actions are related to
+         * <code>GetAccessPointForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPointForObjectLambda.html">CreateAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointForObjectLambda.html">DeleteAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPointsForObjectLambda.html">ListAccessPointsForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetAccessPointForObjectLambdaOutcomeCallable GetAccessPointForObjectLambdaCallable(const Model::GetAccessPointForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Returns configuration information about the specified Object Lambda Access
+         * Point</p> <p>The following actions are related to
+         * <code>GetAccessPointForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPointForObjectLambda.html">CreateAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointForObjectLambda.html">DeleteAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPointsForObjectLambda.html">ListAccessPointsForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetAccessPointForObjectLambdaAsync(const Model::GetAccessPointForObjectLambdaRequest& request, const GetAccessPointForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Returns the access point policy associated with the specified access
          * point.</p> <p>The following actions are related to
          * <code>GetAccessPointPolicy</code>:</p> <ul> <li> <p> <a
@@ -1517,12 +2074,55 @@ namespace Aws
         virtual void GetAccessPointPolicyAsync(const Model::GetAccessPointPolicyRequest& request, const GetAccessPointPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Returns the resource policy for an Object Lambda Access Point.</p> <p>The
+         * following actions are related to
+         * <code>GetAccessPointPolicyForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointPolicyForObjectLambda.html">DeleteAccessPointPolicyForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointPolicyForObjectLambda.html">PutAccessPointPolicyForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicyForObjectLambda">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetAccessPointPolicyForObjectLambdaOutcome GetAccessPointPolicyForObjectLambda(const Model::GetAccessPointPolicyForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Returns the resource policy for an Object Lambda Access Point.</p> <p>The
+         * following actions are related to
+         * <code>GetAccessPointPolicyForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointPolicyForObjectLambda.html">DeleteAccessPointPolicyForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointPolicyForObjectLambda.html">PutAccessPointPolicyForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicyForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetAccessPointPolicyForObjectLambdaOutcomeCallable GetAccessPointPolicyForObjectLambdaCallable(const Model::GetAccessPointPolicyForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Returns the resource policy for an Object Lambda Access Point.</p> <p>The
+         * following actions are related to
+         * <code>GetAccessPointPolicyForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointPolicyForObjectLambda.html">DeleteAccessPointPolicyForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointPolicyForObjectLambda.html">PutAccessPointPolicyForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicyForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetAccessPointPolicyForObjectLambdaAsync(const Model::GetAccessPointPolicyForObjectLambdaRequest& request, const GetAccessPointPolicyForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Indicates whether the specified access point currently has a policy that
          * allows public access. For more information about public access through access
          * points, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html">Managing
-         * Data Access with Amazon S3 Access Points</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html">Managing
+         * Data Access with Amazon S3 access points</a> in the <i>Amazon S3 User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicyStatus">AWS
          * API Reference</a></p>
          */
@@ -1532,9 +2132,9 @@ namespace Aws
          * <p>Indicates whether the specified access point currently has a policy that
          * allows public access. For more information about public access through access
          * points, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html">Managing
-         * Data Access with Amazon S3 Access Points</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html">Managing
+         * Data Access with Amazon S3 access points</a> in the <i>Amazon S3 User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicyStatus">AWS
          * API Reference</a></p>
          *
@@ -1546,9 +2146,9 @@ namespace Aws
          * <p>Indicates whether the specified access point currently has a policy that
          * allows public access. For more information about public access through access
          * points, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html">Managing
-         * Data Access with Amazon S3 Access Points</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html">Managing
+         * Data Access with Amazon S3 access points</a> in the <i>Amazon S3 User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicyStatus">AWS
          * API Reference</a></p>
          *
@@ -1557,15 +2157,43 @@ namespace Aws
         virtual void GetAccessPointPolicyStatusAsync(const Model::GetAccessPointPolicyStatusRequest& request, const GetAccessPointPolicyStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Returns the status of the resource policy associated with an Object Lambda
+         * Access Point.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicyStatusForObjectLambda">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetAccessPointPolicyStatusForObjectLambdaOutcome GetAccessPointPolicyStatusForObjectLambda(const Model::GetAccessPointPolicyStatusForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Returns the status of the resource policy associated with an Object Lambda
+         * Access Point.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicyStatusForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetAccessPointPolicyStatusForObjectLambdaOutcomeCallable GetAccessPointPolicyStatusForObjectLambdaCallable(const Model::GetAccessPointPolicyStatusForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Returns the status of the resource policy associated with an Object Lambda
+         * Access Point.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessPointPolicyStatusForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetAccessPointPolicyStatusForObjectLambdaAsync(const Model::GetAccessPointPolicyStatusForObjectLambdaRequest& request, const GetAccessPointPolicyStatusForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Gets an Amazon S3 on Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html"> Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you are using an identity other than the root user of the
-         * AWS account that owns the bucket, the calling identity must have the
-         * <code>s3-outposts:GetBucket</code> permissions on the specified bucket and
-         * belong to the bucket owner's account in order to use this operation. Only users
-         * from Outposts bucket owner account with the right permissions can perform
-         * actions on an Outposts bucket. </p> <p> If you don't have
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">
+         * Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>If
+         * you are using an identity other than the root user of the Amazon Web Services
+         * account that owns the Outposts bucket, the calling identity must have the
+         * <code>s3-outposts:GetBucket</code> permissions on the specified Outposts bucket
+         * and belong to the Outposts bucket owner's account in order to use this action.
+         * Only users from Outposts bucket owner account with the right permissions can
+         * perform actions on an Outposts bucket. </p> <p> If you don't have
          * <code>s3-outposts:GetBucket</code> permissions or you're not using an identity
          * that belongs to the bucket owner's account, Amazon S3 returns a <code>403 Access
          * Denied</code> error.</p> <p>The following actions are related to
@@ -1591,14 +2219,14 @@ namespace Aws
 
         /**
          * <p>Gets an Amazon S3 on Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html"> Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you are using an identity other than the root user of the
-         * AWS account that owns the bucket, the calling identity must have the
-         * <code>s3-outposts:GetBucket</code> permissions on the specified bucket and
-         * belong to the bucket owner's account in order to use this operation. Only users
-         * from Outposts bucket owner account with the right permissions can perform
-         * actions on an Outposts bucket. </p> <p> If you don't have
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">
+         * Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>If
+         * you are using an identity other than the root user of the Amazon Web Services
+         * account that owns the Outposts bucket, the calling identity must have the
+         * <code>s3-outposts:GetBucket</code> permissions on the specified Outposts bucket
+         * and belong to the Outposts bucket owner's account in order to use this action.
+         * Only users from Outposts bucket owner account with the right permissions can
+         * perform actions on an Outposts bucket. </p> <p> If you don't have
          * <code>s3-outposts:GetBucket</code> permissions or you're not using an identity
          * that belongs to the bucket owner's account, Amazon S3 returns a <code>403 Access
          * Denied</code> error.</p> <p>The following actions are related to
@@ -1626,14 +2254,14 @@ namespace Aws
 
         /**
          * <p>Gets an Amazon S3 on Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html"> Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you are using an identity other than the root user of the
-         * AWS account that owns the bucket, the calling identity must have the
-         * <code>s3-outposts:GetBucket</code> permissions on the specified bucket and
-         * belong to the bucket owner's account in order to use this operation. Only users
-         * from Outposts bucket owner account with the right permissions can perform
-         * actions on an Outposts bucket. </p> <p> If you don't have
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">
+         * Using Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>If
+         * you are using an identity other than the root user of the Amazon Web Services
+         * account that owns the Outposts bucket, the calling identity must have the
+         * <code>s3-outposts:GetBucket</code> permissions on the specified Outposts bucket
+         * and belong to the Outposts bucket owner's account in order to use this action.
+         * Only users from Outposts bucket owner account with the right permissions can
+         * perform actions on an Outposts bucket. </p> <p> If you don't have
          * <code>s3-outposts:GetBucket</code> permissions or you're not using an identity
          * that belongs to the bucket owner's account, Amazon S3 returns a <code>403 Access
          * Denied</code> error.</p> <p>The following actions are related to
@@ -1660,24 +2288,24 @@ namespace Aws
         virtual void GetBucketAsync(const Model::GetBucketRequest& request, const GetBucketResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>This operation gets an Amazon S3 on Outposts bucket's lifecycle
+         *  <p>This action gets an Amazon S3 on Outposts bucket's lifecycle
          * configuration. To get an S3 bucket's lifecycle configuration, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketLifecycleConfiguration.html">GetBucketLifecycleConfiguration</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Returns the
-         * lifecycle configuration information set on the Outposts bucket. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Returns the lifecycle
+         * configuration information set on the Outposts bucket. For more information, see
+         * <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
          * Amazon S3 on Outposts</a> and for information about lifecycle configuration, see
          * <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">
-         * Object Lifecycle Management</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
+         * Object Lifecycle Management</a> in <i>Amazon S3 User Guide</i>.</p> <p>To use
+         * this action, you must have permission to perform the
          * <code>s3-outposts:GetLifecycleConfiguration</code> action. The Outposts bucket
          * owner has this permission, by default. The bucket owner can grant this
          * permission to others. For more information about permissions, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions
          * Related to Bucket Subresource Operations</a> and <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing
          * Access Permissions to Your Amazon S3 Resources</a>.</p> <p>All Amazon S3 on
          * Outposts REST API requests for this action require an additional parameter of
          * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
@@ -1703,24 +2331,24 @@ namespace Aws
         virtual Model::GetBucketLifecycleConfigurationOutcome GetBucketLifecycleConfiguration(const Model::GetBucketLifecycleConfigurationRequest& request) const;
 
         /**
-         *  <p>This operation gets an Amazon S3 on Outposts bucket's lifecycle
+         *  <p>This action gets an Amazon S3 on Outposts bucket's lifecycle
          * configuration. To get an S3 bucket's lifecycle configuration, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketLifecycleConfiguration.html">GetBucketLifecycleConfiguration</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Returns the
-         * lifecycle configuration information set on the Outposts bucket. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Returns the lifecycle
+         * configuration information set on the Outposts bucket. For more information, see
+         * <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
          * Amazon S3 on Outposts</a> and for information about lifecycle configuration, see
          * <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">
-         * Object Lifecycle Management</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
+         * Object Lifecycle Management</a> in <i>Amazon S3 User Guide</i>.</p> <p>To use
+         * this action, you must have permission to perform the
          * <code>s3-outposts:GetLifecycleConfiguration</code> action. The Outposts bucket
          * owner has this permission, by default. The bucket owner can grant this
          * permission to others. For more information about permissions, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions
          * Related to Bucket Subresource Operations</a> and <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing
          * Access Permissions to Your Amazon S3 Resources</a>.</p> <p>All Amazon S3 on
          * Outposts REST API requests for this action require an additional parameter of
          * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
@@ -1748,24 +2376,24 @@ namespace Aws
         virtual Model::GetBucketLifecycleConfigurationOutcomeCallable GetBucketLifecycleConfigurationCallable(const Model::GetBucketLifecycleConfigurationRequest& request) const;
 
         /**
-         *  <p>This operation gets an Amazon S3 on Outposts bucket's lifecycle
+         *  <p>This action gets an Amazon S3 on Outposts bucket's lifecycle
          * configuration. To get an S3 bucket's lifecycle configuration, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketLifecycleConfiguration.html">GetBucketLifecycleConfiguration</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Returns the
-         * lifecycle configuration information set on the Outposts bucket. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Returns the lifecycle
+         * configuration information set on the Outposts bucket. For more information, see
+         * <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
          * Amazon S3 on Outposts</a> and for information about lifecycle configuration, see
          * <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">
-         * Object Lifecycle Management</a> in <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
+         * Object Lifecycle Management</a> in <i>Amazon S3 User Guide</i>.</p> <p>To use
+         * this action, you must have permission to perform the
          * <code>s3-outposts:GetLifecycleConfiguration</code> action. The Outposts bucket
          * owner has this permission, by default. The bucket owner can grant this
          * permission to others. For more information about permissions, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">Permissions
          * Related to Bucket Subresource Operations</a> and <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing
          * Access Permissions to Your Amazon S3 Resources</a>.</p> <p>All Amazon S3 on
          * Outposts REST API requests for this action require an additional parameter of
          * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
@@ -1796,23 +2424,22 @@ namespace Aws
          *  <p>This action gets a bucket policy for an Amazon S3 on Outposts bucket.
          * To get a policy for an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketPolicy.html">GetBucketPolicy</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Returns the
-         * policy of a specified Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you are using an identity other than the root user of the
-         * AWS account that owns the bucket, the calling identity must have the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Returns the policy of a
+         * specified Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>If you are
+         * using an identity other than the root user of the Amazon Web Services account
+         * that owns the bucket, the calling identity must have the
          * <code>GetBucketPolicy</code> permissions on the specified bucket and belong to
-         * the bucket owner's account in order to use this operation.</p> <p>Only users
-         * from Outposts bucket owner account with the right permissions can perform
-         * actions on an Outposts bucket. If you don't have
-         * <code>s3-outposts:GetBucketPolicy</code> permissions or you're not using an
-         * identity that belongs to the bucket owner's account, Amazon S3 returns a
-         * <code>403 Access Denied</code> error.</p>  <p>As a security
-         * precaution, the root user of the AWS account that owns a bucket can always use
-         * this operation, even if the policy explicitly denies the root user the ability
-         * to perform this action.</p>  <p>For more information about bucket
-         * policies, see <a
+         * the bucket owner's account in order to use this action.</p> <p>Only users from
+         * Outposts bucket owner account with the right permissions can perform actions on
+         * an Outposts bucket. If you don't have <code>s3-outposts:GetBucketPolicy</code>
+         * permissions or you're not using an identity that belongs to the bucket owner's
+         * account, Amazon S3 returns a <code>403 Access Denied</code> error.</p>
+         *  <p>As a security precaution, the root user of the Amazon Web
+         * Services account that owns a bucket can always use this action, even if the
+         * policy explicitly denies the root user the ability to perform this action.</p>
+         *  <p>For more information about bucket policies, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>.</p> <p>All Amazon S3 on Outposts REST API
          * requests for this action require an additional parameter of
@@ -1839,23 +2466,22 @@ namespace Aws
          *  <p>This action gets a bucket policy for an Amazon S3 on Outposts bucket.
          * To get a policy for an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketPolicy.html">GetBucketPolicy</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Returns the
-         * policy of a specified Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you are using an identity other than the root user of the
-         * AWS account that owns the bucket, the calling identity must have the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Returns the policy of a
+         * specified Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>If you are
+         * using an identity other than the root user of the Amazon Web Services account
+         * that owns the bucket, the calling identity must have the
          * <code>GetBucketPolicy</code> permissions on the specified bucket and belong to
-         * the bucket owner's account in order to use this operation.</p> <p>Only users
-         * from Outposts bucket owner account with the right permissions can perform
-         * actions on an Outposts bucket. If you don't have
-         * <code>s3-outposts:GetBucketPolicy</code> permissions or you're not using an
-         * identity that belongs to the bucket owner's account, Amazon S3 returns a
-         * <code>403 Access Denied</code> error.</p>  <p>As a security
-         * precaution, the root user of the AWS account that owns a bucket can always use
-         * this operation, even if the policy explicitly denies the root user the ability
-         * to perform this action.</p>  <p>For more information about bucket
-         * policies, see <a
+         * the bucket owner's account in order to use this action.</p> <p>Only users from
+         * Outposts bucket owner account with the right permissions can perform actions on
+         * an Outposts bucket. If you don't have <code>s3-outposts:GetBucketPolicy</code>
+         * permissions or you're not using an identity that belongs to the bucket owner's
+         * account, Amazon S3 returns a <code>403 Access Denied</code> error.</p>
+         *  <p>As a security precaution, the root user of the Amazon Web
+         * Services account that owns a bucket can always use this action, even if the
+         * policy explicitly denies the root user the ability to perform this action.</p>
+         *  <p>For more information about bucket policies, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>.</p> <p>All Amazon S3 on Outposts REST API
          * requests for this action require an additional parameter of
@@ -1884,23 +2510,22 @@ namespace Aws
          *  <p>This action gets a bucket policy for an Amazon S3 on Outposts bucket.
          * To get a policy for an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketPolicy.html">GetBucketPolicy</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Returns the
-         * policy of a specified Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you are using an identity other than the root user of the
-         * AWS account that owns the bucket, the calling identity must have the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Returns the policy of a
+         * specified Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>If you are
+         * using an identity other than the root user of the Amazon Web Services account
+         * that owns the bucket, the calling identity must have the
          * <code>GetBucketPolicy</code> permissions on the specified bucket and belong to
-         * the bucket owner's account in order to use this operation.</p> <p>Only users
-         * from Outposts bucket owner account with the right permissions can perform
-         * actions on an Outposts bucket. If you don't have
-         * <code>s3-outposts:GetBucketPolicy</code> permissions or you're not using an
-         * identity that belongs to the bucket owner's account, Amazon S3 returns a
-         * <code>403 Access Denied</code> error.</p>  <p>As a security
-         * precaution, the root user of the AWS account that owns a bucket can always use
-         * this operation, even if the policy explicitly denies the root user the ability
-         * to perform this action.</p>  <p>For more information about bucket
-         * policies, see <a
+         * the bucket owner's account in order to use this action.</p> <p>Only users from
+         * Outposts bucket owner account with the right permissions can perform actions on
+         * an Outposts bucket. If you don't have <code>s3-outposts:GetBucketPolicy</code>
+         * permissions or you're not using an identity that belongs to the bucket owner's
+         * account, Amazon S3 returns a <code>403 Access Denied</code> error.</p>
+         *  <p>As a security precaution, the root user of the Amazon Web
+         * Services account that owns a bucket can always use this action, even if the
+         * policy explicitly denies the root user the ability to perform this action.</p>
+         *  <p>For more information about bucket policies, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>.</p> <p>All Amazon S3 on Outposts REST API
          * requests for this action require an additional parameter of
@@ -1926,24 +2551,23 @@ namespace Aws
         virtual void GetBucketPolicyAsync(const Model::GetBucketPolicyRequest& request, const GetBucketPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>This operation gets an Amazon S3 on Outposts bucket's tags. To get an
-         * S3 bucket tags, see <a
+         *  <p>This action gets an Amazon S3 on Outposts bucket's tags. To get an S3
+         * bucket tags, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketTagging.html">GetBucketTagging</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Returns the tag
-         * set associated with the Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
-         * <code>GetBucketTagging</code> action. By default, the bucket owner has this
-         * permission and can grant this permission to others.</p> <p>
-         * <code>GetBucketTagging</code> has the following special error:</p> <ul> <li>
-         * <p>Error code: <code>NoSuchTagSetError</code> </p> <ul> <li> <p>Description:
-         * There is no tag set associated with the bucket.</p> </li> </ul> </li> </ul>
-         * <p>All Amazon S3 on Outposts REST API requests for this action require an
-         * additional parameter of <code>x-amz-outpost-id</code> to be passed with the
-         * request and an S3 on Outposts endpoint hostname prefix instead of
-         * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on
-         * Outposts that uses the S3 on Outposts endpoint hostname prefix and the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Returns the tag set
+         * associated with the Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>To use this
+         * action, you must have permission to perform the <code>GetBucketTagging</code>
+         * action. By default, the bucket owner has this permission and can grant this
+         * permission to others.</p> <p> <code>GetBucketTagging</code> has the following
+         * special error:</p> <ul> <li> <p>Error code: <code>NoSuchTagSetError</code> </p>
+         * <ul> <li> <p>Description: There is no tag set associated with the bucket.</p>
+         * </li> </ul> </li> </ul> <p>All Amazon S3 on Outposts REST API requests for this
+         * action require an additional parameter of <code>x-amz-outpost-id</code> to be
+         * passed with the request and an S3 on Outposts endpoint hostname prefix instead
+         * of <code>s3-control</code>. For an example of the request syntax for Amazon S3
+         * on Outposts that uses the S3 on Outposts endpoint hostname prefix and the
          * <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketTagging.html#API_control_GetBucketTagging_Examples">Examples</a>
          * section.</p> <p>The following actions are related to
@@ -1958,24 +2582,23 @@ namespace Aws
         virtual Model::GetBucketTaggingOutcome GetBucketTagging(const Model::GetBucketTaggingRequest& request) const;
 
         /**
-         *  <p>This operation gets an Amazon S3 on Outposts bucket's tags. To get an
-         * S3 bucket tags, see <a
+         *  <p>This action gets an Amazon S3 on Outposts bucket's tags. To get an S3
+         * bucket tags, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketTagging.html">GetBucketTagging</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Returns the tag
-         * set associated with the Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
-         * <code>GetBucketTagging</code> action. By default, the bucket owner has this
-         * permission and can grant this permission to others.</p> <p>
-         * <code>GetBucketTagging</code> has the following special error:</p> <ul> <li>
-         * <p>Error code: <code>NoSuchTagSetError</code> </p> <ul> <li> <p>Description:
-         * There is no tag set associated with the bucket.</p> </li> </ul> </li> </ul>
-         * <p>All Amazon S3 on Outposts REST API requests for this action require an
-         * additional parameter of <code>x-amz-outpost-id</code> to be passed with the
-         * request and an S3 on Outposts endpoint hostname prefix instead of
-         * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on
-         * Outposts that uses the S3 on Outposts endpoint hostname prefix and the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Returns the tag set
+         * associated with the Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>To use this
+         * action, you must have permission to perform the <code>GetBucketTagging</code>
+         * action. By default, the bucket owner has this permission and can grant this
+         * permission to others.</p> <p> <code>GetBucketTagging</code> has the following
+         * special error:</p> <ul> <li> <p>Error code: <code>NoSuchTagSetError</code> </p>
+         * <ul> <li> <p>Description: There is no tag set associated with the bucket.</p>
+         * </li> </ul> </li> </ul> <p>All Amazon S3 on Outposts REST API requests for this
+         * action require an additional parameter of <code>x-amz-outpost-id</code> to be
+         * passed with the request and an S3 on Outposts endpoint hostname prefix instead
+         * of <code>s3-control</code>. For an example of the request syntax for Amazon S3
+         * on Outposts that uses the S3 on Outposts endpoint hostname prefix and the
          * <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketTagging.html#API_control_GetBucketTagging_Examples">Examples</a>
          * section.</p> <p>The following actions are related to
@@ -1992,24 +2615,23 @@ namespace Aws
         virtual Model::GetBucketTaggingOutcomeCallable GetBucketTaggingCallable(const Model::GetBucketTaggingRequest& request) const;
 
         /**
-         *  <p>This operation gets an Amazon S3 on Outposts bucket's tags. To get an
-         * S3 bucket tags, see <a
+         *  <p>This action gets an Amazon S3 on Outposts bucket's tags. To get an S3
+         * bucket tags, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketTagging.html">GetBucketTagging</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Returns the tag
-         * set associated with the Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>To use this operation, you must have permission to perform the
-         * <code>GetBucketTagging</code> action. By default, the bucket owner has this
-         * permission and can grant this permission to others.</p> <p>
-         * <code>GetBucketTagging</code> has the following special error:</p> <ul> <li>
-         * <p>Error code: <code>NoSuchTagSetError</code> </p> <ul> <li> <p>Description:
-         * There is no tag set associated with the bucket.</p> </li> </ul> </li> </ul>
-         * <p>All Amazon S3 on Outposts REST API requests for this action require an
-         * additional parameter of <code>x-amz-outpost-id</code> to be passed with the
-         * request and an S3 on Outposts endpoint hostname prefix instead of
-         * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on
-         * Outposts that uses the S3 on Outposts endpoint hostname prefix and the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Returns the tag set
+         * associated with the Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>To use this
+         * action, you must have permission to perform the <code>GetBucketTagging</code>
+         * action. By default, the bucket owner has this permission and can grant this
+         * permission to others.</p> <p> <code>GetBucketTagging</code> has the following
+         * special error:</p> <ul> <li> <p>Error code: <code>NoSuchTagSetError</code> </p>
+         * <ul> <li> <p>Description: There is no tag set associated with the bucket.</p>
+         * </li> </ul> </li> </ul> <p>All Amazon S3 on Outposts REST API requests for this
+         * action require an additional parameter of <code>x-amz-outpost-id</code> to be
+         * passed with the request and an S3 on Outposts endpoint hostname prefix instead
+         * of <code>s3-control</code>. For an example of the request syntax for Amazon S3
+         * on Outposts that uses the S3 on Outposts endpoint hostname prefix and the
          * <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketTagging.html#API_control_GetBucketTagging_Examples">Examples</a>
          * section.</p> <p>The following actions are related to
@@ -2030,8 +2652,8 @@ namespace Aws
          * must have permission to perform the <code>s3:GetJobTagging</code> action. For
          * more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
-         * access and labeling jobs using tags</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.</p>
+         * <p/> <p>Related actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutJobTagging.html">PutJobTagging</a>
@@ -2048,8 +2670,8 @@ namespace Aws
          * must have permission to perform the <code>s3:GetJobTagging</code> action. For
          * more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
-         * access and labeling jobs using tags</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.</p>
+         * <p/> <p>Related actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutJobTagging.html">PutJobTagging</a>
@@ -2068,8 +2690,8 @@ namespace Aws
          * must have permission to perform the <code>s3:GetJobTagging</code> action. For
          * more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
-         * access and labeling jobs using tags</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.</p>
+         * <p/> <p>Related actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutJobTagging.html">PutJobTagging</a>
@@ -2084,8 +2706,194 @@ namespace Aws
         virtual void GetJobTaggingAsync(const Model::GetJobTaggingRequest& request, const GetJobTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Retrieves the <code>PublicAccessBlock</code> configuration for an AWS
-         * account. For more information, see <a
+         * <p>Returns configuration information about the specified Multi-Region Access
+         * Point.</p> <p>This action will always be routed to the US West (Oregon) Region.
+         * For more information about the restrictions around managing Multi-Region Access
+         * Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to <code>GetMultiRegionAccessPoint</code>:</p>
+         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPoint">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetMultiRegionAccessPointOutcome GetMultiRegionAccessPoint(const Model::GetMultiRegionAccessPointRequest& request) const;
+
+        /**
+         * <p>Returns configuration information about the specified Multi-Region Access
+         * Point.</p> <p>This action will always be routed to the US West (Oregon) Region.
+         * For more information about the restrictions around managing Multi-Region Access
+         * Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to <code>GetMultiRegionAccessPoint</code>:</p>
+         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPoint">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetMultiRegionAccessPointOutcomeCallable GetMultiRegionAccessPointCallable(const Model::GetMultiRegionAccessPointRequest& request) const;
+
+        /**
+         * <p>Returns configuration information about the specified Multi-Region Access
+         * Point.</p> <p>This action will always be routed to the US West (Oregon) Region.
+         * For more information about the restrictions around managing Multi-Region Access
+         * Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to <code>GetMultiRegionAccessPoint</code>:</p>
+         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPoint">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetMultiRegionAccessPointAsync(const Model::GetMultiRegionAccessPointRequest& request, const GetMultiRegionAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Returns the access control policy of the specified Multi-Region Access
+         * Point.</p> <p>This action will always be routed to the US West (Oregon) Region.
+         * For more information about the restrictions around managing Multi-Region Access
+         * Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>GetMultiRegionAccessPointPolicy</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicyStatus.html">GetMultiRegionAccessPointPolicyStatus</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPointPolicy.html">PutMultiRegionAccessPointPolicy</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPointPolicy">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetMultiRegionAccessPointPolicyOutcome GetMultiRegionAccessPointPolicy(const Model::GetMultiRegionAccessPointPolicyRequest& request) const;
+
+        /**
+         * <p>Returns the access control policy of the specified Multi-Region Access
+         * Point.</p> <p>This action will always be routed to the US West (Oregon) Region.
+         * For more information about the restrictions around managing Multi-Region Access
+         * Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>GetMultiRegionAccessPointPolicy</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicyStatus.html">GetMultiRegionAccessPointPolicyStatus</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPointPolicy.html">PutMultiRegionAccessPointPolicy</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPointPolicy">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetMultiRegionAccessPointPolicyOutcomeCallable GetMultiRegionAccessPointPolicyCallable(const Model::GetMultiRegionAccessPointPolicyRequest& request) const;
+
+        /**
+         * <p>Returns the access control policy of the specified Multi-Region Access
+         * Point.</p> <p>This action will always be routed to the US West (Oregon) Region.
+         * For more information about the restrictions around managing Multi-Region Access
+         * Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>GetMultiRegionAccessPointPolicy</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicyStatus.html">GetMultiRegionAccessPointPolicyStatus</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPointPolicy.html">PutMultiRegionAccessPointPolicy</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPointPolicy">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetMultiRegionAccessPointPolicyAsync(const Model::GetMultiRegionAccessPointPolicyRequest& request, const GetMultiRegionAccessPointPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Indicates whether the specified Multi-Region Access Point has an access
+         * control policy that allows public access.</p> <p>This action will always be
+         * routed to the US West (Oregon) Region. For more information about the
+         * restrictions around managing Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>GetMultiRegionAccessPointPolicyStatus</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicy.html">GetMultiRegionAccessPointPolicy</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPointPolicy.html">PutMultiRegionAccessPointPolicy</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPointPolicyStatus">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetMultiRegionAccessPointPolicyStatusOutcome GetMultiRegionAccessPointPolicyStatus(const Model::GetMultiRegionAccessPointPolicyStatusRequest& request) const;
+
+        /**
+         * <p>Indicates whether the specified Multi-Region Access Point has an access
+         * control policy that allows public access.</p> <p>This action will always be
+         * routed to the US West (Oregon) Region. For more information about the
+         * restrictions around managing Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>GetMultiRegionAccessPointPolicyStatus</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicy.html">GetMultiRegionAccessPointPolicy</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPointPolicy.html">PutMultiRegionAccessPointPolicy</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPointPolicyStatus">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetMultiRegionAccessPointPolicyStatusOutcomeCallable GetMultiRegionAccessPointPolicyStatusCallable(const Model::GetMultiRegionAccessPointPolicyStatusRequest& request) const;
+
+        /**
+         * <p>Indicates whether the specified Multi-Region Access Point has an access
+         * control policy that allows public access.</p> <p>This action will always be
+         * routed to the US West (Oregon) Region. For more information about the
+         * restrictions around managing Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>GetMultiRegionAccessPointPolicyStatus</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicy.html">GetMultiRegionAccessPointPolicy</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPointPolicy.html">PutMultiRegionAccessPointPolicy</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetMultiRegionAccessPointPolicyStatus">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetMultiRegionAccessPointPolicyStatusAsync(const Model::GetMultiRegionAccessPointPolicyStatusRequest& request, const GetMultiRegionAccessPointPolicyStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves the <code>PublicAccessBlock</code> configuration for an Amazon Web
+         * Services account. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">
          * Using Amazon S3 block public access</a>.</p> <p>Related actions include:</p>
          * <ul> <li> <p> <a
@@ -2099,8 +2907,8 @@ namespace Aws
         virtual Model::GetPublicAccessBlockOutcome GetPublicAccessBlock(const Model::GetPublicAccessBlockRequest& request) const;
 
         /**
-         * <p>Retrieves the <code>PublicAccessBlock</code> configuration for an AWS
-         * account. For more information, see <a
+         * <p>Retrieves the <code>PublicAccessBlock</code> configuration for an Amazon Web
+         * Services account. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">
          * Using Amazon S3 block public access</a>.</p> <p>Related actions include:</p>
          * <ul> <li> <p> <a
@@ -2116,8 +2924,8 @@ namespace Aws
         virtual Model::GetPublicAccessBlockOutcomeCallable GetPublicAccessBlockCallable(const Model::GetPublicAccessBlockRequest& request) const;
 
         /**
-         * <p>Retrieves the <code>PublicAccessBlock</code> configuration for an AWS
-         * account. For more information, see <a
+         * <p>Retrieves the <code>PublicAccessBlock</code> configuration for an Amazon Web
+         * Services account. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">
          * Using Amazon S3 block public access</a>.</p> <p>Related actions include:</p>
          * <ul> <li> <p> <a
@@ -2134,14 +2942,14 @@ namespace Aws
 
         /**
          * <p>Gets the Amazon S3 Storage Lens configuration. For more information, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:GetStorageLensConfiguration</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:GetStorageLensConfiguration</code> action.
+         * For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensConfiguration">AWS
          * API Reference</a></p>
          */
@@ -2149,14 +2957,14 @@ namespace Aws
 
         /**
          * <p>Gets the Amazon S3 Storage Lens configuration. For more information, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:GetStorageLensConfiguration</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:GetStorageLensConfiguration</code> action.
+         * For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensConfiguration">AWS
          * API Reference</a></p>
          *
@@ -2166,14 +2974,14 @@ namespace Aws
 
         /**
          * <p>Gets the Amazon S3 Storage Lens configuration. For more information, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:GetStorageLensConfiguration</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:GetStorageLensConfiguration</code> action.
+         * For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensConfiguration">AWS
          * API Reference</a></p>
          *
@@ -2184,14 +2992,14 @@ namespace Aws
         /**
          * <p>Gets the tags of Amazon S3 Storage Lens configuration. For more information
          * about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:GetStorageLensConfigurationTagging</code> action. For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:GetStorageLensConfigurationTagging</code>
+         * action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensConfigurationTagging">AWS
          * API Reference</a></p>
          */
@@ -2200,14 +3008,14 @@ namespace Aws
         /**
          * <p>Gets the tags of Amazon S3 Storage Lens configuration. For more information
          * about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:GetStorageLensConfigurationTagging</code> action. For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:GetStorageLensConfigurationTagging</code>
+         * action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensConfigurationTagging">AWS
          * API Reference</a></p>
          *
@@ -2218,14 +3026,14 @@ namespace Aws
         /**
          * <p>Gets the tags of Amazon S3 Storage Lens configuration. For more information
          * about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:GetStorageLensConfigurationTagging</code> action. For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:GetStorageLensConfigurationTagging</code>
+         * action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensConfigurationTagging">AWS
          * API Reference</a></p>
          *
@@ -2316,12 +3124,67 @@ namespace Aws
         virtual void ListAccessPointsAsync(const Model::ListAccessPointsRequest& request, const ListAccessPointsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Returns some or all (up to 1,000) access points associated with the Object
+         * Lambda Access Point per call. If there are more access points than what can be
+         * returned in one call, the response will include a continuation token that you
+         * can use to list the additional access points.</p> <p>The following actions are
+         * related to <code>ListAccessPointsForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPointForObjectLambda.html">CreateAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointForObjectLambda.html">DeleteAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointForObjectLambda.html">GetAccessPointForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessPointsForObjectLambda">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListAccessPointsForObjectLambdaOutcome ListAccessPointsForObjectLambda(const Model::ListAccessPointsForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Returns some or all (up to 1,000) access points associated with the Object
+         * Lambda Access Point per call. If there are more access points than what can be
+         * returned in one call, the response will include a continuation token that you
+         * can use to list the additional access points.</p> <p>The following actions are
+         * related to <code>ListAccessPointsForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPointForObjectLambda.html">CreateAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointForObjectLambda.html">DeleteAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointForObjectLambda.html">GetAccessPointForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessPointsForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListAccessPointsForObjectLambdaOutcomeCallable ListAccessPointsForObjectLambdaCallable(const Model::ListAccessPointsForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Returns some or all (up to 1,000) access points associated with the Object
+         * Lambda Access Point per call. If there are more access points than what can be
+         * returned in one call, the response will include a continuation token that you
+         * can use to list the additional access points.</p> <p>The following actions are
+         * related to <code>ListAccessPointsForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPointForObjectLambda.html">CreateAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointForObjectLambda.html">DeleteAccessPointForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointForObjectLambda.html">GetAccessPointForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessPointsForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListAccessPointsForObjectLambdaAsync(const Model::ListAccessPointsForObjectLambdaRequest& request, const ListAccessPointsForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Lists current S3 Batch Operations jobs and jobs that have ended within the
-         * last 30 days for the AWS account making the request. For more information, see
-         * <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>Related actions include:</p> <p/> <ul> <li> <p> <a
+         * last 30 days for the Amazon Web Services account making the request. For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p>Related actions
+         * include:</p> <p/> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeJob.html">DescribeJob</a>
@@ -2337,11 +3200,11 @@ namespace Aws
 
         /**
          * <p>Lists current S3 Batch Operations jobs and jobs that have ended within the
-         * last 30 days for the AWS account making the request. For more information, see
-         * <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>Related actions include:</p> <p/> <ul> <li> <p> <a
+         * last 30 days for the Amazon Web Services account making the request. For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p>Related actions
+         * include:</p> <p/> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeJob.html">DescribeJob</a>
@@ -2359,11 +3222,11 @@ namespace Aws
 
         /**
          * <p>Lists current S3 Batch Operations jobs and jobs that have ended within the
-         * last 30 days for the AWS account making the request. For more information, see
-         * <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>Related actions include:</p> <p/> <ul> <li> <p> <a
+         * last 30 days for the Amazon Web Services account making the request. For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p>Related actions
+         * include:</p> <p/> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeJob.html">DescribeJob</a>
@@ -2380,13 +3243,89 @@ namespace Aws
         virtual void ListJobsAsync(const Model::ListJobsRequest& request, const ListJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Returns a list of the Multi-Region Access Points currently associated with
+         * the specified Amazon Web Services account. Each call can return up to 100
+         * Multi-Region Access Points, the maximum number of Multi-Region Access Points
+         * that can be associated with a single account.</p> <p>This action will always be
+         * routed to the US West (Oregon) Region. For more information about the
+         * restrictions around managing Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to <code>ListMultiRegionAccessPoint</code>:</p>
+         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListMultiRegionAccessPoints">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListMultiRegionAccessPointsOutcome ListMultiRegionAccessPoints(const Model::ListMultiRegionAccessPointsRequest& request) const;
+
+        /**
+         * <p>Returns a list of the Multi-Region Access Points currently associated with
+         * the specified Amazon Web Services account. Each call can return up to 100
+         * Multi-Region Access Points, the maximum number of Multi-Region Access Points
+         * that can be associated with a single account.</p> <p>This action will always be
+         * routed to the US West (Oregon) Region. For more information about the
+         * restrictions around managing Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to <code>ListMultiRegionAccessPoint</code>:</p>
+         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListMultiRegionAccessPoints">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListMultiRegionAccessPointsOutcomeCallable ListMultiRegionAccessPointsCallable(const Model::ListMultiRegionAccessPointsRequest& request) const;
+
+        /**
+         * <p>Returns a list of the Multi-Region Access Points currently associated with
+         * the specified Amazon Web Services account. Each call can return up to 100
+         * Multi-Region Access Points, the maximum number of Multi-Region Access Points
+         * that can be associated with a single account.</p> <p>This action will always be
+         * routed to the US West (Oregon) Region. For more information about the
+         * restrictions around managing Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to <code>ListMultiRegionAccessPoint</code>:</p>
+         * <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListMultiRegionAccessPoints">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListMultiRegionAccessPointsAsync(const Model::ListMultiRegionAccessPointsRequest& request, const ListMultiRegionAccessPointsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Returns a list of all Outposts buckets in an Outpost that are owned by the
          * authenticated sender of the request. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>For an example of the request syntax for Amazon S3 on Outposts
-         * that uses the S3 on Outposts endpoint hostname prefix and
-         * <code>x-amz-outpost-id</code> in your request, see the <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>For an
+         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
+         * Outposts endpoint hostname prefix and <code>x-amz-outpost-id</code> in your
+         * request, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListRegionalBuckets.html#API_control_ListRegionalBuckets_Examples">Examples</a>
          * section.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListRegionalBuckets">AWS
@@ -2397,11 +3336,11 @@ namespace Aws
         /**
          * <p>Returns a list of all Outposts buckets in an Outpost that are owned by the
          * authenticated sender of the request. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>For an example of the request syntax for Amazon S3 on Outposts
-         * that uses the S3 on Outposts endpoint hostname prefix and
-         * <code>x-amz-outpost-id</code> in your request, see the <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>For an
+         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
+         * Outposts endpoint hostname prefix and <code>x-amz-outpost-id</code> in your
+         * request, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListRegionalBuckets.html#API_control_ListRegionalBuckets_Examples">Examples</a>
          * section.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListRegionalBuckets">AWS
@@ -2414,11 +3353,11 @@ namespace Aws
         /**
          * <p>Returns a list of all Outposts buckets in an Outpost that are owned by the
          * authenticated sender of the request. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>For an example of the request syntax for Amazon S3 on Outposts
-         * that uses the S3 on Outposts endpoint hostname prefix and
-         * <code>x-amz-outpost-id</code> in your request, see the <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>For an
+         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
+         * Outposts endpoint hostname prefix and <code>x-amz-outpost-id</code> in your
+         * request, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListRegionalBuckets.html#API_control_ListRegionalBuckets_Examples">Examples</a>
          * section.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListRegionalBuckets">AWS
@@ -2431,14 +3370,14 @@ namespace Aws
         /**
          * <p>Gets a list of Amazon S3 Storage Lens configurations. For more information
          * about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:ListStorageLensConfigurations</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:ListStorageLensConfigurations</code> action.
+         * For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListStorageLensConfigurations">AWS
          * API Reference</a></p>
          */
@@ -2447,14 +3386,14 @@ namespace Aws
         /**
          * <p>Gets a list of Amazon S3 Storage Lens configurations. For more information
          * about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:ListStorageLensConfigurations</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:ListStorageLensConfigurations</code> action.
+         * For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListStorageLensConfigurations">AWS
          * API Reference</a></p>
          *
@@ -2465,20 +3404,57 @@ namespace Aws
         /**
          * <p>Gets a list of Amazon S3 Storage Lens configurations. For more information
          * about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:ListStorageLensConfigurations</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:ListStorageLensConfigurations</code> action.
+         * For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListStorageLensConfigurations">AWS
          * API Reference</a></p>
          *
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void ListStorageLensConfigurationsAsync(const Model::ListStorageLensConfigurationsRequest& request, const ListStorageLensConfigurationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Replaces configuration for an Object Lambda Access Point.</p> <p>The
+         * following actions are related to
+         * <code>PutAccessPointConfigurationForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointConfigurationForObjectLambda.html">GetAccessPointConfigurationForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutAccessPointConfigurationForObjectLambda">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::PutAccessPointConfigurationForObjectLambdaOutcome PutAccessPointConfigurationForObjectLambda(const Model::PutAccessPointConfigurationForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Replaces configuration for an Object Lambda Access Point.</p> <p>The
+         * following actions are related to
+         * <code>PutAccessPointConfigurationForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointConfigurationForObjectLambda.html">GetAccessPointConfigurationForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutAccessPointConfigurationForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::PutAccessPointConfigurationForObjectLambdaOutcomeCallable PutAccessPointConfigurationForObjectLambdaCallable(const Model::PutAccessPointConfigurationForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Replaces configuration for an Object Lambda Access Point.</p> <p>The
+         * following actions are related to
+         * <code>PutAccessPointConfigurationForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointConfigurationForObjectLambda.html">GetAccessPointConfigurationForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutAccessPointConfigurationForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void PutAccessPointConfigurationForObjectLambdaAsync(const Model::PutAccessPointConfigurationForObjectLambdaRequest& request, const PutAccessPointConfigurationForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Associates an access policy with the specified access point. Each access
@@ -2551,22 +3527,71 @@ namespace Aws
         virtual void PutAccessPointPolicyAsync(const Model::PutAccessPointPolicyRequest& request, const PutAccessPointPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Creates or replaces resource policy for an Object Lambda Access Point. For an
+         * example policy, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/olap-create.html#olap-create-cli">Creating
+         * Object Lambda Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>PutAccessPointPolicyForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointPolicyForObjectLambda.html">DeleteAccessPointPolicyForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointPolicyForObjectLambda.html">GetAccessPointPolicyForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutAccessPointPolicyForObjectLambda">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::PutAccessPointPolicyForObjectLambdaOutcome PutAccessPointPolicyForObjectLambda(const Model::PutAccessPointPolicyForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Creates or replaces resource policy for an Object Lambda Access Point. For an
+         * example policy, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/olap-create.html#olap-create-cli">Creating
+         * Object Lambda Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>PutAccessPointPolicyForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointPolicyForObjectLambda.html">DeleteAccessPointPolicyForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointPolicyForObjectLambda.html">GetAccessPointPolicyForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutAccessPointPolicyForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::PutAccessPointPolicyForObjectLambdaOutcomeCallable PutAccessPointPolicyForObjectLambdaCallable(const Model::PutAccessPointPolicyForObjectLambdaRequest& request) const;
+
+        /**
+         * <p>Creates or replaces resource policy for an Object Lambda Access Point. For an
+         * example policy, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/olap-create.html#olap-create-cli">Creating
+         * Object Lambda Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>PutAccessPointPolicyForObjectLambda</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointPolicyForObjectLambda.html">DeleteAccessPointPolicyForObjectLambda</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointPolicyForObjectLambda.html">GetAccessPointPolicyForObjectLambda</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutAccessPointPolicyForObjectLambda">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void PutAccessPointPolicyForObjectLambdaAsync(const Model::PutAccessPointPolicyForObjectLambdaRequest& request, const PutAccessPointPolicyForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          *  <p>This action puts a lifecycle configuration to an Amazon S3 on Outposts
          * bucket. To put a lifecycle configuration to an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Creates a new
-         * lifecycle configuration for the Outposts bucket or replaces an existing
-         * lifecycle configuration. Outposts buckets only support lifecycle configurations
-         * that delete/expire objects after a certain period of time and abort incomplete
-         * multipart uploads. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Managing
-         * Lifecycle Permissions for Amazon S3 on Outposts</a>.</p> <p/> <p>All Amazon S3
-         * on Outposts REST API requests for this action require an additional parameter of
-         * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
-         * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
-         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
-         * Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived
-         * using the access point ARN, see the <a
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Creates a new lifecycle
+         * configuration for the S3 on Outposts bucket or replaces an existing lifecycle
+         * configuration. Outposts buckets only support lifecycle configurations that
+         * delete/expire objects after a certain period of time and abort incomplete
+         * multipart uploads.</p> <p/> <p>All Amazon S3 on Outposts REST API requests for
+         * this action require an additional parameter of <code>x-amz-outpost-id</code> to
+         * be passed with the request and an S3 on Outposts endpoint hostname prefix
+         * instead of <code>s3-control</code>. For an example of the request syntax for
+         * Amazon S3 on Outposts that uses the S3 on Outposts endpoint hostname prefix and
+         * the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketLifecycleConfiguration.html#API_control_PutBucketLifecycleConfiguration_Examples">Examples</a>
          * section.</p> <p>The following actions are related to
          * <code>PutBucketLifecycleConfiguration</code>:</p> <ul> <li> <p> <a
@@ -2583,19 +3608,16 @@ namespace Aws
          *  <p>This action puts a lifecycle configuration to an Amazon S3 on Outposts
          * bucket. To put a lifecycle configuration to an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Creates a new
-         * lifecycle configuration for the Outposts bucket or replaces an existing
-         * lifecycle configuration. Outposts buckets only support lifecycle configurations
-         * that delete/expire objects after a certain period of time and abort incomplete
-         * multipart uploads. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Managing
-         * Lifecycle Permissions for Amazon S3 on Outposts</a>.</p> <p/> <p>All Amazon S3
-         * on Outposts REST API requests for this action require an additional parameter of
-         * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
-         * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
-         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
-         * Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived
-         * using the access point ARN, see the <a
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Creates a new lifecycle
+         * configuration for the S3 on Outposts bucket or replaces an existing lifecycle
+         * configuration. Outposts buckets only support lifecycle configurations that
+         * delete/expire objects after a certain period of time and abort incomplete
+         * multipart uploads.</p> <p/> <p>All Amazon S3 on Outposts REST API requests for
+         * this action require an additional parameter of <code>x-amz-outpost-id</code> to
+         * be passed with the request and an S3 on Outposts endpoint hostname prefix
+         * instead of <code>s3-control</code>. For an example of the request syntax for
+         * Amazon S3 on Outposts that uses the S3 on Outposts endpoint hostname prefix and
+         * the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketLifecycleConfiguration.html#API_control_PutBucketLifecycleConfiguration_Examples">Examples</a>
          * section.</p> <p>The following actions are related to
          * <code>PutBucketLifecycleConfiguration</code>:</p> <ul> <li> <p> <a
@@ -2614,19 +3636,16 @@ namespace Aws
          *  <p>This action puts a lifecycle configuration to an Amazon S3 on Outposts
          * bucket. To put a lifecycle configuration to an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Creates a new
-         * lifecycle configuration for the Outposts bucket or replaces an existing
-         * lifecycle configuration. Outposts buckets only support lifecycle configurations
-         * that delete/expire objects after a certain period of time and abort incomplete
-         * multipart uploads. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Managing
-         * Lifecycle Permissions for Amazon S3 on Outposts</a>.</p> <p/> <p>All Amazon S3
-         * on Outposts REST API requests for this action require an additional parameter of
-         * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on
-         * Outposts endpoint hostname prefix instead of <code>s3-control</code>. For an
-         * example of the request syntax for Amazon S3 on Outposts that uses the S3 on
-         * Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived
-         * using the access point ARN, see the <a
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Creates a new lifecycle
+         * configuration for the S3 on Outposts bucket or replaces an existing lifecycle
+         * configuration. Outposts buckets only support lifecycle configurations that
+         * delete/expire objects after a certain period of time and abort incomplete
+         * multipart uploads.</p> <p/> <p>All Amazon S3 on Outposts REST API requests for
+         * this action require an additional parameter of <code>x-amz-outpost-id</code> to
+         * be passed with the request and an S3 on Outposts endpoint hostname prefix
+         * instead of <code>s3-control</code>. For an example of the request syntax for
+         * Amazon S3 on Outposts that uses the S3 on Outposts endpoint hostname prefix and
+         * the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketLifecycleConfiguration.html#API_control_PutBucketLifecycleConfiguration_Examples">Examples</a>
          * section.</p> <p>The following actions are related to
          * <code>PutBucketLifecycleConfiguration</code>:</p> <ul> <li> <p> <a
@@ -2645,22 +3664,22 @@ namespace Aws
          *  <p>This action puts a bucket policy to an Amazon S3 on Outposts bucket.
          * To put a policy on an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketPolicy.html">PutBucketPolicy</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Applies an
-         * Amazon S3 bucket policy to an Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you are using an identity other than the root user of the
-         * AWS account that owns the Outposts bucket, the calling identity must have the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Applies an Amazon S3
+         * bucket policy to an Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>If you are
+         * using an identity other than the root user of the Amazon Web Services account
+         * that owns the Outposts bucket, the calling identity must have the
          * <code>PutBucketPolicy</code> permissions on the specified Outposts bucket and
-         * belong to the bucket owner's account in order to use this operation.</p> <p>If
-         * you don't have <code>PutBucketPolicy</code> permissions, Amazon S3 returns a
+         * belong to the bucket owner's account in order to use this action.</p> <p>If you
+         * don't have <code>PutBucketPolicy</code> permissions, Amazon S3 returns a
          * <code>403 Access Denied</code> error. If you have the correct permissions, but
          * you're not using an identity that belongs to the bucket owner's account, Amazon
          * S3 returns a <code>405 Method Not Allowed</code> error.</p>  <p> As a
-         * security precaution, the root user of the AWS account that owns a bucket can
-         * always use this operation, even if the policy explicitly denies the root user
-         * the ability to perform this action. </p>  <p>For more information
-         * about bucket policies, see <a
+         * security precaution, the root user of the Amazon Web Services account that owns
+         * a bucket can always use this action, even if the policy explicitly denies the
+         * root user the ability to perform this action. </p>  <p>For more
+         * information about bucket policies, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>.</p> <p>All Amazon S3 on Outposts REST API
          * requests for this action require an additional parameter of
@@ -2685,22 +3704,22 @@ namespace Aws
          *  <p>This action puts a bucket policy to an Amazon S3 on Outposts bucket.
          * To put a policy on an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketPolicy.html">PutBucketPolicy</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Applies an
-         * Amazon S3 bucket policy to an Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you are using an identity other than the root user of the
-         * AWS account that owns the Outposts bucket, the calling identity must have the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Applies an Amazon S3
+         * bucket policy to an Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>If you are
+         * using an identity other than the root user of the Amazon Web Services account
+         * that owns the Outposts bucket, the calling identity must have the
          * <code>PutBucketPolicy</code> permissions on the specified Outposts bucket and
-         * belong to the bucket owner's account in order to use this operation.</p> <p>If
-         * you don't have <code>PutBucketPolicy</code> permissions, Amazon S3 returns a
+         * belong to the bucket owner's account in order to use this action.</p> <p>If you
+         * don't have <code>PutBucketPolicy</code> permissions, Amazon S3 returns a
          * <code>403 Access Denied</code> error. If you have the correct permissions, but
          * you're not using an identity that belongs to the bucket owner's account, Amazon
          * S3 returns a <code>405 Method Not Allowed</code> error.</p>  <p> As a
-         * security precaution, the root user of the AWS account that owns a bucket can
-         * always use this operation, even if the policy explicitly denies the root user
-         * the ability to perform this action. </p>  <p>For more information
-         * about bucket policies, see <a
+         * security precaution, the root user of the Amazon Web Services account that owns
+         * a bucket can always use this action, even if the policy explicitly denies the
+         * root user the ability to perform this action. </p>  <p>For more
+         * information about bucket policies, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>.</p> <p>All Amazon S3 on Outposts REST API
          * requests for this action require an additional parameter of
@@ -2727,22 +3746,22 @@ namespace Aws
          *  <p>This action puts a bucket policy to an Amazon S3 on Outposts bucket.
          * To put a policy on an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketPolicy.html">PutBucketPolicy</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Applies an
-         * Amazon S3 bucket policy to an Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>If you are using an identity other than the root user of the
-         * AWS account that owns the Outposts bucket, the calling identity must have the
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Applies an Amazon S3
+         * bucket policy to an Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>If you are
+         * using an identity other than the root user of the Amazon Web Services account
+         * that owns the Outposts bucket, the calling identity must have the
          * <code>PutBucketPolicy</code> permissions on the specified Outposts bucket and
-         * belong to the bucket owner's account in order to use this operation.</p> <p>If
-         * you don't have <code>PutBucketPolicy</code> permissions, Amazon S3 returns a
+         * belong to the bucket owner's account in order to use this action.</p> <p>If you
+         * don't have <code>PutBucketPolicy</code> permissions, Amazon S3 returns a
          * <code>403 Access Denied</code> error. If you have the correct permissions, but
          * you're not using an identity that belongs to the bucket owner's account, Amazon
          * S3 returns a <code>405 Method Not Allowed</code> error.</p>  <p> As a
-         * security precaution, the root user of the AWS account that owns a bucket can
-         * always use this operation, even if the policy explicitly denies the root user
-         * the ability to perform this action. </p>  <p>For more information
-         * about bucket policies, see <a
+         * security precaution, the root user of the Amazon Web Services account that owns
+         * a bucket can always use this action, even if the policy explicitly denies the
+         * root user the ability to perform this action. </p>  <p>For more
+         * information about bucket policies, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-iam-policies.html">Using
          * Bucket Policies and User Policies</a>.</p> <p>All Amazon S3 on Outposts REST API
          * requests for this action require an additional parameter of
@@ -2769,31 +3788,31 @@ namespace Aws
          *  <p>This action puts tags on an Amazon S3 on Outposts bucket. To put tags
          * on an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketTagging.html">PutBucketTagging</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Sets the tags
-         * for an Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>Use tags to organize your AWS bill to reflect your own cost
-         * structure. To do this, sign up to get your AWS account bill with tag key values
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Sets the tags for an S3
+         * on Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>Use tags to
+         * organize your Amazon Web Services bill to reflect your own cost structure. To do
+         * this, sign up to get your Amazon Web Services account bill with tag key values
          * included. Then, to see the cost of combined resources, organize your billing
          * information according to resources with the same tag key values. For example,
          * you can tag several resources with a specific application name, and then
          * organize your billing information to see the total cost of that application
          * across several services. For more information, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Cost
-         * Allocation and Tagging</a>.</p>  <p>Within a bucket, if you add a tag that
+         * allocation and tagging</a>.</p>  <p>Within a bucket, if you add a tag that
          * has the same key as an existing tag, the new value overwrites the old value. For
          * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/CostAllocTagging.html">Using
-         * Cost Allocation in Amazon S3 Bucket Tags</a>.</p>  <p>To use this
-         * operation, you must have permissions to perform the
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CostAllocTagging.html">
+         * Using cost allocation in Amazon S3 bucket tags</a>.</p>  <p>To use this
+         * action, you must have permissions to perform the
          * <code>s3-outposts:PutBucketTagging</code> action. The Outposts bucket owner has
          * this permission by default and can grant this permission to others. For more
          * information about permissions, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">
          * Permissions Related to Bucket Subresource Operations</a> and <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing
-         * Access Permissions to Your Amazon S3 Resources</a>.</p> <p>
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing
+         * access permissions to your Amazon S3 resources</a>.</p> <p>
          * <code>PutBucketTagging</code> has the following special errors:</p> <ul> <li>
          * <p>Error code: <code>InvalidTagError</code> </p> <ul> <li> <p>Description: The
          * tag provided was not a valid tag. This error can occur if the tag did not pass
@@ -2801,12 +3820,12 @@ namespace Aws
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">
          * User-Defined Tag Restrictions</a> and <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/aws-tag-restrictions.html">
-         * AWS-Generated Cost Allocation Tag Restrictions</a>.</p> </li> </ul> </li> <li>
-         * <p>Error code: <code>MalformedXMLError</code> </p> <ul> <li> <p>Description: The
-         * XML provided does not match the schema.</p> </li> </ul> </li> <li> <p>Error
-         * code: <code>OperationAbortedError </code> </p> <ul> <li> <p>Description: A
-         * conflicting conditional operation is currently in progress against this
-         * resource. Try again.</p> </li> </ul> </li> <li> <p>Error code:
+         * Amazon Web Services-Generated Cost Allocation Tag Restrictions</a>.</p> </li>
+         * </ul> </li> <li> <p>Error code: <code>MalformedXMLError</code> </p> <ul> <li>
+         * <p>Description: The XML provided does not match the schema.</p> </li> </ul>
+         * </li> <li> <p>Error code: <code>OperationAbortedError </code> </p> <ul> <li>
+         * <p>Description: A conflicting conditional action is currently in progress
+         * against this resource. Try again.</p> </li> </ul> </li> <li> <p>Error code:
          * <code>InternalError</code> </p> <ul> <li> <p>Description: The service was unable
          * to apply the provided tag to the bucket.</p> </li> </ul> </li> </ul> <p>All
          * Amazon S3 on Outposts REST API requests for this action require an additional
@@ -2831,31 +3850,31 @@ namespace Aws
          *  <p>This action puts tags on an Amazon S3 on Outposts bucket. To put tags
          * on an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketTagging.html">PutBucketTagging</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Sets the tags
-         * for an Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>Use tags to organize your AWS bill to reflect your own cost
-         * structure. To do this, sign up to get your AWS account bill with tag key values
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Sets the tags for an S3
+         * on Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>Use tags to
+         * organize your Amazon Web Services bill to reflect your own cost structure. To do
+         * this, sign up to get your Amazon Web Services account bill with tag key values
          * included. Then, to see the cost of combined resources, organize your billing
          * information according to resources with the same tag key values. For example,
          * you can tag several resources with a specific application name, and then
          * organize your billing information to see the total cost of that application
          * across several services. For more information, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Cost
-         * Allocation and Tagging</a>.</p>  <p>Within a bucket, if you add a tag that
+         * allocation and tagging</a>.</p>  <p>Within a bucket, if you add a tag that
          * has the same key as an existing tag, the new value overwrites the old value. For
          * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/CostAllocTagging.html">Using
-         * Cost Allocation in Amazon S3 Bucket Tags</a>.</p>  <p>To use this
-         * operation, you must have permissions to perform the
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CostAllocTagging.html">
+         * Using cost allocation in Amazon S3 bucket tags</a>.</p>  <p>To use this
+         * action, you must have permissions to perform the
          * <code>s3-outposts:PutBucketTagging</code> action. The Outposts bucket owner has
          * this permission by default and can grant this permission to others. For more
          * information about permissions, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">
          * Permissions Related to Bucket Subresource Operations</a> and <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing
-         * Access Permissions to Your Amazon S3 Resources</a>.</p> <p>
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing
+         * access permissions to your Amazon S3 resources</a>.</p> <p>
          * <code>PutBucketTagging</code> has the following special errors:</p> <ul> <li>
          * <p>Error code: <code>InvalidTagError</code> </p> <ul> <li> <p>Description: The
          * tag provided was not a valid tag. This error can occur if the tag did not pass
@@ -2863,12 +3882,12 @@ namespace Aws
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">
          * User-Defined Tag Restrictions</a> and <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/aws-tag-restrictions.html">
-         * AWS-Generated Cost Allocation Tag Restrictions</a>.</p> </li> </ul> </li> <li>
-         * <p>Error code: <code>MalformedXMLError</code> </p> <ul> <li> <p>Description: The
-         * XML provided does not match the schema.</p> </li> </ul> </li> <li> <p>Error
-         * code: <code>OperationAbortedError </code> </p> <ul> <li> <p>Description: A
-         * conflicting conditional operation is currently in progress against this
-         * resource. Try again.</p> </li> </ul> </li> <li> <p>Error code:
+         * Amazon Web Services-Generated Cost Allocation Tag Restrictions</a>.</p> </li>
+         * </ul> </li> <li> <p>Error code: <code>MalformedXMLError</code> </p> <ul> <li>
+         * <p>Description: The XML provided does not match the schema.</p> </li> </ul>
+         * </li> <li> <p>Error code: <code>OperationAbortedError </code> </p> <ul> <li>
+         * <p>Description: A conflicting conditional action is currently in progress
+         * against this resource. Try again.</p> </li> </ul> </li> <li> <p>Error code:
          * <code>InternalError</code> </p> <ul> <li> <p>Description: The service was unable
          * to apply the provided tag to the bucket.</p> </li> </ul> </li> </ul> <p>All
          * Amazon S3 on Outposts REST API requests for this action require an additional
@@ -2895,31 +3914,31 @@ namespace Aws
          *  <p>This action puts tags on an Amazon S3 on Outposts bucket. To put tags
          * on an S3 bucket, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketTagging.html">PutBucketTagging</a>
-         * in the <i>Amazon Simple Storage Service API</i>. </p>  <p>Sets the tags
-         * for an Outposts bucket. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html">Using
-         * Amazon S3 on Outposts</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p>Use tags to organize your AWS bill to reflect your own cost
-         * structure. To do this, sign up to get your AWS account bill with tag key values
+         * in the <i>Amazon S3 API Reference</i>. </p>  <p>Sets the tags for an S3
+         * on Outposts bucket. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using
+         * Amazon S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.</p> <p>Use tags to
+         * organize your Amazon Web Services bill to reflect your own cost structure. To do
+         * this, sign up to get your Amazon Web Services account bill with tag key values
          * included. Then, to see the cost of combined resources, organize your billing
          * information according to resources with the same tag key values. For example,
          * you can tag several resources with a specific application name, and then
          * organize your billing information to see the total cost of that application
          * across several services. For more information, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Cost
-         * Allocation and Tagging</a>.</p>  <p>Within a bucket, if you add a tag that
+         * allocation and tagging</a>.</p>  <p>Within a bucket, if you add a tag that
          * has the same key as an existing tag, the new value overwrites the old value. For
          * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/CostAllocTagging.html">Using
-         * Cost Allocation in Amazon S3 Bucket Tags</a>.</p>  <p>To use this
-         * operation, you must have permissions to perform the
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CostAllocTagging.html">
+         * Using cost allocation in Amazon S3 bucket tags</a>.</p>  <p>To use this
+         * action, you must have permissions to perform the
          * <code>s3-outposts:PutBucketTagging</code> action. The Outposts bucket owner has
          * this permission by default and can grant this permission to others. For more
          * information about permissions, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-with-s3-actions.html#using-with-s3-actions-related-to-bucket-subresources">
          * Permissions Related to Bucket Subresource Operations</a> and <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing
-         * Access Permissions to Your Amazon S3 Resources</a>.</p> <p>
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html">Managing
+         * access permissions to your Amazon S3 resources</a>.</p> <p>
          * <code>PutBucketTagging</code> has the following special errors:</p> <ul> <li>
          * <p>Error code: <code>InvalidTagError</code> </p> <ul> <li> <p>Description: The
          * tag provided was not a valid tag. This error can occur if the tag did not pass
@@ -2927,12 +3946,12 @@ namespace Aws
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">
          * User-Defined Tag Restrictions</a> and <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/aws-tag-restrictions.html">
-         * AWS-Generated Cost Allocation Tag Restrictions</a>.</p> </li> </ul> </li> <li>
-         * <p>Error code: <code>MalformedXMLError</code> </p> <ul> <li> <p>Description: The
-         * XML provided does not match the schema.</p> </li> </ul> </li> <li> <p>Error
-         * code: <code>OperationAbortedError </code> </p> <ul> <li> <p>Description: A
-         * conflicting conditional operation is currently in progress against this
-         * resource. Try again.</p> </li> </ul> </li> <li> <p>Error code:
+         * Amazon Web Services-Generated Cost Allocation Tag Restrictions</a>.</p> </li>
+         * </ul> </li> <li> <p>Error code: <code>MalformedXMLError</code> </p> <ul> <li>
+         * <p>Description: The XML provided does not match the schema.</p> </li> </ul>
+         * </li> <li> <p>Error code: <code>OperationAbortedError </code> </p> <ul> <li>
+         * <p>Description: A conflicting conditional action is currently in progress
+         * against this resource. Try again.</p> </li> </ul> </li> <li> <p>Error code:
          * <code>InternalError</code> </p> <ul> <li> <p>Description: The service was unable
          * to apply the provided tag to the bucket.</p> </li> </ul> </li> </ul> <p>All
          * Amazon S3 on Outposts REST API requests for this action require an additional
@@ -2966,13 +3985,12 @@ namespace Aws
          * modify that tag set, and use this action to replace the tag set with the one you
          * modified. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
-         * access and labeling jobs using tags</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>. </p> <p/>  <ul> <li> <p>If you send this request with
-         * an empty tag set, Amazon S3 deletes the existing tag set on the Batch Operations
-         * job. If you use this method, you are charged for a Tier 1 Request (PUT). For
-         * more information, see <a href="http://aws.amazon.com/s3/pricing/">Amazon S3
-         * pricing</a>.</p> </li> <li> <p>For deleting existing tags for your Batch
-         * Operations job, a <a
+         * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>. </p>
+         * <p/>  <ul> <li> <p>If you send this request with an empty tag set, Amazon
+         * S3 deletes the existing tag set on the Batch Operations job. If you use this
+         * method, you are charged for a Tier 1 Request (PUT). For more information, see <a
+         * href="http://aws.amazon.com/s3/pricing/">Amazon S3 pricing</a>.</p> </li> <li>
+         * <p>For deleting existing tags for your Batch Operations job, a <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteJobTagging.html">DeleteJobTagging</a>
          * request is preferred because it achieves the same result without incurring
          * charges.</p> </li> <li> <p>A few things to consider about using tags:</p> <ul>
@@ -2983,10 +4001,10 @@ namespace Aws
          * </li> <li> <p>The key and values are case sensitive.</p> </li> <li> <p>For
          * tagging-related restrictions related to characters and encodings, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined
-         * Tag Restrictions</a> in the <i>AWS Billing and Cost Management User
-         * Guide</i>.</p> </li> </ul> </li> </ul>  <p/> <p>To use this operation,
-         * you must have permission to perform the <code>s3:PutJobTagging</code>
-         * action.</p> <p>Related actions include:</p> <ul> <li> <p> <a
+         * Tag Restrictions</a> in the <i>Billing and Cost Management User Guide</i>.</p>
+         * </li> </ul> </li> </ul>  <p/> <p>To use this action, you must have
+         * permission to perform the <code>s3:PutJobTagging</code> action.</p> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreatJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetJobTagging.html">GetJobTagging</a>
@@ -3009,13 +4027,12 @@ namespace Aws
          * modify that tag set, and use this action to replace the tag set with the one you
          * modified. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
-         * access and labeling jobs using tags</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>. </p> <p/>  <ul> <li> <p>If you send this request with
-         * an empty tag set, Amazon S3 deletes the existing tag set on the Batch Operations
-         * job. If you use this method, you are charged for a Tier 1 Request (PUT). For
-         * more information, see <a href="http://aws.amazon.com/s3/pricing/">Amazon S3
-         * pricing</a>.</p> </li> <li> <p>For deleting existing tags for your Batch
-         * Operations job, a <a
+         * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>. </p>
+         * <p/>  <ul> <li> <p>If you send this request with an empty tag set, Amazon
+         * S3 deletes the existing tag set on the Batch Operations job. If you use this
+         * method, you are charged for a Tier 1 Request (PUT). For more information, see <a
+         * href="http://aws.amazon.com/s3/pricing/">Amazon S3 pricing</a>.</p> </li> <li>
+         * <p>For deleting existing tags for your Batch Operations job, a <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteJobTagging.html">DeleteJobTagging</a>
          * request is preferred because it achieves the same result without incurring
          * charges.</p> </li> <li> <p>A few things to consider about using tags:</p> <ul>
@@ -3026,10 +4043,10 @@ namespace Aws
          * </li> <li> <p>The key and values are case sensitive.</p> </li> <li> <p>For
          * tagging-related restrictions related to characters and encodings, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined
-         * Tag Restrictions</a> in the <i>AWS Billing and Cost Management User
-         * Guide</i>.</p> </li> </ul> </li> </ul>  <p/> <p>To use this operation,
-         * you must have permission to perform the <code>s3:PutJobTagging</code>
-         * action.</p> <p>Related actions include:</p> <ul> <li> <p> <a
+         * Tag Restrictions</a> in the <i>Billing and Cost Management User Guide</i>.</p>
+         * </li> </ul> </li> </ul>  <p/> <p>To use this action, you must have
+         * permission to perform the <code>s3:PutJobTagging</code> action.</p> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreatJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetJobTagging.html">GetJobTagging</a>
@@ -3054,13 +4071,12 @@ namespace Aws
          * modify that tag set, and use this action to replace the tag set with the one you
          * modified. For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
-         * access and labeling jobs using tags</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>. </p> <p/>  <ul> <li> <p>If you send this request with
-         * an empty tag set, Amazon S3 deletes the existing tag set on the Batch Operations
-         * job. If you use this method, you are charged for a Tier 1 Request (PUT). For
-         * more information, see <a href="http://aws.amazon.com/s3/pricing/">Amazon S3
-         * pricing</a>.</p> </li> <li> <p>For deleting existing tags for your Batch
-         * Operations job, a <a
+         * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>. </p>
+         * <p/>  <ul> <li> <p>If you send this request with an empty tag set, Amazon
+         * S3 deletes the existing tag set on the Batch Operations job. If you use this
+         * method, you are charged for a Tier 1 Request (PUT). For more information, see <a
+         * href="http://aws.amazon.com/s3/pricing/">Amazon S3 pricing</a>.</p> </li> <li>
+         * <p>For deleting existing tags for your Batch Operations job, a <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteJobTagging.html">DeleteJobTagging</a>
          * request is preferred because it achieves the same result without incurring
          * charges.</p> </li> <li> <p>A few things to consider about using tags:</p> <ul>
@@ -3071,10 +4087,10 @@ namespace Aws
          * </li> <li> <p>The key and values are case sensitive.</p> </li> <li> <p>For
          * tagging-related restrictions related to characters and encodings, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined
-         * Tag Restrictions</a> in the <i>AWS Billing and Cost Management User
-         * Guide</i>.</p> </li> </ul> </li> </ul>  <p/> <p>To use this operation,
-         * you must have permission to perform the <code>s3:PutJobTagging</code>
-         * action.</p> <p>Related actions include:</p> <ul> <li> <p> <a
+         * Tag Restrictions</a> in the <i>Billing and Cost Management User Guide</i>.</p>
+         * </li> </ul> </li> </ul>  <p/> <p>To use this action, you must have
+         * permission to perform the <code>s3:PutJobTagging</code> action.</p> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreatJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetJobTagging.html">GetJobTagging</a>
@@ -3089,8 +4105,74 @@ namespace Aws
         virtual void PutJobTaggingAsync(const Model::PutJobTaggingRequest& request, const PutJobTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Associates an access control policy with the specified Multi-Region Access
+         * Point. Each Multi-Region Access Point can have only one policy, so a request
+         * made to this action replaces any existing policy that is associated with the
+         * specified Multi-Region Access Point.</p> <p>This action will always be routed to
+         * the US West (Oregon) Region. For more information about the restrictions around
+         * managing Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>PutMultiRegionAccessPointPolicy</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicy.html">GetMultiRegionAccessPointPolicy</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicyStatus.html">GetMultiRegionAccessPointPolicyStatus</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutMultiRegionAccessPointPolicy">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::PutMultiRegionAccessPointPolicyOutcome PutMultiRegionAccessPointPolicy(const Model::PutMultiRegionAccessPointPolicyRequest& request) const;
+
+        /**
+         * <p>Associates an access control policy with the specified Multi-Region Access
+         * Point. Each Multi-Region Access Point can have only one policy, so a request
+         * made to this action replaces any existing policy that is associated with the
+         * specified Multi-Region Access Point.</p> <p>This action will always be routed to
+         * the US West (Oregon) Region. For more information about the restrictions around
+         * managing Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>PutMultiRegionAccessPointPolicy</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicy.html">GetMultiRegionAccessPointPolicy</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicyStatus.html">GetMultiRegionAccessPointPolicyStatus</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutMultiRegionAccessPointPolicy">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::PutMultiRegionAccessPointPolicyOutcomeCallable PutMultiRegionAccessPointPolicyCallable(const Model::PutMultiRegionAccessPointPolicyRequest& request) const;
+
+        /**
+         * <p>Associates an access control policy with the specified Multi-Region Access
+         * Point. Each Multi-Region Access Point can have only one policy, so a request
+         * made to this action replaces any existing policy that is associated with the
+         * specified Multi-Region Access Point.</p> <p>This action will always be routed to
+         * the US West (Oregon) Region. For more information about the restrictions around
+         * managing Multi-Region Access Points, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
+         * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.</p> <p>The
+         * following actions are related to
+         * <code>PutMultiRegionAccessPointPolicy</code>:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicy.html">GetMultiRegionAccessPointPolicy</a>
+         * </p> </li> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicyStatus.html">GetMultiRegionAccessPointPolicyStatus</a>
+         * </p> </li> </ul><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutMultiRegionAccessPointPolicy">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void PutMultiRegionAccessPointPolicyAsync(const Model::PutMultiRegionAccessPointPolicyRequest& request, const PutMultiRegionAccessPointPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Creates or modifies the <code>PublicAccessBlock</code> configuration for an
-         * AWS account. For more information, see <a
+         * Amazon Web Services account. For this operation, users must have the
+         * <code>s3:PutBucketPublicAccessBlock</code> permission. For more information, see
+         * <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">
          * Using Amazon S3 block public access</a>.</p> <p>Related actions include:</p>
          * <ul> <li> <p> <a
@@ -3105,7 +4187,9 @@ namespace Aws
 
         /**
          * <p>Creates or modifies the <code>PublicAccessBlock</code> configuration for an
-         * AWS account. For more information, see <a
+         * Amazon Web Services account. For this operation, users must have the
+         * <code>s3:PutBucketPublicAccessBlock</code> permission. For more information, see
+         * <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">
          * Using Amazon S3 block public access</a>.</p> <p>Related actions include:</p>
          * <ul> <li> <p> <a
@@ -3122,7 +4206,9 @@ namespace Aws
 
         /**
          * <p>Creates or modifies the <code>PublicAccessBlock</code> configuration for an
-         * AWS account. For more information, see <a
+         * Amazon Web Services account. For this operation, users must have the
+         * <code>s3:PutBucketPublicAccessBlock</code> permission. For more information, see
+         * <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">
          * Using Amazon S3 block public access</a>.</p> <p>Related actions include:</p>
          * <ul> <li> <p> <a
@@ -3140,14 +4226,13 @@ namespace Aws
         /**
          * <p>Puts an Amazon S3 Storage Lens configuration. For more information about S3
          * Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:PutStorageLensConfiguration</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
+         * with Amazon S3 Storage Lens</a> in the <i>Amazon S3 User Guide</i>.</p> 
+         * <p>To use this action, you must have permission to perform the
+         * <code>s3:PutStorageLensConfiguration</code> action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutStorageLensConfiguration">AWS
          * API Reference</a></p>
          */
@@ -3156,14 +4241,13 @@ namespace Aws
         /**
          * <p>Puts an Amazon S3 Storage Lens configuration. For more information about S3
          * Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:PutStorageLensConfiguration</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
+         * with Amazon S3 Storage Lens</a> in the <i>Amazon S3 User Guide</i>.</p> 
+         * <p>To use this action, you must have permission to perform the
+         * <code>s3:PutStorageLensConfiguration</code> action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutStorageLensConfiguration">AWS
          * API Reference</a></p>
          *
@@ -3174,14 +4258,13 @@ namespace Aws
         /**
          * <p>Puts an Amazon S3 Storage Lens configuration. For more information about S3
          * Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:PutStorageLensConfiguration</code> action. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
+         * with Amazon S3 Storage Lens</a> in the <i>Amazon S3 User Guide</i>.</p> 
+         * <p>To use this action, you must have permission to perform the
+         * <code>s3:PutStorageLensConfiguration</code> action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutStorageLensConfiguration">AWS
          * API Reference</a></p>
          *
@@ -3192,14 +4275,14 @@ namespace Aws
         /**
          * <p>Put or replace tags on an existing Amazon S3 Storage Lens configuration. For
          * more information about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:PutStorageLensConfigurationTagging</code> action. For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:PutStorageLensConfigurationTagging</code>
+         * action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutStorageLensConfigurationTagging">AWS
          * API Reference</a></p>
          */
@@ -3208,14 +4291,14 @@ namespace Aws
         /**
          * <p>Put or replace tags on an existing Amazon S3 Storage Lens configuration. For
          * more information about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:PutStorageLensConfigurationTagging</code> action. For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:PutStorageLensConfigurationTagging</code>
+         * action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutStorageLensConfigurationTagging">AWS
          * API Reference</a></p>
          *
@@ -3226,14 +4309,14 @@ namespace Aws
         /**
          * <p>Put or replace tags on an existing Amazon S3 Storage Lens configuration. For
          * more information about S3 Storage Lens, see <a
-         * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Working
-         * with Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage Service
-         * Developer Guide</i>.</p>  <p>To use this action, you must have permission
-         * to perform the <code>s3:PutStorageLensConfigurationTagging</code> action. For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html#storage_lens_IAM">Setting
-         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon Simple Storage
-         * Service Developer Guide</i>.</p> <p><h3>See Also:</h3>   <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html">Assessing
+         * your storage activity and usage with Amazon S3 Storage Lens </a> in the
+         * <i>Amazon S3 User Guide</i>.</p>  <p>To use this action, you must have
+         * permission to perform the <code>s3:PutStorageLensConfigurationTagging</code>
+         * action. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens_iam_permissions.html">Setting
+         * permissions to use Amazon S3 Storage Lens</a> in the <i>Amazon S3 User
+         * Guide</i>.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutStorageLensConfigurationTagging">AWS
          * API Reference</a></p>
          *
@@ -3244,9 +4327,9 @@ namespace Aws
         /**
          * <p>Updates an existing S3 Batch Operations job's priority. For more information,
          * see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p/> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -3263,9 +4346,9 @@ namespace Aws
         /**
          * <p>Updates an existing S3 Batch Operations job's priority. For more information,
          * see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p/> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -3284,9 +4367,9 @@ namespace Aws
         /**
          * <p>Updates an existing S3 Batch Operations job's priority. For more information,
          * see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p/> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -3303,11 +4386,11 @@ namespace Aws
         virtual void UpdateJobPriorityAsync(const Model::UpdateJobPriorityRequest& request, const UpdateJobPriorityResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Updates the status for the specified job. Use this operation to confirm that
-         * you want to run a job or to cancel an existing job. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * <p>Updates the status for the specified job. Use this action to confirm that you
+         * want to run a job or to cancel an existing job. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p/> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -3322,11 +4405,11 @@ namespace Aws
         virtual Model::UpdateJobStatusOutcome UpdateJobStatus(const Model::UpdateJobStatusRequest& request) const;
 
         /**
-         * <p>Updates the status for the specified job. Use this operation to confirm that
-         * you want to run a job or to cancel an existing job. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * <p>Updates the status for the specified job. Use this action to confirm that you
+         * want to run a job or to cancel an existing job. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p/> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -3343,11 +4426,11 @@ namespace Aws
         virtual Model::UpdateJobStatusOutcomeCallable UpdateJobStatusCallable(const Model::UpdateJobStatusRequest& request) const;
 
         /**
-         * <p>Updates the status for the specified job. Use this operation to confirm that
-         * you want to run a job or to cancel an existing job. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
-         * Batch Operations</a> in the <i>Amazon Simple Storage Service Developer
-         * Guide</i>.</p> <p/> <p>Related actions include:</p> <ul> <li> <p> <a
+         * <p>Updates the status for the specified job. Use this action to confirm that you
+         * want to run a job or to cancel an existing job. For more information, see <a
+         * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3
+         * Batch Operations</a> in the <i>Amazon S3 User Guide</i>.</p> <p/> <p>Related
+         * actions include:</p> <ul> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
          * </p> </li> <li> <p> <a
          * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListJobs.html">ListJobs</a>
@@ -3386,39 +4469,57 @@ namespace Aws
         ComputeEndpointOutcome ComputeEndpointString(const Aws::String& name, bool hasOutpostId, const Aws::String& uriPathPrefix) const;
 
         void CreateAccessPointAsyncHelper(const Model::CreateAccessPointRequest& request, const CreateAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void CreateAccessPointForObjectLambdaAsyncHelper(const Model::CreateAccessPointForObjectLambdaRequest& request, const CreateAccessPointForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateBucketAsyncHelper(const Model::CreateBucketRequest& request, const CreateBucketResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateJobAsyncHelper(const Model::CreateJobRequest& request, const CreateJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void CreateMultiRegionAccessPointAsyncHelper(const Model::CreateMultiRegionAccessPointRequest& request, const CreateMultiRegionAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteAccessPointAsyncHelper(const Model::DeleteAccessPointRequest& request, const DeleteAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DeleteAccessPointForObjectLambdaAsyncHelper(const Model::DeleteAccessPointForObjectLambdaRequest& request, const DeleteAccessPointForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteAccessPointPolicyAsyncHelper(const Model::DeleteAccessPointPolicyRequest& request, const DeleteAccessPointPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DeleteAccessPointPolicyForObjectLambdaAsyncHelper(const Model::DeleteAccessPointPolicyForObjectLambdaRequest& request, const DeleteAccessPointPolicyForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteBucketAsyncHelper(const Model::DeleteBucketRequest& request, const DeleteBucketResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteBucketLifecycleConfigurationAsyncHelper(const Model::DeleteBucketLifecycleConfigurationRequest& request, const DeleteBucketLifecycleConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteBucketPolicyAsyncHelper(const Model::DeleteBucketPolicyRequest& request, const DeleteBucketPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteBucketTaggingAsyncHelper(const Model::DeleteBucketTaggingRequest& request, const DeleteBucketTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteJobTaggingAsyncHelper(const Model::DeleteJobTaggingRequest& request, const DeleteJobTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DeleteMultiRegionAccessPointAsyncHelper(const Model::DeleteMultiRegionAccessPointRequest& request, const DeleteMultiRegionAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeletePublicAccessBlockAsyncHelper(const Model::DeletePublicAccessBlockRequest& request, const DeletePublicAccessBlockResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteStorageLensConfigurationAsyncHelper(const Model::DeleteStorageLensConfigurationRequest& request, const DeleteStorageLensConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteStorageLensConfigurationTaggingAsyncHelper(const Model::DeleteStorageLensConfigurationTaggingRequest& request, const DeleteStorageLensConfigurationTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeJobAsyncHelper(const Model::DescribeJobRequest& request, const DescribeJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeMultiRegionAccessPointOperationAsyncHelper(const Model::DescribeMultiRegionAccessPointOperationRequest& request, const DescribeMultiRegionAccessPointOperationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetAccessPointAsyncHelper(const Model::GetAccessPointRequest& request, const GetAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetAccessPointConfigurationForObjectLambdaAsyncHelper(const Model::GetAccessPointConfigurationForObjectLambdaRequest& request, const GetAccessPointConfigurationForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetAccessPointForObjectLambdaAsyncHelper(const Model::GetAccessPointForObjectLambdaRequest& request, const GetAccessPointForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetAccessPointPolicyAsyncHelper(const Model::GetAccessPointPolicyRequest& request, const GetAccessPointPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetAccessPointPolicyForObjectLambdaAsyncHelper(const Model::GetAccessPointPolicyForObjectLambdaRequest& request, const GetAccessPointPolicyForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetAccessPointPolicyStatusAsyncHelper(const Model::GetAccessPointPolicyStatusRequest& request, const GetAccessPointPolicyStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetAccessPointPolicyStatusForObjectLambdaAsyncHelper(const Model::GetAccessPointPolicyStatusForObjectLambdaRequest& request, const GetAccessPointPolicyStatusForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetBucketAsyncHelper(const Model::GetBucketRequest& request, const GetBucketResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetBucketLifecycleConfigurationAsyncHelper(const Model::GetBucketLifecycleConfigurationRequest& request, const GetBucketLifecycleConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetBucketPolicyAsyncHelper(const Model::GetBucketPolicyRequest& request, const GetBucketPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetBucketTaggingAsyncHelper(const Model::GetBucketTaggingRequest& request, const GetBucketTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetJobTaggingAsyncHelper(const Model::GetJobTaggingRequest& request, const GetJobTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetMultiRegionAccessPointAsyncHelper(const Model::GetMultiRegionAccessPointRequest& request, const GetMultiRegionAccessPointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetMultiRegionAccessPointPolicyAsyncHelper(const Model::GetMultiRegionAccessPointPolicyRequest& request, const GetMultiRegionAccessPointPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetMultiRegionAccessPointPolicyStatusAsyncHelper(const Model::GetMultiRegionAccessPointPolicyStatusRequest& request, const GetMultiRegionAccessPointPolicyStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetPublicAccessBlockAsyncHelper(const Model::GetPublicAccessBlockRequest& request, const GetPublicAccessBlockResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetStorageLensConfigurationAsyncHelper(const Model::GetStorageLensConfigurationRequest& request, const GetStorageLensConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetStorageLensConfigurationTaggingAsyncHelper(const Model::GetStorageLensConfigurationTaggingRequest& request, const GetStorageLensConfigurationTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListAccessPointsAsyncHelper(const Model::ListAccessPointsRequest& request, const ListAccessPointsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListAccessPointsForObjectLambdaAsyncHelper(const Model::ListAccessPointsForObjectLambdaRequest& request, const ListAccessPointsForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListJobsAsyncHelper(const Model::ListJobsRequest& request, const ListJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListMultiRegionAccessPointsAsyncHelper(const Model::ListMultiRegionAccessPointsRequest& request, const ListMultiRegionAccessPointsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListRegionalBucketsAsyncHelper(const Model::ListRegionalBucketsRequest& request, const ListRegionalBucketsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListStorageLensConfigurationsAsyncHelper(const Model::ListStorageLensConfigurationsRequest& request, const ListStorageLensConfigurationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void PutAccessPointConfigurationForObjectLambdaAsyncHelper(const Model::PutAccessPointConfigurationForObjectLambdaRequest& request, const PutAccessPointConfigurationForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutAccessPointPolicyAsyncHelper(const Model::PutAccessPointPolicyRequest& request, const PutAccessPointPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void PutAccessPointPolicyForObjectLambdaAsyncHelper(const Model::PutAccessPointPolicyForObjectLambdaRequest& request, const PutAccessPointPolicyForObjectLambdaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutBucketLifecycleConfigurationAsyncHelper(const Model::PutBucketLifecycleConfigurationRequest& request, const PutBucketLifecycleConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutBucketPolicyAsyncHelper(const Model::PutBucketPolicyRequest& request, const PutBucketPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutBucketTaggingAsyncHelper(const Model::PutBucketTaggingRequest& request, const PutBucketTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutJobTaggingAsyncHelper(const Model::PutJobTaggingRequest& request, const PutJobTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void PutMultiRegionAccessPointPolicyAsyncHelper(const Model::PutMultiRegionAccessPointPolicyRequest& request, const PutMultiRegionAccessPointPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutPublicAccessBlockAsyncHelper(const Model::PutPublicAccessBlockRequest& request, const PutPublicAccessBlockResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutStorageLensConfigurationAsyncHelper(const Model::PutStorageLensConfigurationRequest& request, const PutStorageLensConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutStorageLensConfigurationTaggingAsyncHelper(const Model::PutStorageLensConfigurationTaggingRequest& request, const PutStorageLensConfigurationTaggingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

@@ -17,6 +17,7 @@
 #include <aws/storagegateway/model/AddUploadBufferResult.h>
 #include <aws/storagegateway/model/AddWorkingStorageResult.h>
 #include <aws/storagegateway/model/AssignTapePoolResult.h>
+#include <aws/storagegateway/model/AssociateFileSystemResult.h>
 #include <aws/storagegateway/model/AttachVolumeResult.h>
 #include <aws/storagegateway/model/CancelArchivalResult.h>
 #include <aws/storagegateway/model/CancelRetrievalResult.h>
@@ -45,6 +46,7 @@
 #include <aws/storagegateway/model/DescribeCacheResult.h>
 #include <aws/storagegateway/model/DescribeCachediSCSIVolumesResult.h>
 #include <aws/storagegateway/model/DescribeChapCredentialsResult.h>
+#include <aws/storagegateway/model/DescribeFileSystemAssociationsResult.h>
 #include <aws/storagegateway/model/DescribeGatewayInformationResult.h>
 #include <aws/storagegateway/model/DescribeMaintenanceStartTimeResult.h>
 #include <aws/storagegateway/model/DescribeNFSFileSharesResult.h>
@@ -60,9 +62,11 @@
 #include <aws/storagegateway/model/DescribeWorkingStorageResult.h>
 #include <aws/storagegateway/model/DetachVolumeResult.h>
 #include <aws/storagegateway/model/DisableGatewayResult.h>
+#include <aws/storagegateway/model/DisassociateFileSystemResult.h>
 #include <aws/storagegateway/model/JoinDomainResult.h>
 #include <aws/storagegateway/model/ListAutomaticTapeCreationPoliciesResult.h>
 #include <aws/storagegateway/model/ListFileSharesResult.h>
+#include <aws/storagegateway/model/ListFileSystemAssociationsResult.h>
 #include <aws/storagegateway/model/ListGatewaysResult.h>
 #include <aws/storagegateway/model/ListLocalDisksResult.h>
 #include <aws/storagegateway/model/ListTagsForResourceResult.h>
@@ -86,12 +90,14 @@
 #include <aws/storagegateway/model/UpdateBandwidthRateLimitResult.h>
 #include <aws/storagegateway/model/UpdateBandwidthRateLimitScheduleResult.h>
 #include <aws/storagegateway/model/UpdateChapCredentialsResult.h>
+#include <aws/storagegateway/model/UpdateFileSystemAssociationResult.h>
 #include <aws/storagegateway/model/UpdateGatewayInformationResult.h>
 #include <aws/storagegateway/model/UpdateGatewaySoftwareNowResult.h>
 #include <aws/storagegateway/model/UpdateMaintenanceStartTimeResult.h>
 #include <aws/storagegateway/model/UpdateNFSFileShareResult.h>
 #include <aws/storagegateway/model/UpdateSMBFileShareResult.h>
 #include <aws/storagegateway/model/UpdateSMBFileShareVisibilityResult.h>
+#include <aws/storagegateway/model/UpdateSMBLocalGroupsResult.h>
 #include <aws/storagegateway/model/UpdateSMBSecurityStrategyResult.h>
 #include <aws/storagegateway/model/UpdateSnapshotScheduleResult.h>
 #include <aws/storagegateway/model/UpdateVTLDeviceTypeResult.h>
@@ -140,6 +146,7 @@ namespace Model
         class AddUploadBufferRequest;
         class AddWorkingStorageRequest;
         class AssignTapePoolRequest;
+        class AssociateFileSystemRequest;
         class AttachVolumeRequest;
         class CancelArchivalRequest;
         class CancelRetrievalRequest;
@@ -168,6 +175,7 @@ namespace Model
         class DescribeCacheRequest;
         class DescribeCachediSCSIVolumesRequest;
         class DescribeChapCredentialsRequest;
+        class DescribeFileSystemAssociationsRequest;
         class DescribeGatewayInformationRequest;
         class DescribeMaintenanceStartTimeRequest;
         class DescribeNFSFileSharesRequest;
@@ -183,9 +191,11 @@ namespace Model
         class DescribeWorkingStorageRequest;
         class DetachVolumeRequest;
         class DisableGatewayRequest;
+        class DisassociateFileSystemRequest;
         class JoinDomainRequest;
         class ListAutomaticTapeCreationPoliciesRequest;
         class ListFileSharesRequest;
+        class ListFileSystemAssociationsRequest;
         class ListGatewaysRequest;
         class ListLocalDisksRequest;
         class ListTagsForResourceRequest;
@@ -209,12 +219,14 @@ namespace Model
         class UpdateBandwidthRateLimitRequest;
         class UpdateBandwidthRateLimitScheduleRequest;
         class UpdateChapCredentialsRequest;
+        class UpdateFileSystemAssociationRequest;
         class UpdateGatewayInformationRequest;
         class UpdateGatewaySoftwareNowRequest;
         class UpdateMaintenanceStartTimeRequest;
         class UpdateNFSFileShareRequest;
         class UpdateSMBFileShareRequest;
         class UpdateSMBFileShareVisibilityRequest;
+        class UpdateSMBLocalGroupsRequest;
         class UpdateSMBSecurityStrategyRequest;
         class UpdateSnapshotScheduleRequest;
         class UpdateVTLDeviceTypeRequest;
@@ -225,6 +237,7 @@ namespace Model
         typedef Aws::Utils::Outcome<AddUploadBufferResult, StorageGatewayError> AddUploadBufferOutcome;
         typedef Aws::Utils::Outcome<AddWorkingStorageResult, StorageGatewayError> AddWorkingStorageOutcome;
         typedef Aws::Utils::Outcome<AssignTapePoolResult, StorageGatewayError> AssignTapePoolOutcome;
+        typedef Aws::Utils::Outcome<AssociateFileSystemResult, StorageGatewayError> AssociateFileSystemOutcome;
         typedef Aws::Utils::Outcome<AttachVolumeResult, StorageGatewayError> AttachVolumeOutcome;
         typedef Aws::Utils::Outcome<CancelArchivalResult, StorageGatewayError> CancelArchivalOutcome;
         typedef Aws::Utils::Outcome<CancelRetrievalResult, StorageGatewayError> CancelRetrievalOutcome;
@@ -253,6 +266,7 @@ namespace Model
         typedef Aws::Utils::Outcome<DescribeCacheResult, StorageGatewayError> DescribeCacheOutcome;
         typedef Aws::Utils::Outcome<DescribeCachediSCSIVolumesResult, StorageGatewayError> DescribeCachediSCSIVolumesOutcome;
         typedef Aws::Utils::Outcome<DescribeChapCredentialsResult, StorageGatewayError> DescribeChapCredentialsOutcome;
+        typedef Aws::Utils::Outcome<DescribeFileSystemAssociationsResult, StorageGatewayError> DescribeFileSystemAssociationsOutcome;
         typedef Aws::Utils::Outcome<DescribeGatewayInformationResult, StorageGatewayError> DescribeGatewayInformationOutcome;
         typedef Aws::Utils::Outcome<DescribeMaintenanceStartTimeResult, StorageGatewayError> DescribeMaintenanceStartTimeOutcome;
         typedef Aws::Utils::Outcome<DescribeNFSFileSharesResult, StorageGatewayError> DescribeNFSFileSharesOutcome;
@@ -268,9 +282,11 @@ namespace Model
         typedef Aws::Utils::Outcome<DescribeWorkingStorageResult, StorageGatewayError> DescribeWorkingStorageOutcome;
         typedef Aws::Utils::Outcome<DetachVolumeResult, StorageGatewayError> DetachVolumeOutcome;
         typedef Aws::Utils::Outcome<DisableGatewayResult, StorageGatewayError> DisableGatewayOutcome;
+        typedef Aws::Utils::Outcome<DisassociateFileSystemResult, StorageGatewayError> DisassociateFileSystemOutcome;
         typedef Aws::Utils::Outcome<JoinDomainResult, StorageGatewayError> JoinDomainOutcome;
         typedef Aws::Utils::Outcome<ListAutomaticTapeCreationPoliciesResult, StorageGatewayError> ListAutomaticTapeCreationPoliciesOutcome;
         typedef Aws::Utils::Outcome<ListFileSharesResult, StorageGatewayError> ListFileSharesOutcome;
+        typedef Aws::Utils::Outcome<ListFileSystemAssociationsResult, StorageGatewayError> ListFileSystemAssociationsOutcome;
         typedef Aws::Utils::Outcome<ListGatewaysResult, StorageGatewayError> ListGatewaysOutcome;
         typedef Aws::Utils::Outcome<ListLocalDisksResult, StorageGatewayError> ListLocalDisksOutcome;
         typedef Aws::Utils::Outcome<ListTagsForResourceResult, StorageGatewayError> ListTagsForResourceOutcome;
@@ -294,12 +310,14 @@ namespace Model
         typedef Aws::Utils::Outcome<UpdateBandwidthRateLimitResult, StorageGatewayError> UpdateBandwidthRateLimitOutcome;
         typedef Aws::Utils::Outcome<UpdateBandwidthRateLimitScheduleResult, StorageGatewayError> UpdateBandwidthRateLimitScheduleOutcome;
         typedef Aws::Utils::Outcome<UpdateChapCredentialsResult, StorageGatewayError> UpdateChapCredentialsOutcome;
+        typedef Aws::Utils::Outcome<UpdateFileSystemAssociationResult, StorageGatewayError> UpdateFileSystemAssociationOutcome;
         typedef Aws::Utils::Outcome<UpdateGatewayInformationResult, StorageGatewayError> UpdateGatewayInformationOutcome;
         typedef Aws::Utils::Outcome<UpdateGatewaySoftwareNowResult, StorageGatewayError> UpdateGatewaySoftwareNowOutcome;
         typedef Aws::Utils::Outcome<UpdateMaintenanceStartTimeResult, StorageGatewayError> UpdateMaintenanceStartTimeOutcome;
         typedef Aws::Utils::Outcome<UpdateNFSFileShareResult, StorageGatewayError> UpdateNFSFileShareOutcome;
         typedef Aws::Utils::Outcome<UpdateSMBFileShareResult, StorageGatewayError> UpdateSMBFileShareOutcome;
         typedef Aws::Utils::Outcome<UpdateSMBFileShareVisibilityResult, StorageGatewayError> UpdateSMBFileShareVisibilityOutcome;
+        typedef Aws::Utils::Outcome<UpdateSMBLocalGroupsResult, StorageGatewayError> UpdateSMBLocalGroupsOutcome;
         typedef Aws::Utils::Outcome<UpdateSMBSecurityStrategyResult, StorageGatewayError> UpdateSMBSecurityStrategyOutcome;
         typedef Aws::Utils::Outcome<UpdateSnapshotScheduleResult, StorageGatewayError> UpdateSnapshotScheduleOutcome;
         typedef Aws::Utils::Outcome<UpdateVTLDeviceTypeResult, StorageGatewayError> UpdateVTLDeviceTypeOutcome;
@@ -310,6 +328,7 @@ namespace Model
         typedef std::future<AddUploadBufferOutcome> AddUploadBufferOutcomeCallable;
         typedef std::future<AddWorkingStorageOutcome> AddWorkingStorageOutcomeCallable;
         typedef std::future<AssignTapePoolOutcome> AssignTapePoolOutcomeCallable;
+        typedef std::future<AssociateFileSystemOutcome> AssociateFileSystemOutcomeCallable;
         typedef std::future<AttachVolumeOutcome> AttachVolumeOutcomeCallable;
         typedef std::future<CancelArchivalOutcome> CancelArchivalOutcomeCallable;
         typedef std::future<CancelRetrievalOutcome> CancelRetrievalOutcomeCallable;
@@ -338,6 +357,7 @@ namespace Model
         typedef std::future<DescribeCacheOutcome> DescribeCacheOutcomeCallable;
         typedef std::future<DescribeCachediSCSIVolumesOutcome> DescribeCachediSCSIVolumesOutcomeCallable;
         typedef std::future<DescribeChapCredentialsOutcome> DescribeChapCredentialsOutcomeCallable;
+        typedef std::future<DescribeFileSystemAssociationsOutcome> DescribeFileSystemAssociationsOutcomeCallable;
         typedef std::future<DescribeGatewayInformationOutcome> DescribeGatewayInformationOutcomeCallable;
         typedef std::future<DescribeMaintenanceStartTimeOutcome> DescribeMaintenanceStartTimeOutcomeCallable;
         typedef std::future<DescribeNFSFileSharesOutcome> DescribeNFSFileSharesOutcomeCallable;
@@ -353,9 +373,11 @@ namespace Model
         typedef std::future<DescribeWorkingStorageOutcome> DescribeWorkingStorageOutcomeCallable;
         typedef std::future<DetachVolumeOutcome> DetachVolumeOutcomeCallable;
         typedef std::future<DisableGatewayOutcome> DisableGatewayOutcomeCallable;
+        typedef std::future<DisassociateFileSystemOutcome> DisassociateFileSystemOutcomeCallable;
         typedef std::future<JoinDomainOutcome> JoinDomainOutcomeCallable;
         typedef std::future<ListAutomaticTapeCreationPoliciesOutcome> ListAutomaticTapeCreationPoliciesOutcomeCallable;
         typedef std::future<ListFileSharesOutcome> ListFileSharesOutcomeCallable;
+        typedef std::future<ListFileSystemAssociationsOutcome> ListFileSystemAssociationsOutcomeCallable;
         typedef std::future<ListGatewaysOutcome> ListGatewaysOutcomeCallable;
         typedef std::future<ListLocalDisksOutcome> ListLocalDisksOutcomeCallable;
         typedef std::future<ListTagsForResourceOutcome> ListTagsForResourceOutcomeCallable;
@@ -379,12 +401,14 @@ namespace Model
         typedef std::future<UpdateBandwidthRateLimitOutcome> UpdateBandwidthRateLimitOutcomeCallable;
         typedef std::future<UpdateBandwidthRateLimitScheduleOutcome> UpdateBandwidthRateLimitScheduleOutcomeCallable;
         typedef std::future<UpdateChapCredentialsOutcome> UpdateChapCredentialsOutcomeCallable;
+        typedef std::future<UpdateFileSystemAssociationOutcome> UpdateFileSystemAssociationOutcomeCallable;
         typedef std::future<UpdateGatewayInformationOutcome> UpdateGatewayInformationOutcomeCallable;
         typedef std::future<UpdateGatewaySoftwareNowOutcome> UpdateGatewaySoftwareNowOutcomeCallable;
         typedef std::future<UpdateMaintenanceStartTimeOutcome> UpdateMaintenanceStartTimeOutcomeCallable;
         typedef std::future<UpdateNFSFileShareOutcome> UpdateNFSFileShareOutcomeCallable;
         typedef std::future<UpdateSMBFileShareOutcome> UpdateSMBFileShareOutcomeCallable;
         typedef std::future<UpdateSMBFileShareVisibilityOutcome> UpdateSMBFileShareVisibilityOutcomeCallable;
+        typedef std::future<UpdateSMBLocalGroupsOutcome> UpdateSMBLocalGroupsOutcomeCallable;
         typedef std::future<UpdateSMBSecurityStrategyOutcome> UpdateSMBSecurityStrategyOutcomeCallable;
         typedef std::future<UpdateSnapshotScheduleOutcome> UpdateSnapshotScheduleOutcomeCallable;
         typedef std::future<UpdateVTLDeviceTypeOutcome> UpdateVTLDeviceTypeOutcomeCallable;
@@ -398,6 +422,7 @@ namespace Model
     typedef std::function<void(const StorageGatewayClient*, const Model::AddUploadBufferRequest&, const Model::AddUploadBufferOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > AddUploadBufferResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::AddWorkingStorageRequest&, const Model::AddWorkingStorageOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > AddWorkingStorageResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::AssignTapePoolRequest&, const Model::AssignTapePoolOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > AssignTapePoolResponseReceivedHandler;
+    typedef std::function<void(const StorageGatewayClient*, const Model::AssociateFileSystemRequest&, const Model::AssociateFileSystemOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > AssociateFileSystemResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::AttachVolumeRequest&, const Model::AttachVolumeOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > AttachVolumeResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::CancelArchivalRequest&, const Model::CancelArchivalOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CancelArchivalResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::CancelRetrievalRequest&, const Model::CancelRetrievalOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CancelRetrievalResponseReceivedHandler;
@@ -426,6 +451,7 @@ namespace Model
     typedef std::function<void(const StorageGatewayClient*, const Model::DescribeCacheRequest&, const Model::DescribeCacheOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeCacheResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::DescribeCachediSCSIVolumesRequest&, const Model::DescribeCachediSCSIVolumesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeCachediSCSIVolumesResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::DescribeChapCredentialsRequest&, const Model::DescribeChapCredentialsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeChapCredentialsResponseReceivedHandler;
+    typedef std::function<void(const StorageGatewayClient*, const Model::DescribeFileSystemAssociationsRequest&, const Model::DescribeFileSystemAssociationsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeFileSystemAssociationsResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::DescribeGatewayInformationRequest&, const Model::DescribeGatewayInformationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeGatewayInformationResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::DescribeMaintenanceStartTimeRequest&, const Model::DescribeMaintenanceStartTimeOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeMaintenanceStartTimeResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::DescribeNFSFileSharesRequest&, const Model::DescribeNFSFileSharesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeNFSFileSharesResponseReceivedHandler;
@@ -441,9 +467,11 @@ namespace Model
     typedef std::function<void(const StorageGatewayClient*, const Model::DescribeWorkingStorageRequest&, const Model::DescribeWorkingStorageOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeWorkingStorageResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::DetachVolumeRequest&, const Model::DetachVolumeOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DetachVolumeResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::DisableGatewayRequest&, const Model::DisableGatewayOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DisableGatewayResponseReceivedHandler;
+    typedef std::function<void(const StorageGatewayClient*, const Model::DisassociateFileSystemRequest&, const Model::DisassociateFileSystemOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DisassociateFileSystemResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::JoinDomainRequest&, const Model::JoinDomainOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > JoinDomainResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::ListAutomaticTapeCreationPoliciesRequest&, const Model::ListAutomaticTapeCreationPoliciesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAutomaticTapeCreationPoliciesResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::ListFileSharesRequest&, const Model::ListFileSharesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListFileSharesResponseReceivedHandler;
+    typedef std::function<void(const StorageGatewayClient*, const Model::ListFileSystemAssociationsRequest&, const Model::ListFileSystemAssociationsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListFileSystemAssociationsResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::ListGatewaysRequest&, const Model::ListGatewaysOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListGatewaysResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::ListLocalDisksRequest&, const Model::ListLocalDisksOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListLocalDisksResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::ListTagsForResourceRequest&, const Model::ListTagsForResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListTagsForResourceResponseReceivedHandler;
@@ -467,44 +495,46 @@ namespace Model
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateBandwidthRateLimitRequest&, const Model::UpdateBandwidthRateLimitOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateBandwidthRateLimitResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateBandwidthRateLimitScheduleRequest&, const Model::UpdateBandwidthRateLimitScheduleOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateBandwidthRateLimitScheduleResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateChapCredentialsRequest&, const Model::UpdateChapCredentialsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateChapCredentialsResponseReceivedHandler;
+    typedef std::function<void(const StorageGatewayClient*, const Model::UpdateFileSystemAssociationRequest&, const Model::UpdateFileSystemAssociationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateFileSystemAssociationResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateGatewayInformationRequest&, const Model::UpdateGatewayInformationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateGatewayInformationResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateGatewaySoftwareNowRequest&, const Model::UpdateGatewaySoftwareNowOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateGatewaySoftwareNowResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateMaintenanceStartTimeRequest&, const Model::UpdateMaintenanceStartTimeOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateMaintenanceStartTimeResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateNFSFileShareRequest&, const Model::UpdateNFSFileShareOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateNFSFileShareResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateSMBFileShareRequest&, const Model::UpdateSMBFileShareOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateSMBFileShareResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateSMBFileShareVisibilityRequest&, const Model::UpdateSMBFileShareVisibilityOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateSMBFileShareVisibilityResponseReceivedHandler;
+    typedef std::function<void(const StorageGatewayClient*, const Model::UpdateSMBLocalGroupsRequest&, const Model::UpdateSMBLocalGroupsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateSMBLocalGroupsResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateSMBSecurityStrategyRequest&, const Model::UpdateSMBSecurityStrategyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateSMBSecurityStrategyResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateSnapshotScheduleRequest&, const Model::UpdateSnapshotScheduleOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateSnapshotScheduleResponseReceivedHandler;
     typedef std::function<void(const StorageGatewayClient*, const Model::UpdateVTLDeviceTypeRequest&, const Model::UpdateVTLDeviceTypeOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateVTLDeviceTypeResponseReceivedHandler;
 
   /**
-   * <fullname>AWS Storage Gateway Service</fullname> <p>AWS Storage Gateway is the
-   * service that connects an on-premises software appliance with cloud-based storage
-   * to provide seamless and secure integration between an organization's on-premises
-   * IT environment and the AWS storage infrastructure. The service enables you to
-   * securely upload data to the AWS Cloud for cost effective backup and rapid
-   * disaster recovery.</p> <p>Use the following links to get started using the
-   * <i>AWS Storage Gateway Service API Reference</i>:</p> <ul> <li> <p> <a
-   * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">AWS
-   * Storage Gateway required request headers</a>: Describes the required headers
-   * that you must send with every POST request to AWS Storage Gateway.</p> </li>
+   * <fullname>Storage Gateway Service</fullname> <p>Storage Gateway is the service
+   * that connects an on-premises software appliance with cloud-based storage to
+   * provide seamless and secure integration between an organization's on-premises IT
+   * environment and the Amazon Web Services storage infrastructure. The service
+   * enables you to securely upload data to the Amazon Web Services Cloud for cost
+   * effective backup and rapid disaster recovery.</p> <p>Use the following links to
+   * get started using the <i>Storage Gateway Service API Reference</i>:</p> <ul>
    * <li> <p> <a
+   * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">Storage
+   * Gateway required request headers</a>: Describes the required headers that you
+   * must send with every POST request to Storage Gateway.</p> </li> <li> <p> <a
    * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing
-   * requests</a>: AWS Storage Gateway requires that you authenticate every request
-   * you send; this topic describes how sign such a request.</p> </li> <li> <p> <a
+   * requests</a>: Storage Gateway requires that you authenticate every request you
+   * send; this topic describes how sign such a request.</p> </li> <li> <p> <a
    * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error
-   * responses</a>: Provides reference information about AWS Storage Gateway
-   * errors.</p> </li> <li> <p> <a
+   * responses</a>: Provides reference information about Storage Gateway errors.</p>
+   * </li> <li> <p> <a
    * href="https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations
-   * in AWS Storage Gateway</a>: Contains detailed descriptions of all AWS Storage
-   * Gateway operations, their request parameters, response elements, possible
-   * errors, and examples of requests and responses.</p> </li> <li> <p> <a
-   * href="https://docs.aws.amazon.com/general/latest/gr/sg.html">AWS Storage Gateway
-   * endpoints and quotas</a>: Provides a list of each AWS Region and the endpoints
-   * available for use with AWS Storage Gateway.</p> </li> </ul>  <p>AWS
-   * Storage Gateway resource IDs are in uppercase. When you use these resource IDs
-   * with the Amazon EC2 API, EC2 expects resource IDs in lowercase. You must change
-   * your resource ID to lowercase to use it with the EC2 API. For example, in
+   * in Storage Gateway</a>: Contains detailed descriptions of all Storage Gateway
+   * operations, their request parameters, response elements, possible errors, and
+   * examples of requests and responses.</p> </li> <li> <p> <a
+   * href="https://docs.aws.amazon.com/general/latest/gr/sg.html">Storage Gateway
+   * endpoints and quotas</a>: Provides a list of each Amazon Web Services Region and
+   * the endpoints available for use with Storage Gateway.</p> </li> </ul> 
+   * <p>Storage Gateway resource IDs are in uppercase. When you use these resource
+   * IDs with the Amazon EC2 API, EC2 expects resource IDs in lowercase. You must
+   * change your resource ID to lowercase to use it with the EC2 API. For example, in
    * Storage Gateway the ID for a volume might be
    * <code>vol-AA22BB012345DAF670</code>. When you use this ID with the EC2 API, you
    * must change it to <code>vol-aa22bb012345daf670</code>. Otherwise, the EC2 API
@@ -520,7 +550,7 @@ namespace Model
    * <p>A snapshot ID with the longer ID format looks like the following:
    * <code>snap-78e226633445566ee</code>.</p> <p>For more information, see <a
    * href="http://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up –
-   * Longer AWS Storage Gateway volume and snapshot IDs coming in 2016</a>.</p>
+   * Longer Storage Gateway volume and snapshot IDs coming in 2016</a>.</p>
    * 
    */
   class AWS_STORAGEGATEWAY_API StorageGatewayClient : public Aws::Client::AWSJsonClient
@@ -552,13 +582,13 @@ namespace Model
 
         /**
          * <p>Activates the gateway you previously deployed on your host. In the activation
-         * process, you specify information such as the AWS Region that you want to use for
-         * storing snapshots or tapes, the time zone for scheduled snapshots the gateway
-         * snapshot schedule window, an activation key, and a name for your gateway. The
-         * activation process also associates your gateway with your account. For more
-         * information, see <a>UpdateGatewayInformation</a>.</p>  <p>You must turn on
-         * the gateway VM before you can activate your gateway.</p> <p><h3>See
-         * Also:</h3>   <a
+         * process, you specify information such as the Amazon Web Services Region that you
+         * want to use for storing snapshots or tapes, the time zone for scheduled
+         * snapshots the gateway snapshot schedule window, an activation key, and a name
+         * for your gateway. The activation process also associates your gateway with your
+         * account. For more information, see <a>UpdateGatewayInformation</a>.</p> 
+         * <p>You must turn on the gateway VM before you can activate your gateway.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ActivateGateway">AWS
          * API Reference</a></p>
          */
@@ -566,13 +596,13 @@ namespace Model
 
         /**
          * <p>Activates the gateway you previously deployed on your host. In the activation
-         * process, you specify information such as the AWS Region that you want to use for
-         * storing snapshots or tapes, the time zone for scheduled snapshots the gateway
-         * snapshot schedule window, an activation key, and a name for your gateway. The
-         * activation process also associates your gateway with your account. For more
-         * information, see <a>UpdateGatewayInformation</a>.</p>  <p>You must turn on
-         * the gateway VM before you can activate your gateway.</p> <p><h3>See
-         * Also:</h3>   <a
+         * process, you specify information such as the Amazon Web Services Region that you
+         * want to use for storing snapshots or tapes, the time zone for scheduled
+         * snapshots the gateway snapshot schedule window, an activation key, and a name
+         * for your gateway. The activation process also associates your gateway with your
+         * account. For more information, see <a>UpdateGatewayInformation</a>.</p> 
+         * <p>You must turn on the gateway VM before you can activate your gateway.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ActivateGateway">AWS
          * API Reference</a></p>
          *
@@ -582,13 +612,13 @@ namespace Model
 
         /**
          * <p>Activates the gateway you previously deployed on your host. In the activation
-         * process, you specify information such as the AWS Region that you want to use for
-         * storing snapshots or tapes, the time zone for scheduled snapshots the gateway
-         * snapshot schedule window, an activation key, and a name for your gateway. The
-         * activation process also associates your gateway with your account. For more
-         * information, see <a>UpdateGatewayInformation</a>.</p>  <p>You must turn on
-         * the gateway VM before you can activate your gateway.</p> <p><h3>See
-         * Also:</h3>   <a
+         * process, you specify information such as the Amazon Web Services Region that you
+         * want to use for storing snapshots or tapes, the time zone for scheduled
+         * snapshots the gateway snapshot schedule window, an activation key, and a name
+         * for your gateway. The activation process also associates your gateway with your
+         * account. For more information, see <a>UpdateGatewayInformation</a>.</p> 
+         * <p>You must turn on the gateway VM before you can activate your gateway.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ActivateGateway">AWS
          * API Reference</a></p>
          *
@@ -601,10 +631,9 @@ namespace Model
          * operation is only supported in the cached volume, tape, and file gateway type
          * (see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html">How
-         * AWS Storage Gateway works (architecture)</a>.</p> <p>In the request, you specify
-         * the gateway Amazon Resource Name (ARN) to which you want to add cache, and one
-         * or more disk IDs that you want to configure as cache.</p><p><h3>See Also:</h3>  
-         * <a
+         * Storage Gateway works (architecture)</a>.</p> <p>In the request, you specify the
+         * gateway Amazon Resource Name (ARN) to which you want to add cache, and one or
+         * more disk IDs that you want to configure as cache.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/AddCache">AWS
          * API Reference</a></p>
          */
@@ -615,10 +644,9 @@ namespace Model
          * operation is only supported in the cached volume, tape, and file gateway type
          * (see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html">How
-         * AWS Storage Gateway works (architecture)</a>.</p> <p>In the request, you specify
-         * the gateway Amazon Resource Name (ARN) to which you want to add cache, and one
-         * or more disk IDs that you want to configure as cache.</p><p><h3>See Also:</h3>  
-         * <a
+         * Storage Gateway works (architecture)</a>.</p> <p>In the request, you specify the
+         * gateway Amazon Resource Name (ARN) to which you want to add cache, and one or
+         * more disk IDs that you want to configure as cache.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/AddCache">AWS
          * API Reference</a></p>
          *
@@ -631,10 +659,9 @@ namespace Model
          * operation is only supported in the cached volume, tape, and file gateway type
          * (see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html">How
-         * AWS Storage Gateway works (architecture)</a>.</p> <p>In the request, you specify
-         * the gateway Amazon Resource Name (ARN) to which you want to add cache, and one
-         * or more disk IDs that you want to configure as cache.</p><p><h3>See Also:</h3>  
-         * <a
+         * Storage Gateway works (architecture)</a>.</p> <p>In the request, you specify the
+         * gateway Amazon Resource Name (ARN) to which you want to add cache, and one or
+         * more disk IDs that you want to configure as cache.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/AddCache">AWS
          * API Reference</a></p>
          *
@@ -647,11 +674,12 @@ namespace Model
          * to resources, which you can use to categorize these resources. For example, you
          * can categorize resources by purpose, owner, environment, or team. Each tag
          * consists of a key and a value, which you define. You can add tags to the
-         * following AWS Storage Gateway resources:</p> <ul> <li> <p>Storage gateways of
-         * all types</p> </li> <li> <p>Storage volumes</p> </li> <li> <p>Virtual tapes</p>
-         * </li> <li> <p>NFS and SMB file shares</p> </li> </ul> <p>You can create a
-         * maximum of 50 tags for each resource. Virtual tapes and storage volumes that are
-         * recovered to a new gateway maintain their tags.</p><p><h3>See Also:</h3>   <a
+         * following Storage Gateway resources:</p> <ul> <li> <p>Storage gateways of all
+         * types</p> </li> <li> <p>Storage volumes</p> </li> <li> <p>Virtual tapes</p>
+         * </li> <li> <p>NFS and SMB file shares</p> </li> <li> <p>File System
+         * associations</p> </li> </ul> <p>You can create a maximum of 50 tags for each
+         * resource. Virtual tapes and storage volumes that are recovered to a new gateway
+         * maintain their tags.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/AddTagsToResource">AWS
          * API Reference</a></p>
          */
@@ -662,11 +690,12 @@ namespace Model
          * to resources, which you can use to categorize these resources. For example, you
          * can categorize resources by purpose, owner, environment, or team. Each tag
          * consists of a key and a value, which you define. You can add tags to the
-         * following AWS Storage Gateway resources:</p> <ul> <li> <p>Storage gateways of
-         * all types</p> </li> <li> <p>Storage volumes</p> </li> <li> <p>Virtual tapes</p>
-         * </li> <li> <p>NFS and SMB file shares</p> </li> </ul> <p>You can create a
-         * maximum of 50 tags for each resource. Virtual tapes and storage volumes that are
-         * recovered to a new gateway maintain their tags.</p><p><h3>See Also:</h3>   <a
+         * following Storage Gateway resources:</p> <ul> <li> <p>Storage gateways of all
+         * types</p> </li> <li> <p>Storage volumes</p> </li> <li> <p>Virtual tapes</p>
+         * </li> <li> <p>NFS and SMB file shares</p> </li> <li> <p>File System
+         * associations</p> </li> </ul> <p>You can create a maximum of 50 tags for each
+         * resource. Virtual tapes and storage volumes that are recovered to a new gateway
+         * maintain their tags.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/AddTagsToResource">AWS
          * API Reference</a></p>
          *
@@ -679,11 +708,12 @@ namespace Model
          * to resources, which you can use to categorize these resources. For example, you
          * can categorize resources by purpose, owner, environment, or team. Each tag
          * consists of a key and a value, which you define. You can add tags to the
-         * following AWS Storage Gateway resources:</p> <ul> <li> <p>Storage gateways of
-         * all types</p> </li> <li> <p>Storage volumes</p> </li> <li> <p>Virtual tapes</p>
-         * </li> <li> <p>NFS and SMB file shares</p> </li> </ul> <p>You can create a
-         * maximum of 50 tags for each resource. Virtual tapes and storage volumes that are
-         * recovered to a new gateway maintain their tags.</p><p><h3>See Also:</h3>   <a
+         * following Storage Gateway resources:</p> <ul> <li> <p>Storage gateways of all
+         * types</p> </li> <li> <p>Storage volumes</p> </li> <li> <p>Virtual tapes</p>
+         * </li> <li> <p>NFS and SMB file shares</p> </li> <li> <p>File System
+         * associations</p> </li> </ul> <p>You can create a maximum of 50 tags for each
+         * resource. Virtual tapes and storage volumes that are recovered to a new gateway
+         * maintain their tags.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/AddTagsToResource">AWS
          * API Reference</a></p>
          *
@@ -693,7 +723,7 @@ namespace Model
 
         /**
          * <p>Configures one or more gateway local disks as upload buffer for a specified
-         * gateway. This operation is supported for the stored volume, cached volume and
+         * gateway. This operation is supported for the stored volume, cached volume, and
          * tape gateway types.</p> <p>In the request, you specify the gateway Amazon
          * Resource Name (ARN) to which you want to add upload buffer, and one or more disk
          * IDs that you want to configure as upload buffer.</p><p><h3>See Also:</h3>   <a
@@ -704,7 +734,7 @@ namespace Model
 
         /**
          * <p>Configures one or more gateway local disks as upload buffer for a specified
-         * gateway. This operation is supported for the stored volume, cached volume and
+         * gateway. This operation is supported for the stored volume, cached volume, and
          * tape gateway types.</p> <p>In the request, you specify the gateway Amazon
          * Resource Name (ARN) to which you want to add upload buffer, and one or more disk
          * IDs that you want to configure as upload buffer.</p><p><h3>See Also:</h3>   <a
@@ -717,7 +747,7 @@ namespace Model
 
         /**
          * <p>Configures one or more gateway local disks as upload buffer for a specified
-         * gateway. This operation is supported for the stored volume, cached volume and
+         * gateway. This operation is supported for the stored volume, cached volume, and
          * tape gateway types.</p> <p>In the request, you specify the gateway Amazon
          * Resource Name (ARN) to which you want to add upload buffer, and one or more disk
          * IDs that you want to configure as upload buffer.</p><p><h3>See Also:</h3>   <a
@@ -816,6 +846,40 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void AssignTapePoolAsync(const Model::AssignTapePoolRequest& request, const AssignTapePoolResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Associate an Amazon FSx file system with the FSx File Gateway. After the
+         * association process is complete, the file shares on the Amazon FSx file system
+         * are available for access through the gateway. This operation only supports the
+         * FSx File Gateway type.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/AssociateFileSystem">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::AssociateFileSystemOutcome AssociateFileSystem(const Model::AssociateFileSystemRequest& request) const;
+
+        /**
+         * <p>Associate an Amazon FSx file system with the FSx File Gateway. After the
+         * association process is complete, the file shares on the Amazon FSx file system
+         * are available for access through the gateway. This operation only supports the
+         * FSx File Gateway type.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/AssociateFileSystem">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::AssociateFileSystemOutcomeCallable AssociateFileSystemCallable(const Model::AssociateFileSystemRequest& request) const;
+
+        /**
+         * <p>Associate an Amazon FSx file system with the FSx File Gateway. After the
+         * association process is complete, the file shares on the Amazon FSx file system
+         * are available for access through the gateway. This operation only supports the
+         * FSx File Gateway type.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/AssociateFileSystem">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void AssociateFileSystemAsync(const Model::AssociateFileSystemRequest& request, const AssociateFileSystemResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Connects a volume to an iSCSI connection and then attaches the volume to the
@@ -984,36 +1048,42 @@ namespace Model
         virtual void CreateCachediSCSIVolumeAsync(const Model::CreateCachediSCSIVolumeRequest& request, const CreateCachediSCSIVolumeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates a Network File System (NFS) file share on an existing file gateway.
-         * In Storage Gateway, a file share is a file system mount point backed by Amazon
-         * S3 cloud storage. Storage Gateway exposes file shares using an NFS interface.
-         * This operation is only supported for file gateways.</p>  <p>File
-         * gateway requires AWS Security Token Service (AWS STS) to be activated to enable
-         * you to create a file share. Make sure AWS STS is activated in the AWS Region you
-         * are creating your file gateway in. If AWS STS is not activated in the AWS
-         * Region, activate it. For information about how to activate AWS STS, see <a
+         * <p>Creates a Network File System (NFS) file share on an existing S3 File
+         * Gateway. In Storage Gateway, a file share is a file system mount point backed by
+         * Amazon S3 cloud storage. Storage Gateway exposes file shares using an NFS
+         * interface. This operation is only supported for S3 File Gateways.</p>
+         *  <p>S3 File gateway requires Security Token Service (Amazon Web
+         * Services STS) to be activated to enable you to create a file share. Make sure
+         * Amazon Web Services STS is activated in the Amazon Web Services Region you are
+         * creating your S3 File Gateway in. If Amazon Web Services STS is not activated in
+         * the Amazon Web Services Region, activate it. For information about how to
+         * activate Amazon Web Services STS, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p> <p>File gateway does not support creating hard or
-         * symbolic links on a file share.</p> <p><h3>See Also:</h3>   <a
+         * and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Identity and Access Management User Guide</i>.</p> <p>S3 File Gateways do
+         * not support creating hard or symbolic links on a file share.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/CreateNFSFileShare">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateNFSFileShareOutcome CreateNFSFileShare(const Model::CreateNFSFileShareRequest& request) const;
 
         /**
-         * <p>Creates a Network File System (NFS) file share on an existing file gateway.
-         * In Storage Gateway, a file share is a file system mount point backed by Amazon
-         * S3 cloud storage. Storage Gateway exposes file shares using an NFS interface.
-         * This operation is only supported for file gateways.</p>  <p>File
-         * gateway requires AWS Security Token Service (AWS STS) to be activated to enable
-         * you to create a file share. Make sure AWS STS is activated in the AWS Region you
-         * are creating your file gateway in. If AWS STS is not activated in the AWS
-         * Region, activate it. For information about how to activate AWS STS, see <a
+         * <p>Creates a Network File System (NFS) file share on an existing S3 File
+         * Gateway. In Storage Gateway, a file share is a file system mount point backed by
+         * Amazon S3 cloud storage. Storage Gateway exposes file shares using an NFS
+         * interface. This operation is only supported for S3 File Gateways.</p>
+         *  <p>S3 File gateway requires Security Token Service (Amazon Web
+         * Services STS) to be activated to enable you to create a file share. Make sure
+         * Amazon Web Services STS is activated in the Amazon Web Services Region you are
+         * creating your S3 File Gateway in. If Amazon Web Services STS is not activated in
+         * the Amazon Web Services Region, activate it. For information about how to
+         * activate Amazon Web Services STS, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p> <p>File gateway does not support creating hard or
-         * symbolic links on a file share.</p> <p><h3>See Also:</h3>   <a
+         * and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Identity and Access Management User Guide</i>.</p> <p>S3 File Gateways do
+         * not support creating hard or symbolic links on a file share.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/CreateNFSFileShare">AWS
          * API Reference</a></p>
          *
@@ -1022,18 +1092,21 @@ namespace Model
         virtual Model::CreateNFSFileShareOutcomeCallable CreateNFSFileShareCallable(const Model::CreateNFSFileShareRequest& request) const;
 
         /**
-         * <p>Creates a Network File System (NFS) file share on an existing file gateway.
-         * In Storage Gateway, a file share is a file system mount point backed by Amazon
-         * S3 cloud storage. Storage Gateway exposes file shares using an NFS interface.
-         * This operation is only supported for file gateways.</p>  <p>File
-         * gateway requires AWS Security Token Service (AWS STS) to be activated to enable
-         * you to create a file share. Make sure AWS STS is activated in the AWS Region you
-         * are creating your file gateway in. If AWS STS is not activated in the AWS
-         * Region, activate it. For information about how to activate AWS STS, see <a
+         * <p>Creates a Network File System (NFS) file share on an existing S3 File
+         * Gateway. In Storage Gateway, a file share is a file system mount point backed by
+         * Amazon S3 cloud storage. Storage Gateway exposes file shares using an NFS
+         * interface. This operation is only supported for S3 File Gateways.</p>
+         *  <p>S3 File gateway requires Security Token Service (Amazon Web
+         * Services STS) to be activated to enable you to create a file share. Make sure
+         * Amazon Web Services STS is activated in the Amazon Web Services Region you are
+         * creating your S3 File Gateway in. If Amazon Web Services STS is not activated in
+         * the Amazon Web Services Region, activate it. For information about how to
+         * activate Amazon Web Services STS, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p> <p>File gateway does not support creating hard or
-         * symbolic links on a file share.</p> <p><h3>See Also:</h3>   <a
+         * and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Identity and Access Management User Guide</i>.</p> <p>S3 File Gateways do
+         * not support creating hard or symbolic links on a file share.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/CreateNFSFileShare">AWS
          * API Reference</a></p>
          *
@@ -1042,38 +1115,42 @@ namespace Model
         virtual void CreateNFSFileShareAsync(const Model::CreateNFSFileShareRequest& request, const CreateNFSFileShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates a Server Message Block (SMB) file share on an existing file gateway.
-         * In Storage Gateway, a file share is a file system mount point backed by Amazon
-         * S3 cloud storage. Storage Gateway exposes file shares using an SMB interface.
-         * This operation is only supported for file gateways.</p>  <p>File
-         * gateways require AWS Security Token Service (AWS STS) to be activated to enable
-         * you to create a file share. Make sure that AWS STS is activated in the AWS
-         * Region you are creating your file gateway in. If AWS STS is not activated in
-         * this AWS Region, activate it. For information about how to activate AWS STS, see
-         * <a
+         * <p>Creates a Server Message Block (SMB) file share on an existing S3 File
+         * Gateway. In Storage Gateway, a file share is a file system mount point backed by
+         * Amazon S3 cloud storage. Storage Gateway exposes file shares using an SMB
+         * interface. This operation is only supported for S3 File Gateways.</p>
+         *  <p>S3 File Gateways require Security Token Service (Amazon Web
+         * Services STS) to be activated to enable you to create a file share. Make sure
+         * that Amazon Web Services STS is activated in the Amazon Web Services Region you
+         * are creating your S3 File Gateway in. If Amazon Web Services STS is not
+         * activated in this Amazon Web Services Region, activate it. For information about
+         * how to activate Amazon Web Services STS, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p> <p>File gateways don't support creating hard or
-         * symbolic links on a file share.</p> <p><h3>See Also:</h3>   <a
+         * and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Identity and Access Management User Guide</i>.</p> <p>File gateways don't
+         * support creating hard or symbolic links on a file share.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/CreateSMBFileShare">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateSMBFileShareOutcome CreateSMBFileShare(const Model::CreateSMBFileShareRequest& request) const;
 
         /**
-         * <p>Creates a Server Message Block (SMB) file share on an existing file gateway.
-         * In Storage Gateway, a file share is a file system mount point backed by Amazon
-         * S3 cloud storage. Storage Gateway exposes file shares using an SMB interface.
-         * This operation is only supported for file gateways.</p>  <p>File
-         * gateways require AWS Security Token Service (AWS STS) to be activated to enable
-         * you to create a file share. Make sure that AWS STS is activated in the AWS
-         * Region you are creating your file gateway in. If AWS STS is not activated in
-         * this AWS Region, activate it. For information about how to activate AWS STS, see
-         * <a
+         * <p>Creates a Server Message Block (SMB) file share on an existing S3 File
+         * Gateway. In Storage Gateway, a file share is a file system mount point backed by
+         * Amazon S3 cloud storage. Storage Gateway exposes file shares using an SMB
+         * interface. This operation is only supported for S3 File Gateways.</p>
+         *  <p>S3 File Gateways require Security Token Service (Amazon Web
+         * Services STS) to be activated to enable you to create a file share. Make sure
+         * that Amazon Web Services STS is activated in the Amazon Web Services Region you
+         * are creating your S3 File Gateway in. If Amazon Web Services STS is not
+         * activated in this Amazon Web Services Region, activate it. For information about
+         * how to activate Amazon Web Services STS, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p> <p>File gateways don't support creating hard or
-         * symbolic links on a file share.</p> <p><h3>See Also:</h3>   <a
+         * and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Identity and Access Management User Guide</i>.</p> <p>File gateways don't
+         * support creating hard or symbolic links on a file share.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/CreateSMBFileShare">AWS
          * API Reference</a></p>
          *
@@ -1082,19 +1159,21 @@ namespace Model
         virtual Model::CreateSMBFileShareOutcomeCallable CreateSMBFileShareCallable(const Model::CreateSMBFileShareRequest& request) const;
 
         /**
-         * <p>Creates a Server Message Block (SMB) file share on an existing file gateway.
-         * In Storage Gateway, a file share is a file system mount point backed by Amazon
-         * S3 cloud storage. Storage Gateway exposes file shares using an SMB interface.
-         * This operation is only supported for file gateways.</p>  <p>File
-         * gateways require AWS Security Token Service (AWS STS) to be activated to enable
-         * you to create a file share. Make sure that AWS STS is activated in the AWS
-         * Region you are creating your file gateway in. If AWS STS is not activated in
-         * this AWS Region, activate it. For information about how to activate AWS STS, see
-         * <a
+         * <p>Creates a Server Message Block (SMB) file share on an existing S3 File
+         * Gateway. In Storage Gateway, a file share is a file system mount point backed by
+         * Amazon S3 cloud storage. Storage Gateway exposes file shares using an SMB
+         * interface. This operation is only supported for S3 File Gateways.</p>
+         *  <p>S3 File Gateways require Security Token Service (Amazon Web
+         * Services STS) to be activated to enable you to create a file share. Make sure
+         * that Amazon Web Services STS is activated in the Amazon Web Services Region you
+         * are creating your S3 File Gateway in. If Amazon Web Services STS is not
+         * activated in this Amazon Web Services Region, activate it. For information about
+         * how to activate Amazon Web Services STS, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p> <p>File gateways don't support creating hard or
-         * symbolic links on a file share.</p> <p><h3>See Also:</h3>   <a
+         * and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Identity and Access Management User Guide</i>.</p> <p>File gateways don't
+         * support creating hard or symbolic links on a file share.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/CreateSMBFileShare">AWS
          * API Reference</a></p>
          *
@@ -1103,22 +1182,22 @@ namespace Model
         virtual void CreateSMBFileShareAsync(const Model::CreateSMBFileShareRequest& request, const CreateSMBFileShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Initiates a snapshot of a volume.</p> <p>AWS Storage Gateway provides the
-         * ability to back up point-in-time snapshots of your data to Amazon Simple Storage
-         * (Amazon S3) for durable off-site recovery, as well as import the data to an
-         * Amazon Elastic Block Store (EBS) volume in Amazon Elastic Compute Cloud (EC2).
-         * You can take snapshots of your gateway volume on a scheduled or ad hoc basis.
-         * This API enables you to take an ad hoc snapshot. For more information, see <a
+         * <p>Initiates a snapshot of a volume.</p> <p>Storage Gateway provides the ability
+         * to back up point-in-time snapshots of your data to Amazon Simple Storage (Amazon
+         * S3) for durable off-site recovery, and also import the data to an Amazon Elastic
+         * Block Store (EBS) volume in Amazon Elastic Compute Cloud (EC2). You can take
+         * snapshots of your gateway volume on a scheduled or ad hoc basis. This API
+         * enables you to take an ad hoc snapshot. For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-volumes.html#SchedulingSnapshot">Editing
          * a snapshot schedule</a>.</p> <p>In the <code>CreateSnapshot</code> request, you
          * identify the volume by providing its Amazon Resource Name (ARN). You must also
-         * provide description for the snapshot. When AWS Storage Gateway takes the
-         * snapshot of specified volume, the snapshot and description appears in the AWS
-         * Storage Gateway console. In response, AWS Storage Gateway returns you a snapshot
-         * ID. You can use this snapshot ID to check the snapshot progress or later use it
-         * when you want to create a volume from a snapshot. This operation is only
-         * supported in stored and cached volume gateway type.</p>  <p>To list or
-         * delete a snapshot, you must use the Amazon EC2 API. For more information, see <a
+         * provide description for the snapshot. When Storage Gateway takes the snapshot of
+         * specified volume, the snapshot and description appears in the Storage Gateway
+         * console. In response, Storage Gateway returns you a snapshot ID. You can use
+         * this snapshot ID to check the snapshot progress or later use it when you want to
+         * create a volume from a snapshot. This operation is only supported in stored and
+         * cached volume gateway type.</p>  <p>To list or delete a snapshot, you must
+         * use the Amazon EC2 API. For more information, see <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSnapshots.html">DescribeSnapshots</a>
          * or <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteSnapshot.html">DeleteSnapshot</a>
@@ -1133,22 +1212,22 @@ namespace Model
         virtual Model::CreateSnapshotOutcome CreateSnapshot(const Model::CreateSnapshotRequest& request) const;
 
         /**
-         * <p>Initiates a snapshot of a volume.</p> <p>AWS Storage Gateway provides the
-         * ability to back up point-in-time snapshots of your data to Amazon Simple Storage
-         * (Amazon S3) for durable off-site recovery, as well as import the data to an
-         * Amazon Elastic Block Store (EBS) volume in Amazon Elastic Compute Cloud (EC2).
-         * You can take snapshots of your gateway volume on a scheduled or ad hoc basis.
-         * This API enables you to take an ad hoc snapshot. For more information, see <a
+         * <p>Initiates a snapshot of a volume.</p> <p>Storage Gateway provides the ability
+         * to back up point-in-time snapshots of your data to Amazon Simple Storage (Amazon
+         * S3) for durable off-site recovery, and also import the data to an Amazon Elastic
+         * Block Store (EBS) volume in Amazon Elastic Compute Cloud (EC2). You can take
+         * snapshots of your gateway volume on a scheduled or ad hoc basis. This API
+         * enables you to take an ad hoc snapshot. For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-volumes.html#SchedulingSnapshot">Editing
          * a snapshot schedule</a>.</p> <p>In the <code>CreateSnapshot</code> request, you
          * identify the volume by providing its Amazon Resource Name (ARN). You must also
-         * provide description for the snapshot. When AWS Storage Gateway takes the
-         * snapshot of specified volume, the snapshot and description appears in the AWS
-         * Storage Gateway console. In response, AWS Storage Gateway returns you a snapshot
-         * ID. You can use this snapshot ID to check the snapshot progress or later use it
-         * when you want to create a volume from a snapshot. This operation is only
-         * supported in stored and cached volume gateway type.</p>  <p>To list or
-         * delete a snapshot, you must use the Amazon EC2 API. For more information, see <a
+         * provide description for the snapshot. When Storage Gateway takes the snapshot of
+         * specified volume, the snapshot and description appears in the Storage Gateway
+         * console. In response, Storage Gateway returns you a snapshot ID. You can use
+         * this snapshot ID to check the snapshot progress or later use it when you want to
+         * create a volume from a snapshot. This operation is only supported in stored and
+         * cached volume gateway type.</p>  <p>To list or delete a snapshot, you must
+         * use the Amazon EC2 API. For more information, see <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSnapshots.html">DescribeSnapshots</a>
          * or <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteSnapshot.html">DeleteSnapshot</a>
@@ -1165,22 +1244,22 @@ namespace Model
         virtual Model::CreateSnapshotOutcomeCallable CreateSnapshotCallable(const Model::CreateSnapshotRequest& request) const;
 
         /**
-         * <p>Initiates a snapshot of a volume.</p> <p>AWS Storage Gateway provides the
-         * ability to back up point-in-time snapshots of your data to Amazon Simple Storage
-         * (Amazon S3) for durable off-site recovery, as well as import the data to an
-         * Amazon Elastic Block Store (EBS) volume in Amazon Elastic Compute Cloud (EC2).
-         * You can take snapshots of your gateway volume on a scheduled or ad hoc basis.
-         * This API enables you to take an ad hoc snapshot. For more information, see <a
+         * <p>Initiates a snapshot of a volume.</p> <p>Storage Gateway provides the ability
+         * to back up point-in-time snapshots of your data to Amazon Simple Storage (Amazon
+         * S3) for durable off-site recovery, and also import the data to an Amazon Elastic
+         * Block Store (EBS) volume in Amazon Elastic Compute Cloud (EC2). You can take
+         * snapshots of your gateway volume on a scheduled or ad hoc basis. This API
+         * enables you to take an ad hoc snapshot. For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-volumes.html#SchedulingSnapshot">Editing
          * a snapshot schedule</a>.</p> <p>In the <code>CreateSnapshot</code> request, you
          * identify the volume by providing its Amazon Resource Name (ARN). You must also
-         * provide description for the snapshot. When AWS Storage Gateway takes the
-         * snapshot of specified volume, the snapshot and description appears in the AWS
-         * Storage Gateway console. In response, AWS Storage Gateway returns you a snapshot
-         * ID. You can use this snapshot ID to check the snapshot progress or later use it
-         * when you want to create a volume from a snapshot. This operation is only
-         * supported in stored and cached volume gateway type.</p>  <p>To list or
-         * delete a snapshot, you must use the Amazon EC2 API. For more information, see <a
+         * provide description for the snapshot. When Storage Gateway takes the snapshot of
+         * specified volume, the snapshot and description appears in the Storage Gateway
+         * console. In response, Storage Gateway returns you a snapshot ID. You can use
+         * this snapshot ID to check the snapshot progress or later use it when you want to
+         * create a volume from a snapshot. This operation is only supported in stored and
+         * cached volume gateway type.</p>  <p>To list or delete a snapshot, you must
+         * use the Amazon EC2 API. For more information, see <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSnapshots.html">DescribeSnapshots</a>
          * or <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteSnapshot.html">DeleteSnapshot</a>
@@ -1205,11 +1284,11 @@ namespace Model
          * <code>CreateSnapshotFromVolumeRecoveryPoint</code> request, you identify the
          * volume by providing its Amazon Resource Name (ARN). You must also provide a
          * description for the snapshot. When the gateway takes a snapshot of the specified
-         * volume, the snapshot and its description appear in the AWS Storage Gateway
-         * console. In response, the gateway returns you a snapshot ID. You can use this
-         * snapshot ID to check the snapshot progress or later use it when you want to
-         * create a volume from a snapshot.</p>  <p>To list or delete a snapshot, you
-         * must use the Amazon EC2 API. For more information, see <a
+         * volume, the snapshot and its description appear in the Storage Gateway console.
+         * In response, the gateway returns you a snapshot ID. You can use this snapshot ID
+         * to check the snapshot progress or later use it when you want to create a volume
+         * from a snapshot.</p>  <p>To list or delete a snapshot, you must use the
+         * Amazon EC2 API. For more information, see <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSnapshots.html">DescribeSnapshots</a>
          * or <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteSnapshot.html">DeleteSnapshot</a>
@@ -1229,11 +1308,11 @@ namespace Model
          * <code>CreateSnapshotFromVolumeRecoveryPoint</code> request, you identify the
          * volume by providing its Amazon Resource Name (ARN). You must also provide a
          * description for the snapshot. When the gateway takes a snapshot of the specified
-         * volume, the snapshot and its description appear in the AWS Storage Gateway
-         * console. In response, the gateway returns you a snapshot ID. You can use this
-         * snapshot ID to check the snapshot progress or later use it when you want to
-         * create a volume from a snapshot.</p>  <p>To list or delete a snapshot, you
-         * must use the Amazon EC2 API. For more information, see <a
+         * volume, the snapshot and its description appear in the Storage Gateway console.
+         * In response, the gateway returns you a snapshot ID. You can use this snapshot ID
+         * to check the snapshot progress or later use it when you want to create a volume
+         * from a snapshot.</p>  <p>To list or delete a snapshot, you must use the
+         * Amazon EC2 API. For more information, see <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSnapshots.html">DescribeSnapshots</a>
          * or <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteSnapshot.html">DeleteSnapshot</a>
@@ -1255,11 +1334,11 @@ namespace Model
          * <code>CreateSnapshotFromVolumeRecoveryPoint</code> request, you identify the
          * volume by providing its Amazon Resource Name (ARN). You must also provide a
          * description for the snapshot. When the gateway takes a snapshot of the specified
-         * volume, the snapshot and its description appear in the AWS Storage Gateway
-         * console. In response, the gateway returns you a snapshot ID. You can use this
-         * snapshot ID to check the snapshot progress or later use it when you want to
-         * create a volume from a snapshot.</p>  <p>To list or delete a snapshot, you
-         * must use the Amazon EC2 API. For more information, see <a
+         * volume, the snapshot and its description appear in the Storage Gateway console.
+         * In response, the gateway returns you a snapshot ID. You can use this snapshot ID
+         * to check the snapshot progress or later use it when you want to create a volume
+         * from a snapshot.</p>  <p>To list or delete a snapshot, you must use the
+         * Amazon EC2 API. For more information, see <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSnapshots.html">DescribeSnapshots</a>
          * or <a
          * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteSnapshot.html">DeleteSnapshot</a>
@@ -1474,8 +1553,8 @@ namespace Model
          * upload and download bandwidth rate limit, or you can delete both. If you delete
          * only one of the limits, the other limit remains unchanged. To specify which
          * gateway to work with, use the Amazon Resource Name (ARN) of the gateway in your
-         * request. This operation is supported for the stored volume, cached volume and
-         * tape gateway types.</p><p><h3>See Also:</h3>   <a
+         * request. This operation is supported only for the stored volume, cached volume,
+         * and tape gateway types.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DeleteBandwidthRateLimit">AWS
          * API Reference</a></p>
          */
@@ -1486,8 +1565,8 @@ namespace Model
          * upload and download bandwidth rate limit, or you can delete both. If you delete
          * only one of the limits, the other limit remains unchanged. To specify which
          * gateway to work with, use the Amazon Resource Name (ARN) of the gateway in your
-         * request. This operation is supported for the stored volume, cached volume and
-         * tape gateway types.</p><p><h3>See Also:</h3>   <a
+         * request. This operation is supported only for the stored volume, cached volume,
+         * and tape gateway types.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DeleteBandwidthRateLimit">AWS
          * API Reference</a></p>
          *
@@ -1500,8 +1579,8 @@ namespace Model
          * upload and download bandwidth rate limit, or you can delete both. If you delete
          * only one of the limits, the other limit remains unchanged. To specify which
          * gateway to work with, use the Amazon Resource Name (ARN) of the gateway in your
-         * request. This operation is supported for the stored volume, cached volume and
-         * tape gateway types.</p><p><h3>See Also:</h3>   <a
+         * request. This operation is supported only for the stored volume, cached volume,
+         * and tape gateway types.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DeleteBandwidthRateLimit">AWS
          * API Reference</a></p>
          *
@@ -1541,16 +1620,16 @@ namespace Model
         virtual void DeleteChapCredentialsAsync(const Model::DeleteChapCredentialsRequest& request, const DeleteChapCredentialsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Deletes a file share from a file gateway. This operation is only supported
-         * for file gateways.</p><p><h3>See Also:</h3>   <a
+         * <p>Deletes a file share from an S3 File Gateway. This operation is only
+         * supported for S3 File Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DeleteFileShare">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteFileShareOutcome DeleteFileShare(const Model::DeleteFileShareRequest& request) const;
 
         /**
-         * <p>Deletes a file share from a file gateway. This operation is only supported
-         * for file gateways.</p><p><h3>See Also:</h3>   <a
+         * <p>Deletes a file share from an S3 File Gateway. This operation is only
+         * supported for S3 File Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DeleteFileShare">AWS
          * API Reference</a></p>
          *
@@ -1559,8 +1638,8 @@ namespace Model
         virtual Model::DeleteFileShareOutcomeCallable DeleteFileShareCallable(const Model::DeleteFileShareRequest& request) const;
 
         /**
-         * <p>Deletes a file share from a file gateway. This operation is only supported
-         * for file gateways.</p><p><h3>See Also:</h3>   <a
+         * <p>Deletes a file share from an S3 File Gateway. This operation is only
+         * supported for S3 File Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DeleteFileShare">AWS
          * API Reference</a></p>
          *
@@ -1582,8 +1661,8 @@ namespace Model
          * by canceling your Amazon EC2 subscription.  If you prefer not to cancel your
          * Amazon EC2 subscription, you can delete your snapshots using the Amazon EC2
          * console. For more information, see the <a
-         * href="http://aws.amazon.com/storagegateway">AWS Storage Gateway detail
-         * page</a>.</p> <p><h3>See Also:</h3>   <a
+         * href="http://aws.amazon.com/storagegateway">Storage Gateway detail page</a>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DeleteGateway">AWS
          * API Reference</a></p>
          */
@@ -1603,8 +1682,8 @@ namespace Model
          * by canceling your Amazon EC2 subscription.  If you prefer not to cancel your
          * Amazon EC2 subscription, you can delete your snapshots using the Amazon EC2
          * console. For more information, see the <a
-         * href="http://aws.amazon.com/storagegateway">AWS Storage Gateway detail
-         * page</a>.</p> <p><h3>See Also:</h3>   <a
+         * href="http://aws.amazon.com/storagegateway">Storage Gateway detail page</a>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DeleteGateway">AWS
          * API Reference</a></p>
          *
@@ -1626,8 +1705,8 @@ namespace Model
          * by canceling your Amazon EC2 subscription.  If you prefer not to cancel your
          * Amazon EC2 subscription, you can delete your snapshots using the Amazon EC2
          * console. For more information, see the <a
-         * href="http://aws.amazon.com/storagegateway">AWS Storage Gateway detail
-         * page</a>.</p> <p><h3>See Also:</h3>   <a
+         * href="http://aws.amazon.com/storagegateway">Storage Gateway detail page</a>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DeleteGateway">AWS
          * API Reference</a></p>
          *
@@ -1848,7 +1927,7 @@ namespace Model
         virtual void DeleteVolumeAsync(const Model::DeleteVolumeRequest& request, const DeleteVolumeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Returns information about the most recent High Availability monitoring test
+         * <p>Returns information about the most recent high availability monitoring test
          * that was performed on the host in a cluster. If a test isn't performed, the
          * status and start time in the response would be null.</p><p><h3>See Also:</h3>  
          * <a
@@ -1858,7 +1937,7 @@ namespace Model
         virtual Model::DescribeAvailabilityMonitorTestOutcome DescribeAvailabilityMonitorTest(const Model::DescribeAvailabilityMonitorTestRequest& request) const;
 
         /**
-         * <p>Returns information about the most recent High Availability monitoring test
+         * <p>Returns information about the most recent high availability monitoring test
          * that was performed on the host in a cluster. If a test isn't performed, the
          * status and start time in the response would be null.</p><p><h3>See Also:</h3>  
          * <a
@@ -1870,7 +1949,7 @@ namespace Model
         virtual Model::DescribeAvailabilityMonitorTestOutcomeCallable DescribeAvailabilityMonitorTestCallable(const Model::DescribeAvailabilityMonitorTestRequest& request) const;
 
         /**
-         * <p>Returns information about the most recent High Availability monitoring test
+         * <p>Returns information about the most recent high availability monitoring test
          * that was performed on the host in a cluster. If a test isn't performed, the
          * status and start time in the response would be null.</p><p><h3>See Also:</h3>  
          * <a
@@ -1884,12 +1963,13 @@ namespace Model
         /**
          * <p>Returns the bandwidth rate limits of a gateway. By default, these limits are
          * not set, which means no bandwidth rate limiting is in effect. This operation is
-         * supported for the stored volume, cached volume, and tape gateway types.</p>
-         * <p>This operation only returns a value for a bandwidth rate limit only if the
-         * limit is set. If no limits are set for the gateway, then this operation returns
-         * only the gateway ARN in the response body. To specify which gateway to describe,
-         * use the Amazon Resource Name (ARN) of the gateway in your request.</p><p><h3>See
-         * Also:</h3>   <a
+         * supported only for the stored volume, cached volume, and tape gateway types. To
+         * describe bandwidth rate limits for S3 file gateways, use
+         * <a>DescribeBandwidthRateLimitSchedule</a>.</p> <p>This operation returns a value
+         * for a bandwidth rate limit only if the limit is set. If no limits are set for
+         * the gateway, then this operation returns only the gateway ARN in the response
+         * body. To specify which gateway to describe, use the Amazon Resource Name (ARN)
+         * of the gateway in your request.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeBandwidthRateLimit">AWS
          * API Reference</a></p>
          */
@@ -1898,12 +1978,13 @@ namespace Model
         /**
          * <p>Returns the bandwidth rate limits of a gateway. By default, these limits are
          * not set, which means no bandwidth rate limiting is in effect. This operation is
-         * supported for the stored volume, cached volume, and tape gateway types.</p>
-         * <p>This operation only returns a value for a bandwidth rate limit only if the
-         * limit is set. If no limits are set for the gateway, then this operation returns
-         * only the gateway ARN in the response body. To specify which gateway to describe,
-         * use the Amazon Resource Name (ARN) of the gateway in your request.</p><p><h3>See
-         * Also:</h3>   <a
+         * supported only for the stored volume, cached volume, and tape gateway types. To
+         * describe bandwidth rate limits for S3 file gateways, use
+         * <a>DescribeBandwidthRateLimitSchedule</a>.</p> <p>This operation returns a value
+         * for a bandwidth rate limit only if the limit is set. If no limits are set for
+         * the gateway, then this operation returns only the gateway ARN in the response
+         * body. To specify which gateway to describe, use the Amazon Resource Name (ARN)
+         * of the gateway in your request.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeBandwidthRateLimit">AWS
          * API Reference</a></p>
          *
@@ -1914,12 +1995,13 @@ namespace Model
         /**
          * <p>Returns the bandwidth rate limits of a gateway. By default, these limits are
          * not set, which means no bandwidth rate limiting is in effect. This operation is
-         * supported for the stored volume, cached volume, and tape gateway types.</p>
-         * <p>This operation only returns a value for a bandwidth rate limit only if the
-         * limit is set. If no limits are set for the gateway, then this operation returns
-         * only the gateway ARN in the response body. To specify which gateway to describe,
-         * use the Amazon Resource Name (ARN) of the gateway in your request.</p><p><h3>See
-         * Also:</h3>   <a
+         * supported only for the stored volume, cached volume, and tape gateway types. To
+         * describe bandwidth rate limits for S3 file gateways, use
+         * <a>DescribeBandwidthRateLimitSchedule</a>.</p> <p>This operation returns a value
+         * for a bandwidth rate limit only if the limit is set. If no limits are set for
+         * the gateway, then this operation returns only the gateway ARN in the response
+         * body. To specify which gateway to describe, use the Amazon Resource Name (ARN)
+         * of the gateway in your request.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeBandwidthRateLimit">AWS
          * API Reference</a></p>
          *
@@ -1930,18 +2012,19 @@ namespace Model
         /**
          * <p> Returns information about the bandwidth rate limit schedule of a gateway. By
          * default, gateways do not have bandwidth rate limit schedules, which means no
-         * bandwidth rate limiting is in effect. This operation is supported only in the
-         * volume and tape gateway types. </p> <p>This operation returns information about
-         * a gateway's bandwidth rate limit schedule. A bandwidth rate limit schedule
-         * consists of one or more bandwidth rate limit intervals. A bandwidth rate limit
-         * interval defines a period of time on one or more days of the week, during which
-         * bandwidth rate limits are specified for uploading, downloading, or both. </p>
-         * <p> A bandwidth rate limit interval consists of one or more days of the week, a
-         * start hour and minute, an ending hour and minute, and bandwidth rate limits for
-         * uploading and downloading </p> <p> If no bandwidth rate limit schedule intervals
-         * are set for the gateway, this operation returns an empty response. To specify
-         * which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in
-         * your request.</p><p><h3>See Also:</h3>   <a
+         * bandwidth rate limiting is in effect. This operation is supported only for
+         * volume, tape and S3 file gateways. FSx file gateways do not support bandwidth
+         * rate limits.</p> <p>This operation returns information about a gateway's
+         * bandwidth rate limit schedule. A bandwidth rate limit schedule consists of one
+         * or more bandwidth rate limit intervals. A bandwidth rate limit interval defines
+         * a period of time on one or more days of the week, during which bandwidth rate
+         * limits are specified for uploading, downloading, or both. </p> <p> A bandwidth
+         * rate limit interval consists of one or more days of the week, a start hour and
+         * minute, an ending hour and minute, and bandwidth rate limits for uploading and
+         * downloading </p> <p> If no bandwidth rate limit schedule intervals are set for
+         * the gateway, this operation returns an empty response. To specify which gateway
+         * to describe, use the Amazon Resource Name (ARN) of the gateway in your
+         * request.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeBandwidthRateLimitSchedule">AWS
          * API Reference</a></p>
          */
@@ -1950,18 +2033,19 @@ namespace Model
         /**
          * <p> Returns information about the bandwidth rate limit schedule of a gateway. By
          * default, gateways do not have bandwidth rate limit schedules, which means no
-         * bandwidth rate limiting is in effect. This operation is supported only in the
-         * volume and tape gateway types. </p> <p>This operation returns information about
-         * a gateway's bandwidth rate limit schedule. A bandwidth rate limit schedule
-         * consists of one or more bandwidth rate limit intervals. A bandwidth rate limit
-         * interval defines a period of time on one or more days of the week, during which
-         * bandwidth rate limits are specified for uploading, downloading, or both. </p>
-         * <p> A bandwidth rate limit interval consists of one or more days of the week, a
-         * start hour and minute, an ending hour and minute, and bandwidth rate limits for
-         * uploading and downloading </p> <p> If no bandwidth rate limit schedule intervals
-         * are set for the gateway, this operation returns an empty response. To specify
-         * which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in
-         * your request.</p><p><h3>See Also:</h3>   <a
+         * bandwidth rate limiting is in effect. This operation is supported only for
+         * volume, tape and S3 file gateways. FSx file gateways do not support bandwidth
+         * rate limits.</p> <p>This operation returns information about a gateway's
+         * bandwidth rate limit schedule. A bandwidth rate limit schedule consists of one
+         * or more bandwidth rate limit intervals. A bandwidth rate limit interval defines
+         * a period of time on one or more days of the week, during which bandwidth rate
+         * limits are specified for uploading, downloading, or both. </p> <p> A bandwidth
+         * rate limit interval consists of one or more days of the week, a start hour and
+         * minute, an ending hour and minute, and bandwidth rate limits for uploading and
+         * downloading </p> <p> If no bandwidth rate limit schedule intervals are set for
+         * the gateway, this operation returns an empty response. To specify which gateway
+         * to describe, use the Amazon Resource Name (ARN) of the gateway in your
+         * request.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeBandwidthRateLimitSchedule">AWS
          * API Reference</a></p>
          *
@@ -1972,18 +2056,19 @@ namespace Model
         /**
          * <p> Returns information about the bandwidth rate limit schedule of a gateway. By
          * default, gateways do not have bandwidth rate limit schedules, which means no
-         * bandwidth rate limiting is in effect. This operation is supported only in the
-         * volume and tape gateway types. </p> <p>This operation returns information about
-         * a gateway's bandwidth rate limit schedule. A bandwidth rate limit schedule
-         * consists of one or more bandwidth rate limit intervals. A bandwidth rate limit
-         * interval defines a period of time on one or more days of the week, during which
-         * bandwidth rate limits are specified for uploading, downloading, or both. </p>
-         * <p> A bandwidth rate limit interval consists of one or more days of the week, a
-         * start hour and minute, an ending hour and minute, and bandwidth rate limits for
-         * uploading and downloading </p> <p> If no bandwidth rate limit schedule intervals
-         * are set for the gateway, this operation returns an empty response. To specify
-         * which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in
-         * your request.</p><p><h3>See Also:</h3>   <a
+         * bandwidth rate limiting is in effect. This operation is supported only for
+         * volume, tape and S3 file gateways. FSx file gateways do not support bandwidth
+         * rate limits.</p> <p>This operation returns information about a gateway's
+         * bandwidth rate limit schedule. A bandwidth rate limit schedule consists of one
+         * or more bandwidth rate limit intervals. A bandwidth rate limit interval defines
+         * a period of time on one or more days of the week, during which bandwidth rate
+         * limits are specified for uploading, downloading, or both. </p> <p> A bandwidth
+         * rate limit interval consists of one or more days of the week, a start hour and
+         * minute, an ending hour and minute, and bandwidth rate limits for uploading and
+         * downloading </p> <p> If no bandwidth rate limit schedule intervals are set for
+         * the gateway, this operation returns an empty response. To specify which gateway
+         * to describe, use the Amazon Resource Name (ARN) of the gateway in your
+         * request.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeBandwidthRateLimitSchedule">AWS
          * API Reference</a></p>
          *
@@ -2028,7 +2113,7 @@ namespace Model
         /**
          * <p>Returns a description of the gateway volumes specified in the request. This
          * operation is only supported in the cached volume gateway types.</p> <p>The list
-         * of gateway volumes in the request must be from one gateway. In the response, AWS
+         * of gateway volumes in the request must be from one gateway. In the response,
          * Storage Gateway returns volume information sorted by volume Amazon Resource Name
          * (ARN).</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeCachediSCSIVolumes">AWS
@@ -2039,7 +2124,7 @@ namespace Model
         /**
          * <p>Returns a description of the gateway volumes specified in the request. This
          * operation is only supported in the cached volume gateway types.</p> <p>The list
-         * of gateway volumes in the request must be from one gateway. In the response, AWS
+         * of gateway volumes in the request must be from one gateway. In the response,
          * Storage Gateway returns volume information sorted by volume Amazon Resource Name
          * (ARN).</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeCachediSCSIVolumes">AWS
@@ -2052,7 +2137,7 @@ namespace Model
         /**
          * <p>Returns a description of the gateway volumes specified in the request. This
          * operation is only supported in the cached volume gateway types.</p> <p>The list
-         * of gateway volumes in the request must be from one gateway. In the response, AWS
+         * of gateway volumes in the request must be from one gateway. In the response,
          * Storage Gateway returns volume information sorted by volume Amazon Resource Name
          * (ARN).</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeCachediSCSIVolumes">AWS
@@ -2095,6 +2180,34 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void DescribeChapCredentialsAsync(const Model::DescribeChapCredentialsRequest& request, const DescribeChapCredentialsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Gets the file system association information. This operation is only
+         * supported for FSx File Gateways.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeFileSystemAssociations">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeFileSystemAssociationsOutcome DescribeFileSystemAssociations(const Model::DescribeFileSystemAssociationsRequest& request) const;
+
+        /**
+         * <p>Gets the file system association information. This operation is only
+         * supported for FSx File Gateways.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeFileSystemAssociations">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeFileSystemAssociationsOutcomeCallable DescribeFileSystemAssociationsCallable(const Model::DescribeFileSystemAssociationsRequest& request) const;
+
+        /**
+         * <p>Gets the file system association information. This operation is only
+         * supported for FSx File Gateways.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeFileSystemAssociations">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeFileSystemAssociationsAsync(const Model::DescribeFileSystemAssociationsRequest& request, const DescribeFileSystemAssociationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Returns metadata about a gateway such as its name, network interfaces,
@@ -2163,8 +2276,8 @@ namespace Model
 
         /**
          * <p>Gets a description for one or more Network File System (NFS) file shares from
-         * a file gateway. This operation is only supported for file
-         * gateways.</p><p><h3>See Also:</h3>   <a
+         * an S3 File Gateway. This operation is only supported for S3 File
+         * Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeNFSFileShares">AWS
          * API Reference</a></p>
          */
@@ -2172,8 +2285,8 @@ namespace Model
 
         /**
          * <p>Gets a description for one or more Network File System (NFS) file shares from
-         * a file gateway. This operation is only supported for file
-         * gateways.</p><p><h3>See Also:</h3>   <a
+         * an S3 File Gateway. This operation is only supported for S3 File
+         * Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeNFSFileShares">AWS
          * API Reference</a></p>
          *
@@ -2183,8 +2296,8 @@ namespace Model
 
         /**
          * <p>Gets a description for one or more Network File System (NFS) file shares from
-         * a file gateway. This operation is only supported for file
-         * gateways.</p><p><h3>See Also:</h3>   <a
+         * an S3 File Gateway. This operation is only supported for S3 File
+         * Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeNFSFileShares">AWS
          * API Reference</a></p>
          *
@@ -2194,8 +2307,8 @@ namespace Model
 
         /**
          * <p>Gets a description for one or more Server Message Block (SMB) file shares
-         * from a file gateway. This operation is only supported for file
-         * gateways.</p><p><h3>See Also:</h3>   <a
+         * from a S3 File Gateway. This operation is only supported for S3 File
+         * Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeSMBFileShares">AWS
          * API Reference</a></p>
          */
@@ -2203,8 +2316,8 @@ namespace Model
 
         /**
          * <p>Gets a description for one or more Server Message Block (SMB) file shares
-         * from a file gateway. This operation is only supported for file
-         * gateways.</p><p><h3>See Also:</h3>   <a
+         * from a S3 File Gateway. This operation is only supported for S3 File
+         * Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeSMBFileShares">AWS
          * API Reference</a></p>
          *
@@ -2214,8 +2327,8 @@ namespace Model
 
         /**
          * <p>Gets a description for one or more Server Message Block (SMB) file shares
-         * from a file gateway. This operation is only supported for file
-         * gateways.</p><p><h3>See Also:</h3>   <a
+         * from a S3 File Gateway. This operation is only supported for S3 File
+         * Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeSMBFileShares">AWS
          * API Reference</a></p>
          *
@@ -2291,8 +2404,8 @@ namespace Model
         /**
          * <p>Returns the description of the gateway volumes specified in the request. The
          * list of gateway volumes in the request must be from one gateway. In the
-         * response, AWS Storage Gateway returns volume information sorted by volume ARNs.
-         * This operation is only supported in stored volume gateway type.</p><p><h3>See
+         * response, Storage Gateway returns volume information sorted by volume ARNs. This
+         * operation is only supported in stored volume gateway type.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeStorediSCSIVolumes">AWS
          * API Reference</a></p>
@@ -2302,8 +2415,8 @@ namespace Model
         /**
          * <p>Returns the description of the gateway volumes specified in the request. The
          * list of gateway volumes in the request must be from one gateway. In the
-         * response, AWS Storage Gateway returns volume information sorted by volume ARNs.
-         * This operation is only supported in stored volume gateway type.</p><p><h3>See
+         * response, Storage Gateway returns volume information sorted by volume ARNs. This
+         * operation is only supported in stored volume gateway type.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeStorediSCSIVolumes">AWS
          * API Reference</a></p>
@@ -2315,8 +2428,8 @@ namespace Model
         /**
          * <p>Returns the description of the gateway volumes specified in the request. The
          * list of gateway volumes in the request must be from one gateway. In the
-         * response, AWS Storage Gateway returns volume information sorted by volume ARNs.
-         * This operation is only supported in stored volume gateway type.</p><p><h3>See
+         * response, Storage Gateway returns volume information sorted by volume ARNs. This
+         * operation is only supported in stored volume gateway type.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeStorediSCSIVolumes">AWS
          * API Reference</a></p>
@@ -2328,7 +2441,7 @@ namespace Model
         /**
          * <p>Returns a description of specified virtual tapes in the virtual tape shelf
          * (VTS). This operation is only supported in the tape gateway type.</p> <p>If a
-         * specific <code>TapeARN</code> is not specified, AWS Storage Gateway returns a
+         * specific <code>TapeARN</code> is not specified, Storage Gateway returns a
          * description of all virtual tapes found in the VTS associated with your
          * account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeTapeArchives">AWS
@@ -2339,7 +2452,7 @@ namespace Model
         /**
          * <p>Returns a description of specified virtual tapes in the virtual tape shelf
          * (VTS). This operation is only supported in the tape gateway type.</p> <p>If a
-         * specific <code>TapeARN</code> is not specified, AWS Storage Gateway returns a
+         * specific <code>TapeARN</code> is not specified, Storage Gateway returns a
          * description of all virtual tapes found in the VTS associated with your
          * account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeTapeArchives">AWS
@@ -2352,7 +2465,7 @@ namespace Model
         /**
          * <p>Returns a description of specified virtual tapes in the virtual tape shelf
          * (VTS). This operation is only supported in the tape gateway type.</p> <p>If a
-         * specific <code>TapeARN</code> is not specified, AWS Storage Gateway returns a
+         * specific <code>TapeARN</code> is not specified, Storage Gateway returns a
          * description of all virtual tapes found in the VTS associated with your
          * account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeTapeArchives">AWS
@@ -2475,7 +2588,7 @@ namespace Model
 
         /**
          * <p>Returns a description of virtual tape library (VTL) devices for the specified
-         * tape gateway. In the response, AWS Storage Gateway returns VTL device
+         * tape gateway. In the response, Storage Gateway returns VTL device
          * information.</p> <p>This operation is only supported in the tape gateway
          * type.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeVTLDevices">AWS
@@ -2485,7 +2598,7 @@ namespace Model
 
         /**
          * <p>Returns a description of virtual tape library (VTL) devices for the specified
-         * tape gateway. In the response, AWS Storage Gateway returns VTL device
+         * tape gateway. In the response, Storage Gateway returns VTL device
          * information.</p> <p>This operation is only supported in the tape gateway
          * type.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeVTLDevices">AWS
@@ -2497,7 +2610,7 @@ namespace Model
 
         /**
          * <p>Returns a description of virtual tape library (VTL) devices for the specified
-         * tape gateway. In the response, AWS Storage Gateway returns VTL device
+         * tape gateway. In the response, Storage Gateway returns VTL device
          * information.</p> <p>This operation is only supported in the tape gateway
          * type.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DescribeVTLDevices">AWS
@@ -2634,6 +2747,40 @@ namespace Model
         virtual void DisableGatewayAsync(const Model::DisableGatewayRequest& request, const DisableGatewayResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Disassociates an Amazon FSx file system from the specified gateway. After the
+         * disassociation process finishes, the gateway can no longer access the Amazon FSx
+         * file system. This operation is only supported in the FSx File Gateway
+         * type.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DisassociateFileSystem">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DisassociateFileSystemOutcome DisassociateFileSystem(const Model::DisassociateFileSystemRequest& request) const;
+
+        /**
+         * <p>Disassociates an Amazon FSx file system from the specified gateway. After the
+         * disassociation process finishes, the gateway can no longer access the Amazon FSx
+         * file system. This operation is only supported in the FSx File Gateway
+         * type.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DisassociateFileSystem">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DisassociateFileSystemOutcomeCallable DisassociateFileSystemCallable(const Model::DisassociateFileSystemRequest& request) const;
+
+        /**
+         * <p>Disassociates an Amazon FSx file system from the specified gateway. After the
+         * disassociation process finishes, the gateway can no longer access the Amazon FSx
+         * file system. This operation is only supported in the FSx File Gateway
+         * type.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/DisassociateFileSystem">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DisassociateFileSystemAsync(const Model::DisassociateFileSystemRequest& request, const DisassociateFileSystemResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Adds a file gateway to an Active Directory domain. This operation is only
          * supported for file gateways that support the SMB file protocol.</p><p><h3>See
          * Also:</h3>   <a
@@ -2699,18 +2846,18 @@ namespace Model
         virtual void ListAutomaticTapeCreationPoliciesAsync(const Model::ListAutomaticTapeCreationPoliciesRequest& request, const ListAutomaticTapeCreationPoliciesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Gets a list of the file shares for a specific file gateway, or the list of
+         * <p>Gets a list of the file shares for a specific S3 File Gateway, or the list of
          * file shares that belong to the calling user account. This operation is only
-         * supported for file gateways.</p><p><h3>See Also:</h3>   <a
+         * supported for S3 File Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ListFileShares">AWS
          * API Reference</a></p>
          */
         virtual Model::ListFileSharesOutcome ListFileShares(const Model::ListFileSharesRequest& request) const;
 
         /**
-         * <p>Gets a list of the file shares for a specific file gateway, or the list of
+         * <p>Gets a list of the file shares for a specific S3 File Gateway, or the list of
          * file shares that belong to the calling user account. This operation is only
-         * supported for file gateways.</p><p><h3>See Also:</h3>   <a
+         * supported for S3 File Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ListFileShares">AWS
          * API Reference</a></p>
          *
@@ -2719,9 +2866,9 @@ namespace Model
         virtual Model::ListFileSharesOutcomeCallable ListFileSharesCallable(const Model::ListFileSharesRequest& request) const;
 
         /**
-         * <p>Gets a list of the file shares for a specific file gateway, or the list of
+         * <p>Gets a list of the file shares for a specific S3 File Gateway, or the list of
          * file shares that belong to the calling user account. This operation is only
-         * supported for file gateways.</p><p><h3>See Also:</h3>   <a
+         * supported for S3 File Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ListFileShares">AWS
          * API Reference</a></p>
          *
@@ -2730,28 +2877,61 @@ namespace Model
         virtual void ListFileSharesAsync(const Model::ListFileSharesRequest& request, const ListFileSharesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Lists gateways owned by an AWS account in an AWS Region specified in the
-         * request. The returned list is ordered by gateway Amazon Resource Name (ARN).</p>
-         * <p>By default, the operation returns a maximum of 100 gateways. This operation
-         * supports pagination that allows you to optionally reduce the number of gateways
-         * returned in a response.</p> <p>If you have more gateways than are returned in a
-         * response (that is, the response returns only a truncated list of your gateways),
-         * the response contains a marker that you can specify in your next request to
-         * fetch the next page of gateways.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets a list of <code>FileSystemAssociationSummary</code> objects. Each object
+         * contains a summary of a file system association. This operation is only
+         * supported for FSx File Gateways.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ListFileSystemAssociations">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListFileSystemAssociationsOutcome ListFileSystemAssociations(const Model::ListFileSystemAssociationsRequest& request) const;
+
+        /**
+         * <p>Gets a list of <code>FileSystemAssociationSummary</code> objects. Each object
+         * contains a summary of a file system association. This operation is only
+         * supported for FSx File Gateways.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ListFileSystemAssociations">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListFileSystemAssociationsOutcomeCallable ListFileSystemAssociationsCallable(const Model::ListFileSystemAssociationsRequest& request) const;
+
+        /**
+         * <p>Gets a list of <code>FileSystemAssociationSummary</code> objects. Each object
+         * contains a summary of a file system association. This operation is only
+         * supported for FSx File Gateways.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ListFileSystemAssociations">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListFileSystemAssociationsAsync(const Model::ListFileSystemAssociationsRequest& request, const ListFileSystemAssociationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Lists gateways owned by an Amazon Web Services account in an Amazon Web
+         * Services Region specified in the request. The returned list is ordered by
+         * gateway Amazon Resource Name (ARN).</p> <p>By default, the operation returns a
+         * maximum of 100 gateways. This operation supports pagination that allows you to
+         * optionally reduce the number of gateways returned in a response.</p> <p>If you
+         * have more gateways than are returned in a response (that is, the response
+         * returns only a truncated list of your gateways), the response contains a marker
+         * that you can specify in your next request to fetch the next page of
+         * gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ListGateways">AWS
          * API Reference</a></p>
          */
         virtual Model::ListGatewaysOutcome ListGateways(const Model::ListGatewaysRequest& request) const;
 
         /**
-         * <p>Lists gateways owned by an AWS account in an AWS Region specified in the
-         * request. The returned list is ordered by gateway Amazon Resource Name (ARN).</p>
-         * <p>By default, the operation returns a maximum of 100 gateways. This operation
-         * supports pagination that allows you to optionally reduce the number of gateways
-         * returned in a response.</p> <p>If you have more gateways than are returned in a
-         * response (that is, the response returns only a truncated list of your gateways),
-         * the response contains a marker that you can specify in your next request to
-         * fetch the next page of gateways.</p><p><h3>See Also:</h3>   <a
+         * <p>Lists gateways owned by an Amazon Web Services account in an Amazon Web
+         * Services Region specified in the request. The returned list is ordered by
+         * gateway Amazon Resource Name (ARN).</p> <p>By default, the operation returns a
+         * maximum of 100 gateways. This operation supports pagination that allows you to
+         * optionally reduce the number of gateways returned in a response.</p> <p>If you
+         * have more gateways than are returned in a response (that is, the response
+         * returns only a truncated list of your gateways), the response contains a marker
+         * that you can specify in your next request to fetch the next page of
+         * gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ListGateways">AWS
          * API Reference</a></p>
          *
@@ -2760,14 +2940,15 @@ namespace Model
         virtual Model::ListGatewaysOutcomeCallable ListGatewaysCallable(const Model::ListGatewaysRequest& request) const;
 
         /**
-         * <p>Lists gateways owned by an AWS account in an AWS Region specified in the
-         * request. The returned list is ordered by gateway Amazon Resource Name (ARN).</p>
-         * <p>By default, the operation returns a maximum of 100 gateways. This operation
-         * supports pagination that allows you to optionally reduce the number of gateways
-         * returned in a response.</p> <p>If you have more gateways than are returned in a
-         * response (that is, the response returns only a truncated list of your gateways),
-         * the response contains a marker that you can specify in your next request to
-         * fetch the next page of gateways.</p><p><h3>See Also:</h3>   <a
+         * <p>Lists gateways owned by an Amazon Web Services account in an Amazon Web
+         * Services Region specified in the request. The returned list is ordered by
+         * gateway Amazon Resource Name (ARN).</p> <p>By default, the operation returns a
+         * maximum of 100 gateways. This operation supports pagination that allows you to
+         * optionally reduce the number of gateways returned in a response.</p> <p>If you
+         * have more gateways than are returned in a response (that is, the response
+         * returns only a truncated list of your gateways), the response contains a marker
+         * that you can specify in your next request to fetch the next page of
+         * gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/ListGateways">AWS
          * API Reference</a></p>
          *
@@ -3084,17 +3265,17 @@ namespace Model
 
         /**
          * <p>Sends you notification through CloudWatch Events when all files written to
-         * your file share have been uploaded to Amazon S3.</p> <p>AWS Storage Gateway can
-         * send a notification through Amazon CloudWatch Events when all files written to
-         * your file share up to that point in time have been uploaded to Amazon S3. These
-         * files include files written to the file share up to the time that you make a
-         * request for notification. When the upload is done, Storage Gateway sends you
+         * your file share have been uploaded to Amazon S3.</p> <p>Storage Gateway can send
+         * a notification through Amazon CloudWatch Events when all files written to your
+         * file share up to that point in time have been uploaded to Amazon S3. These files
+         * include files written to the file share up to the time that you make a request
+         * for notification. When the upload is done, Storage Gateway sends you
          * notification through an Amazon CloudWatch Event. You can configure CloudWatch
-         * Events to send the notification through event targets such as Amazon SNS or AWS
-         * Lambda function. This operation is only supported for file gateways.</p> <p>For
-         * more information, see <a
+         * Events to send the notification through event targets such as Amazon SNS or
+         * Lambda function. This operation is only supported for S3 File Gateways.</p>
+         * <p>For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-upload-notification">Getting
-         * file upload notification</a> in the <i>AWS Storage Gateway User
+         * file upload notification</a> in the <i>Storage Gateway User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/NotifyWhenUploaded">AWS
          * API Reference</a></p>
@@ -3103,17 +3284,17 @@ namespace Model
 
         /**
          * <p>Sends you notification through CloudWatch Events when all files written to
-         * your file share have been uploaded to Amazon S3.</p> <p>AWS Storage Gateway can
-         * send a notification through Amazon CloudWatch Events when all files written to
-         * your file share up to that point in time have been uploaded to Amazon S3. These
-         * files include files written to the file share up to the time that you make a
-         * request for notification. When the upload is done, Storage Gateway sends you
+         * your file share have been uploaded to Amazon S3.</p> <p>Storage Gateway can send
+         * a notification through Amazon CloudWatch Events when all files written to your
+         * file share up to that point in time have been uploaded to Amazon S3. These files
+         * include files written to the file share up to the time that you make a request
+         * for notification. When the upload is done, Storage Gateway sends you
          * notification through an Amazon CloudWatch Event. You can configure CloudWatch
-         * Events to send the notification through event targets such as Amazon SNS or AWS
-         * Lambda function. This operation is only supported for file gateways.</p> <p>For
-         * more information, see <a
+         * Events to send the notification through event targets such as Amazon SNS or
+         * Lambda function. This operation is only supported for S3 File Gateways.</p>
+         * <p>For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-upload-notification">Getting
-         * file upload notification</a> in the <i>AWS Storage Gateway User
+         * file upload notification</a> in the <i>Storage Gateway User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/NotifyWhenUploaded">AWS
          * API Reference</a></p>
@@ -3124,17 +3305,17 @@ namespace Model
 
         /**
          * <p>Sends you notification through CloudWatch Events when all files written to
-         * your file share have been uploaded to Amazon S3.</p> <p>AWS Storage Gateway can
-         * send a notification through Amazon CloudWatch Events when all files written to
-         * your file share up to that point in time have been uploaded to Amazon S3. These
-         * files include files written to the file share up to the time that you make a
-         * request for notification. When the upload is done, Storage Gateway sends you
+         * your file share have been uploaded to Amazon S3.</p> <p>Storage Gateway can send
+         * a notification through Amazon CloudWatch Events when all files written to your
+         * file share up to that point in time have been uploaded to Amazon S3. These files
+         * include files written to the file share up to the time that you make a request
+         * for notification. When the upload is done, Storage Gateway sends you
          * notification through an Amazon CloudWatch Event. You can configure CloudWatch
-         * Events to send the notification through event targets such as Amazon SNS or AWS
-         * Lambda function. This operation is only supported for file gateways.</p> <p>For
-         * more information, see <a
+         * Events to send the notification through event targets such as Amazon SNS or
+         * Lambda function. This operation is only supported for S3 File Gateways.</p>
+         * <p>For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-upload-notification">Getting
-         * file upload notification</a> in the <i>AWS Storage Gateway User
+         * file upload notification</a> in the <i>Storage Gateway User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/NotifyWhenUploaded">AWS
          * API Reference</a></p>
@@ -3144,32 +3325,35 @@ namespace Model
         virtual void NotifyWhenUploadedAsync(const Model::NotifyWhenUploadedRequest& request, const NotifyWhenUploadedResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Refreshes the cache for the specified file share. This operation finds
-         * objects in the Amazon S3 bucket that were added, removed, or replaced since the
-         * gateway last listed the bucket's contents and cached the results. This operation
-         * is only supported in the file gateway type. You can subscribe to be notified
-         * through an Amazon CloudWatch event when your RefreshCache operation completes.
+         * <p>Refreshes the cached inventory of objects for the specified file share. This
+         * operation finds objects in the Amazon S3 bucket that were added, removed, or
+         * replaced since the gateway last listed the bucket's contents and cached the
+         * results. This operation does not import files into the S3 File Gateway cache
+         * storage. It only updates the cached inventory to reflect changes in the
+         * inventory of the objects in the S3 bucket. This operation is only supported in
+         * the S3 File Gateway types.</p> <p>You can subscribe to be notified through an
+         * Amazon CloudWatch event when your <code>RefreshCache</code> operation completes.
          * For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
-         * notified about file operations</a> in the <i>AWS Storage Gateway User
-         * Guide</i>.</p> <p>When this API is called, it only initiates the refresh
-         * operation. When the API call completes and returns a success code, it doesn't
-         * necessarily mean that the file refresh has completed. You should use the
-         * refresh-complete notification to determine that the operation has completed
-         * before you check for new files on the gateway file share. You can subscribe to
-         * be notified through an CloudWatch event when your <code>RefreshCache</code>
-         * operation completes.</p> <p>Throttle limit: This API is asynchronous so the
-         * gateway will accept no more than two refreshes at any time. We recommend using
-         * the refresh-complete CloudWatch event notification before issuing additional
-         * requests. For more information, see <a
+         * notified about file operations</a> in the <i>Storage Gateway User Guide</i>.
+         * This operation is Only supported for S3 File Gateways.</p> <p>When this API is
+         * called, it only initiates the refresh operation. When the API call completes and
+         * returns a success code, it doesn't necessarily mean that the file refresh has
+         * completed. You should use the refresh-complete notification to determine that
+         * the operation has completed before you check for new files on the gateway file
+         * share. You can subscribe to be notified through a CloudWatch event when your
+         * <code>RefreshCache</code> operation completes.</p> <p>Throttle limit: This API
+         * is asynchronous, so the gateway will accept no more than two refreshes at any
+         * time. We recommend using the refresh-complete CloudWatch event notification
+         * before issuing additional requests. For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
-         * notified about file operations</a> in the <i>AWS Storage Gateway User
-         * Guide</i>.</p> <p>If you invoke the RefreshCache API when two requests are
-         * already being processed, any new request will cause an
+         * notified about file operations</a> in the <i>Storage Gateway User Guide</i>.</p>
+         * <p>If you invoke the RefreshCache API when two requests are already being
+         * processed, any new request will cause an
          * <code>InvalidGatewayRequestException</code> error because too many requests were
          * sent to the server.</p> <p>For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
-         * notified about file operations</a> in the <i>AWS Storage Gateway User
+         * notified about file operations</a> in the <i>Storage Gateway User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/RefreshCache">AWS
          * API Reference</a></p>
@@ -3177,32 +3361,35 @@ namespace Model
         virtual Model::RefreshCacheOutcome RefreshCache(const Model::RefreshCacheRequest& request) const;
 
         /**
-         * <p>Refreshes the cache for the specified file share. This operation finds
-         * objects in the Amazon S3 bucket that were added, removed, or replaced since the
-         * gateway last listed the bucket's contents and cached the results. This operation
-         * is only supported in the file gateway type. You can subscribe to be notified
-         * through an Amazon CloudWatch event when your RefreshCache operation completes.
+         * <p>Refreshes the cached inventory of objects for the specified file share. This
+         * operation finds objects in the Amazon S3 bucket that were added, removed, or
+         * replaced since the gateway last listed the bucket's contents and cached the
+         * results. This operation does not import files into the S3 File Gateway cache
+         * storage. It only updates the cached inventory to reflect changes in the
+         * inventory of the objects in the S3 bucket. This operation is only supported in
+         * the S3 File Gateway types.</p> <p>You can subscribe to be notified through an
+         * Amazon CloudWatch event when your <code>RefreshCache</code> operation completes.
          * For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
-         * notified about file operations</a> in the <i>AWS Storage Gateway User
-         * Guide</i>.</p> <p>When this API is called, it only initiates the refresh
-         * operation. When the API call completes and returns a success code, it doesn't
-         * necessarily mean that the file refresh has completed. You should use the
-         * refresh-complete notification to determine that the operation has completed
-         * before you check for new files on the gateway file share. You can subscribe to
-         * be notified through an CloudWatch event when your <code>RefreshCache</code>
-         * operation completes.</p> <p>Throttle limit: This API is asynchronous so the
-         * gateway will accept no more than two refreshes at any time. We recommend using
-         * the refresh-complete CloudWatch event notification before issuing additional
-         * requests. For more information, see <a
+         * notified about file operations</a> in the <i>Storage Gateway User Guide</i>.
+         * This operation is Only supported for S3 File Gateways.</p> <p>When this API is
+         * called, it only initiates the refresh operation. When the API call completes and
+         * returns a success code, it doesn't necessarily mean that the file refresh has
+         * completed. You should use the refresh-complete notification to determine that
+         * the operation has completed before you check for new files on the gateway file
+         * share. You can subscribe to be notified through a CloudWatch event when your
+         * <code>RefreshCache</code> operation completes.</p> <p>Throttle limit: This API
+         * is asynchronous, so the gateway will accept no more than two refreshes at any
+         * time. We recommend using the refresh-complete CloudWatch event notification
+         * before issuing additional requests. For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
-         * notified about file operations</a> in the <i>AWS Storage Gateway User
-         * Guide</i>.</p> <p>If you invoke the RefreshCache API when two requests are
-         * already being processed, any new request will cause an
+         * notified about file operations</a> in the <i>Storage Gateway User Guide</i>.</p>
+         * <p>If you invoke the RefreshCache API when two requests are already being
+         * processed, any new request will cause an
          * <code>InvalidGatewayRequestException</code> error because too many requests were
          * sent to the server.</p> <p>For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
-         * notified about file operations</a> in the <i>AWS Storage Gateway User
+         * notified about file operations</a> in the <i>Storage Gateway User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/RefreshCache">AWS
          * API Reference</a></p>
@@ -3212,32 +3399,35 @@ namespace Model
         virtual Model::RefreshCacheOutcomeCallable RefreshCacheCallable(const Model::RefreshCacheRequest& request) const;
 
         /**
-         * <p>Refreshes the cache for the specified file share. This operation finds
-         * objects in the Amazon S3 bucket that were added, removed, or replaced since the
-         * gateway last listed the bucket's contents and cached the results. This operation
-         * is only supported in the file gateway type. You can subscribe to be notified
-         * through an Amazon CloudWatch event when your RefreshCache operation completes.
+         * <p>Refreshes the cached inventory of objects for the specified file share. This
+         * operation finds objects in the Amazon S3 bucket that were added, removed, or
+         * replaced since the gateway last listed the bucket's contents and cached the
+         * results. This operation does not import files into the S3 File Gateway cache
+         * storage. It only updates the cached inventory to reflect changes in the
+         * inventory of the objects in the S3 bucket. This operation is only supported in
+         * the S3 File Gateway types.</p> <p>You can subscribe to be notified through an
+         * Amazon CloudWatch event when your <code>RefreshCache</code> operation completes.
          * For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
-         * notified about file operations</a> in the <i>AWS Storage Gateway User
-         * Guide</i>.</p> <p>When this API is called, it only initiates the refresh
-         * operation. When the API call completes and returns a success code, it doesn't
-         * necessarily mean that the file refresh has completed. You should use the
-         * refresh-complete notification to determine that the operation has completed
-         * before you check for new files on the gateway file share. You can subscribe to
-         * be notified through an CloudWatch event when your <code>RefreshCache</code>
-         * operation completes.</p> <p>Throttle limit: This API is asynchronous so the
-         * gateway will accept no more than two refreshes at any time. We recommend using
-         * the refresh-complete CloudWatch event notification before issuing additional
-         * requests. For more information, see <a
+         * notified about file operations</a> in the <i>Storage Gateway User Guide</i>.
+         * This operation is Only supported for S3 File Gateways.</p> <p>When this API is
+         * called, it only initiates the refresh operation. When the API call completes and
+         * returns a success code, it doesn't necessarily mean that the file refresh has
+         * completed. You should use the refresh-complete notification to determine that
+         * the operation has completed before you check for new files on the gateway file
+         * share. You can subscribe to be notified through a CloudWatch event when your
+         * <code>RefreshCache</code> operation completes.</p> <p>Throttle limit: This API
+         * is asynchronous, so the gateway will accept no more than two refreshes at any
+         * time. We recommend using the refresh-complete CloudWatch event notification
+         * before issuing additional requests. For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
-         * notified about file operations</a> in the <i>AWS Storage Gateway User
-         * Guide</i>.</p> <p>If you invoke the RefreshCache API when two requests are
-         * already being processed, any new request will cause an
+         * notified about file operations</a> in the <i>Storage Gateway User Guide</i>.</p>
+         * <p>If you invoke the RefreshCache API when two requests are already being
+         * processed, any new request will cause an
          * <code>InvalidGatewayRequestException</code> error because too many requests were
          * sent to the server.</p> <p>For more information, see <a
          * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
-         * notified about file operations</a> in the <i>AWS Storage Gateway User
+         * notified about file operations</a> in the <i>Storage Gateway User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/RefreshCache">AWS
          * API Reference</a></p>
@@ -3464,7 +3654,8 @@ namespace Model
         /**
          * <p>Sets the password for the guest user <code>smbguest</code>. The
          * <code>smbguest</code> user is the user when the authentication method for the
-         * file share is set to <code>GuestAccess</code>.</p><p><h3>See Also:</h3>   <a
+         * file share is set to <code>GuestAccess</code>. This operation only supported for
+         * S3 File Gateways</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/SetSMBGuestPassword">AWS
          * API Reference</a></p>
          */
@@ -3473,7 +3664,8 @@ namespace Model
         /**
          * <p>Sets the password for the guest user <code>smbguest</code>. The
          * <code>smbguest</code> user is the user when the authentication method for the
-         * file share is set to <code>GuestAccess</code>.</p><p><h3>See Also:</h3>   <a
+         * file share is set to <code>GuestAccess</code>. This operation only supported for
+         * S3 File Gateways</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/SetSMBGuestPassword">AWS
          * API Reference</a></p>
          *
@@ -3484,7 +3676,8 @@ namespace Model
         /**
          * <p>Sets the password for the guest user <code>smbguest</code>. The
          * <code>smbguest</code> user is the user when the authentication method for the
-         * file share is set to <code>GuestAccess</code>.</p><p><h3>See Also:</h3>   <a
+         * file share is set to <code>GuestAccess</code>. This operation only supported for
+         * S3 File Gateways</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/SetSMBGuestPassword">AWS
          * API Reference</a></p>
          *
@@ -3701,12 +3894,14 @@ namespace Model
          * <p>Updates the bandwidth rate limits of a gateway. You can update both the
          * upload and download bandwidth rate limit or specify only one of the two. If you
          * don't set a bandwidth rate limit, the existing rate limit remains. This
-         * operation is supported for the stored volume, cached volume, and tape gateway
-         * types.</p> <p>By default, a gateway's bandwidth rate limits are not set. If you
-         * don't set any limit, the gateway does not have any limitations on its bandwidth
-         * usage and could potentially use the maximum available bandwidth.</p> <p>To
-         * specify which gateway to update, use the Amazon Resource Name (ARN) of the
-         * gateway in your request.</p><p><h3>See Also:</h3>   <a
+         * operation is supported only for the stored volume, cached volume, and tape
+         * gateway types. To update bandwidth rate limits for S3 file gateways, use
+         * <a>UpdateBandwidthRateLimitSchedule</a>.</p> <p>By default, a gateway's
+         * bandwidth rate limits are not set. If you don't set any limit, the gateway does
+         * not have any limitations on its bandwidth usage and could potentially use the
+         * maximum available bandwidth.</p> <p>To specify which gateway to update, use the
+         * Amazon Resource Name (ARN) of the gateway in your request.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateBandwidthRateLimit">AWS
          * API Reference</a></p>
          */
@@ -3716,12 +3911,14 @@ namespace Model
          * <p>Updates the bandwidth rate limits of a gateway. You can update both the
          * upload and download bandwidth rate limit or specify only one of the two. If you
          * don't set a bandwidth rate limit, the existing rate limit remains. This
-         * operation is supported for the stored volume, cached volume, and tape gateway
-         * types.</p> <p>By default, a gateway's bandwidth rate limits are not set. If you
-         * don't set any limit, the gateway does not have any limitations on its bandwidth
-         * usage and could potentially use the maximum available bandwidth.</p> <p>To
-         * specify which gateway to update, use the Amazon Resource Name (ARN) of the
-         * gateway in your request.</p><p><h3>See Also:</h3>   <a
+         * operation is supported only for the stored volume, cached volume, and tape
+         * gateway types. To update bandwidth rate limits for S3 file gateways, use
+         * <a>UpdateBandwidthRateLimitSchedule</a>.</p> <p>By default, a gateway's
+         * bandwidth rate limits are not set. If you don't set any limit, the gateway does
+         * not have any limitations on its bandwidth usage and could potentially use the
+         * maximum available bandwidth.</p> <p>To specify which gateway to update, use the
+         * Amazon Resource Name (ARN) of the gateway in your request.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateBandwidthRateLimit">AWS
          * API Reference</a></p>
          *
@@ -3733,12 +3930,14 @@ namespace Model
          * <p>Updates the bandwidth rate limits of a gateway. You can update both the
          * upload and download bandwidth rate limit or specify only one of the two. If you
          * don't set a bandwidth rate limit, the existing rate limit remains. This
-         * operation is supported for the stored volume, cached volume, and tape gateway
-         * types.</p> <p>By default, a gateway's bandwidth rate limits are not set. If you
-         * don't set any limit, the gateway does not have any limitations on its bandwidth
-         * usage and could potentially use the maximum available bandwidth.</p> <p>To
-         * specify which gateway to update, use the Amazon Resource Name (ARN) of the
-         * gateway in your request.</p><p><h3>See Also:</h3>   <a
+         * operation is supported only for the stored volume, cached volume, and tape
+         * gateway types. To update bandwidth rate limits for S3 file gateways, use
+         * <a>UpdateBandwidthRateLimitSchedule</a>.</p> <p>By default, a gateway's
+         * bandwidth rate limits are not set. If you don't set any limit, the gateway does
+         * not have any limitations on its bandwidth usage and could potentially use the
+         * maximum available bandwidth.</p> <p>To specify which gateway to update, use the
+         * Amazon Resource Name (ARN) of the gateway in your request.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateBandwidthRateLimit">AWS
          * API Reference</a></p>
          *
@@ -3750,8 +3949,9 @@ namespace Model
          * <p> Updates the bandwidth rate limit schedule for a specified gateway. By
          * default, gateways do not have bandwidth rate limit schedules, which means no
          * bandwidth rate limiting is in effect. Use this to initiate or update a gateway's
-         * bandwidth rate limit schedule. This operation is supported in the volume and
-         * tape gateway types. </p><p><h3>See Also:</h3>   <a
+         * bandwidth rate limit schedule. This operation is supported only for volume, tape
+         * and S3 file gateways. FSx file gateways do not support bandwidth rate
+         * limits.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateBandwidthRateLimitSchedule">AWS
          * API Reference</a></p>
          */
@@ -3761,8 +3961,9 @@ namespace Model
          * <p> Updates the bandwidth rate limit schedule for a specified gateway. By
          * default, gateways do not have bandwidth rate limit schedules, which means no
          * bandwidth rate limiting is in effect. Use this to initiate or update a gateway's
-         * bandwidth rate limit schedule. This operation is supported in the volume and
-         * tape gateway types. </p><p><h3>See Also:</h3>   <a
+         * bandwidth rate limit schedule. This operation is supported only for volume, tape
+         * and S3 file gateways. FSx file gateways do not support bandwidth rate
+         * limits.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateBandwidthRateLimitSchedule">AWS
          * API Reference</a></p>
          *
@@ -3774,8 +3975,9 @@ namespace Model
          * <p> Updates the bandwidth rate limit schedule for a specified gateway. By
          * default, gateways do not have bandwidth rate limit schedules, which means no
          * bandwidth rate limiting is in effect. Use this to initiate or update a gateway's
-         * bandwidth rate limit schedule. This operation is supported in the volume and
-         * tape gateway types. </p><p><h3>See Also:</h3>   <a
+         * bandwidth rate limit schedule. This operation is supported only for volume, tape
+         * and S3 file gateways. FSx file gateways do not support bandwidth rate
+         * limits.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateBandwidthRateLimitSchedule">AWS
          * API Reference</a></p>
          *
@@ -3825,6 +4027,34 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void UpdateChapCredentialsAsync(const Model::UpdateChapCredentialsRequest& request, const UpdateChapCredentialsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Updates a file system association. This operation is only supported in the
+         * FSx File Gateways.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateFileSystemAssociation">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UpdateFileSystemAssociationOutcome UpdateFileSystemAssociation(const Model::UpdateFileSystemAssociationRequest& request) const;
+
+        /**
+         * <p>Updates a file system association. This operation is only supported in the
+         * FSx File Gateways.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateFileSystemAssociation">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::UpdateFileSystemAssociationOutcomeCallable UpdateFileSystemAssociationCallable(const Model::UpdateFileSystemAssociationRequest& request) const;
+
+        /**
+         * <p>Updates a file system association. This operation is only supported in the
+         * FSx File Gateways.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateFileSystemAssociation">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void UpdateFileSystemAssociationAsync(const Model::UpdateFileSystemAssociationRequest& request, const UpdateFileSystemAssociationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Updates a gateway's metadata, which includes the gateway's name and time
@@ -3963,7 +4193,7 @@ namespace Model
 
         /**
          * <p>Updates a Network File System (NFS) file share. This operation is only
-         * supported in the file gateway type.</p>  <p>To leave a file share field
+         * supported in S3 File Gateways.</p>  <p>To leave a file share field
          * unchanged, set the corresponding input field to null.</p>  <p>Updates the
          * following file share settings:</p> <ul> <li> <p>Default storage class for your
          * S3 bucket</p> </li> <li> <p>Metadata defaults for your S3 bucket</p> </li> <li>
@@ -3977,7 +4207,7 @@ namespace Model
 
         /**
          * <p>Updates a Network File System (NFS) file share. This operation is only
-         * supported in the file gateway type.</p>  <p>To leave a file share field
+         * supported in S3 File Gateways.</p>  <p>To leave a file share field
          * unchanged, set the corresponding input field to null.</p>  <p>Updates the
          * following file share settings:</p> <ul> <li> <p>Default storage class for your
          * S3 bucket</p> </li> <li> <p>Metadata defaults for your S3 bucket</p> </li> <li>
@@ -3993,7 +4223,7 @@ namespace Model
 
         /**
          * <p>Updates a Network File System (NFS) file share. This operation is only
-         * supported in the file gateway type.</p>  <p>To leave a file share field
+         * supported in S3 File Gateways.</p>  <p>To leave a file share field
          * unchanged, set the corresponding input field to null.</p>  <p>Updates the
          * following file share settings:</p> <ul> <li> <p>Default storage class for your
          * S3 bucket</p> </li> <li> <p>Metadata defaults for your S3 bucket</p> </li> <li>
@@ -4009,17 +4239,19 @@ namespace Model
 
         /**
          * <p>Updates a Server Message Block (SMB) file share. This operation is only
-         * supported for file gateways.</p>  <p>To leave a file share field
+         * supported for S3 File Gateways.</p>  <p>To leave a file share field
          * unchanged, set the corresponding input field to null.</p>  
-         * <p>File gateways require AWS Security Token Service (AWS STS) to be activated to
-         * enable you to create a file share. Make sure that AWS STS is activated in the
-         * AWS Region you are creating your file gateway in. If AWS STS is not activated in
-         * this AWS Region, activate it. For information about how to activate AWS STS, see
-         * <a
+         * <p>File gateways require Security Token Service (Amazon Web Services STS) to be
+         * activated to enable you to create a file share. Make sure that Amazon Web
+         * Services STS is activated in the Amazon Web Services Region you are creating
+         * your file gateway in. If Amazon Web Services STS is not activated in this Amazon
+         * Web Services Region, activate it. For information about how to activate Amazon
+         * Web Services STS, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p> <p>File gateways don't support creating hard or
-         * symbolic links on a file share.</p> <p><h3>See Also:</h3>   <a
+         * and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Identity and Access Management User Guide</i>.</p> <p>File gateways don't
+         * support creating hard or symbolic links on a file share.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateSMBFileShare">AWS
          * API Reference</a></p>
          */
@@ -4027,17 +4259,19 @@ namespace Model
 
         /**
          * <p>Updates a Server Message Block (SMB) file share. This operation is only
-         * supported for file gateways.</p>  <p>To leave a file share field
+         * supported for S3 File Gateways.</p>  <p>To leave a file share field
          * unchanged, set the corresponding input field to null.</p>  
-         * <p>File gateways require AWS Security Token Service (AWS STS) to be activated to
-         * enable you to create a file share. Make sure that AWS STS is activated in the
-         * AWS Region you are creating your file gateway in. If AWS STS is not activated in
-         * this AWS Region, activate it. For information about how to activate AWS STS, see
-         * <a
+         * <p>File gateways require Security Token Service (Amazon Web Services STS) to be
+         * activated to enable you to create a file share. Make sure that Amazon Web
+         * Services STS is activated in the Amazon Web Services Region you are creating
+         * your file gateway in. If Amazon Web Services STS is not activated in this Amazon
+         * Web Services Region, activate it. For information about how to activate Amazon
+         * Web Services STS, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p> <p>File gateways don't support creating hard or
-         * symbolic links on a file share.</p> <p><h3>See Also:</h3>   <a
+         * and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Identity and Access Management User Guide</i>.</p> <p>File gateways don't
+         * support creating hard or symbolic links on a file share.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateSMBFileShare">AWS
          * API Reference</a></p>
          *
@@ -4047,17 +4281,19 @@ namespace Model
 
         /**
          * <p>Updates a Server Message Block (SMB) file share. This operation is only
-         * supported for file gateways.</p>  <p>To leave a file share field
+         * supported for S3 File Gateways.</p>  <p>To leave a file share field
          * unchanged, set the corresponding input field to null.</p>  
-         * <p>File gateways require AWS Security Token Service (AWS STS) to be activated to
-         * enable you to create a file share. Make sure that AWS STS is activated in the
-         * AWS Region you are creating your file gateway in. If AWS STS is not activated in
-         * this AWS Region, activate it. For information about how to activate AWS STS, see
-         * <a
+         * <p>File gateways require Security Token Service (Amazon Web Services STS) to be
+         * activated to enable you to create a file share. Make sure that Amazon Web
+         * Services STS is activated in the Amazon Web Services Region you are creating
+         * your file gateway in. If Amazon Web Services STS is not activated in this Amazon
+         * Web Services Region, activate it. For information about how to activate Amazon
+         * Web Services STS, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-         * and deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-         * Management User Guide</i>.</p> <p>File gateways don't support creating hard or
-         * symbolic links on a file share.</p> <p><h3>See Also:</h3>   <a
+         * and deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+         * the <i>Identity and Access Management User Guide</i>.</p> <p>File gateways don't
+         * support creating hard or symbolic links on a file share.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateSMBFileShare">AWS
          * API Reference</a></p>
          *
@@ -4066,16 +4302,18 @@ namespace Model
         virtual void UpdateSMBFileShareAsync(const Model::UpdateSMBFileShareRequest& request, const UpdateSMBFileShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Controls whether the shares on a gateway are visible in a net view or browse
-         * list.</p><p><h3>See Also:</h3>   <a
+         * <p>Controls whether the shares on an S3 File Gateway are visible in a net view
+         * or browse list. The operation is only supported for S3 File
+         * Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateSMBFileShareVisibility">AWS
          * API Reference</a></p>
          */
         virtual Model::UpdateSMBFileShareVisibilityOutcome UpdateSMBFileShareVisibility(const Model::UpdateSMBFileShareVisibilityRequest& request) const;
 
         /**
-         * <p>Controls whether the shares on a gateway are visible in a net view or browse
-         * list.</p><p><h3>See Also:</h3>   <a
+         * <p>Controls whether the shares on an S3 File Gateway are visible in a net view
+         * or browse list. The operation is only supported for S3 File
+         * Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateSMBFileShareVisibility">AWS
          * API Reference</a></p>
          *
@@ -4084,14 +4322,43 @@ namespace Model
         virtual Model::UpdateSMBFileShareVisibilityOutcomeCallable UpdateSMBFileShareVisibilityCallable(const Model::UpdateSMBFileShareVisibilityRequest& request) const;
 
         /**
-         * <p>Controls whether the shares on a gateway are visible in a net view or browse
-         * list.</p><p><h3>See Also:</h3>   <a
+         * <p>Controls whether the shares on an S3 File Gateway are visible in a net view
+         * or browse list. The operation is only supported for S3 File
+         * Gateways.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateSMBFileShareVisibility">AWS
          * API Reference</a></p>
          *
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void UpdateSMBFileShareVisibilityAsync(const Model::UpdateSMBFileShareVisibilityRequest& request, const UpdateSMBFileShareVisibilityResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Updates the list of Active Directory users and groups that have special
+         * permissions for SMB file shares on the gateway.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateSMBLocalGroups">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UpdateSMBLocalGroupsOutcome UpdateSMBLocalGroups(const Model::UpdateSMBLocalGroupsRequest& request) const;
+
+        /**
+         * <p>Updates the list of Active Directory users and groups that have special
+         * permissions for SMB file shares on the gateway.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateSMBLocalGroups">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::UpdateSMBLocalGroupsOutcomeCallable UpdateSMBLocalGroupsCallable(const Model::UpdateSMBLocalGroupsRequest& request) const;
+
+        /**
+         * <p>Updates the list of Active Directory users and groups that have special
+         * permissions for SMB file shares on the gateway.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateSMBLocalGroups">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void UpdateSMBLocalGroupsAsync(const Model::UpdateSMBLocalGroupsRequest& request, const UpdateSMBLocalGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Updates the SMB security strategy on a file gateway. This action is only
@@ -4220,6 +4487,7 @@ namespace Model
         void AddUploadBufferAsyncHelper(const Model::AddUploadBufferRequest& request, const AddUploadBufferResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void AddWorkingStorageAsyncHelper(const Model::AddWorkingStorageRequest& request, const AddWorkingStorageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void AssignTapePoolAsyncHelper(const Model::AssignTapePoolRequest& request, const AssignTapePoolResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void AssociateFileSystemAsyncHelper(const Model::AssociateFileSystemRequest& request, const AssociateFileSystemResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void AttachVolumeAsyncHelper(const Model::AttachVolumeRequest& request, const AttachVolumeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CancelArchivalAsyncHelper(const Model::CancelArchivalRequest& request, const CancelArchivalResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CancelRetrievalAsyncHelper(const Model::CancelRetrievalRequest& request, const CancelRetrievalResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -4248,6 +4516,7 @@ namespace Model
         void DescribeCacheAsyncHelper(const Model::DescribeCacheRequest& request, const DescribeCacheResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeCachediSCSIVolumesAsyncHelper(const Model::DescribeCachediSCSIVolumesRequest& request, const DescribeCachediSCSIVolumesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeChapCredentialsAsyncHelper(const Model::DescribeChapCredentialsRequest& request, const DescribeChapCredentialsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeFileSystemAssociationsAsyncHelper(const Model::DescribeFileSystemAssociationsRequest& request, const DescribeFileSystemAssociationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeGatewayInformationAsyncHelper(const Model::DescribeGatewayInformationRequest& request, const DescribeGatewayInformationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeMaintenanceStartTimeAsyncHelper(const Model::DescribeMaintenanceStartTimeRequest& request, const DescribeMaintenanceStartTimeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeNFSFileSharesAsyncHelper(const Model::DescribeNFSFileSharesRequest& request, const DescribeNFSFileSharesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -4263,9 +4532,11 @@ namespace Model
         void DescribeWorkingStorageAsyncHelper(const Model::DescribeWorkingStorageRequest& request, const DescribeWorkingStorageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DetachVolumeAsyncHelper(const Model::DetachVolumeRequest& request, const DetachVolumeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DisableGatewayAsyncHelper(const Model::DisableGatewayRequest& request, const DisableGatewayResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DisassociateFileSystemAsyncHelper(const Model::DisassociateFileSystemRequest& request, const DisassociateFileSystemResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void JoinDomainAsyncHelper(const Model::JoinDomainRequest& request, const JoinDomainResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListAutomaticTapeCreationPoliciesAsyncHelper(const Model::ListAutomaticTapeCreationPoliciesRequest& request, const ListAutomaticTapeCreationPoliciesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListFileSharesAsyncHelper(const Model::ListFileSharesRequest& request, const ListFileSharesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListFileSystemAssociationsAsyncHelper(const Model::ListFileSystemAssociationsRequest& request, const ListFileSystemAssociationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListGatewaysAsyncHelper(const Model::ListGatewaysRequest& request, const ListGatewaysResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListLocalDisksAsyncHelper(const Model::ListLocalDisksRequest& request, const ListLocalDisksResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListTagsForResourceAsyncHelper(const Model::ListTagsForResourceRequest& request, const ListTagsForResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -4289,12 +4560,14 @@ namespace Model
         void UpdateBandwidthRateLimitAsyncHelper(const Model::UpdateBandwidthRateLimitRequest& request, const UpdateBandwidthRateLimitResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateBandwidthRateLimitScheduleAsyncHelper(const Model::UpdateBandwidthRateLimitScheduleRequest& request, const UpdateBandwidthRateLimitScheduleResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateChapCredentialsAsyncHelper(const Model::UpdateChapCredentialsRequest& request, const UpdateChapCredentialsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void UpdateFileSystemAssociationAsyncHelper(const Model::UpdateFileSystemAssociationRequest& request, const UpdateFileSystemAssociationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateGatewayInformationAsyncHelper(const Model::UpdateGatewayInformationRequest& request, const UpdateGatewayInformationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateGatewaySoftwareNowAsyncHelper(const Model::UpdateGatewaySoftwareNowRequest& request, const UpdateGatewaySoftwareNowResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateMaintenanceStartTimeAsyncHelper(const Model::UpdateMaintenanceStartTimeRequest& request, const UpdateMaintenanceStartTimeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateNFSFileShareAsyncHelper(const Model::UpdateNFSFileShareRequest& request, const UpdateNFSFileShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateSMBFileShareAsyncHelper(const Model::UpdateSMBFileShareRequest& request, const UpdateSMBFileShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateSMBFileShareVisibilityAsyncHelper(const Model::UpdateSMBFileShareVisibilityRequest& request, const UpdateSMBFileShareVisibilityResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void UpdateSMBLocalGroupsAsyncHelper(const Model::UpdateSMBLocalGroupsRequest& request, const UpdateSMBLocalGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateSMBSecurityStrategyAsyncHelper(const Model::UpdateSMBSecurityStrategyRequest& request, const UpdateSMBSecurityStrategyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateSnapshotScheduleAsyncHelper(const Model::UpdateSnapshotScheduleRequest& request, const UpdateSnapshotScheduleResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateVTLDeviceTypeAsyncHelper(const Model::UpdateVTLDeviceTypeRequest& request, const UpdateVTLDeviceTypeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

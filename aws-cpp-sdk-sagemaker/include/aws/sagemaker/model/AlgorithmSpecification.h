@@ -153,199 +153,85 @@ namespace Model
 
     /**
      * <p>The name of the algorithm resource to use for the training job. This must be
-     * an algorithm resource that you created or subscribe to on AWS Marketplace. If
-     * you specify a value for this parameter, you can't specify a value for
-     * <code>TrainingImage</code>.</p>
+     * an algorithm resource that you created or subscribe to on Amazon Web Services
+     * Marketplace. If you specify a value for this parameter, you can't specify a
+     * value for <code>TrainingImage</code>.</p>
      */
     inline const Aws::String& GetAlgorithmName() const{ return m_algorithmName; }
 
     /**
      * <p>The name of the algorithm resource to use for the training job. This must be
-     * an algorithm resource that you created or subscribe to on AWS Marketplace. If
-     * you specify a value for this parameter, you can't specify a value for
-     * <code>TrainingImage</code>.</p>
+     * an algorithm resource that you created or subscribe to on Amazon Web Services
+     * Marketplace. If you specify a value for this parameter, you can't specify a
+     * value for <code>TrainingImage</code>.</p>
      */
     inline bool AlgorithmNameHasBeenSet() const { return m_algorithmNameHasBeenSet; }
 
     /**
      * <p>The name of the algorithm resource to use for the training job. This must be
-     * an algorithm resource that you created or subscribe to on AWS Marketplace. If
-     * you specify a value for this parameter, you can't specify a value for
-     * <code>TrainingImage</code>.</p>
+     * an algorithm resource that you created or subscribe to on Amazon Web Services
+     * Marketplace. If you specify a value for this parameter, you can't specify a
+     * value for <code>TrainingImage</code>.</p>
      */
     inline void SetAlgorithmName(const Aws::String& value) { m_algorithmNameHasBeenSet = true; m_algorithmName = value; }
 
     /**
      * <p>The name of the algorithm resource to use for the training job. This must be
-     * an algorithm resource that you created or subscribe to on AWS Marketplace. If
-     * you specify a value for this parameter, you can't specify a value for
-     * <code>TrainingImage</code>.</p>
+     * an algorithm resource that you created or subscribe to on Amazon Web Services
+     * Marketplace. If you specify a value for this parameter, you can't specify a
+     * value for <code>TrainingImage</code>.</p>
      */
     inline void SetAlgorithmName(Aws::String&& value) { m_algorithmNameHasBeenSet = true; m_algorithmName = std::move(value); }
 
     /**
      * <p>The name of the algorithm resource to use for the training job. This must be
-     * an algorithm resource that you created or subscribe to on AWS Marketplace. If
-     * you specify a value for this parameter, you can't specify a value for
-     * <code>TrainingImage</code>.</p>
+     * an algorithm resource that you created or subscribe to on Amazon Web Services
+     * Marketplace. If you specify a value for this parameter, you can't specify a
+     * value for <code>TrainingImage</code>.</p>
      */
     inline void SetAlgorithmName(const char* value) { m_algorithmNameHasBeenSet = true; m_algorithmName.assign(value); }
 
     /**
      * <p>The name of the algorithm resource to use for the training job. This must be
-     * an algorithm resource that you created or subscribe to on AWS Marketplace. If
-     * you specify a value for this parameter, you can't specify a value for
-     * <code>TrainingImage</code>.</p>
+     * an algorithm resource that you created or subscribe to on Amazon Web Services
+     * Marketplace. If you specify a value for this parameter, you can't specify a
+     * value for <code>TrainingImage</code>.</p>
      */
     inline AlgorithmSpecification& WithAlgorithmName(const Aws::String& value) { SetAlgorithmName(value); return *this;}
 
     /**
      * <p>The name of the algorithm resource to use for the training job. This must be
-     * an algorithm resource that you created or subscribe to on AWS Marketplace. If
-     * you specify a value for this parameter, you can't specify a value for
-     * <code>TrainingImage</code>.</p>
+     * an algorithm resource that you created or subscribe to on Amazon Web Services
+     * Marketplace. If you specify a value for this parameter, you can't specify a
+     * value for <code>TrainingImage</code>.</p>
      */
     inline AlgorithmSpecification& WithAlgorithmName(Aws::String&& value) { SetAlgorithmName(std::move(value)); return *this;}
 
     /**
      * <p>The name of the algorithm resource to use for the training job. This must be
-     * an algorithm resource that you created or subscribe to on AWS Marketplace. If
-     * you specify a value for this parameter, you can't specify a value for
-     * <code>TrainingImage</code>.</p>
+     * an algorithm resource that you created or subscribe to on Amazon Web Services
+     * Marketplace. If you specify a value for this parameter, you can't specify a
+     * value for <code>TrainingImage</code>.</p>
      */
     inline AlgorithmSpecification& WithAlgorithmName(const char* value) { SetAlgorithmName(value); return *this;}
 
 
-    /**
-     * <p>The input mode that the algorithm supports. For the input modes that Amazon
-     * SageMaker algorithms support, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker
-     * downloads the training data from S3 to the provisioned ML storage Volume, and
-     * mounts the directory to docker volume for training container. If an algorithm
-     * supports the <code>Pipe</code> input mode, Amazon SageMaker streams data
-     * directly from S3 to the container. </p> <p> In File mode, make sure you
-     * provision ML storage volume with sufficient capacity to accommodate the data
-     * download from S3. In addition to the training data, the ML storage volume also
-     * stores the output model. The algorithm container use ML storage volume to also
-     * store intermediate information, if any. </p> <p> For distributed algorithms
-     * using File mode, training data is distributed uniformly, and your training
-     * duration is predictable if the input data objects size is approximately same.
-     * Amazon SageMaker does not split the files any further for model training. If the
-     * object sizes are skewed, training won't be optimal as the data distribution is
-     * also skewed where one host in a training cluster is overloaded, thus becoming
-     * bottleneck in training. </p>
-     */
+    
     inline const TrainingInputMode& GetTrainingInputMode() const{ return m_trainingInputMode; }
 
-    /**
-     * <p>The input mode that the algorithm supports. For the input modes that Amazon
-     * SageMaker algorithms support, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker
-     * downloads the training data from S3 to the provisioned ML storage Volume, and
-     * mounts the directory to docker volume for training container. If an algorithm
-     * supports the <code>Pipe</code> input mode, Amazon SageMaker streams data
-     * directly from S3 to the container. </p> <p> In File mode, make sure you
-     * provision ML storage volume with sufficient capacity to accommodate the data
-     * download from S3. In addition to the training data, the ML storage volume also
-     * stores the output model. The algorithm container use ML storage volume to also
-     * store intermediate information, if any. </p> <p> For distributed algorithms
-     * using File mode, training data is distributed uniformly, and your training
-     * duration is predictable if the input data objects size is approximately same.
-     * Amazon SageMaker does not split the files any further for model training. If the
-     * object sizes are skewed, training won't be optimal as the data distribution is
-     * also skewed where one host in a training cluster is overloaded, thus becoming
-     * bottleneck in training. </p>
-     */
+    
     inline bool TrainingInputModeHasBeenSet() const { return m_trainingInputModeHasBeenSet; }
 
-    /**
-     * <p>The input mode that the algorithm supports. For the input modes that Amazon
-     * SageMaker algorithms support, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker
-     * downloads the training data from S3 to the provisioned ML storage Volume, and
-     * mounts the directory to docker volume for training container. If an algorithm
-     * supports the <code>Pipe</code> input mode, Amazon SageMaker streams data
-     * directly from S3 to the container. </p> <p> In File mode, make sure you
-     * provision ML storage volume with sufficient capacity to accommodate the data
-     * download from S3. In addition to the training data, the ML storage volume also
-     * stores the output model. The algorithm container use ML storage volume to also
-     * store intermediate information, if any. </p> <p> For distributed algorithms
-     * using File mode, training data is distributed uniformly, and your training
-     * duration is predictable if the input data objects size is approximately same.
-     * Amazon SageMaker does not split the files any further for model training. If the
-     * object sizes are skewed, training won't be optimal as the data distribution is
-     * also skewed where one host in a training cluster is overloaded, thus becoming
-     * bottleneck in training. </p>
-     */
+    
     inline void SetTrainingInputMode(const TrainingInputMode& value) { m_trainingInputModeHasBeenSet = true; m_trainingInputMode = value; }
 
-    /**
-     * <p>The input mode that the algorithm supports. For the input modes that Amazon
-     * SageMaker algorithms support, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker
-     * downloads the training data from S3 to the provisioned ML storage Volume, and
-     * mounts the directory to docker volume for training container. If an algorithm
-     * supports the <code>Pipe</code> input mode, Amazon SageMaker streams data
-     * directly from S3 to the container. </p> <p> In File mode, make sure you
-     * provision ML storage volume with sufficient capacity to accommodate the data
-     * download from S3. In addition to the training data, the ML storage volume also
-     * stores the output model. The algorithm container use ML storage volume to also
-     * store intermediate information, if any. </p> <p> For distributed algorithms
-     * using File mode, training data is distributed uniformly, and your training
-     * duration is predictable if the input data objects size is approximately same.
-     * Amazon SageMaker does not split the files any further for model training. If the
-     * object sizes are skewed, training won't be optimal as the data distribution is
-     * also skewed where one host in a training cluster is overloaded, thus becoming
-     * bottleneck in training. </p>
-     */
+    
     inline void SetTrainingInputMode(TrainingInputMode&& value) { m_trainingInputModeHasBeenSet = true; m_trainingInputMode = std::move(value); }
 
-    /**
-     * <p>The input mode that the algorithm supports. For the input modes that Amazon
-     * SageMaker algorithms support, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker
-     * downloads the training data from S3 to the provisioned ML storage Volume, and
-     * mounts the directory to docker volume for training container. If an algorithm
-     * supports the <code>Pipe</code> input mode, Amazon SageMaker streams data
-     * directly from S3 to the container. </p> <p> In File mode, make sure you
-     * provision ML storage volume with sufficient capacity to accommodate the data
-     * download from S3. In addition to the training data, the ML storage volume also
-     * stores the output model. The algorithm container use ML storage volume to also
-     * store intermediate information, if any. </p> <p> For distributed algorithms
-     * using File mode, training data is distributed uniformly, and your training
-     * duration is predictable if the input data objects size is approximately same.
-     * Amazon SageMaker does not split the files any further for model training. If the
-     * object sizes are skewed, training won't be optimal as the data distribution is
-     * also skewed where one host in a training cluster is overloaded, thus becoming
-     * bottleneck in training. </p>
-     */
+    
     inline AlgorithmSpecification& WithTrainingInputMode(const TrainingInputMode& value) { SetTrainingInputMode(value); return *this;}
 
-    /**
-     * <p>The input mode that the algorithm supports. For the input modes that Amazon
-     * SageMaker algorithms support, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker
-     * downloads the training data from S3 to the provisioned ML storage Volume, and
-     * mounts the directory to docker volume for training container. If an algorithm
-     * supports the <code>Pipe</code> input mode, Amazon SageMaker streams data
-     * directly from S3 to the container. </p> <p> In File mode, make sure you
-     * provision ML storage volume with sufficient capacity to accommodate the data
-     * download from S3. In addition to the training data, the ML storage volume also
-     * stores the output model. The algorithm container use ML storage volume to also
-     * store intermediate information, if any. </p> <p> For distributed algorithms
-     * using File mode, training data is distributed uniformly, and your training
-     * duration is predictable if the input data objects size is approximately same.
-     * Amazon SageMaker does not split the files any further for model training. If the
-     * object sizes are skewed, training won't be optimal as the data distribution is
-     * also skewed where one host in a training cluster is overloaded, thus becoming
-     * bottleneck in training. </p>
-     */
+    
     inline AlgorithmSpecification& WithTrainingInputMode(TrainingInputMode&& value) { SetTrainingInputMode(std::move(value)); return *this;}
 
 

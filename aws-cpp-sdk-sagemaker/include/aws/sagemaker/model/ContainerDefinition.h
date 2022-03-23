@@ -9,6 +9,7 @@
 #include <aws/sagemaker/model/ImageConfig.h>
 #include <aws/sagemaker/model/ContainerMode.h>
 #include <aws/core/utils/memory/stl/AWSMap.h>
+#include <aws/sagemaker/model/MultiModelConfig.h>
 #include <utility>
 
 namespace Aws
@@ -386,16 +387,18 @@ namespace Model
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Common
      * Parameters</a>. </p>  <p>The model artifacts must be in an S3 bucket that
      * is in the same region as the model or endpoint you are creating.</p> 
-     * <p>If you provide a value for this parameter, Amazon SageMaker uses AWS Security
-     * Token Service to download model artifacts from the S3 path you provide. AWS STS
-     * is activated in your IAM user account by default. If you previously deactivated
-     * AWS STS for a region, you need to reactivate AWS STS for that region. For more
+     * <p>If you provide a value for this parameter, Amazon SageMaker uses Amazon Web
+     * Services Security Token Service to download model artifacts from the S3 path you
+     * provide. Amazon Web Services STS is activated in your IAM user account by
+     * default. If you previously deactivated Amazon Web Services STS for a region, you
+     * need to reactivate Amazon Web Services STS for that region. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-     * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-     * Management User Guide</i>.</p>  <p>If you use a built-in algorithm to
-     * create a model, Amazon SageMaker requires that you provide a S3 path to the
-     * model artifacts in <code>ModelDataUrl</code>.</p> 
+     * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+     * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+     *  <p>If you use a built-in algorithm to create a model, Amazon
+     * SageMaker requires that you provide a S3 path to the model artifacts in
+     * <code>ModelDataUrl</code>.</p> 
      */
     inline const Aws::String& GetModelDataUrl() const{ return m_modelDataUrl; }
 
@@ -408,16 +411,18 @@ namespace Model
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Common
      * Parameters</a>. </p>  <p>The model artifacts must be in an S3 bucket that
      * is in the same region as the model or endpoint you are creating.</p> 
-     * <p>If you provide a value for this parameter, Amazon SageMaker uses AWS Security
-     * Token Service to download model artifacts from the S3 path you provide. AWS STS
-     * is activated in your IAM user account by default. If you previously deactivated
-     * AWS STS for a region, you need to reactivate AWS STS for that region. For more
+     * <p>If you provide a value for this parameter, Amazon SageMaker uses Amazon Web
+     * Services Security Token Service to download model artifacts from the S3 path you
+     * provide. Amazon Web Services STS is activated in your IAM user account by
+     * default. If you previously deactivated Amazon Web Services STS for a region, you
+     * need to reactivate Amazon Web Services STS for that region. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-     * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-     * Management User Guide</i>.</p>  <p>If you use a built-in algorithm to
-     * create a model, Amazon SageMaker requires that you provide a S3 path to the
-     * model artifacts in <code>ModelDataUrl</code>.</p> 
+     * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+     * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+     *  <p>If you use a built-in algorithm to create a model, Amazon
+     * SageMaker requires that you provide a S3 path to the model artifacts in
+     * <code>ModelDataUrl</code>.</p> 
      */
     inline bool ModelDataUrlHasBeenSet() const { return m_modelDataUrlHasBeenSet; }
 
@@ -430,16 +435,18 @@ namespace Model
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Common
      * Parameters</a>. </p>  <p>The model artifacts must be in an S3 bucket that
      * is in the same region as the model or endpoint you are creating.</p> 
-     * <p>If you provide a value for this parameter, Amazon SageMaker uses AWS Security
-     * Token Service to download model artifacts from the S3 path you provide. AWS STS
-     * is activated in your IAM user account by default. If you previously deactivated
-     * AWS STS for a region, you need to reactivate AWS STS for that region. For more
+     * <p>If you provide a value for this parameter, Amazon SageMaker uses Amazon Web
+     * Services Security Token Service to download model artifacts from the S3 path you
+     * provide. Amazon Web Services STS is activated in your IAM user account by
+     * default. If you previously deactivated Amazon Web Services STS for a region, you
+     * need to reactivate Amazon Web Services STS for that region. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-     * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-     * Management User Guide</i>.</p>  <p>If you use a built-in algorithm to
-     * create a model, Amazon SageMaker requires that you provide a S3 path to the
-     * model artifacts in <code>ModelDataUrl</code>.</p> 
+     * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+     * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+     *  <p>If you use a built-in algorithm to create a model, Amazon
+     * SageMaker requires that you provide a S3 path to the model artifacts in
+     * <code>ModelDataUrl</code>.</p> 
      */
     inline void SetModelDataUrl(const Aws::String& value) { m_modelDataUrlHasBeenSet = true; m_modelDataUrl = value; }
 
@@ -452,16 +459,18 @@ namespace Model
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Common
      * Parameters</a>. </p>  <p>The model artifacts must be in an S3 bucket that
      * is in the same region as the model or endpoint you are creating.</p> 
-     * <p>If you provide a value for this parameter, Amazon SageMaker uses AWS Security
-     * Token Service to download model artifacts from the S3 path you provide. AWS STS
-     * is activated in your IAM user account by default. If you previously deactivated
-     * AWS STS for a region, you need to reactivate AWS STS for that region. For more
+     * <p>If you provide a value for this parameter, Amazon SageMaker uses Amazon Web
+     * Services Security Token Service to download model artifacts from the S3 path you
+     * provide. Amazon Web Services STS is activated in your IAM user account by
+     * default. If you previously deactivated Amazon Web Services STS for a region, you
+     * need to reactivate Amazon Web Services STS for that region. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-     * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-     * Management User Guide</i>.</p>  <p>If you use a built-in algorithm to
-     * create a model, Amazon SageMaker requires that you provide a S3 path to the
-     * model artifacts in <code>ModelDataUrl</code>.</p> 
+     * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+     * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+     *  <p>If you use a built-in algorithm to create a model, Amazon
+     * SageMaker requires that you provide a S3 path to the model artifacts in
+     * <code>ModelDataUrl</code>.</p> 
      */
     inline void SetModelDataUrl(Aws::String&& value) { m_modelDataUrlHasBeenSet = true; m_modelDataUrl = std::move(value); }
 
@@ -474,16 +483,18 @@ namespace Model
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Common
      * Parameters</a>. </p>  <p>The model artifacts must be in an S3 bucket that
      * is in the same region as the model or endpoint you are creating.</p> 
-     * <p>If you provide a value for this parameter, Amazon SageMaker uses AWS Security
-     * Token Service to download model artifacts from the S3 path you provide. AWS STS
-     * is activated in your IAM user account by default. If you previously deactivated
-     * AWS STS for a region, you need to reactivate AWS STS for that region. For more
+     * <p>If you provide a value for this parameter, Amazon SageMaker uses Amazon Web
+     * Services Security Token Service to download model artifacts from the S3 path you
+     * provide. Amazon Web Services STS is activated in your IAM user account by
+     * default. If you previously deactivated Amazon Web Services STS for a region, you
+     * need to reactivate Amazon Web Services STS for that region. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-     * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-     * Management User Guide</i>.</p>  <p>If you use a built-in algorithm to
-     * create a model, Amazon SageMaker requires that you provide a S3 path to the
-     * model artifacts in <code>ModelDataUrl</code>.</p> 
+     * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+     * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+     *  <p>If you use a built-in algorithm to create a model, Amazon
+     * SageMaker requires that you provide a S3 path to the model artifacts in
+     * <code>ModelDataUrl</code>.</p> 
      */
     inline void SetModelDataUrl(const char* value) { m_modelDataUrlHasBeenSet = true; m_modelDataUrl.assign(value); }
 
@@ -496,16 +507,18 @@ namespace Model
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Common
      * Parameters</a>. </p>  <p>The model artifacts must be in an S3 bucket that
      * is in the same region as the model or endpoint you are creating.</p> 
-     * <p>If you provide a value for this parameter, Amazon SageMaker uses AWS Security
-     * Token Service to download model artifacts from the S3 path you provide. AWS STS
-     * is activated in your IAM user account by default. If you previously deactivated
-     * AWS STS for a region, you need to reactivate AWS STS for that region. For more
+     * <p>If you provide a value for this parameter, Amazon SageMaker uses Amazon Web
+     * Services Security Token Service to download model artifacts from the S3 path you
+     * provide. Amazon Web Services STS is activated in your IAM user account by
+     * default. If you previously deactivated Amazon Web Services STS for a region, you
+     * need to reactivate Amazon Web Services STS for that region. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-     * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-     * Management User Guide</i>.</p>  <p>If you use a built-in algorithm to
-     * create a model, Amazon SageMaker requires that you provide a S3 path to the
-     * model artifacts in <code>ModelDataUrl</code>.</p> 
+     * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+     * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+     *  <p>If you use a built-in algorithm to create a model, Amazon
+     * SageMaker requires that you provide a S3 path to the model artifacts in
+     * <code>ModelDataUrl</code>.</p> 
      */
     inline ContainerDefinition& WithModelDataUrl(const Aws::String& value) { SetModelDataUrl(value); return *this;}
 
@@ -518,16 +531,18 @@ namespace Model
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Common
      * Parameters</a>. </p>  <p>The model artifacts must be in an S3 bucket that
      * is in the same region as the model or endpoint you are creating.</p> 
-     * <p>If you provide a value for this parameter, Amazon SageMaker uses AWS Security
-     * Token Service to download model artifacts from the S3 path you provide. AWS STS
-     * is activated in your IAM user account by default. If you previously deactivated
-     * AWS STS for a region, you need to reactivate AWS STS for that region. For more
+     * <p>If you provide a value for this parameter, Amazon SageMaker uses Amazon Web
+     * Services Security Token Service to download model artifacts from the S3 path you
+     * provide. Amazon Web Services STS is activated in your IAM user account by
+     * default. If you previously deactivated Amazon Web Services STS for a region, you
+     * need to reactivate Amazon Web Services STS for that region. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-     * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-     * Management User Guide</i>.</p>  <p>If you use a built-in algorithm to
-     * create a model, Amazon SageMaker requires that you provide a S3 path to the
-     * model artifacts in <code>ModelDataUrl</code>.</p> 
+     * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+     * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+     *  <p>If you use a built-in algorithm to create a model, Amazon
+     * SageMaker requires that you provide a S3 path to the model artifacts in
+     * <code>ModelDataUrl</code>.</p> 
      */
     inline ContainerDefinition& WithModelDataUrl(Aws::String&& value) { SetModelDataUrl(std::move(value)); return *this;}
 
@@ -540,16 +555,18 @@ namespace Model
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Common
      * Parameters</a>. </p>  <p>The model artifacts must be in an S3 bucket that
      * is in the same region as the model or endpoint you are creating.</p> 
-     * <p>If you provide a value for this parameter, Amazon SageMaker uses AWS Security
-     * Token Service to download model artifacts from the S3 path you provide. AWS STS
-     * is activated in your IAM user account by default. If you previously deactivated
-     * AWS STS for a region, you need to reactivate AWS STS for that region. For more
+     * <p>If you provide a value for this parameter, Amazon SageMaker uses Amazon Web
+     * Services Security Token Service to download model artifacts from the S3 path you
+     * provide. Amazon Web Services STS is activated in your IAM user account by
+     * default. If you previously deactivated Amazon Web Services STS for a region, you
+     * need to reactivate Amazon Web Services STS for that region. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
-     * and Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access
-     * Management User Guide</i>.</p>  <p>If you use a built-in algorithm to
-     * create a model, Amazon SageMaker requires that you provide a S3 path to the
-     * model artifacts in <code>ModelDataUrl</code>.</p> 
+     * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in
+     * the <i>Amazon Web Services Identity and Access Management User Guide</i>.</p>
+     *  <p>If you use a built-in algorithm to create a model, Amazon
+     * SageMaker requires that you provide a S3 path to the model artifacts in
+     * <code>ModelDataUrl</code>.</p> 
      */
     inline ContainerDefinition& WithModelDataUrl(const char* value) { SetModelDataUrl(value); return *this;}
 
@@ -694,6 +711,78 @@ namespace Model
      */
     inline ContainerDefinition& WithModelPackageName(const char* value) { SetModelPackageName(value); return *this;}
 
+
+    /**
+     * <p>The inference specification name in the model package version.</p>
+     */
+    inline const Aws::String& GetInferenceSpecificationName() const{ return m_inferenceSpecificationName; }
+
+    /**
+     * <p>The inference specification name in the model package version.</p>
+     */
+    inline bool InferenceSpecificationNameHasBeenSet() const { return m_inferenceSpecificationNameHasBeenSet; }
+
+    /**
+     * <p>The inference specification name in the model package version.</p>
+     */
+    inline void SetInferenceSpecificationName(const Aws::String& value) { m_inferenceSpecificationNameHasBeenSet = true; m_inferenceSpecificationName = value; }
+
+    /**
+     * <p>The inference specification name in the model package version.</p>
+     */
+    inline void SetInferenceSpecificationName(Aws::String&& value) { m_inferenceSpecificationNameHasBeenSet = true; m_inferenceSpecificationName = std::move(value); }
+
+    /**
+     * <p>The inference specification name in the model package version.</p>
+     */
+    inline void SetInferenceSpecificationName(const char* value) { m_inferenceSpecificationNameHasBeenSet = true; m_inferenceSpecificationName.assign(value); }
+
+    /**
+     * <p>The inference specification name in the model package version.</p>
+     */
+    inline ContainerDefinition& WithInferenceSpecificationName(const Aws::String& value) { SetInferenceSpecificationName(value); return *this;}
+
+    /**
+     * <p>The inference specification name in the model package version.</p>
+     */
+    inline ContainerDefinition& WithInferenceSpecificationName(Aws::String&& value) { SetInferenceSpecificationName(std::move(value)); return *this;}
+
+    /**
+     * <p>The inference specification name in the model package version.</p>
+     */
+    inline ContainerDefinition& WithInferenceSpecificationName(const char* value) { SetInferenceSpecificationName(value); return *this;}
+
+
+    /**
+     * <p>Specifies additional configuration for multi-model endpoints.</p>
+     */
+    inline const MultiModelConfig& GetMultiModelConfig() const{ return m_multiModelConfig; }
+
+    /**
+     * <p>Specifies additional configuration for multi-model endpoints.</p>
+     */
+    inline bool MultiModelConfigHasBeenSet() const { return m_multiModelConfigHasBeenSet; }
+
+    /**
+     * <p>Specifies additional configuration for multi-model endpoints.</p>
+     */
+    inline void SetMultiModelConfig(const MultiModelConfig& value) { m_multiModelConfigHasBeenSet = true; m_multiModelConfig = value; }
+
+    /**
+     * <p>Specifies additional configuration for multi-model endpoints.</p>
+     */
+    inline void SetMultiModelConfig(MultiModelConfig&& value) { m_multiModelConfigHasBeenSet = true; m_multiModelConfig = std::move(value); }
+
+    /**
+     * <p>Specifies additional configuration for multi-model endpoints.</p>
+     */
+    inline ContainerDefinition& WithMultiModelConfig(const MultiModelConfig& value) { SetMultiModelConfig(value); return *this;}
+
+    /**
+     * <p>Specifies additional configuration for multi-model endpoints.</p>
+     */
+    inline ContainerDefinition& WithMultiModelConfig(MultiModelConfig&& value) { SetMultiModelConfig(std::move(value)); return *this;}
+
   private:
 
     Aws::String m_containerHostname;
@@ -716,6 +805,12 @@ namespace Model
 
     Aws::String m_modelPackageName;
     bool m_modelPackageNameHasBeenSet;
+
+    Aws::String m_inferenceSpecificationName;
+    bool m_inferenceSpecificationNameHasBeenSet;
+
+    MultiModelConfig m_multiModelConfig;
+    bool m_multiModelConfigHasBeenSet;
   };
 
 } // namespace Model

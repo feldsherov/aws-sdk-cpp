@@ -416,7 +416,7 @@ namespace Model
 
 
         /**
-         * <p>Activates a key signing key (KSK) so that it can be used for signing by
+         * <p>Activates a key-signing key (KSK) so that it can be used for signing by
          * DNSSEC. This operation changes the KSK status to
          * <code>ACTIVE</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ActivateKeySigningKey">AWS
@@ -425,7 +425,7 @@ namespace Model
         virtual Model::ActivateKeySigningKeyOutcome ActivateKeySigningKey(const Model::ActivateKeySigningKeyRequest& request) const;
 
         /**
-         * <p>Activates a key signing key (KSK) so that it can be used for signing by
+         * <p>Activates a key-signing key (KSK) so that it can be used for signing by
          * DNSSEC. This operation changes the KSK status to
          * <code>ACTIVE</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ActivateKeySigningKey">AWS
@@ -436,7 +436,7 @@ namespace Model
         virtual Model::ActivateKeySigningKeyOutcomeCallable ActivateKeySigningKeyCallable(const Model::ActivateKeySigningKeyRequest& request) const;
 
         /**
-         * <p>Activates a key signing key (KSK) so that it can be used for signing by
+         * <p>Activates a key-signing key (KSK) so that it can be used for signing by
          * DNSSEC. This operation changes the KSK status to
          * <code>ACTIVE</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ActivateKeySigningKey">AWS
@@ -451,11 +451,22 @@ namespace Model
          * perform the association, the VPC and the private hosted zone must already exist.
          * You can't convert a public hosted zone into a private hosted zone.</p>
          *   <p>If you want to associate a VPC that was created by using
-         * one AWS account with a private hosted zone that was created by using a different
-         * account, the AWS account that created the private hosted zone must first submit
-         * a <code>CreateVPCAssociationAuthorization</code> request. Then the account that
+         * one Amazon Web Services account with a private hosted zone that was created by
+         * using a different account, the Amazon Web Services account that created the
+         * private hosted zone must first submit a
+         * <code>CreateVPCAssociationAuthorization</code> request. Then the account that
          * created the VPC must submit an <code>AssociateVPCWithHostedZone</code>
-         * request.</p> <p><h3>See Also:</h3>   <a
+         * request.</p>   <p>When granting access, the hosted zone and the
+         * Amazon VPC must belong to the same partition. A partition is a group of Amazon
+         * Web Services Regions. Each Amazon Web Services account is scoped to one
+         * partition.</p> <p>The following are the supported partitions:</p> <ul> <li> <p>
+         * <code>aws</code> - Amazon Web Services Regions</p> </li> <li> <p>
+         * <code>aws-cn</code> - China Regions</p> </li> <li> <p> <code>aws-us-gov</code> -
+         * Amazon Web Services GovCloud (US) Region</p> </li> </ul> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/AssociateVPCWithHostedZone">AWS
          * API Reference</a></p>
          */
@@ -466,11 +477,22 @@ namespace Model
          * perform the association, the VPC and the private hosted zone must already exist.
          * You can't convert a public hosted zone into a private hosted zone.</p>
          *   <p>If you want to associate a VPC that was created by using
-         * one AWS account with a private hosted zone that was created by using a different
-         * account, the AWS account that created the private hosted zone must first submit
-         * a <code>CreateVPCAssociationAuthorization</code> request. Then the account that
+         * one Amazon Web Services account with a private hosted zone that was created by
+         * using a different account, the Amazon Web Services account that created the
+         * private hosted zone must first submit a
+         * <code>CreateVPCAssociationAuthorization</code> request. Then the account that
          * created the VPC must submit an <code>AssociateVPCWithHostedZone</code>
-         * request.</p> <p><h3>See Also:</h3>   <a
+         * request.</p>   <p>When granting access, the hosted zone and the
+         * Amazon VPC must belong to the same partition. A partition is a group of Amazon
+         * Web Services Regions. Each Amazon Web Services account is scoped to one
+         * partition.</p> <p>The following are the supported partitions:</p> <ul> <li> <p>
+         * <code>aws</code> - Amazon Web Services Regions</p> </li> <li> <p>
+         * <code>aws-cn</code> - China Regions</p> </li> <li> <p> <code>aws-us-gov</code> -
+         * Amazon Web Services GovCloud (US) Region</p> </li> </ul> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/AssociateVPCWithHostedZone">AWS
          * API Reference</a></p>
          *
@@ -483,11 +505,22 @@ namespace Model
          * perform the association, the VPC and the private hosted zone must already exist.
          * You can't convert a public hosted zone into a private hosted zone.</p>
          *   <p>If you want to associate a VPC that was created by using
-         * one AWS account with a private hosted zone that was created by using a different
-         * account, the AWS account that created the private hosted zone must first submit
-         * a <code>CreateVPCAssociationAuthorization</code> request. Then the account that
+         * one Amazon Web Services account with a private hosted zone that was created by
+         * using a different account, the Amazon Web Services account that created the
+         * private hosted zone must first submit a
+         * <code>CreateVPCAssociationAuthorization</code> request. Then the account that
          * created the VPC must submit an <code>AssociateVPCWithHostedZone</code>
-         * request.</p> <p><h3>See Also:</h3>   <a
+         * request.</p>   <p>When granting access, the hosted zone and the
+         * Amazon VPC must belong to the same partition. A partition is a group of Amazon
+         * Web Services Regions. Each Amazon Web Services account is scoped to one
+         * partition.</p> <p>The following are the supported partitions:</p> <ul> <li> <p>
+         * <code>aws</code> - Amazon Web Services Regions</p> </li> <li> <p>
+         * <code>aws-cn</code> - China Regions</p> </li> <li> <p> <code>aws-us-gov</code> -
+         * Amazon Web Services GovCloud (US) Region</p> </li> </ul> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/AssociateVPCWithHostedZone">AWS
          * API Reference</a></p>
          *
@@ -534,16 +567,15 @@ namespace Model
          * actions:</p> <ul> <li> <p> <code>CREATE</code>: Creates a resource record set
          * that has the specified values.</p> </li> <li> <p> <code>DELETE</code>: Deletes
          * an existing resource record set that has the specified values.</p> </li> <li>
-         * <p> <code>UPSERT</code>: If a resource record set does not already exist, AWS
-         * creates it. If a resource set does exist, Route 53 updates it with the values in
-         * the request. </p> </li> </ul> <p> <b>Syntaxes for Creating, Updating, and
-         * Deleting Resource Record Sets</b> </p> <p>The syntax for a request depends on
-         * the type of resource record set that you want to create, delete, or update, such
-         * as weighted, alias, or failover. The XML elements in your request must appear in
-         * the order listed in the syntax. </p> <p>For an example for each type of resource
-         * record set, see "Examples."</p> <p>Don't refer to the syntax in the "Parameter
-         * Syntax" section, which includes all of the elements for every kind of resource
-         * record set that you can create, delete, or update by using
+         * <p> <code>UPSERT</code>: If a resource set exists Route 53 updates it with the
+         * values in the request. </p> </li> </ul> <p> <b>Syntaxes for Creating, Updating,
+         * and Deleting Resource Record Sets</b> </p> <p>The syntax for a request depends
+         * on the type of resource record set that you want to create, delete, or update,
+         * such as weighted, alias, or failover. The XML elements in your request must
+         * appear in the order listed in the syntax. </p> <p>For an example for each type
+         * of resource record set, see "Examples."</p> <p>Don't refer to the syntax in the
+         * "Parameter Syntax" section, which includes all of the elements for every kind of
+         * resource record set that you can create, delete, or update by using
          * <code>ChangeResourceRecordSets</code>. </p> <p> <b>Change Propagation to Route
          * 53 DNS Servers</b> </p> <p>When you submit a
          * <code>ChangeResourceRecordSets</code> request, Route 53 propagates your changes
@@ -601,16 +633,15 @@ namespace Model
          * actions:</p> <ul> <li> <p> <code>CREATE</code>: Creates a resource record set
          * that has the specified values.</p> </li> <li> <p> <code>DELETE</code>: Deletes
          * an existing resource record set that has the specified values.</p> </li> <li>
-         * <p> <code>UPSERT</code>: If a resource record set does not already exist, AWS
-         * creates it. If a resource set does exist, Route 53 updates it with the values in
-         * the request. </p> </li> </ul> <p> <b>Syntaxes for Creating, Updating, and
-         * Deleting Resource Record Sets</b> </p> <p>The syntax for a request depends on
-         * the type of resource record set that you want to create, delete, or update, such
-         * as weighted, alias, or failover. The XML elements in your request must appear in
-         * the order listed in the syntax. </p> <p>For an example for each type of resource
-         * record set, see "Examples."</p> <p>Don't refer to the syntax in the "Parameter
-         * Syntax" section, which includes all of the elements for every kind of resource
-         * record set that you can create, delete, or update by using
+         * <p> <code>UPSERT</code>: If a resource set exists Route 53 updates it with the
+         * values in the request. </p> </li> </ul> <p> <b>Syntaxes for Creating, Updating,
+         * and Deleting Resource Record Sets</b> </p> <p>The syntax for a request depends
+         * on the type of resource record set that you want to create, delete, or update,
+         * such as weighted, alias, or failover. The XML elements in your request must
+         * appear in the order listed in the syntax. </p> <p>For an example for each type
+         * of resource record set, see "Examples."</p> <p>Don't refer to the syntax in the
+         * "Parameter Syntax" section, which includes all of the elements for every kind of
+         * resource record set that you can create, delete, or update by using
          * <code>ChangeResourceRecordSets</code>. </p> <p> <b>Change Propagation to Route
          * 53 DNS Servers</b> </p> <p>When you submit a
          * <code>ChangeResourceRecordSets</code> request, Route 53 propagates your changes
@@ -670,16 +701,15 @@ namespace Model
          * actions:</p> <ul> <li> <p> <code>CREATE</code>: Creates a resource record set
          * that has the specified values.</p> </li> <li> <p> <code>DELETE</code>: Deletes
          * an existing resource record set that has the specified values.</p> </li> <li>
-         * <p> <code>UPSERT</code>: If a resource record set does not already exist, AWS
-         * creates it. If a resource set does exist, Route 53 updates it with the values in
-         * the request. </p> </li> </ul> <p> <b>Syntaxes for Creating, Updating, and
-         * Deleting Resource Record Sets</b> </p> <p>The syntax for a request depends on
-         * the type of resource record set that you want to create, delete, or update, such
-         * as weighted, alias, or failover. The XML elements in your request must appear in
-         * the order listed in the syntax. </p> <p>For an example for each type of resource
-         * record set, see "Examples."</p> <p>Don't refer to the syntax in the "Parameter
-         * Syntax" section, which includes all of the elements for every kind of resource
-         * record set that you can create, delete, or update by using
+         * <p> <code>UPSERT</code>: If a resource set exists Route 53 updates it with the
+         * values in the request. </p> </li> </ul> <p> <b>Syntaxes for Creating, Updating,
+         * and Deleting Resource Record Sets</b> </p> <p>The syntax for a request depends
+         * on the type of resource record set that you want to create, delete, or update,
+         * such as weighted, alias, or failover. The XML elements in your request must
+         * appear in the order listed in the syntax. </p> <p>For an example for each type
+         * of resource record set, see "Examples."</p> <p>Don't refer to the syntax in the
+         * "Parameter Syntax" section, which includes all of the elements for every kind of
+         * resource record set that you can create, delete, or update by using
          * <code>ChangeResourceRecordSets</code>. </p> <p> <b>Change Propagation to Route
          * 53 DNS Servers</b> </p> <p>When you submit a
          * <code>ChangeResourceRecordSets</code> request, Route 53 propagates your changes
@@ -704,7 +734,7 @@ namespace Model
          * <p>Adds, edits, or deletes tags for a health check or a hosted zone.</p> <p>For
          * information about using tags for cost allocation, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using
-         * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User
+         * Cost Allocation Tags</a> in the <i>Billing and Cost Management User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ChangeTagsForResource">AWS
          * API Reference</a></p>
@@ -715,7 +745,7 @@ namespace Model
          * <p>Adds, edits, or deletes tags for a health check or a hosted zone.</p> <p>For
          * information about using tags for cost allocation, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using
-         * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User
+         * Cost Allocation Tags</a> in the <i>Billing and Cost Management User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ChangeTagsForResource">AWS
          * API Reference</a></p>
@@ -728,7 +758,7 @@ namespace Model
          * <p>Adds, edits, or deletes tags for a health check or a hosted zone.</p> <p>For
          * information about using tags for cost allocation, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using
-         * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User
+         * Cost Allocation Tags</a> in the <i>Billing and Cost Management User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ChangeTagsForResource">AWS
          * API Reference</a></p>
@@ -865,7 +895,19 @@ namespace Model
          * <code>PENDING</code>. For public hosted zones, this means that the NS and SOA
          * records are not yet available on all Route 53 DNS servers. When the NS and SOA
          * records are available, the status of the zone changes to
-         * <code>INSYNC</code>.</p><p><h3>See Also:</h3>   <a
+         * <code>INSYNC</code>.</p> <p>The <code>CreateHostedZone</code> request requires
+         * the caller to have an <code>ec2:DescribeVpcs</code> permission.</p> 
+         * <p>When creating private hosted zones, the Amazon VPC must belong to the same
+         * partition where the hosted zone is created. A partition is a group of Amazon Web
+         * Services Regions. Each Amazon Web Services account is scoped to one
+         * partition.</p> <p>The following are the supported partitions:</p> <ul> <li> <p>
+         * <code>aws</code> - Amazon Web Services Regions</p> </li> <li> <p>
+         * <code>aws-cn</code> - China Regions</p> </li> <li> <p> <code>aws-us-gov</code> -
+         * Amazon Web Services GovCloud (US) Region</p> </li> </ul> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateHostedZone">AWS
          * API Reference</a></p>
          */
@@ -902,7 +944,19 @@ namespace Model
          * <code>PENDING</code>. For public hosted zones, this means that the NS and SOA
          * records are not yet available on all Route 53 DNS servers. When the NS and SOA
          * records are available, the status of the zone changes to
-         * <code>INSYNC</code>.</p><p><h3>See Also:</h3>   <a
+         * <code>INSYNC</code>.</p> <p>The <code>CreateHostedZone</code> request requires
+         * the caller to have an <code>ec2:DescribeVpcs</code> permission.</p> 
+         * <p>When creating private hosted zones, the Amazon VPC must belong to the same
+         * partition where the hosted zone is created. A partition is a group of Amazon Web
+         * Services Regions. Each Amazon Web Services account is scoped to one
+         * partition.</p> <p>The following are the supported partitions:</p> <ul> <li> <p>
+         * <code>aws</code> - Amazon Web Services Regions</p> </li> <li> <p>
+         * <code>aws-cn</code> - China Regions</p> </li> <li> <p> <code>aws-us-gov</code> -
+         * Amazon Web Services GovCloud (US) Region</p> </li> </ul> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateHostedZone">AWS
          * API Reference</a></p>
          *
@@ -941,7 +995,19 @@ namespace Model
          * <code>PENDING</code>. For public hosted zones, this means that the NS and SOA
          * records are not yet available on all Route 53 DNS servers. When the NS and SOA
          * records are available, the status of the zone changes to
-         * <code>INSYNC</code>.</p><p><h3>See Also:</h3>   <a
+         * <code>INSYNC</code>.</p> <p>The <code>CreateHostedZone</code> request requires
+         * the caller to have an <code>ec2:DescribeVpcs</code> permission.</p> 
+         * <p>When creating private hosted zones, the Amazon VPC must belong to the same
+         * partition where the hosted zone is created. A partition is a group of Amazon Web
+         * Services Regions. Each Amazon Web Services account is scoped to one
+         * partition.</p> <p>The following are the supported partitions:</p> <ul> <li> <p>
+         * <code>aws</code> - Amazon Web Services Regions</p> </li> <li> <p>
+         * <code>aws-cn</code> - China Regions</p> </li> <li> <p> <code>aws-us-gov</code> -
+         * Amazon Web Services GovCloud (US) Region</p> </li> </ul> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateHostedZone">AWS
          * API Reference</a></p>
          *
@@ -950,7 +1016,7 @@ namespace Model
         virtual void CreateHostedZoneAsync(const Model::CreateHostedZoneRequest& request, const CreateHostedZoneResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates a new key signing key (KSK) associated with a hosted zone. You can
+         * <p>Creates a new key-signing key (KSK) associated with a hosted zone. You can
          * only have two KSKs per hosted zone.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateKeySigningKey">AWS
          * API Reference</a></p>
@@ -958,7 +1024,7 @@ namespace Model
         virtual Model::CreateKeySigningKeyOutcome CreateKeySigningKey(const Model::CreateKeySigningKeyRequest& request) const;
 
         /**
-         * <p>Creates a new key signing key (KSK) associated with a hosted zone. You can
+         * <p>Creates a new key-signing key (KSK) associated with a hosted zone. You can
          * only have two KSKs per hosted zone.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateKeySigningKey">AWS
          * API Reference</a></p>
@@ -968,7 +1034,7 @@ namespace Model
         virtual Model::CreateKeySigningKeyOutcomeCallable CreateKeySigningKeyCallable(const Model::CreateKeySigningKeyRequest& request) const;
 
         /**
-         * <p>Creates a new key signing key (KSK) associated with a hosted zone. You can
+         * <p>Creates a new key-signing key (KSK) associated with a hosted zone. You can
          * only have two KSKs per hosted zone.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/CreateKeySigningKey">AWS
          * API Reference</a></p>
@@ -992,38 +1058,53 @@ namespace Model
          * operations automatically.</p>  <ol> <li> <p>Create a CloudWatch Logs log
          * group, and make note of the ARN, which you specify when you create a query
          * logging configuration. Note the following:</p> <ul> <li> <p>You must create the
-         * log group in the us-east-1 region.</p> </li> <li> <p>You must use the same AWS
-         * account to create the log group and the hosted zone that you want to configure
-         * query logging for.</p> </li> <li> <p>When you create log groups for query
-         * logging, we recommend that you use a consistent prefix, for example:</p> <p>
-         * <code>/aws/route53/<i>hosted zone name</i> </code> </p> <p>In the next step,
-         * you'll create a resource policy, which controls access to one or more log groups
-         * and the associated AWS resources, such as Route 53 hosted zones. There's a limit
-         * on the number of resource policies that you can create, so we recommend that you
-         * use a consistent prefix so you can use the same resource policy for all the log
-         * groups that you create for query logging.</p> </li> </ul> </li> <li> <p>Create a
-         * CloudWatch Logs resource policy, and give it the permissions that Route 53 needs
-         * to create log streams and to send query logs to log streams. For the value of
-         * <code>Resource</code>, specify the ARN for the log group that you created in the
-         * previous step. To use the same resource policy for all the CloudWatch Logs log
-         * groups that you created for query logging configurations, replace the hosted
-         * zone name with <code>*</code>, for example:</p> <p>
+         * log group in the us-east-1 region.</p> </li> <li> <p>You must use the same
+         * Amazon Web Services account to create the log group and the hosted zone that you
+         * want to configure query logging for.</p> </li> <li> <p>When you create log
+         * groups for query logging, we recommend that you use a consistent prefix, for
+         * example:</p> <p> <code>/aws/route53/<i>hosted zone name</i> </code> </p> <p>In
+         * the next step, you'll create a resource policy, which controls access to one or
+         * more log groups and the associated Amazon Web Services resources, such as Route
+         * 53 hosted zones. There's a limit on the number of resource policies that you can
+         * create, so we recommend that you use a consistent prefix so you can use the same
+         * resource policy for all the log groups that you create for query logging.</p>
+         * </li> </ul> </li> <li> <p>Create a CloudWatch Logs resource policy, and give it
+         * the permissions that Route 53 needs to create log streams and to send query logs
+         * to log streams. For the value of <code>Resource</code>, specify the ARN for the
+         * log group that you created in the previous step. To use the same resource policy
+         * for all the CloudWatch Logs log groups that you created for query logging
+         * configurations, replace the hosted zone name with <code>*</code>, for
+         * example:</p> <p>
          * <code>arn:aws:logs:us-east-1:123412341234:log-group:/aws/route53/ *</code> </p>
-         *  <p>You can't use the CloudWatch console to create or edit a resource
-         * policy. You must use the CloudWatch API, one of the AWS SDKs, or the AWS
-         * CLI.</p>  </li> </ol> </dd> <dt>Log Streams and Edge Locations</dt> <dd>
-         * <p>When Route 53 finishes creating the configuration for DNS query logging, it
-         * does the following:</p> <ul> <li> <p>Creates a log stream for an edge location
-         * the first time that the edge location responds to DNS queries for the specified
-         * hosted zone. That log stream is used to log all queries that Route 53 responds
-         * to for that edge location.</p> </li> <li> <p>Begins to send query logs to the
-         * applicable log stream.</p> </li> </ul> <p>The name of each log stream is in the
-         * following format:</p> <p> <code> <i>hosted zone ID</i>/<i>edge location code</i>
-         * </code> </p> <p>The edge location code is a three-letter code and an arbitrarily
-         * assigned number, for example, DFW3. The three-letter code typically corresponds
-         * with the International Air Transport Association airport code for an airport
-         * near the edge location. (These abbreviations might change in the future.) For a
-         * list of edge locations, see "The Route 53 Global Network" on the <a
+         * <p>To avoid the confused deputy problem, a security issue where an entity
+         * without a permission for an action can coerce a more-privileged entity to
+         * perform it, you can optionally limit the permissions that a service has to a
+         * resource in a resource-based policy by supplying the following values:</p> <ul>
+         * <li> <p>For <code>aws:SourceArn</code>, supply the hosted zone ARN used in
+         * creating the query logging configuration. For example, <code>aws:SourceArn:
+         * arn:aws:route53:::hostedzone/hosted zone ID</code>.</p> </li> <li> <p>For
+         * <code>aws:SourceAccount</code>, supply the account ID for the account that
+         * creates the query logging configuration. For example,
+         * <code>aws:SourceAccount:111111111111</code>.</p> </li> </ul> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html">The
+         * confused deputy problem</a> in the <i>Amazon Web Services IAM User
+         * Guide</i>.</p>  <p>You can't use the CloudWatch console to create or edit
+         * a resource policy. You must use the CloudWatch API, one of the Amazon Web
+         * Services SDKs, or the CLI.</p>  </li> </ol> </dd> <dt>Log Streams and
+         * Edge Locations</dt> <dd> <p>When Route 53 finishes creating the configuration
+         * for DNS query logging, it does the following:</p> <ul> <li> <p>Creates a log
+         * stream for an edge location the first time that the edge location responds to
+         * DNS queries for the specified hosted zone. That log stream is used to log all
+         * queries that Route 53 responds to for that edge location.</p> </li> <li>
+         * <p>Begins to send query logs to the applicable log stream.</p> </li> </ul>
+         * <p>The name of each log stream is in the following format:</p> <p> <code>
+         * <i>hosted zone ID</i>/<i>edge location code</i> </code> </p> <p>The edge
+         * location code is a three-letter code and an arbitrarily assigned number, for
+         * example, DFW3. The three-letter code typically corresponds with the
+         * International Air Transport Association airport code for an airport near the
+         * edge location. (These abbreviations might change in the future.) For a list of
+         * edge locations, see "The Route 53 Global Network" on the <a
          * href="http://aws.amazon.com/route53/details/">Route 53 Product Details</a>
          * page.</p> </dd> <dt>Queries That Are Logged</dt> <dd> <p>Query logs contain only
          * the queries that DNS resolvers forward to Route 53. If a DNS resolver has
@@ -1068,38 +1149,53 @@ namespace Model
          * operations automatically.</p>  <ol> <li> <p>Create a CloudWatch Logs log
          * group, and make note of the ARN, which you specify when you create a query
          * logging configuration. Note the following:</p> <ul> <li> <p>You must create the
-         * log group in the us-east-1 region.</p> </li> <li> <p>You must use the same AWS
-         * account to create the log group and the hosted zone that you want to configure
-         * query logging for.</p> </li> <li> <p>When you create log groups for query
-         * logging, we recommend that you use a consistent prefix, for example:</p> <p>
-         * <code>/aws/route53/<i>hosted zone name</i> </code> </p> <p>In the next step,
-         * you'll create a resource policy, which controls access to one or more log groups
-         * and the associated AWS resources, such as Route 53 hosted zones. There's a limit
-         * on the number of resource policies that you can create, so we recommend that you
-         * use a consistent prefix so you can use the same resource policy for all the log
-         * groups that you create for query logging.</p> </li> </ul> </li> <li> <p>Create a
-         * CloudWatch Logs resource policy, and give it the permissions that Route 53 needs
-         * to create log streams and to send query logs to log streams. For the value of
-         * <code>Resource</code>, specify the ARN for the log group that you created in the
-         * previous step. To use the same resource policy for all the CloudWatch Logs log
-         * groups that you created for query logging configurations, replace the hosted
-         * zone name with <code>*</code>, for example:</p> <p>
+         * log group in the us-east-1 region.</p> </li> <li> <p>You must use the same
+         * Amazon Web Services account to create the log group and the hosted zone that you
+         * want to configure query logging for.</p> </li> <li> <p>When you create log
+         * groups for query logging, we recommend that you use a consistent prefix, for
+         * example:</p> <p> <code>/aws/route53/<i>hosted zone name</i> </code> </p> <p>In
+         * the next step, you'll create a resource policy, which controls access to one or
+         * more log groups and the associated Amazon Web Services resources, such as Route
+         * 53 hosted zones. There's a limit on the number of resource policies that you can
+         * create, so we recommend that you use a consistent prefix so you can use the same
+         * resource policy for all the log groups that you create for query logging.</p>
+         * </li> </ul> </li> <li> <p>Create a CloudWatch Logs resource policy, and give it
+         * the permissions that Route 53 needs to create log streams and to send query logs
+         * to log streams. For the value of <code>Resource</code>, specify the ARN for the
+         * log group that you created in the previous step. To use the same resource policy
+         * for all the CloudWatch Logs log groups that you created for query logging
+         * configurations, replace the hosted zone name with <code>*</code>, for
+         * example:</p> <p>
          * <code>arn:aws:logs:us-east-1:123412341234:log-group:/aws/route53/ *</code> </p>
-         *  <p>You can't use the CloudWatch console to create or edit a resource
-         * policy. You must use the CloudWatch API, one of the AWS SDKs, or the AWS
-         * CLI.</p>  </li> </ol> </dd> <dt>Log Streams and Edge Locations</dt> <dd>
-         * <p>When Route 53 finishes creating the configuration for DNS query logging, it
-         * does the following:</p> <ul> <li> <p>Creates a log stream for an edge location
-         * the first time that the edge location responds to DNS queries for the specified
-         * hosted zone. That log stream is used to log all queries that Route 53 responds
-         * to for that edge location.</p> </li> <li> <p>Begins to send query logs to the
-         * applicable log stream.</p> </li> </ul> <p>The name of each log stream is in the
-         * following format:</p> <p> <code> <i>hosted zone ID</i>/<i>edge location code</i>
-         * </code> </p> <p>The edge location code is a three-letter code and an arbitrarily
-         * assigned number, for example, DFW3. The three-letter code typically corresponds
-         * with the International Air Transport Association airport code for an airport
-         * near the edge location. (These abbreviations might change in the future.) For a
-         * list of edge locations, see "The Route 53 Global Network" on the <a
+         * <p>To avoid the confused deputy problem, a security issue where an entity
+         * without a permission for an action can coerce a more-privileged entity to
+         * perform it, you can optionally limit the permissions that a service has to a
+         * resource in a resource-based policy by supplying the following values:</p> <ul>
+         * <li> <p>For <code>aws:SourceArn</code>, supply the hosted zone ARN used in
+         * creating the query logging configuration. For example, <code>aws:SourceArn:
+         * arn:aws:route53:::hostedzone/hosted zone ID</code>.</p> </li> <li> <p>For
+         * <code>aws:SourceAccount</code>, supply the account ID for the account that
+         * creates the query logging configuration. For example,
+         * <code>aws:SourceAccount:111111111111</code>.</p> </li> </ul> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html">The
+         * confused deputy problem</a> in the <i>Amazon Web Services IAM User
+         * Guide</i>.</p>  <p>You can't use the CloudWatch console to create or edit
+         * a resource policy. You must use the CloudWatch API, one of the Amazon Web
+         * Services SDKs, or the CLI.</p>  </li> </ol> </dd> <dt>Log Streams and
+         * Edge Locations</dt> <dd> <p>When Route 53 finishes creating the configuration
+         * for DNS query logging, it does the following:</p> <ul> <li> <p>Creates a log
+         * stream for an edge location the first time that the edge location responds to
+         * DNS queries for the specified hosted zone. That log stream is used to log all
+         * queries that Route 53 responds to for that edge location.</p> </li> <li>
+         * <p>Begins to send query logs to the applicable log stream.</p> </li> </ul>
+         * <p>The name of each log stream is in the following format:</p> <p> <code>
+         * <i>hosted zone ID</i>/<i>edge location code</i> </code> </p> <p>The edge
+         * location code is a three-letter code and an arbitrarily assigned number, for
+         * example, DFW3. The three-letter code typically corresponds with the
+         * International Air Transport Association airport code for an airport near the
+         * edge location. (These abbreviations might change in the future.) For a list of
+         * edge locations, see "The Route 53 Global Network" on the <a
          * href="http://aws.amazon.com/route53/details/">Route 53 Product Details</a>
          * page.</p> </dd> <dt>Queries That Are Logged</dt> <dd> <p>Query logs contain only
          * the queries that DNS resolvers forward to Route 53. If a DNS resolver has
@@ -1146,38 +1242,53 @@ namespace Model
          * operations automatically.</p>  <ol> <li> <p>Create a CloudWatch Logs log
          * group, and make note of the ARN, which you specify when you create a query
          * logging configuration. Note the following:</p> <ul> <li> <p>You must create the
-         * log group in the us-east-1 region.</p> </li> <li> <p>You must use the same AWS
-         * account to create the log group and the hosted zone that you want to configure
-         * query logging for.</p> </li> <li> <p>When you create log groups for query
-         * logging, we recommend that you use a consistent prefix, for example:</p> <p>
-         * <code>/aws/route53/<i>hosted zone name</i> </code> </p> <p>In the next step,
-         * you'll create a resource policy, which controls access to one or more log groups
-         * and the associated AWS resources, such as Route 53 hosted zones. There's a limit
-         * on the number of resource policies that you can create, so we recommend that you
-         * use a consistent prefix so you can use the same resource policy for all the log
-         * groups that you create for query logging.</p> </li> </ul> </li> <li> <p>Create a
-         * CloudWatch Logs resource policy, and give it the permissions that Route 53 needs
-         * to create log streams and to send query logs to log streams. For the value of
-         * <code>Resource</code>, specify the ARN for the log group that you created in the
-         * previous step. To use the same resource policy for all the CloudWatch Logs log
-         * groups that you created for query logging configurations, replace the hosted
-         * zone name with <code>*</code>, for example:</p> <p>
+         * log group in the us-east-1 region.</p> </li> <li> <p>You must use the same
+         * Amazon Web Services account to create the log group and the hosted zone that you
+         * want to configure query logging for.</p> </li> <li> <p>When you create log
+         * groups for query logging, we recommend that you use a consistent prefix, for
+         * example:</p> <p> <code>/aws/route53/<i>hosted zone name</i> </code> </p> <p>In
+         * the next step, you'll create a resource policy, which controls access to one or
+         * more log groups and the associated Amazon Web Services resources, such as Route
+         * 53 hosted zones. There's a limit on the number of resource policies that you can
+         * create, so we recommend that you use a consistent prefix so you can use the same
+         * resource policy for all the log groups that you create for query logging.</p>
+         * </li> </ul> </li> <li> <p>Create a CloudWatch Logs resource policy, and give it
+         * the permissions that Route 53 needs to create log streams and to send query logs
+         * to log streams. For the value of <code>Resource</code>, specify the ARN for the
+         * log group that you created in the previous step. To use the same resource policy
+         * for all the CloudWatch Logs log groups that you created for query logging
+         * configurations, replace the hosted zone name with <code>*</code>, for
+         * example:</p> <p>
          * <code>arn:aws:logs:us-east-1:123412341234:log-group:/aws/route53/ *</code> </p>
-         *  <p>You can't use the CloudWatch console to create or edit a resource
-         * policy. You must use the CloudWatch API, one of the AWS SDKs, or the AWS
-         * CLI.</p>  </li> </ol> </dd> <dt>Log Streams and Edge Locations</dt> <dd>
-         * <p>When Route 53 finishes creating the configuration for DNS query logging, it
-         * does the following:</p> <ul> <li> <p>Creates a log stream for an edge location
-         * the first time that the edge location responds to DNS queries for the specified
-         * hosted zone. That log stream is used to log all queries that Route 53 responds
-         * to for that edge location.</p> </li> <li> <p>Begins to send query logs to the
-         * applicable log stream.</p> </li> </ul> <p>The name of each log stream is in the
-         * following format:</p> <p> <code> <i>hosted zone ID</i>/<i>edge location code</i>
-         * </code> </p> <p>The edge location code is a three-letter code and an arbitrarily
-         * assigned number, for example, DFW3. The three-letter code typically corresponds
-         * with the International Air Transport Association airport code for an airport
-         * near the edge location. (These abbreviations might change in the future.) For a
-         * list of edge locations, see "The Route 53 Global Network" on the <a
+         * <p>To avoid the confused deputy problem, a security issue where an entity
+         * without a permission for an action can coerce a more-privileged entity to
+         * perform it, you can optionally limit the permissions that a service has to a
+         * resource in a resource-based policy by supplying the following values:</p> <ul>
+         * <li> <p>For <code>aws:SourceArn</code>, supply the hosted zone ARN used in
+         * creating the query logging configuration. For example, <code>aws:SourceArn:
+         * arn:aws:route53:::hostedzone/hosted zone ID</code>.</p> </li> <li> <p>For
+         * <code>aws:SourceAccount</code>, supply the account ID for the account that
+         * creates the query logging configuration. For example,
+         * <code>aws:SourceAccount:111111111111</code>.</p> </li> </ul> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html">The
+         * confused deputy problem</a> in the <i>Amazon Web Services IAM User
+         * Guide</i>.</p>  <p>You can't use the CloudWatch console to create or edit
+         * a resource policy. You must use the CloudWatch API, one of the Amazon Web
+         * Services SDKs, or the CLI.</p>  </li> </ol> </dd> <dt>Log Streams and
+         * Edge Locations</dt> <dd> <p>When Route 53 finishes creating the configuration
+         * for DNS query logging, it does the following:</p> <ul> <li> <p>Creates a log
+         * stream for an edge location the first time that the edge location responds to
+         * DNS queries for the specified hosted zone. That log stream is used to log all
+         * queries that Route 53 responds to for that edge location.</p> </li> <li>
+         * <p>Begins to send query logs to the applicable log stream.</p> </li> </ul>
+         * <p>The name of each log stream is in the following format:</p> <p> <code>
+         * <i>hosted zone ID</i>/<i>edge location code</i> </code> </p> <p>The edge
+         * location code is a three-letter code and an arbitrarily assigned number, for
+         * example, DFW3. The three-letter code typically corresponds with the
+         * International Air Transport Association airport code for an airport near the
+         * edge location. (These abbreviations might change in the future.) For a list of
+         * edge locations, see "The Route 53 Global Network" on the <a
          * href="http://aws.amazon.com/route53/details/">Route 53 Product Details</a>
          * page.</p> </dd> <dt>Queries That Are Logged</dt> <dd> <p>Query logs contain only
          * the queries that DNS resolvers forward to Route 53. If a DNS resolver has
@@ -1211,13 +1322,13 @@ namespace Model
 
         /**
          * <p>Creates a delegation set (a group of four name servers) that can be reused by
-         * multiple hosted zones that were created by the same AWS account. </p> <p>You can
-         * also create a reusable delegation set that uses the four name servers that are
-         * associated with an existing hosted zone. Specify the hosted zone ID in the
-         * <code>CreateReusableDelegationSet</code> request.</p>  <p>You can't
-         * associate a reusable delegation set with a private hosted zone.</p> 
-         * <p>For information about using a reusable delegation set to configure white
-         * label name servers, see <a
+         * multiple hosted zones that were created by the same Amazon Web Services account.
+         * </p> <p>You can also create a reusable delegation set that uses the four name
+         * servers that are associated with an existing hosted zone. Specify the hosted
+         * zone ID in the <code>CreateReusableDelegationSet</code> request.</p> 
+         * <p>You can't associate a reusable delegation set with a private hosted zone.</p>
+         *  <p>For information about using a reusable delegation set to configure
+         * white label name servers, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/white-label-name-servers.html">Configuring
          * White Label Name Servers</a>.</p> <p>The process for migrating existing hosted
          * zones to use a reusable delegation set is comparable to the process for
@@ -1248,13 +1359,13 @@ namespace Model
 
         /**
          * <p>Creates a delegation set (a group of four name servers) that can be reused by
-         * multiple hosted zones that were created by the same AWS account. </p> <p>You can
-         * also create a reusable delegation set that uses the four name servers that are
-         * associated with an existing hosted zone. Specify the hosted zone ID in the
-         * <code>CreateReusableDelegationSet</code> request.</p>  <p>You can't
-         * associate a reusable delegation set with a private hosted zone.</p> 
-         * <p>For information about using a reusable delegation set to configure white
-         * label name servers, see <a
+         * multiple hosted zones that were created by the same Amazon Web Services account.
+         * </p> <p>You can also create a reusable delegation set that uses the four name
+         * servers that are associated with an existing hosted zone. Specify the hosted
+         * zone ID in the <code>CreateReusableDelegationSet</code> request.</p> 
+         * <p>You can't associate a reusable delegation set with a private hosted zone.</p>
+         *  <p>For information about using a reusable delegation set to configure
+         * white label name servers, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/white-label-name-servers.html">Configuring
          * White Label Name Servers</a>.</p> <p>The process for migrating existing hosted
          * zones to use a reusable delegation set is comparable to the process for
@@ -1287,13 +1398,13 @@ namespace Model
 
         /**
          * <p>Creates a delegation set (a group of four name servers) that can be reused by
-         * multiple hosted zones that were created by the same AWS account. </p> <p>You can
-         * also create a reusable delegation set that uses the four name servers that are
-         * associated with an existing hosted zone. Specify the hosted zone ID in the
-         * <code>CreateReusableDelegationSet</code> request.</p>  <p>You can't
-         * associate a reusable delegation set with a private hosted zone.</p> 
-         * <p>For information about using a reusable delegation set to configure white
-         * label name servers, see <a
+         * multiple hosted zones that were created by the same Amazon Web Services account.
+         * </p> <p>You can also create a reusable delegation set that uses the four name
+         * servers that are associated with an existing hosted zone. Specify the hosted
+         * zone ID in the <code>CreateReusableDelegationSet</code> request.</p> 
+         * <p>You can't associate a reusable delegation set with a private hosted zone.</p>
+         *  <p>For information about using a reusable delegation set to configure
+         * white label name servers, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/white-label-name-servers.html">Configuring
          * White Label Name Servers</a>.</p> <p>The process for migrating existing hosted
          * zones to use a reusable delegation set is comparable to the process for
@@ -1445,12 +1556,12 @@ namespace Model
         virtual void CreateTrafficPolicyVersionAsync(const Model::CreateTrafficPolicyVersionRequest& request, const CreateTrafficPolicyVersionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Authorizes the AWS account that created a specified VPC to submit an
-         * <code>AssociateVPCWithHostedZone</code> request to associate the VPC with a
-         * specified hosted zone that was created by a different account. To submit a
-         * <code>CreateVPCAssociationAuthorization</code> request, you must use the account
-         * that created the hosted zone. After you authorize the association, use the
-         * account that created the VPC to submit an
+         * <p>Authorizes the Amazon Web Services account that created a specified VPC to
+         * submit an <code>AssociateVPCWithHostedZone</code> request to associate the VPC
+         * with a specified hosted zone that was created by a different account. To submit
+         * a <code>CreateVPCAssociationAuthorization</code> request, you must use the
+         * account that created the hosted zone. After you authorize the association, use
+         * the account that created the VPC to submit an
          * <code>AssociateVPCWithHostedZone</code> request.</p>  <p>If you want to
          * associate multiple VPCs that you created by using one account with a hosted zone
          * that you created by using a different account, you must submit one authorization
@@ -1461,12 +1572,12 @@ namespace Model
         virtual Model::CreateVPCAssociationAuthorizationOutcome CreateVPCAssociationAuthorization(const Model::CreateVPCAssociationAuthorizationRequest& request) const;
 
         /**
-         * <p>Authorizes the AWS account that created a specified VPC to submit an
-         * <code>AssociateVPCWithHostedZone</code> request to associate the VPC with a
-         * specified hosted zone that was created by a different account. To submit a
-         * <code>CreateVPCAssociationAuthorization</code> request, you must use the account
-         * that created the hosted zone. After you authorize the association, use the
-         * account that created the VPC to submit an
+         * <p>Authorizes the Amazon Web Services account that created a specified VPC to
+         * submit an <code>AssociateVPCWithHostedZone</code> request to associate the VPC
+         * with a specified hosted zone that was created by a different account. To submit
+         * a <code>CreateVPCAssociationAuthorization</code> request, you must use the
+         * account that created the hosted zone. After you authorize the association, use
+         * the account that created the VPC to submit an
          * <code>AssociateVPCWithHostedZone</code> request.</p>  <p>If you want to
          * associate multiple VPCs that you created by using one account with a hosted zone
          * that you created by using a different account, you must submit one authorization
@@ -1479,12 +1590,12 @@ namespace Model
         virtual Model::CreateVPCAssociationAuthorizationOutcomeCallable CreateVPCAssociationAuthorizationCallable(const Model::CreateVPCAssociationAuthorizationRequest& request) const;
 
         /**
-         * <p>Authorizes the AWS account that created a specified VPC to submit an
-         * <code>AssociateVPCWithHostedZone</code> request to associate the VPC with a
-         * specified hosted zone that was created by a different account. To submit a
-         * <code>CreateVPCAssociationAuthorization</code> request, you must use the account
-         * that created the hosted zone. After you authorize the association, use the
-         * account that created the VPC to submit an
+         * <p>Authorizes the Amazon Web Services account that created a specified VPC to
+         * submit an <code>AssociateVPCWithHostedZone</code> request to associate the VPC
+         * with a specified hosted zone that was created by a different account. To submit
+         * a <code>CreateVPCAssociationAuthorization</code> request, you must use the
+         * account that created the hosted zone. After you authorize the association, use
+         * the account that created the VPC to submit an
          * <code>AssociateVPCWithHostedZone</code> request.</p>  <p>If you want to
          * associate multiple VPCs that you created by using one account with a hosted zone
          * that you created by using a different account, you must submit one authorization
@@ -1497,7 +1608,7 @@ namespace Model
         virtual void CreateVPCAssociationAuthorizationAsync(const Model::CreateVPCAssociationAuthorizationRequest& request, const CreateVPCAssociationAuthorizationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Deactivates a key signing key (KSK) so that it will not be used for signing
+         * <p>Deactivates a key-signing key (KSK) so that it will not be used for signing
          * by DNSSEC. This operation changes the KSK status to
          * <code>INACTIVE</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeactivateKeySigningKey">AWS
@@ -1506,7 +1617,7 @@ namespace Model
         virtual Model::DeactivateKeySigningKeyOutcome DeactivateKeySigningKey(const Model::DeactivateKeySigningKeyRequest& request) const;
 
         /**
-         * <p>Deactivates a key signing key (KSK) so that it will not be used for signing
+         * <p>Deactivates a key-signing key (KSK) so that it will not be used for signing
          * by DNSSEC. This operation changes the KSK status to
          * <code>INACTIVE</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeactivateKeySigningKey">AWS
@@ -1517,7 +1628,7 @@ namespace Model
         virtual Model::DeactivateKeySigningKeyOutcomeCallable DeactivateKeySigningKeyCallable(const Model::DeactivateKeySigningKeyRequest& request) const;
 
         /**
-         * <p>Deactivates a key signing key (KSK) so that it will not be used for signing
+         * <p>Deactivates a key-signing key (KSK) so that it will not be used for signing
          * by DNSSEC. This operation changes the KSK status to
          * <code>INACTIVE</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeactivateKeySigningKey">AWS
@@ -1536,7 +1647,7 @@ namespace Model
          * your DNS failover configuration. For more information, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html#health-checks-deleting.html">Replacing
          * and Deleting Health Checks</a> in the <i>Amazon Route 53 Developer
-         * Guide</i>.</p>  <p>If you're using AWS Cloud Map and you configured
+         * Guide</i>.</p>  <p>If you're using Cloud Map and you configured
          * Cloud Map to create a Route 53 health check when you register an instance, you
          * can't use the Route 53 <code>DeleteHealthCheck</code> command to delete the
          * health check. The health check is deleted automatically when you deregister the
@@ -1556,7 +1667,7 @@ namespace Model
          * your DNS failover configuration. For more information, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html#health-checks-deleting.html">Replacing
          * and Deleting Health Checks</a> in the <i>Amazon Route 53 Developer
-         * Guide</i>.</p>  <p>If you're using AWS Cloud Map and you configured
+         * Guide</i>.</p>  <p>If you're using Cloud Map and you configured
          * Cloud Map to create a Route 53 health check when you register an instance, you
          * can't use the Route 53 <code>DeleteHealthCheck</code> command to delete the
          * health check. The health check is deleted automatically when you deregister the
@@ -1578,7 +1689,7 @@ namespace Model
          * your DNS failover configuration. For more information, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html#health-checks-deleting.html">Replacing
          * and Deleting Health Checks</a> in the <i>Amazon Route 53 Developer
-         * Guide</i>.</p>  <p>If you're using AWS Cloud Map and you configured
+         * Guide</i>.</p>  <p>If you're using Cloud Map and you configured
          * Cloud Map to create a Route 53 health check when you register an instance, you
          * can't use the Route 53 <code>DeleteHealthCheck</code> command to delete the
          * health check. The health check is deleted automatically when you deregister the
@@ -1593,7 +1704,7 @@ namespace Model
 
         /**
          * <p>Deletes a hosted zone.</p> <p>If the hosted zone was created by another
-         * service, such as AWS Cloud Map, see <a
+         * service, such as Cloud Map, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DeleteHostedZone.html#delete-public-hosted-zone-created-by-another-service">Deleting
          * Public Hosted Zones That Were Created by Another Service</a> in the <i>Amazon
          * Route 53 Developer Guide</i> for information about how to delete it. (The
@@ -1628,8 +1739,8 @@ namespace Model
          * <p>To verify that the hosted zone has been deleted, do one of the following:</p>
          * <ul> <li> <p>Use the <code>GetHostedZone</code> action to request information
          * about the hosted zone.</p> </li> <li> <p>Use the <code>ListHostedZones</code>
-         * action to get a list of the hosted zones associated with the current AWS
-         * account.</p> </li> </ul><p><h3>See Also:</h3>   <a
+         * action to get a list of the hosted zones associated with the current Amazon Web
+         * Services account.</p> </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteHostedZone">AWS
          * API Reference</a></p>
          */
@@ -1637,7 +1748,7 @@ namespace Model
 
         /**
          * <p>Deletes a hosted zone.</p> <p>If the hosted zone was created by another
-         * service, such as AWS Cloud Map, see <a
+         * service, such as Cloud Map, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DeleteHostedZone.html#delete-public-hosted-zone-created-by-another-service">Deleting
          * Public Hosted Zones That Were Created by Another Service</a> in the <i>Amazon
          * Route 53 Developer Guide</i> for information about how to delete it. (The
@@ -1672,8 +1783,8 @@ namespace Model
          * <p>To verify that the hosted zone has been deleted, do one of the following:</p>
          * <ul> <li> <p>Use the <code>GetHostedZone</code> action to request information
          * about the hosted zone.</p> </li> <li> <p>Use the <code>ListHostedZones</code>
-         * action to get a list of the hosted zones associated with the current AWS
-         * account.</p> </li> </ul><p><h3>See Also:</h3>   <a
+         * action to get a list of the hosted zones associated with the current Amazon Web
+         * Services account.</p> </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteHostedZone">AWS
          * API Reference</a></p>
          *
@@ -1683,7 +1794,7 @@ namespace Model
 
         /**
          * <p>Deletes a hosted zone.</p> <p>If the hosted zone was created by another
-         * service, such as AWS Cloud Map, see <a
+         * service, such as Cloud Map, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DeleteHostedZone.html#delete-public-hosted-zone-created-by-another-service">Deleting
          * Public Hosted Zones That Were Created by Another Service</a> in the <i>Amazon
          * Route 53 Developer Guide</i> for information about how to delete it. (The
@@ -1718,8 +1829,8 @@ namespace Model
          * <p>To verify that the hosted zone has been deleted, do one of the following:</p>
          * <ul> <li> <p>Use the <code>GetHostedZone</code> action to request information
          * about the hosted zone.</p> </li> <li> <p>Use the <code>ListHostedZones</code>
-         * action to get a list of the hosted zones associated with the current AWS
-         * account.</p> </li> </ul><p><h3>See Also:</h3>   <a
+         * action to get a list of the hosted zones associated with the current Amazon Web
+         * Services account.</p> </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteHostedZone">AWS
          * API Reference</a></p>
          *
@@ -1728,20 +1839,28 @@ namespace Model
         virtual void DeleteHostedZoneAsync(const Model::DeleteHostedZoneRequest& request, const DeleteHostedZoneResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Deletes a key signing key (KSK). Before you can delete a KSK, you must
-         * deactivate it. The KSK must be deactived before you can delete it regardless of
-         * whether the hosted zone is enabled for DNSSEC signing.</p><p><h3>See Also:</h3> 
-         * <a
+         * <p>Deletes a key-signing key (KSK). Before you can delete a KSK, you must
+         * deactivate it. The KSK must be deactivated before you can delete it regardless
+         * of whether the hosted zone is enabled for DNSSEC signing.</p> <p>You can use <a
+         * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeactivateKeySigningKey.html">DeactivateKeySigningKey</a>
+         * to deactivate the key before you delete it.</p> <p>Use <a
+         * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetDNSSEC.html">GetDNSSEC</a>
+         * to verify that the KSK is in an <code>INACTIVE</code> status.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteKeySigningKey">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteKeySigningKeyOutcome DeleteKeySigningKey(const Model::DeleteKeySigningKeyRequest& request) const;
 
         /**
-         * <p>Deletes a key signing key (KSK). Before you can delete a KSK, you must
-         * deactivate it. The KSK must be deactived before you can delete it regardless of
-         * whether the hosted zone is enabled for DNSSEC signing.</p><p><h3>See Also:</h3> 
-         * <a
+         * <p>Deletes a key-signing key (KSK). Before you can delete a KSK, you must
+         * deactivate it. The KSK must be deactivated before you can delete it regardless
+         * of whether the hosted zone is enabled for DNSSEC signing.</p> <p>You can use <a
+         * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeactivateKeySigningKey.html">DeactivateKeySigningKey</a>
+         * to deactivate the key before you delete it.</p> <p>Use <a
+         * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetDNSSEC.html">GetDNSSEC</a>
+         * to verify that the KSK is in an <code>INACTIVE</code> status.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteKeySigningKey">AWS
          * API Reference</a></p>
          *
@@ -1750,10 +1869,14 @@ namespace Model
         virtual Model::DeleteKeySigningKeyOutcomeCallable DeleteKeySigningKeyCallable(const Model::DeleteKeySigningKeyRequest& request) const;
 
         /**
-         * <p>Deletes a key signing key (KSK). Before you can delete a KSK, you must
-         * deactivate it. The KSK must be deactived before you can delete it regardless of
-         * whether the hosted zone is enabled for DNSSEC signing.</p><p><h3>See Also:</h3> 
-         * <a
+         * <p>Deletes a key-signing key (KSK). Before you can delete a KSK, you must
+         * deactivate it. The KSK must be deactivated before you can delete it regardless
+         * of whether the hosted zone is enabled for DNSSEC signing.</p> <p>You can use <a
+         * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeactivateKeySigningKey.html">DeactivateKeySigningKey</a>
+         * to deactivate the key before you delete it.</p> <p>Use <a
+         * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetDNSSEC.html">GetDNSSEC</a>
+         * to verify that the KSK is in an <code>INACTIVE</code> status.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DeleteKeySigningKey">AWS
          * API Reference</a></p>
          *
@@ -1935,9 +2058,9 @@ namespace Model
          * request to associate a specified VPC with a hosted zone that was created by a
          * different account. You must use the account that created the hosted zone to
          * submit a <code>DeleteVPCAssociationAuthorization</code> request.</p> 
-         * <p>Sending this request only prevents the AWS account that created the VPC from
-         * associating the VPC with the Amazon Route 53 hosted zone in the future. If the
-         * VPC is already associated with the hosted zone,
+         * <p>Sending this request only prevents the Amazon Web Services account that
+         * created the VPC from associating the VPC with the Amazon Route 53 hosted zone in
+         * the future. If the VPC is already associated with the hosted zone,
          * <code>DeleteVPCAssociationAuthorization</code> won't disassociate the VPC from
          * the hosted zone. If you want to delete an existing association, use
          * <code>DisassociateVPCFromHostedZone</code>.</p> <p><h3>See
@@ -1952,9 +2075,9 @@ namespace Model
          * request to associate a specified VPC with a hosted zone that was created by a
          * different account. You must use the account that created the hosted zone to
          * submit a <code>DeleteVPCAssociationAuthorization</code> request.</p> 
-         * <p>Sending this request only prevents the AWS account that created the VPC from
-         * associating the VPC with the Amazon Route 53 hosted zone in the future. If the
-         * VPC is already associated with the hosted zone,
+         * <p>Sending this request only prevents the Amazon Web Services account that
+         * created the VPC from associating the VPC with the Amazon Route 53 hosted zone in
+         * the future. If the VPC is already associated with the hosted zone,
          * <code>DeleteVPCAssociationAuthorization</code> won't disassociate the VPC from
          * the hosted zone. If you want to delete an existing association, use
          * <code>DisassociateVPCFromHostedZone</code>.</p> <p><h3>See
@@ -1971,9 +2094,9 @@ namespace Model
          * request to associate a specified VPC with a hosted zone that was created by a
          * different account. You must use the account that created the hosted zone to
          * submit a <code>DeleteVPCAssociationAuthorization</code> request.</p> 
-         * <p>Sending this request only prevents the AWS account that created the VPC from
-         * associating the VPC with the Amazon Route 53 hosted zone in the future. If the
-         * VPC is already associated with the hosted zone,
+         * <p>Sending this request only prevents the Amazon Web Services account that
+         * created the VPC from associating the VPC with the Amazon Route 53 hosted zone in
+         * the future. If the VPC is already associated with the hosted zone,
          * <code>DeleteVPCAssociationAuthorization</code> won't disassociate the VPC from
          * the hosted zone. If you want to delete an existing association, use
          * <code>DisassociateVPCFromHostedZone</code>.</p> <p><h3>See
@@ -1987,7 +2110,7 @@ namespace Model
 
         /**
          * <p>Disables DNSSEC signing in a specific hosted zone. This action does not
-         * deactivate any key signing keys (KSKs) that are active in the hosted
+         * deactivate any key-signing keys (KSKs) that are active in the hosted
          * zone.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DisableHostedZoneDNSSEC">AWS
          * API Reference</a></p>
@@ -1996,7 +2119,7 @@ namespace Model
 
         /**
          * <p>Disables DNSSEC signing in a specific hosted zone. This action does not
-         * deactivate any key signing keys (KSKs) that are active in the hosted
+         * deactivate any key-signing keys (KSKs) that are active in the hosted
          * zone.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DisableHostedZoneDNSSEC">AWS
          * API Reference</a></p>
@@ -2007,7 +2130,7 @@ namespace Model
 
         /**
          * <p>Disables DNSSEC signing in a specific hosted zone. This action does not
-         * deactivate any key signing keys (KSKs) that are active in the hosted
+         * deactivate any key-signing keys (KSKs) that are active in the hosted
          * zone.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DisableHostedZoneDNSSEC">AWS
          * API Reference</a></p>
@@ -2023,18 +2146,27 @@ namespace Model
          * <p>You can't convert a private hosted zone into a public hosted zone.</p> </li>
          * <li> <p>You can submit a <code>DisassociateVPCFromHostedZone</code> request
          * using either the account that created the hosted zone or the account that
-         * created the Amazon VPC.</p> </li> <li> <p>Some services, such as AWS Cloud Map
-         * and Amazon Elastic File System (Amazon EFS) automatically create hosted zones
-         * and associate VPCs with the hosted zones. A service can create a hosted zone
-         * using your account or using its own account. You can disassociate a VPC from a
-         * hosted zone only if the service created the hosted zone using your account.</p>
-         * <p>When you run <a
+         * created the Amazon VPC.</p> </li> <li> <p>Some services, such as Cloud Map and
+         * Amazon Elastic File System (Amazon EFS) automatically create hosted zones and
+         * associate VPCs with the hosted zones. A service can create a hosted zone using
+         * your account or using its own account. You can disassociate a VPC from a hosted
+         * zone only if the service created the hosted zone using your account.</p> <p>When
+         * you run <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZonesByVPC.html">DisassociateVPCFromHostedZone</a>,
          * if the hosted zone has a value for <code>OwningAccount</code>, you can use
          * <code>DisassociateVPCFromHostedZone</code>. If the hosted zone has a value for
          * <code>OwningService</code>, you can't use
-         * <code>DisassociateVPCFromHostedZone</code>.</p> </li> </ul><p><h3>See Also:</h3>
-         * <a
+         * <code>DisassociateVPCFromHostedZone</code>.</p> </li> </ul>  <p>When
+         * revoking access, the hosted zone and the Amazon VPC must belong to the same
+         * partition. A partition is a group of Amazon Web Services Regions. Each Amazon
+         * Web Services account is scoped to one partition.</p> <p>The following are the
+         * supported partitions:</p> <ul> <li> <p> <code>aws</code> - Amazon Web Services
+         * Regions</p> </li> <li> <p> <code>aws-cn</code> - China Regions</p> </li> <li>
+         * <p> <code>aws-us-gov</code> - Amazon Web Services GovCloud (US) Region</p> </li>
+         * </ul> <p>For more information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DisassociateVPCFromHostedZone">AWS
          * API Reference</a></p>
          */
@@ -2047,18 +2179,27 @@ namespace Model
          * <p>You can't convert a private hosted zone into a public hosted zone.</p> </li>
          * <li> <p>You can submit a <code>DisassociateVPCFromHostedZone</code> request
          * using either the account that created the hosted zone or the account that
-         * created the Amazon VPC.</p> </li> <li> <p>Some services, such as AWS Cloud Map
-         * and Amazon Elastic File System (Amazon EFS) automatically create hosted zones
-         * and associate VPCs with the hosted zones. A service can create a hosted zone
-         * using your account or using its own account. You can disassociate a VPC from a
-         * hosted zone only if the service created the hosted zone using your account.</p>
-         * <p>When you run <a
+         * created the Amazon VPC.</p> </li> <li> <p>Some services, such as Cloud Map and
+         * Amazon Elastic File System (Amazon EFS) automatically create hosted zones and
+         * associate VPCs with the hosted zones. A service can create a hosted zone using
+         * your account or using its own account. You can disassociate a VPC from a hosted
+         * zone only if the service created the hosted zone using your account.</p> <p>When
+         * you run <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZonesByVPC.html">DisassociateVPCFromHostedZone</a>,
          * if the hosted zone has a value for <code>OwningAccount</code>, you can use
          * <code>DisassociateVPCFromHostedZone</code>. If the hosted zone has a value for
          * <code>OwningService</code>, you can't use
-         * <code>DisassociateVPCFromHostedZone</code>.</p> </li> </ul><p><h3>See Also:</h3>
-         * <a
+         * <code>DisassociateVPCFromHostedZone</code>.</p> </li> </ul>  <p>When
+         * revoking access, the hosted zone and the Amazon VPC must belong to the same
+         * partition. A partition is a group of Amazon Web Services Regions. Each Amazon
+         * Web Services account is scoped to one partition.</p> <p>The following are the
+         * supported partitions:</p> <ul> <li> <p> <code>aws</code> - Amazon Web Services
+         * Regions</p> </li> <li> <p> <code>aws-cn</code> - China Regions</p> </li> <li>
+         * <p> <code>aws-us-gov</code> - Amazon Web Services GovCloud (US) Region</p> </li>
+         * </ul> <p>For more information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DisassociateVPCFromHostedZone">AWS
          * API Reference</a></p>
          *
@@ -2073,18 +2214,27 @@ namespace Model
          * <p>You can't convert a private hosted zone into a public hosted zone.</p> </li>
          * <li> <p>You can submit a <code>DisassociateVPCFromHostedZone</code> request
          * using either the account that created the hosted zone or the account that
-         * created the Amazon VPC.</p> </li> <li> <p>Some services, such as AWS Cloud Map
-         * and Amazon Elastic File System (Amazon EFS) automatically create hosted zones
-         * and associate VPCs with the hosted zones. A service can create a hosted zone
-         * using your account or using its own account. You can disassociate a VPC from a
-         * hosted zone only if the service created the hosted zone using your account.</p>
-         * <p>When you run <a
+         * created the Amazon VPC.</p> </li> <li> <p>Some services, such as Cloud Map and
+         * Amazon Elastic File System (Amazon EFS) automatically create hosted zones and
+         * associate VPCs with the hosted zones. A service can create a hosted zone using
+         * your account or using its own account. You can disassociate a VPC from a hosted
+         * zone only if the service created the hosted zone using your account.</p> <p>When
+         * you run <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZonesByVPC.html">DisassociateVPCFromHostedZone</a>,
          * if the hosted zone has a value for <code>OwningAccount</code>, you can use
          * <code>DisassociateVPCFromHostedZone</code>. If the hosted zone has a value for
          * <code>OwningService</code>, you can't use
-         * <code>DisassociateVPCFromHostedZone</code>.</p> </li> </ul><p><h3>See Also:</h3>
-         * <a
+         * <code>DisassociateVPCFromHostedZone</code>.</p> </li> </ul>  <p>When
+         * revoking access, the hosted zone and the Amazon VPC must belong to the same
+         * partition. A partition is a group of Amazon Web Services Regions. Each Amazon
+         * Web Services account is scoped to one partition.</p> <p>The following are the
+         * supported partitions:</p> <ul> <li> <p> <code>aws</code> - Amazon Web Services
+         * Regions</p> </li> <li> <p> <code>aws-cn</code> - China Regions</p> </li> <li>
+         * <p> <code>aws-us-gov</code> - Amazon Web Services GovCloud (US) Region</p> </li>
+         * </ul> <p>For more information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DisassociateVPCFromHostedZone">AWS
          * API Reference</a></p>
          *
@@ -2127,9 +2277,9 @@ namespace Model
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html">Limits</a>
          * in the <i>Amazon Route 53 Developer Guide</i>. To request a higher limit, <a
          * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53">open
-         * a case</a>.</p>  <p>You can also view account limits in AWS Trusted
-         * Advisor. Sign in to the AWS Management Console and open the Trusted Advisor
-         * console at <a
+         * a case</a>.</p>  <p>You can also view account limits in Amazon Web
+         * Services Trusted Advisor. Sign in to the Amazon Web Services Management Console
+         * and open the Trusted Advisor console at <a
          * href="https://console.aws.amazon.com/trustedadvisor">https://console.aws.amazon.com/trustedadvisor/</a>.
          * Then choose <b>Service limits</b> in the navigation pane.</p> <p><h3>See
          * Also:</h3>   <a
@@ -2145,9 +2295,9 @@ namespace Model
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html">Limits</a>
          * in the <i>Amazon Route 53 Developer Guide</i>. To request a higher limit, <a
          * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53">open
-         * a case</a>.</p>  <p>You can also view account limits in AWS Trusted
-         * Advisor. Sign in to the AWS Management Console and open the Trusted Advisor
-         * console at <a
+         * a case</a>.</p>  <p>You can also view account limits in Amazon Web
+         * Services Trusted Advisor. Sign in to the Amazon Web Services Management Console
+         * and open the Trusted Advisor console at <a
          * href="https://console.aws.amazon.com/trustedadvisor">https://console.aws.amazon.com/trustedadvisor/</a>.
          * Then choose <b>Service limits</b> in the navigation pane.</p> <p><h3>See
          * Also:</h3>   <a
@@ -2165,9 +2315,9 @@ namespace Model
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html">Limits</a>
          * in the <i>Amazon Route 53 Developer Guide</i>. To request a higher limit, <a
          * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53">open
-         * a case</a>.</p>  <p>You can also view account limits in AWS Trusted
-         * Advisor. Sign in to the AWS Management Console and open the Trusted Advisor
-         * console at <a
+         * a case</a>.</p>  <p>You can also view account limits in Amazon Web
+         * Services Trusted Advisor. Sign in to the Amazon Web Services Management Console
+         * and open the Trusted Advisor console at <a
          * href="https://console.aws.amazon.com/trustedadvisor">https://console.aws.amazon.com/trustedadvisor/</a>.
          * Then choose <b>Service limits</b> in the navigation pane.</p> <p><h3>See
          * Also:</h3>   <a
@@ -2219,8 +2369,10 @@ namespace Model
         virtual void GetChangeAsync(const Model::GetChangeRequest& request, const GetChangeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p> <code>GetCheckerIpRanges</code> still works, but we recommend
-         * that you download ip-ranges.json, which includes IP address ranges for all AWS
+         * <p>Route 53 does not perform authorization for this API because it retrieves
+         * information that is already available to the public.</p>  <p>
+         * <code>GetCheckerIpRanges</code> still works, but we recommend that you download
+         * ip-ranges.json, which includes IP address ranges for all Amazon Web Services
          * services. For more information, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/route-53-ip-addresses.html">IP
          * Address Ranges of Amazon Route 53 Servers</a> in the <i>Amazon Route 53
@@ -2231,8 +2383,10 @@ namespace Model
         virtual Model::GetCheckerIpRangesOutcome GetCheckerIpRanges(const Model::GetCheckerIpRangesRequest& request) const;
 
         /**
-         *  <p> <code>GetCheckerIpRanges</code> still works, but we recommend
-         * that you download ip-ranges.json, which includes IP address ranges for all AWS
+         * <p>Route 53 does not perform authorization for this API because it retrieves
+         * information that is already available to the public.</p>  <p>
+         * <code>GetCheckerIpRanges</code> still works, but we recommend that you download
+         * ip-ranges.json, which includes IP address ranges for all Amazon Web Services
          * services. For more information, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/route-53-ip-addresses.html">IP
          * Address Ranges of Amazon Route 53 Servers</a> in the <i>Amazon Route 53
@@ -2245,8 +2399,10 @@ namespace Model
         virtual Model::GetCheckerIpRangesOutcomeCallable GetCheckerIpRangesCallable(const Model::GetCheckerIpRangesRequest& request) const;
 
         /**
-         *  <p> <code>GetCheckerIpRanges</code> still works, but we recommend
-         * that you download ip-ranges.json, which includes IP address ranges for all AWS
+         * <p>Route 53 does not perform authorization for this API because it retrieves
+         * information that is already available to the public.</p>  <p>
+         * <code>GetCheckerIpRanges</code> still works, but we recommend that you download
+         * ip-ranges.json, which includes IP address ranges for all Amazon Web Services
          * services. For more information, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/route-53-ip-addresses.html">IP
          * Address Ranges of Amazon Route 53 Servers</a> in the <i>Amazon Route 53
@@ -2260,8 +2416,7 @@ namespace Model
 
         /**
          * <p>Returns information about DNSSEC for a specific hosted zone, including the
-         * key signing keys (KSKs) and zone signing keys (ZSKs) in the hosted
-         * zone.</p><p><h3>See Also:</h3>   <a
+         * key-signing keys (KSKs) in the hosted zone.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetDNSSEC">AWS
          * API Reference</a></p>
          */
@@ -2269,8 +2424,7 @@ namespace Model
 
         /**
          * <p>Returns information about DNSSEC for a specific hosted zone, including the
-         * key signing keys (KSKs) and zone signing keys (ZSKs) in the hosted
-         * zone.</p><p><h3>See Also:</h3>   <a
+         * key-signing keys (KSKs) in the hosted zone.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetDNSSEC">AWS
          * API Reference</a></p>
          *
@@ -2280,8 +2434,7 @@ namespace Model
 
         /**
          * <p>Returns information about DNSSEC for a specific hosted zone, including the
-         * key signing keys (KSKs) and zone signing keys (ZSKs) in the hosted
-         * zone.</p><p><h3>See Also:</h3>   <a
+         * key-signing keys (KSKs) in the hosted zone.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetDNSSEC">AWS
          * API Reference</a></p>
          *
@@ -2291,9 +2444,11 @@ namespace Model
 
         /**
          * <p>Gets information about whether a specified geographic location is supported
-         * for Amazon Route 53 geolocation resource record sets.</p> <p>Use the following
-         * syntax to determine whether a continent is supported for geolocation:</p> <p>
-         * <code>GET /2013-04-01/geolocation?continentcode=<i>two-letter abbreviation for a
+         * for Amazon Route 53 geolocation resource record sets.</p> <p>Route 53 does not
+         * perform authorization for this API because it retrieves information that is
+         * already available to the public.</p> <p>Use the following syntax to determine
+         * whether a continent is supported for geolocation:</p> <p> <code>GET
+         * /2013-04-01/geolocation?continentcode=<i>two-letter abbreviation for a
          * continent</i> </code> </p> <p>Use the following syntax to determine whether a
          * country is supported for geolocation:</p> <p> <code>GET
          * /2013-04-01/geolocation?countrycode=<i>two-character country code</i> </code>
@@ -2309,9 +2464,11 @@ namespace Model
 
         /**
          * <p>Gets information about whether a specified geographic location is supported
-         * for Amazon Route 53 geolocation resource record sets.</p> <p>Use the following
-         * syntax to determine whether a continent is supported for geolocation:</p> <p>
-         * <code>GET /2013-04-01/geolocation?continentcode=<i>two-letter abbreviation for a
+         * for Amazon Route 53 geolocation resource record sets.</p> <p>Route 53 does not
+         * perform authorization for this API because it retrieves information that is
+         * already available to the public.</p> <p>Use the following syntax to determine
+         * whether a continent is supported for geolocation:</p> <p> <code>GET
+         * /2013-04-01/geolocation?continentcode=<i>two-letter abbreviation for a
          * continent</i> </code> </p> <p>Use the following syntax to determine whether a
          * country is supported for geolocation:</p> <p> <code>GET
          * /2013-04-01/geolocation?countrycode=<i>two-character country code</i> </code>
@@ -2329,9 +2486,11 @@ namespace Model
 
         /**
          * <p>Gets information about whether a specified geographic location is supported
-         * for Amazon Route 53 geolocation resource record sets.</p> <p>Use the following
-         * syntax to determine whether a continent is supported for geolocation:</p> <p>
-         * <code>GET /2013-04-01/geolocation?continentcode=<i>two-letter abbreviation for a
+         * for Amazon Route 53 geolocation resource record sets.</p> <p>Route 53 does not
+         * perform authorization for this API because it retrieves information that is
+         * already available to the public.</p> <p>Use the following syntax to determine
+         * whether a continent is supported for geolocation:</p> <p> <code>GET
+         * /2013-04-01/geolocation?continentcode=<i>two-letter abbreviation for a
          * continent</i> </code> </p> <p>Use the following syntax to determine whether a
          * country is supported for geolocation:</p> <p> <code>GET
          * /2013-04-01/geolocation?countrycode=<i>two-character country code</i> </code>
@@ -2377,7 +2536,7 @@ namespace Model
 
         /**
          * <p>Retrieves the number of health checks that are associated with the current
-         * AWS account.</p><p><h3>See Also:</h3>   <a
+         * Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheckCount">AWS
          * API Reference</a></p>
          */
@@ -2385,7 +2544,7 @@ namespace Model
 
         /**
          * <p>Retrieves the number of health checks that are associated with the current
-         * AWS account.</p><p><h3>See Also:</h3>   <a
+         * Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheckCount">AWS
          * API Reference</a></p>
          *
@@ -2395,7 +2554,7 @@ namespace Model
 
         /**
          * <p>Retrieves the number of health checks that are associated with the current
-         * AWS account.</p><p><h3>See Also:</h3>   <a
+         * Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheckCount">AWS
          * API Reference</a></p>
          *
@@ -2432,14 +2591,20 @@ namespace Model
         virtual void GetHealthCheckLastFailureReasonAsync(const Model::GetHealthCheckLastFailureReasonRequest& request, const GetHealthCheckLastFailureReasonResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Gets status of a specified health check. </p><p><h3>See Also:</h3>   <a
+         * <p>Gets status of a specified health check. </p>  <p>This API is
+         * intended for use during development to diagnose behavior. It doesn’t support
+         * production use-cases with high query rates that require immediate and actionable
+         * responses.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheckStatus">AWS
          * API Reference</a></p>
          */
         virtual Model::GetHealthCheckStatusOutcome GetHealthCheckStatus(const Model::GetHealthCheckStatusRequest& request) const;
 
         /**
-         * <p>Gets status of a specified health check. </p><p><h3>See Also:</h3>   <a
+         * <p>Gets status of a specified health check. </p>  <p>This API is
+         * intended for use during development to diagnose behavior. It doesn’t support
+         * production use-cases with high query rates that require immediate and actionable
+         * responses.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheckStatus">AWS
          * API Reference</a></p>
          *
@@ -2448,7 +2613,10 @@ namespace Model
         virtual Model::GetHealthCheckStatusOutcomeCallable GetHealthCheckStatusCallable(const Model::GetHealthCheckStatusRequest& request) const;
 
         /**
-         * <p>Gets status of a specified health check. </p><p><h3>See Also:</h3>   <a
+         * <p>Gets status of a specified health check. </p>  <p>This API is
+         * intended for use during development to diagnose behavior. It doesn’t support
+         * production use-cases with high query rates that require immediate and actionable
+         * responses.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHealthCheckStatus">AWS
          * API Reference</a></p>
          *
@@ -2485,16 +2653,16 @@ namespace Model
         virtual void GetHostedZoneAsync(const Model::GetHostedZoneRequest& request, const GetHostedZoneResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Retrieves the number of hosted zones that are associated with the current AWS
-         * account.</p><p><h3>See Also:</h3>   <a
+         * <p>Retrieves the number of hosted zones that are associated with the current
+         * Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHostedZoneCount">AWS
          * API Reference</a></p>
          */
         virtual Model::GetHostedZoneCountOutcome GetHostedZoneCount(const Model::GetHostedZoneCountRequest& request) const;
 
         /**
-         * <p>Retrieves the number of hosted zones that are associated with the current AWS
-         * account.</p><p><h3>See Also:</h3>   <a
+         * <p>Retrieves the number of hosted zones that are associated with the current
+         * Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHostedZoneCount">AWS
          * API Reference</a></p>
          *
@@ -2503,8 +2671,8 @@ namespace Model
         virtual Model::GetHostedZoneCountOutcomeCallable GetHostedZoneCountCallable(const Model::GetHostedZoneCountRequest& request) const;
 
         /**
-         * <p>Retrieves the number of hosted zones that are associated with the current AWS
-         * account.</p><p><h3>See Also:</h3>   <a
+         * <p>Retrieves the number of hosted zones that are associated with the current
+         * Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetHostedZoneCount">AWS
          * API Reference</a></p>
          *
@@ -2748,7 +2916,7 @@ namespace Model
 
         /**
          * <p>Gets the number of traffic policy instances that are associated with the
-         * current AWS account.</p><p><h3>See Also:</h3>   <a
+         * current Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetTrafficPolicyInstanceCount">AWS
          * API Reference</a></p>
          */
@@ -2756,7 +2924,7 @@ namespace Model
 
         /**
          * <p>Gets the number of traffic policy instances that are associated with the
-         * current AWS account.</p><p><h3>See Also:</h3>   <a
+         * current Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetTrafficPolicyInstanceCount">AWS
          * API Reference</a></p>
          *
@@ -2766,7 +2934,7 @@ namespace Model
 
         /**
          * <p>Gets the number of traffic policy instances that are associated with the
-         * current AWS account.</p><p><h3>See Also:</h3>   <a
+         * current Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/GetTrafficPolicyInstanceCount">AWS
          * API Reference</a></p>
          *
@@ -2779,8 +2947,9 @@ namespace Model
          * listed first, and continents are listed last. If Amazon Route 53 supports
          * subdivisions for a country (for example, states or provinces), the subdivisions
          * for that country are listed in alphabetical order immediately after the
-         * corresponding country.</p> <p>For a list of supported geolocation codes, see the
-         * <a
+         * corresponding country.</p> <p>Route 53 does not perform authorization for this
+         * API because it retrieves information that is already available to the
+         * public.</p> <p>For a list of supported geolocation codes, see the <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GeoLocation.html">GeoLocation</a>
          * data type.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListGeoLocations">AWS
@@ -2793,8 +2962,9 @@ namespace Model
          * listed first, and continents are listed last. If Amazon Route 53 supports
          * subdivisions for a country (for example, states or provinces), the subdivisions
          * for that country are listed in alphabetical order immediately after the
-         * corresponding country.</p> <p>For a list of supported geolocation codes, see the
-         * <a
+         * corresponding country.</p> <p>Route 53 does not perform authorization for this
+         * API because it retrieves information that is already available to the
+         * public.</p> <p>For a list of supported geolocation codes, see the <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GeoLocation.html">GeoLocation</a>
          * data type.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListGeoLocations">AWS
@@ -2809,8 +2979,9 @@ namespace Model
          * listed first, and continents are listed last. If Amazon Route 53 supports
          * subdivisions for a country (for example, states or provinces), the subdivisions
          * for that country are listed in alphabetical order immediately after the
-         * corresponding country.</p> <p>For a list of supported geolocation codes, see the
-         * <a
+         * corresponding country.</p> <p>Route 53 does not perform authorization for this
+         * API because it retrieves information that is already available to the
+         * public.</p> <p>For a list of supported geolocation codes, see the <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GeoLocation.html">GeoLocation</a>
          * data type.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListGeoLocations">AWS
@@ -2821,16 +2992,16 @@ namespace Model
         virtual void ListGeoLocationsAsync(const Model::ListGeoLocationsRequest& request, const ListGeoLocationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Retrieve a list of the health checks that are associated with the current AWS
-         * account. </p><p><h3>See Also:</h3>   <a
+         * <p>Retrieve a list of the health checks that are associated with the current
+         * Amazon Web Services account. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHealthChecks">AWS
          * API Reference</a></p>
          */
         virtual Model::ListHealthChecksOutcome ListHealthChecks(const Model::ListHealthChecksRequest& request) const;
 
         /**
-         * <p>Retrieve a list of the health checks that are associated with the current AWS
-         * account. </p><p><h3>See Also:</h3>   <a
+         * <p>Retrieve a list of the health checks that are associated with the current
+         * Amazon Web Services account. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHealthChecks">AWS
          * API Reference</a></p>
          *
@@ -2839,8 +3010,8 @@ namespace Model
         virtual Model::ListHealthChecksOutcomeCallable ListHealthChecksCallable(const Model::ListHealthChecksRequest& request) const;
 
         /**
-         * <p>Retrieve a list of the health checks that are associated with the current AWS
-         * account. </p><p><h3>See Also:</h3>   <a
+         * <p>Retrieve a list of the health checks that are associated with the current
+         * Amazon Web Services account. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHealthChecks">AWS
          * API Reference</a></p>
          *
@@ -2850,11 +3021,11 @@ namespace Model
 
         /**
          * <p>Retrieves a list of the public and private hosted zones that are associated
-         * with the current AWS account. The response includes a <code>HostedZones</code>
-         * child element for each hosted zone.</p> <p>Amazon Route 53 returns a maximum of
-         * 100 items in each response. If you have a lot of hosted zones, you can use the
-         * <code>maxitems</code> parameter to list them in groups of up to
-         * 100.</p><p><h3>See Also:</h3>   <a
+         * with the current Amazon Web Services account. The response includes a
+         * <code>HostedZones</code> child element for each hosted zone.</p> <p>Amazon Route
+         * 53 returns a maximum of 100 items in each response. If you have a lot of hosted
+         * zones, you can use the <code>maxitems</code> parameter to list them in groups of
+         * up to 100.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZones">AWS
          * API Reference</a></p>
          */
@@ -2862,11 +3033,11 @@ namespace Model
 
         /**
          * <p>Retrieves a list of the public and private hosted zones that are associated
-         * with the current AWS account. The response includes a <code>HostedZones</code>
-         * child element for each hosted zone.</p> <p>Amazon Route 53 returns a maximum of
-         * 100 items in each response. If you have a lot of hosted zones, you can use the
-         * <code>maxitems</code> parameter to list them in groups of up to
-         * 100.</p><p><h3>See Also:</h3>   <a
+         * with the current Amazon Web Services account. The response includes a
+         * <code>HostedZones</code> child element for each hosted zone.</p> <p>Amazon Route
+         * 53 returns a maximum of 100 items in each response. If you have a lot of hosted
+         * zones, you can use the <code>maxitems</code> parameter to list them in groups of
+         * up to 100.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZones">AWS
          * API Reference</a></p>
          *
@@ -2876,11 +3047,11 @@ namespace Model
 
         /**
          * <p>Retrieves a list of the public and private hosted zones that are associated
-         * with the current AWS account. The response includes a <code>HostedZones</code>
-         * child element for each hosted zone.</p> <p>Amazon Route 53 returns a maximum of
-         * 100 items in each response. If you have a lot of hosted zones, you can use the
-         * <code>maxitems</code> parameter to list them in groups of up to
-         * 100.</p><p><h3>See Also:</h3>   <a
+         * with the current Amazon Web Services account. The response includes a
+         * <code>HostedZones</code> child element for each hosted zone.</p> <p>Amazon Route
+         * 53 returns a maximum of 100 items in each response. If you have a lot of hosted
+         * zones, you can use the <code>maxitems</code> parameter to list them in groups of
+         * up to 100.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZones">AWS
          * API Reference</a></p>
          *
@@ -2891,18 +3062,18 @@ namespace Model
         /**
          * <p>Retrieves a list of your hosted zones in lexicographic order. The response
          * includes a <code>HostedZones</code> child element for each hosted zone created
-         * by the current AWS account. </p> <p> <code>ListHostedZonesByName</code> sorts
-         * hosted zones by name with the labels reversed. For example:</p> <p>
-         * <code>com.example.www.</code> </p> <p>Note the trailing dot, which can change
-         * the sort order in some circumstances.</p> <p>If the domain name includes escape
-         * characters or Punycode, <code>ListHostedZonesByName</code> alphabetizes the
-         * domain name using the escaped or Punycoded value, which is the format that
-         * Amazon Route 53 saves in its database. For example, to create a hosted zone for
-         * exämple.com, you specify ex\344mple.com for the domain name.
-         * <code>ListHostedZonesByName</code> alphabetizes it as:</p> <p>
-         * <code>com.ex\344mple.</code> </p> <p>The labels are reversed and alphabetized
-         * using the escaped value. For more information about valid domain name formats,
-         * including internationalized domain names, see <a
+         * by the current Amazon Web Services account. </p> <p>
+         * <code>ListHostedZonesByName</code> sorts hosted zones by name with the labels
+         * reversed. For example:</p> <p> <code>com.example.www.</code> </p> <p>Note the
+         * trailing dot, which can change the sort order in some circumstances.</p> <p>If
+         * the domain name includes escape characters or Punycode,
+         * <code>ListHostedZonesByName</code> alphabetizes the domain name using the
+         * escaped or Punycoded value, which is the format that Amazon Route 53 saves in
+         * its database. For example, to create a hosted zone for exämple.com, you specify
+         * ex\344mple.com for the domain name. <code>ListHostedZonesByName</code>
+         * alphabetizes it as:</p> <p> <code>com.ex\344mple.</code> </p> <p>The labels are
+         * reversed and alphabetized using the escaped value. For more information about
+         * valid domain name formats, including internationalized domain names, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DomainNameFormat.html">DNS
          * Domain Name Format</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
          * <p>Route 53 returns up to 100 items in each response. If you have a lot of
@@ -2916,15 +3087,15 @@ namespace Model
          * contains the value, if any, that you specified for the <code>maxitems</code>
          * parameter in the request that produced the current response.</p> </li> <li>
          * <p>If the value of <code>IsTruncated</code> in the response is true, there are
-         * more hosted zones associated with the current AWS account. </p> <p>If
-         * <code>IsTruncated</code> is false, this response includes the last hosted zone
-         * that is associated with the current account. The <code>NextDNSName</code>
+         * more hosted zones associated with the current Amazon Web Services account. </p>
+         * <p>If <code>IsTruncated</code> is false, this response includes the last hosted
+         * zone that is associated with the current account. The <code>NextDNSName</code>
          * element and <code>NextHostedZoneId</code> elements are omitted from the
          * response.</p> </li> <li> <p>The <code>NextDNSName</code> and
          * <code>NextHostedZoneId</code> elements in the response contain the domain name
          * and the hosted zone ID of the next hosted zone that is associated with the
-         * current AWS account. If you want to list more hosted zones, make another call to
-         * <code>ListHostedZonesByName</code>, and specify the value of
+         * current Amazon Web Services account. If you want to list more hosted zones, make
+         * another call to <code>ListHostedZonesByName</code>, and specify the value of
          * <code>NextDNSName</code> and <code>NextHostedZoneId</code> in the
          * <code>dnsname</code> and <code>hostedzoneid</code> parameters, respectively.</p>
          * </li> </ul><p><h3>See Also:</h3>   <a
@@ -2936,18 +3107,18 @@ namespace Model
         /**
          * <p>Retrieves a list of your hosted zones in lexicographic order. The response
          * includes a <code>HostedZones</code> child element for each hosted zone created
-         * by the current AWS account. </p> <p> <code>ListHostedZonesByName</code> sorts
-         * hosted zones by name with the labels reversed. For example:</p> <p>
-         * <code>com.example.www.</code> </p> <p>Note the trailing dot, which can change
-         * the sort order in some circumstances.</p> <p>If the domain name includes escape
-         * characters or Punycode, <code>ListHostedZonesByName</code> alphabetizes the
-         * domain name using the escaped or Punycoded value, which is the format that
-         * Amazon Route 53 saves in its database. For example, to create a hosted zone for
-         * exämple.com, you specify ex\344mple.com for the domain name.
-         * <code>ListHostedZonesByName</code> alphabetizes it as:</p> <p>
-         * <code>com.ex\344mple.</code> </p> <p>The labels are reversed and alphabetized
-         * using the escaped value. For more information about valid domain name formats,
-         * including internationalized domain names, see <a
+         * by the current Amazon Web Services account. </p> <p>
+         * <code>ListHostedZonesByName</code> sorts hosted zones by name with the labels
+         * reversed. For example:</p> <p> <code>com.example.www.</code> </p> <p>Note the
+         * trailing dot, which can change the sort order in some circumstances.</p> <p>If
+         * the domain name includes escape characters or Punycode,
+         * <code>ListHostedZonesByName</code> alphabetizes the domain name using the
+         * escaped or Punycoded value, which is the format that Amazon Route 53 saves in
+         * its database. For example, to create a hosted zone for exämple.com, you specify
+         * ex\344mple.com for the domain name. <code>ListHostedZonesByName</code>
+         * alphabetizes it as:</p> <p> <code>com.ex\344mple.</code> </p> <p>The labels are
+         * reversed and alphabetized using the escaped value. For more information about
+         * valid domain name formats, including internationalized domain names, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DomainNameFormat.html">DNS
          * Domain Name Format</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
          * <p>Route 53 returns up to 100 items in each response. If you have a lot of
@@ -2961,15 +3132,15 @@ namespace Model
          * contains the value, if any, that you specified for the <code>maxitems</code>
          * parameter in the request that produced the current response.</p> </li> <li>
          * <p>If the value of <code>IsTruncated</code> in the response is true, there are
-         * more hosted zones associated with the current AWS account. </p> <p>If
-         * <code>IsTruncated</code> is false, this response includes the last hosted zone
-         * that is associated with the current account. The <code>NextDNSName</code>
+         * more hosted zones associated with the current Amazon Web Services account. </p>
+         * <p>If <code>IsTruncated</code> is false, this response includes the last hosted
+         * zone that is associated with the current account. The <code>NextDNSName</code>
          * element and <code>NextHostedZoneId</code> elements are omitted from the
          * response.</p> </li> <li> <p>The <code>NextDNSName</code> and
          * <code>NextHostedZoneId</code> elements in the response contain the domain name
          * and the hosted zone ID of the next hosted zone that is associated with the
-         * current AWS account. If you want to list more hosted zones, make another call to
-         * <code>ListHostedZonesByName</code>, and specify the value of
+         * current Amazon Web Services account. If you want to list more hosted zones, make
+         * another call to <code>ListHostedZonesByName</code>, and specify the value of
          * <code>NextDNSName</code> and <code>NextHostedZoneId</code> in the
          * <code>dnsname</code> and <code>hostedzoneid</code> parameters, respectively.</p>
          * </li> </ul><p><h3>See Also:</h3>   <a
@@ -2983,18 +3154,18 @@ namespace Model
         /**
          * <p>Retrieves a list of your hosted zones in lexicographic order. The response
          * includes a <code>HostedZones</code> child element for each hosted zone created
-         * by the current AWS account. </p> <p> <code>ListHostedZonesByName</code> sorts
-         * hosted zones by name with the labels reversed. For example:</p> <p>
-         * <code>com.example.www.</code> </p> <p>Note the trailing dot, which can change
-         * the sort order in some circumstances.</p> <p>If the domain name includes escape
-         * characters or Punycode, <code>ListHostedZonesByName</code> alphabetizes the
-         * domain name using the escaped or Punycoded value, which is the format that
-         * Amazon Route 53 saves in its database. For example, to create a hosted zone for
-         * exämple.com, you specify ex\344mple.com for the domain name.
-         * <code>ListHostedZonesByName</code> alphabetizes it as:</p> <p>
-         * <code>com.ex\344mple.</code> </p> <p>The labels are reversed and alphabetized
-         * using the escaped value. For more information about valid domain name formats,
-         * including internationalized domain names, see <a
+         * by the current Amazon Web Services account. </p> <p>
+         * <code>ListHostedZonesByName</code> sorts hosted zones by name with the labels
+         * reversed. For example:</p> <p> <code>com.example.www.</code> </p> <p>Note the
+         * trailing dot, which can change the sort order in some circumstances.</p> <p>If
+         * the domain name includes escape characters or Punycode,
+         * <code>ListHostedZonesByName</code> alphabetizes the domain name using the
+         * escaped or Punycoded value, which is the format that Amazon Route 53 saves in
+         * its database. For example, to create a hosted zone for exämple.com, you specify
+         * ex\344mple.com for the domain name. <code>ListHostedZonesByName</code>
+         * alphabetizes it as:</p> <p> <code>com.ex\344mple.</code> </p> <p>The labels are
+         * reversed and alphabetized using the escaped value. For more information about
+         * valid domain name formats, including internationalized domain names, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DomainNameFormat.html">DNS
          * Domain Name Format</a> in the <i>Amazon Route 53 Developer Guide</i>.</p>
          * <p>Route 53 returns up to 100 items in each response. If you have a lot of
@@ -3008,15 +3179,15 @@ namespace Model
          * contains the value, if any, that you specified for the <code>maxitems</code>
          * parameter in the request that produced the current response.</p> </li> <li>
          * <p>If the value of <code>IsTruncated</code> in the response is true, there are
-         * more hosted zones associated with the current AWS account. </p> <p>If
-         * <code>IsTruncated</code> is false, this response includes the last hosted zone
-         * that is associated with the current account. The <code>NextDNSName</code>
+         * more hosted zones associated with the current Amazon Web Services account. </p>
+         * <p>If <code>IsTruncated</code> is false, this response includes the last hosted
+         * zone that is associated with the current account. The <code>NextDNSName</code>
          * element and <code>NextHostedZoneId</code> elements are omitted from the
          * response.</p> </li> <li> <p>The <code>NextDNSName</code> and
          * <code>NextHostedZoneId</code> elements in the response contain the domain name
          * and the hosted zone ID of the next hosted zone that is associated with the
-         * current AWS account. If you want to list more hosted zones, make another call to
-         * <code>ListHostedZonesByName</code>, and specify the value of
+         * current Amazon Web Services account. If you want to list more hosted zones, make
+         * another call to <code>ListHostedZonesByName</code>, and specify the value of
          * <code>NextDNSName</code> and <code>NextHostedZoneId</code> in the
          * <code>dnsname</code> and <code>hostedzoneid</code> parameters, respectively.</p>
          * </li> </ul><p><h3>See Also:</h3>   <a
@@ -3029,16 +3200,27 @@ namespace Model
 
         /**
          * <p>Lists all the private hosted zones that a specified VPC is associated with,
-         * regardless of which AWS account or AWS service owns the hosted zones. The
-         * <code>HostedZoneOwner</code> structure in the response contains one of the
-         * following values:</p> <ul> <li> <p>An <code>OwningAccount</code> element, which
-         * contains the account number of either the current AWS account or another AWS
-         * account. Some services, such as AWS Cloud Map, create hosted zones using the
-         * current account. </p> </li> <li> <p>An <code>OwningService</code> element, which
-         * identifies the AWS service that created and owns the hosted zone. For example,
+         * regardless of which Amazon Web Services account or Amazon Web Services service
+         * owns the hosted zones. The <code>HostedZoneOwner</code> structure in the
+         * response contains one of the following values:</p> <ul> <li> <p>An
+         * <code>OwningAccount</code> element, which contains the account number of either
+         * the current Amazon Web Services account or another Amazon Web Services account.
+         * Some services, such as Cloud Map, create hosted zones using the current account.
+         * </p> </li> <li> <p>An <code>OwningService</code> element, which identifies the
+         * Amazon Web Services service that created and owns the hosted zone. For example,
          * if a hosted zone was created by Amazon Elastic File System (Amazon EFS), the
-         * value of <code>Owner</code> is <code>efs.amazonaws.com</code>. </p> </li>
-         * </ul><p><h3>See Also:</h3>   <a
+         * value of <code>Owner</code> is <code>efs.amazonaws.com</code>. </p> </li> </ul>
+         *  <p>When listing private hosted zones, the hosted zone and the Amazon VPC
+         * must belong to the same partition where the hosted zones were created. A
+         * partition is a group of Amazon Web Services Regions. Each Amazon Web Services
+         * account is scoped to one partition.</p> <p>The following are the supported
+         * partitions:</p> <ul> <li> <p> <code>aws</code> - Amazon Web Services Regions</p>
+         * </li> <li> <p> <code>aws-cn</code> - China Regions</p> </li> <li> <p>
+         * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US) Region</p> </li>
+         * </ul> <p>For more information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZonesByVPC">AWS
          * API Reference</a></p>
          */
@@ -3046,16 +3228,27 @@ namespace Model
 
         /**
          * <p>Lists all the private hosted zones that a specified VPC is associated with,
-         * regardless of which AWS account or AWS service owns the hosted zones. The
-         * <code>HostedZoneOwner</code> structure in the response contains one of the
-         * following values:</p> <ul> <li> <p>An <code>OwningAccount</code> element, which
-         * contains the account number of either the current AWS account or another AWS
-         * account. Some services, such as AWS Cloud Map, create hosted zones using the
-         * current account. </p> </li> <li> <p>An <code>OwningService</code> element, which
-         * identifies the AWS service that created and owns the hosted zone. For example,
+         * regardless of which Amazon Web Services account or Amazon Web Services service
+         * owns the hosted zones. The <code>HostedZoneOwner</code> structure in the
+         * response contains one of the following values:</p> <ul> <li> <p>An
+         * <code>OwningAccount</code> element, which contains the account number of either
+         * the current Amazon Web Services account or another Amazon Web Services account.
+         * Some services, such as Cloud Map, create hosted zones using the current account.
+         * </p> </li> <li> <p>An <code>OwningService</code> element, which identifies the
+         * Amazon Web Services service that created and owns the hosted zone. For example,
          * if a hosted zone was created by Amazon Elastic File System (Amazon EFS), the
-         * value of <code>Owner</code> is <code>efs.amazonaws.com</code>. </p> </li>
-         * </ul><p><h3>See Also:</h3>   <a
+         * value of <code>Owner</code> is <code>efs.amazonaws.com</code>. </p> </li> </ul>
+         *  <p>When listing private hosted zones, the hosted zone and the Amazon VPC
+         * must belong to the same partition where the hosted zones were created. A
+         * partition is a group of Amazon Web Services Regions. Each Amazon Web Services
+         * account is scoped to one partition.</p> <p>The following are the supported
+         * partitions:</p> <ul> <li> <p> <code>aws</code> - Amazon Web Services Regions</p>
+         * </li> <li> <p> <code>aws-cn</code> - China Regions</p> </li> <li> <p>
+         * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US) Region</p> </li>
+         * </ul> <p>For more information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZonesByVPC">AWS
          * API Reference</a></p>
          *
@@ -3065,16 +3258,27 @@ namespace Model
 
         /**
          * <p>Lists all the private hosted zones that a specified VPC is associated with,
-         * regardless of which AWS account or AWS service owns the hosted zones. The
-         * <code>HostedZoneOwner</code> structure in the response contains one of the
-         * following values:</p> <ul> <li> <p>An <code>OwningAccount</code> element, which
-         * contains the account number of either the current AWS account or another AWS
-         * account. Some services, such as AWS Cloud Map, create hosted zones using the
-         * current account. </p> </li> <li> <p>An <code>OwningService</code> element, which
-         * identifies the AWS service that created and owns the hosted zone. For example,
+         * regardless of which Amazon Web Services account or Amazon Web Services service
+         * owns the hosted zones. The <code>HostedZoneOwner</code> structure in the
+         * response contains one of the following values:</p> <ul> <li> <p>An
+         * <code>OwningAccount</code> element, which contains the account number of either
+         * the current Amazon Web Services account or another Amazon Web Services account.
+         * Some services, such as Cloud Map, create hosted zones using the current account.
+         * </p> </li> <li> <p>An <code>OwningService</code> element, which identifies the
+         * Amazon Web Services service that created and owns the hosted zone. For example,
          * if a hosted zone was created by Amazon Elastic File System (Amazon EFS), the
-         * value of <code>Owner</code> is <code>efs.amazonaws.com</code>. </p> </li>
-         * </ul><p><h3>See Also:</h3>   <a
+         * value of <code>Owner</code> is <code>efs.amazonaws.com</code>. </p> </li> </ul>
+         *  <p>When listing private hosted zones, the hosted zone and the Amazon VPC
+         * must belong to the same partition where the hosted zones were created. A
+         * partition is a group of Amazon Web Services Regions. Each Amazon Web Services
+         * account is scoped to one partition.</p> <p>The following are the supported
+         * partitions:</p> <ul> <li> <p> <code>aws</code> - Amazon Web Services Regions</p>
+         * </li> <li> <p> <code>aws-cn</code> - China Regions</p> </li> <li> <p>
+         * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US) Region</p> </li>
+         * </ul> <p>For more information, see <a
+         * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+         * Management</a> in the <i>Amazon Web Services General Reference</i>.</p>
+         * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListHostedZonesByVPC">AWS
          * API Reference</a></p>
          *
@@ -3084,8 +3288,9 @@ namespace Model
 
         /**
          * <p>Lists the configurations for DNS query logging that are associated with the
-         * current AWS account or the configuration that is associated with a specified
-         * hosted zone.</p> <p>For more information about DNS query logs, see <a
+         * current Amazon Web Services account or the configuration that is associated with
+         * a specified hosted zone.</p> <p>For more information about DNS query logs, see
+         * <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateQueryLoggingConfig.html">CreateQueryLoggingConfig</a>.
          * Additional information, including the format of DNS query logs, appears in <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html">Logging
@@ -3098,8 +3303,9 @@ namespace Model
 
         /**
          * <p>Lists the configurations for DNS query logging that are associated with the
-         * current AWS account or the configuration that is associated with a specified
-         * hosted zone.</p> <p>For more information about DNS query logs, see <a
+         * current Amazon Web Services account or the configuration that is associated with
+         * a specified hosted zone.</p> <p>For more information about DNS query logs, see
+         * <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateQueryLoggingConfig.html">CreateQueryLoggingConfig</a>.
          * Additional information, including the format of DNS query logs, appears in <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html">Logging
@@ -3114,8 +3320,9 @@ namespace Model
 
         /**
          * <p>Lists the configurations for DNS query logging that are associated with the
-         * current AWS account or the configuration that is associated with a specified
-         * hosted zone.</p> <p>For more information about DNS query logs, see <a
+         * current Amazon Web Services account or the configuration that is associated with
+         * a specified hosted zone.</p> <p>For more information about DNS query logs, see
+         * <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateQueryLoggingConfig.html">CreateQueryLoggingConfig</a>.
          * Additional information, including the format of DNS query logs, appears in <a
          * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html">Logging
@@ -3130,7 +3337,7 @@ namespace Model
 
         /**
          * <p>Lists the resource record sets in a specified hosted zone.</p> <p>
-         * <code>ListResourceRecordSets</code> returns up to 100 resource record sets at a
+         * <code>ListResourceRecordSets</code> returns up to 300 resource record sets at a
          * time in ASCII order, beginning at a position specified by the <code>name</code>
          * and <code>type</code> elements.</p> <p> <b>Sort order</b> </p> <p>
          * <code>ListResourceRecordSets</code> sorts results first by DNS name with the
@@ -3176,7 +3383,7 @@ namespace Model
 
         /**
          * <p>Lists the resource record sets in a specified hosted zone.</p> <p>
-         * <code>ListResourceRecordSets</code> returns up to 100 resource record sets at a
+         * <code>ListResourceRecordSets</code> returns up to 300 resource record sets at a
          * time in ASCII order, beginning at a position specified by the <code>name</code>
          * and <code>type</code> elements.</p> <p> <b>Sort order</b> </p> <p>
          * <code>ListResourceRecordSets</code> sorts results first by DNS name with the
@@ -3224,7 +3431,7 @@ namespace Model
 
         /**
          * <p>Lists the resource record sets in a specified hosted zone.</p> <p>
-         * <code>ListResourceRecordSets</code> returns up to 100 resource record sets at a
+         * <code>ListResourceRecordSets</code> returns up to 300 resource record sets at a
          * time in ASCII order, beginning at a position specified by the <code>name</code>
          * and <code>type</code> elements.</p> <p> <b>Sort order</b> </p> <p>
          * <code>ListResourceRecordSets</code> sorts results first by DNS name with the
@@ -3272,7 +3479,7 @@ namespace Model
 
         /**
          * <p>Retrieves a list of the reusable delegation sets that are associated with the
-         * current AWS account.</p><p><h3>See Also:</h3>   <a
+         * current Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListReusableDelegationSets">AWS
          * API Reference</a></p>
          */
@@ -3280,7 +3487,7 @@ namespace Model
 
         /**
          * <p>Retrieves a list of the reusable delegation sets that are associated with the
-         * current AWS account.</p><p><h3>See Also:</h3>   <a
+         * current Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListReusableDelegationSets">AWS
          * API Reference</a></p>
          *
@@ -3290,7 +3497,7 @@ namespace Model
 
         /**
          * <p>Retrieves a list of the reusable delegation sets that are associated with the
-         * current AWS account.</p><p><h3>See Also:</h3>   <a
+         * current Amazon Web Services account.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListReusableDelegationSets">AWS
          * API Reference</a></p>
          *
@@ -3302,7 +3509,7 @@ namespace Model
          * <p>Lists tags for one health check or hosted zone. </p> <p>For information about
          * using tags for cost allocation, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using
-         * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User
+         * Cost Allocation Tags</a> in the <i>Billing and Cost Management User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTagsForResource">AWS
          * API Reference</a></p>
@@ -3313,7 +3520,7 @@ namespace Model
          * <p>Lists tags for one health check or hosted zone. </p> <p>For information about
          * using tags for cost allocation, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using
-         * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User
+         * Cost Allocation Tags</a> in the <i>Billing and Cost Management User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTagsForResource">AWS
          * API Reference</a></p>
@@ -3326,7 +3533,7 @@ namespace Model
          * <p>Lists tags for one health check or hosted zone. </p> <p>For information about
          * using tags for cost allocation, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using
-         * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User
+         * Cost Allocation Tags</a> in the <i>Billing and Cost Management User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTagsForResource">AWS
          * API Reference</a></p>
@@ -3339,7 +3546,7 @@ namespace Model
          * <p>Lists tags for up to 10 health checks or hosted zones.</p> <p>For information
          * about using tags for cost allocation, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using
-         * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User
+         * Cost Allocation Tags</a> in the <i>Billing and Cost Management User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTagsForResources">AWS
          * API Reference</a></p>
@@ -3350,7 +3557,7 @@ namespace Model
          * <p>Lists tags for up to 10 health checks or hosted zones.</p> <p>For information
          * about using tags for cost allocation, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using
-         * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User
+         * Cost Allocation Tags</a> in the <i>Billing and Cost Management User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTagsForResources">AWS
          * API Reference</a></p>
@@ -3363,7 +3570,7 @@ namespace Model
          * <p>Lists tags for up to 10 health checks or hosted zones.</p> <p>For information
          * about using tags for cost allocation, see <a
          * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using
-         * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User
+         * Cost Allocation Tags</a> in the <i>Billing and Cost Management User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTagsForResources">AWS
          * API Reference</a></p>
@@ -3374,9 +3581,10 @@ namespace Model
 
         /**
          * <p>Gets information about the latest version for every traffic policy that is
-         * associated with the current AWS account. Policies are listed in the order that
-         * they were created in. </p> <p>For information about how of deleting a traffic
-         * policy affects the response from <code>ListTrafficPolicies</code>, see <a
+         * associated with the current Amazon Web Services account. Policies are listed in
+         * the order that they were created in. </p> <p>For information about how of
+         * deleting a traffic policy affects the response from
+         * <code>ListTrafficPolicies</code>, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteTrafficPolicy.html">DeleteTrafficPolicy</a>.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicies">AWS
@@ -3386,9 +3594,10 @@ namespace Model
 
         /**
          * <p>Gets information about the latest version for every traffic policy that is
-         * associated with the current AWS account. Policies are listed in the order that
-         * they were created in. </p> <p>For information about how of deleting a traffic
-         * policy affects the response from <code>ListTrafficPolicies</code>, see <a
+         * associated with the current Amazon Web Services account. Policies are listed in
+         * the order that they were created in. </p> <p>For information about how of
+         * deleting a traffic policy affects the response from
+         * <code>ListTrafficPolicies</code>, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteTrafficPolicy.html">DeleteTrafficPolicy</a>.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicies">AWS
@@ -3400,9 +3609,10 @@ namespace Model
 
         /**
          * <p>Gets information about the latest version for every traffic policy that is
-         * associated with the current AWS account. Policies are listed in the order that
-         * they were created in. </p> <p>For information about how of deleting a traffic
-         * policy affects the response from <code>ListTrafficPolicies</code>, see <a
+         * associated with the current Amazon Web Services account. Policies are listed in
+         * the order that they were created in. </p> <p>For information about how of
+         * deleting a traffic policy affects the response from
+         * <code>ListTrafficPolicies</code>, see <a
          * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteTrafficPolicy.html">DeleteTrafficPolicy</a>.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/ListTrafficPolicies">AWS
@@ -3414,7 +3624,7 @@ namespace Model
 
         /**
          * <p>Gets information about the traffic policy instances that you created by using
-         * the current AWS account.</p>  <p>After you submit an
+         * the current Amazon Web Services account.</p>  <p>After you submit an
          * <code>UpdateTrafficPolicyInstance</code> request, there's a brief delay while
          * Amazon Route 53 creates the resource record sets that are specified in the
          * traffic policy definition. For more information, see the <code>State</code>
@@ -3429,7 +3639,7 @@ namespace Model
 
         /**
          * <p>Gets information about the traffic policy instances that you created by using
-         * the current AWS account.</p>  <p>After you submit an
+         * the current Amazon Web Services account.</p>  <p>After you submit an
          * <code>UpdateTrafficPolicyInstance</code> request, there's a brief delay while
          * Amazon Route 53 creates the resource record sets that are specified in the
          * traffic policy definition. For more information, see the <code>State</code>
@@ -3446,7 +3656,7 @@ namespace Model
 
         /**
          * <p>Gets information about the traffic policy instances that you created by using
-         * the current AWS account.</p>  <p>After you submit an
+         * the current Amazon Web Services account.</p>  <p>After you submit an
          * <code>UpdateTrafficPolicyInstance</code> request, there's a brief delay while
          * Amazon Route 53 creates the resource record sets that are specified in the
          * traffic policy definition. For more information, see the <code>State</code>
@@ -3639,8 +3849,8 @@ namespace Model
         /**
          * <p>Gets the value that Amazon Route 53 returns in response to a DNS request for
          * a specified record name and type. You can optionally specify the IP address of a
-         * DNS resolver, an EDNS0 client subnet IP address, and a subnet mask.
-         * </p><p><h3>See Also:</h3>   <a
+         * DNS resolver, an EDNS0 client subnet IP address, and a subnet mask. </p> <p>This
+         * call only supports querying public hosted zones.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/TestDNSAnswer">AWS
          * API Reference</a></p>
          */
@@ -3649,8 +3859,8 @@ namespace Model
         /**
          * <p>Gets the value that Amazon Route 53 returns in response to a DNS request for
          * a specified record name and type. You can optionally specify the IP address of a
-         * DNS resolver, an EDNS0 client subnet IP address, and a subnet mask.
-         * </p><p><h3>See Also:</h3>   <a
+         * DNS resolver, an EDNS0 client subnet IP address, and a subnet mask. </p> <p>This
+         * call only supports querying public hosted zones.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/TestDNSAnswer">AWS
          * API Reference</a></p>
          *
@@ -3661,8 +3871,8 @@ namespace Model
         /**
          * <p>Gets the value that Amazon Route 53 returns in response to a DNS request for
          * a specified record name and type. You can optionally specify the IP address of a
-         * DNS resolver, an EDNS0 client subnet IP address, and a subnet mask.
-         * </p><p><h3>See Also:</h3>   <a
+         * DNS resolver, an EDNS0 client subnet IP address, and a subnet mask. </p> <p>This
+         * call only supports querying public hosted zones.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/TestDNSAnswer">AWS
          * API Reference</a></p>
          *

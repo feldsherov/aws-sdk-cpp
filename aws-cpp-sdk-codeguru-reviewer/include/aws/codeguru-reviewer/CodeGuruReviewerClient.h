@@ -131,19 +131,19 @@ namespace Model
    * <p>This section provides documentation for the Amazon CodeGuru Reviewer API
    * operations. CodeGuru Reviewer is a service that uses program analysis and
    * machine learning to detect potential defects that are difficult for developers
-   * to find and recommends fixes in your Java code.</p> <p>By proactively detecting
-   * and providing recommendations for addressing code defects and implementing best
-   * practices, CodeGuru Reviewer improves the overall quality and maintainability of
-   * your code base during the code review stage. For more information about CodeGuru
-   * Reviewer, see the <i> <a
+   * to find and recommends fixes in your Java and Python code.</p> <p>By proactively
+   * detecting and providing recommendations for addressing code defects and
+   * implementing best practices, CodeGuru Reviewer improves the overall quality and
+   * maintainability of your code base during the code review stage. For more
+   * information about CodeGuru Reviewer, see the <i> <a
    * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/welcome.html">Amazon
    * CodeGuru Reviewer User Guide</a>.</i> </p> <p> To improve the security of your
    * CodeGuru Reviewer API calls, you can establish a private connection between your
    * VPC and CodeGuru Reviewer by creating an <i>interface VPC endpoint</i>. For more
    * information, see <a
    * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/vpc-interface-endpoints.html">CodeGuru
-   * Reviewer and interface VPC endpoints (AWS PrivateLink)</a> in the <i>Amazon
-   * CodeGuru Reviewer User Guide</i>. </p>
+   * Reviewer and interface VPC endpoints (Amazon Web Services PrivateLink)</a> in
+   * the <i>Amazon CodeGuru Reviewer User Guide</i>. </p>
    */
   class AWS_CODEGURUREVIEWER_API CodeGuruReviewerClient : public Aws::Client::AWSJsonClient
   {
@@ -173,24 +173,24 @@ namespace Model
 
 
         /**
-         * <p> Use to associate an AWS CodeCommit repository or a repostory managed by AWS
-         * CodeStar Connections with Amazon CodeGuru Reviewer. When you associate a
-         * repository, CodeGuru Reviewer reviews source code changes in the repository's
-         * pull requests and provides automatic recommendations. You can view
-         * recommendations using the CodeGuru Reviewer console. For more information, see
-         * <a
+         * <p> Use to associate an Amazon Web Services CodeCommit repository or a repostory
+         * managed by Amazon Web Services CodeStar Connections with Amazon CodeGuru
+         * Reviewer. When you associate a repository, CodeGuru Reviewer reviews source code
+         * changes in the repository's pull requests and provides automatic
+         * recommendations. You can view recommendations using the CodeGuru Reviewer
+         * console. For more information, see <a
          * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/recommendations.html">Recommendations
          * in Amazon CodeGuru Reviewer</a> in the <i>Amazon CodeGuru Reviewer User
-         * Guide.</i> </p> <p>If you associate a CodeCommit repository, it must be in the
-         * same AWS Region and AWS account where its CodeGuru Reviewer code reviews are
-         * configured.</p> <p>Bitbucket and GitHub Enterprise Server repositories are
-         * managed by AWS CodeStar Connections to connect to CodeGuru Reviewer. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/reviewer-ug/step-one.html#select-repository-source-provider">Connect
-         * to a repository source provider</a> in the <i>Amazon CodeGuru Reviewer User
-         * Guide.</i> </p>  <p> You cannot use the CodeGuru Reviewer SDK or the AWS
-         * CLI to associate a GitHub repository with Amazon CodeGuru Reviewer. To associate
-         * a GitHub repository, use the console. For more information, see <a
+         * Guide.</i> </p> <p>If you associate a CodeCommit or S3 repository, it must be in
+         * the same Amazon Web Services Region and Amazon Web Services account where its
+         * CodeGuru Reviewer code reviews are configured.</p> <p>Bitbucket and GitHub
+         * Enterprise Server repositories are managed by Amazon Web Services CodeStar
+         * Connections to connect to CodeGuru Reviewer. For more information, see <a
+         * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/getting-started-associate-repository.html">Associate
+         * a repository</a> in the <i>Amazon CodeGuru Reviewer User Guide.</i> </p> 
+         * <p> You cannot use the CodeGuru Reviewer SDK or the Amazon Web Services CLI to
+         * associate a GitHub repository with Amazon CodeGuru Reviewer. To associate a
+         * GitHub repository, use the console. For more information, see <a
          * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/getting-started-with-guru.html">Getting
          * started with CodeGuru Reviewer</a> in the <i>CodeGuru Reviewer User Guide.</i>
          * </p> <p><h3>See Also:</h3>   <a
@@ -200,24 +200,24 @@ namespace Model
         virtual Model::AssociateRepositoryOutcome AssociateRepository(const Model::AssociateRepositoryRequest& request) const;
 
         /**
-         * <p> Use to associate an AWS CodeCommit repository or a repostory managed by AWS
-         * CodeStar Connections with Amazon CodeGuru Reviewer. When you associate a
-         * repository, CodeGuru Reviewer reviews source code changes in the repository's
-         * pull requests and provides automatic recommendations. You can view
-         * recommendations using the CodeGuru Reviewer console. For more information, see
-         * <a
+         * <p> Use to associate an Amazon Web Services CodeCommit repository or a repostory
+         * managed by Amazon Web Services CodeStar Connections with Amazon CodeGuru
+         * Reviewer. When you associate a repository, CodeGuru Reviewer reviews source code
+         * changes in the repository's pull requests and provides automatic
+         * recommendations. You can view recommendations using the CodeGuru Reviewer
+         * console. For more information, see <a
          * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/recommendations.html">Recommendations
          * in Amazon CodeGuru Reviewer</a> in the <i>Amazon CodeGuru Reviewer User
-         * Guide.</i> </p> <p>If you associate a CodeCommit repository, it must be in the
-         * same AWS Region and AWS account where its CodeGuru Reviewer code reviews are
-         * configured.</p> <p>Bitbucket and GitHub Enterprise Server repositories are
-         * managed by AWS CodeStar Connections to connect to CodeGuru Reviewer. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/reviewer-ug/step-one.html#select-repository-source-provider">Connect
-         * to a repository source provider</a> in the <i>Amazon CodeGuru Reviewer User
-         * Guide.</i> </p>  <p> You cannot use the CodeGuru Reviewer SDK or the AWS
-         * CLI to associate a GitHub repository with Amazon CodeGuru Reviewer. To associate
-         * a GitHub repository, use the console. For more information, see <a
+         * Guide.</i> </p> <p>If you associate a CodeCommit or S3 repository, it must be in
+         * the same Amazon Web Services Region and Amazon Web Services account where its
+         * CodeGuru Reviewer code reviews are configured.</p> <p>Bitbucket and GitHub
+         * Enterprise Server repositories are managed by Amazon Web Services CodeStar
+         * Connections to connect to CodeGuru Reviewer. For more information, see <a
+         * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/getting-started-associate-repository.html">Associate
+         * a repository</a> in the <i>Amazon CodeGuru Reviewer User Guide.</i> </p> 
+         * <p> You cannot use the CodeGuru Reviewer SDK or the Amazon Web Services CLI to
+         * associate a GitHub repository with Amazon CodeGuru Reviewer. To associate a
+         * GitHub repository, use the console. For more information, see <a
          * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/getting-started-with-guru.html">Getting
          * started with CodeGuru Reviewer</a> in the <i>CodeGuru Reviewer User Guide.</i>
          * </p> <p><h3>See Also:</h3>   <a
@@ -229,24 +229,24 @@ namespace Model
         virtual Model::AssociateRepositoryOutcomeCallable AssociateRepositoryCallable(const Model::AssociateRepositoryRequest& request) const;
 
         /**
-         * <p> Use to associate an AWS CodeCommit repository or a repostory managed by AWS
-         * CodeStar Connections with Amazon CodeGuru Reviewer. When you associate a
-         * repository, CodeGuru Reviewer reviews source code changes in the repository's
-         * pull requests and provides automatic recommendations. You can view
-         * recommendations using the CodeGuru Reviewer console. For more information, see
-         * <a
+         * <p> Use to associate an Amazon Web Services CodeCommit repository or a repostory
+         * managed by Amazon Web Services CodeStar Connections with Amazon CodeGuru
+         * Reviewer. When you associate a repository, CodeGuru Reviewer reviews source code
+         * changes in the repository's pull requests and provides automatic
+         * recommendations. You can view recommendations using the CodeGuru Reviewer
+         * console. For more information, see <a
          * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/recommendations.html">Recommendations
          * in Amazon CodeGuru Reviewer</a> in the <i>Amazon CodeGuru Reviewer User
-         * Guide.</i> </p> <p>If you associate a CodeCommit repository, it must be in the
-         * same AWS Region and AWS account where its CodeGuru Reviewer code reviews are
-         * configured.</p> <p>Bitbucket and GitHub Enterprise Server repositories are
-         * managed by AWS CodeStar Connections to connect to CodeGuru Reviewer. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/reviewer-ug/step-one.html#select-repository-source-provider">Connect
-         * to a repository source provider</a> in the <i>Amazon CodeGuru Reviewer User
-         * Guide.</i> </p>  <p> You cannot use the CodeGuru Reviewer SDK or the AWS
-         * CLI to associate a GitHub repository with Amazon CodeGuru Reviewer. To associate
-         * a GitHub repository, use the console. For more information, see <a
+         * Guide.</i> </p> <p>If you associate a CodeCommit or S3 repository, it must be in
+         * the same Amazon Web Services Region and Amazon Web Services account where its
+         * CodeGuru Reviewer code reviews are configured.</p> <p>Bitbucket and GitHub
+         * Enterprise Server repositories are managed by Amazon Web Services CodeStar
+         * Connections to connect to CodeGuru Reviewer. For more information, see <a
+         * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/getting-started-associate-repository.html">Associate
+         * a repository</a> in the <i>Amazon CodeGuru Reviewer User Guide.</i> </p> 
+         * <p> You cannot use the CodeGuru Reviewer SDK or the Amazon Web Services CLI to
+         * associate a GitHub repository with Amazon CodeGuru Reviewer. To associate a
+         * GitHub repository, use the console. For more information, see <a
          * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/getting-started-with-guru.html">Getting
          * started with CodeGuru Reviewer</a> in the <i>CodeGuru Reviewer User Guide.</i>
          * </p> <p><h3>See Also:</h3>   <a
@@ -263,8 +263,7 @@ namespace Model
          * <code>CodeReviewType</code> </a> of <code>RepositoryAnalysis</code>. This type
          * of code review analyzes all code under a specified branch in an associated
          * repository. <code>PullRequest</code> code reviews are automatically triggered by
-         * a pull request so cannot be created using this method. </p><p><h3>See Also:</h3>
-         * <a
+         * a pull request. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/codeguru-reviewer-2019-09-19/CreateCodeReview">AWS
          * API Reference</a></p>
          */
@@ -276,8 +275,7 @@ namespace Model
          * <code>CodeReviewType</code> </a> of <code>RepositoryAnalysis</code>. This type
          * of code review analyzes all code under a specified branch in an associated
          * repository. <code>PullRequest</code> code reviews are automatically triggered by
-         * a pull request so cannot be created using this method. </p><p><h3>See Also:</h3>
-         * <a
+         * a pull request. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/codeguru-reviewer-2019-09-19/CreateCodeReview">AWS
          * API Reference</a></p>
          *
@@ -291,8 +289,7 @@ namespace Model
          * <code>CodeReviewType</code> </a> of <code>RepositoryAnalysis</code>. This type
          * of code review analyzes all code under a specified branch in an associated
          * repository. <code>PullRequest</code> code reviews are automatically triggered by
-         * a pull request so cannot be created using this method. </p><p><h3>See Also:</h3>
-         * <a
+         * a pull request. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/codeguru-reviewer-2019-09-19/CreateCodeReview">AWS
          * API Reference</a></p>
          *

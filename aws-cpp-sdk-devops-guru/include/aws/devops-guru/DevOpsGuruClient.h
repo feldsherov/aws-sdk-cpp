@@ -15,18 +15,28 @@
 #include <aws/devops-guru/model/DescribeAccountHealthResult.h>
 #include <aws/devops-guru/model/DescribeAccountOverviewResult.h>
 #include <aws/devops-guru/model/DescribeAnomalyResult.h>
+#include <aws/devops-guru/model/DescribeEventSourcesConfigResult.h>
+#include <aws/devops-guru/model/DescribeFeedbackResult.h>
 #include <aws/devops-guru/model/DescribeInsightResult.h>
+#include <aws/devops-guru/model/DescribeOrganizationHealthResult.h>
+#include <aws/devops-guru/model/DescribeOrganizationOverviewResult.h>
+#include <aws/devops-guru/model/DescribeOrganizationResourceCollectionHealthResult.h>
 #include <aws/devops-guru/model/DescribeResourceCollectionHealthResult.h>
 #include <aws/devops-guru/model/DescribeServiceIntegrationResult.h>
+#include <aws/devops-guru/model/GetCostEstimationResult.h>
 #include <aws/devops-guru/model/GetResourceCollectionResult.h>
 #include <aws/devops-guru/model/ListAnomaliesForInsightResult.h>
 #include <aws/devops-guru/model/ListEventsResult.h>
 #include <aws/devops-guru/model/ListInsightsResult.h>
 #include <aws/devops-guru/model/ListNotificationChannelsResult.h>
+#include <aws/devops-guru/model/ListOrganizationInsightsResult.h>
 #include <aws/devops-guru/model/ListRecommendationsResult.h>
 #include <aws/devops-guru/model/PutFeedbackResult.h>
 #include <aws/devops-guru/model/RemoveNotificationChannelResult.h>
 #include <aws/devops-guru/model/SearchInsightsResult.h>
+#include <aws/devops-guru/model/SearchOrganizationInsightsResult.h>
+#include <aws/devops-guru/model/StartCostEstimationResult.h>
+#include <aws/devops-guru/model/UpdateEventSourcesConfigResult.h>
 #include <aws/devops-guru/model/UpdateResourceCollectionResult.h>
 #include <aws/devops-guru/model/UpdateServiceIntegrationResult.h>
 #include <aws/core/client/AsyncCallerContext.h>
@@ -72,18 +82,28 @@ namespace Model
         class DescribeAccountHealthRequest;
         class DescribeAccountOverviewRequest;
         class DescribeAnomalyRequest;
+        class DescribeEventSourcesConfigRequest;
+        class DescribeFeedbackRequest;
         class DescribeInsightRequest;
+        class DescribeOrganizationHealthRequest;
+        class DescribeOrganizationOverviewRequest;
+        class DescribeOrganizationResourceCollectionHealthRequest;
         class DescribeResourceCollectionHealthRequest;
         class DescribeServiceIntegrationRequest;
+        class GetCostEstimationRequest;
         class GetResourceCollectionRequest;
         class ListAnomaliesForInsightRequest;
         class ListEventsRequest;
         class ListInsightsRequest;
         class ListNotificationChannelsRequest;
+        class ListOrganizationInsightsRequest;
         class ListRecommendationsRequest;
         class PutFeedbackRequest;
         class RemoveNotificationChannelRequest;
         class SearchInsightsRequest;
+        class SearchOrganizationInsightsRequest;
+        class StartCostEstimationRequest;
+        class UpdateEventSourcesConfigRequest;
         class UpdateResourceCollectionRequest;
         class UpdateServiceIntegrationRequest;
 
@@ -91,18 +111,28 @@ namespace Model
         typedef Aws::Utils::Outcome<DescribeAccountHealthResult, DevOpsGuruError> DescribeAccountHealthOutcome;
         typedef Aws::Utils::Outcome<DescribeAccountOverviewResult, DevOpsGuruError> DescribeAccountOverviewOutcome;
         typedef Aws::Utils::Outcome<DescribeAnomalyResult, DevOpsGuruError> DescribeAnomalyOutcome;
+        typedef Aws::Utils::Outcome<DescribeEventSourcesConfigResult, DevOpsGuruError> DescribeEventSourcesConfigOutcome;
+        typedef Aws::Utils::Outcome<DescribeFeedbackResult, DevOpsGuruError> DescribeFeedbackOutcome;
         typedef Aws::Utils::Outcome<DescribeInsightResult, DevOpsGuruError> DescribeInsightOutcome;
+        typedef Aws::Utils::Outcome<DescribeOrganizationHealthResult, DevOpsGuruError> DescribeOrganizationHealthOutcome;
+        typedef Aws::Utils::Outcome<DescribeOrganizationOverviewResult, DevOpsGuruError> DescribeOrganizationOverviewOutcome;
+        typedef Aws::Utils::Outcome<DescribeOrganizationResourceCollectionHealthResult, DevOpsGuruError> DescribeOrganizationResourceCollectionHealthOutcome;
         typedef Aws::Utils::Outcome<DescribeResourceCollectionHealthResult, DevOpsGuruError> DescribeResourceCollectionHealthOutcome;
         typedef Aws::Utils::Outcome<DescribeServiceIntegrationResult, DevOpsGuruError> DescribeServiceIntegrationOutcome;
+        typedef Aws::Utils::Outcome<GetCostEstimationResult, DevOpsGuruError> GetCostEstimationOutcome;
         typedef Aws::Utils::Outcome<GetResourceCollectionResult, DevOpsGuruError> GetResourceCollectionOutcome;
         typedef Aws::Utils::Outcome<ListAnomaliesForInsightResult, DevOpsGuruError> ListAnomaliesForInsightOutcome;
         typedef Aws::Utils::Outcome<ListEventsResult, DevOpsGuruError> ListEventsOutcome;
         typedef Aws::Utils::Outcome<ListInsightsResult, DevOpsGuruError> ListInsightsOutcome;
         typedef Aws::Utils::Outcome<ListNotificationChannelsResult, DevOpsGuruError> ListNotificationChannelsOutcome;
+        typedef Aws::Utils::Outcome<ListOrganizationInsightsResult, DevOpsGuruError> ListOrganizationInsightsOutcome;
         typedef Aws::Utils::Outcome<ListRecommendationsResult, DevOpsGuruError> ListRecommendationsOutcome;
         typedef Aws::Utils::Outcome<PutFeedbackResult, DevOpsGuruError> PutFeedbackOutcome;
         typedef Aws::Utils::Outcome<RemoveNotificationChannelResult, DevOpsGuruError> RemoveNotificationChannelOutcome;
         typedef Aws::Utils::Outcome<SearchInsightsResult, DevOpsGuruError> SearchInsightsOutcome;
+        typedef Aws::Utils::Outcome<SearchOrganizationInsightsResult, DevOpsGuruError> SearchOrganizationInsightsOutcome;
+        typedef Aws::Utils::Outcome<StartCostEstimationResult, DevOpsGuruError> StartCostEstimationOutcome;
+        typedef Aws::Utils::Outcome<UpdateEventSourcesConfigResult, DevOpsGuruError> UpdateEventSourcesConfigOutcome;
         typedef Aws::Utils::Outcome<UpdateResourceCollectionResult, DevOpsGuruError> UpdateResourceCollectionOutcome;
         typedef Aws::Utils::Outcome<UpdateServiceIntegrationResult, DevOpsGuruError> UpdateServiceIntegrationOutcome;
 
@@ -110,18 +140,28 @@ namespace Model
         typedef std::future<DescribeAccountHealthOutcome> DescribeAccountHealthOutcomeCallable;
         typedef std::future<DescribeAccountOverviewOutcome> DescribeAccountOverviewOutcomeCallable;
         typedef std::future<DescribeAnomalyOutcome> DescribeAnomalyOutcomeCallable;
+        typedef std::future<DescribeEventSourcesConfigOutcome> DescribeEventSourcesConfigOutcomeCallable;
+        typedef std::future<DescribeFeedbackOutcome> DescribeFeedbackOutcomeCallable;
         typedef std::future<DescribeInsightOutcome> DescribeInsightOutcomeCallable;
+        typedef std::future<DescribeOrganizationHealthOutcome> DescribeOrganizationHealthOutcomeCallable;
+        typedef std::future<DescribeOrganizationOverviewOutcome> DescribeOrganizationOverviewOutcomeCallable;
+        typedef std::future<DescribeOrganizationResourceCollectionHealthOutcome> DescribeOrganizationResourceCollectionHealthOutcomeCallable;
         typedef std::future<DescribeResourceCollectionHealthOutcome> DescribeResourceCollectionHealthOutcomeCallable;
         typedef std::future<DescribeServiceIntegrationOutcome> DescribeServiceIntegrationOutcomeCallable;
+        typedef std::future<GetCostEstimationOutcome> GetCostEstimationOutcomeCallable;
         typedef std::future<GetResourceCollectionOutcome> GetResourceCollectionOutcomeCallable;
         typedef std::future<ListAnomaliesForInsightOutcome> ListAnomaliesForInsightOutcomeCallable;
         typedef std::future<ListEventsOutcome> ListEventsOutcomeCallable;
         typedef std::future<ListInsightsOutcome> ListInsightsOutcomeCallable;
         typedef std::future<ListNotificationChannelsOutcome> ListNotificationChannelsOutcomeCallable;
+        typedef std::future<ListOrganizationInsightsOutcome> ListOrganizationInsightsOutcomeCallable;
         typedef std::future<ListRecommendationsOutcome> ListRecommendationsOutcomeCallable;
         typedef std::future<PutFeedbackOutcome> PutFeedbackOutcomeCallable;
         typedef std::future<RemoveNotificationChannelOutcome> RemoveNotificationChannelOutcomeCallable;
         typedef std::future<SearchInsightsOutcome> SearchInsightsOutcomeCallable;
+        typedef std::future<SearchOrganizationInsightsOutcome> SearchOrganizationInsightsOutcomeCallable;
+        typedef std::future<StartCostEstimationOutcome> StartCostEstimationOutcomeCallable;
+        typedef std::future<UpdateEventSourcesConfigOutcome> UpdateEventSourcesConfigOutcomeCallable;
         typedef std::future<UpdateResourceCollectionOutcome> UpdateResourceCollectionOutcomeCallable;
         typedef std::future<UpdateServiceIntegrationOutcome> UpdateServiceIntegrationOutcomeCallable;
 } // namespace Model
@@ -132,35 +172,46 @@ namespace Model
     typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeAccountHealthRequest&, const Model::DescribeAccountHealthOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeAccountHealthResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeAccountOverviewRequest&, const Model::DescribeAccountOverviewOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeAccountOverviewResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeAnomalyRequest&, const Model::DescribeAnomalyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeAnomalyResponseReceivedHandler;
+    typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeEventSourcesConfigRequest&, const Model::DescribeEventSourcesConfigOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeEventSourcesConfigResponseReceivedHandler;
+    typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeFeedbackRequest&, const Model::DescribeFeedbackOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeFeedbackResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeInsightRequest&, const Model::DescribeInsightOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeInsightResponseReceivedHandler;
+    typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeOrganizationHealthRequest&, const Model::DescribeOrganizationHealthOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeOrganizationHealthResponseReceivedHandler;
+    typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeOrganizationOverviewRequest&, const Model::DescribeOrganizationOverviewOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeOrganizationOverviewResponseReceivedHandler;
+    typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeOrganizationResourceCollectionHealthRequest&, const Model::DescribeOrganizationResourceCollectionHealthOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeOrganizationResourceCollectionHealthResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeResourceCollectionHealthRequest&, const Model::DescribeResourceCollectionHealthOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeResourceCollectionHealthResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::DescribeServiceIntegrationRequest&, const Model::DescribeServiceIntegrationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeServiceIntegrationResponseReceivedHandler;
+    typedef std::function<void(const DevOpsGuruClient*, const Model::GetCostEstimationRequest&, const Model::GetCostEstimationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetCostEstimationResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::GetResourceCollectionRequest&, const Model::GetResourceCollectionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetResourceCollectionResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::ListAnomaliesForInsightRequest&, const Model::ListAnomaliesForInsightOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAnomaliesForInsightResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::ListEventsRequest&, const Model::ListEventsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListEventsResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::ListInsightsRequest&, const Model::ListInsightsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListInsightsResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::ListNotificationChannelsRequest&, const Model::ListNotificationChannelsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListNotificationChannelsResponseReceivedHandler;
+    typedef std::function<void(const DevOpsGuruClient*, const Model::ListOrganizationInsightsRequest&, const Model::ListOrganizationInsightsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListOrganizationInsightsResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::ListRecommendationsRequest&, const Model::ListRecommendationsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListRecommendationsResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::PutFeedbackRequest&, const Model::PutFeedbackOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutFeedbackResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::RemoveNotificationChannelRequest&, const Model::RemoveNotificationChannelOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RemoveNotificationChannelResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::SearchInsightsRequest&, const Model::SearchInsightsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > SearchInsightsResponseReceivedHandler;
+    typedef std::function<void(const DevOpsGuruClient*, const Model::SearchOrganizationInsightsRequest&, const Model::SearchOrganizationInsightsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > SearchOrganizationInsightsResponseReceivedHandler;
+    typedef std::function<void(const DevOpsGuruClient*, const Model::StartCostEstimationRequest&, const Model::StartCostEstimationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartCostEstimationResponseReceivedHandler;
+    typedef std::function<void(const DevOpsGuruClient*, const Model::UpdateEventSourcesConfigRequest&, const Model::UpdateEventSourcesConfigOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateEventSourcesConfigResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::UpdateResourceCollectionRequest&, const Model::UpdateResourceCollectionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateResourceCollectionResponseReceivedHandler;
     typedef std::function<void(const DevOpsGuruClient*, const Model::UpdateServiceIntegrationRequest&, const Model::UpdateServiceIntegrationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateServiceIntegrationResponseReceivedHandler;
 
   /**
    * <p> Amazon DevOps Guru is a fully managed service that helps you identify
    * anomalous behavior in business critical operational applications. You specify
-   * the AWS resources that you want DevOps Guru to cover, then the Amazon CloudWatch
-   * metrics and AWS CloudTrail events related to those resources are analyzed. When
-   * anomalous behavior is detected, DevOps Guru creates an <i>insight</i> that
-   * includes recommendations, related events, and related metrics that can help you
-   * improve your operational applications. For more information, see <a
+   * the Amazon Web Services resources that you want DevOps Guru to cover, then the
+   * Amazon CloudWatch metrics and Amazon Web Services CloudTrail events related to
+   * those resources are analyzed. When anomalous behavior is detected, DevOps Guru
+   * creates an <i>insight</i> that includes recommendations, related events, and
+   * related metrics that can help you improve your operational applications. For
+   * more information, see <a
    * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/welcome.html">What
    * is Amazon DevOps Guru</a>. </p> <p> You can specify 1 or 2 Amazon Simple
    * Notification Service topics so you are notified every time a new insight is
-   * created. You can also enable DevOps Guru to generate an OpsItem in AWS Systems
-   * Manager for each insight to help you manage and track your work addressing
-   * insights. </p> <p> To learn about the DevOps Guru workflow, see <a
+   * created. You can also enable DevOps Guru to generate an OpsItem in Amazon Web
+   * Services Systems Manager for each insight to help you manage and track your work
+   * addressing insights. </p> <p> To learn about the DevOps Guru workflow, see <a
    * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/welcome.html#how-it-works">How
    * DevOps Guru works</a>. To learn about DevOps Guru concepts, see <a
    * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/concepts.html">Concepts
@@ -202,10 +253,12 @@ namespace Model
          * Amazon SNS in your account. For more information, see <a
          * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html">Permissions
          * for cross account Amazon SNS topics</a>.</p> <p>If you use an Amazon SNS topic
-         * that is encrypted by an AWS Key Management Service customer-managed key (CMK),
-         * then you must add permissions to the CMK. For more information, see <a
+         * that is encrypted by an Amazon Web Services Key Management Service
+         * customer-managed key (CMK), then you must add permissions to the CMK. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions
-         * for AWS KMS–encrypted Amazon SNS topics</a>.</p><p><h3>See Also:</h3>   <a
+         * for Amazon Web Services KMS–encrypted Amazon SNS topics</a>.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/AddNotificationChannel">AWS
          * API Reference</a></p>
          */
@@ -220,10 +273,12 @@ namespace Model
          * Amazon SNS in your account. For more information, see <a
          * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html">Permissions
          * for cross account Amazon SNS topics</a>.</p> <p>If you use an Amazon SNS topic
-         * that is encrypted by an AWS Key Management Service customer-managed key (CMK),
-         * then you must add permissions to the CMK. For more information, see <a
+         * that is encrypted by an Amazon Web Services Key Management Service
+         * customer-managed key (CMK), then you must add permissions to the CMK. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions
-         * for AWS KMS–encrypted Amazon SNS topics</a>.</p><p><h3>See Also:</h3>   <a
+         * for Amazon Web Services KMS–encrypted Amazon SNS topics</a>.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/AddNotificationChannel">AWS
          * API Reference</a></p>
          *
@@ -240,10 +295,12 @@ namespace Model
          * Amazon SNS in your account. For more information, see <a
          * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html">Permissions
          * for cross account Amazon SNS topics</a>.</p> <p>If you use an Amazon SNS topic
-         * that is encrypted by an AWS Key Management Service customer-managed key (CMK),
-         * then you must add permissions to the CMK. For more information, see <a
+         * that is encrypted by an Amazon Web Services Key Management Service
+         * customer-managed key (CMK), then you must add permissions to the CMK. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions
-         * for AWS KMS–encrypted Amazon SNS topics</a>.</p><p><h3>See Also:</h3>   <a
+         * for Amazon Web Services KMS–encrypted Amazon SNS topics</a>.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/AddNotificationChannel">AWS
          * API Reference</a></p>
          *
@@ -253,9 +310,9 @@ namespace Model
 
         /**
          * <p> Returns the number of open reactive insights, the number of open proactive
-         * insights, and the number of metrics analyzed in your AWS account. Use these
-         * numbers to gauge the health of operations in your AWS account. </p><p><h3>See
-         * Also:</h3>   <a
+         * insights, and the number of metrics analyzed in your Amazon Web Services
+         * account. Use these numbers to gauge the health of operations in your Amazon Web
+         * Services account. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeAccountHealth">AWS
          * API Reference</a></p>
          */
@@ -263,9 +320,9 @@ namespace Model
 
         /**
          * <p> Returns the number of open reactive insights, the number of open proactive
-         * insights, and the number of metrics analyzed in your AWS account. Use these
-         * numbers to gauge the health of operations in your AWS account. </p><p><h3>See
-         * Also:</h3>   <a
+         * insights, and the number of metrics analyzed in your Amazon Web Services
+         * account. Use these numbers to gauge the health of operations in your Amazon Web
+         * Services account. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeAccountHealth">AWS
          * API Reference</a></p>
          *
@@ -275,9 +332,9 @@ namespace Model
 
         /**
          * <p> Returns the number of open reactive insights, the number of open proactive
-         * insights, and the number of metrics analyzed in your AWS account. Use these
-         * numbers to gauge the health of operations in your AWS account. </p><p><h3>See
-         * Also:</h3>   <a
+         * insights, and the number of metrics analyzed in your Amazon Web Services
+         * account. Use these numbers to gauge the health of operations in your Amazon Web
+         * Services account. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeAccountHealth">AWS
          * API Reference</a></p>
          *
@@ -348,6 +405,62 @@ namespace Model
         virtual void DescribeAnomalyAsync(const Model::DescribeAnomalyRequest& request, const DescribeAnomalyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>This operation lists details about a DevOps Guru event source that is shared
+         * with your&#x2028; account.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeEventSourcesConfig">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeEventSourcesConfigOutcome DescribeEventSourcesConfig(const Model::DescribeEventSourcesConfigRequest& request) const;
+
+        /**
+         * <p>This operation lists details about a DevOps Guru event source that is shared
+         * with your&#x2028; account.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeEventSourcesConfig">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeEventSourcesConfigOutcomeCallable DescribeEventSourcesConfigCallable(const Model::DescribeEventSourcesConfigRequest& request) const;
+
+        /**
+         * <p>This operation lists details about a DevOps Guru event source that is shared
+         * with your&#x2028; account.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeEventSourcesConfig">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeEventSourcesConfigAsync(const Model::DescribeEventSourcesConfigRequest& request, const DescribeEventSourcesConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p> Returns the most recent feedback submitted in the current Amazon Web
+         * Services account and Region. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeFeedback">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeFeedbackOutcome DescribeFeedback(const Model::DescribeFeedbackRequest& request) const;
+
+        /**
+         * <p> Returns the most recent feedback submitted in the current Amazon Web
+         * Services account and Region. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeFeedback">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeFeedbackOutcomeCallable DescribeFeedbackCallable(const Model::DescribeFeedbackRequest& request) const;
+
+        /**
+         * <p> Returns the most recent feedback submitted in the current Amazon Web
+         * Services account and Region. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeFeedback">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeFeedbackAsync(const Model::DescribeFeedbackRequest& request, const DescribeFeedbackResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p> Returns details about an insight that you specify using its ID.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeInsight">AWS
@@ -376,12 +489,105 @@ namespace Model
         virtual void DescribeInsightAsync(const Model::DescribeInsightRequest& request, const DescribeInsightResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Returns active insights, predictive insights, and resource hours analyzed in
+         * last hour.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationHealth">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeOrganizationHealthOutcome DescribeOrganizationHealth(const Model::DescribeOrganizationHealthRequest& request) const;
+
+        /**
+         * <p>Returns active insights, predictive insights, and resource hours analyzed in
+         * last hour.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationHealth">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeOrganizationHealthOutcomeCallable DescribeOrganizationHealthCallable(const Model::DescribeOrganizationHealthRequest& request) const;
+
+        /**
+         * <p>Returns active insights, predictive insights, and resource hours analyzed in
+         * last hour.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationHealth">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeOrganizationHealthAsync(const Model::DescribeOrganizationHealthRequest& request, const DescribeOrganizationHealthResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Returns an overview of your organization's history based on the specified
+         * time range. The overview includes the total reactive and proactive
+         * insights.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationOverview">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeOrganizationOverviewOutcome DescribeOrganizationOverview(const Model::DescribeOrganizationOverviewRequest& request) const;
+
+        /**
+         * <p>Returns an overview of your organization's history based on the specified
+         * time range. The overview includes the total reactive and proactive
+         * insights.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationOverview">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeOrganizationOverviewOutcomeCallable DescribeOrganizationOverviewCallable(const Model::DescribeOrganizationOverviewRequest& request) const;
+
+        /**
+         * <p>Returns an overview of your organization's history based on the specified
+         * time range. The overview includes the total reactive and proactive
+         * insights.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationOverview">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeOrganizationOverviewAsync(const Model::DescribeOrganizationOverviewRequest& request, const DescribeOrganizationOverviewResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Provides an overview of your system's health. If additional member accounts
+         * are part of your organization, you can filter those accounts using the
+         * <code>AccountIds</code> field.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationResourceCollectionHealth">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeOrganizationResourceCollectionHealthOutcome DescribeOrganizationResourceCollectionHealth(const Model::DescribeOrganizationResourceCollectionHealthRequest& request) const;
+
+        /**
+         * <p>Provides an overview of your system's health. If additional member accounts
+         * are part of your organization, you can filter those accounts using the
+         * <code>AccountIds</code> field.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationResourceCollectionHealth">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeOrganizationResourceCollectionHealthOutcomeCallable DescribeOrganizationResourceCollectionHealthCallable(const Model::DescribeOrganizationResourceCollectionHealthRequest& request) const;
+
+        /**
+         * <p>Provides an overview of your system's health. If additional member accounts
+         * are part of your organization, you can filter those accounts using the
+         * <code>AccountIds</code> field.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeOrganizationResourceCollectionHealth">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeOrganizationResourceCollectionHealthAsync(const Model::DescribeOrganizationResourceCollectionHealthRequest& request, const DescribeOrganizationResourceCollectionHealthResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p> Returns the number of open proactive insights, open reactive insights, and
          * the Mean Time to Recover (MTTR) for all closed insights in resource collections
-         * in your account. You specify the type of AWS resources collection. The one type
-         * of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru
-         * can be configured to analyze only the AWS resources that are defined in the
-         * stacks. </p><p><h3>See Also:</h3>   <a
+         * in your account. You specify the type of Amazon Web Services resources
+         * collection. The two types of Amazon Web Services resource collections supported
+         * are Amazon Web Services CloudFormation stacks and Amazon Web Services resources
+         * that contain the same Amazon Web Services tag. DevOps Guru can be configured to
+         * analyze the Amazon Web Services resources that are defined in the stacks or that
+         * are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web
+         * Services CloudFormation stacks. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeResourceCollectionHealth">AWS
          * API Reference</a></p>
          */
@@ -390,10 +596,13 @@ namespace Model
         /**
          * <p> Returns the number of open proactive insights, open reactive insights, and
          * the Mean Time to Recover (MTTR) for all closed insights in resource collections
-         * in your account. You specify the type of AWS resources collection. The one type
-         * of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru
-         * can be configured to analyze only the AWS resources that are defined in the
-         * stacks. </p><p><h3>See Also:</h3>   <a
+         * in your account. You specify the type of Amazon Web Services resources
+         * collection. The two types of Amazon Web Services resource collections supported
+         * are Amazon Web Services CloudFormation stacks and Amazon Web Services resources
+         * that contain the same Amazon Web Services tag. DevOps Guru can be configured to
+         * analyze the Amazon Web Services resources that are defined in the stacks or that
+         * are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web
+         * Services CloudFormation stacks. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeResourceCollectionHealth">AWS
          * API Reference</a></p>
          *
@@ -404,10 +613,13 @@ namespace Model
         /**
          * <p> Returns the number of open proactive insights, open reactive insights, and
          * the Mean Time to Recover (MTTR) for all closed insights in resource collections
-         * in your account. You specify the type of AWS resources collection. The one type
-         * of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru
-         * can be configured to analyze only the AWS resources that are defined in the
-         * stacks. </p><p><h3>See Also:</h3>   <a
+         * in your account. You specify the type of Amazon Web Services resources
+         * collection. The two types of Amazon Web Services resource collections supported
+         * are Amazon Web Services CloudFormation stacks and Amazon Web Services resources
+         * that contain the same Amazon Web Services tag. DevOps Guru can be configured to
+         * analyze the Amazon Web Services resources that are defined in the stacks or that
+         * are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web
+         * Services CloudFormation stacks. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeResourceCollectionHealth">AWS
          * API Reference</a></p>
          *
@@ -417,9 +629,9 @@ namespace Model
 
         /**
          * <p> Returns the integration status of services that are integrated with DevOps
-         * Guru. The one service that can be integrated with DevOps Guru is AWS Systems
-         * Manager, which can be used to create an OpsItem for each generated insight.
-         * </p><p><h3>See Also:</h3>   <a
+         * Guru. The one service that can be integrated with DevOps Guru is Amazon Web
+         * Services Systems Manager, which can be used to create an OpsItem for each
+         * generated insight. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeServiceIntegration">AWS
          * API Reference</a></p>
          */
@@ -427,9 +639,9 @@ namespace Model
 
         /**
          * <p> Returns the integration status of services that are integrated with DevOps
-         * Guru. The one service that can be integrated with DevOps Guru is AWS Systems
-         * Manager, which can be used to create an OpsItem for each generated insight.
-         * </p><p><h3>See Also:</h3>   <a
+         * Guru. The one service that can be integrated with DevOps Guru is Amazon Web
+         * Services Systems Manager, which can be used to create an OpsItem for each
+         * generated insight. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeServiceIntegration">AWS
          * API Reference</a></p>
          *
@@ -439,9 +651,9 @@ namespace Model
 
         /**
          * <p> Returns the integration status of services that are integrated with DevOps
-         * Guru. The one service that can be integrated with DevOps Guru is AWS Systems
-         * Manager, which can be used to create an OpsItem for each generated insight.
-         * </p><p><h3>See Also:</h3>   <a
+         * Guru. The one service that can be integrated with DevOps Guru is Amazon Web
+         * Services Systems Manager, which can be used to create an OpsItem for each
+         * generated insight. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/DescribeServiceIntegration">AWS
          * API Reference</a></p>
          *
@@ -450,20 +662,68 @@ namespace Model
         virtual void DescribeServiceIntegrationAsync(const Model::DescribeServiceIntegrationRequest& request, const DescribeServiceIntegrationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns lists AWS resources that are of the specified resource collection
-         * type. The one type of AWS resource collection supported is AWS CloudFormation
-         * stacks. DevOps Guru can be configured to analyze only the AWS resources that are
-         * defined in the stacks. </p><p><h3>See Also:</h3>   <a
+         * <p>Returns an estimate of the monthly cost for DevOps Guru to analyze your
+         * Amazon Web Services resources. For more information, see <a
+         * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate
+         * your Amazon DevOps Guru costs</a> and <a
+         * href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru
+         * pricing</a>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/GetCostEstimation">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetCostEstimationOutcome GetCostEstimation(const Model::GetCostEstimationRequest& request) const;
+
+        /**
+         * <p>Returns an estimate of the monthly cost for DevOps Guru to analyze your
+         * Amazon Web Services resources. For more information, see <a
+         * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate
+         * your Amazon DevOps Guru costs</a> and <a
+         * href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru
+         * pricing</a>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/GetCostEstimation">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetCostEstimationOutcomeCallable GetCostEstimationCallable(const Model::GetCostEstimationRequest& request) const;
+
+        /**
+         * <p>Returns an estimate of the monthly cost for DevOps Guru to analyze your
+         * Amazon Web Services resources. For more information, see <a
+         * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate
+         * your Amazon DevOps Guru costs</a> and <a
+         * href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru
+         * pricing</a>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/GetCostEstimation">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetCostEstimationAsync(const Model::GetCostEstimationRequest& request, const GetCostEstimationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p> Returns lists Amazon Web Services resources that are of the specified
+         * resource collection type. The two types of Amazon Web Services resource
+         * collections supported are Amazon Web Services CloudFormation stacks and Amazon
+         * Web Services resources that contain the same Amazon Web Services tag. DevOps
+         * Guru can be configured to analyze the Amazon Web Services resources that are
+         * defined in the stacks or that are tagged using the same tag <i>key</i>. You can
+         * specify up to 500 Amazon Web Services CloudFormation stacks. </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/GetResourceCollection">AWS
          * API Reference</a></p>
          */
         virtual Model::GetResourceCollectionOutcome GetResourceCollection(const Model::GetResourceCollectionRequest& request) const;
 
         /**
-         * <p> Returns lists AWS resources that are of the specified resource collection
-         * type. The one type of AWS resource collection supported is AWS CloudFormation
-         * stacks. DevOps Guru can be configured to analyze only the AWS resources that are
-         * defined in the stacks. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns lists Amazon Web Services resources that are of the specified
+         * resource collection type. The two types of Amazon Web Services resource
+         * collections supported are Amazon Web Services CloudFormation stacks and Amazon
+         * Web Services resources that contain the same Amazon Web Services tag. DevOps
+         * Guru can be configured to analyze the Amazon Web Services resources that are
+         * defined in the stacks or that are tagged using the same tag <i>key</i>. You can
+         * specify up to 500 Amazon Web Services CloudFormation stacks. </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/GetResourceCollection">AWS
          * API Reference</a></p>
          *
@@ -472,10 +732,14 @@ namespace Model
         virtual Model::GetResourceCollectionOutcomeCallable GetResourceCollectionCallable(const Model::GetResourceCollectionRequest& request) const;
 
         /**
-         * <p> Returns lists AWS resources that are of the specified resource collection
-         * type. The one type of AWS resource collection supported is AWS CloudFormation
-         * stacks. DevOps Guru can be configured to analyze only the AWS resources that are
-         * defined in the stacks. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns lists Amazon Web Services resources that are of the specified
+         * resource collection type. The two types of Amazon Web Services resource
+         * collections supported are Amazon Web Services CloudFormation stacks and Amazon
+         * Web Services resources that contain the same Amazon Web Services tag. DevOps
+         * Guru can be configured to analyze the Amazon Web Services resources that are
+         * defined in the stacks or that are tagged using the same tag <i>key</i>. You can
+         * specify up to 500 Amazon Web Services CloudFormation stacks. </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/GetResourceCollection">AWS
          * API Reference</a></p>
          *
@@ -543,18 +807,20 @@ namespace Model
         virtual void ListEventsAsync(const Model::ListEventsRequest& request, const ListEventsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of insights in your AWS account. You can specify which
-         * insights are returned by their start time and status (<code>ONGOING</code>,
-         * <code>CLOSED</code>, or <code>ANY</code>). </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a list of insights in your Amazon Web Services account. You can
+         * specify which insights are returned by their start time and status
+         * (<code>ONGOING</code>, <code>CLOSED</code>, or <code>ANY</code>). </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListInsights">AWS
          * API Reference</a></p>
          */
         virtual Model::ListInsightsOutcome ListInsights(const Model::ListInsightsRequest& request) const;
 
         /**
-         * <p> Returns a list of insights in your AWS account. You can specify which
-         * insights are returned by their start time and status (<code>ONGOING</code>,
-         * <code>CLOSED</code>, or <code>ANY</code>). </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a list of insights in your Amazon Web Services account. You can
+         * specify which insights are returned by their start time and status
+         * (<code>ONGOING</code>, <code>CLOSED</code>, or <code>ANY</code>). </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListInsights">AWS
          * API Reference</a></p>
          *
@@ -563,9 +829,10 @@ namespace Model
         virtual Model::ListInsightsOutcomeCallable ListInsightsCallable(const Model::ListInsightsRequest& request) const;
 
         /**
-         * <p> Returns a list of insights in your AWS account. You can specify which
-         * insights are returned by their start time and status (<code>ONGOING</code>,
-         * <code>CLOSED</code>, or <code>ANY</code>). </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a list of insights in your Amazon Web Services account. You can
+         * specify which insights are returned by their start time and status
+         * (<code>ONGOING</code>, <code>CLOSED</code>, or <code>ANY</code>). </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListInsights">AWS
          * API Reference</a></p>
          *
@@ -609,6 +876,34 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void ListNotificationChannelsAsync(const Model::ListNotificationChannelsRequest& request, const ListNotificationChannelsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Returns a list of insights associated with the account or OU
+         * Id.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListOrganizationInsights">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListOrganizationInsightsOutcome ListOrganizationInsights(const Model::ListOrganizationInsightsRequest& request) const;
+
+        /**
+         * <p>Returns a list of insights associated with the account or OU
+         * Id.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListOrganizationInsights">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListOrganizationInsightsOutcomeCallable ListOrganizationInsightsCallable(const Model::ListOrganizationInsightsRequest& request) const;
+
+        /**
+         * <p>Returns a list of insights associated with the account or OU
+         * Id.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/ListOrganizationInsights">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListOrganizationInsightsAsync(const Model::ListOrganizationInsightsRequest& request, const ListOrganizationInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p> Returns a list of a specified insight's recommendations. Each recommendation
@@ -701,8 +996,8 @@ namespace Model
         virtual void RemoveNotificationChannelAsync(const Model::RemoveNotificationChannelRequest& request, const RemoveNotificationChannelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of insights in your AWS account. You can specify which
-         * insights are returned by their start time, one or more statuses
+         * <p> Returns a list of insights in your Amazon Web Services account. You can
+         * specify which insights are returned by their start time, one or more statuses
          * (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or
          * more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>),
          * and type (<code>REACTIVE</code> or <code>PROACTIVE</code>). </p> <p> Use the
@@ -715,8 +1010,8 @@ namespace Model
         virtual Model::SearchInsightsOutcome SearchInsights(const Model::SearchInsightsRequest& request) const;
 
         /**
-         * <p> Returns a list of insights in your AWS account. You can specify which
-         * insights are returned by their start time, one or more statuses
+         * <p> Returns a list of insights in your Amazon Web Services account. You can
+         * specify which insights are returned by their start time, one or more statuses
          * (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or
          * more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>),
          * and type (<code>REACTIVE</code> or <code>PROACTIVE</code>). </p> <p> Use the
@@ -731,8 +1026,8 @@ namespace Model
         virtual Model::SearchInsightsOutcomeCallable SearchInsightsCallable(const Model::SearchInsightsRequest& request) const;
 
         /**
-         * <p> Returns a list of insights in your AWS account. You can specify which
-         * insights are returned by their start time, one or more statuses
+         * <p> Returns a list of insights in your Amazon Web Services account. You can
+         * specify which insights are returned by their start time, one or more statuses
          * (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or
          * more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>),
          * and type (<code>REACTIVE</code> or <code>PROACTIVE</code>). </p> <p> Use the
@@ -747,22 +1042,127 @@ namespace Model
         virtual void SearchInsightsAsync(const Model::SearchInsightsRequest& request, const SearchInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Updates the collection of resources that DevOps Guru analyzes. The one type
-         * of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru
-         * can be configured to analyze only the AWS resources that are defined in the
-         * stacks. This method also creates the IAM role required for you to use DevOps
-         * Guru. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a list of insights in your organization. You can specify which
+         * insights are returned by their start time, one or more statuses
+         * (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or
+         * more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>),
+         * and type (<code>REACTIVE</code> or <code>PROACTIVE</code>). </p> <p> Use the
+         * <code>Filters</code> parameter to specify status and severity search parameters.
+         * Use the <code>Type</code> parameter to specify <code>REACTIVE</code> or
+         * <code>PROACTIVE</code> in your search. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/SearchOrganizationInsights">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::SearchOrganizationInsightsOutcome SearchOrganizationInsights(const Model::SearchOrganizationInsightsRequest& request) const;
+
+        /**
+         * <p> Returns a list of insights in your organization. You can specify which
+         * insights are returned by their start time, one or more statuses
+         * (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or
+         * more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>),
+         * and type (<code>REACTIVE</code> or <code>PROACTIVE</code>). </p> <p> Use the
+         * <code>Filters</code> parameter to specify status and severity search parameters.
+         * Use the <code>Type</code> parameter to specify <code>REACTIVE</code> or
+         * <code>PROACTIVE</code> in your search. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/SearchOrganizationInsights">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::SearchOrganizationInsightsOutcomeCallable SearchOrganizationInsightsCallable(const Model::SearchOrganizationInsightsRequest& request) const;
+
+        /**
+         * <p> Returns a list of insights in your organization. You can specify which
+         * insights are returned by their start time, one or more statuses
+         * (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or
+         * more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>),
+         * and type (<code>REACTIVE</code> or <code>PROACTIVE</code>). </p> <p> Use the
+         * <code>Filters</code> parameter to specify status and severity search parameters.
+         * Use the <code>Type</code> parameter to specify <code>REACTIVE</code> or
+         * <code>PROACTIVE</code> in your search. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/SearchOrganizationInsights">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void SearchOrganizationInsightsAsync(const Model::SearchOrganizationInsightsRequest& request, const SearchOrganizationInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Starts the creation of an estimate of the monthly cost to analyze your Amazon
+         * Web Services resources.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/StartCostEstimation">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::StartCostEstimationOutcome StartCostEstimation(const Model::StartCostEstimationRequest& request) const;
+
+        /**
+         * <p>Starts the creation of an estimate of the monthly cost to analyze your Amazon
+         * Web Services resources.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/StartCostEstimation">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::StartCostEstimationOutcomeCallable StartCostEstimationCallable(const Model::StartCostEstimationRequest& request) const;
+
+        /**
+         * <p>Starts the creation of an estimate of the monthly cost to analyze your Amazon
+         * Web Services resources.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/StartCostEstimation">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void StartCostEstimationAsync(const Model::StartCostEstimationRequest& request, const StartCostEstimationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Updates the event source configuration.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateEventSourcesConfig">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UpdateEventSourcesConfigOutcome UpdateEventSourcesConfig(const Model::UpdateEventSourcesConfigRequest& request) const;
+
+        /**
+         * <p>Updates the event source configuration.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateEventSourcesConfig">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::UpdateEventSourcesConfigOutcomeCallable UpdateEventSourcesConfigCallable(const Model::UpdateEventSourcesConfigRequest& request) const;
+
+        /**
+         * <p>Updates the event source configuration.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateEventSourcesConfig">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void UpdateEventSourcesConfigAsync(const Model::UpdateEventSourcesConfigRequest& request, const UpdateEventSourcesConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p> Updates the collection of resources that DevOps Guru analyzes. The two types
+         * of Amazon Web Services resource collections supported are Amazon Web Services
+         * CloudFormation stacks and Amazon Web Services resources that contain the same
+         * Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web
+         * Services resources that are defined in the stacks or that are tagged using the
+         * same tag <i>key</i>. You can specify up to 500 Amazon Web Services
+         * CloudFormation stacks. This method also creates the IAM role required for you to
+         * use DevOps Guru. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateResourceCollection">AWS
          * API Reference</a></p>
          */
         virtual Model::UpdateResourceCollectionOutcome UpdateResourceCollection(const Model::UpdateResourceCollectionRequest& request) const;
 
         /**
-         * <p> Updates the collection of resources that DevOps Guru analyzes. The one type
-         * of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru
-         * can be configured to analyze only the AWS resources that are defined in the
-         * stacks. This method also creates the IAM role required for you to use DevOps
-         * Guru. </p><p><h3>See Also:</h3>   <a
+         * <p> Updates the collection of resources that DevOps Guru analyzes. The two types
+         * of Amazon Web Services resource collections supported are Amazon Web Services
+         * CloudFormation stacks and Amazon Web Services resources that contain the same
+         * Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web
+         * Services resources that are defined in the stacks or that are tagged using the
+         * same tag <i>key</i>. You can specify up to 500 Amazon Web Services
+         * CloudFormation stacks. This method also creates the IAM role required for you to
+         * use DevOps Guru. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateResourceCollection">AWS
          * API Reference</a></p>
          *
@@ -771,11 +1171,14 @@ namespace Model
         virtual Model::UpdateResourceCollectionOutcomeCallable UpdateResourceCollectionCallable(const Model::UpdateResourceCollectionRequest& request) const;
 
         /**
-         * <p> Updates the collection of resources that DevOps Guru analyzes. The one type
-         * of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru
-         * can be configured to analyze only the AWS resources that are defined in the
-         * stacks. This method also creates the IAM role required for you to use DevOps
-         * Guru. </p><p><h3>See Also:</h3>   <a
+         * <p> Updates the collection of resources that DevOps Guru analyzes. The two types
+         * of Amazon Web Services resource collections supported are Amazon Web Services
+         * CloudFormation stacks and Amazon Web Services resources that contain the same
+         * Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web
+         * Services resources that are defined in the stacks or that are tagged using the
+         * same tag <i>key</i>. You can specify up to 500 Amazon Web Services
+         * CloudFormation stacks. This method also creates the IAM role required for you to
+         * use DevOps Guru. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateResourceCollection">AWS
          * API Reference</a></p>
          *
@@ -785,9 +1188,9 @@ namespace Model
 
         /**
          * <p> Enables or disables integration with a service that can be integrated with
-         * DevOps Guru. The one service that can be integrated with DevOps Guru is AWS
-         * Systems Manager, which can be used to create an OpsItem for each generated
-         * insight. </p><p><h3>See Also:</h3>   <a
+         * DevOps Guru. The one service that can be integrated with DevOps Guru is Amazon
+         * Web Services Systems Manager, which can be used to create an OpsItem for each
+         * generated insight. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateServiceIntegration">AWS
          * API Reference</a></p>
          */
@@ -795,9 +1198,9 @@ namespace Model
 
         /**
          * <p> Enables or disables integration with a service that can be integrated with
-         * DevOps Guru. The one service that can be integrated with DevOps Guru is AWS
-         * Systems Manager, which can be used to create an OpsItem for each generated
-         * insight. </p><p><h3>See Also:</h3>   <a
+         * DevOps Guru. The one service that can be integrated with DevOps Guru is Amazon
+         * Web Services Systems Manager, which can be used to create an OpsItem for each
+         * generated insight. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateServiceIntegration">AWS
          * API Reference</a></p>
          *
@@ -807,9 +1210,9 @@ namespace Model
 
         /**
          * <p> Enables or disables integration with a service that can be integrated with
-         * DevOps Guru. The one service that can be integrated with DevOps Guru is AWS
-         * Systems Manager, which can be used to create an OpsItem for each generated
-         * insight. </p><p><h3>See Also:</h3>   <a
+         * DevOps Guru. The one service that can be integrated with DevOps Guru is Amazon
+         * Web Services Systems Manager, which can be used to create an OpsItem for each
+         * generated insight. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/devops-guru-2020-12-01/UpdateServiceIntegration">AWS
          * API Reference</a></p>
          *
@@ -825,18 +1228,28 @@ namespace Model
         void DescribeAccountHealthAsyncHelper(const Model::DescribeAccountHealthRequest& request, const DescribeAccountHealthResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeAccountOverviewAsyncHelper(const Model::DescribeAccountOverviewRequest& request, const DescribeAccountOverviewResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeAnomalyAsyncHelper(const Model::DescribeAnomalyRequest& request, const DescribeAnomalyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeEventSourcesConfigAsyncHelper(const Model::DescribeEventSourcesConfigRequest& request, const DescribeEventSourcesConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeFeedbackAsyncHelper(const Model::DescribeFeedbackRequest& request, const DescribeFeedbackResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeInsightAsyncHelper(const Model::DescribeInsightRequest& request, const DescribeInsightResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeOrganizationHealthAsyncHelper(const Model::DescribeOrganizationHealthRequest& request, const DescribeOrganizationHealthResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeOrganizationOverviewAsyncHelper(const Model::DescribeOrganizationOverviewRequest& request, const DescribeOrganizationOverviewResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeOrganizationResourceCollectionHealthAsyncHelper(const Model::DescribeOrganizationResourceCollectionHealthRequest& request, const DescribeOrganizationResourceCollectionHealthResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeResourceCollectionHealthAsyncHelper(const Model::DescribeResourceCollectionHealthRequest& request, const DescribeResourceCollectionHealthResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeServiceIntegrationAsyncHelper(const Model::DescribeServiceIntegrationRequest& request, const DescribeServiceIntegrationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetCostEstimationAsyncHelper(const Model::GetCostEstimationRequest& request, const GetCostEstimationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetResourceCollectionAsyncHelper(const Model::GetResourceCollectionRequest& request, const GetResourceCollectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListAnomaliesForInsightAsyncHelper(const Model::ListAnomaliesForInsightRequest& request, const ListAnomaliesForInsightResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListEventsAsyncHelper(const Model::ListEventsRequest& request, const ListEventsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListInsightsAsyncHelper(const Model::ListInsightsRequest& request, const ListInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListNotificationChannelsAsyncHelper(const Model::ListNotificationChannelsRequest& request, const ListNotificationChannelsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListOrganizationInsightsAsyncHelper(const Model::ListOrganizationInsightsRequest& request, const ListOrganizationInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListRecommendationsAsyncHelper(const Model::ListRecommendationsRequest& request, const ListRecommendationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutFeedbackAsyncHelper(const Model::PutFeedbackRequest& request, const PutFeedbackResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RemoveNotificationChannelAsyncHelper(const Model::RemoveNotificationChannelRequest& request, const RemoveNotificationChannelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void SearchInsightsAsyncHelper(const Model::SearchInsightsRequest& request, const SearchInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void SearchOrganizationInsightsAsyncHelper(const Model::SearchOrganizationInsightsRequest& request, const SearchOrganizationInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void StartCostEstimationAsyncHelper(const Model::StartCostEstimationRequest& request, const StartCostEstimationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void UpdateEventSourcesConfigAsyncHelper(const Model::UpdateEventSourcesConfigRequest& request, const UpdateEventSourcesConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateResourceCollectionAsyncHelper(const Model::UpdateResourceCollectionRequest& request, const UpdateResourceCollectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateServiceIntegrationAsyncHelper(const Model::UpdateServiceIntegrationRequest& request, const UpdateServiceIntegrationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
 

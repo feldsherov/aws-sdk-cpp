@@ -92,7 +92,10 @@ namespace Model
      * instance was launched.</p> </li> <li> <p> <code>launch-index</code> - When
      * launching multiple instances, this is the index for the instance in the launch
      * group (for example, 0, 1, 2, and so on). </p> </li> <li> <p>
-     * <code>launch-time</code> - The time when the instance was launched.</p> </li>
+     * <code>launch-time</code> - The time when the instance was launched, in the ISO
+     * 8601 format in the UTC time zone (YYYY-MM-DDThh:mm:ss.sssZ), for example,
+     * <code>2021-09-29T11:04:43.305Z</code>. You can use a wildcard (<code>*</code>),
+     * for example, <code>2021-09-29T*</code>, which matches an entire day.</p> </li>
      * <li> <p> <code>metadata-options.http-tokens</code> - The metadata request
      * authorization state (<code>optional</code> | <code>required</code>)</p> </li>
      * <li> <p> <code>metadata-options.http-put-response-hop-limit</code> - The http
@@ -153,43 +156,44 @@ namespace Model
      * network interface.</p> </li> <li> <p>
      * <code>network-interface.requester-id</code> - The requester ID for the network
      * interface.</p> </li> <li> <p> <code>network-interface.requester-managed</code> -
-     * Indicates whether the network interface is being managed by AWS.</p> </li> <li>
-     * <p> <code>network-interface.status</code> - The status of the network interface
-     * (<code>available</code>) | <code>in-use</code>).</p> </li> <li> <p>
-     * <code>network-interface.source-dest-check</code> - Whether the network interface
-     * performs source/destination checking. A value of <code>true</code> means that
-     * checking is enabled, and <code>false</code> means that checking is disabled. The
-     * value must be <code>false</code> for the network interface to perform network
-     * address translation (NAT) in your VPC.</p> </li> <li> <p>
-     * <code>network-interface.subnet-id</code> - The ID of the subnet for the network
-     * interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> - The ID of
-     * the VPC for the network interface.</p> </li> <li> <p> <code>owner-id</code> -
-     * The AWS account ID of the instance owner.</p> </li> <li> <p>
-     * <code>placement-group-name</code> - The name of the placement group for the
-     * instance.</p> </li> <li> <p> <code>placement-partition-number</code> - The
-     * partition in which the instance is located.</p> </li> <li> <p>
-     * <code>platform</code> - The platform. To list only Windows instances, use
-     * <code>windows</code>.</p> </li> <li> <p> <code>private-dns-name</code> - The
-     * private IPv4 DNS name of the instance.</p> </li> <li> <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.</p>
-     * </li> <li> <p> <code>product-code</code> - The product code associated with the
-     * AMI used to launch the instance.</p> </li> <li> <p>
+     * Indicates whether the network interface is being managed by Amazon Web
+     * Services.</p> </li> <li> <p> <code>network-interface.status</code> - The status
+     * of the network interface (<code>available</code>) | <code>in-use</code>).</p>
+     * </li> <li> <p> <code>network-interface.source-dest-check</code> - Whether the
+     * network interface performs source/destination checking. A value of
+     * <code>true</code> means that checking is enabled, and <code>false</code> means
+     * that checking is disabled. The value must be <code>false</code> for the network
+     * interface to perform network address translation (NAT) in your VPC.</p> </li>
+     * <li> <p> <code>network-interface.subnet-id</code> - The ID of the subnet for the
+     * network interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> -
+     * The ID of the VPC for the network interface.</p> </li> <li> <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.</p>
+     * </li> <li> <p> <code>owner-id</code> - The Amazon Web Services account ID of the
+     * instance owner.</p> </li> <li> <p> <code>placement-group-name</code> - The name
+     * of the placement group for the instance.</p> </li> <li> <p>
+     * <code>placement-partition-number</code> - The partition in which the instance is
+     * located.</p> </li> <li> <p> <code>platform</code> - The platform. To list only
+     * Windows instances, use <code>windows</code>.</p> </li> <li> <p>
+     * <code>private-dns-name</code> - The private IPv4 DNS name of the instance.</p>
+     * </li> <li> <p> <code>private-ip-address</code> - The private IPv4 address of the
+     * instance.</p> </li> <li> <p> <code>product-code</code> - The product code
+     * associated with the AMI used to launch the instance.</p> </li> <li> <p>
      * <code>product-code.type</code> - The type of product code (<code>devpay</code> |
      * <code>marketplace</code>).</p> </li> <li> <p> <code>ramdisk-id</code> - The RAM
      * disk ID.</p> </li> <li> <p> <code>reason</code> - The reason for the current
      * state of the instance (for example, shows "User Initiated [date]" when you stop
      * or terminate the instance). Similar to the state-reason-code filter.</p> </li>
      * <li> <p> <code>requester-id</code> - The ID of the entity that launched the
-     * instance on your behalf (for example, AWS Management Console, Auto Scaling, and
-     * so on).</p> </li> <li> <p> <code>reservation-id</code> - The ID of the
-     * instance's reservation. A reservation ID is created any time you launch an
-     * instance. A reservation ID has a one-to-one relationship with an instance launch
-     * request, but can be associated with more than one instance if you launch
-     * multiple instances using the same launch request. For example, if you launch one
-     * instance, you get one reservation ID. If you launch ten instances using the same
-     * launch request, you also get one reservation ID.</p> </li> <li> <p>
-     * <code>root-device-name</code> - The device name of the root device volume (for
-     * example, <code>/dev/sda1</code>).</p> </li> <li> <p>
+     * instance on your behalf (for example, Amazon Web Services Management Console,
+     * Auto Scaling, and so on).</p> </li> <li> <p> <code>reservation-id</code> - The
+     * ID of the instance's reservation. A reservation ID is created any time you
+     * launch an instance. A reservation ID has a one-to-one relationship with an
+     * instance launch request, but can be associated with more than one instance if
+     * you launch multiple instances using the same launch request. For example, if you
+     * launch one instance, you get one reservation ID. If you launch ten instances
+     * using the same launch request, you also get one reservation ID.</p> </li> <li>
+     * <p> <code>root-device-name</code> - The device name of the root device volume
+     * (for example, <code>/dev/sda1</code>).</p> </li> <li> <p>
      * <code>root-device-type</code> - The type of the root device volume
      * (<code>ebs</code> | <code>instance-store</code>).</p> </li> <li> <p>
      * <code>source-dest-check</code> - Indicates whether the instance performs
@@ -201,7 +205,7 @@ namespace Model
      * <code>state-reason-code</code> - The reason code for the state change.</p> </li>
      * <li> <p> <code>state-reason-message</code> - A message that describes the state
      * change.</p> </li> <li> <p> <code>subnet-id</code> - The ID of the subnet for the
-     * instance.</p> </li> <li> <p> <code>tag</code>:&lt;key&gt; - The key/value
+     * instance.</p> </li> <li> <p> <code>tag:&lt;key&gt;</code> - The key/value
      * combination of a tag assigned to the resource. Use the tag key in the filter
      * name and the tag value as the filter value. For example, to find all resources
      * that have a tag with the key <code>Owner</code> and the value
@@ -272,7 +276,10 @@ namespace Model
      * instance was launched.</p> </li> <li> <p> <code>launch-index</code> - When
      * launching multiple instances, this is the index for the instance in the launch
      * group (for example, 0, 1, 2, and so on). </p> </li> <li> <p>
-     * <code>launch-time</code> - The time when the instance was launched.</p> </li>
+     * <code>launch-time</code> - The time when the instance was launched, in the ISO
+     * 8601 format in the UTC time zone (YYYY-MM-DDThh:mm:ss.sssZ), for example,
+     * <code>2021-09-29T11:04:43.305Z</code>. You can use a wildcard (<code>*</code>),
+     * for example, <code>2021-09-29T*</code>, which matches an entire day.</p> </li>
      * <li> <p> <code>metadata-options.http-tokens</code> - The metadata request
      * authorization state (<code>optional</code> | <code>required</code>)</p> </li>
      * <li> <p> <code>metadata-options.http-put-response-hop-limit</code> - The http
@@ -333,43 +340,44 @@ namespace Model
      * network interface.</p> </li> <li> <p>
      * <code>network-interface.requester-id</code> - The requester ID for the network
      * interface.</p> </li> <li> <p> <code>network-interface.requester-managed</code> -
-     * Indicates whether the network interface is being managed by AWS.</p> </li> <li>
-     * <p> <code>network-interface.status</code> - The status of the network interface
-     * (<code>available</code>) | <code>in-use</code>).</p> </li> <li> <p>
-     * <code>network-interface.source-dest-check</code> - Whether the network interface
-     * performs source/destination checking. A value of <code>true</code> means that
-     * checking is enabled, and <code>false</code> means that checking is disabled. The
-     * value must be <code>false</code> for the network interface to perform network
-     * address translation (NAT) in your VPC.</p> </li> <li> <p>
-     * <code>network-interface.subnet-id</code> - The ID of the subnet for the network
-     * interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> - The ID of
-     * the VPC for the network interface.</p> </li> <li> <p> <code>owner-id</code> -
-     * The AWS account ID of the instance owner.</p> </li> <li> <p>
-     * <code>placement-group-name</code> - The name of the placement group for the
-     * instance.</p> </li> <li> <p> <code>placement-partition-number</code> - The
-     * partition in which the instance is located.</p> </li> <li> <p>
-     * <code>platform</code> - The platform. To list only Windows instances, use
-     * <code>windows</code>.</p> </li> <li> <p> <code>private-dns-name</code> - The
-     * private IPv4 DNS name of the instance.</p> </li> <li> <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.</p>
-     * </li> <li> <p> <code>product-code</code> - The product code associated with the
-     * AMI used to launch the instance.</p> </li> <li> <p>
+     * Indicates whether the network interface is being managed by Amazon Web
+     * Services.</p> </li> <li> <p> <code>network-interface.status</code> - The status
+     * of the network interface (<code>available</code>) | <code>in-use</code>).</p>
+     * </li> <li> <p> <code>network-interface.source-dest-check</code> - Whether the
+     * network interface performs source/destination checking. A value of
+     * <code>true</code> means that checking is enabled, and <code>false</code> means
+     * that checking is disabled. The value must be <code>false</code> for the network
+     * interface to perform network address translation (NAT) in your VPC.</p> </li>
+     * <li> <p> <code>network-interface.subnet-id</code> - The ID of the subnet for the
+     * network interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> -
+     * The ID of the VPC for the network interface.</p> </li> <li> <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.</p>
+     * </li> <li> <p> <code>owner-id</code> - The Amazon Web Services account ID of the
+     * instance owner.</p> </li> <li> <p> <code>placement-group-name</code> - The name
+     * of the placement group for the instance.</p> </li> <li> <p>
+     * <code>placement-partition-number</code> - The partition in which the instance is
+     * located.</p> </li> <li> <p> <code>platform</code> - The platform. To list only
+     * Windows instances, use <code>windows</code>.</p> </li> <li> <p>
+     * <code>private-dns-name</code> - The private IPv4 DNS name of the instance.</p>
+     * </li> <li> <p> <code>private-ip-address</code> - The private IPv4 address of the
+     * instance.</p> </li> <li> <p> <code>product-code</code> - The product code
+     * associated with the AMI used to launch the instance.</p> </li> <li> <p>
      * <code>product-code.type</code> - The type of product code (<code>devpay</code> |
      * <code>marketplace</code>).</p> </li> <li> <p> <code>ramdisk-id</code> - The RAM
      * disk ID.</p> </li> <li> <p> <code>reason</code> - The reason for the current
      * state of the instance (for example, shows "User Initiated [date]" when you stop
      * or terminate the instance). Similar to the state-reason-code filter.</p> </li>
      * <li> <p> <code>requester-id</code> - The ID of the entity that launched the
-     * instance on your behalf (for example, AWS Management Console, Auto Scaling, and
-     * so on).</p> </li> <li> <p> <code>reservation-id</code> - The ID of the
-     * instance's reservation. A reservation ID is created any time you launch an
-     * instance. A reservation ID has a one-to-one relationship with an instance launch
-     * request, but can be associated with more than one instance if you launch
-     * multiple instances using the same launch request. For example, if you launch one
-     * instance, you get one reservation ID. If you launch ten instances using the same
-     * launch request, you also get one reservation ID.</p> </li> <li> <p>
-     * <code>root-device-name</code> - The device name of the root device volume (for
-     * example, <code>/dev/sda1</code>).</p> </li> <li> <p>
+     * instance on your behalf (for example, Amazon Web Services Management Console,
+     * Auto Scaling, and so on).</p> </li> <li> <p> <code>reservation-id</code> - The
+     * ID of the instance's reservation. A reservation ID is created any time you
+     * launch an instance. A reservation ID has a one-to-one relationship with an
+     * instance launch request, but can be associated with more than one instance if
+     * you launch multiple instances using the same launch request. For example, if you
+     * launch one instance, you get one reservation ID. If you launch ten instances
+     * using the same launch request, you also get one reservation ID.</p> </li> <li>
+     * <p> <code>root-device-name</code> - The device name of the root device volume
+     * (for example, <code>/dev/sda1</code>).</p> </li> <li> <p>
      * <code>root-device-type</code> - The type of the root device volume
      * (<code>ebs</code> | <code>instance-store</code>).</p> </li> <li> <p>
      * <code>source-dest-check</code> - Indicates whether the instance performs
@@ -381,7 +389,7 @@ namespace Model
      * <code>state-reason-code</code> - The reason code for the state change.</p> </li>
      * <li> <p> <code>state-reason-message</code> - A message that describes the state
      * change.</p> </li> <li> <p> <code>subnet-id</code> - The ID of the subnet for the
-     * instance.</p> </li> <li> <p> <code>tag</code>:&lt;key&gt; - The key/value
+     * instance.</p> </li> <li> <p> <code>tag:&lt;key&gt;</code> - The key/value
      * combination of a tag assigned to the resource. Use the tag key in the filter
      * name and the tag value as the filter value. For example, to find all resources
      * that have a tag with the key <code>Owner</code> and the value
@@ -452,7 +460,10 @@ namespace Model
      * instance was launched.</p> </li> <li> <p> <code>launch-index</code> - When
      * launching multiple instances, this is the index for the instance in the launch
      * group (for example, 0, 1, 2, and so on). </p> </li> <li> <p>
-     * <code>launch-time</code> - The time when the instance was launched.</p> </li>
+     * <code>launch-time</code> - The time when the instance was launched, in the ISO
+     * 8601 format in the UTC time zone (YYYY-MM-DDThh:mm:ss.sssZ), for example,
+     * <code>2021-09-29T11:04:43.305Z</code>. You can use a wildcard (<code>*</code>),
+     * for example, <code>2021-09-29T*</code>, which matches an entire day.</p> </li>
      * <li> <p> <code>metadata-options.http-tokens</code> - The metadata request
      * authorization state (<code>optional</code> | <code>required</code>)</p> </li>
      * <li> <p> <code>metadata-options.http-put-response-hop-limit</code> - The http
@@ -513,43 +524,44 @@ namespace Model
      * network interface.</p> </li> <li> <p>
      * <code>network-interface.requester-id</code> - The requester ID for the network
      * interface.</p> </li> <li> <p> <code>network-interface.requester-managed</code> -
-     * Indicates whether the network interface is being managed by AWS.</p> </li> <li>
-     * <p> <code>network-interface.status</code> - The status of the network interface
-     * (<code>available</code>) | <code>in-use</code>).</p> </li> <li> <p>
-     * <code>network-interface.source-dest-check</code> - Whether the network interface
-     * performs source/destination checking. A value of <code>true</code> means that
-     * checking is enabled, and <code>false</code> means that checking is disabled. The
-     * value must be <code>false</code> for the network interface to perform network
-     * address translation (NAT) in your VPC.</p> </li> <li> <p>
-     * <code>network-interface.subnet-id</code> - The ID of the subnet for the network
-     * interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> - The ID of
-     * the VPC for the network interface.</p> </li> <li> <p> <code>owner-id</code> -
-     * The AWS account ID of the instance owner.</p> </li> <li> <p>
-     * <code>placement-group-name</code> - The name of the placement group for the
-     * instance.</p> </li> <li> <p> <code>placement-partition-number</code> - The
-     * partition in which the instance is located.</p> </li> <li> <p>
-     * <code>platform</code> - The platform. To list only Windows instances, use
-     * <code>windows</code>.</p> </li> <li> <p> <code>private-dns-name</code> - The
-     * private IPv4 DNS name of the instance.</p> </li> <li> <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.</p>
-     * </li> <li> <p> <code>product-code</code> - The product code associated with the
-     * AMI used to launch the instance.</p> </li> <li> <p>
+     * Indicates whether the network interface is being managed by Amazon Web
+     * Services.</p> </li> <li> <p> <code>network-interface.status</code> - The status
+     * of the network interface (<code>available</code>) | <code>in-use</code>).</p>
+     * </li> <li> <p> <code>network-interface.source-dest-check</code> - Whether the
+     * network interface performs source/destination checking. A value of
+     * <code>true</code> means that checking is enabled, and <code>false</code> means
+     * that checking is disabled. The value must be <code>false</code> for the network
+     * interface to perform network address translation (NAT) in your VPC.</p> </li>
+     * <li> <p> <code>network-interface.subnet-id</code> - The ID of the subnet for the
+     * network interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> -
+     * The ID of the VPC for the network interface.</p> </li> <li> <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.</p>
+     * </li> <li> <p> <code>owner-id</code> - The Amazon Web Services account ID of the
+     * instance owner.</p> </li> <li> <p> <code>placement-group-name</code> - The name
+     * of the placement group for the instance.</p> </li> <li> <p>
+     * <code>placement-partition-number</code> - The partition in which the instance is
+     * located.</p> </li> <li> <p> <code>platform</code> - The platform. To list only
+     * Windows instances, use <code>windows</code>.</p> </li> <li> <p>
+     * <code>private-dns-name</code> - The private IPv4 DNS name of the instance.</p>
+     * </li> <li> <p> <code>private-ip-address</code> - The private IPv4 address of the
+     * instance.</p> </li> <li> <p> <code>product-code</code> - The product code
+     * associated with the AMI used to launch the instance.</p> </li> <li> <p>
      * <code>product-code.type</code> - The type of product code (<code>devpay</code> |
      * <code>marketplace</code>).</p> </li> <li> <p> <code>ramdisk-id</code> - The RAM
      * disk ID.</p> </li> <li> <p> <code>reason</code> - The reason for the current
      * state of the instance (for example, shows "User Initiated [date]" when you stop
      * or terminate the instance). Similar to the state-reason-code filter.</p> </li>
      * <li> <p> <code>requester-id</code> - The ID of the entity that launched the
-     * instance on your behalf (for example, AWS Management Console, Auto Scaling, and
-     * so on).</p> </li> <li> <p> <code>reservation-id</code> - The ID of the
-     * instance's reservation. A reservation ID is created any time you launch an
-     * instance. A reservation ID has a one-to-one relationship with an instance launch
-     * request, but can be associated with more than one instance if you launch
-     * multiple instances using the same launch request. For example, if you launch one
-     * instance, you get one reservation ID. If you launch ten instances using the same
-     * launch request, you also get one reservation ID.</p> </li> <li> <p>
-     * <code>root-device-name</code> - The device name of the root device volume (for
-     * example, <code>/dev/sda1</code>).</p> </li> <li> <p>
+     * instance on your behalf (for example, Amazon Web Services Management Console,
+     * Auto Scaling, and so on).</p> </li> <li> <p> <code>reservation-id</code> - The
+     * ID of the instance's reservation. A reservation ID is created any time you
+     * launch an instance. A reservation ID has a one-to-one relationship with an
+     * instance launch request, but can be associated with more than one instance if
+     * you launch multiple instances using the same launch request. For example, if you
+     * launch one instance, you get one reservation ID. If you launch ten instances
+     * using the same launch request, you also get one reservation ID.</p> </li> <li>
+     * <p> <code>root-device-name</code> - The device name of the root device volume
+     * (for example, <code>/dev/sda1</code>).</p> </li> <li> <p>
      * <code>root-device-type</code> - The type of the root device volume
      * (<code>ebs</code> | <code>instance-store</code>).</p> </li> <li> <p>
      * <code>source-dest-check</code> - Indicates whether the instance performs
@@ -561,7 +573,7 @@ namespace Model
      * <code>state-reason-code</code> - The reason code for the state change.</p> </li>
      * <li> <p> <code>state-reason-message</code> - A message that describes the state
      * change.</p> </li> <li> <p> <code>subnet-id</code> - The ID of the subnet for the
-     * instance.</p> </li> <li> <p> <code>tag</code>:&lt;key&gt; - The key/value
+     * instance.</p> </li> <li> <p> <code>tag:&lt;key&gt;</code> - The key/value
      * combination of a tag assigned to the resource. Use the tag key in the filter
      * name and the tag value as the filter value. For example, to find all resources
      * that have a tag with the key <code>Owner</code> and the value
@@ -632,7 +644,10 @@ namespace Model
      * instance was launched.</p> </li> <li> <p> <code>launch-index</code> - When
      * launching multiple instances, this is the index for the instance in the launch
      * group (for example, 0, 1, 2, and so on). </p> </li> <li> <p>
-     * <code>launch-time</code> - The time when the instance was launched.</p> </li>
+     * <code>launch-time</code> - The time when the instance was launched, in the ISO
+     * 8601 format in the UTC time zone (YYYY-MM-DDThh:mm:ss.sssZ), for example,
+     * <code>2021-09-29T11:04:43.305Z</code>. You can use a wildcard (<code>*</code>),
+     * for example, <code>2021-09-29T*</code>, which matches an entire day.</p> </li>
      * <li> <p> <code>metadata-options.http-tokens</code> - The metadata request
      * authorization state (<code>optional</code> | <code>required</code>)</p> </li>
      * <li> <p> <code>metadata-options.http-put-response-hop-limit</code> - The http
@@ -693,43 +708,44 @@ namespace Model
      * network interface.</p> </li> <li> <p>
      * <code>network-interface.requester-id</code> - The requester ID for the network
      * interface.</p> </li> <li> <p> <code>network-interface.requester-managed</code> -
-     * Indicates whether the network interface is being managed by AWS.</p> </li> <li>
-     * <p> <code>network-interface.status</code> - The status of the network interface
-     * (<code>available</code>) | <code>in-use</code>).</p> </li> <li> <p>
-     * <code>network-interface.source-dest-check</code> - Whether the network interface
-     * performs source/destination checking. A value of <code>true</code> means that
-     * checking is enabled, and <code>false</code> means that checking is disabled. The
-     * value must be <code>false</code> for the network interface to perform network
-     * address translation (NAT) in your VPC.</p> </li> <li> <p>
-     * <code>network-interface.subnet-id</code> - The ID of the subnet for the network
-     * interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> - The ID of
-     * the VPC for the network interface.</p> </li> <li> <p> <code>owner-id</code> -
-     * The AWS account ID of the instance owner.</p> </li> <li> <p>
-     * <code>placement-group-name</code> - The name of the placement group for the
-     * instance.</p> </li> <li> <p> <code>placement-partition-number</code> - The
-     * partition in which the instance is located.</p> </li> <li> <p>
-     * <code>platform</code> - The platform. To list only Windows instances, use
-     * <code>windows</code>.</p> </li> <li> <p> <code>private-dns-name</code> - The
-     * private IPv4 DNS name of the instance.</p> </li> <li> <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.</p>
-     * </li> <li> <p> <code>product-code</code> - The product code associated with the
-     * AMI used to launch the instance.</p> </li> <li> <p>
+     * Indicates whether the network interface is being managed by Amazon Web
+     * Services.</p> </li> <li> <p> <code>network-interface.status</code> - The status
+     * of the network interface (<code>available</code>) | <code>in-use</code>).</p>
+     * </li> <li> <p> <code>network-interface.source-dest-check</code> - Whether the
+     * network interface performs source/destination checking. A value of
+     * <code>true</code> means that checking is enabled, and <code>false</code> means
+     * that checking is disabled. The value must be <code>false</code> for the network
+     * interface to perform network address translation (NAT) in your VPC.</p> </li>
+     * <li> <p> <code>network-interface.subnet-id</code> - The ID of the subnet for the
+     * network interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> -
+     * The ID of the VPC for the network interface.</p> </li> <li> <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.</p>
+     * </li> <li> <p> <code>owner-id</code> - The Amazon Web Services account ID of the
+     * instance owner.</p> </li> <li> <p> <code>placement-group-name</code> - The name
+     * of the placement group for the instance.</p> </li> <li> <p>
+     * <code>placement-partition-number</code> - The partition in which the instance is
+     * located.</p> </li> <li> <p> <code>platform</code> - The platform. To list only
+     * Windows instances, use <code>windows</code>.</p> </li> <li> <p>
+     * <code>private-dns-name</code> - The private IPv4 DNS name of the instance.</p>
+     * </li> <li> <p> <code>private-ip-address</code> - The private IPv4 address of the
+     * instance.</p> </li> <li> <p> <code>product-code</code> - The product code
+     * associated with the AMI used to launch the instance.</p> </li> <li> <p>
      * <code>product-code.type</code> - The type of product code (<code>devpay</code> |
      * <code>marketplace</code>).</p> </li> <li> <p> <code>ramdisk-id</code> - The RAM
      * disk ID.</p> </li> <li> <p> <code>reason</code> - The reason for the current
      * state of the instance (for example, shows "User Initiated [date]" when you stop
      * or terminate the instance). Similar to the state-reason-code filter.</p> </li>
      * <li> <p> <code>requester-id</code> - The ID of the entity that launched the
-     * instance on your behalf (for example, AWS Management Console, Auto Scaling, and
-     * so on).</p> </li> <li> <p> <code>reservation-id</code> - The ID of the
-     * instance's reservation. A reservation ID is created any time you launch an
-     * instance. A reservation ID has a one-to-one relationship with an instance launch
-     * request, but can be associated with more than one instance if you launch
-     * multiple instances using the same launch request. For example, if you launch one
-     * instance, you get one reservation ID. If you launch ten instances using the same
-     * launch request, you also get one reservation ID.</p> </li> <li> <p>
-     * <code>root-device-name</code> - The device name of the root device volume (for
-     * example, <code>/dev/sda1</code>).</p> </li> <li> <p>
+     * instance on your behalf (for example, Amazon Web Services Management Console,
+     * Auto Scaling, and so on).</p> </li> <li> <p> <code>reservation-id</code> - The
+     * ID of the instance's reservation. A reservation ID is created any time you
+     * launch an instance. A reservation ID has a one-to-one relationship with an
+     * instance launch request, but can be associated with more than one instance if
+     * you launch multiple instances using the same launch request. For example, if you
+     * launch one instance, you get one reservation ID. If you launch ten instances
+     * using the same launch request, you also get one reservation ID.</p> </li> <li>
+     * <p> <code>root-device-name</code> - The device name of the root device volume
+     * (for example, <code>/dev/sda1</code>).</p> </li> <li> <p>
      * <code>root-device-type</code> - The type of the root device volume
      * (<code>ebs</code> | <code>instance-store</code>).</p> </li> <li> <p>
      * <code>source-dest-check</code> - Indicates whether the instance performs
@@ -741,7 +757,7 @@ namespace Model
      * <code>state-reason-code</code> - The reason code for the state change.</p> </li>
      * <li> <p> <code>state-reason-message</code> - A message that describes the state
      * change.</p> </li> <li> <p> <code>subnet-id</code> - The ID of the subnet for the
-     * instance.</p> </li> <li> <p> <code>tag</code>:&lt;key&gt; - The key/value
+     * instance.</p> </li> <li> <p> <code>tag:&lt;key&gt;</code> - The key/value
      * combination of a tag assigned to the resource. Use the tag key in the filter
      * name and the tag value as the filter value. For example, to find all resources
      * that have a tag with the key <code>Owner</code> and the value
@@ -812,7 +828,10 @@ namespace Model
      * instance was launched.</p> </li> <li> <p> <code>launch-index</code> - When
      * launching multiple instances, this is the index for the instance in the launch
      * group (for example, 0, 1, 2, and so on). </p> </li> <li> <p>
-     * <code>launch-time</code> - The time when the instance was launched.</p> </li>
+     * <code>launch-time</code> - The time when the instance was launched, in the ISO
+     * 8601 format in the UTC time zone (YYYY-MM-DDThh:mm:ss.sssZ), for example,
+     * <code>2021-09-29T11:04:43.305Z</code>. You can use a wildcard (<code>*</code>),
+     * for example, <code>2021-09-29T*</code>, which matches an entire day.</p> </li>
      * <li> <p> <code>metadata-options.http-tokens</code> - The metadata request
      * authorization state (<code>optional</code> | <code>required</code>)</p> </li>
      * <li> <p> <code>metadata-options.http-put-response-hop-limit</code> - The http
@@ -873,43 +892,44 @@ namespace Model
      * network interface.</p> </li> <li> <p>
      * <code>network-interface.requester-id</code> - The requester ID for the network
      * interface.</p> </li> <li> <p> <code>network-interface.requester-managed</code> -
-     * Indicates whether the network interface is being managed by AWS.</p> </li> <li>
-     * <p> <code>network-interface.status</code> - The status of the network interface
-     * (<code>available</code>) | <code>in-use</code>).</p> </li> <li> <p>
-     * <code>network-interface.source-dest-check</code> - Whether the network interface
-     * performs source/destination checking. A value of <code>true</code> means that
-     * checking is enabled, and <code>false</code> means that checking is disabled. The
-     * value must be <code>false</code> for the network interface to perform network
-     * address translation (NAT) in your VPC.</p> </li> <li> <p>
-     * <code>network-interface.subnet-id</code> - The ID of the subnet for the network
-     * interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> - The ID of
-     * the VPC for the network interface.</p> </li> <li> <p> <code>owner-id</code> -
-     * The AWS account ID of the instance owner.</p> </li> <li> <p>
-     * <code>placement-group-name</code> - The name of the placement group for the
-     * instance.</p> </li> <li> <p> <code>placement-partition-number</code> - The
-     * partition in which the instance is located.</p> </li> <li> <p>
-     * <code>platform</code> - The platform. To list only Windows instances, use
-     * <code>windows</code>.</p> </li> <li> <p> <code>private-dns-name</code> - The
-     * private IPv4 DNS name of the instance.</p> </li> <li> <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.</p>
-     * </li> <li> <p> <code>product-code</code> - The product code associated with the
-     * AMI used to launch the instance.</p> </li> <li> <p>
+     * Indicates whether the network interface is being managed by Amazon Web
+     * Services.</p> </li> <li> <p> <code>network-interface.status</code> - The status
+     * of the network interface (<code>available</code>) | <code>in-use</code>).</p>
+     * </li> <li> <p> <code>network-interface.source-dest-check</code> - Whether the
+     * network interface performs source/destination checking. A value of
+     * <code>true</code> means that checking is enabled, and <code>false</code> means
+     * that checking is disabled. The value must be <code>false</code> for the network
+     * interface to perform network address translation (NAT) in your VPC.</p> </li>
+     * <li> <p> <code>network-interface.subnet-id</code> - The ID of the subnet for the
+     * network interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> -
+     * The ID of the VPC for the network interface.</p> </li> <li> <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.</p>
+     * </li> <li> <p> <code>owner-id</code> - The Amazon Web Services account ID of the
+     * instance owner.</p> </li> <li> <p> <code>placement-group-name</code> - The name
+     * of the placement group for the instance.</p> </li> <li> <p>
+     * <code>placement-partition-number</code> - The partition in which the instance is
+     * located.</p> </li> <li> <p> <code>platform</code> - The platform. To list only
+     * Windows instances, use <code>windows</code>.</p> </li> <li> <p>
+     * <code>private-dns-name</code> - The private IPv4 DNS name of the instance.</p>
+     * </li> <li> <p> <code>private-ip-address</code> - The private IPv4 address of the
+     * instance.</p> </li> <li> <p> <code>product-code</code> - The product code
+     * associated with the AMI used to launch the instance.</p> </li> <li> <p>
      * <code>product-code.type</code> - The type of product code (<code>devpay</code> |
      * <code>marketplace</code>).</p> </li> <li> <p> <code>ramdisk-id</code> - The RAM
      * disk ID.</p> </li> <li> <p> <code>reason</code> - The reason for the current
      * state of the instance (for example, shows "User Initiated [date]" when you stop
      * or terminate the instance). Similar to the state-reason-code filter.</p> </li>
      * <li> <p> <code>requester-id</code> - The ID of the entity that launched the
-     * instance on your behalf (for example, AWS Management Console, Auto Scaling, and
-     * so on).</p> </li> <li> <p> <code>reservation-id</code> - The ID of the
-     * instance's reservation. A reservation ID is created any time you launch an
-     * instance. A reservation ID has a one-to-one relationship with an instance launch
-     * request, but can be associated with more than one instance if you launch
-     * multiple instances using the same launch request. For example, if you launch one
-     * instance, you get one reservation ID. If you launch ten instances using the same
-     * launch request, you also get one reservation ID.</p> </li> <li> <p>
-     * <code>root-device-name</code> - The device name of the root device volume (for
-     * example, <code>/dev/sda1</code>).</p> </li> <li> <p>
+     * instance on your behalf (for example, Amazon Web Services Management Console,
+     * Auto Scaling, and so on).</p> </li> <li> <p> <code>reservation-id</code> - The
+     * ID of the instance's reservation. A reservation ID is created any time you
+     * launch an instance. A reservation ID has a one-to-one relationship with an
+     * instance launch request, but can be associated with more than one instance if
+     * you launch multiple instances using the same launch request. For example, if you
+     * launch one instance, you get one reservation ID. If you launch ten instances
+     * using the same launch request, you also get one reservation ID.</p> </li> <li>
+     * <p> <code>root-device-name</code> - The device name of the root device volume
+     * (for example, <code>/dev/sda1</code>).</p> </li> <li> <p>
      * <code>root-device-type</code> - The type of the root device volume
      * (<code>ebs</code> | <code>instance-store</code>).</p> </li> <li> <p>
      * <code>source-dest-check</code> - Indicates whether the instance performs
@@ -921,7 +941,7 @@ namespace Model
      * <code>state-reason-code</code> - The reason code for the state change.</p> </li>
      * <li> <p> <code>state-reason-message</code> - A message that describes the state
      * change.</p> </li> <li> <p> <code>subnet-id</code> - The ID of the subnet for the
-     * instance.</p> </li> <li> <p> <code>tag</code>:&lt;key&gt; - The key/value
+     * instance.</p> </li> <li> <p> <code>tag:&lt;key&gt;</code> - The key/value
      * combination of a tag assigned to the resource. Use the tag key in the filter
      * name and the tag value as the filter value. For example, to find all resources
      * that have a tag with the key <code>Owner</code> and the value
@@ -992,7 +1012,10 @@ namespace Model
      * instance was launched.</p> </li> <li> <p> <code>launch-index</code> - When
      * launching multiple instances, this is the index for the instance in the launch
      * group (for example, 0, 1, 2, and so on). </p> </li> <li> <p>
-     * <code>launch-time</code> - The time when the instance was launched.</p> </li>
+     * <code>launch-time</code> - The time when the instance was launched, in the ISO
+     * 8601 format in the UTC time zone (YYYY-MM-DDThh:mm:ss.sssZ), for example,
+     * <code>2021-09-29T11:04:43.305Z</code>. You can use a wildcard (<code>*</code>),
+     * for example, <code>2021-09-29T*</code>, which matches an entire day.</p> </li>
      * <li> <p> <code>metadata-options.http-tokens</code> - The metadata request
      * authorization state (<code>optional</code> | <code>required</code>)</p> </li>
      * <li> <p> <code>metadata-options.http-put-response-hop-limit</code> - The http
@@ -1053,43 +1076,44 @@ namespace Model
      * network interface.</p> </li> <li> <p>
      * <code>network-interface.requester-id</code> - The requester ID for the network
      * interface.</p> </li> <li> <p> <code>network-interface.requester-managed</code> -
-     * Indicates whether the network interface is being managed by AWS.</p> </li> <li>
-     * <p> <code>network-interface.status</code> - The status of the network interface
-     * (<code>available</code>) | <code>in-use</code>).</p> </li> <li> <p>
-     * <code>network-interface.source-dest-check</code> - Whether the network interface
-     * performs source/destination checking. A value of <code>true</code> means that
-     * checking is enabled, and <code>false</code> means that checking is disabled. The
-     * value must be <code>false</code> for the network interface to perform network
-     * address translation (NAT) in your VPC.</p> </li> <li> <p>
-     * <code>network-interface.subnet-id</code> - The ID of the subnet for the network
-     * interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> - The ID of
-     * the VPC for the network interface.</p> </li> <li> <p> <code>owner-id</code> -
-     * The AWS account ID of the instance owner.</p> </li> <li> <p>
-     * <code>placement-group-name</code> - The name of the placement group for the
-     * instance.</p> </li> <li> <p> <code>placement-partition-number</code> - The
-     * partition in which the instance is located.</p> </li> <li> <p>
-     * <code>platform</code> - The platform. To list only Windows instances, use
-     * <code>windows</code>.</p> </li> <li> <p> <code>private-dns-name</code> - The
-     * private IPv4 DNS name of the instance.</p> </li> <li> <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.</p>
-     * </li> <li> <p> <code>product-code</code> - The product code associated with the
-     * AMI used to launch the instance.</p> </li> <li> <p>
+     * Indicates whether the network interface is being managed by Amazon Web
+     * Services.</p> </li> <li> <p> <code>network-interface.status</code> - The status
+     * of the network interface (<code>available</code>) | <code>in-use</code>).</p>
+     * </li> <li> <p> <code>network-interface.source-dest-check</code> - Whether the
+     * network interface performs source/destination checking. A value of
+     * <code>true</code> means that checking is enabled, and <code>false</code> means
+     * that checking is disabled. The value must be <code>false</code> for the network
+     * interface to perform network address translation (NAT) in your VPC.</p> </li>
+     * <li> <p> <code>network-interface.subnet-id</code> - The ID of the subnet for the
+     * network interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> -
+     * The ID of the VPC for the network interface.</p> </li> <li> <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.</p>
+     * </li> <li> <p> <code>owner-id</code> - The Amazon Web Services account ID of the
+     * instance owner.</p> </li> <li> <p> <code>placement-group-name</code> - The name
+     * of the placement group for the instance.</p> </li> <li> <p>
+     * <code>placement-partition-number</code> - The partition in which the instance is
+     * located.</p> </li> <li> <p> <code>platform</code> - The platform. To list only
+     * Windows instances, use <code>windows</code>.</p> </li> <li> <p>
+     * <code>private-dns-name</code> - The private IPv4 DNS name of the instance.</p>
+     * </li> <li> <p> <code>private-ip-address</code> - The private IPv4 address of the
+     * instance.</p> </li> <li> <p> <code>product-code</code> - The product code
+     * associated with the AMI used to launch the instance.</p> </li> <li> <p>
      * <code>product-code.type</code> - The type of product code (<code>devpay</code> |
      * <code>marketplace</code>).</p> </li> <li> <p> <code>ramdisk-id</code> - The RAM
      * disk ID.</p> </li> <li> <p> <code>reason</code> - The reason for the current
      * state of the instance (for example, shows "User Initiated [date]" when you stop
      * or terminate the instance). Similar to the state-reason-code filter.</p> </li>
      * <li> <p> <code>requester-id</code> - The ID of the entity that launched the
-     * instance on your behalf (for example, AWS Management Console, Auto Scaling, and
-     * so on).</p> </li> <li> <p> <code>reservation-id</code> - The ID of the
-     * instance's reservation. A reservation ID is created any time you launch an
-     * instance. A reservation ID has a one-to-one relationship with an instance launch
-     * request, but can be associated with more than one instance if you launch
-     * multiple instances using the same launch request. For example, if you launch one
-     * instance, you get one reservation ID. If you launch ten instances using the same
-     * launch request, you also get one reservation ID.</p> </li> <li> <p>
-     * <code>root-device-name</code> - The device name of the root device volume (for
-     * example, <code>/dev/sda1</code>).</p> </li> <li> <p>
+     * instance on your behalf (for example, Amazon Web Services Management Console,
+     * Auto Scaling, and so on).</p> </li> <li> <p> <code>reservation-id</code> - The
+     * ID of the instance's reservation. A reservation ID is created any time you
+     * launch an instance. A reservation ID has a one-to-one relationship with an
+     * instance launch request, but can be associated with more than one instance if
+     * you launch multiple instances using the same launch request. For example, if you
+     * launch one instance, you get one reservation ID. If you launch ten instances
+     * using the same launch request, you also get one reservation ID.</p> </li> <li>
+     * <p> <code>root-device-name</code> - The device name of the root device volume
+     * (for example, <code>/dev/sda1</code>).</p> </li> <li> <p>
      * <code>root-device-type</code> - The type of the root device volume
      * (<code>ebs</code> | <code>instance-store</code>).</p> </li> <li> <p>
      * <code>source-dest-check</code> - Indicates whether the instance performs
@@ -1101,7 +1125,7 @@ namespace Model
      * <code>state-reason-code</code> - The reason code for the state change.</p> </li>
      * <li> <p> <code>state-reason-message</code> - A message that describes the state
      * change.</p> </li> <li> <p> <code>subnet-id</code> - The ID of the subnet for the
-     * instance.</p> </li> <li> <p> <code>tag</code>:&lt;key&gt; - The key/value
+     * instance.</p> </li> <li> <p> <code>tag:&lt;key&gt;</code> - The key/value
      * combination of a tag assigned to the resource. Use the tag key in the filter
      * name and the tag value as the filter value. For example, to find all resources
      * that have a tag with the key <code>Owner</code> and the value
@@ -1172,7 +1196,10 @@ namespace Model
      * instance was launched.</p> </li> <li> <p> <code>launch-index</code> - When
      * launching multiple instances, this is the index for the instance in the launch
      * group (for example, 0, 1, 2, and so on). </p> </li> <li> <p>
-     * <code>launch-time</code> - The time when the instance was launched.</p> </li>
+     * <code>launch-time</code> - The time when the instance was launched, in the ISO
+     * 8601 format in the UTC time zone (YYYY-MM-DDThh:mm:ss.sssZ), for example,
+     * <code>2021-09-29T11:04:43.305Z</code>. You can use a wildcard (<code>*</code>),
+     * for example, <code>2021-09-29T*</code>, which matches an entire day.</p> </li>
      * <li> <p> <code>metadata-options.http-tokens</code> - The metadata request
      * authorization state (<code>optional</code> | <code>required</code>)</p> </li>
      * <li> <p> <code>metadata-options.http-put-response-hop-limit</code> - The http
@@ -1233,43 +1260,44 @@ namespace Model
      * network interface.</p> </li> <li> <p>
      * <code>network-interface.requester-id</code> - The requester ID for the network
      * interface.</p> </li> <li> <p> <code>network-interface.requester-managed</code> -
-     * Indicates whether the network interface is being managed by AWS.</p> </li> <li>
-     * <p> <code>network-interface.status</code> - The status of the network interface
-     * (<code>available</code>) | <code>in-use</code>).</p> </li> <li> <p>
-     * <code>network-interface.source-dest-check</code> - Whether the network interface
-     * performs source/destination checking. A value of <code>true</code> means that
-     * checking is enabled, and <code>false</code> means that checking is disabled. The
-     * value must be <code>false</code> for the network interface to perform network
-     * address translation (NAT) in your VPC.</p> </li> <li> <p>
-     * <code>network-interface.subnet-id</code> - The ID of the subnet for the network
-     * interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> - The ID of
-     * the VPC for the network interface.</p> </li> <li> <p> <code>owner-id</code> -
-     * The AWS account ID of the instance owner.</p> </li> <li> <p>
-     * <code>placement-group-name</code> - The name of the placement group for the
-     * instance.</p> </li> <li> <p> <code>placement-partition-number</code> - The
-     * partition in which the instance is located.</p> </li> <li> <p>
-     * <code>platform</code> - The platform. To list only Windows instances, use
-     * <code>windows</code>.</p> </li> <li> <p> <code>private-dns-name</code> - The
-     * private IPv4 DNS name of the instance.</p> </li> <li> <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.</p>
-     * </li> <li> <p> <code>product-code</code> - The product code associated with the
-     * AMI used to launch the instance.</p> </li> <li> <p>
+     * Indicates whether the network interface is being managed by Amazon Web
+     * Services.</p> </li> <li> <p> <code>network-interface.status</code> - The status
+     * of the network interface (<code>available</code>) | <code>in-use</code>).</p>
+     * </li> <li> <p> <code>network-interface.source-dest-check</code> - Whether the
+     * network interface performs source/destination checking. A value of
+     * <code>true</code> means that checking is enabled, and <code>false</code> means
+     * that checking is disabled. The value must be <code>false</code> for the network
+     * interface to perform network address translation (NAT) in your VPC.</p> </li>
+     * <li> <p> <code>network-interface.subnet-id</code> - The ID of the subnet for the
+     * network interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> -
+     * The ID of the VPC for the network interface.</p> </li> <li> <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.</p>
+     * </li> <li> <p> <code>owner-id</code> - The Amazon Web Services account ID of the
+     * instance owner.</p> </li> <li> <p> <code>placement-group-name</code> - The name
+     * of the placement group for the instance.</p> </li> <li> <p>
+     * <code>placement-partition-number</code> - The partition in which the instance is
+     * located.</p> </li> <li> <p> <code>platform</code> - The platform. To list only
+     * Windows instances, use <code>windows</code>.</p> </li> <li> <p>
+     * <code>private-dns-name</code> - The private IPv4 DNS name of the instance.</p>
+     * </li> <li> <p> <code>private-ip-address</code> - The private IPv4 address of the
+     * instance.</p> </li> <li> <p> <code>product-code</code> - The product code
+     * associated with the AMI used to launch the instance.</p> </li> <li> <p>
      * <code>product-code.type</code> - The type of product code (<code>devpay</code> |
      * <code>marketplace</code>).</p> </li> <li> <p> <code>ramdisk-id</code> - The RAM
      * disk ID.</p> </li> <li> <p> <code>reason</code> - The reason for the current
      * state of the instance (for example, shows "User Initiated [date]" when you stop
      * or terminate the instance). Similar to the state-reason-code filter.</p> </li>
      * <li> <p> <code>requester-id</code> - The ID of the entity that launched the
-     * instance on your behalf (for example, AWS Management Console, Auto Scaling, and
-     * so on).</p> </li> <li> <p> <code>reservation-id</code> - The ID of the
-     * instance's reservation. A reservation ID is created any time you launch an
-     * instance. A reservation ID has a one-to-one relationship with an instance launch
-     * request, but can be associated with more than one instance if you launch
-     * multiple instances using the same launch request. For example, if you launch one
-     * instance, you get one reservation ID. If you launch ten instances using the same
-     * launch request, you also get one reservation ID.</p> </li> <li> <p>
-     * <code>root-device-name</code> - The device name of the root device volume (for
-     * example, <code>/dev/sda1</code>).</p> </li> <li> <p>
+     * instance on your behalf (for example, Amazon Web Services Management Console,
+     * Auto Scaling, and so on).</p> </li> <li> <p> <code>reservation-id</code> - The
+     * ID of the instance's reservation. A reservation ID is created any time you
+     * launch an instance. A reservation ID has a one-to-one relationship with an
+     * instance launch request, but can be associated with more than one instance if
+     * you launch multiple instances using the same launch request. For example, if you
+     * launch one instance, you get one reservation ID. If you launch ten instances
+     * using the same launch request, you also get one reservation ID.</p> </li> <li>
+     * <p> <code>root-device-name</code> - The device name of the root device volume
+     * (for example, <code>/dev/sda1</code>).</p> </li> <li> <p>
      * <code>root-device-type</code> - The type of the root device volume
      * (<code>ebs</code> | <code>instance-store</code>).</p> </li> <li> <p>
      * <code>source-dest-check</code> - Indicates whether the instance performs
@@ -1281,7 +1309,7 @@ namespace Model
      * <code>state-reason-code</code> - The reason code for the state change.</p> </li>
      * <li> <p> <code>state-reason-message</code> - A message that describes the state
      * change.</p> </li> <li> <p> <code>subnet-id</code> - The ID of the subnet for the
-     * instance.</p> </li> <li> <p> <code>tag</code>:&lt;key&gt; - The key/value
+     * instance.</p> </li> <li> <p> <code>tag:&lt;key&gt;</code> - The key/value
      * combination of a tag assigned to the resource. Use the tag key in the filter
      * name and the tag value as the filter value. For example, to find all resources
      * that have a tag with the key <code>Owner</code> and the value
@@ -1352,7 +1380,10 @@ namespace Model
      * instance was launched.</p> </li> <li> <p> <code>launch-index</code> - When
      * launching multiple instances, this is the index for the instance in the launch
      * group (for example, 0, 1, 2, and so on). </p> </li> <li> <p>
-     * <code>launch-time</code> - The time when the instance was launched.</p> </li>
+     * <code>launch-time</code> - The time when the instance was launched, in the ISO
+     * 8601 format in the UTC time zone (YYYY-MM-DDThh:mm:ss.sssZ), for example,
+     * <code>2021-09-29T11:04:43.305Z</code>. You can use a wildcard (<code>*</code>),
+     * for example, <code>2021-09-29T*</code>, which matches an entire day.</p> </li>
      * <li> <p> <code>metadata-options.http-tokens</code> - The metadata request
      * authorization state (<code>optional</code> | <code>required</code>)</p> </li>
      * <li> <p> <code>metadata-options.http-put-response-hop-limit</code> - The http
@@ -1413,43 +1444,44 @@ namespace Model
      * network interface.</p> </li> <li> <p>
      * <code>network-interface.requester-id</code> - The requester ID for the network
      * interface.</p> </li> <li> <p> <code>network-interface.requester-managed</code> -
-     * Indicates whether the network interface is being managed by AWS.</p> </li> <li>
-     * <p> <code>network-interface.status</code> - The status of the network interface
-     * (<code>available</code>) | <code>in-use</code>).</p> </li> <li> <p>
-     * <code>network-interface.source-dest-check</code> - Whether the network interface
-     * performs source/destination checking. A value of <code>true</code> means that
-     * checking is enabled, and <code>false</code> means that checking is disabled. The
-     * value must be <code>false</code> for the network interface to perform network
-     * address translation (NAT) in your VPC.</p> </li> <li> <p>
-     * <code>network-interface.subnet-id</code> - The ID of the subnet for the network
-     * interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> - The ID of
-     * the VPC for the network interface.</p> </li> <li> <p> <code>owner-id</code> -
-     * The AWS account ID of the instance owner.</p> </li> <li> <p>
-     * <code>placement-group-name</code> - The name of the placement group for the
-     * instance.</p> </li> <li> <p> <code>placement-partition-number</code> - The
-     * partition in which the instance is located.</p> </li> <li> <p>
-     * <code>platform</code> - The platform. To list only Windows instances, use
-     * <code>windows</code>.</p> </li> <li> <p> <code>private-dns-name</code> - The
-     * private IPv4 DNS name of the instance.</p> </li> <li> <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.</p>
-     * </li> <li> <p> <code>product-code</code> - The product code associated with the
-     * AMI used to launch the instance.</p> </li> <li> <p>
+     * Indicates whether the network interface is being managed by Amazon Web
+     * Services.</p> </li> <li> <p> <code>network-interface.status</code> - The status
+     * of the network interface (<code>available</code>) | <code>in-use</code>).</p>
+     * </li> <li> <p> <code>network-interface.source-dest-check</code> - Whether the
+     * network interface performs source/destination checking. A value of
+     * <code>true</code> means that checking is enabled, and <code>false</code> means
+     * that checking is disabled. The value must be <code>false</code> for the network
+     * interface to perform network address translation (NAT) in your VPC.</p> </li>
+     * <li> <p> <code>network-interface.subnet-id</code> - The ID of the subnet for the
+     * network interface.</p> </li> <li> <p> <code>network-interface.vpc-id</code> -
+     * The ID of the VPC for the network interface.</p> </li> <li> <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.</p>
+     * </li> <li> <p> <code>owner-id</code> - The Amazon Web Services account ID of the
+     * instance owner.</p> </li> <li> <p> <code>placement-group-name</code> - The name
+     * of the placement group for the instance.</p> </li> <li> <p>
+     * <code>placement-partition-number</code> - The partition in which the instance is
+     * located.</p> </li> <li> <p> <code>platform</code> - The platform. To list only
+     * Windows instances, use <code>windows</code>.</p> </li> <li> <p>
+     * <code>private-dns-name</code> - The private IPv4 DNS name of the instance.</p>
+     * </li> <li> <p> <code>private-ip-address</code> - The private IPv4 address of the
+     * instance.</p> </li> <li> <p> <code>product-code</code> - The product code
+     * associated with the AMI used to launch the instance.</p> </li> <li> <p>
      * <code>product-code.type</code> - The type of product code (<code>devpay</code> |
      * <code>marketplace</code>).</p> </li> <li> <p> <code>ramdisk-id</code> - The RAM
      * disk ID.</p> </li> <li> <p> <code>reason</code> - The reason for the current
      * state of the instance (for example, shows "User Initiated [date]" when you stop
      * or terminate the instance). Similar to the state-reason-code filter.</p> </li>
      * <li> <p> <code>requester-id</code> - The ID of the entity that launched the
-     * instance on your behalf (for example, AWS Management Console, Auto Scaling, and
-     * so on).</p> </li> <li> <p> <code>reservation-id</code> - The ID of the
-     * instance's reservation. A reservation ID is created any time you launch an
-     * instance. A reservation ID has a one-to-one relationship with an instance launch
-     * request, but can be associated with more than one instance if you launch
-     * multiple instances using the same launch request. For example, if you launch one
-     * instance, you get one reservation ID. If you launch ten instances using the same
-     * launch request, you also get one reservation ID.</p> </li> <li> <p>
-     * <code>root-device-name</code> - The device name of the root device volume (for
-     * example, <code>/dev/sda1</code>).</p> </li> <li> <p>
+     * instance on your behalf (for example, Amazon Web Services Management Console,
+     * Auto Scaling, and so on).</p> </li> <li> <p> <code>reservation-id</code> - The
+     * ID of the instance's reservation. A reservation ID is created any time you
+     * launch an instance. A reservation ID has a one-to-one relationship with an
+     * instance launch request, but can be associated with more than one instance if
+     * you launch multiple instances using the same launch request. For example, if you
+     * launch one instance, you get one reservation ID. If you launch ten instances
+     * using the same launch request, you also get one reservation ID.</p> </li> <li>
+     * <p> <code>root-device-name</code> - The device name of the root device volume
+     * (for example, <code>/dev/sda1</code>).</p> </li> <li> <p>
      * <code>root-device-type</code> - The type of the root device volume
      * (<code>ebs</code> | <code>instance-store</code>).</p> </li> <li> <p>
      * <code>source-dest-check</code> - Indicates whether the instance performs
@@ -1461,7 +1493,7 @@ namespace Model
      * <code>state-reason-code</code> - The reason code for the state change.</p> </li>
      * <li> <p> <code>state-reason-message</code> - A message that describes the state
      * change.</p> </li> <li> <p> <code>subnet-id</code> - The ID of the subnet for the
-     * instance.</p> </li> <li> <p> <code>tag</code>:&lt;key&gt; - The key/value
+     * instance.</p> </li> <li> <p> <code>tag:&lt;key&gt;</code> - The key/value
      * combination of a tag assigned to the resource. Use the tag key in the filter
      * name and the tag value as the filter value. For example, to find all resources
      * that have a tag with the key <code>Owner</code> and the value

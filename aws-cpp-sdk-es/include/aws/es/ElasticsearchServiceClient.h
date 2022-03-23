@@ -21,6 +21,8 @@
 #include <aws/es/model/DeleteInboundCrossClusterSearchConnectionResult.h>
 #include <aws/es/model/DeleteOutboundCrossClusterSearchConnectionResult.h>
 #include <aws/es/model/DeletePackageResult.h>
+#include <aws/es/model/DescribeDomainAutoTunesResult.h>
+#include <aws/es/model/DescribeDomainChangeProgressResult.h>
 #include <aws/es/model/DescribeElasticsearchDomainResult.h>
 #include <aws/es/model/DescribeElasticsearchDomainConfigResult.h>
 #include <aws/es/model/DescribeElasticsearchDomainsResult.h>
@@ -98,6 +100,8 @@ namespace Model
         class DeleteInboundCrossClusterSearchConnectionRequest;
         class DeleteOutboundCrossClusterSearchConnectionRequest;
         class DeletePackageRequest;
+        class DescribeDomainAutoTunesRequest;
+        class DescribeDomainChangeProgressRequest;
         class DescribeElasticsearchDomainRequest;
         class DescribeElasticsearchDomainConfigRequest;
         class DescribeElasticsearchDomainsRequest;
@@ -112,6 +116,7 @@ namespace Model
         class GetPackageVersionHistoryRequest;
         class GetUpgradeHistoryRequest;
         class GetUpgradeStatusRequest;
+        class ListDomainNamesRequest;
         class ListDomainsForPackageRequest;
         class ListElasticsearchInstanceTypesRequest;
         class ListElasticsearchVersionsRequest;
@@ -137,6 +142,8 @@ namespace Model
         typedef Aws::Utils::Outcome<DeleteInboundCrossClusterSearchConnectionResult, ElasticsearchServiceError> DeleteInboundCrossClusterSearchConnectionOutcome;
         typedef Aws::Utils::Outcome<DeleteOutboundCrossClusterSearchConnectionResult, ElasticsearchServiceError> DeleteOutboundCrossClusterSearchConnectionOutcome;
         typedef Aws::Utils::Outcome<DeletePackageResult, ElasticsearchServiceError> DeletePackageOutcome;
+        typedef Aws::Utils::Outcome<DescribeDomainAutoTunesResult, ElasticsearchServiceError> DescribeDomainAutoTunesOutcome;
+        typedef Aws::Utils::Outcome<DescribeDomainChangeProgressResult, ElasticsearchServiceError> DescribeDomainChangeProgressOutcome;
         typedef Aws::Utils::Outcome<DescribeElasticsearchDomainResult, ElasticsearchServiceError> DescribeElasticsearchDomainOutcome;
         typedef Aws::Utils::Outcome<DescribeElasticsearchDomainConfigResult, ElasticsearchServiceError> DescribeElasticsearchDomainConfigOutcome;
         typedef Aws::Utils::Outcome<DescribeElasticsearchDomainsResult, ElasticsearchServiceError> DescribeElasticsearchDomainsOutcome;
@@ -177,6 +184,8 @@ namespace Model
         typedef std::future<DeleteInboundCrossClusterSearchConnectionOutcome> DeleteInboundCrossClusterSearchConnectionOutcomeCallable;
         typedef std::future<DeleteOutboundCrossClusterSearchConnectionOutcome> DeleteOutboundCrossClusterSearchConnectionOutcomeCallable;
         typedef std::future<DeletePackageOutcome> DeletePackageOutcomeCallable;
+        typedef std::future<DescribeDomainAutoTunesOutcome> DescribeDomainAutoTunesOutcomeCallable;
+        typedef std::future<DescribeDomainChangeProgressOutcome> DescribeDomainChangeProgressOutcomeCallable;
         typedef std::future<DescribeElasticsearchDomainOutcome> DescribeElasticsearchDomainOutcomeCallable;
         typedef std::future<DescribeElasticsearchDomainConfigOutcome> DescribeElasticsearchDomainConfigOutcomeCallable;
         typedef std::future<DescribeElasticsearchDomainsOutcome> DescribeElasticsearchDomainsOutcomeCallable;
@@ -220,6 +229,8 @@ namespace Model
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::DeleteInboundCrossClusterSearchConnectionRequest&, const Model::DeleteInboundCrossClusterSearchConnectionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteInboundCrossClusterSearchConnectionResponseReceivedHandler;
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::DeleteOutboundCrossClusterSearchConnectionRequest&, const Model::DeleteOutboundCrossClusterSearchConnectionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteOutboundCrossClusterSearchConnectionResponseReceivedHandler;
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::DeletePackageRequest&, const Model::DeletePackageOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeletePackageResponseReceivedHandler;
+    typedef std::function<void(const ElasticsearchServiceClient*, const Model::DescribeDomainAutoTunesRequest&, const Model::DescribeDomainAutoTunesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeDomainAutoTunesResponseReceivedHandler;
+    typedef std::function<void(const ElasticsearchServiceClient*, const Model::DescribeDomainChangeProgressRequest&, const Model::DescribeDomainChangeProgressOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeDomainChangeProgressResponseReceivedHandler;
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::DescribeElasticsearchDomainRequest&, const Model::DescribeElasticsearchDomainOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeElasticsearchDomainResponseReceivedHandler;
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::DescribeElasticsearchDomainConfigRequest&, const Model::DescribeElasticsearchDomainConfigOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeElasticsearchDomainConfigResponseReceivedHandler;
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::DescribeElasticsearchDomainsRequest&, const Model::DescribeElasticsearchDomainsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeElasticsearchDomainsResponseReceivedHandler;
@@ -234,7 +245,7 @@ namespace Model
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::GetPackageVersionHistoryRequest&, const Model::GetPackageVersionHistoryOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetPackageVersionHistoryResponseReceivedHandler;
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::GetUpgradeHistoryRequest&, const Model::GetUpgradeHistoryOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetUpgradeHistoryResponseReceivedHandler;
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::GetUpgradeStatusRequest&, const Model::GetUpgradeStatusOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetUpgradeStatusResponseReceivedHandler;
-    typedef std::function<void(const ElasticsearchServiceClient*, const Model::ListDomainNamesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListDomainNamesResponseReceivedHandler;
+    typedef std::function<void(const ElasticsearchServiceClient*, const Model::ListDomainNamesRequest&, const Model::ListDomainNamesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListDomainNamesResponseReceivedHandler;
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::ListDomainsForPackageRequest&, const Model::ListDomainsForPackageOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListDomainsForPackageResponseReceivedHandler;
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::ListElasticsearchInstanceTypesRequest&, const Model::ListElasticsearchInstanceTypesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListElasticsearchInstanceTypesResponseReceivedHandler;
     typedef std::function<void(const ElasticsearchServiceClient*, const Model::ListElasticsearchVersionsRequest&, const Model::ListElasticsearchVersionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListElasticsearchVersionsResponseReceivedHandler;
@@ -656,6 +667,68 @@ namespace Model
         virtual void DeletePackageAsync(const Model::DeletePackageRequest& request, const DeletePackageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Provides scheduled Auto-Tune action details for the Elasticsearch domain,
+         * such as Auto-Tune action type, description, severity, and scheduled
+         * date.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/es-2015-01-01/DescribeDomainAutoTunes">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeDomainAutoTunesOutcome DescribeDomainAutoTunes(const Model::DescribeDomainAutoTunesRequest& request) const;
+
+        /**
+         * <p>Provides scheduled Auto-Tune action details for the Elasticsearch domain,
+         * such as Auto-Tune action type, description, severity, and scheduled
+         * date.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/es-2015-01-01/DescribeDomainAutoTunes">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeDomainAutoTunesOutcomeCallable DescribeDomainAutoTunesCallable(const Model::DescribeDomainAutoTunesRequest& request) const;
+
+        /**
+         * <p>Provides scheduled Auto-Tune action details for the Elasticsearch domain,
+         * such as Auto-Tune action type, description, severity, and scheduled
+         * date.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/es-2015-01-01/DescribeDomainAutoTunes">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeDomainAutoTunesAsync(const Model::DescribeDomainAutoTunesRequest& request, const DescribeDomainAutoTunesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Returns information about the current blue/green deployment happening on a
+         * domain, including a change ID, status, and progress stages.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/es-2015-01-01/DescribeDomainChangeProgress">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeDomainChangeProgressOutcome DescribeDomainChangeProgress(const Model::DescribeDomainChangeProgressRequest& request) const;
+
+        /**
+         * <p>Returns information about the current blue/green deployment happening on a
+         * domain, including a change ID, status, and progress stages.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/es-2015-01-01/DescribeDomainChangeProgress">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeDomainChangeProgressOutcomeCallable DescribeDomainChangeProgressCallable(const Model::DescribeDomainChangeProgressRequest& request) const;
+
+        /**
+         * <p>Returns information about the current blue/green deployment happening on a
+         * domain, including a change ID, status, and progress stages.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/es-2015-01-01/DescribeDomainChangeProgress">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeDomainChangeProgressAsync(const Model::DescribeDomainChangeProgressRequest& request, const DescribeDomainChangeProgressResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Returns domain configuration information about the specified Elasticsearch
          * domain, including the domain ID, domain endpoint, and domain ARN.</p><p><h3>See
          * Also:</h3>   <a
@@ -1074,7 +1147,7 @@ namespace Model
          * href="http://docs.aws.amazon.com/goto/WebAPI/es-2015-01-01/ListDomainNames">AWS
          * API Reference</a></p>
          */
-        virtual Model::ListDomainNamesOutcome ListDomainNames() const;
+        virtual Model::ListDomainNamesOutcome ListDomainNames(const Model::ListDomainNamesRequest& request) const;
 
         /**
          * <p>Returns the name of all Elasticsearch domains owned by the current user's
@@ -1084,7 +1157,7 @@ namespace Model
          *
          * returns a future to the operation so that it can be executed in parallel to other requests.
          */
-        virtual Model::ListDomainNamesOutcomeCallable ListDomainNamesCallable() const;
+        virtual Model::ListDomainNamesOutcomeCallable ListDomainNamesCallable(const Model::ListDomainNamesRequest& request) const;
 
         /**
          * <p>Returns the name of all Elasticsearch domains owned by the current user's
@@ -1094,7 +1167,8 @@ namespace Model
          *
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
-        virtual void ListDomainNamesAsync(const ListDomainNamesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+        virtual void ListDomainNamesAsync(const Model::ListDomainNamesRequest& request, const ListDomainNamesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
         /**
          * <p>Lists all Amazon ES domains associated with the package.</p><p><h3>See
          * Also:</h3>   <a
@@ -1441,6 +1515,8 @@ namespace Model
         void DeleteInboundCrossClusterSearchConnectionAsyncHelper(const Model::DeleteInboundCrossClusterSearchConnectionRequest& request, const DeleteInboundCrossClusterSearchConnectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteOutboundCrossClusterSearchConnectionAsyncHelper(const Model::DeleteOutboundCrossClusterSearchConnectionRequest& request, const DeleteOutboundCrossClusterSearchConnectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeletePackageAsyncHelper(const Model::DeletePackageRequest& request, const DeletePackageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeDomainAutoTunesAsyncHelper(const Model::DescribeDomainAutoTunesRequest& request, const DescribeDomainAutoTunesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeDomainChangeProgressAsyncHelper(const Model::DescribeDomainChangeProgressRequest& request, const DescribeDomainChangeProgressResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeElasticsearchDomainAsyncHelper(const Model::DescribeElasticsearchDomainRequest& request, const DescribeElasticsearchDomainResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeElasticsearchDomainConfigAsyncHelper(const Model::DescribeElasticsearchDomainConfigRequest& request, const DescribeElasticsearchDomainConfigResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeElasticsearchDomainsAsyncHelper(const Model::DescribeElasticsearchDomainsRequest& request, const DescribeElasticsearchDomainsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -1455,7 +1531,7 @@ namespace Model
         void GetPackageVersionHistoryAsyncHelper(const Model::GetPackageVersionHistoryRequest& request, const GetPackageVersionHistoryResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetUpgradeHistoryAsyncHelper(const Model::GetUpgradeHistoryRequest& request, const GetUpgradeHistoryResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetUpgradeStatusAsyncHelper(const Model::GetUpgradeStatusRequest& request, const GetUpgradeStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
-        void ListDomainNamesAsyncHelper(const ListDomainNamesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListDomainNamesAsyncHelper(const Model::ListDomainNamesRequest& request, const ListDomainNamesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListDomainsForPackageAsyncHelper(const Model::ListDomainsForPackageRequest& request, const ListDomainsForPackageResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListElasticsearchInstanceTypesAsyncHelper(const Model::ListElasticsearchInstanceTypesRequest& request, const ListElasticsearchInstanceTypesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListElasticsearchVersionsAsyncHelper(const Model::ListElasticsearchVersionsRequest& request, const ListElasticsearchVersionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

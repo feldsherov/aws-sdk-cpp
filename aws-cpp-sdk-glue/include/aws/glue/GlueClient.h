@@ -16,6 +16,7 @@
 #include <aws/glue/model/BatchDeletePartitionResult.h>
 #include <aws/glue/model/BatchDeleteTableResult.h>
 #include <aws/glue/model/BatchDeleteTableVersionResult.h>
+#include <aws/glue/model/BatchGetBlueprintsResult.h>
 #include <aws/glue/model/BatchGetCrawlersResult.h>
 #include <aws/glue/model/BatchGetDevEndpointsResult.h>
 #include <aws/glue/model/BatchGetJobsResult.h>
@@ -25,7 +26,9 @@
 #include <aws/glue/model/BatchStopJobRunResult.h>
 #include <aws/glue/model/BatchUpdatePartitionResult.h>
 #include <aws/glue/model/CancelMLTaskRunResult.h>
+#include <aws/glue/model/CancelStatementResult.h>
 #include <aws/glue/model/CheckSchemaVersionValidityResult.h>
+#include <aws/glue/model/CreateBlueprintResult.h>
 #include <aws/glue/model/CreateClassifierResult.h>
 #include <aws/glue/model/CreateConnectionResult.h>
 #include <aws/glue/model/CreateCrawlerResult.h>
@@ -39,10 +42,12 @@
 #include <aws/glue/model/CreateSchemaResult.h>
 #include <aws/glue/model/CreateScriptResult.h>
 #include <aws/glue/model/CreateSecurityConfigurationResult.h>
+#include <aws/glue/model/CreateSessionResult.h>
 #include <aws/glue/model/CreateTableResult.h>
 #include <aws/glue/model/CreateTriggerResult.h>
 #include <aws/glue/model/CreateUserDefinedFunctionResult.h>
 #include <aws/glue/model/CreateWorkflowResult.h>
+#include <aws/glue/model/DeleteBlueprintResult.h>
 #include <aws/glue/model/DeleteClassifierResult.h>
 #include <aws/glue/model/DeleteColumnStatisticsForPartitionResult.h>
 #include <aws/glue/model/DeleteColumnStatisticsForTableResult.h>
@@ -59,11 +64,15 @@
 #include <aws/glue/model/DeleteSchemaResult.h>
 #include <aws/glue/model/DeleteSchemaVersionsResult.h>
 #include <aws/glue/model/DeleteSecurityConfigurationResult.h>
+#include <aws/glue/model/DeleteSessionResult.h>
 #include <aws/glue/model/DeleteTableResult.h>
 #include <aws/glue/model/DeleteTableVersionResult.h>
 #include <aws/glue/model/DeleteTriggerResult.h>
 #include <aws/glue/model/DeleteUserDefinedFunctionResult.h>
 #include <aws/glue/model/DeleteWorkflowResult.h>
+#include <aws/glue/model/GetBlueprintResult.h>
+#include <aws/glue/model/GetBlueprintRunResult.h>
+#include <aws/glue/model/GetBlueprintRunsResult.h>
 #include <aws/glue/model/GetCatalogImportStatusResult.h>
 #include <aws/glue/model/GetClassifierResult.h>
 #include <aws/glue/model/GetClassifiersResult.h>
@@ -103,6 +112,8 @@
 #include <aws/glue/model/GetSchemaVersionsDiffResult.h>
 #include <aws/glue/model/GetSecurityConfigurationResult.h>
 #include <aws/glue/model/GetSecurityConfigurationsResult.h>
+#include <aws/glue/model/GetSessionResult.h>
+#include <aws/glue/model/GetStatementResult.h>
 #include <aws/glue/model/GetTableResult.h>
 #include <aws/glue/model/GetTableVersionResult.h>
 #include <aws/glue/model/GetTableVersionsResult.h>
@@ -110,6 +121,9 @@
 #include <aws/glue/model/GetTagsResult.h>
 #include <aws/glue/model/GetTriggerResult.h>
 #include <aws/glue/model/GetTriggersResult.h>
+#include <aws/glue/model/GetUnfilteredPartitionMetadataResult.h>
+#include <aws/glue/model/GetUnfilteredPartitionsMetadataResult.h>
+#include <aws/glue/model/GetUnfilteredTableMetadataResult.h>
 #include <aws/glue/model/GetUserDefinedFunctionResult.h>
 #include <aws/glue/model/GetUserDefinedFunctionsResult.h>
 #include <aws/glue/model/GetWorkflowResult.h>
@@ -117,6 +131,7 @@
 #include <aws/glue/model/GetWorkflowRunPropertiesResult.h>
 #include <aws/glue/model/GetWorkflowRunsResult.h>
 #include <aws/glue/model/ImportCatalogToGlueResult.h>
+#include <aws/glue/model/ListBlueprintsResult.h>
 #include <aws/glue/model/ListCrawlersResult.h>
 #include <aws/glue/model/ListDevEndpointsResult.h>
 #include <aws/glue/model/ListJobsResult.h>
@@ -124,6 +139,8 @@
 #include <aws/glue/model/ListRegistriesResult.h>
 #include <aws/glue/model/ListSchemaVersionsResult.h>
 #include <aws/glue/model/ListSchemasResult.h>
+#include <aws/glue/model/ListSessionsResult.h>
+#include <aws/glue/model/ListStatementsResult.h>
 #include <aws/glue/model/ListTriggersResult.h>
 #include <aws/glue/model/ListWorkflowsResult.h>
 #include <aws/glue/model/PutDataCatalogEncryptionSettingsResult.h>
@@ -135,7 +152,9 @@
 #include <aws/glue/model/RemoveSchemaVersionMetadataResult.h>
 #include <aws/glue/model/ResetJobBookmarkResult.h>
 #include <aws/glue/model/ResumeWorkflowRunResult.h>
+#include <aws/glue/model/RunStatementResult.h>
 #include <aws/glue/model/SearchTablesResult.h>
+#include <aws/glue/model/StartBlueprintRunResult.h>
 #include <aws/glue/model/StartCrawlerResult.h>
 #include <aws/glue/model/StartCrawlerScheduleResult.h>
 #include <aws/glue/model/StartExportLabelsTaskRunResult.h>
@@ -147,10 +166,12 @@
 #include <aws/glue/model/StartWorkflowRunResult.h>
 #include <aws/glue/model/StopCrawlerResult.h>
 #include <aws/glue/model/StopCrawlerScheduleResult.h>
+#include <aws/glue/model/StopSessionResult.h>
 #include <aws/glue/model/StopTriggerResult.h>
 #include <aws/glue/model/StopWorkflowRunResult.h>
 #include <aws/glue/model/TagResourceResult.h>
 #include <aws/glue/model/UntagResourceResult.h>
+#include <aws/glue/model/UpdateBlueprintResult.h>
 #include <aws/glue/model/UpdateClassifierResult.h>
 #include <aws/glue/model/UpdateColumnStatisticsForPartitionResult.h>
 #include <aws/glue/model/UpdateColumnStatisticsForTableResult.h>
@@ -212,6 +233,7 @@ namespace Model
         class BatchDeletePartitionRequest;
         class BatchDeleteTableRequest;
         class BatchDeleteTableVersionRequest;
+        class BatchGetBlueprintsRequest;
         class BatchGetCrawlersRequest;
         class BatchGetDevEndpointsRequest;
         class BatchGetJobsRequest;
@@ -221,7 +243,9 @@ namespace Model
         class BatchStopJobRunRequest;
         class BatchUpdatePartitionRequest;
         class CancelMLTaskRunRequest;
+        class CancelStatementRequest;
         class CheckSchemaVersionValidityRequest;
+        class CreateBlueprintRequest;
         class CreateClassifierRequest;
         class CreateConnectionRequest;
         class CreateCrawlerRequest;
@@ -235,10 +259,12 @@ namespace Model
         class CreateSchemaRequest;
         class CreateScriptRequest;
         class CreateSecurityConfigurationRequest;
+        class CreateSessionRequest;
         class CreateTableRequest;
         class CreateTriggerRequest;
         class CreateUserDefinedFunctionRequest;
         class CreateWorkflowRequest;
+        class DeleteBlueprintRequest;
         class DeleteClassifierRequest;
         class DeleteColumnStatisticsForPartitionRequest;
         class DeleteColumnStatisticsForTableRequest;
@@ -255,11 +281,15 @@ namespace Model
         class DeleteSchemaRequest;
         class DeleteSchemaVersionsRequest;
         class DeleteSecurityConfigurationRequest;
+        class DeleteSessionRequest;
         class DeleteTableRequest;
         class DeleteTableVersionRequest;
         class DeleteTriggerRequest;
         class DeleteUserDefinedFunctionRequest;
         class DeleteWorkflowRequest;
+        class GetBlueprintRequest;
+        class GetBlueprintRunRequest;
+        class GetBlueprintRunsRequest;
         class GetCatalogImportStatusRequest;
         class GetClassifierRequest;
         class GetClassifiersRequest;
@@ -299,6 +329,8 @@ namespace Model
         class GetSchemaVersionsDiffRequest;
         class GetSecurityConfigurationRequest;
         class GetSecurityConfigurationsRequest;
+        class GetSessionRequest;
+        class GetStatementRequest;
         class GetTableRequest;
         class GetTableVersionRequest;
         class GetTableVersionsRequest;
@@ -306,6 +338,9 @@ namespace Model
         class GetTagsRequest;
         class GetTriggerRequest;
         class GetTriggersRequest;
+        class GetUnfilteredPartitionMetadataRequest;
+        class GetUnfilteredPartitionsMetadataRequest;
+        class GetUnfilteredTableMetadataRequest;
         class GetUserDefinedFunctionRequest;
         class GetUserDefinedFunctionsRequest;
         class GetWorkflowRequest;
@@ -313,6 +348,7 @@ namespace Model
         class GetWorkflowRunPropertiesRequest;
         class GetWorkflowRunsRequest;
         class ImportCatalogToGlueRequest;
+        class ListBlueprintsRequest;
         class ListCrawlersRequest;
         class ListDevEndpointsRequest;
         class ListJobsRequest;
@@ -320,6 +356,8 @@ namespace Model
         class ListRegistriesRequest;
         class ListSchemaVersionsRequest;
         class ListSchemasRequest;
+        class ListSessionsRequest;
+        class ListStatementsRequest;
         class ListTriggersRequest;
         class ListWorkflowsRequest;
         class PutDataCatalogEncryptionSettingsRequest;
@@ -331,7 +369,9 @@ namespace Model
         class RemoveSchemaVersionMetadataRequest;
         class ResetJobBookmarkRequest;
         class ResumeWorkflowRunRequest;
+        class RunStatementRequest;
         class SearchTablesRequest;
+        class StartBlueprintRunRequest;
         class StartCrawlerRequest;
         class StartCrawlerScheduleRequest;
         class StartExportLabelsTaskRunRequest;
@@ -343,10 +383,12 @@ namespace Model
         class StartWorkflowRunRequest;
         class StopCrawlerRequest;
         class StopCrawlerScheduleRequest;
+        class StopSessionRequest;
         class StopTriggerRequest;
         class StopWorkflowRunRequest;
         class TagResourceRequest;
         class UntagResourceRequest;
+        class UpdateBlueprintRequest;
         class UpdateClassifierRequest;
         class UpdateColumnStatisticsForPartitionRequest;
         class UpdateColumnStatisticsForTableRequest;
@@ -370,6 +412,7 @@ namespace Model
         typedef Aws::Utils::Outcome<BatchDeletePartitionResult, GlueError> BatchDeletePartitionOutcome;
         typedef Aws::Utils::Outcome<BatchDeleteTableResult, GlueError> BatchDeleteTableOutcome;
         typedef Aws::Utils::Outcome<BatchDeleteTableVersionResult, GlueError> BatchDeleteTableVersionOutcome;
+        typedef Aws::Utils::Outcome<BatchGetBlueprintsResult, GlueError> BatchGetBlueprintsOutcome;
         typedef Aws::Utils::Outcome<BatchGetCrawlersResult, GlueError> BatchGetCrawlersOutcome;
         typedef Aws::Utils::Outcome<BatchGetDevEndpointsResult, GlueError> BatchGetDevEndpointsOutcome;
         typedef Aws::Utils::Outcome<BatchGetJobsResult, GlueError> BatchGetJobsOutcome;
@@ -379,7 +422,9 @@ namespace Model
         typedef Aws::Utils::Outcome<BatchStopJobRunResult, GlueError> BatchStopJobRunOutcome;
         typedef Aws::Utils::Outcome<BatchUpdatePartitionResult, GlueError> BatchUpdatePartitionOutcome;
         typedef Aws::Utils::Outcome<CancelMLTaskRunResult, GlueError> CancelMLTaskRunOutcome;
+        typedef Aws::Utils::Outcome<CancelStatementResult, GlueError> CancelStatementOutcome;
         typedef Aws::Utils::Outcome<CheckSchemaVersionValidityResult, GlueError> CheckSchemaVersionValidityOutcome;
+        typedef Aws::Utils::Outcome<CreateBlueprintResult, GlueError> CreateBlueprintOutcome;
         typedef Aws::Utils::Outcome<CreateClassifierResult, GlueError> CreateClassifierOutcome;
         typedef Aws::Utils::Outcome<CreateConnectionResult, GlueError> CreateConnectionOutcome;
         typedef Aws::Utils::Outcome<CreateCrawlerResult, GlueError> CreateCrawlerOutcome;
@@ -393,10 +438,12 @@ namespace Model
         typedef Aws::Utils::Outcome<CreateSchemaResult, GlueError> CreateSchemaOutcome;
         typedef Aws::Utils::Outcome<CreateScriptResult, GlueError> CreateScriptOutcome;
         typedef Aws::Utils::Outcome<CreateSecurityConfigurationResult, GlueError> CreateSecurityConfigurationOutcome;
+        typedef Aws::Utils::Outcome<CreateSessionResult, GlueError> CreateSessionOutcome;
         typedef Aws::Utils::Outcome<CreateTableResult, GlueError> CreateTableOutcome;
         typedef Aws::Utils::Outcome<CreateTriggerResult, GlueError> CreateTriggerOutcome;
         typedef Aws::Utils::Outcome<CreateUserDefinedFunctionResult, GlueError> CreateUserDefinedFunctionOutcome;
         typedef Aws::Utils::Outcome<CreateWorkflowResult, GlueError> CreateWorkflowOutcome;
+        typedef Aws::Utils::Outcome<DeleteBlueprintResult, GlueError> DeleteBlueprintOutcome;
         typedef Aws::Utils::Outcome<DeleteClassifierResult, GlueError> DeleteClassifierOutcome;
         typedef Aws::Utils::Outcome<DeleteColumnStatisticsForPartitionResult, GlueError> DeleteColumnStatisticsForPartitionOutcome;
         typedef Aws::Utils::Outcome<DeleteColumnStatisticsForTableResult, GlueError> DeleteColumnStatisticsForTableOutcome;
@@ -413,11 +460,15 @@ namespace Model
         typedef Aws::Utils::Outcome<DeleteSchemaResult, GlueError> DeleteSchemaOutcome;
         typedef Aws::Utils::Outcome<DeleteSchemaVersionsResult, GlueError> DeleteSchemaVersionsOutcome;
         typedef Aws::Utils::Outcome<DeleteSecurityConfigurationResult, GlueError> DeleteSecurityConfigurationOutcome;
+        typedef Aws::Utils::Outcome<DeleteSessionResult, GlueError> DeleteSessionOutcome;
         typedef Aws::Utils::Outcome<DeleteTableResult, GlueError> DeleteTableOutcome;
         typedef Aws::Utils::Outcome<DeleteTableVersionResult, GlueError> DeleteTableVersionOutcome;
         typedef Aws::Utils::Outcome<DeleteTriggerResult, GlueError> DeleteTriggerOutcome;
         typedef Aws::Utils::Outcome<DeleteUserDefinedFunctionResult, GlueError> DeleteUserDefinedFunctionOutcome;
         typedef Aws::Utils::Outcome<DeleteWorkflowResult, GlueError> DeleteWorkflowOutcome;
+        typedef Aws::Utils::Outcome<GetBlueprintResult, GlueError> GetBlueprintOutcome;
+        typedef Aws::Utils::Outcome<GetBlueprintRunResult, GlueError> GetBlueprintRunOutcome;
+        typedef Aws::Utils::Outcome<GetBlueprintRunsResult, GlueError> GetBlueprintRunsOutcome;
         typedef Aws::Utils::Outcome<GetCatalogImportStatusResult, GlueError> GetCatalogImportStatusOutcome;
         typedef Aws::Utils::Outcome<GetClassifierResult, GlueError> GetClassifierOutcome;
         typedef Aws::Utils::Outcome<GetClassifiersResult, GlueError> GetClassifiersOutcome;
@@ -457,6 +508,8 @@ namespace Model
         typedef Aws::Utils::Outcome<GetSchemaVersionsDiffResult, GlueError> GetSchemaVersionsDiffOutcome;
         typedef Aws::Utils::Outcome<GetSecurityConfigurationResult, GlueError> GetSecurityConfigurationOutcome;
         typedef Aws::Utils::Outcome<GetSecurityConfigurationsResult, GlueError> GetSecurityConfigurationsOutcome;
+        typedef Aws::Utils::Outcome<GetSessionResult, GlueError> GetSessionOutcome;
+        typedef Aws::Utils::Outcome<GetStatementResult, GlueError> GetStatementOutcome;
         typedef Aws::Utils::Outcome<GetTableResult, GlueError> GetTableOutcome;
         typedef Aws::Utils::Outcome<GetTableVersionResult, GlueError> GetTableVersionOutcome;
         typedef Aws::Utils::Outcome<GetTableVersionsResult, GlueError> GetTableVersionsOutcome;
@@ -464,6 +517,9 @@ namespace Model
         typedef Aws::Utils::Outcome<GetTagsResult, GlueError> GetTagsOutcome;
         typedef Aws::Utils::Outcome<GetTriggerResult, GlueError> GetTriggerOutcome;
         typedef Aws::Utils::Outcome<GetTriggersResult, GlueError> GetTriggersOutcome;
+        typedef Aws::Utils::Outcome<GetUnfilteredPartitionMetadataResult, GlueError> GetUnfilteredPartitionMetadataOutcome;
+        typedef Aws::Utils::Outcome<GetUnfilteredPartitionsMetadataResult, GlueError> GetUnfilteredPartitionsMetadataOutcome;
+        typedef Aws::Utils::Outcome<GetUnfilteredTableMetadataResult, GlueError> GetUnfilteredTableMetadataOutcome;
         typedef Aws::Utils::Outcome<GetUserDefinedFunctionResult, GlueError> GetUserDefinedFunctionOutcome;
         typedef Aws::Utils::Outcome<GetUserDefinedFunctionsResult, GlueError> GetUserDefinedFunctionsOutcome;
         typedef Aws::Utils::Outcome<GetWorkflowResult, GlueError> GetWorkflowOutcome;
@@ -471,6 +527,7 @@ namespace Model
         typedef Aws::Utils::Outcome<GetWorkflowRunPropertiesResult, GlueError> GetWorkflowRunPropertiesOutcome;
         typedef Aws::Utils::Outcome<GetWorkflowRunsResult, GlueError> GetWorkflowRunsOutcome;
         typedef Aws::Utils::Outcome<ImportCatalogToGlueResult, GlueError> ImportCatalogToGlueOutcome;
+        typedef Aws::Utils::Outcome<ListBlueprintsResult, GlueError> ListBlueprintsOutcome;
         typedef Aws::Utils::Outcome<ListCrawlersResult, GlueError> ListCrawlersOutcome;
         typedef Aws::Utils::Outcome<ListDevEndpointsResult, GlueError> ListDevEndpointsOutcome;
         typedef Aws::Utils::Outcome<ListJobsResult, GlueError> ListJobsOutcome;
@@ -478,6 +535,8 @@ namespace Model
         typedef Aws::Utils::Outcome<ListRegistriesResult, GlueError> ListRegistriesOutcome;
         typedef Aws::Utils::Outcome<ListSchemaVersionsResult, GlueError> ListSchemaVersionsOutcome;
         typedef Aws::Utils::Outcome<ListSchemasResult, GlueError> ListSchemasOutcome;
+        typedef Aws::Utils::Outcome<ListSessionsResult, GlueError> ListSessionsOutcome;
+        typedef Aws::Utils::Outcome<ListStatementsResult, GlueError> ListStatementsOutcome;
         typedef Aws::Utils::Outcome<ListTriggersResult, GlueError> ListTriggersOutcome;
         typedef Aws::Utils::Outcome<ListWorkflowsResult, GlueError> ListWorkflowsOutcome;
         typedef Aws::Utils::Outcome<PutDataCatalogEncryptionSettingsResult, GlueError> PutDataCatalogEncryptionSettingsOutcome;
@@ -489,7 +548,9 @@ namespace Model
         typedef Aws::Utils::Outcome<RemoveSchemaVersionMetadataResult, GlueError> RemoveSchemaVersionMetadataOutcome;
         typedef Aws::Utils::Outcome<ResetJobBookmarkResult, GlueError> ResetJobBookmarkOutcome;
         typedef Aws::Utils::Outcome<ResumeWorkflowRunResult, GlueError> ResumeWorkflowRunOutcome;
+        typedef Aws::Utils::Outcome<RunStatementResult, GlueError> RunStatementOutcome;
         typedef Aws::Utils::Outcome<SearchTablesResult, GlueError> SearchTablesOutcome;
+        typedef Aws::Utils::Outcome<StartBlueprintRunResult, GlueError> StartBlueprintRunOutcome;
         typedef Aws::Utils::Outcome<StartCrawlerResult, GlueError> StartCrawlerOutcome;
         typedef Aws::Utils::Outcome<StartCrawlerScheduleResult, GlueError> StartCrawlerScheduleOutcome;
         typedef Aws::Utils::Outcome<StartExportLabelsTaskRunResult, GlueError> StartExportLabelsTaskRunOutcome;
@@ -501,10 +562,12 @@ namespace Model
         typedef Aws::Utils::Outcome<StartWorkflowRunResult, GlueError> StartWorkflowRunOutcome;
         typedef Aws::Utils::Outcome<StopCrawlerResult, GlueError> StopCrawlerOutcome;
         typedef Aws::Utils::Outcome<StopCrawlerScheduleResult, GlueError> StopCrawlerScheduleOutcome;
+        typedef Aws::Utils::Outcome<StopSessionResult, GlueError> StopSessionOutcome;
         typedef Aws::Utils::Outcome<StopTriggerResult, GlueError> StopTriggerOutcome;
         typedef Aws::Utils::Outcome<StopWorkflowRunResult, GlueError> StopWorkflowRunOutcome;
         typedef Aws::Utils::Outcome<TagResourceResult, GlueError> TagResourceOutcome;
         typedef Aws::Utils::Outcome<UntagResourceResult, GlueError> UntagResourceOutcome;
+        typedef Aws::Utils::Outcome<UpdateBlueprintResult, GlueError> UpdateBlueprintOutcome;
         typedef Aws::Utils::Outcome<UpdateClassifierResult, GlueError> UpdateClassifierOutcome;
         typedef Aws::Utils::Outcome<UpdateColumnStatisticsForPartitionResult, GlueError> UpdateColumnStatisticsForPartitionOutcome;
         typedef Aws::Utils::Outcome<UpdateColumnStatisticsForTableResult, GlueError> UpdateColumnStatisticsForTableOutcome;
@@ -528,6 +591,7 @@ namespace Model
         typedef std::future<BatchDeletePartitionOutcome> BatchDeletePartitionOutcomeCallable;
         typedef std::future<BatchDeleteTableOutcome> BatchDeleteTableOutcomeCallable;
         typedef std::future<BatchDeleteTableVersionOutcome> BatchDeleteTableVersionOutcomeCallable;
+        typedef std::future<BatchGetBlueprintsOutcome> BatchGetBlueprintsOutcomeCallable;
         typedef std::future<BatchGetCrawlersOutcome> BatchGetCrawlersOutcomeCallable;
         typedef std::future<BatchGetDevEndpointsOutcome> BatchGetDevEndpointsOutcomeCallable;
         typedef std::future<BatchGetJobsOutcome> BatchGetJobsOutcomeCallable;
@@ -537,7 +601,9 @@ namespace Model
         typedef std::future<BatchStopJobRunOutcome> BatchStopJobRunOutcomeCallable;
         typedef std::future<BatchUpdatePartitionOutcome> BatchUpdatePartitionOutcomeCallable;
         typedef std::future<CancelMLTaskRunOutcome> CancelMLTaskRunOutcomeCallable;
+        typedef std::future<CancelStatementOutcome> CancelStatementOutcomeCallable;
         typedef std::future<CheckSchemaVersionValidityOutcome> CheckSchemaVersionValidityOutcomeCallable;
+        typedef std::future<CreateBlueprintOutcome> CreateBlueprintOutcomeCallable;
         typedef std::future<CreateClassifierOutcome> CreateClassifierOutcomeCallable;
         typedef std::future<CreateConnectionOutcome> CreateConnectionOutcomeCallable;
         typedef std::future<CreateCrawlerOutcome> CreateCrawlerOutcomeCallable;
@@ -551,10 +617,12 @@ namespace Model
         typedef std::future<CreateSchemaOutcome> CreateSchemaOutcomeCallable;
         typedef std::future<CreateScriptOutcome> CreateScriptOutcomeCallable;
         typedef std::future<CreateSecurityConfigurationOutcome> CreateSecurityConfigurationOutcomeCallable;
+        typedef std::future<CreateSessionOutcome> CreateSessionOutcomeCallable;
         typedef std::future<CreateTableOutcome> CreateTableOutcomeCallable;
         typedef std::future<CreateTriggerOutcome> CreateTriggerOutcomeCallable;
         typedef std::future<CreateUserDefinedFunctionOutcome> CreateUserDefinedFunctionOutcomeCallable;
         typedef std::future<CreateWorkflowOutcome> CreateWorkflowOutcomeCallable;
+        typedef std::future<DeleteBlueprintOutcome> DeleteBlueprintOutcomeCallable;
         typedef std::future<DeleteClassifierOutcome> DeleteClassifierOutcomeCallable;
         typedef std::future<DeleteColumnStatisticsForPartitionOutcome> DeleteColumnStatisticsForPartitionOutcomeCallable;
         typedef std::future<DeleteColumnStatisticsForTableOutcome> DeleteColumnStatisticsForTableOutcomeCallable;
@@ -571,11 +639,15 @@ namespace Model
         typedef std::future<DeleteSchemaOutcome> DeleteSchemaOutcomeCallable;
         typedef std::future<DeleteSchemaVersionsOutcome> DeleteSchemaVersionsOutcomeCallable;
         typedef std::future<DeleteSecurityConfigurationOutcome> DeleteSecurityConfigurationOutcomeCallable;
+        typedef std::future<DeleteSessionOutcome> DeleteSessionOutcomeCallable;
         typedef std::future<DeleteTableOutcome> DeleteTableOutcomeCallable;
         typedef std::future<DeleteTableVersionOutcome> DeleteTableVersionOutcomeCallable;
         typedef std::future<DeleteTriggerOutcome> DeleteTriggerOutcomeCallable;
         typedef std::future<DeleteUserDefinedFunctionOutcome> DeleteUserDefinedFunctionOutcomeCallable;
         typedef std::future<DeleteWorkflowOutcome> DeleteWorkflowOutcomeCallable;
+        typedef std::future<GetBlueprintOutcome> GetBlueprintOutcomeCallable;
+        typedef std::future<GetBlueprintRunOutcome> GetBlueprintRunOutcomeCallable;
+        typedef std::future<GetBlueprintRunsOutcome> GetBlueprintRunsOutcomeCallable;
         typedef std::future<GetCatalogImportStatusOutcome> GetCatalogImportStatusOutcomeCallable;
         typedef std::future<GetClassifierOutcome> GetClassifierOutcomeCallable;
         typedef std::future<GetClassifiersOutcome> GetClassifiersOutcomeCallable;
@@ -615,6 +687,8 @@ namespace Model
         typedef std::future<GetSchemaVersionsDiffOutcome> GetSchemaVersionsDiffOutcomeCallable;
         typedef std::future<GetSecurityConfigurationOutcome> GetSecurityConfigurationOutcomeCallable;
         typedef std::future<GetSecurityConfigurationsOutcome> GetSecurityConfigurationsOutcomeCallable;
+        typedef std::future<GetSessionOutcome> GetSessionOutcomeCallable;
+        typedef std::future<GetStatementOutcome> GetStatementOutcomeCallable;
         typedef std::future<GetTableOutcome> GetTableOutcomeCallable;
         typedef std::future<GetTableVersionOutcome> GetTableVersionOutcomeCallable;
         typedef std::future<GetTableVersionsOutcome> GetTableVersionsOutcomeCallable;
@@ -622,6 +696,9 @@ namespace Model
         typedef std::future<GetTagsOutcome> GetTagsOutcomeCallable;
         typedef std::future<GetTriggerOutcome> GetTriggerOutcomeCallable;
         typedef std::future<GetTriggersOutcome> GetTriggersOutcomeCallable;
+        typedef std::future<GetUnfilteredPartitionMetadataOutcome> GetUnfilteredPartitionMetadataOutcomeCallable;
+        typedef std::future<GetUnfilteredPartitionsMetadataOutcome> GetUnfilteredPartitionsMetadataOutcomeCallable;
+        typedef std::future<GetUnfilteredTableMetadataOutcome> GetUnfilteredTableMetadataOutcomeCallable;
         typedef std::future<GetUserDefinedFunctionOutcome> GetUserDefinedFunctionOutcomeCallable;
         typedef std::future<GetUserDefinedFunctionsOutcome> GetUserDefinedFunctionsOutcomeCallable;
         typedef std::future<GetWorkflowOutcome> GetWorkflowOutcomeCallable;
@@ -629,6 +706,7 @@ namespace Model
         typedef std::future<GetWorkflowRunPropertiesOutcome> GetWorkflowRunPropertiesOutcomeCallable;
         typedef std::future<GetWorkflowRunsOutcome> GetWorkflowRunsOutcomeCallable;
         typedef std::future<ImportCatalogToGlueOutcome> ImportCatalogToGlueOutcomeCallable;
+        typedef std::future<ListBlueprintsOutcome> ListBlueprintsOutcomeCallable;
         typedef std::future<ListCrawlersOutcome> ListCrawlersOutcomeCallable;
         typedef std::future<ListDevEndpointsOutcome> ListDevEndpointsOutcomeCallable;
         typedef std::future<ListJobsOutcome> ListJobsOutcomeCallable;
@@ -636,6 +714,8 @@ namespace Model
         typedef std::future<ListRegistriesOutcome> ListRegistriesOutcomeCallable;
         typedef std::future<ListSchemaVersionsOutcome> ListSchemaVersionsOutcomeCallable;
         typedef std::future<ListSchemasOutcome> ListSchemasOutcomeCallable;
+        typedef std::future<ListSessionsOutcome> ListSessionsOutcomeCallable;
+        typedef std::future<ListStatementsOutcome> ListStatementsOutcomeCallable;
         typedef std::future<ListTriggersOutcome> ListTriggersOutcomeCallable;
         typedef std::future<ListWorkflowsOutcome> ListWorkflowsOutcomeCallable;
         typedef std::future<PutDataCatalogEncryptionSettingsOutcome> PutDataCatalogEncryptionSettingsOutcomeCallable;
@@ -647,7 +727,9 @@ namespace Model
         typedef std::future<RemoveSchemaVersionMetadataOutcome> RemoveSchemaVersionMetadataOutcomeCallable;
         typedef std::future<ResetJobBookmarkOutcome> ResetJobBookmarkOutcomeCallable;
         typedef std::future<ResumeWorkflowRunOutcome> ResumeWorkflowRunOutcomeCallable;
+        typedef std::future<RunStatementOutcome> RunStatementOutcomeCallable;
         typedef std::future<SearchTablesOutcome> SearchTablesOutcomeCallable;
+        typedef std::future<StartBlueprintRunOutcome> StartBlueprintRunOutcomeCallable;
         typedef std::future<StartCrawlerOutcome> StartCrawlerOutcomeCallable;
         typedef std::future<StartCrawlerScheduleOutcome> StartCrawlerScheduleOutcomeCallable;
         typedef std::future<StartExportLabelsTaskRunOutcome> StartExportLabelsTaskRunOutcomeCallable;
@@ -659,10 +741,12 @@ namespace Model
         typedef std::future<StartWorkflowRunOutcome> StartWorkflowRunOutcomeCallable;
         typedef std::future<StopCrawlerOutcome> StopCrawlerOutcomeCallable;
         typedef std::future<StopCrawlerScheduleOutcome> StopCrawlerScheduleOutcomeCallable;
+        typedef std::future<StopSessionOutcome> StopSessionOutcomeCallable;
         typedef std::future<StopTriggerOutcome> StopTriggerOutcomeCallable;
         typedef std::future<StopWorkflowRunOutcome> StopWorkflowRunOutcomeCallable;
         typedef std::future<TagResourceOutcome> TagResourceOutcomeCallable;
         typedef std::future<UntagResourceOutcome> UntagResourceOutcomeCallable;
+        typedef std::future<UpdateBlueprintOutcome> UpdateBlueprintOutcomeCallable;
         typedef std::future<UpdateClassifierOutcome> UpdateClassifierOutcomeCallable;
         typedef std::future<UpdateColumnStatisticsForPartitionOutcome> UpdateColumnStatisticsForPartitionOutcomeCallable;
         typedef std::future<UpdateColumnStatisticsForTableOutcome> UpdateColumnStatisticsForTableOutcomeCallable;
@@ -689,6 +773,7 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::BatchDeletePartitionRequest&, const Model::BatchDeletePartitionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > BatchDeletePartitionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::BatchDeleteTableRequest&, const Model::BatchDeleteTableOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > BatchDeleteTableResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::BatchDeleteTableVersionRequest&, const Model::BatchDeleteTableVersionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > BatchDeleteTableVersionResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::BatchGetBlueprintsRequest&, const Model::BatchGetBlueprintsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > BatchGetBlueprintsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::BatchGetCrawlersRequest&, const Model::BatchGetCrawlersOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > BatchGetCrawlersResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::BatchGetDevEndpointsRequest&, const Model::BatchGetDevEndpointsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > BatchGetDevEndpointsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::BatchGetJobsRequest&, const Model::BatchGetJobsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > BatchGetJobsResponseReceivedHandler;
@@ -698,7 +783,9 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::BatchStopJobRunRequest&, const Model::BatchStopJobRunOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > BatchStopJobRunResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::BatchUpdatePartitionRequest&, const Model::BatchUpdatePartitionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > BatchUpdatePartitionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CancelMLTaskRunRequest&, const Model::CancelMLTaskRunOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CancelMLTaskRunResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::CancelStatementRequest&, const Model::CancelStatementOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CancelStatementResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CheckSchemaVersionValidityRequest&, const Model::CheckSchemaVersionValidityOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CheckSchemaVersionValidityResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::CreateBlueprintRequest&, const Model::CreateBlueprintOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateBlueprintResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CreateClassifierRequest&, const Model::CreateClassifierOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateClassifierResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CreateConnectionRequest&, const Model::CreateConnectionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateConnectionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CreateCrawlerRequest&, const Model::CreateCrawlerOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateCrawlerResponseReceivedHandler;
@@ -712,10 +799,12 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::CreateSchemaRequest&, const Model::CreateSchemaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateSchemaResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CreateScriptRequest&, const Model::CreateScriptOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateScriptResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CreateSecurityConfigurationRequest&, const Model::CreateSecurityConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateSecurityConfigurationResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::CreateSessionRequest&, const Model::CreateSessionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateSessionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CreateTableRequest&, const Model::CreateTableOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateTableResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CreateTriggerRequest&, const Model::CreateTriggerOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateTriggerResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CreateUserDefinedFunctionRequest&, const Model::CreateUserDefinedFunctionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateUserDefinedFunctionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::CreateWorkflowRequest&, const Model::CreateWorkflowOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateWorkflowResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::DeleteBlueprintRequest&, const Model::DeleteBlueprintOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteBlueprintResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::DeleteClassifierRequest&, const Model::DeleteClassifierOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteClassifierResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::DeleteColumnStatisticsForPartitionRequest&, const Model::DeleteColumnStatisticsForPartitionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteColumnStatisticsForPartitionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::DeleteColumnStatisticsForTableRequest&, const Model::DeleteColumnStatisticsForTableOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteColumnStatisticsForTableResponseReceivedHandler;
@@ -732,11 +821,15 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::DeleteSchemaRequest&, const Model::DeleteSchemaOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteSchemaResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::DeleteSchemaVersionsRequest&, const Model::DeleteSchemaVersionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteSchemaVersionsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::DeleteSecurityConfigurationRequest&, const Model::DeleteSecurityConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteSecurityConfigurationResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::DeleteSessionRequest&, const Model::DeleteSessionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteSessionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::DeleteTableRequest&, const Model::DeleteTableOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteTableResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::DeleteTableVersionRequest&, const Model::DeleteTableVersionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteTableVersionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::DeleteTriggerRequest&, const Model::DeleteTriggerOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteTriggerResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::DeleteUserDefinedFunctionRequest&, const Model::DeleteUserDefinedFunctionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteUserDefinedFunctionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::DeleteWorkflowRequest&, const Model::DeleteWorkflowOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteWorkflowResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::GetBlueprintRequest&, const Model::GetBlueprintOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetBlueprintResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::GetBlueprintRunRequest&, const Model::GetBlueprintRunOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetBlueprintRunResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::GetBlueprintRunsRequest&, const Model::GetBlueprintRunsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetBlueprintRunsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetCatalogImportStatusRequest&, const Model::GetCatalogImportStatusOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetCatalogImportStatusResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetClassifierRequest&, const Model::GetClassifierOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetClassifierResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetClassifiersRequest&, const Model::GetClassifiersOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetClassifiersResponseReceivedHandler;
@@ -776,6 +869,8 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::GetSchemaVersionsDiffRequest&, const Model::GetSchemaVersionsDiffOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetSchemaVersionsDiffResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetSecurityConfigurationRequest&, const Model::GetSecurityConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetSecurityConfigurationResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetSecurityConfigurationsRequest&, const Model::GetSecurityConfigurationsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetSecurityConfigurationsResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::GetSessionRequest&, const Model::GetSessionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetSessionResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::GetStatementRequest&, const Model::GetStatementOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetStatementResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetTableRequest&, const Model::GetTableOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetTableResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetTableVersionRequest&, const Model::GetTableVersionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetTableVersionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetTableVersionsRequest&, const Model::GetTableVersionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetTableVersionsResponseReceivedHandler;
@@ -783,6 +878,9 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::GetTagsRequest&, const Model::GetTagsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetTagsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetTriggerRequest&, const Model::GetTriggerOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetTriggerResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetTriggersRequest&, const Model::GetTriggersOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetTriggersResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::GetUnfilteredPartitionMetadataRequest&, const Model::GetUnfilteredPartitionMetadataOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetUnfilteredPartitionMetadataResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::GetUnfilteredPartitionsMetadataRequest&, const Model::GetUnfilteredPartitionsMetadataOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetUnfilteredPartitionsMetadataResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::GetUnfilteredTableMetadataRequest&, const Model::GetUnfilteredTableMetadataOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetUnfilteredTableMetadataResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetUserDefinedFunctionRequest&, const Model::GetUserDefinedFunctionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetUserDefinedFunctionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetUserDefinedFunctionsRequest&, const Model::GetUserDefinedFunctionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetUserDefinedFunctionsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetWorkflowRequest&, const Model::GetWorkflowOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetWorkflowResponseReceivedHandler;
@@ -790,6 +888,7 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::GetWorkflowRunPropertiesRequest&, const Model::GetWorkflowRunPropertiesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetWorkflowRunPropertiesResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::GetWorkflowRunsRequest&, const Model::GetWorkflowRunsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetWorkflowRunsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::ImportCatalogToGlueRequest&, const Model::ImportCatalogToGlueOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ImportCatalogToGlueResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::ListBlueprintsRequest&, const Model::ListBlueprintsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListBlueprintsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::ListCrawlersRequest&, const Model::ListCrawlersOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListCrawlersResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::ListDevEndpointsRequest&, const Model::ListDevEndpointsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListDevEndpointsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::ListJobsRequest&, const Model::ListJobsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListJobsResponseReceivedHandler;
@@ -797,6 +896,8 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::ListRegistriesRequest&, const Model::ListRegistriesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListRegistriesResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::ListSchemaVersionsRequest&, const Model::ListSchemaVersionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListSchemaVersionsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::ListSchemasRequest&, const Model::ListSchemasOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListSchemasResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::ListSessionsRequest&, const Model::ListSessionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListSessionsResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::ListStatementsRequest&, const Model::ListStatementsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListStatementsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::ListTriggersRequest&, const Model::ListTriggersOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListTriggersResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::ListWorkflowsRequest&, const Model::ListWorkflowsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListWorkflowsResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::PutDataCatalogEncryptionSettingsRequest&, const Model::PutDataCatalogEncryptionSettingsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutDataCatalogEncryptionSettingsResponseReceivedHandler;
@@ -808,7 +909,9 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::RemoveSchemaVersionMetadataRequest&, const Model::RemoveSchemaVersionMetadataOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RemoveSchemaVersionMetadataResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::ResetJobBookmarkRequest&, const Model::ResetJobBookmarkOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ResetJobBookmarkResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::ResumeWorkflowRunRequest&, const Model::ResumeWorkflowRunOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ResumeWorkflowRunResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::RunStatementRequest&, const Model::RunStatementOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RunStatementResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::SearchTablesRequest&, const Model::SearchTablesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > SearchTablesResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::StartBlueprintRunRequest&, const Model::StartBlueprintRunOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartBlueprintRunResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::StartCrawlerRequest&, const Model::StartCrawlerOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartCrawlerResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::StartCrawlerScheduleRequest&, const Model::StartCrawlerScheduleOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartCrawlerScheduleResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::StartExportLabelsTaskRunRequest&, const Model::StartExportLabelsTaskRunOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartExportLabelsTaskRunResponseReceivedHandler;
@@ -820,10 +923,12 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::StartWorkflowRunRequest&, const Model::StartWorkflowRunOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartWorkflowRunResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::StopCrawlerRequest&, const Model::StopCrawlerOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopCrawlerResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::StopCrawlerScheduleRequest&, const Model::StopCrawlerScheduleOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopCrawlerScheduleResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::StopSessionRequest&, const Model::StopSessionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopSessionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::StopTriggerRequest&, const Model::StopTriggerOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopTriggerResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::StopWorkflowRunRequest&, const Model::StopWorkflowRunOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopWorkflowRunResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::TagResourceRequest&, const Model::TagResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > TagResourceResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::UntagResourceRequest&, const Model::UntagResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UntagResourceResponseReceivedHandler;
+    typedef std::function<void(const GlueClient*, const Model::UpdateBlueprintRequest&, const Model::UpdateBlueprintOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateBlueprintResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::UpdateClassifierRequest&, const Model::UpdateClassifierOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateClassifierResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::UpdateColumnStatisticsForPartitionRequest&, const Model::UpdateColumnStatisticsForPartitionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateColumnStatisticsForPartitionResponseReceivedHandler;
     typedef std::function<void(const GlueClient*, const Model::UpdateColumnStatisticsForTableRequest&, const Model::UpdateColumnStatisticsForTableOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateColumnStatisticsForTableResponseReceivedHandler;
@@ -843,7 +948,7 @@ namespace Model
     typedef std::function<void(const GlueClient*, const Model::UpdateWorkflowRequest&, const Model::UpdateWorkflowOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateWorkflowResponseReceivedHandler;
 
   /**
-   * <fullname>AWS Glue</fullname> <p>Defines the public endpoint for the AWS Glue
+   * <fullname>Glue</fullname> <p>Defines the public endpoint for the Glue
    * service.</p>
    */
   class AWS_GLUE_API GlueClient : public Aws::Client::AWSJsonClient
@@ -960,7 +1065,7 @@ namespace Model
         /**
          * <p>Deletes multiple tables at once.</p>  <p>After completing this
          * operation, you no longer have access to the table versions and partitions that
-         * belong to the deleted table. AWS Glue deletes these "orphaned" resources
+         * belong to the deleted table. Glue deletes these "orphaned" resources
          * asynchronously in a timely manner, at the discretion of the service.</p> <p>To
          * ensure the immediate deletion of all related resources, before calling
          * <code>BatchDeleteTable</code>, use <code>DeleteTableVersion</code> or
@@ -975,7 +1080,7 @@ namespace Model
         /**
          * <p>Deletes multiple tables at once.</p>  <p>After completing this
          * operation, you no longer have access to the table versions and partitions that
-         * belong to the deleted table. AWS Glue deletes these "orphaned" resources
+         * belong to the deleted table. Glue deletes these "orphaned" resources
          * asynchronously in a timely manner, at the discretion of the service.</p> <p>To
          * ensure the immediate deletion of all related resources, before calling
          * <code>BatchDeleteTable</code>, use <code>DeleteTableVersion</code> or
@@ -992,7 +1097,7 @@ namespace Model
         /**
          * <p>Deletes multiple tables at once.</p>  <p>After completing this
          * operation, you no longer have access to the table versions and partitions that
-         * belong to the deleted table. AWS Glue deletes these "orphaned" resources
+         * belong to the deleted table. Glue deletes these "orphaned" resources
          * asynchronously in a timely manner, at the discretion of the service.</p> <p>To
          * ensure the immediate deletion of all related resources, before calling
          * <code>BatchDeleteTable</code>, use <code>DeleteTableVersion</code> or
@@ -1033,6 +1138,34 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void BatchDeleteTableVersionAsync(const Model::BatchDeleteTableVersionRequest& request, const BatchDeleteTableVersionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves information about a list of blueprints.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetBlueprints">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::BatchGetBlueprintsOutcome BatchGetBlueprints(const Model::BatchGetBlueprintsRequest& request) const;
+
+        /**
+         * <p>Retrieves information about a list of blueprints.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetBlueprints">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::BatchGetBlueprintsOutcomeCallable BatchGetBlueprintsCallable(const Model::BatchGetBlueprintsRequest& request) const;
+
+        /**
+         * <p>Retrieves information about a list of blueprints.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetBlueprints">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void BatchGetBlueprintsAsync(const Model::BatchGetBlueprintsRequest& request, const BatchGetBlueprintsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Returns a list of resource metadata for a given list of crawler names. After
@@ -1302,8 +1435,8 @@ namespace Model
 
         /**
          * <p>Cancels (stops) a task run. Machine learning task runs are asynchronous tasks
-         * that AWS Glue runs on your behalf as part of various machine learning workflows.
-         * You can cancel a machine learning task run at any time by calling
+         * that Glue runs on your behalf as part of various machine learning workflows. You
+         * can cancel a machine learning task run at any time by calling
          * <code>CancelMLTaskRun</code> with a task run's parent transform's
          * <code>TransformID</code> and the task run's <code>TaskRunId</code>.
          * </p><p><h3>See Also:</h3>   <a
@@ -1314,8 +1447,8 @@ namespace Model
 
         /**
          * <p>Cancels (stops) a task run. Machine learning task runs are asynchronous tasks
-         * that AWS Glue runs on your behalf as part of various machine learning workflows.
-         * You can cancel a machine learning task run at any time by calling
+         * that Glue runs on your behalf as part of various machine learning workflows. You
+         * can cancel a machine learning task run at any time by calling
          * <code>CancelMLTaskRun</code> with a task run's parent transform's
          * <code>TransformID</code> and the task run's <code>TaskRunId</code>.
          * </p><p><h3>See Also:</h3>   <a
@@ -1328,8 +1461,8 @@ namespace Model
 
         /**
          * <p>Cancels (stops) a task run. Machine learning task runs are asynchronous tasks
-         * that AWS Glue runs on your behalf as part of various machine learning workflows.
-         * You can cancel a machine learning task run at any time by calling
+         * that Glue runs on your behalf as part of various machine learning workflows. You
+         * can cancel a machine learning task run at any time by calling
          * <code>CancelMLTaskRun</code> with a task run's parent transform's
          * <code>TransformID</code> and the task run's <code>TaskRunId</code>.
          * </p><p><h3>See Also:</h3>   <a
@@ -1339,6 +1472,31 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void CancelMLTaskRunAsync(const Model::CancelMLTaskRunRequest& request, const CancelMLTaskRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Cancels the statement..</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CancelStatement">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CancelStatementOutcome CancelStatement(const Model::CancelStatementRequest& request) const;
+
+        /**
+         * <p>Cancels the statement..</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CancelStatement">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::CancelStatementOutcomeCallable CancelStatementCallable(const Model::CancelStatementRequest& request) const;
+
+        /**
+         * <p>Cancels the statement..</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CancelStatement">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void CancelStatementAsync(const Model::CancelStatementRequest& request, const CancelStatementResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Validates the supplied schema. This call has no side effects, it simply
@@ -1373,6 +1531,31 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void CheckSchemaVersionValidityAsync(const Model::CheckSchemaVersionValidityRequest& request, const CheckSchemaVersionValidityResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Registers a blueprint with Glue.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateBlueprint">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreateBlueprintOutcome CreateBlueprint(const Model::CreateBlueprintRequest& request) const;
+
+        /**
+         * <p>Registers a blueprint with Glue.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateBlueprint">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::CreateBlueprintOutcomeCallable CreateBlueprintCallable(const Model::CreateBlueprintRequest& request) const;
+
+        /**
+         * <p>Registers a blueprint with Glue.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateBlueprint">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void CreateBlueprintAsync(const Model::CreateBlueprintRequest& request, const CreateBlueprintResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Creates a classifier in the user's account. This can be a
@@ -1546,14 +1729,14 @@ namespace Model
         virtual void CreateJobAsync(const Model::CreateJobRequest& request, const CreateJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates an AWS Glue machine learning transform. This operation creates the
+         * <p>Creates an Glue machine learning transform. This operation creates the
          * transform and all the necessary parameters to train it.</p> <p>Call this
          * operation as the first step in the process of using a machine learning transform
          * (such as the <code>FindMatches</code> transform) for deduplicating data. You can
          * provide an optional <code>Description</code>, in addition to the parameters that
          * you want to use for your algorithm.</p> <p>You must also specify certain
-         * parameters for the tasks that AWS Glue runs on your behalf as part of learning
-         * from your data and creating a high-quality machine learning transform. These
+         * parameters for the tasks that Glue runs on your behalf as part of learning from
+         * your data and creating a high-quality machine learning transform. These
          * parameters include <code>Role</code>, and optionally,
          * <code>AllocatedCapacity</code>, <code>Timeout</code>, and
          * <code>MaxRetries</code>. For more information, see <a
@@ -1565,14 +1748,14 @@ namespace Model
         virtual Model::CreateMLTransformOutcome CreateMLTransform(const Model::CreateMLTransformRequest& request) const;
 
         /**
-         * <p>Creates an AWS Glue machine learning transform. This operation creates the
+         * <p>Creates an Glue machine learning transform. This operation creates the
          * transform and all the necessary parameters to train it.</p> <p>Call this
          * operation as the first step in the process of using a machine learning transform
          * (such as the <code>FindMatches</code> transform) for deduplicating data. You can
          * provide an optional <code>Description</code>, in addition to the parameters that
          * you want to use for your algorithm.</p> <p>You must also specify certain
-         * parameters for the tasks that AWS Glue runs on your behalf as part of learning
-         * from your data and creating a high-quality machine learning transform. These
+         * parameters for the tasks that Glue runs on your behalf as part of learning from
+         * your data and creating a high-quality machine learning transform. These
          * parameters include <code>Role</code>, and optionally,
          * <code>AllocatedCapacity</code>, <code>Timeout</code>, and
          * <code>MaxRetries</code>. For more information, see <a
@@ -1586,14 +1769,14 @@ namespace Model
         virtual Model::CreateMLTransformOutcomeCallable CreateMLTransformCallable(const Model::CreateMLTransformRequest& request) const;
 
         /**
-         * <p>Creates an AWS Glue machine learning transform. This operation creates the
+         * <p>Creates an Glue machine learning transform. This operation creates the
          * transform and all the necessary parameters to train it.</p> <p>Call this
          * operation as the first step in the process of using a machine learning transform
          * (such as the <code>FindMatches</code> transform) for deduplicating data. You can
          * provide an optional <code>Description</code>, in addition to the parameters that
          * you want to use for your algorithm.</p> <p>You must also specify certain
-         * parameters for the tasks that AWS Glue runs on your behalf as part of learning
-         * from your data and creating a high-quality machine learning transform. These
+         * parameters for the tasks that Glue runs on your behalf as part of learning from
+         * your data and creating a high-quality machine learning transform. These
          * parameters include <code>Role</code>, and optionally,
          * <code>AllocatedCapacity</code>, <code>Timeout</code>, and
          * <code>MaxRetries</code>. For more information, see <a
@@ -1769,9 +1952,9 @@ namespace Model
 
         /**
          * <p>Creates a new security configuration. A security configuration is a set of
-         * security properties that can be used by AWS Glue. You can use a security
+         * security properties that can be used by Glue. You can use a security
          * configuration to encrypt data at rest. For information about using security
-         * configurations in AWS Glue, see <a
+         * configurations in Glue, see <a
          * href="https://docs.aws.amazon.com/glue/latest/dg/encryption-security-configuration.html">Encrypting
          * Data Written by Crawlers, Jobs, and Development Endpoints</a>.</p><p><h3>See
          * Also:</h3>   <a
@@ -1782,9 +1965,9 @@ namespace Model
 
         /**
          * <p>Creates a new security configuration. A security configuration is a set of
-         * security properties that can be used by AWS Glue. You can use a security
+         * security properties that can be used by Glue. You can use a security
          * configuration to encrypt data at rest. For information about using security
-         * configurations in AWS Glue, see <a
+         * configurations in Glue, see <a
          * href="https://docs.aws.amazon.com/glue/latest/dg/encryption-security-configuration.html">Encrypting
          * Data Written by Crawlers, Jobs, and Development Endpoints</a>.</p><p><h3>See
          * Also:</h3>   <a
@@ -1797,9 +1980,9 @@ namespace Model
 
         /**
          * <p>Creates a new security configuration. A security configuration is a set of
-         * security properties that can be used by AWS Glue. You can use a security
+         * security properties that can be used by Glue. You can use a security
          * configuration to encrypt data at rest. For information about using security
-         * configurations in AWS Glue, see <a
+         * configurations in Glue, see <a
          * href="https://docs.aws.amazon.com/glue/latest/dg/encryption-security-configuration.html">Encrypting
          * Data Written by Crawlers, Jobs, and Development Endpoints</a>.</p><p><h3>See
          * Also:</h3>   <a
@@ -1809,6 +1992,31 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void CreateSecurityConfigurationAsync(const Model::CreateSecurityConfigurationRequest& request, const CreateSecurityConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Creates a new session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateSession">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreateSessionOutcome CreateSession(const Model::CreateSessionRequest& request) const;
+
+        /**
+         * <p>Creates a new session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateSession">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::CreateSessionOutcomeCallable CreateSessionCallable(const Model::CreateSessionRequest& request) const;
+
+        /**
+         * <p>Creates a new session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateSession">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void CreateSessionAsync(const Model::CreateSessionRequest& request, const CreateSessionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Creates a new table definition in the Data Catalog.</p><p><h3>See Also:</h3> 
@@ -1912,6 +2120,31 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void CreateWorkflowAsync(const Model::CreateWorkflowRequest& request, const CreateWorkflowResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Deletes an existing blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteBlueprint">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteBlueprintOutcome DeleteBlueprint(const Model::DeleteBlueprintRequest& request) const;
+
+        /**
+         * <p>Deletes an existing blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteBlueprint">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DeleteBlueprintOutcomeCallable DeleteBlueprintCallable(const Model::DeleteBlueprintRequest& request) const;
+
+        /**
+         * <p>Deletes an existing blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteBlueprint">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DeleteBlueprintAsync(const Model::DeleteBlueprintRequest& request, const DeleteBlueprintResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Removes a classifier from the Data Catalog.</p><p><h3>See Also:</h3>   <a
@@ -2026,16 +2259,16 @@ namespace Model
         virtual void DeleteConnectionAsync(const Model::DeleteConnectionRequest& request, const DeleteConnectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Removes a specified crawler from the AWS Glue Data Catalog, unless the
-         * crawler state is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes a specified crawler from the Glue Data Catalog, unless the crawler
+         * state is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteCrawler">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteCrawlerOutcome DeleteCrawler(const Model::DeleteCrawlerRequest& request) const;
 
         /**
-         * <p>Removes a specified crawler from the AWS Glue Data Catalog, unless the
-         * crawler state is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes a specified crawler from the Glue Data Catalog, unless the crawler
+         * state is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteCrawler">AWS
          * API Reference</a></p>
          *
@@ -2044,8 +2277,8 @@ namespace Model
         virtual Model::DeleteCrawlerOutcomeCallable DeleteCrawlerCallable(const Model::DeleteCrawlerRequest& request) const;
 
         /**
-         * <p>Removes a specified crawler from the AWS Glue Data Catalog, unless the
-         * crawler state is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes a specified crawler from the Glue Data Catalog, unless the crawler
+         * state is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteCrawler">AWS
          * API Reference</a></p>
          *
@@ -2057,8 +2290,8 @@ namespace Model
          * <p>Removes a specified database from a Data Catalog.</p>  <p>After
          * completing this operation, you no longer have access to the tables (and all
          * table versions and partitions that might belong to the tables) and the
-         * user-defined functions in the deleted database. AWS Glue deletes these
-         * "orphaned" resources asynchronously in a timely manner, at the discretion of the
+         * user-defined functions in the deleted database. Glue deletes these "orphaned"
+         * resources asynchronously in a timely manner, at the discretion of the
          * service.</p> <p>To ensure the immediate deletion of all related resources,
          * before calling <code>DeleteDatabase</code>, use <code>DeleteTableVersion</code>
          * or <code>BatchDeleteTableVersion</code>, <code>DeletePartition</code> or
@@ -2074,8 +2307,8 @@ namespace Model
          * <p>Removes a specified database from a Data Catalog.</p>  <p>After
          * completing this operation, you no longer have access to the tables (and all
          * table versions and partitions that might belong to the tables) and the
-         * user-defined functions in the deleted database. AWS Glue deletes these
-         * "orphaned" resources asynchronously in a timely manner, at the discretion of the
+         * user-defined functions in the deleted database. Glue deletes these "orphaned"
+         * resources asynchronously in a timely manner, at the discretion of the
          * service.</p> <p>To ensure the immediate deletion of all related resources,
          * before calling <code>DeleteDatabase</code>, use <code>DeleteTableVersion</code>
          * or <code>BatchDeleteTableVersion</code>, <code>DeletePartition</code> or
@@ -2093,8 +2326,8 @@ namespace Model
          * <p>Removes a specified database from a Data Catalog.</p>  <p>After
          * completing this operation, you no longer have access to the tables (and all
          * table versions and partitions that might belong to the tables) and the
-         * user-defined functions in the deleted database. AWS Glue deletes these
-         * "orphaned" resources asynchronously in a timely manner, at the discretion of the
+         * user-defined functions in the deleted database. Glue deletes these "orphaned"
+         * resources asynchronously in a timely manner, at the discretion of the
          * service.</p> <p>To ensure the immediate deletion of all related resources,
          * before calling <code>DeleteDatabase</code>, use <code>DeleteTableVersion</code>
          * or <code>BatchDeleteTableVersion</code>, <code>DeletePartition</code> or
@@ -2162,26 +2395,26 @@ namespace Model
         virtual void DeleteJobAsync(const Model::DeleteJobRequest& request, const DeleteJobResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Deletes an AWS Glue machine learning transform. Machine learning transforms
-         * are a special type of transform that use machine learning to learn the details
-         * of the transformation to be performed by learning from examples provided by
-         * humans. These transformations are then saved by AWS Glue. If you no longer need
-         * a transform, you can delete it by calling <code>DeleteMLTransforms</code>.
-         * However, any AWS Glue jobs that still reference the deleted transform will no
-         * longer succeed.</p><p><h3>See Also:</h3>   <a
+         * <p>Deletes an Glue machine learning transform. Machine learning transforms are a
+         * special type of transform that use machine learning to learn the details of the
+         * transformation to be performed by learning from examples provided by humans.
+         * These transformations are then saved by Glue. If you no longer need a transform,
+         * you can delete it by calling <code>DeleteMLTransforms</code>. However, any Glue
+         * jobs that still reference the deleted transform will no longer
+         * succeed.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteMLTransform">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteMLTransformOutcome DeleteMLTransform(const Model::DeleteMLTransformRequest& request) const;
 
         /**
-         * <p>Deletes an AWS Glue machine learning transform. Machine learning transforms
-         * are a special type of transform that use machine learning to learn the details
-         * of the transformation to be performed by learning from examples provided by
-         * humans. These transformations are then saved by AWS Glue. If you no longer need
-         * a transform, you can delete it by calling <code>DeleteMLTransforms</code>.
-         * However, any AWS Glue jobs that still reference the deleted transform will no
-         * longer succeed.</p><p><h3>See Also:</h3>   <a
+         * <p>Deletes an Glue machine learning transform. Machine learning transforms are a
+         * special type of transform that use machine learning to learn the details of the
+         * transformation to be performed by learning from examples provided by humans.
+         * These transformations are then saved by Glue. If you no longer need a transform,
+         * you can delete it by calling <code>DeleteMLTransforms</code>. However, any Glue
+         * jobs that still reference the deleted transform will no longer
+         * succeed.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteMLTransform">AWS
          * API Reference</a></p>
          *
@@ -2190,13 +2423,13 @@ namespace Model
         virtual Model::DeleteMLTransformOutcomeCallable DeleteMLTransformCallable(const Model::DeleteMLTransformRequest& request) const;
 
         /**
-         * <p>Deletes an AWS Glue machine learning transform. Machine learning transforms
-         * are a special type of transform that use machine learning to learn the details
-         * of the transformation to be performed by learning from examples provided by
-         * humans. These transformations are then saved by AWS Glue. If you no longer need
-         * a transform, you can delete it by calling <code>DeleteMLTransforms</code>.
-         * However, any AWS Glue jobs that still reference the deleted transform will no
-         * longer succeed.</p><p><h3>See Also:</h3>   <a
+         * <p>Deletes an Glue machine learning transform. Machine learning transforms are a
+         * special type of transform that use machine learning to learn the details of the
+         * transformation to be performed by learning from examples provided by humans.
+         * These transformations are then saved by Glue. If you no longer need a transform,
+         * you can delete it by calling <code>DeleteMLTransforms</code>. However, any Glue
+         * jobs that still reference the deleted transform will no longer
+         * succeed.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteMLTransform">AWS
          * API Reference</a></p>
          *
@@ -2260,7 +2493,7 @@ namespace Model
         /**
          * <p>Delete the entire registry including schema and all of its versions. To get
          * the status of the delete operation, you can call the <code>GetRegistry</code>
-         * API after the asynchronous call. Deleting a registry will disable all online
+         * API after the asynchronous call. Deleting a registry will deactivate all online
          * operations for the registry such as the <code>UpdateRegistry</code>,
          * <code>CreateSchema</code>, <code>UpdateSchema</code>, and
          * <code>RegisterSchemaVersion</code> APIs. </p><p><h3>See Also:</h3>   <a
@@ -2272,7 +2505,7 @@ namespace Model
         /**
          * <p>Delete the entire registry including schema and all of its versions. To get
          * the status of the delete operation, you can call the <code>GetRegistry</code>
-         * API after the asynchronous call. Deleting a registry will disable all online
+         * API after the asynchronous call. Deleting a registry will deactivate all online
          * operations for the registry such as the <code>UpdateRegistry</code>,
          * <code>CreateSchema</code>, <code>UpdateSchema</code>, and
          * <code>RegisterSchemaVersion</code> APIs. </p><p><h3>See Also:</h3>   <a
@@ -2286,7 +2519,7 @@ namespace Model
         /**
          * <p>Delete the entire registry including schema and all of its versions. To get
          * the status of the delete operation, you can call the <code>GetRegistry</code>
-         * API after the asynchronous call. Deleting a registry will disable all online
+         * API after the asynchronous call. Deleting a registry will deactivate all online
          * operations for the registry such as the <code>UpdateRegistry</code>,
          * <code>CreateSchema</code>, <code>UpdateSchema</code>, and
          * <code>RegisterSchemaVersion</code> APIs. </p><p><h3>See Also:</h3>   <a
@@ -2326,7 +2559,7 @@ namespace Model
          * <p>Deletes the entire schema set, including the schema set and all of its
          * versions. To get the status of the delete operation, you can call
          * <code>GetSchema</code> API after the asynchronous call. Deleting a registry will
-         * disable all online operations for the schema, such as the
+         * deactivate all online operations for the schema, such as the
          * <code>GetSchemaByDefinition</code>, and <code>RegisterSchemaVersion</code>
          * APIs.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSchema">AWS
@@ -2338,7 +2571,7 @@ namespace Model
          * <p>Deletes the entire schema set, including the schema set and all of its
          * versions. To get the status of the delete operation, you can call
          * <code>GetSchema</code> API after the asynchronous call. Deleting a registry will
-         * disable all online operations for the schema, such as the
+         * deactivate all online operations for the schema, such as the
          * <code>GetSchemaByDefinition</code>, and <code>RegisterSchemaVersion</code>
          * APIs.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSchema">AWS
@@ -2352,7 +2585,7 @@ namespace Model
          * <p>Deletes the entire schema set, including the schema set and all of its
          * versions. To get the status of the delete operation, you can call
          * <code>GetSchema</code> API after the asynchronous call. Deleting a registry will
-         * disable all online operations for the schema, such as the
+         * deactivate all online operations for the schema, such as the
          * <code>GetSchemaByDefinition</code>, and <code>RegisterSchemaVersion</code>
          * APIs.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSchema">AWS
@@ -2455,9 +2688,34 @@ namespace Model
         virtual void DeleteSecurityConfigurationAsync(const Model::DeleteSecurityConfigurationRequest& request, const DeleteSecurityConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Deletes the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSession">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteSessionOutcome DeleteSession(const Model::DeleteSessionRequest& request) const;
+
+        /**
+         * <p>Deletes the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSession">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DeleteSessionOutcomeCallable DeleteSessionCallable(const Model::DeleteSessionRequest& request) const;
+
+        /**
+         * <p>Deletes the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSession">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DeleteSessionAsync(const Model::DeleteSessionRequest& request, const DeleteSessionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Removes a table definition from the Data Catalog.</p>  <p>After
          * completing this operation, you no longer have access to the table versions and
-         * partitions that belong to the deleted table. AWS Glue deletes these "orphaned"
+         * partitions that belong to the deleted table. Glue deletes these "orphaned"
          * resources asynchronously in a timely manner, at the discretion of the
          * service.</p> <p>To ensure the immediate deletion of all related resources,
          * before calling <code>DeleteTable</code>, use <code>DeleteTableVersion</code> or
@@ -2472,7 +2730,7 @@ namespace Model
         /**
          * <p>Removes a table definition from the Data Catalog.</p>  <p>After
          * completing this operation, you no longer have access to the table versions and
-         * partitions that belong to the deleted table. AWS Glue deletes these "orphaned"
+         * partitions that belong to the deleted table. Glue deletes these "orphaned"
          * resources asynchronously in a timely manner, at the discretion of the
          * service.</p> <p>To ensure the immediate deletion of all related resources,
          * before calling <code>DeleteTable</code>, use <code>DeleteTableVersion</code> or
@@ -2489,7 +2747,7 @@ namespace Model
         /**
          * <p>Removes a table definition from the Data Catalog.</p>  <p>After
          * completing this operation, you no longer have access to the table versions and
-         * partitions that belong to the deleted table. AWS Glue deletes these "orphaned"
+         * partitions that belong to the deleted table. Glue deletes these "orphaned"
          * resources asynchronously in a timely manner, at the discretion of the
          * service.</p> <p>To ensure the immediate deletion of all related resources,
          * before calling <code>DeleteTable</code>, use <code>DeleteTableVersion</code> or
@@ -2608,6 +2866,84 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void DeleteWorkflowAsync(const Model::DeleteWorkflowRequest& request, const DeleteWorkflowResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves the details of a blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprint">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetBlueprintOutcome GetBlueprint(const Model::GetBlueprintRequest& request) const;
+
+        /**
+         * <p>Retrieves the details of a blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprint">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetBlueprintOutcomeCallable GetBlueprintCallable(const Model::GetBlueprintRequest& request) const;
+
+        /**
+         * <p>Retrieves the details of a blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprint">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetBlueprintAsync(const Model::GetBlueprintRequest& request, const GetBlueprintResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves the details of a blueprint run.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRun">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetBlueprintRunOutcome GetBlueprintRun(const Model::GetBlueprintRunRequest& request) const;
+
+        /**
+         * <p>Retrieves the details of a blueprint run.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRun">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetBlueprintRunOutcomeCallable GetBlueprintRunCallable(const Model::GetBlueprintRunRequest& request) const;
+
+        /**
+         * <p>Retrieves the details of a blueprint run.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRun">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetBlueprintRunAsync(const Model::GetBlueprintRunRequest& request, const GetBlueprintRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves the details of blueprint runs for a specified
+         * blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRuns">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetBlueprintRunsOutcome GetBlueprintRuns(const Model::GetBlueprintRunsRequest& request) const;
+
+        /**
+         * <p>Retrieves the details of blueprint runs for a specified
+         * blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRuns">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetBlueprintRunsOutcomeCallable GetBlueprintRunsCallable(const Model::GetBlueprintRunsRequest& request) const;
+
+        /**
+         * <p>Retrieves the details of blueprint runs for a specified
+         * blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRuns">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetBlueprintRunsAsync(const Model::GetBlueprintRunsRequest& request, const GetBlueprintRunsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Retrieves the status of a migration operation.</p><p><h3>See Also:</h3>   <a
@@ -2994,10 +3330,10 @@ namespace Model
 
         /**
          * <p>Retrieves information about a specified development endpoint.</p> 
-         * <p>When you create a development endpoint in a virtual private cloud (VPC), AWS
-         * Glue returns only a private IP address, and the public IP address field is not
-         * populated. When you create a non-VPC development endpoint, AWS Glue returns only
-         * a public IP address.</p> <p><h3>See Also:</h3>   <a
+         * <p>When you create a development endpoint in a virtual private cloud (VPC), Glue
+         * returns only a private IP address, and the public IP address field is not
+         * populated. When you create a non-VPC development endpoint, Glue returns only a
+         * public IP address.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDevEndpoint">AWS
          * API Reference</a></p>
          */
@@ -3005,10 +3341,10 @@ namespace Model
 
         /**
          * <p>Retrieves information about a specified development endpoint.</p> 
-         * <p>When you create a development endpoint in a virtual private cloud (VPC), AWS
-         * Glue returns only a private IP address, and the public IP address field is not
-         * populated. When you create a non-VPC development endpoint, AWS Glue returns only
-         * a public IP address.</p> <p><h3>See Also:</h3>   <a
+         * <p>When you create a development endpoint in a virtual private cloud (VPC), Glue
+         * returns only a private IP address, and the public IP address field is not
+         * populated. When you create a non-VPC development endpoint, Glue returns only a
+         * public IP address.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDevEndpoint">AWS
          * API Reference</a></p>
          *
@@ -3018,10 +3354,10 @@ namespace Model
 
         /**
          * <p>Retrieves information about a specified development endpoint.</p> 
-         * <p>When you create a development endpoint in a virtual private cloud (VPC), AWS
-         * Glue returns only a private IP address, and the public IP address field is not
-         * populated. When you create a non-VPC development endpoint, AWS Glue returns only
-         * a public IP address.</p> <p><h3>See Also:</h3>   <a
+         * <p>When you create a development endpoint in a virtual private cloud (VPC), Glue
+         * returns only a private IP address, and the public IP address field is not
+         * populated. When you create a non-VPC development endpoint, Glue returns only a
+         * public IP address.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDevEndpoint">AWS
          * API Reference</a></p>
          *
@@ -3031,10 +3367,10 @@ namespace Model
 
         /**
          * <p>Retrieves all the development endpoints in this AWS account.</p> 
-         * <p>When you create a development endpoint in a virtual private cloud (VPC), AWS
-         * Glue returns only a private IP address and the public IP address field is not
-         * populated. When you create a non-VPC development endpoint, AWS Glue returns only
-         * a public IP address.</p> <p><h3>See Also:</h3>   <a
+         * <p>When you create a development endpoint in a virtual private cloud (VPC), Glue
+         * returns only a private IP address and the public IP address field is not
+         * populated. When you create a non-VPC development endpoint, Glue returns only a
+         * public IP address.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDevEndpoints">AWS
          * API Reference</a></p>
          */
@@ -3042,10 +3378,10 @@ namespace Model
 
         /**
          * <p>Retrieves all the development endpoints in this AWS account.</p> 
-         * <p>When you create a development endpoint in a virtual private cloud (VPC), AWS
-         * Glue returns only a private IP address and the public IP address field is not
-         * populated. When you create a non-VPC development endpoint, AWS Glue returns only
-         * a public IP address.</p> <p><h3>See Also:</h3>   <a
+         * <p>When you create a development endpoint in a virtual private cloud (VPC), Glue
+         * returns only a private IP address and the public IP address field is not
+         * populated. When you create a non-VPC development endpoint, Glue returns only a
+         * public IP address.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDevEndpoints">AWS
          * API Reference</a></p>
          *
@@ -3055,10 +3391,10 @@ namespace Model
 
         /**
          * <p>Retrieves all the development endpoints in this AWS account.</p> 
-         * <p>When you create a development endpoint in a virtual private cloud (VPC), AWS
-         * Glue returns only a private IP address and the public IP address field is not
-         * populated. When you create a non-VPC development endpoint, AWS Glue returns only
-         * a public IP address.</p> <p><h3>See Also:</h3>   <a
+         * <p>When you create a development endpoint in a virtual private cloud (VPC), Glue
+         * returns only a private IP address and the public IP address field is not
+         * populated. When you create a non-VPC development endpoint, Glue returns only a
+         * public IP address.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetDevEndpoints">AWS
          * API Reference</a></p>
          *
@@ -3196,9 +3532,9 @@ namespace Model
 
         /**
          * <p>Gets details for a specific task run on a machine learning transform. Machine
-         * learning task runs are asynchronous tasks that AWS Glue runs on your behalf as
-         * part of various machine learning workflows. You can check the stats of any task
-         * run by calling <code>GetMLTaskRun</code> with the <code>TaskRunID</code> and its
+         * learning task runs are asynchronous tasks that Glue runs on your behalf as part
+         * of various machine learning workflows. You can check the stats of any task run
+         * by calling <code>GetMLTaskRun</code> with the <code>TaskRunID</code> and its
          * parent transform's <code>TransformID</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTaskRun">AWS
          * API Reference</a></p>
@@ -3207,9 +3543,9 @@ namespace Model
 
         /**
          * <p>Gets details for a specific task run on a machine learning transform. Machine
-         * learning task runs are asynchronous tasks that AWS Glue runs on your behalf as
-         * part of various machine learning workflows. You can check the stats of any task
-         * run by calling <code>GetMLTaskRun</code> with the <code>TaskRunID</code> and its
+         * learning task runs are asynchronous tasks that Glue runs on your behalf as part
+         * of various machine learning workflows. You can check the stats of any task run
+         * by calling <code>GetMLTaskRun</code> with the <code>TaskRunID</code> and its
          * parent transform's <code>TransformID</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTaskRun">AWS
          * API Reference</a></p>
@@ -3220,9 +3556,9 @@ namespace Model
 
         /**
          * <p>Gets details for a specific task run on a machine learning transform. Machine
-         * learning task runs are asynchronous tasks that AWS Glue runs on your behalf as
-         * part of various machine learning workflows. You can check the stats of any task
-         * run by calling <code>GetMLTaskRun</code> with the <code>TaskRunID</code> and its
+         * learning task runs are asynchronous tasks that Glue runs on your behalf as part
+         * of various machine learning workflows. You can check the stats of any task run
+         * by calling <code>GetMLTaskRun</code> with the <code>TaskRunID</code> and its
          * parent transform's <code>TransformID</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTaskRun">AWS
          * API Reference</a></p>
@@ -3233,7 +3569,7 @@ namespace Model
 
         /**
          * <p>Gets a list of runs for a machine learning transform. Machine learning task
-         * runs are asynchronous tasks that AWS Glue runs on your behalf as part of various
+         * runs are asynchronous tasks that Glue runs on your behalf as part of various
          * machine learning workflows. You can get a sortable, filterable list of machine
          * learning task runs by calling <code>GetMLTaskRuns</code> with their parent
          * transform's <code>TransformID</code> and other optional parameters as documented
@@ -3246,7 +3582,7 @@ namespace Model
 
         /**
          * <p>Gets a list of runs for a machine learning transform. Machine learning task
-         * runs are asynchronous tasks that AWS Glue runs on your behalf as part of various
+         * runs are asynchronous tasks that Glue runs on your behalf as part of various
          * machine learning workflows. You can get a sortable, filterable list of machine
          * learning task runs by calling <code>GetMLTaskRuns</code> with their parent
          * transform's <code>TransformID</code> and other optional parameters as documented
@@ -3261,7 +3597,7 @@ namespace Model
 
         /**
          * <p>Gets a list of runs for a machine learning transform. Machine learning task
-         * runs are asynchronous tasks that AWS Glue runs on your behalf as part of various
+         * runs are asynchronous tasks that Glue runs on your behalf as part of various
          * machine learning workflows. You can get a sortable, filterable list of machine
          * learning task runs by calling <code>GetMLTaskRuns</code> with their parent
          * transform's <code>TransformID</code> and other optional parameters as documented
@@ -3275,24 +3611,24 @@ namespace Model
         virtual void GetMLTaskRunsAsync(const Model::GetMLTaskRunsRequest& request, const GetMLTaskRunsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Gets an AWS Glue machine learning transform artifact and all its
-         * corresponding metadata. Machine learning transforms are a special type of
-         * transform that use machine learning to learn the details of the transformation
-         * to be performed by learning from examples provided by humans. These
-         * transformations are then saved by AWS Glue. You can retrieve their metadata by
-         * calling <code>GetMLTransform</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets an Glue machine learning transform artifact and all its corresponding
+         * metadata. Machine learning transforms are a special type of transform that use
+         * machine learning to learn the details of the transformation to be performed by
+         * learning from examples provided by humans. These transformations are then saved
+         * by Glue. You can retrieve their metadata by calling
+         * <code>GetMLTransform</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTransform">AWS
          * API Reference</a></p>
          */
         virtual Model::GetMLTransformOutcome GetMLTransform(const Model::GetMLTransformRequest& request) const;
 
         /**
-         * <p>Gets an AWS Glue machine learning transform artifact and all its
-         * corresponding metadata. Machine learning transforms are a special type of
-         * transform that use machine learning to learn the details of the transformation
-         * to be performed by learning from examples provided by humans. These
-         * transformations are then saved by AWS Glue. You can retrieve their metadata by
-         * calling <code>GetMLTransform</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets an Glue machine learning transform artifact and all its corresponding
+         * metadata. Machine learning transforms are a special type of transform that use
+         * machine learning to learn the details of the transformation to be performed by
+         * learning from examples provided by humans. These transformations are then saved
+         * by Glue. You can retrieve their metadata by calling
+         * <code>GetMLTransform</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTransform">AWS
          * API Reference</a></p>
          *
@@ -3301,12 +3637,12 @@ namespace Model
         virtual Model::GetMLTransformOutcomeCallable GetMLTransformCallable(const Model::GetMLTransformRequest& request) const;
 
         /**
-         * <p>Gets an AWS Glue machine learning transform artifact and all its
-         * corresponding metadata. Machine learning transforms are a special type of
-         * transform that use machine learning to learn the details of the transformation
-         * to be performed by learning from examples provided by humans. These
-         * transformations are then saved by AWS Glue. You can retrieve their metadata by
-         * calling <code>GetMLTransform</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets an Glue machine learning transform artifact and all its corresponding
+         * metadata. Machine learning transforms are a special type of transform that use
+         * machine learning to learn the details of the transformation to be performed by
+         * learning from examples provided by humans. These transformations are then saved
+         * by Glue. You can retrieve their metadata by calling
+         * <code>GetMLTransform</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTransform">AWS
          * API Reference</a></p>
          *
@@ -3315,11 +3651,11 @@ namespace Model
         virtual void GetMLTransformAsync(const Model::GetMLTransformRequest& request, const GetMLTransformResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Gets a sortable, filterable list of existing AWS Glue machine learning
+         * <p>Gets a sortable, filterable list of existing Glue machine learning
          * transforms. Machine learning transforms are a special type of transform that use
          * machine learning to learn the details of the transformation to be performed by
          * learning from examples provided by humans. These transformations are then saved
-         * by AWS Glue, and you can retrieve their metadata by calling
+         * by Glue, and you can retrieve their metadata by calling
          * <code>GetMLTransforms</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTransforms">AWS
          * API Reference</a></p>
@@ -3327,11 +3663,11 @@ namespace Model
         virtual Model::GetMLTransformsOutcome GetMLTransforms(const Model::GetMLTransformsRequest& request) const;
 
         /**
-         * <p>Gets a sortable, filterable list of existing AWS Glue machine learning
+         * <p>Gets a sortable, filterable list of existing Glue machine learning
          * transforms. Machine learning transforms are a special type of transform that use
          * machine learning to learn the details of the transformation to be performed by
          * learning from examples provided by humans. These transformations are then saved
-         * by AWS Glue, and you can retrieve their metadata by calling
+         * by Glue, and you can retrieve their metadata by calling
          * <code>GetMLTransforms</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTransforms">AWS
          * API Reference</a></p>
@@ -3341,11 +3677,11 @@ namespace Model
         virtual Model::GetMLTransformsOutcomeCallable GetMLTransformsCallable(const Model::GetMLTransformsRequest& request) const;
 
         /**
-         * <p>Gets a sortable, filterable list of existing AWS Glue machine learning
+         * <p>Gets a sortable, filterable list of existing Glue machine learning
          * transforms. Machine learning transforms are a special type of transform that use
          * machine learning to learn the details of the transformation to be performed by
          * learning from examples provided by humans. These transformations are then saved
-         * by AWS Glue, and you can retrieve their metadata by calling
+         * by Glue, and you can retrieve their metadata by calling
          * <code>GetMLTransforms</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetMLTransforms">AWS
          * API Reference</a></p>
@@ -3514,24 +3850,22 @@ namespace Model
         virtual void GetRegistryAsync(const Model::GetRegistryRequest& request, const GetRegistryResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Retrieves the security configurations for the resource policies set on
-         * individual resources, and also the account-level policy.</p> <p>This operation
-         * also returns the Data Catalog resource policy. However, if you enabled metadata
-         * encryption in Data Catalog settings, and you do not have permission on the AWS
-         * KMS key, the operation can't return the Data Catalog resource
-         * policy.</p><p><h3>See Also:</h3>   <a
+         * <p>Retrieves the resource policies set on individual resources by Resource
+         * Access Manager during cross-account permission grants. Also retrieves the Data
+         * Catalog resource policy.</p> <p>If you enabled metadata encryption in Data
+         * Catalog settings, and you do not have permission on the KMS key, the operation
+         * can't return the Data Catalog resource policy.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetResourcePolicies">AWS
          * API Reference</a></p>
          */
         virtual Model::GetResourcePoliciesOutcome GetResourcePolicies(const Model::GetResourcePoliciesRequest& request) const;
 
         /**
-         * <p>Retrieves the security configurations for the resource policies set on
-         * individual resources, and also the account-level policy.</p> <p>This operation
-         * also returns the Data Catalog resource policy. However, if you enabled metadata
-         * encryption in Data Catalog settings, and you do not have permission on the AWS
-         * KMS key, the operation can't return the Data Catalog resource
-         * policy.</p><p><h3>See Also:</h3>   <a
+         * <p>Retrieves the resource policies set on individual resources by Resource
+         * Access Manager during cross-account permission grants. Also retrieves the Data
+         * Catalog resource policy.</p> <p>If you enabled metadata encryption in Data
+         * Catalog settings, and you do not have permission on the KMS key, the operation
+         * can't return the Data Catalog resource policy.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetResourcePolicies">AWS
          * API Reference</a></p>
          *
@@ -3540,12 +3874,11 @@ namespace Model
         virtual Model::GetResourcePoliciesOutcomeCallable GetResourcePoliciesCallable(const Model::GetResourcePoliciesRequest& request) const;
 
         /**
-         * <p>Retrieves the security configurations for the resource policies set on
-         * individual resources, and also the account-level policy.</p> <p>This operation
-         * also returns the Data Catalog resource policy. However, if you enabled metadata
-         * encryption in Data Catalog settings, and you do not have permission on the AWS
-         * KMS key, the operation can't return the Data Catalog resource
-         * policy.</p><p><h3>See Also:</h3>   <a
+         * <p>Retrieves the resource policies set on individual resources by Resource
+         * Access Manager during cross-account permission grants. Also retrieves the Data
+         * Catalog resource policy.</p> <p>If you enabled metadata encryption in Data
+         * Catalog settings, and you do not have permission on the KMS key, the operation
+         * can't return the Data Catalog resource policy.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetResourcePolicies">AWS
          * API Reference</a></p>
          *
@@ -3765,6 +4098,56 @@ namespace Model
         virtual void GetSecurityConfigurationsAsync(const Model::GetSecurityConfigurationsRequest& request, const GetSecurityConfigurationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Retrieves the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSession">AWS API
+         * Reference</a></p>
+         */
+        virtual Model::GetSessionOutcome GetSession(const Model::GetSessionRequest& request) const;
+
+        /**
+         * <p>Retrieves the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSession">AWS API
+         * Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetSessionOutcomeCallable GetSessionCallable(const Model::GetSessionRequest& request) const;
+
+        /**
+         * <p>Retrieves the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSession">AWS API
+         * Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetSessionAsync(const Model::GetSessionRequest& request, const GetSessionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves the statement.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetStatement">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetStatementOutcome GetStatement(const Model::GetStatementRequest& request) const;
+
+        /**
+         * <p>Retrieves the statement.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetStatement">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetStatementOutcomeCallable GetStatementCallable(const Model::GetStatementRequest& request) const;
+
+        /**
+         * <p>Retrieves the statement.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetStatement">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetStatementAsync(const Model::GetStatementRequest& request, const GetStatementResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Retrieves the <code>Table</code> definition in a Data Catalog for a specified
          * table.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTable">AWS API
@@ -3949,6 +4332,63 @@ namespace Model
         virtual void GetTriggersAsync(const Model::GetTriggersRequest& request, const GetTriggersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * 
+         */
+        virtual Model::GetUnfilteredPartitionMetadataOutcome GetUnfilteredPartitionMetadata(const Model::GetUnfilteredPartitionMetadataRequest& request) const;
+
+        /**
+         * 
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetUnfilteredPartitionMetadataOutcomeCallable GetUnfilteredPartitionMetadataCallable(const Model::GetUnfilteredPartitionMetadataRequest& request) const;
+
+        /**
+         * 
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetUnfilteredPartitionMetadataAsync(const Model::GetUnfilteredPartitionMetadataRequest& request, const GetUnfilteredPartitionMetadataResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * 
+         */
+        virtual Model::GetUnfilteredPartitionsMetadataOutcome GetUnfilteredPartitionsMetadata(const Model::GetUnfilteredPartitionsMetadataRequest& request) const;
+
+        /**
+         * 
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetUnfilteredPartitionsMetadataOutcomeCallable GetUnfilteredPartitionsMetadataCallable(const Model::GetUnfilteredPartitionsMetadataRequest& request) const;
+
+        /**
+         * 
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetUnfilteredPartitionsMetadataAsync(const Model::GetUnfilteredPartitionsMetadataRequest& request, const GetUnfilteredPartitionsMetadataResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * 
+         */
+        virtual Model::GetUnfilteredTableMetadataOutcome GetUnfilteredTableMetadata(const Model::GetUnfilteredTableMetadataRequest& request) const;
+
+        /**
+         * 
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetUnfilteredTableMetadataOutcomeCallable GetUnfilteredTableMetadataCallable(const Model::GetUnfilteredTableMetadataRequest& request) const;
+
+        /**
+         * 
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetUnfilteredTableMetadataAsync(const Model::GetUnfilteredTableMetadataRequest& request, const GetUnfilteredTableMetadataResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Retrieves a specified function definition from the Data
          * Catalog.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetUserDefinedFunction">AWS
@@ -4114,7 +4554,7 @@ namespace Model
         virtual void GetWorkflowRunsAsync(const Model::GetWorkflowRunsRequest& request, const GetWorkflowRunsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Imports an existing Amazon Athena Data Catalog to AWS Glue</p><p><h3>See
+         * <p>Imports an existing Amazon Athena Data Catalog to Glue.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ImportCatalogToGlue">AWS
          * API Reference</a></p>
@@ -4122,7 +4562,7 @@ namespace Model
         virtual Model::ImportCatalogToGlueOutcome ImportCatalogToGlue(const Model::ImportCatalogToGlueRequest& request) const;
 
         /**
-         * <p>Imports an existing Amazon Athena Data Catalog to AWS Glue</p><p><h3>See
+         * <p>Imports an existing Amazon Athena Data Catalog to Glue.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ImportCatalogToGlue">AWS
          * API Reference</a></p>
@@ -4132,7 +4572,7 @@ namespace Model
         virtual Model::ImportCatalogToGlueOutcomeCallable ImportCatalogToGlueCallable(const Model::ImportCatalogToGlueRequest& request) const;
 
         /**
-         * <p>Imports an existing Amazon Athena Data Catalog to AWS Glue</p><p><h3>See
+         * <p>Imports an existing Amazon Athena Data Catalog to Glue.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ImportCatalogToGlue">AWS
          * API Reference</a></p>
@@ -4142,26 +4582,51 @@ namespace Model
         virtual void ImportCatalogToGlueAsync(const Model::ImportCatalogToGlueRequest& request, const ImportCatalogToGlueResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Retrieves the names of all crawler resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
-         * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field, which you can use as a filter on the
-         * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Lists all the blueprint names in an account.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListBlueprints">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListBlueprintsOutcome ListBlueprints(const Model::ListBlueprintsRequest& request) const;
+
+        /**
+         * <p>Lists all the blueprint names in an account.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListBlueprints">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListBlueprintsOutcomeCallable ListBlueprintsCallable(const Model::ListBlueprintsRequest& request) const;
+
+        /**
+         * <p>Lists all the blueprint names in an account.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListBlueprints">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListBlueprintsAsync(const Model::ListBlueprintsRequest& request, const ListBlueprintsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves the names of all crawler resources in this Amazon Web Services
+         * account, or the resources with the specified tag. This operation allows you to
+         * see which resources are available in your account, and their names.</p> <p>This
+         * operation takes the optional <code>Tags</code> field, which you can use as a
+         * filter on the response so that tagged resources can be retrieved as a group. If
+         * you choose to use tags filtering, only resources with the tag are
+         * retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCrawlers">AWS
          * API Reference</a></p>
          */
         virtual Model::ListCrawlersOutcome ListCrawlers(const Model::ListCrawlersRequest& request) const;
 
         /**
-         * <p>Retrieves the names of all crawler resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
-         * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field, which you can use as a filter on the
-         * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Retrieves the names of all crawler resources in this Amazon Web Services
+         * account, or the resources with the specified tag. This operation allows you to
+         * see which resources are available in your account, and their names.</p> <p>This
+         * operation takes the optional <code>Tags</code> field, which you can use as a
+         * filter on the response so that tagged resources can be retrieved as a group. If
+         * you choose to use tags filtering, only resources with the tag are
+         * retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCrawlers">AWS
          * API Reference</a></p>
          *
@@ -4170,13 +4635,13 @@ namespace Model
         virtual Model::ListCrawlersOutcomeCallable ListCrawlersCallable(const Model::ListCrawlersRequest& request) const;
 
         /**
-         * <p>Retrieves the names of all crawler resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
-         * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field, which you can use as a filter on the
-         * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Retrieves the names of all crawler resources in this Amazon Web Services
+         * account, or the resources with the specified tag. This operation allows you to
+         * see which resources are available in your account, and their names.</p> <p>This
+         * operation takes the optional <code>Tags</code> field, which you can use as a
+         * filter on the response so that tagged resources can be retrieved as a group. If
+         * you choose to use tags filtering, only resources with the tag are
+         * retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCrawlers">AWS
          * API Reference</a></p>
          *
@@ -4185,26 +4650,26 @@ namespace Model
         virtual void ListCrawlersAsync(const Model::ListCrawlersRequest& request, const ListCrawlersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Retrieves the names of all <code>DevEndpoint</code> resources in this AWS
-         * account, or the resources with the specified tag. This operation allows you to
-         * see which resources are available in your account, and their names.</p> <p>This
-         * operation takes the optional <code>Tags</code> field, which you can use as a
-         * filter on the response so that tagged resources can be retrieved as a group. If
-         * you choose to use tags filtering, only resources with the tag are
-         * retrieved.</p><p><h3>See Also:</h3>   <a
+         * <p>Retrieves the names of all <code>DevEndpoint</code> resources in this Amazon
+         * Web Services account, or the resources with the specified tag. This operation
+         * allows you to see which resources are available in your account, and their
+         * names.</p> <p>This operation takes the optional <code>Tags</code> field, which
+         * you can use as a filter on the response so that tagged resources can be
+         * retrieved as a group. If you choose to use tags filtering, only resources with
+         * the tag are retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListDevEndpoints">AWS
          * API Reference</a></p>
          */
         virtual Model::ListDevEndpointsOutcome ListDevEndpoints(const Model::ListDevEndpointsRequest& request) const;
 
         /**
-         * <p>Retrieves the names of all <code>DevEndpoint</code> resources in this AWS
-         * account, or the resources with the specified tag. This operation allows you to
-         * see which resources are available in your account, and their names.</p> <p>This
-         * operation takes the optional <code>Tags</code> field, which you can use as a
-         * filter on the response so that tagged resources can be retrieved as a group. If
-         * you choose to use tags filtering, only resources with the tag are
-         * retrieved.</p><p><h3>See Also:</h3>   <a
+         * <p>Retrieves the names of all <code>DevEndpoint</code> resources in this Amazon
+         * Web Services account, or the resources with the specified tag. This operation
+         * allows you to see which resources are available in your account, and their
+         * names.</p> <p>This operation takes the optional <code>Tags</code> field, which
+         * you can use as a filter on the response so that tagged resources can be
+         * retrieved as a group. If you choose to use tags filtering, only resources with
+         * the tag are retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListDevEndpoints">AWS
          * API Reference</a></p>
          *
@@ -4213,13 +4678,13 @@ namespace Model
         virtual Model::ListDevEndpointsOutcomeCallable ListDevEndpointsCallable(const Model::ListDevEndpointsRequest& request) const;
 
         /**
-         * <p>Retrieves the names of all <code>DevEndpoint</code> resources in this AWS
-         * account, or the resources with the specified tag. This operation allows you to
-         * see which resources are available in your account, and their names.</p> <p>This
-         * operation takes the optional <code>Tags</code> field, which you can use as a
-         * filter on the response so that tagged resources can be retrieved as a group. If
-         * you choose to use tags filtering, only resources with the tag are
-         * retrieved.</p><p><h3>See Also:</h3>   <a
+         * <p>Retrieves the names of all <code>DevEndpoint</code> resources in this Amazon
+         * Web Services account, or the resources with the specified tag. This operation
+         * allows you to see which resources are available in your account, and their
+         * names.</p> <p>This operation takes the optional <code>Tags</code> field, which
+         * you can use as a filter on the response so that tagged resources can be
+         * retrieved as a group. If you choose to use tags filtering, only resources with
+         * the tag are retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListDevEndpoints">AWS
          * API Reference</a></p>
          *
@@ -4228,8 +4693,8 @@ namespace Model
         virtual void ListDevEndpointsAsync(const Model::ListDevEndpointsRequest& request, const ListDevEndpointsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Retrieves the names of all job resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
+         * <p>Retrieves the names of all job resources in this Amazon Web Services account,
+         * or the resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
          * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
@@ -4241,8 +4706,8 @@ namespace Model
         virtual Model::ListJobsOutcome ListJobs(const Model::ListJobsRequest& request) const;
 
         /**
-         * <p>Retrieves the names of all job resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
+         * <p>Retrieves the names of all job resources in this Amazon Web Services account,
+         * or the resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
          * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
@@ -4256,8 +4721,8 @@ namespace Model
         virtual Model::ListJobsOutcomeCallable ListJobsCallable(const Model::ListJobsRequest& request) const;
 
         /**
-         * <p>Retrieves the names of all job resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
+         * <p>Retrieves the names of all job resources in this Amazon Web Services account,
+         * or the resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
          * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
@@ -4271,24 +4736,24 @@ namespace Model
         virtual void ListJobsAsync(const Model::ListJobsRequest& request, const ListJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Retrieves a sortable, filterable list of existing AWS Glue machine learning
-         * transforms in this AWS account, or the resources with the specified tag. This
-         * operation takes the optional <code>Tags</code> field, which you can use as a
-         * filter of the responses so that tagged resources can be retrieved as a group. If
-         * you choose to use tag filtering, only resources with the tags are retrieved.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Retrieves a sortable, filterable list of existing Glue machine learning
+         * transforms in this Amazon Web Services account, or the resources with the
+         * specified tag. This operation takes the optional <code>Tags</code> field, which
+         * you can use as a filter of the responses so that tagged resources can be
+         * retrieved as a group. If you choose to use tag filtering, only resources with
+         * the tags are retrieved. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListMLTransforms">AWS
          * API Reference</a></p>
          */
         virtual Model::ListMLTransformsOutcome ListMLTransforms(const Model::ListMLTransformsRequest& request) const;
 
         /**
-         * <p> Retrieves a sortable, filterable list of existing AWS Glue machine learning
-         * transforms in this AWS account, or the resources with the specified tag. This
-         * operation takes the optional <code>Tags</code> field, which you can use as a
-         * filter of the responses so that tagged resources can be retrieved as a group. If
-         * you choose to use tag filtering, only resources with the tags are retrieved.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Retrieves a sortable, filterable list of existing Glue machine learning
+         * transforms in this Amazon Web Services account, or the resources with the
+         * specified tag. This operation takes the optional <code>Tags</code> field, which
+         * you can use as a filter of the responses so that tagged resources can be
+         * retrieved as a group. If you choose to use tag filtering, only resources with
+         * the tags are retrieved. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListMLTransforms">AWS
          * API Reference</a></p>
          *
@@ -4297,12 +4762,12 @@ namespace Model
         virtual Model::ListMLTransformsOutcomeCallable ListMLTransformsCallable(const Model::ListMLTransformsRequest& request) const;
 
         /**
-         * <p> Retrieves a sortable, filterable list of existing AWS Glue machine learning
-         * transforms in this AWS account, or the resources with the specified tag. This
-         * operation takes the optional <code>Tags</code> field, which you can use as a
-         * filter of the responses so that tagged resources can be retrieved as a group. If
-         * you choose to use tag filtering, only resources with the tags are retrieved.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Retrieves a sortable, filterable list of existing Glue machine learning
+         * transforms in this Amazon Web Services account, or the resources with the
+         * specified tag. This operation takes the optional <code>Tags</code> field, which
+         * you can use as a filter of the responses so that tagged resources can be
+         * retrieved as a group. If you choose to use tag filtering, only resources with
+         * the tags are retrieved. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListMLTransforms">AWS
          * API Reference</a></p>
          *
@@ -4416,26 +4881,76 @@ namespace Model
         virtual void ListSchemasAsync(const Model::ListSchemasRequest& request, const ListSchemasResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Retrieves the names of all trigger resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
-         * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field, which you can use as a filter on the
-         * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Retrieve a session..</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListSessions">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListSessionsOutcome ListSessions(const Model::ListSessionsRequest& request) const;
+
+        /**
+         * <p>Retrieve a session..</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListSessions">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListSessionsOutcomeCallable ListSessionsCallable(const Model::ListSessionsRequest& request) const;
+
+        /**
+         * <p>Retrieve a session..</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListSessions">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListSessionsAsync(const Model::ListSessionsRequest& request, const ListSessionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Lists statements for the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListStatements">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListStatementsOutcome ListStatements(const Model::ListStatementsRequest& request) const;
+
+        /**
+         * <p>Lists statements for the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListStatements">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListStatementsOutcomeCallable ListStatementsCallable(const Model::ListStatementsRequest& request) const;
+
+        /**
+         * <p>Lists statements for the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListStatements">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListStatementsAsync(const Model::ListStatementsRequest& request, const ListStatementsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves the names of all trigger resources in this Amazon Web Services
+         * account, or the resources with the specified tag. This operation allows you to
+         * see which resources are available in your account, and their names.</p> <p>This
+         * operation takes the optional <code>Tags</code> field, which you can use as a
+         * filter on the response so that tagged resources can be retrieved as a group. If
+         * you choose to use tags filtering, only resources with the tag are
+         * retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListTriggers">AWS
          * API Reference</a></p>
          */
         virtual Model::ListTriggersOutcome ListTriggers(const Model::ListTriggersRequest& request) const;
 
         /**
-         * <p>Retrieves the names of all trigger resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
-         * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field, which you can use as a filter on the
-         * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Retrieves the names of all trigger resources in this Amazon Web Services
+         * account, or the resources with the specified tag. This operation allows you to
+         * see which resources are available in your account, and their names.</p> <p>This
+         * operation takes the optional <code>Tags</code> field, which you can use as a
+         * filter on the response so that tagged resources can be retrieved as a group. If
+         * you choose to use tags filtering, only resources with the tag are
+         * retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListTriggers">AWS
          * API Reference</a></p>
          *
@@ -4444,13 +4959,13 @@ namespace Model
         virtual Model::ListTriggersOutcomeCallable ListTriggersCallable(const Model::ListTriggersRequest& request) const;
 
         /**
-         * <p>Retrieves the names of all trigger resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
-         * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field, which you can use as a filter on the
-         * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Retrieves the names of all trigger resources in this Amazon Web Services
+         * account, or the resources with the specified tag. This operation allows you to
+         * see which resources are available in your account, and their names.</p> <p>This
+         * operation takes the optional <code>Tags</code> field, which you can use as a
+         * filter on the response so that tagged resources can be retrieved as a group. If
+         * you choose to use tags filtering, only resources with the tag are
+         * retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListTriggers">AWS
          * API Reference</a></p>
          *
@@ -4781,6 +5296,31 @@ namespace Model
         virtual void ResumeWorkflowRunAsync(const Model::ResumeWorkflowRunRequest& request, const ResumeWorkflowRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Executes the statement.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/RunStatement">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::RunStatementOutcome RunStatement(const Model::RunStatementRequest& request) const;
+
+        /**
+         * <p>Executes the statement.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/RunStatement">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::RunStatementOutcomeCallable RunStatementCallable(const Model::RunStatementRequest& request) const;
+
+        /**
+         * <p>Executes the statement.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/RunStatement">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void RunStatementAsync(const Model::RunStatementRequest& request, const RunStatementResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Searches a set of tables based on properties in the table metadata as well as
          * on the parent database. You can search against text or filter conditions. </p>
          * <p>You can only get tables that you have access to based on the security
@@ -4828,6 +5368,31 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void SearchTablesAsync(const Model::SearchTablesRequest& request, const SearchTablesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Starts a new run of the specified blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartBlueprintRun">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::StartBlueprintRunOutcome StartBlueprintRun(const Model::StartBlueprintRunRequest& request) const;
+
+        /**
+         * <p>Starts a new run of the specified blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartBlueprintRun">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::StartBlueprintRunOutcomeCallable StartBlueprintRunCallable(const Model::StartBlueprintRunRequest& request) const;
+
+        /**
+         * <p>Starts a new run of the specified blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartBlueprintRun">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void StartBlueprintRunAsync(const Model::StartBlueprintRunRequest& request, const StartBlueprintRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Starts a crawl using the specified crawler, regardless of what is scheduled.
@@ -4952,7 +5517,7 @@ namespace Model
          * is generally used as part of the active learning workflow that starts with the
          * <code>StartMLLabelingSetGenerationTaskRun</code> call and that ultimately
          * results in improving the quality of your machine learning transform. </p>
-         * <p>After the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, AWS Glue
+         * <p>After the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, Glue
          * machine learning will have generated a series of questions for humans to answer.
          * (Answering these questions is often called 'labeling' in the machine learning
          * workflows). In the case of the <code>FindMatches</code> transform, these
@@ -4983,7 +5548,7 @@ namespace Model
          * is generally used as part of the active learning workflow that starts with the
          * <code>StartMLLabelingSetGenerationTaskRun</code> call and that ultimately
          * results in improving the quality of your machine learning transform. </p>
-         * <p>After the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, AWS Glue
+         * <p>After the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, Glue
          * machine learning will have generated a series of questions for humans to answer.
          * (Answering these questions is often called 'labeling' in the machine learning
          * workflows). In the case of the <code>FindMatches</code> transform, these
@@ -5016,7 +5581,7 @@ namespace Model
          * is generally used as part of the active learning workflow that starts with the
          * <code>StartMLLabelingSetGenerationTaskRun</code> call and that ultimately
          * results in improving the quality of your machine learning transform. </p>
-         * <p>After the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, AWS Glue
+         * <p>After the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, Glue
          * machine learning will have generated a series of questions for humans to answer.
          * (Answering these questions is often called 'labeling' in the machine learning
          * workflows). In the case of the <code>FindMatches</code> transform, these
@@ -5070,7 +5635,7 @@ namespace Model
 
         /**
          * <p>Starts a task to estimate the quality of the transform. </p> <p>When you
-         * provide label sets as examples of truth, AWS Glue machine learning uses some of
+         * provide label sets as examples of truth, Glue machine learning uses some of
          * those examples to learn from them. The rest of the labels are used as a test to
          * estimate quality.</p> <p>Returns a unique identifier for the run. You can call
          * <code>GetMLTaskRun</code> to get more information about the stats of the
@@ -5082,7 +5647,7 @@ namespace Model
 
         /**
          * <p>Starts a task to estimate the quality of the transform. </p> <p>When you
-         * provide label sets as examples of truth, AWS Glue machine learning uses some of
+         * provide label sets as examples of truth, Glue machine learning uses some of
          * those examples to learn from them. The rest of the labels are used as a test to
          * estimate quality.</p> <p>Returns a unique identifier for the run. You can call
          * <code>GetMLTaskRun</code> to get more information about the stats of the
@@ -5096,7 +5661,7 @@ namespace Model
 
         /**
          * <p>Starts a task to estimate the quality of the transform. </p> <p>When you
-         * provide label sets as examples of truth, AWS Glue machine learning uses some of
+         * provide label sets as examples of truth, Glue machine learning uses some of
          * those examples to learn from them. The rest of the labels are used as a test to
          * estimate quality.</p> <p>Returns a unique identifier for the run. You can call
          * <code>GetMLTaskRun</code> to get more information about the stats of the
@@ -5111,12 +5676,12 @@ namespace Model
         /**
          * <p>Starts the active learning workflow for your machine learning transform to
          * improve the transform's quality by generating label sets and adding labels.</p>
-         * <p>When the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, AWS Glue
-         * will have generated a "labeling set" or a set of questions for humans to
-         * answer.</p> <p>In the case of the <code>FindMatches</code> transform, these
-         * questions are of the form, “What is the correct way to group these rows together
-         * into groups composed entirely of matching records?” </p> <p>After the labeling
-         * process is finished, you can upload your labels with a call to
+         * <p>When the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, Glue will
+         * have generated a "labeling set" or a set of questions for humans to answer.</p>
+         * <p>In the case of the <code>FindMatches</code> transform, these questions are of
+         * the form, “What is the correct way to group these rows together into groups
+         * composed entirely of matching records?” </p> <p>After the labeling process is
+         * finished, you can upload your labels with a call to
          * <code>StartImportLabelsTaskRun</code>. After
          * <code>StartImportLabelsTaskRun</code> finishes, all future runs of the machine
          * learning transform will use the new and improved labels and perform a
@@ -5129,12 +5694,12 @@ namespace Model
         /**
          * <p>Starts the active learning workflow for your machine learning transform to
          * improve the transform's quality by generating label sets and adding labels.</p>
-         * <p>When the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, AWS Glue
-         * will have generated a "labeling set" or a set of questions for humans to
-         * answer.</p> <p>In the case of the <code>FindMatches</code> transform, these
-         * questions are of the form, “What is the correct way to group these rows together
-         * into groups composed entirely of matching records?” </p> <p>After the labeling
-         * process is finished, you can upload your labels with a call to
+         * <p>When the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, Glue will
+         * have generated a "labeling set" or a set of questions for humans to answer.</p>
+         * <p>In the case of the <code>FindMatches</code> transform, these questions are of
+         * the form, “What is the correct way to group these rows together into groups
+         * composed entirely of matching records?” </p> <p>After the labeling process is
+         * finished, you can upload your labels with a call to
          * <code>StartImportLabelsTaskRun</code>. After
          * <code>StartImportLabelsTaskRun</code> finishes, all future runs of the machine
          * learning transform will use the new and improved labels and perform a
@@ -5149,12 +5714,12 @@ namespace Model
         /**
          * <p>Starts the active learning workflow for your machine learning transform to
          * improve the transform's quality by generating label sets and adding labels.</p>
-         * <p>When the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, AWS Glue
-         * will have generated a "labeling set" or a set of questions for humans to
-         * answer.</p> <p>In the case of the <code>FindMatches</code> transform, these
-         * questions are of the form, “What is the correct way to group these rows together
-         * into groups composed entirely of matching records?” </p> <p>After the labeling
-         * process is finished, you can upload your labels with a call to
+         * <p>When the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, Glue will
+         * have generated a "labeling set" or a set of questions for humans to answer.</p>
+         * <p>In the case of the <code>FindMatches</code> transform, these questions are of
+         * the form, “What is the correct way to group these rows together into groups
+         * composed entirely of matching records?” </p> <p>After the labeling process is
+         * finished, you can upload your labels with a call to
          * <code>StartImportLabelsTaskRun</code>. After
          * <code>StartImportLabelsTaskRun</code> finishes, all future runs of the machine
          * learning transform will use the new and improved labels and perform a
@@ -5285,6 +5850,31 @@ namespace Model
         virtual void StopCrawlerScheduleAsync(const Model::StopCrawlerScheduleRequest& request, const StopCrawlerScheduleResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Stops the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopSession">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::StopSessionOutcome StopSession(const Model::StopSessionRequest& request) const;
+
+        /**
+         * <p>Stops the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopSession">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::StopSessionOutcomeCallable StopSessionCallable(const Model::StopSessionRequest& request) const;
+
+        /**
+         * <p>Stops the session.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopSession">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void StopSessionAsync(const Model::StopSessionRequest& request, const StopSessionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Stops a specified trigger.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopTrigger">AWS
          * API Reference</a></p>
@@ -5338,22 +5928,22 @@ namespace Model
         virtual void StopWorkflowRunAsync(const Model::StopWorkflowRunRequest& request, const StopWorkflowRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Adds tags to a resource. A tag is a label you can assign to an AWS resource.
-         * In AWS Glue, you can tag only certain resources. For information about what
-         * resources you can tag, see <a
-         * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in
-         * AWS Glue</a>.</p><p><h3>See Also:</h3>   <a
+         * <p>Adds tags to a resource. A tag is a label you can assign to an Amazon Web
+         * Services resource. In Glue, you can tag only certain resources. For information
+         * about what resources you can tag, see <a
+         * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">Amazon Web
+         * Services Tags in Glue</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/TagResource">AWS
          * API Reference</a></p>
          */
         virtual Model::TagResourceOutcome TagResource(const Model::TagResourceRequest& request) const;
 
         /**
-         * <p>Adds tags to a resource. A tag is a label you can assign to an AWS resource.
-         * In AWS Glue, you can tag only certain resources. For information about what
-         * resources you can tag, see <a
-         * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in
-         * AWS Glue</a>.</p><p><h3>See Also:</h3>   <a
+         * <p>Adds tags to a resource. A tag is a label you can assign to an Amazon Web
+         * Services resource. In Glue, you can tag only certain resources. For information
+         * about what resources you can tag, see <a
+         * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">Amazon Web
+         * Services Tags in Glue</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/TagResource">AWS
          * API Reference</a></p>
          *
@@ -5362,11 +5952,11 @@ namespace Model
         virtual Model::TagResourceOutcomeCallable TagResourceCallable(const Model::TagResourceRequest& request) const;
 
         /**
-         * <p>Adds tags to a resource. A tag is a label you can assign to an AWS resource.
-         * In AWS Glue, you can tag only certain resources. For information about what
-         * resources you can tag, see <a
-         * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in
-         * AWS Glue</a>.</p><p><h3>See Also:</h3>   <a
+         * <p>Adds tags to a resource. A tag is a label you can assign to an Amazon Web
+         * Services resource. In Glue, you can tag only certain resources. For information
+         * about what resources you can tag, see <a
+         * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">Amazon Web
+         * Services Tags in Glue</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/TagResource">AWS
          * API Reference</a></p>
          *
@@ -5398,6 +5988,31 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void UntagResourceAsync(const Model::UntagResourceRequest& request, const UntagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Updates a registered blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateBlueprint">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UpdateBlueprintOutcome UpdateBlueprint(const Model::UpdateBlueprintRequest& request) const;
+
+        /**
+         * <p>Updates a registered blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateBlueprint">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::UpdateBlueprintOutcomeCallable UpdateBlueprintCallable(const Model::UpdateBlueprintRequest& request) const;
+
+        /**
+         * <p>Updates a registered blueprint.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateBlueprint">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void UpdateBlueprintAsync(const Model::UpdateBlueprintRequest& request, const UpdateBlueprintResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Modifies an existing classifier (a <code>GrokClassifier</code>, an
@@ -5917,6 +6532,7 @@ namespace Model
         void BatchDeletePartitionAsyncHelper(const Model::BatchDeletePartitionRequest& request, const BatchDeletePartitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void BatchDeleteTableAsyncHelper(const Model::BatchDeleteTableRequest& request, const BatchDeleteTableResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void BatchDeleteTableVersionAsyncHelper(const Model::BatchDeleteTableVersionRequest& request, const BatchDeleteTableVersionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void BatchGetBlueprintsAsyncHelper(const Model::BatchGetBlueprintsRequest& request, const BatchGetBlueprintsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void BatchGetCrawlersAsyncHelper(const Model::BatchGetCrawlersRequest& request, const BatchGetCrawlersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void BatchGetDevEndpointsAsyncHelper(const Model::BatchGetDevEndpointsRequest& request, const BatchGetDevEndpointsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void BatchGetJobsAsyncHelper(const Model::BatchGetJobsRequest& request, const BatchGetJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -5926,7 +6542,9 @@ namespace Model
         void BatchStopJobRunAsyncHelper(const Model::BatchStopJobRunRequest& request, const BatchStopJobRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void BatchUpdatePartitionAsyncHelper(const Model::BatchUpdatePartitionRequest& request, const BatchUpdatePartitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CancelMLTaskRunAsyncHelper(const Model::CancelMLTaskRunRequest& request, const CancelMLTaskRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void CancelStatementAsyncHelper(const Model::CancelStatementRequest& request, const CancelStatementResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CheckSchemaVersionValidityAsyncHelper(const Model::CheckSchemaVersionValidityRequest& request, const CheckSchemaVersionValidityResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void CreateBlueprintAsyncHelper(const Model::CreateBlueprintRequest& request, const CreateBlueprintResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateClassifierAsyncHelper(const Model::CreateClassifierRequest& request, const CreateClassifierResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateConnectionAsyncHelper(const Model::CreateConnectionRequest& request, const CreateConnectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateCrawlerAsyncHelper(const Model::CreateCrawlerRequest& request, const CreateCrawlerResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -5940,10 +6558,12 @@ namespace Model
         void CreateSchemaAsyncHelper(const Model::CreateSchemaRequest& request, const CreateSchemaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateScriptAsyncHelper(const Model::CreateScriptRequest& request, const CreateScriptResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateSecurityConfigurationAsyncHelper(const Model::CreateSecurityConfigurationRequest& request, const CreateSecurityConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void CreateSessionAsyncHelper(const Model::CreateSessionRequest& request, const CreateSessionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateTableAsyncHelper(const Model::CreateTableRequest& request, const CreateTableResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateTriggerAsyncHelper(const Model::CreateTriggerRequest& request, const CreateTriggerResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateUserDefinedFunctionAsyncHelper(const Model::CreateUserDefinedFunctionRequest& request, const CreateUserDefinedFunctionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateWorkflowAsyncHelper(const Model::CreateWorkflowRequest& request, const CreateWorkflowResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DeleteBlueprintAsyncHelper(const Model::DeleteBlueprintRequest& request, const DeleteBlueprintResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteClassifierAsyncHelper(const Model::DeleteClassifierRequest& request, const DeleteClassifierResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteColumnStatisticsForPartitionAsyncHelper(const Model::DeleteColumnStatisticsForPartitionRequest& request, const DeleteColumnStatisticsForPartitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteColumnStatisticsForTableAsyncHelper(const Model::DeleteColumnStatisticsForTableRequest& request, const DeleteColumnStatisticsForTableResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -5960,11 +6580,15 @@ namespace Model
         void DeleteSchemaAsyncHelper(const Model::DeleteSchemaRequest& request, const DeleteSchemaResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteSchemaVersionsAsyncHelper(const Model::DeleteSchemaVersionsRequest& request, const DeleteSchemaVersionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteSecurityConfigurationAsyncHelper(const Model::DeleteSecurityConfigurationRequest& request, const DeleteSecurityConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DeleteSessionAsyncHelper(const Model::DeleteSessionRequest& request, const DeleteSessionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteTableAsyncHelper(const Model::DeleteTableRequest& request, const DeleteTableResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteTableVersionAsyncHelper(const Model::DeleteTableVersionRequest& request, const DeleteTableVersionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteTriggerAsyncHelper(const Model::DeleteTriggerRequest& request, const DeleteTriggerResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteUserDefinedFunctionAsyncHelper(const Model::DeleteUserDefinedFunctionRequest& request, const DeleteUserDefinedFunctionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteWorkflowAsyncHelper(const Model::DeleteWorkflowRequest& request, const DeleteWorkflowResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetBlueprintAsyncHelper(const Model::GetBlueprintRequest& request, const GetBlueprintResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetBlueprintRunAsyncHelper(const Model::GetBlueprintRunRequest& request, const GetBlueprintRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetBlueprintRunsAsyncHelper(const Model::GetBlueprintRunsRequest& request, const GetBlueprintRunsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetCatalogImportStatusAsyncHelper(const Model::GetCatalogImportStatusRequest& request, const GetCatalogImportStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetClassifierAsyncHelper(const Model::GetClassifierRequest& request, const GetClassifierResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetClassifiersAsyncHelper(const Model::GetClassifiersRequest& request, const GetClassifiersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -6004,6 +6628,8 @@ namespace Model
         void GetSchemaVersionsDiffAsyncHelper(const Model::GetSchemaVersionsDiffRequest& request, const GetSchemaVersionsDiffResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetSecurityConfigurationAsyncHelper(const Model::GetSecurityConfigurationRequest& request, const GetSecurityConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetSecurityConfigurationsAsyncHelper(const Model::GetSecurityConfigurationsRequest& request, const GetSecurityConfigurationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetSessionAsyncHelper(const Model::GetSessionRequest& request, const GetSessionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetStatementAsyncHelper(const Model::GetStatementRequest& request, const GetStatementResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetTableAsyncHelper(const Model::GetTableRequest& request, const GetTableResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetTableVersionAsyncHelper(const Model::GetTableVersionRequest& request, const GetTableVersionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetTableVersionsAsyncHelper(const Model::GetTableVersionsRequest& request, const GetTableVersionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -6011,6 +6637,9 @@ namespace Model
         void GetTagsAsyncHelper(const Model::GetTagsRequest& request, const GetTagsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetTriggerAsyncHelper(const Model::GetTriggerRequest& request, const GetTriggerResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetTriggersAsyncHelper(const Model::GetTriggersRequest& request, const GetTriggersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetUnfilteredPartitionMetadataAsyncHelper(const Model::GetUnfilteredPartitionMetadataRequest& request, const GetUnfilteredPartitionMetadataResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetUnfilteredPartitionsMetadataAsyncHelper(const Model::GetUnfilteredPartitionsMetadataRequest& request, const GetUnfilteredPartitionsMetadataResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetUnfilteredTableMetadataAsyncHelper(const Model::GetUnfilteredTableMetadataRequest& request, const GetUnfilteredTableMetadataResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetUserDefinedFunctionAsyncHelper(const Model::GetUserDefinedFunctionRequest& request, const GetUserDefinedFunctionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetUserDefinedFunctionsAsyncHelper(const Model::GetUserDefinedFunctionsRequest& request, const GetUserDefinedFunctionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetWorkflowAsyncHelper(const Model::GetWorkflowRequest& request, const GetWorkflowResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -6018,6 +6647,7 @@ namespace Model
         void GetWorkflowRunPropertiesAsyncHelper(const Model::GetWorkflowRunPropertiesRequest& request, const GetWorkflowRunPropertiesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetWorkflowRunsAsyncHelper(const Model::GetWorkflowRunsRequest& request, const GetWorkflowRunsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ImportCatalogToGlueAsyncHelper(const Model::ImportCatalogToGlueRequest& request, const ImportCatalogToGlueResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListBlueprintsAsyncHelper(const Model::ListBlueprintsRequest& request, const ListBlueprintsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListCrawlersAsyncHelper(const Model::ListCrawlersRequest& request, const ListCrawlersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListDevEndpointsAsyncHelper(const Model::ListDevEndpointsRequest& request, const ListDevEndpointsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListJobsAsyncHelper(const Model::ListJobsRequest& request, const ListJobsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -6025,6 +6655,8 @@ namespace Model
         void ListRegistriesAsyncHelper(const Model::ListRegistriesRequest& request, const ListRegistriesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListSchemaVersionsAsyncHelper(const Model::ListSchemaVersionsRequest& request, const ListSchemaVersionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListSchemasAsyncHelper(const Model::ListSchemasRequest& request, const ListSchemasResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListSessionsAsyncHelper(const Model::ListSessionsRequest& request, const ListSessionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListStatementsAsyncHelper(const Model::ListStatementsRequest& request, const ListStatementsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListTriggersAsyncHelper(const Model::ListTriggersRequest& request, const ListTriggersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListWorkflowsAsyncHelper(const Model::ListWorkflowsRequest& request, const ListWorkflowsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutDataCatalogEncryptionSettingsAsyncHelper(const Model::PutDataCatalogEncryptionSettingsRequest& request, const PutDataCatalogEncryptionSettingsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -6036,7 +6668,9 @@ namespace Model
         void RemoveSchemaVersionMetadataAsyncHelper(const Model::RemoveSchemaVersionMetadataRequest& request, const RemoveSchemaVersionMetadataResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ResetJobBookmarkAsyncHelper(const Model::ResetJobBookmarkRequest& request, const ResetJobBookmarkResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ResumeWorkflowRunAsyncHelper(const Model::ResumeWorkflowRunRequest& request, const ResumeWorkflowRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void RunStatementAsyncHelper(const Model::RunStatementRequest& request, const RunStatementResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void SearchTablesAsyncHelper(const Model::SearchTablesRequest& request, const SearchTablesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void StartBlueprintRunAsyncHelper(const Model::StartBlueprintRunRequest& request, const StartBlueprintRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StartCrawlerAsyncHelper(const Model::StartCrawlerRequest& request, const StartCrawlerResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StartCrawlerScheduleAsyncHelper(const Model::StartCrawlerScheduleRequest& request, const StartCrawlerScheduleResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StartExportLabelsTaskRunAsyncHelper(const Model::StartExportLabelsTaskRunRequest& request, const StartExportLabelsTaskRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -6048,10 +6682,12 @@ namespace Model
         void StartWorkflowRunAsyncHelper(const Model::StartWorkflowRunRequest& request, const StartWorkflowRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopCrawlerAsyncHelper(const Model::StopCrawlerRequest& request, const StopCrawlerResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopCrawlerScheduleAsyncHelper(const Model::StopCrawlerScheduleRequest& request, const StopCrawlerScheduleResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void StopSessionAsyncHelper(const Model::StopSessionRequest& request, const StopSessionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopTriggerAsyncHelper(const Model::StopTriggerRequest& request, const StopTriggerResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopWorkflowRunAsyncHelper(const Model::StopWorkflowRunRequest& request, const StopWorkflowRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void TagResourceAsyncHelper(const Model::TagResourceRequest& request, const TagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UntagResourceAsyncHelper(const Model::UntagResourceRequest& request, const UntagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void UpdateBlueprintAsyncHelper(const Model::UpdateBlueprintRequest& request, const UpdateBlueprintResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateClassifierAsyncHelper(const Model::UpdateClassifierRequest& request, const UpdateClassifierResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateColumnStatisticsForPartitionAsyncHelper(const Model::UpdateColumnStatisticsForPartitionRequest& request, const UpdateColumnStatisticsForPartitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateColumnStatisticsForTableAsyncHelper(const Model::UpdateColumnStatisticsForTableRequest& request, const UpdateColumnStatisticsForTableResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

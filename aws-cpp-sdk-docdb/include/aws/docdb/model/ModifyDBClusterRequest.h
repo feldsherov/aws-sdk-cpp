@@ -459,11 +459,11 @@ namespace Model
      * <p>The daily time range during which automated backups are created if automated
      * backups are enabled, using the <code>BackupRetentionPeriod</code> parameter.
      * </p> <p>The default is a 30-minute window selected at random from an 8-hour
-     * block of time for each AWS Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be
-     * in the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in
-     * Universal Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the
-     * preferred maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p>
-     * </li> </ul>
+     * block of time for each Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be in
+     * the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in Universal
+     * Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the preferred
+     * maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p> </li>
+     * </ul>
      */
     inline const Aws::String& GetPreferredBackupWindow() const{ return m_preferredBackupWindow; }
 
@@ -471,11 +471,11 @@ namespace Model
      * <p>The daily time range during which automated backups are created if automated
      * backups are enabled, using the <code>BackupRetentionPeriod</code> parameter.
      * </p> <p>The default is a 30-minute window selected at random from an 8-hour
-     * block of time for each AWS Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be
-     * in the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in
-     * Universal Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the
-     * preferred maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p>
-     * </li> </ul>
+     * block of time for each Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be in
+     * the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in Universal
+     * Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the preferred
+     * maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p> </li>
+     * </ul>
      */
     inline bool PreferredBackupWindowHasBeenSet() const { return m_preferredBackupWindowHasBeenSet; }
 
@@ -483,11 +483,11 @@ namespace Model
      * <p>The daily time range during which automated backups are created if automated
      * backups are enabled, using the <code>BackupRetentionPeriod</code> parameter.
      * </p> <p>The default is a 30-minute window selected at random from an 8-hour
-     * block of time for each AWS Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be
-     * in the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in
-     * Universal Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the
-     * preferred maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p>
-     * </li> </ul>
+     * block of time for each Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be in
+     * the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in Universal
+     * Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the preferred
+     * maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p> </li>
+     * </ul>
      */
     inline void SetPreferredBackupWindow(const Aws::String& value) { m_preferredBackupWindowHasBeenSet = true; m_preferredBackupWindow = value; }
 
@@ -495,11 +495,11 @@ namespace Model
      * <p>The daily time range during which automated backups are created if automated
      * backups are enabled, using the <code>BackupRetentionPeriod</code> parameter.
      * </p> <p>The default is a 30-minute window selected at random from an 8-hour
-     * block of time for each AWS Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be
-     * in the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in
-     * Universal Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the
-     * preferred maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p>
-     * </li> </ul>
+     * block of time for each Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be in
+     * the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in Universal
+     * Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the preferred
+     * maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p> </li>
+     * </ul>
      */
     inline void SetPreferredBackupWindow(Aws::String&& value) { m_preferredBackupWindowHasBeenSet = true; m_preferredBackupWindow = std::move(value); }
 
@@ -507,11 +507,11 @@ namespace Model
      * <p>The daily time range during which automated backups are created if automated
      * backups are enabled, using the <code>BackupRetentionPeriod</code> parameter.
      * </p> <p>The default is a 30-minute window selected at random from an 8-hour
-     * block of time for each AWS Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be
-     * in the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in
-     * Universal Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the
-     * preferred maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p>
-     * </li> </ul>
+     * block of time for each Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be in
+     * the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in Universal
+     * Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the preferred
+     * maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p> </li>
+     * </ul>
      */
     inline void SetPreferredBackupWindow(const char* value) { m_preferredBackupWindowHasBeenSet = true; m_preferredBackupWindow.assign(value); }
 
@@ -519,11 +519,11 @@ namespace Model
      * <p>The daily time range during which automated backups are created if automated
      * backups are enabled, using the <code>BackupRetentionPeriod</code> parameter.
      * </p> <p>The default is a 30-minute window selected at random from an 8-hour
-     * block of time for each AWS Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be
-     * in the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in
-     * Universal Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the
-     * preferred maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p>
-     * </li> </ul>
+     * block of time for each Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be in
+     * the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in Universal
+     * Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the preferred
+     * maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p> </li>
+     * </ul>
      */
     inline ModifyDBClusterRequest& WithPreferredBackupWindow(const Aws::String& value) { SetPreferredBackupWindow(value); return *this;}
 
@@ -531,11 +531,11 @@ namespace Model
      * <p>The daily time range during which automated backups are created if automated
      * backups are enabled, using the <code>BackupRetentionPeriod</code> parameter.
      * </p> <p>The default is a 30-minute window selected at random from an 8-hour
-     * block of time for each AWS Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be
-     * in the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in
-     * Universal Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the
-     * preferred maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p>
-     * </li> </ul>
+     * block of time for each Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be in
+     * the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in Universal
+     * Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the preferred
+     * maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p> </li>
+     * </ul>
      */
     inline ModifyDBClusterRequest& WithPreferredBackupWindow(Aws::String&& value) { SetPreferredBackupWindow(std::move(value)); return *this;}
 
@@ -543,11 +543,11 @@ namespace Model
      * <p>The daily time range during which automated backups are created if automated
      * backups are enabled, using the <code>BackupRetentionPeriod</code> parameter.
      * </p> <p>The default is a 30-minute window selected at random from an 8-hour
-     * block of time for each AWS Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be
-     * in the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in
-     * Universal Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the
-     * preferred maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p>
-     * </li> </ul>
+     * block of time for each Region. </p> <p>Constraints:</p> <ul> <li> <p>Must be in
+     * the format <code>hh24:mi-hh24:mi</code>.</p> </li> <li> <p>Must be in Universal
+     * Coordinated Time (UTC).</p> </li> <li> <p>Must not conflict with the preferred
+     * maintenance window.</p> </li> <li> <p>Must be at least 30 minutes.</p> </li>
+     * </ul>
      */
     inline ModifyDBClusterRequest& WithPreferredBackupWindow(const char* value) { SetPreferredBackupWindow(value); return *this;}
 
@@ -556,8 +556,8 @@ namespace Model
      * <p>The weekly time range during which system maintenance can occur, in Universal
      * Coordinated Time (UTC).</p> <p>Format: <code>ddd:hh24:mi-ddd:hh24:mi</code> </p>
      * <p>The default is a 30-minute window selected at random from an 8-hour block of
-     * time for each AWS Region, occurring on a random day of the week. </p> <p>Valid
-     * days: Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
+     * time for each Region, occurring on a random day of the week. </p> <p>Valid days:
+     * Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
      * window.</p>
      */
     inline const Aws::String& GetPreferredMaintenanceWindow() const{ return m_preferredMaintenanceWindow; }
@@ -566,8 +566,8 @@ namespace Model
      * <p>The weekly time range during which system maintenance can occur, in Universal
      * Coordinated Time (UTC).</p> <p>Format: <code>ddd:hh24:mi-ddd:hh24:mi</code> </p>
      * <p>The default is a 30-minute window selected at random from an 8-hour block of
-     * time for each AWS Region, occurring on a random day of the week. </p> <p>Valid
-     * days: Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
+     * time for each Region, occurring on a random day of the week. </p> <p>Valid days:
+     * Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
      * window.</p>
      */
     inline bool PreferredMaintenanceWindowHasBeenSet() const { return m_preferredMaintenanceWindowHasBeenSet; }
@@ -576,8 +576,8 @@ namespace Model
      * <p>The weekly time range during which system maintenance can occur, in Universal
      * Coordinated Time (UTC).</p> <p>Format: <code>ddd:hh24:mi-ddd:hh24:mi</code> </p>
      * <p>The default is a 30-minute window selected at random from an 8-hour block of
-     * time for each AWS Region, occurring on a random day of the week. </p> <p>Valid
-     * days: Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
+     * time for each Region, occurring on a random day of the week. </p> <p>Valid days:
+     * Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
      * window.</p>
      */
     inline void SetPreferredMaintenanceWindow(const Aws::String& value) { m_preferredMaintenanceWindowHasBeenSet = true; m_preferredMaintenanceWindow = value; }
@@ -586,8 +586,8 @@ namespace Model
      * <p>The weekly time range during which system maintenance can occur, in Universal
      * Coordinated Time (UTC).</p> <p>Format: <code>ddd:hh24:mi-ddd:hh24:mi</code> </p>
      * <p>The default is a 30-minute window selected at random from an 8-hour block of
-     * time for each AWS Region, occurring on a random day of the week. </p> <p>Valid
-     * days: Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
+     * time for each Region, occurring on a random day of the week. </p> <p>Valid days:
+     * Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
      * window.</p>
      */
     inline void SetPreferredMaintenanceWindow(Aws::String&& value) { m_preferredMaintenanceWindowHasBeenSet = true; m_preferredMaintenanceWindow = std::move(value); }
@@ -596,8 +596,8 @@ namespace Model
      * <p>The weekly time range during which system maintenance can occur, in Universal
      * Coordinated Time (UTC).</p> <p>Format: <code>ddd:hh24:mi-ddd:hh24:mi</code> </p>
      * <p>The default is a 30-minute window selected at random from an 8-hour block of
-     * time for each AWS Region, occurring on a random day of the week. </p> <p>Valid
-     * days: Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
+     * time for each Region, occurring on a random day of the week. </p> <p>Valid days:
+     * Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
      * window.</p>
      */
     inline void SetPreferredMaintenanceWindow(const char* value) { m_preferredMaintenanceWindowHasBeenSet = true; m_preferredMaintenanceWindow.assign(value); }
@@ -606,8 +606,8 @@ namespace Model
      * <p>The weekly time range during which system maintenance can occur, in Universal
      * Coordinated Time (UTC).</p> <p>Format: <code>ddd:hh24:mi-ddd:hh24:mi</code> </p>
      * <p>The default is a 30-minute window selected at random from an 8-hour block of
-     * time for each AWS Region, occurring on a random day of the week. </p> <p>Valid
-     * days: Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
+     * time for each Region, occurring on a random day of the week. </p> <p>Valid days:
+     * Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
      * window.</p>
      */
     inline ModifyDBClusterRequest& WithPreferredMaintenanceWindow(const Aws::String& value) { SetPreferredMaintenanceWindow(value); return *this;}
@@ -616,8 +616,8 @@ namespace Model
      * <p>The weekly time range during which system maintenance can occur, in Universal
      * Coordinated Time (UTC).</p> <p>Format: <code>ddd:hh24:mi-ddd:hh24:mi</code> </p>
      * <p>The default is a 30-minute window selected at random from an 8-hour block of
-     * time for each AWS Region, occurring on a random day of the week. </p> <p>Valid
-     * days: Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
+     * time for each Region, occurring on a random day of the week. </p> <p>Valid days:
+     * Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
      * window.</p>
      */
     inline ModifyDBClusterRequest& WithPreferredMaintenanceWindow(Aws::String&& value) { SetPreferredMaintenanceWindow(std::move(value)); return *this;}
@@ -626,8 +626,8 @@ namespace Model
      * <p>The weekly time range during which system maintenance can occur, in Universal
      * Coordinated Time (UTC).</p> <p>Format: <code>ddd:hh24:mi-ddd:hh24:mi</code> </p>
      * <p>The default is a 30-minute window selected at random from an 8-hour block of
-     * time for each AWS Region, occurring on a random day of the week. </p> <p>Valid
-     * days: Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
+     * time for each Region, occurring on a random day of the week. </p> <p>Valid days:
+     * Mon, Tue, Wed, Thu, Fri, Sat, Sun</p> <p>Constraints: Minimum 30-minute
      * window.</p>
      */
     inline ModifyDBClusterRequest& WithPreferredMaintenanceWindow(const char* value) { SetPreferredMaintenanceWindow(value); return *this;}
@@ -684,65 +684,49 @@ namespace Model
 
     /**
      * <p>The version number of the database engine to which you want to upgrade.
-     * Changing this parameter results in an outage. The change is applied during the
-     * next maintenance window unless the <code>ApplyImmediately</code> parameter is
-     * set to <code>true</code>.</p>
+     * Modifying engine version is not supported on Amazon DocumentDB.</p>
      */
     inline const Aws::String& GetEngineVersion() const{ return m_engineVersion; }
 
     /**
      * <p>The version number of the database engine to which you want to upgrade.
-     * Changing this parameter results in an outage. The change is applied during the
-     * next maintenance window unless the <code>ApplyImmediately</code> parameter is
-     * set to <code>true</code>.</p>
+     * Modifying engine version is not supported on Amazon DocumentDB.</p>
      */
     inline bool EngineVersionHasBeenSet() const { return m_engineVersionHasBeenSet; }
 
     /**
      * <p>The version number of the database engine to which you want to upgrade.
-     * Changing this parameter results in an outage. The change is applied during the
-     * next maintenance window unless the <code>ApplyImmediately</code> parameter is
-     * set to <code>true</code>.</p>
+     * Modifying engine version is not supported on Amazon DocumentDB.</p>
      */
     inline void SetEngineVersion(const Aws::String& value) { m_engineVersionHasBeenSet = true; m_engineVersion = value; }
 
     /**
      * <p>The version number of the database engine to which you want to upgrade.
-     * Changing this parameter results in an outage. The change is applied during the
-     * next maintenance window unless the <code>ApplyImmediately</code> parameter is
-     * set to <code>true</code>.</p>
+     * Modifying engine version is not supported on Amazon DocumentDB.</p>
      */
     inline void SetEngineVersion(Aws::String&& value) { m_engineVersionHasBeenSet = true; m_engineVersion = std::move(value); }
 
     /**
      * <p>The version number of the database engine to which you want to upgrade.
-     * Changing this parameter results in an outage. The change is applied during the
-     * next maintenance window unless the <code>ApplyImmediately</code> parameter is
-     * set to <code>true</code>.</p>
+     * Modifying engine version is not supported on Amazon DocumentDB.</p>
      */
     inline void SetEngineVersion(const char* value) { m_engineVersionHasBeenSet = true; m_engineVersion.assign(value); }
 
     /**
      * <p>The version number of the database engine to which you want to upgrade.
-     * Changing this parameter results in an outage. The change is applied during the
-     * next maintenance window unless the <code>ApplyImmediately</code> parameter is
-     * set to <code>true</code>.</p>
+     * Modifying engine version is not supported on Amazon DocumentDB.</p>
      */
     inline ModifyDBClusterRequest& WithEngineVersion(const Aws::String& value) { SetEngineVersion(value); return *this;}
 
     /**
      * <p>The version number of the database engine to which you want to upgrade.
-     * Changing this parameter results in an outage. The change is applied during the
-     * next maintenance window unless the <code>ApplyImmediately</code> parameter is
-     * set to <code>true</code>.</p>
+     * Modifying engine version is not supported on Amazon DocumentDB.</p>
      */
     inline ModifyDBClusterRequest& WithEngineVersion(Aws::String&& value) { SetEngineVersion(std::move(value)); return *this;}
 
     /**
      * <p>The version number of the database engine to which you want to upgrade.
-     * Changing this parameter results in an outage. The change is applied during the
-     * next maintenance window unless the <code>ApplyImmediately</code> parameter is
-     * set to <code>true</code>.</p>
+     * Modifying engine version is not supported on Amazon DocumentDB.</p>
      */
     inline ModifyDBClusterRequest& WithEngineVersion(const char* value) { SetEngineVersion(value); return *this;}
 

@@ -19,6 +19,7 @@
 #include <aws/autoscaling/model/CancelInstanceRefreshResult.h>
 #include <aws/autoscaling/model/CompleteLifecycleActionResult.h>
 #include <aws/autoscaling/model/DeleteLifecycleHookResult.h>
+#include <aws/autoscaling/model/DeleteWarmPoolResult.h>
 #include <aws/autoscaling/model/DescribeAccountLimitsResult.h>
 #include <aws/autoscaling/model/DescribeAdjustmentTypesResult.h>
 #include <aws/autoscaling/model/DescribeAutoScalingGroupsResult.h>
@@ -38,13 +39,16 @@
 #include <aws/autoscaling/model/DescribeScheduledActionsResult.h>
 #include <aws/autoscaling/model/DescribeTagsResult.h>
 #include <aws/autoscaling/model/DescribeTerminationPolicyTypesResult.h>
+#include <aws/autoscaling/model/DescribeWarmPoolResult.h>
 #include <aws/autoscaling/model/DetachInstancesResult.h>
 #include <aws/autoscaling/model/DetachLoadBalancerTargetGroupsResult.h>
 #include <aws/autoscaling/model/DetachLoadBalancersResult.h>
 #include <aws/autoscaling/model/EnterStandbyResult.h>
 #include <aws/autoscaling/model/ExitStandbyResult.h>
+#include <aws/autoscaling/model/GetPredictiveScalingForecastResult.h>
 #include <aws/autoscaling/model/PutLifecycleHookResult.h>
 #include <aws/autoscaling/model/PutScalingPolicyResult.h>
+#include <aws/autoscaling/model/PutWarmPoolResult.h>
 #include <aws/autoscaling/model/RecordLifecycleActionHeartbeatResult.h>
 #include <aws/autoscaling/model/SetInstanceProtectionResult.h>
 #include <aws/autoscaling/model/StartInstanceRefreshResult.h>
@@ -112,6 +116,7 @@ namespace Model
         class DeletePolicyRequest;
         class DeleteScheduledActionRequest;
         class DeleteTagsRequest;
+        class DeleteWarmPoolRequest;
         class DescribeAccountLimitsRequest;
         class DescribeAdjustmentTypesRequest;
         class DescribeAutoScalingGroupsRequest;
@@ -131,6 +136,7 @@ namespace Model
         class DescribeScheduledActionsRequest;
         class DescribeTagsRequest;
         class DescribeTerminationPolicyTypesRequest;
+        class DescribeWarmPoolRequest;
         class DetachInstancesRequest;
         class DetachLoadBalancerTargetGroupsRequest;
         class DetachLoadBalancersRequest;
@@ -139,10 +145,12 @@ namespace Model
         class EnterStandbyRequest;
         class ExecutePolicyRequest;
         class ExitStandbyRequest;
+        class GetPredictiveScalingForecastRequest;
         class PutLifecycleHookRequest;
         class PutNotificationConfigurationRequest;
         class PutScalingPolicyRequest;
         class PutScheduledUpdateGroupActionRequest;
+        class PutWarmPoolRequest;
         class RecordLifecycleActionHeartbeatRequest;
         class ResumeProcessesRequest;
         class SetDesiredCapacityRequest;
@@ -170,6 +178,7 @@ namespace Model
         typedef Aws::Utils::Outcome<Aws::NoResult, AutoScalingError> DeletePolicyOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, AutoScalingError> DeleteScheduledActionOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, AutoScalingError> DeleteTagsOutcome;
+        typedef Aws::Utils::Outcome<DeleteWarmPoolResult, AutoScalingError> DeleteWarmPoolOutcome;
         typedef Aws::Utils::Outcome<DescribeAccountLimitsResult, AutoScalingError> DescribeAccountLimitsOutcome;
         typedef Aws::Utils::Outcome<DescribeAdjustmentTypesResult, AutoScalingError> DescribeAdjustmentTypesOutcome;
         typedef Aws::Utils::Outcome<DescribeAutoScalingGroupsResult, AutoScalingError> DescribeAutoScalingGroupsOutcome;
@@ -189,6 +198,7 @@ namespace Model
         typedef Aws::Utils::Outcome<DescribeScheduledActionsResult, AutoScalingError> DescribeScheduledActionsOutcome;
         typedef Aws::Utils::Outcome<DescribeTagsResult, AutoScalingError> DescribeTagsOutcome;
         typedef Aws::Utils::Outcome<DescribeTerminationPolicyTypesResult, AutoScalingError> DescribeTerminationPolicyTypesOutcome;
+        typedef Aws::Utils::Outcome<DescribeWarmPoolResult, AutoScalingError> DescribeWarmPoolOutcome;
         typedef Aws::Utils::Outcome<DetachInstancesResult, AutoScalingError> DetachInstancesOutcome;
         typedef Aws::Utils::Outcome<DetachLoadBalancerTargetGroupsResult, AutoScalingError> DetachLoadBalancerTargetGroupsOutcome;
         typedef Aws::Utils::Outcome<DetachLoadBalancersResult, AutoScalingError> DetachLoadBalancersOutcome;
@@ -197,10 +207,12 @@ namespace Model
         typedef Aws::Utils::Outcome<EnterStandbyResult, AutoScalingError> EnterStandbyOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, AutoScalingError> ExecutePolicyOutcome;
         typedef Aws::Utils::Outcome<ExitStandbyResult, AutoScalingError> ExitStandbyOutcome;
+        typedef Aws::Utils::Outcome<GetPredictiveScalingForecastResult, AutoScalingError> GetPredictiveScalingForecastOutcome;
         typedef Aws::Utils::Outcome<PutLifecycleHookResult, AutoScalingError> PutLifecycleHookOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, AutoScalingError> PutNotificationConfigurationOutcome;
         typedef Aws::Utils::Outcome<PutScalingPolicyResult, AutoScalingError> PutScalingPolicyOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, AutoScalingError> PutScheduledUpdateGroupActionOutcome;
+        typedef Aws::Utils::Outcome<PutWarmPoolResult, AutoScalingError> PutWarmPoolOutcome;
         typedef Aws::Utils::Outcome<RecordLifecycleActionHeartbeatResult, AutoScalingError> RecordLifecycleActionHeartbeatOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, AutoScalingError> ResumeProcessesOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, AutoScalingError> SetDesiredCapacityOutcome;
@@ -228,6 +240,7 @@ namespace Model
         typedef std::future<DeletePolicyOutcome> DeletePolicyOutcomeCallable;
         typedef std::future<DeleteScheduledActionOutcome> DeleteScheduledActionOutcomeCallable;
         typedef std::future<DeleteTagsOutcome> DeleteTagsOutcomeCallable;
+        typedef std::future<DeleteWarmPoolOutcome> DeleteWarmPoolOutcomeCallable;
         typedef std::future<DescribeAccountLimitsOutcome> DescribeAccountLimitsOutcomeCallable;
         typedef std::future<DescribeAdjustmentTypesOutcome> DescribeAdjustmentTypesOutcomeCallable;
         typedef std::future<DescribeAutoScalingGroupsOutcome> DescribeAutoScalingGroupsOutcomeCallable;
@@ -247,6 +260,7 @@ namespace Model
         typedef std::future<DescribeScheduledActionsOutcome> DescribeScheduledActionsOutcomeCallable;
         typedef std::future<DescribeTagsOutcome> DescribeTagsOutcomeCallable;
         typedef std::future<DescribeTerminationPolicyTypesOutcome> DescribeTerminationPolicyTypesOutcomeCallable;
+        typedef std::future<DescribeWarmPoolOutcome> DescribeWarmPoolOutcomeCallable;
         typedef std::future<DetachInstancesOutcome> DetachInstancesOutcomeCallable;
         typedef std::future<DetachLoadBalancerTargetGroupsOutcome> DetachLoadBalancerTargetGroupsOutcomeCallable;
         typedef std::future<DetachLoadBalancersOutcome> DetachLoadBalancersOutcomeCallable;
@@ -255,10 +269,12 @@ namespace Model
         typedef std::future<EnterStandbyOutcome> EnterStandbyOutcomeCallable;
         typedef std::future<ExecutePolicyOutcome> ExecutePolicyOutcomeCallable;
         typedef std::future<ExitStandbyOutcome> ExitStandbyOutcomeCallable;
+        typedef std::future<GetPredictiveScalingForecastOutcome> GetPredictiveScalingForecastOutcomeCallable;
         typedef std::future<PutLifecycleHookOutcome> PutLifecycleHookOutcomeCallable;
         typedef std::future<PutNotificationConfigurationOutcome> PutNotificationConfigurationOutcomeCallable;
         typedef std::future<PutScalingPolicyOutcome> PutScalingPolicyOutcomeCallable;
         typedef std::future<PutScheduledUpdateGroupActionOutcome> PutScheduledUpdateGroupActionOutcomeCallable;
+        typedef std::future<PutWarmPoolOutcome> PutWarmPoolOutcomeCallable;
         typedef std::future<RecordLifecycleActionHeartbeatOutcome> RecordLifecycleActionHeartbeatOutcomeCallable;
         typedef std::future<ResumeProcessesOutcome> ResumeProcessesOutcomeCallable;
         typedef std::future<SetDesiredCapacityOutcome> SetDesiredCapacityOutcomeCallable;
@@ -289,6 +305,7 @@ namespace Model
     typedef std::function<void(const AutoScalingClient*, const Model::DeletePolicyRequest&, const Model::DeletePolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeletePolicyResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::DeleteScheduledActionRequest&, const Model::DeleteScheduledActionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteScheduledActionResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::DeleteTagsRequest&, const Model::DeleteTagsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteTagsResponseReceivedHandler;
+    typedef std::function<void(const AutoScalingClient*, const Model::DeleteWarmPoolRequest&, const Model::DeleteWarmPoolOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteWarmPoolResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::DescribeAccountLimitsRequest&, const Model::DescribeAccountLimitsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeAccountLimitsResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::DescribeAdjustmentTypesRequest&, const Model::DescribeAdjustmentTypesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeAdjustmentTypesResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::DescribeAutoScalingGroupsRequest&, const Model::DescribeAutoScalingGroupsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeAutoScalingGroupsResponseReceivedHandler;
@@ -308,6 +325,7 @@ namespace Model
     typedef std::function<void(const AutoScalingClient*, const Model::DescribeScheduledActionsRequest&, const Model::DescribeScheduledActionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeScheduledActionsResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::DescribeTagsRequest&, const Model::DescribeTagsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeTagsResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::DescribeTerminationPolicyTypesRequest&, const Model::DescribeTerminationPolicyTypesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeTerminationPolicyTypesResponseReceivedHandler;
+    typedef std::function<void(const AutoScalingClient*, const Model::DescribeWarmPoolRequest&, const Model::DescribeWarmPoolOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeWarmPoolResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::DetachInstancesRequest&, const Model::DetachInstancesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DetachInstancesResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::DetachLoadBalancerTargetGroupsRequest&, const Model::DetachLoadBalancerTargetGroupsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DetachLoadBalancerTargetGroupsResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::DetachLoadBalancersRequest&, const Model::DetachLoadBalancersOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DetachLoadBalancersResponseReceivedHandler;
@@ -316,10 +334,12 @@ namespace Model
     typedef std::function<void(const AutoScalingClient*, const Model::EnterStandbyRequest&, const Model::EnterStandbyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > EnterStandbyResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::ExecutePolicyRequest&, const Model::ExecutePolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ExecutePolicyResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::ExitStandbyRequest&, const Model::ExitStandbyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ExitStandbyResponseReceivedHandler;
+    typedef std::function<void(const AutoScalingClient*, const Model::GetPredictiveScalingForecastRequest&, const Model::GetPredictiveScalingForecastOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetPredictiveScalingForecastResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::PutLifecycleHookRequest&, const Model::PutLifecycleHookOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutLifecycleHookResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::PutNotificationConfigurationRequest&, const Model::PutNotificationConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutNotificationConfigurationResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::PutScalingPolicyRequest&, const Model::PutScalingPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutScalingPolicyResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::PutScheduledUpdateGroupActionRequest&, const Model::PutScheduledUpdateGroupActionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutScheduledUpdateGroupActionResponseReceivedHandler;
+    typedef std::function<void(const AutoScalingClient*, const Model::PutWarmPoolRequest&, const Model::PutWarmPoolOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutWarmPoolResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::RecordLifecycleActionHeartbeatRequest&, const Model::RecordLifecycleActionHeartbeatOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RecordLifecycleActionHeartbeatResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::ResumeProcessesRequest&, const Model::ResumeProcessesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ResumeProcessesResponseReceivedHandler;
     typedef std::function<void(const AutoScalingClient*, const Model::SetDesiredCapacityRequest&, const Model::SetDesiredCapacityOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > SetDesiredCapacityResponseReceivedHandler;
@@ -333,12 +353,14 @@ namespace Model
   /**
    * <fullname>Amazon EC2 Auto Scaling</fullname> <p>Amazon EC2 Auto Scaling is
    * designed to automatically launch or terminate EC2 instances based on
-   * user-defined scaling policies, scheduled actions, and health checks. Use this
-   * service with AWS Auto Scaling, Amazon CloudWatch, and Elastic Load
-   * Balancing.</p> <p>For more information, including information about granting IAM
-   * users required permissions for Amazon EC2 Auto Scaling actions, see the <a
+   * user-defined scaling policies, scheduled actions, and health checks.</p> <p>For
+   * more information about Amazon EC2 Auto Scaling, see the <a
    * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html">Amazon
-   * EC2 Auto Scaling User Guide</a>.</p>
+   * EC2 Auto Scaling User Guide</a>. For information about granting IAM users
+   * required permissions for calls to Amazon EC2 Auto Scaling, see <a
+   * href="https://docs.aws.amazon.com/autoscaling/ec2/APIReference/ec2-auto-scaling-api-permissions.html">Granting
+   * IAM users required permissions for Amazon EC2 Auto Scaling resources</a> in the
+   * <i>Amazon EC2 Auto Scaling API Reference</i>.</p>
    */
   class AWS_AUTOSCALING_API AutoScalingClient : public Aws::Client::AWSXMLClient
   {
@@ -441,7 +463,9 @@ namespace Model
          * </ul> <p>To describe the target groups for an Auto Scaling group, call the
          * <a>DescribeLoadBalancerTargetGroups</a> API. To detach the target group from the
          * Auto Scaling group, call the <a>DetachLoadBalancerTargetGroups</a> API.</p>
-         * <p>For more information, see <a
+         * <p>This operation is additive and does not detach existing target groups or
+         * Classic Load Balancers from the Auto Scaling group.</p> <p>For more information,
+         * see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
          * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
          * User Guide</i>. </p><p><h3>See Also:</h3>   <a
@@ -460,7 +484,9 @@ namespace Model
          * </ul> <p>To describe the target groups for an Auto Scaling group, call the
          * <a>DescribeLoadBalancerTargetGroups</a> API. To detach the target group from the
          * Auto Scaling group, call the <a>DetachLoadBalancerTargetGroups</a> API.</p>
-         * <p>For more information, see <a
+         * <p>This operation is additive and does not detach existing target groups or
+         * Classic Load Balancers from the Auto Scaling group.</p> <p>For more information,
+         * see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
          * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
          * User Guide</i>. </p><p><h3>See Also:</h3>   <a
@@ -481,7 +507,9 @@ namespace Model
          * </ul> <p>To describe the target groups for an Auto Scaling group, call the
          * <a>DescribeLoadBalancerTargetGroups</a> API. To detach the target group from the
          * Auto Scaling group, call the <a>DetachLoadBalancerTargetGroups</a> API.</p>
-         * <p>For more information, see <a
+         * <p>This operation is additive and does not detach existing target groups or
+         * Classic Load Balancers from the Auto Scaling group.</p> <p>For more information,
+         * see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
          * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
          * User Guide</i>. </p><p><h3>See Also:</h3>   <a
@@ -500,7 +528,9 @@ namespace Model
          * instances with these Classic Load Balancers.</p> <p>To describe the load
          * balancers for an Auto Scaling group, call the <a>DescribeLoadBalancers</a> API.
          * To detach the load balancer from the Auto Scaling group, call the
-         * <a>DetachLoadBalancers</a> API.</p> <p>For more information, see <a
+         * <a>DetachLoadBalancers</a> API.</p> <p>This operation is additive and does not
+         * detach existing Classic Load Balancers or target groups from the Auto Scaling
+         * group.</p> <p>For more information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
          * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
          * User Guide</i>. </p><p><h3>See Also:</h3>   <a
@@ -517,7 +547,9 @@ namespace Model
          * instances with these Classic Load Balancers.</p> <p>To describe the load
          * balancers for an Auto Scaling group, call the <a>DescribeLoadBalancers</a> API.
          * To detach the load balancer from the Auto Scaling group, call the
-         * <a>DetachLoadBalancers</a> API.</p> <p>For more information, see <a
+         * <a>DetachLoadBalancers</a> API.</p> <p>This operation is additive and does not
+         * detach existing Classic Load Balancers or target groups from the Auto Scaling
+         * group.</p> <p>For more information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
          * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
          * User Guide</i>. </p><p><h3>See Also:</h3>   <a
@@ -536,7 +568,9 @@ namespace Model
          * instances with these Classic Load Balancers.</p> <p>To describe the load
          * balancers for an Auto Scaling group, call the <a>DescribeLoadBalancers</a> API.
          * To detach the load balancer from the Auto Scaling group, call the
-         * <a>DetachLoadBalancers</a> API.</p> <p>For more information, see <a
+         * <a>DetachLoadBalancers</a> API.</p> <p>This operation is additive and does not
+         * detach existing Classic Load Balancers or target groups from the Auto Scaling
+         * group.</p> <p>For more information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
          * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
          * User Guide</i>. </p><p><h3>See Also:</h3>   <a
@@ -577,8 +611,7 @@ namespace Model
 
         /**
          * <p>Creates or updates one or more scheduled scaling actions for an Auto Scaling
-         * group. If you leave a parameter unspecified when updating a scheduled scaling
-         * action, the corresponding value remains unchanged.</p><p><h3>See Also:</h3>   <a
+         * group.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/BatchPutScheduledUpdateGroupAction">AWS
          * API Reference</a></p>
          */
@@ -586,8 +619,7 @@ namespace Model
 
         /**
          * <p>Creates or updates one or more scheduled scaling actions for an Auto Scaling
-         * group. If you leave a parameter unspecified when updating a scheduled scaling
-         * action, the corresponding value remains unchanged.</p><p><h3>See Also:</h3>   <a
+         * group.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/BatchPutScheduledUpdateGroupAction">AWS
          * API Reference</a></p>
          *
@@ -597,8 +629,7 @@ namespace Model
 
         /**
          * <p>Creates or updates one or more scheduled scaling actions for an Auto Scaling
-         * group. If you leave a parameter unspecified when updating a scheduled scaling
-         * action, the corresponding value remains unchanged.</p><p><h3>See Also:</h3>   <a
+         * group.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/BatchPutScheduledUpdateGroupAction">AWS
          * API Reference</a></p>
          *
@@ -609,9 +640,10 @@ namespace Model
         /**
          * <p>Cancels an instance refresh operation in progress. Cancellation does not roll
          * back any replacements that have already been completed, but it prevents new
-         * replacements from being started. </p> <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">Replacing
-         * Auto Scaling Instances Based on an Instance Refresh</a>.</p><p><h3>See
+         * replacements from being started. </p> <p>This operation is part of the <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance
+         * refresh feature</a> in Amazon EC2 Auto Scaling, which helps you update instances
+         * in your Auto Scaling group after you make configuration changes.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/CancelInstanceRefresh">AWS
          * API Reference</a></p>
@@ -621,9 +653,10 @@ namespace Model
         /**
          * <p>Cancels an instance refresh operation in progress. Cancellation does not roll
          * back any replacements that have already been completed, but it prevents new
-         * replacements from being started. </p> <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">Replacing
-         * Auto Scaling Instances Based on an Instance Refresh</a>.</p><p><h3>See
+         * replacements from being started. </p> <p>This operation is part of the <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance
+         * refresh feature</a> in Amazon EC2 Auto Scaling, which helps you update instances
+         * in your Auto Scaling group after you make configuration changes.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/CancelInstanceRefresh">AWS
          * API Reference</a></p>
@@ -635,9 +668,10 @@ namespace Model
         /**
          * <p>Cancels an instance refresh operation in progress. Cancellation does not roll
          * back any replacements that have already been completed, but it prevents new
-         * replacements from being started. </p> <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">Replacing
-         * Auto Scaling Instances Based on an Instance Refresh</a>.</p><p><h3>See
+         * replacements from being started. </p> <p>This operation is part of the <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance
+         * refresh feature</a> in Amazon EC2 Auto Scaling, which helps you update instances
+         * in your Auto Scaling group after you make configuration changes.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/CancelInstanceRefresh">AWS
          * API Reference</a></p>
@@ -650,17 +684,20 @@ namespace Model
          * <p>Completes the lifecycle action for the specified token or instance with the
          * specified result.</p> <p>This step is a part of the procedure for adding a
          * lifecycle hook to an Auto Scaling group:</p> <ol> <li> <p>(Optional) Create a
-         * Lambda function and a rule that allows CloudWatch Events to invoke your Lambda
-         * function when Amazon EC2 Auto Scaling launches or terminates instances.</p>
-         * </li> <li> <p>(Optional) Create a notification target and an IAM role. The
-         * target can be either an Amazon SQS queue or an Amazon SNS topic. The role allows
-         * Amazon EC2 Auto Scaling to publish lifecycle notifications to the target.</p>
-         * </li> <li> <p>Create the lifecycle hook. Specify whether the hook is used when
-         * the instances launch or terminate.</p> </li> <li> <p>If you need more time,
-         * record the lifecycle action heartbeat to keep the instance in a pending
-         * state.</p> </li> <li> <p> <b>If you finish before the timeout period ends,
-         * complete the lifecycle action.</b> </p> </li> </ol> <p>For more information, see
-         * <a
+         * launch template or launch configuration with a user data script that runs while
+         * an instance is in a wait state due to a lifecycle hook.</p> </li> <li>
+         * <p>(Optional) Create a Lambda function and a rule that allows Amazon EventBridge
+         * to invoke your Lambda function when an instance is put into a wait state due to
+         * a lifecycle hook.</p> </li> <li> <p>(Optional) Create a notification target and
+         * an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS
+         * topic. The role allows Amazon EC2 Auto Scaling to publish lifecycle
+         * notifications to the target.</p> </li> <li> <p>Create the lifecycle hook.
+         * Specify whether the hook is used when the instances launch or terminate.</p>
+         * </li> <li> <p>If you need more time, record the lifecycle action heartbeat to
+         * keep the instance in a wait state.</p> </li> <li> <p> <b>If you finish before
+         * the timeout period ends, send a callback by using the
+         * <a>CompleteLifecycleAction</a> API call.</b> </p> </li> </ol> <p>For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
          * EC2 Auto Scaling lifecycle hooks</a> in the <i>Amazon EC2 Auto Scaling User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -673,17 +710,20 @@ namespace Model
          * <p>Completes the lifecycle action for the specified token or instance with the
          * specified result.</p> <p>This step is a part of the procedure for adding a
          * lifecycle hook to an Auto Scaling group:</p> <ol> <li> <p>(Optional) Create a
-         * Lambda function and a rule that allows CloudWatch Events to invoke your Lambda
-         * function when Amazon EC2 Auto Scaling launches or terminates instances.</p>
-         * </li> <li> <p>(Optional) Create a notification target and an IAM role. The
-         * target can be either an Amazon SQS queue or an Amazon SNS topic. The role allows
-         * Amazon EC2 Auto Scaling to publish lifecycle notifications to the target.</p>
-         * </li> <li> <p>Create the lifecycle hook. Specify whether the hook is used when
-         * the instances launch or terminate.</p> </li> <li> <p>If you need more time,
-         * record the lifecycle action heartbeat to keep the instance in a pending
-         * state.</p> </li> <li> <p> <b>If you finish before the timeout period ends,
-         * complete the lifecycle action.</b> </p> </li> </ol> <p>For more information, see
-         * <a
+         * launch template or launch configuration with a user data script that runs while
+         * an instance is in a wait state due to a lifecycle hook.</p> </li> <li>
+         * <p>(Optional) Create a Lambda function and a rule that allows Amazon EventBridge
+         * to invoke your Lambda function when an instance is put into a wait state due to
+         * a lifecycle hook.</p> </li> <li> <p>(Optional) Create a notification target and
+         * an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS
+         * topic. The role allows Amazon EC2 Auto Scaling to publish lifecycle
+         * notifications to the target.</p> </li> <li> <p>Create the lifecycle hook.
+         * Specify whether the hook is used when the instances launch or terminate.</p>
+         * </li> <li> <p>If you need more time, record the lifecycle action heartbeat to
+         * keep the instance in a wait state.</p> </li> <li> <p> <b>If you finish before
+         * the timeout period ends, send a callback by using the
+         * <a>CompleteLifecycleAction</a> API call.</b> </p> </li> </ol> <p>For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
          * EC2 Auto Scaling lifecycle hooks</a> in the <i>Amazon EC2 Auto Scaling User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -698,17 +738,20 @@ namespace Model
          * <p>Completes the lifecycle action for the specified token or instance with the
          * specified result.</p> <p>This step is a part of the procedure for adding a
          * lifecycle hook to an Auto Scaling group:</p> <ol> <li> <p>(Optional) Create a
-         * Lambda function and a rule that allows CloudWatch Events to invoke your Lambda
-         * function when Amazon EC2 Auto Scaling launches or terminates instances.</p>
-         * </li> <li> <p>(Optional) Create a notification target and an IAM role. The
-         * target can be either an Amazon SQS queue or an Amazon SNS topic. The role allows
-         * Amazon EC2 Auto Scaling to publish lifecycle notifications to the target.</p>
-         * </li> <li> <p>Create the lifecycle hook. Specify whether the hook is used when
-         * the instances launch or terminate.</p> </li> <li> <p>If you need more time,
-         * record the lifecycle action heartbeat to keep the instance in a pending
-         * state.</p> </li> <li> <p> <b>If you finish before the timeout period ends,
-         * complete the lifecycle action.</b> </p> </li> </ol> <p>For more information, see
-         * <a
+         * launch template or launch configuration with a user data script that runs while
+         * an instance is in a wait state due to a lifecycle hook.</p> </li> <li>
+         * <p>(Optional) Create a Lambda function and a rule that allows Amazon EventBridge
+         * to invoke your Lambda function when an instance is put into a wait state due to
+         * a lifecycle hook.</p> </li> <li> <p>(Optional) Create a notification target and
+         * an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS
+         * topic. The role allows Amazon EC2 Auto Scaling to publish lifecycle
+         * notifications to the target.</p> </li> <li> <p>Create the lifecycle hook.
+         * Specify whether the hook is used when the instances launch or terminate.</p>
+         * </li> <li> <p>If you need more time, record the lifecycle action heartbeat to
+         * keep the instance in a wait state.</p> </li> <li> <p> <b>If you finish before
+         * the timeout period ends, send a callback by using the
+         * <a>CompleteLifecycleAction</a> API call.</b> </p> </li> </ol> <p>For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
          * EC2 Auto Scaling lifecycle hooks</a> in the <i>Amazon EC2 Auto Scaling User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -1147,8 +1190,48 @@ namespace Model
         virtual void DeleteTagsAsync(const Model::DeleteTagsRequest& request, const DeleteTagsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes the current Amazon EC2 Auto Scaling resource quotas for your AWS
-         * account.</p> <p>For information about requesting an increase, see <a
+         * <p>Deletes the warm pool for the specified Auto Scaling group.</p> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm
+         * pools for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DeleteWarmPool">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteWarmPoolOutcome DeleteWarmPool(const Model::DeleteWarmPoolRequest& request) const;
+
+        /**
+         * <p>Deletes the warm pool for the specified Auto Scaling group.</p> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm
+         * pools for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DeleteWarmPool">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DeleteWarmPoolOutcomeCallable DeleteWarmPoolCallable(const Model::DeleteWarmPoolRequest& request) const;
+
+        /**
+         * <p>Deletes the warm pool for the specified Auto Scaling group.</p> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm
+         * pools for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DeleteWarmPool">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DeleteWarmPoolAsync(const Model::DeleteWarmPoolRequest& request, const DeleteWarmPoolResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Describes the current Amazon EC2 Auto Scaling resource quotas for your
+         * account.</p> <p>When you establish an Amazon Web Services account, the account
+         * has initial quotas on the maximum number of Auto Scaling groups and launch
+         * configurations that you can create in a given Region. For more information, see
+         * <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon
          * EC2 Auto Scaling service quotas</a> in the <i>Amazon EC2 Auto Scaling User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -1158,8 +1241,11 @@ namespace Model
         virtual Model::DescribeAccountLimitsOutcome DescribeAccountLimits(const Model::DescribeAccountLimitsRequest& request) const;
 
         /**
-         * <p>Describes the current Amazon EC2 Auto Scaling resource quotas for your AWS
-         * account.</p> <p>For information about requesting an increase, see <a
+         * <p>Describes the current Amazon EC2 Auto Scaling resource quotas for your
+         * account.</p> <p>When you establish an Amazon Web Services account, the account
+         * has initial quotas on the maximum number of Auto Scaling groups and launch
+         * configurations that you can create in a given Region. For more information, see
+         * <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon
          * EC2 Auto Scaling service quotas</a> in the <i>Amazon EC2 Auto Scaling User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -1171,8 +1257,11 @@ namespace Model
         virtual Model::DescribeAccountLimitsOutcomeCallable DescribeAccountLimitsCallable(const Model::DescribeAccountLimitsRequest& request) const;
 
         /**
-         * <p>Describes the current Amazon EC2 Auto Scaling resource quotas for your AWS
-         * account.</p> <p>For information about requesting an increase, see <a
+         * <p>Describes the current Amazon EC2 Auto Scaling resource quotas for your
+         * account.</p> <p>When you establish an Amazon Web Services account, the account
+         * has initial quotas on the maximum number of Auto Scaling groups and launch
+         * configurations that you can create in a given Region. For more information, see
+         * <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon
          * EC2 Auto Scaling service quotas</a> in the <i>Amazon EC2 Auto Scaling User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -1184,11 +1273,10 @@ namespace Model
         virtual void DescribeAccountLimitsAsync(const Model::DescribeAccountLimitsRequest& request, const DescribeAccountLimitsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes the available adjustment types for Amazon EC2 Auto Scaling scaling
-         * policies. These settings apply to step scaling policies and simple scaling
-         * policies; they do not apply to target tracking scaling policies.</p> <p>The
-         * following adjustment types are supported:</p> <ul> <li> <p>ChangeInCapacity</p>
-         * </li> <li> <p>ExactCapacity</p> </li> <li> <p>PercentChangeInCapacity</p> </li>
+         * <p>Describes the available adjustment types for step scaling and simple scaling
+         * policies.</p> <p>The following adjustment types are supported:</p> <ul> <li> <p>
+         * <code>ChangeInCapacity</code> </p> </li> <li> <p> <code>ExactCapacity</code>
+         * </p> </li> <li> <p> <code>PercentChangeInCapacity</code> </p> </li>
          * </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAdjustmentTypes">AWS
          * API Reference</a></p>
@@ -1196,11 +1284,10 @@ namespace Model
         virtual Model::DescribeAdjustmentTypesOutcome DescribeAdjustmentTypes(const Model::DescribeAdjustmentTypesRequest& request) const;
 
         /**
-         * <p>Describes the available adjustment types for Amazon EC2 Auto Scaling scaling
-         * policies. These settings apply to step scaling policies and simple scaling
-         * policies; they do not apply to target tracking scaling policies.</p> <p>The
-         * following adjustment types are supported:</p> <ul> <li> <p>ChangeInCapacity</p>
-         * </li> <li> <p>ExactCapacity</p> </li> <li> <p>PercentChangeInCapacity</p> </li>
+         * <p>Describes the available adjustment types for step scaling and simple scaling
+         * policies.</p> <p>The following adjustment types are supported:</p> <ul> <li> <p>
+         * <code>ChangeInCapacity</code> </p> </li> <li> <p> <code>ExactCapacity</code>
+         * </p> </li> <li> <p> <code>PercentChangeInCapacity</code> </p> </li>
          * </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAdjustmentTypes">AWS
          * API Reference</a></p>
@@ -1210,11 +1297,10 @@ namespace Model
         virtual Model::DescribeAdjustmentTypesOutcomeCallable DescribeAdjustmentTypesCallable(const Model::DescribeAdjustmentTypesRequest& request) const;
 
         /**
-         * <p>Describes the available adjustment types for Amazon EC2 Auto Scaling scaling
-         * policies. These settings apply to step scaling policies and simple scaling
-         * policies; they do not apply to target tracking scaling policies.</p> <p>The
-         * following adjustment types are supported:</p> <ul> <li> <p>ChangeInCapacity</p>
-         * </li> <li> <p>ExactCapacity</p> </li> <li> <p>PercentChangeInCapacity</p> </li>
+         * <p>Describes the available adjustment types for step scaling and simple scaling
+         * policies.</p> <p>The following adjustment types are supported:</p> <ul> <li> <p>
+         * <code>ChangeInCapacity</code> </p> </li> <li> <p> <code>ExactCapacity</code>
+         * </p> </li> <li> <p> <code>PercentChangeInCapacity</code> </p> </li>
          * </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAdjustmentTypes">AWS
          * API Reference</a></p>
@@ -1224,14 +1310,30 @@ namespace Model
         virtual void DescribeAdjustmentTypesAsync(const Model::DescribeAdjustmentTypesRequest& request, const DescribeAdjustmentTypesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes one or more Auto Scaling groups.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the Auto Scaling groups in the account and Region.</p>
+         * <p>If you specify Auto Scaling group names, the output includes information for
+         * only the specified Auto Scaling groups. If you specify filters, the output
+         * includes information for only those Auto Scaling groups that meet the filter
+         * criteria. If you do not specify group names or filters, the output includes
+         * information for all Auto Scaling groups. </p> <p>This operation also returns
+         * information about instances in Auto Scaling groups. To retrieve information
+         * about the instances in a warm pool, you must call the <a>DescribeWarmPool</a>
+         * API. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAutoScalingGroups">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeAutoScalingGroupsOutcome DescribeAutoScalingGroups(const Model::DescribeAutoScalingGroupsRequest& request) const;
 
         /**
-         * <p>Describes one or more Auto Scaling groups.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the Auto Scaling groups in the account and Region.</p>
+         * <p>If you specify Auto Scaling group names, the output includes information for
+         * only the specified Auto Scaling groups. If you specify filters, the output
+         * includes information for only those Auto Scaling groups that meet the filter
+         * criteria. If you do not specify group names or filters, the output includes
+         * information for all Auto Scaling groups. </p> <p>This operation also returns
+         * information about instances in Auto Scaling groups. To retrieve information
+         * about the instances in a warm pool, you must call the <a>DescribeWarmPool</a>
+         * API. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAutoScalingGroups">AWS
          * API Reference</a></p>
          *
@@ -1240,7 +1342,15 @@ namespace Model
         virtual Model::DescribeAutoScalingGroupsOutcomeCallable DescribeAutoScalingGroupsCallable(const Model::DescribeAutoScalingGroupsRequest& request) const;
 
         /**
-         * <p>Describes one or more Auto Scaling groups.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the Auto Scaling groups in the account and Region.</p>
+         * <p>If you specify Auto Scaling group names, the output includes information for
+         * only the specified Auto Scaling groups. If you specify filters, the output
+         * includes information for only those Auto Scaling groups that meet the filter
+         * criteria. If you do not specify group names or filters, the output includes
+         * information for all Auto Scaling groups. </p> <p>This operation also returns
+         * information about instances in Auto Scaling groups. To retrieve information
+         * about the instances in a warm pool, you must call the <a>DescribeWarmPool</a>
+         * API. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAutoScalingGroups">AWS
          * API Reference</a></p>
          *
@@ -1249,14 +1359,16 @@ namespace Model
         virtual void DescribeAutoScalingGroupsAsync(const Model::DescribeAutoScalingGroupsRequest& request, const DescribeAutoScalingGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes one or more Auto Scaling instances.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the Auto Scaling instances in the account and
+         * Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAutoScalingInstances">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeAutoScalingInstancesOutcome DescribeAutoScalingInstances(const Model::DescribeAutoScalingInstancesRequest& request) const;
 
         /**
-         * <p>Describes one or more Auto Scaling instances.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the Auto Scaling instances in the account and
+         * Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAutoScalingInstances">AWS
          * API Reference</a></p>
          *
@@ -1265,7 +1377,8 @@ namespace Model
         virtual Model::DescribeAutoScalingInstancesOutcomeCallable DescribeAutoScalingInstancesCallable(const Model::DescribeAutoScalingInstancesRequest& request) const;
 
         /**
-         * <p>Describes one or more Auto Scaling instances.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the Auto Scaling instances in the account and
+         * Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeAutoScalingInstances">AWS
          * API Reference</a></p>
          *
@@ -1302,44 +1415,52 @@ namespace Model
         virtual void DescribeAutoScalingNotificationTypesAsync(const Model::DescribeAutoScalingNotificationTypesRequest& request, const DescribeAutoScalingNotificationTypesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes one or more instance refreshes.</p> <p>You can determine the status
-         * of a request by looking at the <code>Status</code> parameter. The following are
-         * the possible statuses: </p> <ul> <li> <p> <code>Pending</code> - The request was
-         * created, but the operation has not started.</p> </li> <li> <p>
-         * <code>InProgress</code> - The operation is in progress.</p> </li> <li> <p>
-         * <code>Successful</code> - The operation completed successfully.</p> </li> <li>
-         * <p> <code>Failed</code> - The operation failed to complete. You can troubleshoot
-         * using the status reason and the scaling activities. </p> </li> <li> <p>
-         * <code>Cancelling</code> - An ongoing operation is being cancelled. Cancellation
-         * does not roll back any replacements that have already been completed, but it
-         * prevents new replacements from being started. </p> </li> <li> <p>
-         * <code>Cancelled</code> - The operation is cancelled. </p> </li> </ul> <p>For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">Replacing
-         * Auto Scaling Instances Based on an Instance Refresh</a>.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Gets information about the instance refreshes for the specified Auto Scaling
+         * group.</p> <p>This operation is part of the <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance
+         * refresh feature</a> in Amazon EC2 Auto Scaling, which helps you update instances
+         * in your Auto Scaling group after you make configuration changes.</p> <p>To help
+         * you determine the status of an instance refresh, this operation returns
+         * information about the instance refreshes you previously initiated, including
+         * their status, end time, the percentage of the instance refresh that is complete,
+         * and the number of instances remaining to update before the instance refresh is
+         * complete.</p> <p>The following are the possible statuses: </p> <ul> <li> <p>
+         * <code>Pending</code> - The request was created, but the operation has not
+         * started.</p> </li> <li> <p> <code>InProgress</code> - The operation is in
+         * progress.</p> </li> <li> <p> <code>Successful</code> - The operation completed
+         * successfully.</p> </li> <li> <p> <code>Failed</code> - The operation failed to
+         * complete. You can troubleshoot using the status reason and the scaling
+         * activities. </p> </li> <li> <p> <code>Cancelling</code> - An ongoing operation
+         * is being cancelled. Cancellation does not roll back any replacements that have
+         * already been completed, but it prevents new replacements from being started.
+         * </p> </li> <li> <p> <code>Cancelled</code> - The operation is cancelled. </p>
+         * </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeInstanceRefreshes">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeInstanceRefreshesOutcome DescribeInstanceRefreshes(const Model::DescribeInstanceRefreshesRequest& request) const;
 
         /**
-         * <p>Describes one or more instance refreshes.</p> <p>You can determine the status
-         * of a request by looking at the <code>Status</code> parameter. The following are
-         * the possible statuses: </p> <ul> <li> <p> <code>Pending</code> - The request was
-         * created, but the operation has not started.</p> </li> <li> <p>
-         * <code>InProgress</code> - The operation is in progress.</p> </li> <li> <p>
-         * <code>Successful</code> - The operation completed successfully.</p> </li> <li>
-         * <p> <code>Failed</code> - The operation failed to complete. You can troubleshoot
-         * using the status reason and the scaling activities. </p> </li> <li> <p>
-         * <code>Cancelling</code> - An ongoing operation is being cancelled. Cancellation
-         * does not roll back any replacements that have already been completed, but it
-         * prevents new replacements from being started. </p> </li> <li> <p>
-         * <code>Cancelled</code> - The operation is cancelled. </p> </li> </ul> <p>For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">Replacing
-         * Auto Scaling Instances Based on an Instance Refresh</a>.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Gets information about the instance refreshes for the specified Auto Scaling
+         * group.</p> <p>This operation is part of the <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance
+         * refresh feature</a> in Amazon EC2 Auto Scaling, which helps you update instances
+         * in your Auto Scaling group after you make configuration changes.</p> <p>To help
+         * you determine the status of an instance refresh, this operation returns
+         * information about the instance refreshes you previously initiated, including
+         * their status, end time, the percentage of the instance refresh that is complete,
+         * and the number of instances remaining to update before the instance refresh is
+         * complete.</p> <p>The following are the possible statuses: </p> <ul> <li> <p>
+         * <code>Pending</code> - The request was created, but the operation has not
+         * started.</p> </li> <li> <p> <code>InProgress</code> - The operation is in
+         * progress.</p> </li> <li> <p> <code>Successful</code> - The operation completed
+         * successfully.</p> </li> <li> <p> <code>Failed</code> - The operation failed to
+         * complete. You can troubleshoot using the status reason and the scaling
+         * activities. </p> </li> <li> <p> <code>Cancelling</code> - An ongoing operation
+         * is being cancelled. Cancellation does not roll back any replacements that have
+         * already been completed, but it prevents new replacements from being started.
+         * </p> </li> <li> <p> <code>Cancelled</code> - The operation is cancelled. </p>
+         * </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeInstanceRefreshes">AWS
          * API Reference</a></p>
          *
@@ -1348,22 +1469,26 @@ namespace Model
         virtual Model::DescribeInstanceRefreshesOutcomeCallable DescribeInstanceRefreshesCallable(const Model::DescribeInstanceRefreshesRequest& request) const;
 
         /**
-         * <p>Describes one or more instance refreshes.</p> <p>You can determine the status
-         * of a request by looking at the <code>Status</code> parameter. The following are
-         * the possible statuses: </p> <ul> <li> <p> <code>Pending</code> - The request was
-         * created, but the operation has not started.</p> </li> <li> <p>
-         * <code>InProgress</code> - The operation is in progress.</p> </li> <li> <p>
-         * <code>Successful</code> - The operation completed successfully.</p> </li> <li>
-         * <p> <code>Failed</code> - The operation failed to complete. You can troubleshoot
-         * using the status reason and the scaling activities. </p> </li> <li> <p>
-         * <code>Cancelling</code> - An ongoing operation is being cancelled. Cancellation
-         * does not roll back any replacements that have already been completed, but it
-         * prevents new replacements from being started. </p> </li> <li> <p>
-         * <code>Cancelled</code> - The operation is cancelled. </p> </li> </ul> <p>For
-         * more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">Replacing
-         * Auto Scaling Instances Based on an Instance Refresh</a>.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Gets information about the instance refreshes for the specified Auto Scaling
+         * group.</p> <p>This operation is part of the <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance
+         * refresh feature</a> in Amazon EC2 Auto Scaling, which helps you update instances
+         * in your Auto Scaling group after you make configuration changes.</p> <p>To help
+         * you determine the status of an instance refresh, this operation returns
+         * information about the instance refreshes you previously initiated, including
+         * their status, end time, the percentage of the instance refresh that is complete,
+         * and the number of instances remaining to update before the instance refresh is
+         * complete.</p> <p>The following are the possible statuses: </p> <ul> <li> <p>
+         * <code>Pending</code> - The request was created, but the operation has not
+         * started.</p> </li> <li> <p> <code>InProgress</code> - The operation is in
+         * progress.</p> </li> <li> <p> <code>Successful</code> - The operation completed
+         * successfully.</p> </li> <li> <p> <code>Failed</code> - The operation failed to
+         * complete. You can troubleshoot using the status reason and the scaling
+         * activities. </p> </li> <li> <p> <code>Cancelling</code> - An ongoing operation
+         * is being cancelled. Cancellation does not roll back any replacements that have
+         * already been completed, but it prevents new replacements from being started.
+         * </p> </li> <li> <p> <code>Cancelled</code> - The operation is cancelled. </p>
+         * </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeInstanceRefreshes">AWS
          * API Reference</a></p>
          *
@@ -1372,14 +1497,16 @@ namespace Model
         virtual void DescribeInstanceRefreshesAsync(const Model::DescribeInstanceRefreshesRequest& request, const DescribeInstanceRefreshesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes one or more launch configurations.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the launch configurations in the account and
+         * Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLaunchConfigurations">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeLaunchConfigurationsOutcome DescribeLaunchConfigurations(const Model::DescribeLaunchConfigurationsRequest& request) const;
 
         /**
-         * <p>Describes one or more launch configurations.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the launch configurations in the account and
+         * Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLaunchConfigurations">AWS
          * API Reference</a></p>
          *
@@ -1388,7 +1515,8 @@ namespace Model
         virtual Model::DescribeLaunchConfigurationsOutcomeCallable DescribeLaunchConfigurationsCallable(const Model::DescribeLaunchConfigurationsRequest& request) const;
 
         /**
-         * <p>Describes one or more launch configurations.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the launch configurations in the account and
+         * Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLaunchConfigurations">AWS
          * API Reference</a></p>
          *
@@ -1398,8 +1526,9 @@ namespace Model
 
         /**
          * <p>Describes the available types of lifecycle hooks.</p> <p>The following hook
-         * types are supported:</p> <ul> <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p>
-         * </li> <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li> </ul><p><h3>See
+         * types are supported:</p> <ul> <li> <p>
+         * <code>autoscaling:EC2_INSTANCE_LAUNCHING</code> </p> </li> <li> <p>
+         * <code>autoscaling:EC2_INSTANCE_TERMINATING</code> </p> </li> </ul><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLifecycleHookTypes">AWS
          * API Reference</a></p>
@@ -1408,8 +1537,9 @@ namespace Model
 
         /**
          * <p>Describes the available types of lifecycle hooks.</p> <p>The following hook
-         * types are supported:</p> <ul> <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p>
-         * </li> <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li> </ul><p><h3>See
+         * types are supported:</p> <ul> <li> <p>
+         * <code>autoscaling:EC2_INSTANCE_LAUNCHING</code> </p> </li> <li> <p>
+         * <code>autoscaling:EC2_INSTANCE_TERMINATING</code> </p> </li> </ul><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLifecycleHookTypes">AWS
          * API Reference</a></p>
@@ -1420,8 +1550,9 @@ namespace Model
 
         /**
          * <p>Describes the available types of lifecycle hooks.</p> <p>The following hook
-         * types are supported:</p> <ul> <li> <p>autoscaling:EC2_INSTANCE_LAUNCHING</p>
-         * </li> <li> <p>autoscaling:EC2_INSTANCE_TERMINATING</p> </li> </ul><p><h3>See
+         * types are supported:</p> <ul> <li> <p>
+         * <code>autoscaling:EC2_INSTANCE_LAUNCHING</code> </p> </li> <li> <p>
+         * <code>autoscaling:EC2_INSTANCE_TERMINATING</code> </p> </li> </ul><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLifecycleHookTypes">AWS
          * API Reference</a></p>
@@ -1431,7 +1562,7 @@ namespace Model
         virtual void DescribeLifecycleHookTypesAsync(const Model::DescribeLifecycleHookTypesRequest& request, const DescribeLifecycleHookTypesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes the lifecycle hooks for the specified Auto Scaling
+         * <p>Gets information about the lifecycle hooks for the specified Auto Scaling
          * group.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLifecycleHooks">AWS
          * API Reference</a></p>
@@ -1439,7 +1570,7 @@ namespace Model
         virtual Model::DescribeLifecycleHooksOutcome DescribeLifecycleHooks(const Model::DescribeLifecycleHooksRequest& request) const;
 
         /**
-         * <p>Describes the lifecycle hooks for the specified Auto Scaling
+         * <p>Gets information about the lifecycle hooks for the specified Auto Scaling
          * group.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLifecycleHooks">AWS
          * API Reference</a></p>
@@ -1449,7 +1580,7 @@ namespace Model
         virtual Model::DescribeLifecycleHooksOutcomeCallable DescribeLifecycleHooksCallable(const Model::DescribeLifecycleHooksRequest& request) const;
 
         /**
-         * <p>Describes the lifecycle hooks for the specified Auto Scaling
+         * <p>Gets information about the lifecycle hooks for the specified Auto Scaling
          * group.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLifecycleHooks">AWS
          * API Reference</a></p>
@@ -1459,16 +1590,58 @@ namespace Model
         virtual void DescribeLifecycleHooksAsync(const Model::DescribeLifecycleHooksRequest& request, const DescribeLifecycleHooksResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes the target groups for the specified Auto Scaling
-         * group.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the load balancer target groups for the specified Auto
+         * Scaling group.</p> <p>To determine the availability of registered instances, use
+         * the <code>State</code> element in the response. When you attach a target group
+         * to an Auto Scaling group, the initial <code>State</code> value is
+         * <code>Adding</code>. The state transitions to <code>Added</code> after all Auto
+         * Scaling instances are registered with the target group. If Elastic Load
+         * Balancing health checks are enabled for the Auto Scaling group, the state
+         * transitions to <code>InService</code> after at least one Auto Scaling instance
+         * passes the health check. When the target group is in the <code>InService</code>
+         * state, Amazon EC2 Auto Scaling can terminate and replace any instances that are
+         * reported as unhealthy. If no registered instances pass the health checks, the
+         * target group doesn't enter the <code>InService</code> state. </p> <p>Target
+         * groups also have an <code>InService</code> state if you attach them in the
+         * <a>CreateAutoScalingGroup</a> API call. If your target group state is
+         * <code>InService</code>, but it is not working properly, check the scaling
+         * activities by calling <a>DescribeScalingActivities</a> and take any corrective
+         * actions necessary.</p> <p>For help with failed health checks, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html">Troubleshooting
+         * Amazon EC2 Auto Scaling: Health checks</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. For more information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
+         * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLoadBalancerTargetGroups">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeLoadBalancerTargetGroupsOutcome DescribeLoadBalancerTargetGroups(const Model::DescribeLoadBalancerTargetGroupsRequest& request) const;
 
         /**
-         * <p>Describes the target groups for the specified Auto Scaling
-         * group.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the load balancer target groups for the specified Auto
+         * Scaling group.</p> <p>To determine the availability of registered instances, use
+         * the <code>State</code> element in the response. When you attach a target group
+         * to an Auto Scaling group, the initial <code>State</code> value is
+         * <code>Adding</code>. The state transitions to <code>Added</code> after all Auto
+         * Scaling instances are registered with the target group. If Elastic Load
+         * Balancing health checks are enabled for the Auto Scaling group, the state
+         * transitions to <code>InService</code> after at least one Auto Scaling instance
+         * passes the health check. When the target group is in the <code>InService</code>
+         * state, Amazon EC2 Auto Scaling can terminate and replace any instances that are
+         * reported as unhealthy. If no registered instances pass the health checks, the
+         * target group doesn't enter the <code>InService</code> state. </p> <p>Target
+         * groups also have an <code>InService</code> state if you attach them in the
+         * <a>CreateAutoScalingGroup</a> API call. If your target group state is
+         * <code>InService</code>, but it is not working properly, check the scaling
+         * activities by calling <a>DescribeScalingActivities</a> and take any corrective
+         * actions necessary.</p> <p>For help with failed health checks, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html">Troubleshooting
+         * Amazon EC2 Auto Scaling: Health checks</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. For more information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
+         * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLoadBalancerTargetGroups">AWS
          * API Reference</a></p>
          *
@@ -1477,8 +1650,29 @@ namespace Model
         virtual Model::DescribeLoadBalancerTargetGroupsOutcomeCallable DescribeLoadBalancerTargetGroupsCallable(const Model::DescribeLoadBalancerTargetGroupsRequest& request) const;
 
         /**
-         * <p>Describes the target groups for the specified Auto Scaling
-         * group.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the load balancer target groups for the specified Auto
+         * Scaling group.</p> <p>To determine the availability of registered instances, use
+         * the <code>State</code> element in the response. When you attach a target group
+         * to an Auto Scaling group, the initial <code>State</code> value is
+         * <code>Adding</code>. The state transitions to <code>Added</code> after all Auto
+         * Scaling instances are registered with the target group. If Elastic Load
+         * Balancing health checks are enabled for the Auto Scaling group, the state
+         * transitions to <code>InService</code> after at least one Auto Scaling instance
+         * passes the health check. When the target group is in the <code>InService</code>
+         * state, Amazon EC2 Auto Scaling can terminate and replace any instances that are
+         * reported as unhealthy. If no registered instances pass the health checks, the
+         * target group doesn't enter the <code>InService</code> state. </p> <p>Target
+         * groups also have an <code>InService</code> state if you attach them in the
+         * <a>CreateAutoScalingGroup</a> API call. If your target group state is
+         * <code>InService</code>, but it is not working properly, check the scaling
+         * activities by calling <a>DescribeScalingActivities</a> and take any corrective
+         * actions necessary.</p> <p>For help with failed health checks, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html">Troubleshooting
+         * Amazon EC2 Auto Scaling: Health checks</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. For more information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
+         * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLoadBalancerTargetGroups">AWS
          * API Reference</a></p>
          *
@@ -1487,22 +1681,64 @@ namespace Model
         virtual void DescribeLoadBalancerTargetGroupsAsync(const Model::DescribeLoadBalancerTargetGroupsRequest& request, const DescribeLoadBalancerTargetGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes the load balancers for the specified Auto Scaling group.</p>
-         * <p>This operation describes only Classic Load Balancers. If you have Application
-         * Load Balancers, Network Load Balancers, or Gateway Load Balancers, use the
-         * <a>DescribeLoadBalancerTargetGroups</a> API instead.</p><p><h3>See Also:</h3>  
-         * <a
+         * <p>Gets information about the load balancers for the specified Auto Scaling
+         * group.</p> <p>This operation describes only Classic Load Balancers. If you have
+         * Application Load Balancers, Network Load Balancers, or Gateway Load Balancers,
+         * use the <a>DescribeLoadBalancerTargetGroups</a> API instead.</p> <p>To determine
+         * the availability of registered instances, use the <code>State</code> element in
+         * the response. When you attach a load balancer to an Auto Scaling group, the
+         * initial <code>State</code> value is <code>Adding</code>. The state transitions
+         * to <code>Added</code> after all Auto Scaling instances are registered with the
+         * load balancer. If Elastic Load Balancing health checks are enabled for the Auto
+         * Scaling group, the state transitions to <code>InService</code> after at least
+         * one Auto Scaling instance passes the health check. When the load balancer is in
+         * the <code>InService</code> state, Amazon EC2 Auto Scaling can terminate and
+         * replace any instances that are reported as unhealthy. If no registered instances
+         * pass the health checks, the load balancer doesn't enter the
+         * <code>InService</code> state. </p> <p>Load balancers also have an
+         * <code>InService</code> state if you attach them in the
+         * <a>CreateAutoScalingGroup</a> API call. If your load balancer state is
+         * <code>InService</code>, but it is not working properly, check the scaling
+         * activities by calling <a>DescribeScalingActivities</a> and take any corrective
+         * actions necessary.</p> <p>For help with failed health checks, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html">Troubleshooting
+         * Amazon EC2 Auto Scaling: Health checks</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. For more information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
+         * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLoadBalancers">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeLoadBalancersOutcome DescribeLoadBalancers(const Model::DescribeLoadBalancersRequest& request) const;
 
         /**
-         * <p>Describes the load balancers for the specified Auto Scaling group.</p>
-         * <p>This operation describes only Classic Load Balancers. If you have Application
-         * Load Balancers, Network Load Balancers, or Gateway Load Balancers, use the
-         * <a>DescribeLoadBalancerTargetGroups</a> API instead.</p><p><h3>See Also:</h3>  
-         * <a
+         * <p>Gets information about the load balancers for the specified Auto Scaling
+         * group.</p> <p>This operation describes only Classic Load Balancers. If you have
+         * Application Load Balancers, Network Load Balancers, or Gateway Load Balancers,
+         * use the <a>DescribeLoadBalancerTargetGroups</a> API instead.</p> <p>To determine
+         * the availability of registered instances, use the <code>State</code> element in
+         * the response. When you attach a load balancer to an Auto Scaling group, the
+         * initial <code>State</code> value is <code>Adding</code>. The state transitions
+         * to <code>Added</code> after all Auto Scaling instances are registered with the
+         * load balancer. If Elastic Load Balancing health checks are enabled for the Auto
+         * Scaling group, the state transitions to <code>InService</code> after at least
+         * one Auto Scaling instance passes the health check. When the load balancer is in
+         * the <code>InService</code> state, Amazon EC2 Auto Scaling can terminate and
+         * replace any instances that are reported as unhealthy. If no registered instances
+         * pass the health checks, the load balancer doesn't enter the
+         * <code>InService</code> state. </p> <p>Load balancers also have an
+         * <code>InService</code> state if you attach them in the
+         * <a>CreateAutoScalingGroup</a> API call. If your load balancer state is
+         * <code>InService</code>, but it is not working properly, check the scaling
+         * activities by calling <a>DescribeScalingActivities</a> and take any corrective
+         * actions necessary.</p> <p>For help with failed health checks, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html">Troubleshooting
+         * Amazon EC2 Auto Scaling: Health checks</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. For more information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
+         * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLoadBalancers">AWS
          * API Reference</a></p>
          *
@@ -1511,11 +1747,32 @@ namespace Model
         virtual Model::DescribeLoadBalancersOutcomeCallable DescribeLoadBalancersCallable(const Model::DescribeLoadBalancersRequest& request) const;
 
         /**
-         * <p>Describes the load balancers for the specified Auto Scaling group.</p>
-         * <p>This operation describes only Classic Load Balancers. If you have Application
-         * Load Balancers, Network Load Balancers, or Gateway Load Balancers, use the
-         * <a>DescribeLoadBalancerTargetGroups</a> API instead.</p><p><h3>See Also:</h3>  
-         * <a
+         * <p>Gets information about the load balancers for the specified Auto Scaling
+         * group.</p> <p>This operation describes only Classic Load Balancers. If you have
+         * Application Load Balancers, Network Load Balancers, or Gateway Load Balancers,
+         * use the <a>DescribeLoadBalancerTargetGroups</a> API instead.</p> <p>To determine
+         * the availability of registered instances, use the <code>State</code> element in
+         * the response. When you attach a load balancer to an Auto Scaling group, the
+         * initial <code>State</code> value is <code>Adding</code>. The state transitions
+         * to <code>Added</code> after all Auto Scaling instances are registered with the
+         * load balancer. If Elastic Load Balancing health checks are enabled for the Auto
+         * Scaling group, the state transitions to <code>InService</code> after at least
+         * one Auto Scaling instance passes the health check. When the load balancer is in
+         * the <code>InService</code> state, Amazon EC2 Auto Scaling can terminate and
+         * replace any instances that are reported as unhealthy. If no registered instances
+         * pass the health checks, the load balancer doesn't enter the
+         * <code>InService</code> state. </p> <p>Load balancers also have an
+         * <code>InService</code> state if you attach them in the
+         * <a>CreateAutoScalingGroup</a> API call. If your load balancer state is
+         * <code>InService</code>, but it is not working properly, check the scaling
+         * activities by calling <a>DescribeScalingActivities</a> and take any corrective
+         * actions necessary.</p> <p>For help with failed health checks, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html">Troubleshooting
+         * Amazon EC2 Auto Scaling: Health checks</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. For more information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic
+         * Load Balancing and Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling
+         * User Guide</i>. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeLoadBalancers">AWS
          * API Reference</a></p>
          *
@@ -1558,16 +1815,16 @@ namespace Model
         virtual void DescribeMetricCollectionTypesAsync(const Model::DescribeMetricCollectionTypesRequest& request, const DescribeMetricCollectionTypesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes the notification actions associated with the specified Auto Scaling
-         * group.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the Amazon SNS notifications that are configured for
+         * one or more Auto Scaling groups.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeNotificationConfigurations">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeNotificationConfigurationsOutcome DescribeNotificationConfigurations(const Model::DescribeNotificationConfigurationsRequest& request) const;
 
         /**
-         * <p>Describes the notification actions associated with the specified Auto Scaling
-         * group.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the Amazon SNS notifications that are configured for
+         * one or more Auto Scaling groups.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeNotificationConfigurations">AWS
          * API Reference</a></p>
          *
@@ -1576,8 +1833,8 @@ namespace Model
         virtual Model::DescribeNotificationConfigurationsOutcomeCallable DescribeNotificationConfigurationsCallable(const Model::DescribeNotificationConfigurationsRequest& request) const;
 
         /**
-         * <p>Describes the notification actions associated with the specified Auto Scaling
-         * group.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the Amazon SNS notifications that are configured for
+         * one or more Auto Scaling groups.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeNotificationConfigurations">AWS
          * API Reference</a></p>
          *
@@ -1586,16 +1843,16 @@ namespace Model
         virtual void DescribeNotificationConfigurationsAsync(const Model::DescribeNotificationConfigurationsRequest& request, const DescribeNotificationConfigurationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes the policies for the specified Auto Scaling group.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Gets information about the scaling policies in the account and
+         * Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribePolicies">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribePoliciesOutcome DescribePolicies(const Model::DescribePoliciesRequest& request) const;
 
         /**
-         * <p>Describes the policies for the specified Auto Scaling group.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Gets information about the scaling policies in the account and
+         * Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribePolicies">AWS
          * API Reference</a></p>
          *
@@ -1604,8 +1861,8 @@ namespace Model
         virtual Model::DescribePoliciesOutcomeCallable DescribePoliciesCallable(const Model::DescribePoliciesRequest& request) const;
 
         /**
-         * <p>Describes the policies for the specified Auto Scaling group.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Gets information about the scaling policies in the account and
+         * Region.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribePolicies">AWS
          * API Reference</a></p>
          *
@@ -1614,16 +1871,40 @@ namespace Model
         virtual void DescribePoliciesAsync(const Model::DescribePoliciesRequest& request, const DescribePoliciesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes one or more scaling activities for the specified Auto Scaling
-         * group.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the scaling activities in the account and Region.</p>
+         * <p>When scaling events occur, you see a record of the scaling activity in the
+         * scaling activities. For more information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-verify-scaling-activity.html">Verifying
+         * a scaling activity for an Auto Scaling group</a> in the <i>Amazon EC2 Auto
+         * Scaling User Guide</i>.</p> <p>If the scaling event succeeds, the value of the
+         * <code>StatusCode</code> element in the response is <code>Successful</code>. If
+         * an attempt to launch instances failed, the <code>StatusCode</code> value is
+         * <code>Failed</code> or <code>Cancelled</code> and the <code>StatusMessage</code>
+         * element in the response indicates the cause of the failure. For help
+         * interpreting the <code>StatusMessage</code>, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/CHAP_Troubleshooting.html">Troubleshooting
+         * Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeScalingActivities">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeScalingActivitiesOutcome DescribeScalingActivities(const Model::DescribeScalingActivitiesRequest& request) const;
 
         /**
-         * <p>Describes one or more scaling activities for the specified Auto Scaling
-         * group.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the scaling activities in the account and Region.</p>
+         * <p>When scaling events occur, you see a record of the scaling activity in the
+         * scaling activities. For more information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-verify-scaling-activity.html">Verifying
+         * a scaling activity for an Auto Scaling group</a> in the <i>Amazon EC2 Auto
+         * Scaling User Guide</i>.</p> <p>If the scaling event succeeds, the value of the
+         * <code>StatusCode</code> element in the response is <code>Successful</code>. If
+         * an attempt to launch instances failed, the <code>StatusCode</code> value is
+         * <code>Failed</code> or <code>Cancelled</code> and the <code>StatusMessage</code>
+         * element in the response indicates the cause of the failure. For help
+         * interpreting the <code>StatusMessage</code>, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/CHAP_Troubleshooting.html">Troubleshooting
+         * Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeScalingActivities">AWS
          * API Reference</a></p>
          *
@@ -1632,8 +1913,20 @@ namespace Model
         virtual Model::DescribeScalingActivitiesOutcomeCallable DescribeScalingActivitiesCallable(const Model::DescribeScalingActivitiesRequest& request) const;
 
         /**
-         * <p>Describes one or more scaling activities for the specified Auto Scaling
-         * group.</p><p><h3>See Also:</h3>   <a
+         * <p>Gets information about the scaling activities in the account and Region.</p>
+         * <p>When scaling events occur, you see a record of the scaling activity in the
+         * scaling activities. For more information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-verify-scaling-activity.html">Verifying
+         * a scaling activity for an Auto Scaling group</a> in the <i>Amazon EC2 Auto
+         * Scaling User Guide</i>.</p> <p>If the scaling event succeeds, the value of the
+         * <code>StatusCode</code> element in the response is <code>Successful</code>. If
+         * an attempt to launch instances failed, the <code>StatusCode</code> value is
+         * <code>Failed</code> or <code>Cancelled</code> and the <code>StatusMessage</code>
+         * element in the response indicates the cause of the failure. For help
+         * interpreting the <code>StatusMessage</code>, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/CHAP_Troubleshooting.html">Troubleshooting
+         * Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeScalingActivities">AWS
          * API Reference</a></p>
          *
@@ -1670,20 +1963,20 @@ namespace Model
         virtual void DescribeScalingProcessTypesAsync(const Model::DescribeScalingProcessTypesRequest& request, const DescribeScalingProcessTypesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes the actions scheduled for your Auto Scaling group that haven't run
-         * or that have not reached their end time. To describe the actions that have
-         * already run, call the <a>DescribeScalingActivities</a> API.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Gets information about the scheduled actions that haven't run or that have
+         * not reached their end time.</p> <p>To describe the scaling activities for
+         * scheduled actions that have already run, call the
+         * <a>DescribeScalingActivities</a> API.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeScheduledActions">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeScheduledActionsOutcome DescribeScheduledActions(const Model::DescribeScheduledActionsRequest& request) const;
 
         /**
-         * <p>Describes the actions scheduled for your Auto Scaling group that haven't run
-         * or that have not reached their end time. To describe the actions that have
-         * already run, call the <a>DescribeScalingActivities</a> API.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Gets information about the scheduled actions that haven't run or that have
+         * not reached their end time.</p> <p>To describe the scaling activities for
+         * scheduled actions that have already run, call the
+         * <a>DescribeScalingActivities</a> API.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeScheduledActions">AWS
          * API Reference</a></p>
          *
@@ -1692,10 +1985,10 @@ namespace Model
         virtual Model::DescribeScheduledActionsOutcomeCallable DescribeScheduledActionsCallable(const Model::DescribeScheduledActionsRequest& request) const;
 
         /**
-         * <p>Describes the actions scheduled for your Auto Scaling group that haven't run
-         * or that have not reached their end time. To describe the actions that have
-         * already run, call the <a>DescribeScalingActivities</a> API.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Gets information about the scheduled actions that haven't run or that have
+         * not reached their end time.</p> <p>To describe the scaling activities for
+         * scheduled actions that have already run, call the
+         * <a>DescribeScalingActivities</a> API.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeScheduledActions">AWS
          * API Reference</a></p>
          *
@@ -1791,6 +2084,43 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void DescribeTerminationPolicyTypesAsync(const Model::DescribeTerminationPolicyTypesRequest& request, const DescribeTerminationPolicyTypesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Gets information about a warm pool and its instances.</p> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm
+         * pools for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeWarmPool">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeWarmPoolOutcome DescribeWarmPool(const Model::DescribeWarmPoolRequest& request) const;
+
+        /**
+         * <p>Gets information about a warm pool and its instances.</p> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm
+         * pools for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeWarmPool">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeWarmPoolOutcomeCallable DescribeWarmPoolCallable(const Model::DescribeWarmPoolRequest& request) const;
+
+        /**
+         * <p>Gets information about a warm pool and its instances.</p> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm
+         * pools for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/DescribeWarmPool">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeWarmPoolAsync(const Model::DescribeWarmPoolRequest& request, const DescribeWarmPoolResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Removes one or more instances from the specified Auto Scaling group.</p>
@@ -2113,22 +2443,79 @@ namespace Model
         virtual void ExitStandbyAsync(const Model::ExitStandbyRequest& request, const ExitStandbyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Retrieves the forecast data for a predictive scaling policy.</p> <p>Load
+         * forecasts are predictions of the hourly load values using historical load data
+         * from CloudWatch and an analysis of historical trends. Capacity forecasts are
+         * represented as predicted values for the minimum capacity that is needed on an
+         * hourly basis, based on the hourly load forecast.</p> <p>A minimum of 24 hours of
+         * data is required to create the initial forecasts. However, having a full 14 days
+         * of historical data results in more accurate forecasts.</p> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html">Predictive
+         * scaling for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/GetPredictiveScalingForecast">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetPredictiveScalingForecastOutcome GetPredictiveScalingForecast(const Model::GetPredictiveScalingForecastRequest& request) const;
+
+        /**
+         * <p>Retrieves the forecast data for a predictive scaling policy.</p> <p>Load
+         * forecasts are predictions of the hourly load values using historical load data
+         * from CloudWatch and an analysis of historical trends. Capacity forecasts are
+         * represented as predicted values for the minimum capacity that is needed on an
+         * hourly basis, based on the hourly load forecast.</p> <p>A minimum of 24 hours of
+         * data is required to create the initial forecasts. However, having a full 14 days
+         * of historical data results in more accurate forecasts.</p> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html">Predictive
+         * scaling for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/GetPredictiveScalingForecast">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetPredictiveScalingForecastOutcomeCallable GetPredictiveScalingForecastCallable(const Model::GetPredictiveScalingForecastRequest& request) const;
+
+        /**
+         * <p>Retrieves the forecast data for a predictive scaling policy.</p> <p>Load
+         * forecasts are predictions of the hourly load values using historical load data
+         * from CloudWatch and an analysis of historical trends. Capacity forecasts are
+         * represented as predicted values for the minimum capacity that is needed on an
+         * hourly basis, based on the hourly load forecast.</p> <p>A minimum of 24 hours of
+         * data is required to create the initial forecasts. However, having a full 14 days
+         * of historical data results in more accurate forecasts.</p> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html">Predictive
+         * scaling for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/GetPredictiveScalingForecast">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetPredictiveScalingForecastAsync(const Model::GetPredictiveScalingForecastRequest& request, const GetPredictiveScalingForecastResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Creates or updates a lifecycle hook for the specified Auto Scaling group.</p>
-         * <p>A lifecycle hook tells Amazon EC2 Auto Scaling to perform an action on an
-         * instance when the instance launches (before it is put into service) or as the
-         * instance terminates (before it is fully terminated).</p> <p>This step is a part
-         * of the procedure for adding a lifecycle hook to an Auto Scaling group:</p> <ol>
-         * <li> <p>(Optional) Create a Lambda function and a rule that allows CloudWatch
-         * Events to invoke your Lambda function when Amazon EC2 Auto Scaling launches or
-         * terminates instances.</p> </li> <li> <p>(Optional) Create a notification target
-         * and an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS
-         * topic. The role allows Amazon EC2 Auto Scaling to publish lifecycle
-         * notifications to the target.</p> </li> <li> <p> <b>Create the lifecycle hook.
-         * Specify whether the hook is used when the instances launch or terminate.</b>
-         * </p> </li> <li> <p>If you need more time, record the lifecycle action heartbeat
-         * to keep the instance in a pending state using the
+         * <p>Lifecycle hooks let you create solutions that are aware of events in the Auto
+         * Scaling instance lifecycle, and then perform a custom action on instances when
+         * the corresponding lifecycle event occurs.</p> <p>This step is a part of the
+         * procedure for adding a lifecycle hook to an Auto Scaling group:</p> <ol> <li>
+         * <p>(Optional) Create a launch template or launch configuration with a user data
+         * script that runs while an instance is in a wait state due to a lifecycle
+         * hook.</p> </li> <li> <p>(Optional) Create a Lambda function and a rule that
+         * allows Amazon EventBridge to invoke your Lambda function when an instance is put
+         * into a wait state due to a lifecycle hook.</p> </li> <li> <p>(Optional) Create a
+         * notification target and an IAM role. The target can be either an Amazon SQS
+         * queue or an Amazon SNS topic. The role allows Amazon EC2 Auto Scaling to publish
+         * lifecycle notifications to the target.</p> </li> <li> <p> <b>Create the
+         * lifecycle hook. Specify whether the hook is used when the instances launch or
+         * terminate.</b> </p> </li> <li> <p>If you need more time, record the lifecycle
+         * action heartbeat to keep the instance in a wait state using the
          * <a>RecordLifecycleActionHeartbeat</a> API call.</p> </li> <li> <p>If you finish
-         * before the timeout period ends, complete the lifecycle action using the
+         * before the timeout period ends, send a callback by using the
          * <a>CompleteLifecycleAction</a> API call.</p> </li> </ol> <p>For more
          * information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
@@ -2146,21 +2533,23 @@ namespace Model
 
         /**
          * <p>Creates or updates a lifecycle hook for the specified Auto Scaling group.</p>
-         * <p>A lifecycle hook tells Amazon EC2 Auto Scaling to perform an action on an
-         * instance when the instance launches (before it is put into service) or as the
-         * instance terminates (before it is fully terminated).</p> <p>This step is a part
-         * of the procedure for adding a lifecycle hook to an Auto Scaling group:</p> <ol>
-         * <li> <p>(Optional) Create a Lambda function and a rule that allows CloudWatch
-         * Events to invoke your Lambda function when Amazon EC2 Auto Scaling launches or
-         * terminates instances.</p> </li> <li> <p>(Optional) Create a notification target
-         * and an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS
-         * topic. The role allows Amazon EC2 Auto Scaling to publish lifecycle
-         * notifications to the target.</p> </li> <li> <p> <b>Create the lifecycle hook.
-         * Specify whether the hook is used when the instances launch or terminate.</b>
-         * </p> </li> <li> <p>If you need more time, record the lifecycle action heartbeat
-         * to keep the instance in a pending state using the
+         * <p>Lifecycle hooks let you create solutions that are aware of events in the Auto
+         * Scaling instance lifecycle, and then perform a custom action on instances when
+         * the corresponding lifecycle event occurs.</p> <p>This step is a part of the
+         * procedure for adding a lifecycle hook to an Auto Scaling group:</p> <ol> <li>
+         * <p>(Optional) Create a launch template or launch configuration with a user data
+         * script that runs while an instance is in a wait state due to a lifecycle
+         * hook.</p> </li> <li> <p>(Optional) Create a Lambda function and a rule that
+         * allows Amazon EventBridge to invoke your Lambda function when an instance is put
+         * into a wait state due to a lifecycle hook.</p> </li> <li> <p>(Optional) Create a
+         * notification target and an IAM role. The target can be either an Amazon SQS
+         * queue or an Amazon SNS topic. The role allows Amazon EC2 Auto Scaling to publish
+         * lifecycle notifications to the target.</p> </li> <li> <p> <b>Create the
+         * lifecycle hook. Specify whether the hook is used when the instances launch or
+         * terminate.</b> </p> </li> <li> <p>If you need more time, record the lifecycle
+         * action heartbeat to keep the instance in a wait state using the
          * <a>RecordLifecycleActionHeartbeat</a> API call.</p> </li> <li> <p>If you finish
-         * before the timeout period ends, complete the lifecycle action using the
+         * before the timeout period ends, send a callback by using the
          * <a>CompleteLifecycleAction</a> API call.</p> </li> </ol> <p>For more
          * information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
@@ -2180,21 +2569,23 @@ namespace Model
 
         /**
          * <p>Creates or updates a lifecycle hook for the specified Auto Scaling group.</p>
-         * <p>A lifecycle hook tells Amazon EC2 Auto Scaling to perform an action on an
-         * instance when the instance launches (before it is put into service) or as the
-         * instance terminates (before it is fully terminated).</p> <p>This step is a part
-         * of the procedure for adding a lifecycle hook to an Auto Scaling group:</p> <ol>
-         * <li> <p>(Optional) Create a Lambda function and a rule that allows CloudWatch
-         * Events to invoke your Lambda function when Amazon EC2 Auto Scaling launches or
-         * terminates instances.</p> </li> <li> <p>(Optional) Create a notification target
-         * and an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS
-         * topic. The role allows Amazon EC2 Auto Scaling to publish lifecycle
-         * notifications to the target.</p> </li> <li> <p> <b>Create the lifecycle hook.
-         * Specify whether the hook is used when the instances launch or terminate.</b>
-         * </p> </li> <li> <p>If you need more time, record the lifecycle action heartbeat
-         * to keep the instance in a pending state using the
+         * <p>Lifecycle hooks let you create solutions that are aware of events in the Auto
+         * Scaling instance lifecycle, and then perform a custom action on instances when
+         * the corresponding lifecycle event occurs.</p> <p>This step is a part of the
+         * procedure for adding a lifecycle hook to an Auto Scaling group:</p> <ol> <li>
+         * <p>(Optional) Create a launch template or launch configuration with a user data
+         * script that runs while an instance is in a wait state due to a lifecycle
+         * hook.</p> </li> <li> <p>(Optional) Create a Lambda function and a rule that
+         * allows Amazon EventBridge to invoke your Lambda function when an instance is put
+         * into a wait state due to a lifecycle hook.</p> </li> <li> <p>(Optional) Create a
+         * notification target and an IAM role. The target can be either an Amazon SQS
+         * queue or an Amazon SNS topic. The role allows Amazon EC2 Auto Scaling to publish
+         * lifecycle notifications to the target.</p> </li> <li> <p> <b>Create the
+         * lifecycle hook. Specify whether the hook is used when the instances launch or
+         * terminate.</b> </p> </li> <li> <p>If you need more time, record the lifecycle
+         * action heartbeat to keep the instance in a wait state using the
          * <a>RecordLifecycleActionHeartbeat</a> API call.</p> </li> <li> <p>If you finish
-         * before the timeout period ends, complete the lifecycle action using the
+         * before the timeout period ends, send a callback by using the
          * <a>CompleteLifecycleAction</a> API call.</p> </li> </ol> <p>For more
          * information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
@@ -2262,28 +2653,42 @@ namespace Model
         virtual void PutNotificationConfigurationAsync(const Model::PutNotificationConfigurationRequest& request, const PutNotificationConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates or updates a scaling policy for an Auto Scaling group.</p> <p>For
-         * more information about using scaling policies to scale your Auto Scaling group,
-         * see <a
+         * <p>Creates or updates a scaling policy for an Auto Scaling group. Scaling
+         * policies are used to scale an Auto Scaling group based on configurable metrics.
+         * If no policies are defined, the dynamic scaling and predictive scaling features
+         * are not used. </p> <p>For more information about using dynamic scaling, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html">Target
          * tracking scaling policies</a> and <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html">Step
          * and simple scaling policies</a> in the <i>Amazon EC2 Auto Scaling User
-         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * Guide</i>.</p> <p>For more information about using predictive scaling, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html">Predictive
+         * scaling for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p> <p>You can view the scaling policies for an Auto Scaling group
+         * using the <a>DescribePolicies</a> API call. If you are no longer using a scaling
+         * policy, you can delete it by calling the <a>DeletePolicy</a> API.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutScalingPolicy">AWS
          * API Reference</a></p>
          */
         virtual Model::PutScalingPolicyOutcome PutScalingPolicy(const Model::PutScalingPolicyRequest& request) const;
 
         /**
-         * <p>Creates or updates a scaling policy for an Auto Scaling group.</p> <p>For
-         * more information about using scaling policies to scale your Auto Scaling group,
-         * see <a
+         * <p>Creates or updates a scaling policy for an Auto Scaling group. Scaling
+         * policies are used to scale an Auto Scaling group based on configurable metrics.
+         * If no policies are defined, the dynamic scaling and predictive scaling features
+         * are not used. </p> <p>For more information about using dynamic scaling, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html">Target
          * tracking scaling policies</a> and <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html">Step
          * and simple scaling policies</a> in the <i>Amazon EC2 Auto Scaling User
-         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * Guide</i>.</p> <p>For more information about using predictive scaling, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html">Predictive
+         * scaling for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p> <p>You can view the scaling policies for an Auto Scaling group
+         * using the <a>DescribePolicies</a> API call. If you are no longer using a scaling
+         * policy, you can delete it by calling the <a>DeletePolicy</a> API.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutScalingPolicy">AWS
          * API Reference</a></p>
          *
@@ -2292,14 +2697,21 @@ namespace Model
         virtual Model::PutScalingPolicyOutcomeCallable PutScalingPolicyCallable(const Model::PutScalingPolicyRequest& request) const;
 
         /**
-         * <p>Creates or updates a scaling policy for an Auto Scaling group.</p> <p>For
-         * more information about using scaling policies to scale your Auto Scaling group,
-         * see <a
+         * <p>Creates or updates a scaling policy for an Auto Scaling group. Scaling
+         * policies are used to scale an Auto Scaling group based on configurable metrics.
+         * If no policies are defined, the dynamic scaling and predictive scaling features
+         * are not used. </p> <p>For more information about using dynamic scaling, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html">Target
          * tracking scaling policies</a> and <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html">Step
          * and simple scaling policies</a> in the <i>Amazon EC2 Auto Scaling User
-         * Guide</i>.</p><p><h3>See Also:</h3>   <a
+         * Guide</i>.</p> <p>For more information about using predictive scaling, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html">Predictive
+         * scaling for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p> <p>You can view the scaling policies for an Auto Scaling group
+         * using the <a>DescribePolicies</a> API call. If you are no longer using a scaling
+         * policy, you can delete it by calling the <a>DeletePolicy</a> API.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutScalingPolicy">AWS
          * API Reference</a></p>
          *
@@ -2308,24 +2720,28 @@ namespace Model
         virtual void PutScalingPolicyAsync(const Model::PutScalingPolicyRequest& request, const PutScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates or updates a scheduled scaling action for an Auto Scaling group. If
-         * you leave a parameter unspecified when updating a scheduled scaling action, the
-         * corresponding value remains unchanged.</p> <p>For more information, see <a
+         * <p>Creates or updates a scheduled scaling action for an Auto Scaling group.</p>
+         * <p>For more information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html">Scheduled
-         * scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p><p><h3>See
-         * Also:</h3>   <a
+         * scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p> <p>You can
+         * view the scheduled actions for an Auto Scaling group using the
+         * <a>DescribeScheduledActions</a> API call. If you are no longer using a scheduled
+         * action, you can delete it by calling the <a>DeleteScheduledAction</a>
+         * API.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutScheduledUpdateGroupAction">AWS
          * API Reference</a></p>
          */
         virtual Model::PutScheduledUpdateGroupActionOutcome PutScheduledUpdateGroupAction(const Model::PutScheduledUpdateGroupActionRequest& request) const;
 
         /**
-         * <p>Creates or updates a scheduled scaling action for an Auto Scaling group. If
-         * you leave a parameter unspecified when updating a scheduled scaling action, the
-         * corresponding value remains unchanged.</p> <p>For more information, see <a
+         * <p>Creates or updates a scheduled scaling action for an Auto Scaling group.</p>
+         * <p>For more information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html">Scheduled
-         * scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p><p><h3>See
-         * Also:</h3>   <a
+         * scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p> <p>You can
+         * view the scheduled actions for an Auto Scaling group using the
+         * <a>DescribeScheduledActions</a> API call. If you are no longer using a scheduled
+         * action, you can delete it by calling the <a>DeleteScheduledAction</a>
+         * API.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutScheduledUpdateGroupAction">AWS
          * API Reference</a></p>
          *
@@ -2334,12 +2750,14 @@ namespace Model
         virtual Model::PutScheduledUpdateGroupActionOutcomeCallable PutScheduledUpdateGroupActionCallable(const Model::PutScheduledUpdateGroupActionRequest& request) const;
 
         /**
-         * <p>Creates or updates a scheduled scaling action for an Auto Scaling group. If
-         * you leave a parameter unspecified when updating a scheduled scaling action, the
-         * corresponding value remains unchanged.</p> <p>For more information, see <a
+         * <p>Creates or updates a scheduled scaling action for an Auto Scaling group.</p>
+         * <p>For more information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html">Scheduled
-         * scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p><p><h3>See
-         * Also:</h3>   <a
+         * scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p> <p>You can
+         * view the scheduled actions for an Auto Scaling group using the
+         * <a>DescribeScheduledActions</a> API call. If you are no longer using a scheduled
+         * action, you can delete it by calling the <a>DeleteScheduledAction</a>
+         * API.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutScheduledUpdateGroupAction">AWS
          * API Reference</a></p>
          *
@@ -2348,23 +2766,90 @@ namespace Model
         virtual void PutScheduledUpdateGroupActionAsync(const Model::PutScheduledUpdateGroupActionRequest& request, const PutScheduledUpdateGroupActionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Creates or updates a warm pool for the specified Auto Scaling group. A warm
+         * pool is a pool of pre-initialized EC2 instances that sits alongside the Auto
+         * Scaling group. Whenever your application needs to scale out, the Auto Scaling
+         * group can draw on the warm pool to meet its new desired capacity. For more
+         * information and example configurations, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm
+         * pools for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p> <p>This operation must be called from the Region in which the
+         * Auto Scaling group was created. This operation cannot be called on an Auto
+         * Scaling group that has a mixed instances policy or a launch template or launch
+         * configuration that requests Spot Instances.</p> <p>You can view the instances in
+         * the warm pool using the <a>DescribeWarmPool</a> API call. If you are no longer
+         * using a warm pool, you can delete it by calling the <a>DeleteWarmPool</a>
+         * API.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutWarmPool">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::PutWarmPoolOutcome PutWarmPool(const Model::PutWarmPoolRequest& request) const;
+
+        /**
+         * <p>Creates or updates a warm pool for the specified Auto Scaling group. A warm
+         * pool is a pool of pre-initialized EC2 instances that sits alongside the Auto
+         * Scaling group. Whenever your application needs to scale out, the Auto Scaling
+         * group can draw on the warm pool to meet its new desired capacity. For more
+         * information and example configurations, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm
+         * pools for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p> <p>This operation must be called from the Region in which the
+         * Auto Scaling group was created. This operation cannot be called on an Auto
+         * Scaling group that has a mixed instances policy or a launch template or launch
+         * configuration that requests Spot Instances.</p> <p>You can view the instances in
+         * the warm pool using the <a>DescribeWarmPool</a> API call. If you are no longer
+         * using a warm pool, you can delete it by calling the <a>DeleteWarmPool</a>
+         * API.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutWarmPool">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::PutWarmPoolOutcomeCallable PutWarmPoolCallable(const Model::PutWarmPoolRequest& request) const;
+
+        /**
+         * <p>Creates or updates a warm pool for the specified Auto Scaling group. A warm
+         * pool is a pool of pre-initialized EC2 instances that sits alongside the Auto
+         * Scaling group. Whenever your application needs to scale out, the Auto Scaling
+         * group can draw on the warm pool to meet its new desired capacity. For more
+         * information and example configurations, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm
+         * pools for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p> <p>This operation must be called from the Region in which the
+         * Auto Scaling group was created. This operation cannot be called on an Auto
+         * Scaling group that has a mixed instances policy or a launch template or launch
+         * configuration that requests Spot Instances.</p> <p>You can view the instances in
+         * the warm pool using the <a>DescribeWarmPool</a> API call. If you are no longer
+         * using a warm pool, you can delete it by calling the <a>DeleteWarmPool</a>
+         * API.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PutWarmPool">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void PutWarmPoolAsync(const Model::PutWarmPoolRequest& request, const PutWarmPoolResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Records a heartbeat for the lifecycle action associated with the specified
          * token or instance. This extends the timeout by the length of time defined using
          * the <a>PutLifecycleHook</a> API call.</p> <p>This step is a part of the
          * procedure for adding a lifecycle hook to an Auto Scaling group:</p> <ol> <li>
-         * <p>(Optional) Create a Lambda function and a rule that allows CloudWatch Events
-         * to invoke your Lambda function when Amazon EC2 Auto Scaling launches or
-         * terminates instances.</p> </li> <li> <p>(Optional) Create a notification target
-         * and an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS
-         * topic. The role allows Amazon EC2 Auto Scaling to publish lifecycle
-         * notifications to the target.</p> </li> <li> <p>Create the lifecycle hook.
-         * Specify whether the hook is used when the instances launch or terminate.</p>
-         * </li> <li> <p> <b>If you need more time, record the lifecycle action heartbeat
-         * to keep the instance in a pending state.</b> </p> </li> <li> <p>If you finish
-         * before the timeout period ends, complete the lifecycle action.</p> </li> </ol>
-         * <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Auto
-         * Scaling lifecycle</a> in the <i>Amazon EC2 Auto Scaling User
+         * <p>(Optional) Create a launch template or launch configuration with a user data
+         * script that runs while an instance is in a wait state due to a lifecycle
+         * hook.</p> </li> <li> <p>(Optional) Create a Lambda function and a rule that
+         * allows Amazon EventBridge to invoke your Lambda function when an instance is put
+         * into a wait state due to a lifecycle hook.</p> </li> <li> <p>(Optional) Create a
+         * notification target and an IAM role. The target can be either an Amazon SQS
+         * queue or an Amazon SNS topic. The role allows Amazon EC2 Auto Scaling to publish
+         * lifecycle notifications to the target.</p> </li> <li> <p>Create the lifecycle
+         * hook. Specify whether the hook is used when the instances launch or
+         * terminate.</p> </li> <li> <p> <b>If you need more time, record the lifecycle
+         * action heartbeat to keep the instance in a wait state.</b> </p> </li> <li> <p>If
+         * you finish before the timeout period ends, send a callback by using the
+         * <a>CompleteLifecycleAction</a> API call.</p> </li> </ol> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
+         * EC2 Auto Scaling lifecycle hooks</a> in the <i>Amazon EC2 Auto Scaling User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/RecordLifecycleActionHeartbeat">AWS
          * API Reference</a></p>
@@ -2376,19 +2861,22 @@ namespace Model
          * token or instance. This extends the timeout by the length of time defined using
          * the <a>PutLifecycleHook</a> API call.</p> <p>This step is a part of the
          * procedure for adding a lifecycle hook to an Auto Scaling group:</p> <ol> <li>
-         * <p>(Optional) Create a Lambda function and a rule that allows CloudWatch Events
-         * to invoke your Lambda function when Amazon EC2 Auto Scaling launches or
-         * terminates instances.</p> </li> <li> <p>(Optional) Create a notification target
-         * and an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS
-         * topic. The role allows Amazon EC2 Auto Scaling to publish lifecycle
-         * notifications to the target.</p> </li> <li> <p>Create the lifecycle hook.
-         * Specify whether the hook is used when the instances launch or terminate.</p>
-         * </li> <li> <p> <b>If you need more time, record the lifecycle action heartbeat
-         * to keep the instance in a pending state.</b> </p> </li> <li> <p>If you finish
-         * before the timeout period ends, complete the lifecycle action.</p> </li> </ol>
-         * <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Auto
-         * Scaling lifecycle</a> in the <i>Amazon EC2 Auto Scaling User
+         * <p>(Optional) Create a launch template or launch configuration with a user data
+         * script that runs while an instance is in a wait state due to a lifecycle
+         * hook.</p> </li> <li> <p>(Optional) Create a Lambda function and a rule that
+         * allows Amazon EventBridge to invoke your Lambda function when an instance is put
+         * into a wait state due to a lifecycle hook.</p> </li> <li> <p>(Optional) Create a
+         * notification target and an IAM role. The target can be either an Amazon SQS
+         * queue or an Amazon SNS topic. The role allows Amazon EC2 Auto Scaling to publish
+         * lifecycle notifications to the target.</p> </li> <li> <p>Create the lifecycle
+         * hook. Specify whether the hook is used when the instances launch or
+         * terminate.</p> </li> <li> <p> <b>If you need more time, record the lifecycle
+         * action heartbeat to keep the instance in a wait state.</b> </p> </li> <li> <p>If
+         * you finish before the timeout period ends, send a callback by using the
+         * <a>CompleteLifecycleAction</a> API call.</p> </li> </ol> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
+         * EC2 Auto Scaling lifecycle hooks</a> in the <i>Amazon EC2 Auto Scaling User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/RecordLifecycleActionHeartbeat">AWS
          * API Reference</a></p>
@@ -2402,19 +2890,22 @@ namespace Model
          * token or instance. This extends the timeout by the length of time defined using
          * the <a>PutLifecycleHook</a> API call.</p> <p>This step is a part of the
          * procedure for adding a lifecycle hook to an Auto Scaling group:</p> <ol> <li>
-         * <p>(Optional) Create a Lambda function and a rule that allows CloudWatch Events
-         * to invoke your Lambda function when Amazon EC2 Auto Scaling launches or
-         * terminates instances.</p> </li> <li> <p>(Optional) Create a notification target
-         * and an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS
-         * topic. The role allows Amazon EC2 Auto Scaling to publish lifecycle
-         * notifications to the target.</p> </li> <li> <p>Create the lifecycle hook.
-         * Specify whether the hook is used when the instances launch or terminate.</p>
-         * </li> <li> <p> <b>If you need more time, record the lifecycle action heartbeat
-         * to keep the instance in a pending state.</b> </p> </li> <li> <p>If you finish
-         * before the timeout period ends, complete the lifecycle action.</p> </li> </ol>
-         * <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Auto
-         * Scaling lifecycle</a> in the <i>Amazon EC2 Auto Scaling User
+         * <p>(Optional) Create a launch template or launch configuration with a user data
+         * script that runs while an instance is in a wait state due to a lifecycle
+         * hook.</p> </li> <li> <p>(Optional) Create a Lambda function and a rule that
+         * allows Amazon EventBridge to invoke your Lambda function when an instance is put
+         * into a wait state due to a lifecycle hook.</p> </li> <li> <p>(Optional) Create a
+         * notification target and an IAM role. The target can be either an Amazon SQS
+         * queue or an Amazon SNS topic. The role allows Amazon EC2 Auto Scaling to publish
+         * lifecycle notifications to the target.</p> </li> <li> <p>Create the lifecycle
+         * hook. Specify whether the hook is used when the instances launch or
+         * terminate.</p> </li> <li> <p> <b>If you need more time, record the lifecycle
+         * action heartbeat to keep the instance in a wait state.</b> </p> </li> <li> <p>If
+         * you finish before the timeout period ends, send a callback by using the
+         * <a>CompleteLifecycleAction</a> API call.</p> </li> </ol> <p>For more
+         * information, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
+         * EC2 Auto Scaling lifecycle hooks</a> in the <i>Amazon EC2 Auto Scaling User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/RecordLifecycleActionHeartbeat">AWS
          * API Reference</a></p>
@@ -2547,26 +3038,28 @@ namespace Model
         virtual void SetInstanceHealthAsync(const Model::SetInstanceHealthRequest& request, const SetInstanceHealthResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Updates the instance protection settings of the specified instances.</p>
-         * <p>For more information about preventing instances that are part of an Auto
-         * Scaling group from terminating on scale in, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection">Instance
-         * scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
-         * <p>If you exceed your maximum limit of instance IDs, which is 50 per Auto
-         * Scaling group, the call fails.</p><p><h3>See Also:</h3>   <a
+         * <p>Updates the instance protection settings of the specified instances. This
+         * operation cannot be called on instances in a warm pool.</p> <p>For more
+         * information about preventing instances that are part of an Auto Scaling group
+         * from terminating on scale in, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html">Using
+         * instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p> <p>If you exceed your maximum limit of instance IDs, which is 50
+         * per Auto Scaling group, the call fails.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/SetInstanceProtection">AWS
          * API Reference</a></p>
          */
         virtual Model::SetInstanceProtectionOutcome SetInstanceProtection(const Model::SetInstanceProtectionRequest& request) const;
 
         /**
-         * <p>Updates the instance protection settings of the specified instances.</p>
-         * <p>For more information about preventing instances that are part of an Auto
-         * Scaling group from terminating on scale in, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection">Instance
-         * scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
-         * <p>If you exceed your maximum limit of instance IDs, which is 50 per Auto
-         * Scaling group, the call fails.</p><p><h3>See Also:</h3>   <a
+         * <p>Updates the instance protection settings of the specified instances. This
+         * operation cannot be called on instances in a warm pool.</p> <p>For more
+         * information about preventing instances that are part of an Auto Scaling group
+         * from terminating on scale in, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html">Using
+         * instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p> <p>If you exceed your maximum limit of instance IDs, which is 50
+         * per Auto Scaling group, the call fails.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/SetInstanceProtection">AWS
          * API Reference</a></p>
          *
@@ -2575,13 +3068,14 @@ namespace Model
         virtual Model::SetInstanceProtectionOutcomeCallable SetInstanceProtectionCallable(const Model::SetInstanceProtectionRequest& request) const;
 
         /**
-         * <p>Updates the instance protection settings of the specified instances.</p>
-         * <p>For more information about preventing instances that are part of an Auto
-         * Scaling group from terminating on scale in, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection">Instance
-         * scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
-         * <p>If you exceed your maximum limit of instance IDs, which is 50 per Auto
-         * Scaling group, the call fails.</p><p><h3>See Also:</h3>   <a
+         * <p>Updates the instance protection settings of the specified instances. This
+         * operation cannot be called on instances in a warm pool.</p> <p>For more
+         * information about preventing instances that are part of an Auto Scaling group
+         * from terminating on scale in, see <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html">Using
+         * instance scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User
+         * Guide</i>.</p> <p>If you exceed your maximum limit of instance IDs, which is 50
+         * per Auto Scaling group, the call fails.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/SetInstanceProtection">AWS
          * API Reference</a></p>
          *
@@ -2590,34 +3084,46 @@ namespace Model
         virtual void SetInstanceProtectionAsync(const Model::SetInstanceProtectionRequest& request, const SetInstanceProtectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Starts a new instance refresh operation, which triggers a rolling replacement
-         * of all previously launched instances in the Auto Scaling group with a new group
-         * of instances.</p> <p>If successful, this call creates a new instance refresh
-         * request with a unique ID that you can use to track its progress. To query its
-         * status, call the <a>DescribeInstanceRefreshes</a> API. To describe the instance
-         * refreshes that have already run, call the <a>DescribeInstanceRefreshes</a> API.
-         * To cancel an instance refresh operation in progress, use the
-         * <a>CancelInstanceRefresh</a> API. </p> <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">Replacing
-         * Auto Scaling Instances Based on an Instance Refresh</a>.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Starts a new instance refresh operation. An instance refresh performs a
+         * rolling replacement of all or some instances in an Auto Scaling group. Each
+         * instance is terminated first and then replaced, which temporarily reduces the
+         * capacity available within your Auto Scaling group.</p> <p>This operation is part
+         * of the <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance
+         * refresh feature</a> in Amazon EC2 Auto Scaling, which helps you update instances
+         * in your Auto Scaling group. This feature is helpful, for example, when you have
+         * a new AMI or a new user data script. You just need to create a new launch
+         * template that specifies the new AMI or user data script. Then start an instance
+         * refresh to immediately begin the process of updating instances in the group.
+         * </p> <p>If the call succeeds, it creates a new instance refresh request with a
+         * unique ID that you can use to track its progress. To query its status, call the
+         * <a>DescribeInstanceRefreshes</a> API. To describe the instance refreshes that
+         * have already run, call the <a>DescribeInstanceRefreshes</a> API. To cancel an
+         * instance refresh operation in progress, use the <a>CancelInstanceRefresh</a>
+         * API. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/StartInstanceRefresh">AWS
          * API Reference</a></p>
          */
         virtual Model::StartInstanceRefreshOutcome StartInstanceRefresh(const Model::StartInstanceRefreshRequest& request) const;
 
         /**
-         * <p>Starts a new instance refresh operation, which triggers a rolling replacement
-         * of all previously launched instances in the Auto Scaling group with a new group
-         * of instances.</p> <p>If successful, this call creates a new instance refresh
-         * request with a unique ID that you can use to track its progress. To query its
-         * status, call the <a>DescribeInstanceRefreshes</a> API. To describe the instance
-         * refreshes that have already run, call the <a>DescribeInstanceRefreshes</a> API.
-         * To cancel an instance refresh operation in progress, use the
-         * <a>CancelInstanceRefresh</a> API. </p> <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">Replacing
-         * Auto Scaling Instances Based on an Instance Refresh</a>.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Starts a new instance refresh operation. An instance refresh performs a
+         * rolling replacement of all or some instances in an Auto Scaling group. Each
+         * instance is terminated first and then replaced, which temporarily reduces the
+         * capacity available within your Auto Scaling group.</p> <p>This operation is part
+         * of the <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance
+         * refresh feature</a> in Amazon EC2 Auto Scaling, which helps you update instances
+         * in your Auto Scaling group. This feature is helpful, for example, when you have
+         * a new AMI or a new user data script. You just need to create a new launch
+         * template that specifies the new AMI or user data script. Then start an instance
+         * refresh to immediately begin the process of updating instances in the group.
+         * </p> <p>If the call succeeds, it creates a new instance refresh request with a
+         * unique ID that you can use to track its progress. To query its status, call the
+         * <a>DescribeInstanceRefreshes</a> API. To describe the instance refreshes that
+         * have already run, call the <a>DescribeInstanceRefreshes</a> API. To cancel an
+         * instance refresh operation in progress, use the <a>CancelInstanceRefresh</a>
+         * API. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/StartInstanceRefresh">AWS
          * API Reference</a></p>
          *
@@ -2626,17 +3132,23 @@ namespace Model
         virtual Model::StartInstanceRefreshOutcomeCallable StartInstanceRefreshCallable(const Model::StartInstanceRefreshRequest& request) const;
 
         /**
-         * <p>Starts a new instance refresh operation, which triggers a rolling replacement
-         * of all previously launched instances in the Auto Scaling group with a new group
-         * of instances.</p> <p>If successful, this call creates a new instance refresh
-         * request with a unique ID that you can use to track its progress. To query its
-         * status, call the <a>DescribeInstanceRefreshes</a> API. To describe the instance
-         * refreshes that have already run, call the <a>DescribeInstanceRefreshes</a> API.
-         * To cancel an instance refresh operation in progress, use the
-         * <a>CancelInstanceRefresh</a> API. </p> <p>For more information, see <a
-         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">Replacing
-         * Auto Scaling Instances Based on an Instance Refresh</a>.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Starts a new instance refresh operation. An instance refresh performs a
+         * rolling replacement of all or some instances in an Auto Scaling group. Each
+         * instance is terminated first and then replaced, which temporarily reduces the
+         * capacity available within your Auto Scaling group.</p> <p>This operation is part
+         * of the <a
+         * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance
+         * refresh feature</a> in Amazon EC2 Auto Scaling, which helps you update instances
+         * in your Auto Scaling group. This feature is helpful, for example, when you have
+         * a new AMI or a new user data script. You just need to create a new launch
+         * template that specifies the new AMI or user data script. Then start an instance
+         * refresh to immediately begin the process of updating instances in the group.
+         * </p> <p>If the call succeeds, it creates a new instance refresh request with a
+         * unique ID that you can use to track its progress. To query its status, call the
+         * <a>DescribeInstanceRefreshes</a> API. To describe the instance refreshes that
+         * have already run, call the <a>DescribeInstanceRefreshes</a> API. To cancel an
+         * instance refresh operation in progress, use the <a>CancelInstanceRefresh</a>
+         * API. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/StartInstanceRefresh">AWS
          * API Reference</a></p>
          *
@@ -2692,16 +3204,17 @@ namespace Model
 
         /**
          * <p>Terminates the specified instance and optionally adjusts the desired group
-         * size. </p> <p>This call simply makes a termination request. The instance is not
-         * terminated immediately. When an instance is terminated, the instance status
-         * changes to <code>terminated</code>. You can't connect to or start an instance
-         * after you've terminated it.</p> <p>If you do not specify the option to decrement
-         * the desired capacity, Amazon EC2 Auto Scaling launches instances to replace the
-         * ones that are terminated. </p> <p>By default, Amazon EC2 Auto Scaling balances
-         * instances across all Availability Zones. If you decrement the desired capacity,
-         * your Auto Scaling group can become unbalanced between Availability Zones. Amazon
-         * EC2 Auto Scaling tries to rebalance the group, and rebalancing might terminate
-         * instances in other zones. For more information, see <a
+         * size. This operation cannot be called on instances in a warm pool.</p> <p>This
+         * call simply makes a termination request. The instance is not terminated
+         * immediately. When an instance is terminated, the instance status changes to
+         * <code>terminated</code>. You can't connect to or start an instance after you've
+         * terminated it.</p> <p>If you do not specify the option to decrement the desired
+         * capacity, Amazon EC2 Auto Scaling launches instances to replace the ones that
+         * are terminated. </p> <p>By default, Amazon EC2 Auto Scaling balances instances
+         * across all Availability Zones. If you decrement the desired capacity, your Auto
+         * Scaling group can become unbalanced between Availability Zones. Amazon EC2 Auto
+         * Scaling tries to rebalance the group, and rebalancing might terminate instances
+         * in other zones. For more information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-benefits.html#AutoScalingBehavior.InstanceUsage">Rebalancing
          * activities</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
@@ -2712,16 +3225,17 @@ namespace Model
 
         /**
          * <p>Terminates the specified instance and optionally adjusts the desired group
-         * size. </p> <p>This call simply makes a termination request. The instance is not
-         * terminated immediately. When an instance is terminated, the instance status
-         * changes to <code>terminated</code>. You can't connect to or start an instance
-         * after you've terminated it.</p> <p>If you do not specify the option to decrement
-         * the desired capacity, Amazon EC2 Auto Scaling launches instances to replace the
-         * ones that are terminated. </p> <p>By default, Amazon EC2 Auto Scaling balances
-         * instances across all Availability Zones. If you decrement the desired capacity,
-         * your Auto Scaling group can become unbalanced between Availability Zones. Amazon
-         * EC2 Auto Scaling tries to rebalance the group, and rebalancing might terminate
-         * instances in other zones. For more information, see <a
+         * size. This operation cannot be called on instances in a warm pool.</p> <p>This
+         * call simply makes a termination request. The instance is not terminated
+         * immediately. When an instance is terminated, the instance status changes to
+         * <code>terminated</code>. You can't connect to or start an instance after you've
+         * terminated it.</p> <p>If you do not specify the option to decrement the desired
+         * capacity, Amazon EC2 Auto Scaling launches instances to replace the ones that
+         * are terminated. </p> <p>By default, Amazon EC2 Auto Scaling balances instances
+         * across all Availability Zones. If you decrement the desired capacity, your Auto
+         * Scaling group can become unbalanced between Availability Zones. Amazon EC2 Auto
+         * Scaling tries to rebalance the group, and rebalancing might terminate instances
+         * in other zones. For more information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-benefits.html#AutoScalingBehavior.InstanceUsage">Rebalancing
          * activities</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
@@ -2734,16 +3248,17 @@ namespace Model
 
         /**
          * <p>Terminates the specified instance and optionally adjusts the desired group
-         * size. </p> <p>This call simply makes a termination request. The instance is not
-         * terminated immediately. When an instance is terminated, the instance status
-         * changes to <code>terminated</code>. You can't connect to or start an instance
-         * after you've terminated it.</p> <p>If you do not specify the option to decrement
-         * the desired capacity, Amazon EC2 Auto Scaling launches instances to replace the
-         * ones that are terminated. </p> <p>By default, Amazon EC2 Auto Scaling balances
-         * instances across all Availability Zones. If you decrement the desired capacity,
-         * your Auto Scaling group can become unbalanced between Availability Zones. Amazon
-         * EC2 Auto Scaling tries to rebalance the group, and rebalancing might terminate
-         * instances in other zones. For more information, see <a
+         * size. This operation cannot be called on instances in a warm pool.</p> <p>This
+         * call simply makes a termination request. The instance is not terminated
+         * immediately. When an instance is terminated, the instance status changes to
+         * <code>terminated</code>. You can't connect to or start an instance after you've
+         * terminated it.</p> <p>If you do not specify the option to decrement the desired
+         * capacity, Amazon EC2 Auto Scaling launches instances to replace the ones that
+         * are terminated. </p> <p>By default, Amazon EC2 Auto Scaling balances instances
+         * across all Availability Zones. If you decrement the desired capacity, your Auto
+         * Scaling group can become unbalanced between Availability Zones. Amazon EC2 Auto
+         * Scaling tries to rebalance the group, and rebalancing might terminate instances
+         * in other zones. For more information, see <a
          * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-benefits.html#AutoScalingBehavior.InstanceUsage">Rebalancing
          * activities</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
@@ -2905,6 +3420,7 @@ namespace Model
         void DeletePolicyAsyncHelper(const Model::DeletePolicyRequest& request, const DeletePolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteScheduledActionAsyncHelper(const Model::DeleteScheduledActionRequest& request, const DeleteScheduledActionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteTagsAsyncHelper(const Model::DeleteTagsRequest& request, const DeleteTagsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DeleteWarmPoolAsyncHelper(const Model::DeleteWarmPoolRequest& request, const DeleteWarmPoolResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeAccountLimitsAsyncHelper(const Model::DescribeAccountLimitsRequest& request, const DescribeAccountLimitsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeAdjustmentTypesAsyncHelper(const Model::DescribeAdjustmentTypesRequest& request, const DescribeAdjustmentTypesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeAutoScalingGroupsAsyncHelper(const Model::DescribeAutoScalingGroupsRequest& request, const DescribeAutoScalingGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -2924,6 +3440,7 @@ namespace Model
         void DescribeScheduledActionsAsyncHelper(const Model::DescribeScheduledActionsRequest& request, const DescribeScheduledActionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeTagsAsyncHelper(const Model::DescribeTagsRequest& request, const DescribeTagsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeTerminationPolicyTypesAsyncHelper(const Model::DescribeTerminationPolicyTypesRequest& request, const DescribeTerminationPolicyTypesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeWarmPoolAsyncHelper(const Model::DescribeWarmPoolRequest& request, const DescribeWarmPoolResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DetachInstancesAsyncHelper(const Model::DetachInstancesRequest& request, const DetachInstancesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DetachLoadBalancerTargetGroupsAsyncHelper(const Model::DetachLoadBalancerTargetGroupsRequest& request, const DetachLoadBalancerTargetGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DetachLoadBalancersAsyncHelper(const Model::DetachLoadBalancersRequest& request, const DetachLoadBalancersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -2932,10 +3449,12 @@ namespace Model
         void EnterStandbyAsyncHelper(const Model::EnterStandbyRequest& request, const EnterStandbyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ExecutePolicyAsyncHelper(const Model::ExecutePolicyRequest& request, const ExecutePolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ExitStandbyAsyncHelper(const Model::ExitStandbyRequest& request, const ExitStandbyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetPredictiveScalingForecastAsyncHelper(const Model::GetPredictiveScalingForecastRequest& request, const GetPredictiveScalingForecastResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutLifecycleHookAsyncHelper(const Model::PutLifecycleHookRequest& request, const PutLifecycleHookResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutNotificationConfigurationAsyncHelper(const Model::PutNotificationConfigurationRequest& request, const PutNotificationConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutScalingPolicyAsyncHelper(const Model::PutScalingPolicyRequest& request, const PutScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutScheduledUpdateGroupActionAsyncHelper(const Model::PutScheduledUpdateGroupActionRequest& request, const PutScheduledUpdateGroupActionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void PutWarmPoolAsyncHelper(const Model::PutWarmPoolRequest& request, const PutWarmPoolResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RecordLifecycleActionHeartbeatAsyncHelper(const Model::RecordLifecycleActionHeartbeatRequest& request, const RecordLifecycleActionHeartbeatResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ResumeProcessesAsyncHelper(const Model::ResumeProcessesRequest& request, const ResumeProcessesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void SetDesiredCapacityAsyncHelper(const Model::SetDesiredCapacityRequest& request, const SetDesiredCapacityResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

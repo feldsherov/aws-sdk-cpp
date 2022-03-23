@@ -22,7 +22,9 @@ namespace Model
     launchPermission,
     productCodes,
     blockDeviceMapping,
-    sriovNetSupport
+    sriovNetSupport,
+    bootMode,
+    lastLaunchedTime
   };
 
 namespace ImageAttributeNameMapper

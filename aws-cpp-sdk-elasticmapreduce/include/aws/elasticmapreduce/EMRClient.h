@@ -21,9 +21,11 @@
 #include <aws/elasticmapreduce/model/DeleteSecurityConfigurationResult.h>
 #include <aws/elasticmapreduce/model/DescribeClusterResult.h>
 #include <aws/elasticmapreduce/model/DescribeNotebookExecutionResult.h>
+#include <aws/elasticmapreduce/model/DescribeReleaseLabelResult.h>
 #include <aws/elasticmapreduce/model/DescribeSecurityConfigurationResult.h>
 #include <aws/elasticmapreduce/model/DescribeStepResult.h>
 #include <aws/elasticmapreduce/model/DescribeStudioResult.h>
+#include <aws/elasticmapreduce/model/GetAutoTerminationPolicyResult.h>
 #include <aws/elasticmapreduce/model/GetBlockPublicAccessConfigurationResult.h>
 #include <aws/elasticmapreduce/model/GetManagedScalingPolicyResult.h>
 #include <aws/elasticmapreduce/model/GetStudioSessionMappingResult.h>
@@ -33,15 +35,18 @@
 #include <aws/elasticmapreduce/model/ListInstanceGroupsResult.h>
 #include <aws/elasticmapreduce/model/ListInstancesResult.h>
 #include <aws/elasticmapreduce/model/ListNotebookExecutionsResult.h>
+#include <aws/elasticmapreduce/model/ListReleaseLabelsResult.h>
 #include <aws/elasticmapreduce/model/ListSecurityConfigurationsResult.h>
 #include <aws/elasticmapreduce/model/ListStepsResult.h>
 #include <aws/elasticmapreduce/model/ListStudioSessionMappingsResult.h>
 #include <aws/elasticmapreduce/model/ListStudiosResult.h>
 #include <aws/elasticmapreduce/model/ModifyClusterResult.h>
 #include <aws/elasticmapreduce/model/PutAutoScalingPolicyResult.h>
+#include <aws/elasticmapreduce/model/PutAutoTerminationPolicyResult.h>
 #include <aws/elasticmapreduce/model/PutBlockPublicAccessConfigurationResult.h>
 #include <aws/elasticmapreduce/model/PutManagedScalingPolicyResult.h>
 #include <aws/elasticmapreduce/model/RemoveAutoScalingPolicyResult.h>
+#include <aws/elasticmapreduce/model/RemoveAutoTerminationPolicyResult.h>
 #include <aws/elasticmapreduce/model/RemoveManagedScalingPolicyResult.h>
 #include <aws/elasticmapreduce/model/RemoveTagsResult.h>
 #include <aws/elasticmapreduce/model/RunJobFlowResult.h>
@@ -99,9 +104,11 @@ namespace Model
         class DeleteStudioSessionMappingRequest;
         class DescribeClusterRequest;
         class DescribeNotebookExecutionRequest;
+        class DescribeReleaseLabelRequest;
         class DescribeSecurityConfigurationRequest;
         class DescribeStepRequest;
         class DescribeStudioRequest;
+        class GetAutoTerminationPolicyRequest;
         class GetBlockPublicAccessConfigurationRequest;
         class GetManagedScalingPolicyRequest;
         class GetStudioSessionMappingRequest;
@@ -111,6 +118,7 @@ namespace Model
         class ListInstanceGroupsRequest;
         class ListInstancesRequest;
         class ListNotebookExecutionsRequest;
+        class ListReleaseLabelsRequest;
         class ListSecurityConfigurationsRequest;
         class ListStepsRequest;
         class ListStudioSessionMappingsRequest;
@@ -119,9 +127,11 @@ namespace Model
         class ModifyInstanceFleetRequest;
         class ModifyInstanceGroupsRequest;
         class PutAutoScalingPolicyRequest;
+        class PutAutoTerminationPolicyRequest;
         class PutBlockPublicAccessConfigurationRequest;
         class PutManagedScalingPolicyRequest;
         class RemoveAutoScalingPolicyRequest;
+        class RemoveAutoTerminationPolicyRequest;
         class RemoveManagedScalingPolicyRequest;
         class RemoveTagsRequest;
         class RunJobFlowRequest;
@@ -130,6 +140,7 @@ namespace Model
         class StartNotebookExecutionRequest;
         class StopNotebookExecutionRequest;
         class TerminateJobFlowsRequest;
+        class UpdateStudioRequest;
         class UpdateStudioSessionMappingRequest;
 
         typedef Aws::Utils::Outcome<AddInstanceFleetResult, EMRError> AddInstanceFleetOutcome;
@@ -145,9 +156,11 @@ namespace Model
         typedef Aws::Utils::Outcome<Aws::NoResult, EMRError> DeleteStudioSessionMappingOutcome;
         typedef Aws::Utils::Outcome<DescribeClusterResult, EMRError> DescribeClusterOutcome;
         typedef Aws::Utils::Outcome<DescribeNotebookExecutionResult, EMRError> DescribeNotebookExecutionOutcome;
+        typedef Aws::Utils::Outcome<DescribeReleaseLabelResult, EMRError> DescribeReleaseLabelOutcome;
         typedef Aws::Utils::Outcome<DescribeSecurityConfigurationResult, EMRError> DescribeSecurityConfigurationOutcome;
         typedef Aws::Utils::Outcome<DescribeStepResult, EMRError> DescribeStepOutcome;
         typedef Aws::Utils::Outcome<DescribeStudioResult, EMRError> DescribeStudioOutcome;
+        typedef Aws::Utils::Outcome<GetAutoTerminationPolicyResult, EMRError> GetAutoTerminationPolicyOutcome;
         typedef Aws::Utils::Outcome<GetBlockPublicAccessConfigurationResult, EMRError> GetBlockPublicAccessConfigurationOutcome;
         typedef Aws::Utils::Outcome<GetManagedScalingPolicyResult, EMRError> GetManagedScalingPolicyOutcome;
         typedef Aws::Utils::Outcome<GetStudioSessionMappingResult, EMRError> GetStudioSessionMappingOutcome;
@@ -157,6 +170,7 @@ namespace Model
         typedef Aws::Utils::Outcome<ListInstanceGroupsResult, EMRError> ListInstanceGroupsOutcome;
         typedef Aws::Utils::Outcome<ListInstancesResult, EMRError> ListInstancesOutcome;
         typedef Aws::Utils::Outcome<ListNotebookExecutionsResult, EMRError> ListNotebookExecutionsOutcome;
+        typedef Aws::Utils::Outcome<ListReleaseLabelsResult, EMRError> ListReleaseLabelsOutcome;
         typedef Aws::Utils::Outcome<ListSecurityConfigurationsResult, EMRError> ListSecurityConfigurationsOutcome;
         typedef Aws::Utils::Outcome<ListStepsResult, EMRError> ListStepsOutcome;
         typedef Aws::Utils::Outcome<ListStudioSessionMappingsResult, EMRError> ListStudioSessionMappingsOutcome;
@@ -165,9 +179,11 @@ namespace Model
         typedef Aws::Utils::Outcome<Aws::NoResult, EMRError> ModifyInstanceFleetOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, EMRError> ModifyInstanceGroupsOutcome;
         typedef Aws::Utils::Outcome<PutAutoScalingPolicyResult, EMRError> PutAutoScalingPolicyOutcome;
+        typedef Aws::Utils::Outcome<PutAutoTerminationPolicyResult, EMRError> PutAutoTerminationPolicyOutcome;
         typedef Aws::Utils::Outcome<PutBlockPublicAccessConfigurationResult, EMRError> PutBlockPublicAccessConfigurationOutcome;
         typedef Aws::Utils::Outcome<PutManagedScalingPolicyResult, EMRError> PutManagedScalingPolicyOutcome;
         typedef Aws::Utils::Outcome<RemoveAutoScalingPolicyResult, EMRError> RemoveAutoScalingPolicyOutcome;
+        typedef Aws::Utils::Outcome<RemoveAutoTerminationPolicyResult, EMRError> RemoveAutoTerminationPolicyOutcome;
         typedef Aws::Utils::Outcome<RemoveManagedScalingPolicyResult, EMRError> RemoveManagedScalingPolicyOutcome;
         typedef Aws::Utils::Outcome<RemoveTagsResult, EMRError> RemoveTagsOutcome;
         typedef Aws::Utils::Outcome<RunJobFlowResult, EMRError> RunJobFlowOutcome;
@@ -176,6 +192,7 @@ namespace Model
         typedef Aws::Utils::Outcome<StartNotebookExecutionResult, EMRError> StartNotebookExecutionOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, EMRError> StopNotebookExecutionOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, EMRError> TerminateJobFlowsOutcome;
+        typedef Aws::Utils::Outcome<Aws::NoResult, EMRError> UpdateStudioOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, EMRError> UpdateStudioSessionMappingOutcome;
 
         typedef std::future<AddInstanceFleetOutcome> AddInstanceFleetOutcomeCallable;
@@ -191,9 +208,11 @@ namespace Model
         typedef std::future<DeleteStudioSessionMappingOutcome> DeleteStudioSessionMappingOutcomeCallable;
         typedef std::future<DescribeClusterOutcome> DescribeClusterOutcomeCallable;
         typedef std::future<DescribeNotebookExecutionOutcome> DescribeNotebookExecutionOutcomeCallable;
+        typedef std::future<DescribeReleaseLabelOutcome> DescribeReleaseLabelOutcomeCallable;
         typedef std::future<DescribeSecurityConfigurationOutcome> DescribeSecurityConfigurationOutcomeCallable;
         typedef std::future<DescribeStepOutcome> DescribeStepOutcomeCallable;
         typedef std::future<DescribeStudioOutcome> DescribeStudioOutcomeCallable;
+        typedef std::future<GetAutoTerminationPolicyOutcome> GetAutoTerminationPolicyOutcomeCallable;
         typedef std::future<GetBlockPublicAccessConfigurationOutcome> GetBlockPublicAccessConfigurationOutcomeCallable;
         typedef std::future<GetManagedScalingPolicyOutcome> GetManagedScalingPolicyOutcomeCallable;
         typedef std::future<GetStudioSessionMappingOutcome> GetStudioSessionMappingOutcomeCallable;
@@ -203,6 +222,7 @@ namespace Model
         typedef std::future<ListInstanceGroupsOutcome> ListInstanceGroupsOutcomeCallable;
         typedef std::future<ListInstancesOutcome> ListInstancesOutcomeCallable;
         typedef std::future<ListNotebookExecutionsOutcome> ListNotebookExecutionsOutcomeCallable;
+        typedef std::future<ListReleaseLabelsOutcome> ListReleaseLabelsOutcomeCallable;
         typedef std::future<ListSecurityConfigurationsOutcome> ListSecurityConfigurationsOutcomeCallable;
         typedef std::future<ListStepsOutcome> ListStepsOutcomeCallable;
         typedef std::future<ListStudioSessionMappingsOutcome> ListStudioSessionMappingsOutcomeCallable;
@@ -211,9 +231,11 @@ namespace Model
         typedef std::future<ModifyInstanceFleetOutcome> ModifyInstanceFleetOutcomeCallable;
         typedef std::future<ModifyInstanceGroupsOutcome> ModifyInstanceGroupsOutcomeCallable;
         typedef std::future<PutAutoScalingPolicyOutcome> PutAutoScalingPolicyOutcomeCallable;
+        typedef std::future<PutAutoTerminationPolicyOutcome> PutAutoTerminationPolicyOutcomeCallable;
         typedef std::future<PutBlockPublicAccessConfigurationOutcome> PutBlockPublicAccessConfigurationOutcomeCallable;
         typedef std::future<PutManagedScalingPolicyOutcome> PutManagedScalingPolicyOutcomeCallable;
         typedef std::future<RemoveAutoScalingPolicyOutcome> RemoveAutoScalingPolicyOutcomeCallable;
+        typedef std::future<RemoveAutoTerminationPolicyOutcome> RemoveAutoTerminationPolicyOutcomeCallable;
         typedef std::future<RemoveManagedScalingPolicyOutcome> RemoveManagedScalingPolicyOutcomeCallable;
         typedef std::future<RemoveTagsOutcome> RemoveTagsOutcomeCallable;
         typedef std::future<RunJobFlowOutcome> RunJobFlowOutcomeCallable;
@@ -222,6 +244,7 @@ namespace Model
         typedef std::future<StartNotebookExecutionOutcome> StartNotebookExecutionOutcomeCallable;
         typedef std::future<StopNotebookExecutionOutcome> StopNotebookExecutionOutcomeCallable;
         typedef std::future<TerminateJobFlowsOutcome> TerminateJobFlowsOutcomeCallable;
+        typedef std::future<UpdateStudioOutcome> UpdateStudioOutcomeCallable;
         typedef std::future<UpdateStudioSessionMappingOutcome> UpdateStudioSessionMappingOutcomeCallable;
 } // namespace Model
 
@@ -240,9 +263,11 @@ namespace Model
     typedef std::function<void(const EMRClient*, const Model::DeleteStudioSessionMappingRequest&, const Model::DeleteStudioSessionMappingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteStudioSessionMappingResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::DescribeClusterRequest&, const Model::DescribeClusterOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeClusterResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::DescribeNotebookExecutionRequest&, const Model::DescribeNotebookExecutionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeNotebookExecutionResponseReceivedHandler;
+    typedef std::function<void(const EMRClient*, const Model::DescribeReleaseLabelRequest&, const Model::DescribeReleaseLabelOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeReleaseLabelResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::DescribeSecurityConfigurationRequest&, const Model::DescribeSecurityConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeSecurityConfigurationResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::DescribeStepRequest&, const Model::DescribeStepOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeStepResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::DescribeStudioRequest&, const Model::DescribeStudioOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeStudioResponseReceivedHandler;
+    typedef std::function<void(const EMRClient*, const Model::GetAutoTerminationPolicyRequest&, const Model::GetAutoTerminationPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetAutoTerminationPolicyResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::GetBlockPublicAccessConfigurationRequest&, const Model::GetBlockPublicAccessConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetBlockPublicAccessConfigurationResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::GetManagedScalingPolicyRequest&, const Model::GetManagedScalingPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetManagedScalingPolicyResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::GetStudioSessionMappingRequest&, const Model::GetStudioSessionMappingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetStudioSessionMappingResponseReceivedHandler;
@@ -252,6 +277,7 @@ namespace Model
     typedef std::function<void(const EMRClient*, const Model::ListInstanceGroupsRequest&, const Model::ListInstanceGroupsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListInstanceGroupsResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::ListInstancesRequest&, const Model::ListInstancesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListInstancesResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::ListNotebookExecutionsRequest&, const Model::ListNotebookExecutionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListNotebookExecutionsResponseReceivedHandler;
+    typedef std::function<void(const EMRClient*, const Model::ListReleaseLabelsRequest&, const Model::ListReleaseLabelsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListReleaseLabelsResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::ListSecurityConfigurationsRequest&, const Model::ListSecurityConfigurationsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListSecurityConfigurationsResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::ListStepsRequest&, const Model::ListStepsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListStepsResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::ListStudioSessionMappingsRequest&, const Model::ListStudioSessionMappingsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListStudioSessionMappingsResponseReceivedHandler;
@@ -260,9 +286,11 @@ namespace Model
     typedef std::function<void(const EMRClient*, const Model::ModifyInstanceFleetRequest&, const Model::ModifyInstanceFleetOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ModifyInstanceFleetResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::ModifyInstanceGroupsRequest&, const Model::ModifyInstanceGroupsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ModifyInstanceGroupsResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::PutAutoScalingPolicyRequest&, const Model::PutAutoScalingPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutAutoScalingPolicyResponseReceivedHandler;
+    typedef std::function<void(const EMRClient*, const Model::PutAutoTerminationPolicyRequest&, const Model::PutAutoTerminationPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutAutoTerminationPolicyResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::PutBlockPublicAccessConfigurationRequest&, const Model::PutBlockPublicAccessConfigurationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutBlockPublicAccessConfigurationResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::PutManagedScalingPolicyRequest&, const Model::PutManagedScalingPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PutManagedScalingPolicyResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::RemoveAutoScalingPolicyRequest&, const Model::RemoveAutoScalingPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RemoveAutoScalingPolicyResponseReceivedHandler;
+    typedef std::function<void(const EMRClient*, const Model::RemoveAutoTerminationPolicyRequest&, const Model::RemoveAutoTerminationPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RemoveAutoTerminationPolicyResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::RemoveManagedScalingPolicyRequest&, const Model::RemoveManagedScalingPolicyOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RemoveManagedScalingPolicyResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::RemoveTagsRequest&, const Model::RemoveTagsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RemoveTagsResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::RunJobFlowRequest&, const Model::RunJobFlowOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RunJobFlowResponseReceivedHandler;
@@ -271,13 +299,15 @@ namespace Model
     typedef std::function<void(const EMRClient*, const Model::StartNotebookExecutionRequest&, const Model::StartNotebookExecutionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartNotebookExecutionResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::StopNotebookExecutionRequest&, const Model::StopNotebookExecutionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StopNotebookExecutionResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::TerminateJobFlowsRequest&, const Model::TerminateJobFlowsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > TerminateJobFlowsResponseReceivedHandler;
+    typedef std::function<void(const EMRClient*, const Model::UpdateStudioRequest&, const Model::UpdateStudioOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateStudioResponseReceivedHandler;
     typedef std::function<void(const EMRClient*, const Model::UpdateStudioSessionMappingRequest&, const Model::UpdateStudioSessionMappingOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateStudioSessionMappingResponseReceivedHandler;
 
   /**
    * <p>Amazon EMR is a web service that makes it easier to process large amounts of
-   * data efficiently. Amazon EMR uses Hadoop processing combined with several AWS
-   * services to do tasks such as web indexing, data mining, log file analysis,
-   * machine learning, scientific simulation, and data warehouse management.</p>
+   * data efficiently. Amazon EMR uses Hadoop processing combined with several Amazon
+   * Web Services services to do tasks such as web indexing, data mining, log file
+   * analysis, machine learning, scientific simulation, and data warehouse
+   * management.</p>
    */
   class AWS_EMR_API EMRClient : public Aws::Client::AWSJsonClient
   {
@@ -383,8 +413,9 @@ namespace Model
          * considered complete, the main function must exit with a zero exit code and all
          * Hadoop jobs started while the step was running must have completed and run
          * successfully.</p> <p>You can only add steps to a cluster that is in one of the
-         * following states: STARTING, BOOTSTRAPPING, RUNNING, or WAITING.</p><p><h3>See
-         * Also:</h3>   <a
+         * following states: STARTING, BOOTSTRAPPING, RUNNING, or WAITING.</p> 
+         * <p>The string values passed into <code>HadoopJarStep</code> object cannot exceed
+         * a total of 10240 characters.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/AddJobFlowSteps">AWS
          * API Reference</a></p>
          */
@@ -408,8 +439,9 @@ namespace Model
          * considered complete, the main function must exit with a zero exit code and all
          * Hadoop jobs started while the step was running must have completed and run
          * successfully.</p> <p>You can only add steps to a cluster that is in one of the
-         * following states: STARTING, BOOTSTRAPPING, RUNNING, or WAITING.</p><p><h3>See
-         * Also:</h3>   <a
+         * following states: STARTING, BOOTSTRAPPING, RUNNING, or WAITING.</p> 
+         * <p>The string values passed into <code>HadoopJarStep</code> object cannot exceed
+         * a total of 10240 characters.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/AddJobFlowSteps">AWS
          * API Reference</a></p>
          *
@@ -435,8 +467,9 @@ namespace Model
          * considered complete, the main function must exit with a zero exit code and all
          * Hadoop jobs started while the step was running must have completed and run
          * successfully.</p> <p>You can only add steps to a cluster that is in one of the
-         * following states: STARTING, BOOTSTRAPPING, RUNNING, or WAITING.</p><p><h3>See
-         * Also:</h3>   <a
+         * following states: STARTING, BOOTSTRAPPING, RUNNING, or WAITING.</p> 
+         * <p>The string values passed into <code>HadoopJarStep</code> object cannot exceed
+         * a total of 10240 characters.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/AddJobFlowSteps">AWS
          * API Reference</a></p>
          *
@@ -445,9 +478,10 @@ namespace Model
         virtual void AddJobFlowStepsAsync(const Model::AddJobFlowStepsRequest& request, const AddJobFlowStepsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Adds tags to an Amazon EMR resource. Tags make it easier to associate
-         * clusters in various ways, such as grouping clusters to track your Amazon EMR
-         * resource allocation costs. For more information, see <a
+         * <p>Adds tags to an Amazon EMR resource, such as a cluster or an Amazon EMR
+         * Studio. Tags make it easier to associate resources in various ways, such as
+         * grouping clusters to track your Amazon EMR resource allocation costs. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag
          * Clusters</a>. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/AddTags">AWS
@@ -456,9 +490,10 @@ namespace Model
         virtual Model::AddTagsOutcome AddTags(const Model::AddTagsRequest& request) const;
 
         /**
-         * <p>Adds tags to an Amazon EMR resource. Tags make it easier to associate
-         * clusters in various ways, such as grouping clusters to track your Amazon EMR
-         * resource allocation costs. For more information, see <a
+         * <p>Adds tags to an Amazon EMR resource, such as a cluster or an Amazon EMR
+         * Studio. Tags make it easier to associate resources in various ways, such as
+         * grouping clusters to track your Amazon EMR resource allocation costs. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag
          * Clusters</a>. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/AddTags">AWS
@@ -469,9 +504,10 @@ namespace Model
         virtual Model::AddTagsOutcomeCallable AddTagsCallable(const Model::AddTagsRequest& request) const;
 
         /**
-         * <p>Adds tags to an Amazon EMR resource. Tags make it easier to associate
-         * clusters in various ways, such as grouping clusters to track your Amazon EMR
-         * resource allocation costs. For more information, see <a
+         * <p>Adds tags to an Amazon EMR resource, such as a cluster or an Amazon EMR
+         * Studio. Tags make it easier to associate resources in various ways, such as
+         * grouping clusters to track your Amazon EMR resource allocation costs. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag
          * Clusters</a>. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/AddTags">AWS
@@ -486,8 +522,11 @@ namespace Model
          * Amazon EMR versions 4.8.0 and later, excluding version 5.0.0. A maximum of 256
          * steps are allowed in each CancelSteps request. CancelSteps is idempotent but
          * asynchronous; it does not guarantee that a step will be canceled, even if the
-         * request is successfully submitted. You can only cancel steps that are in a
-         * <code>PENDING</code> state.</p><p><h3>See Also:</h3>   <a
+         * request is successfully submitted. When you use Amazon EMR versions 5.28.0 and
+         * later, you can cancel steps that are in a <code>PENDING</code> or
+         * <code>RUNNING</code> state. In earlier versions of Amazon EMR, you can only
+         * cancel steps that are in a <code>PENDING</code> state. </p><p><h3>See Also:</h3>
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CancelSteps">AWS
          * API Reference</a></p>
          */
@@ -498,8 +537,11 @@ namespace Model
          * Amazon EMR versions 4.8.0 and later, excluding version 5.0.0. A maximum of 256
          * steps are allowed in each CancelSteps request. CancelSteps is idempotent but
          * asynchronous; it does not guarantee that a step will be canceled, even if the
-         * request is successfully submitted. You can only cancel steps that are in a
-         * <code>PENDING</code> state.</p><p><h3>See Also:</h3>   <a
+         * request is successfully submitted. When you use Amazon EMR versions 5.28.0 and
+         * later, you can cancel steps that are in a <code>PENDING</code> or
+         * <code>RUNNING</code> state. In earlier versions of Amazon EMR, you can only
+         * cancel steps that are in a <code>PENDING</code> state. </p><p><h3>See Also:</h3>
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CancelSteps">AWS
          * API Reference</a></p>
          *
@@ -512,8 +554,11 @@ namespace Model
          * Amazon EMR versions 4.8.0 and later, excluding version 5.0.0. A maximum of 256
          * steps are allowed in each CancelSteps request. CancelSteps is idempotent but
          * asynchronous; it does not guarantee that a step will be canceled, even if the
-         * request is successfully submitted. You can only cancel steps that are in a
-         * <code>PENDING</code> state.</p><p><h3>See Also:</h3>   <a
+         * request is successfully submitted. When you use Amazon EMR versions 5.28.0 and
+         * later, you can cancel steps that are in a <code>PENDING</code> or
+         * <code>RUNNING</code> state. In earlier versions of Amazon EMR, you can only
+         * cancel steps that are in a <code>PENDING</code> state. </p><p><h3>See Also:</h3>
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CancelSteps">AWS
          * API Reference</a></p>
          *
@@ -550,18 +595,14 @@ namespace Model
         virtual void CreateSecurityConfigurationAsync(const Model::CreateSecurityConfigurationRequest& request, const CreateSecurityConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Creates a new Amazon EMR
-         * Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates a new Amazon EMR Studio.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CreateStudio">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateStudioOutcome CreateStudio(const Model::CreateStudioRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Creates a new Amazon EMR
-         * Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates a new Amazon EMR Studio.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CreateStudio">AWS
          * API Reference</a></p>
          *
@@ -570,9 +611,7 @@ namespace Model
         virtual Model::CreateStudioOutcomeCallable CreateStudioCallable(const Model::CreateStudioRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Creates a new Amazon EMR
-         * Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates a new Amazon EMR Studio.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CreateStudio">AWS
          * API Reference</a></p>
          *
@@ -581,20 +620,28 @@ namespace Model
         virtual void CreateStudioAsync(const Model::CreateStudioRequest& request, const CreateStudioResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Maps a user or group to the Amazon EMR
-         * Studio specified by <code>StudioId</code>, and applies a session policy to
-         * refine Studio permissions for that user or group.</p><p><h3>See Also:</h3>   <a
+         * <p>Maps a user or group to the Amazon EMR Studio specified by
+         * <code>StudioId</code>, and applies a session policy to refine Studio permissions
+         * for that user or group. Use <code>CreateStudioSessionMapping</code> to assign
+         * users to a Studio when you use Amazon Web Services SSO authentication. For
+         * instructions on how to assign users to a Studio when you use IAM authentication,
+         * see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-manage-users.html#emr-studio-assign-users-groups">Assign
+         * a user or group to your EMR Studio</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CreateStudioSessionMapping">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateStudioSessionMappingOutcome CreateStudioSessionMapping(const Model::CreateStudioSessionMappingRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Maps a user or group to the Amazon EMR
-         * Studio specified by <code>StudioId</code>, and applies a session policy to
-         * refine Studio permissions for that user or group.</p><p><h3>See Also:</h3>   <a
+         * <p>Maps a user or group to the Amazon EMR Studio specified by
+         * <code>StudioId</code>, and applies a session policy to refine Studio permissions
+         * for that user or group. Use <code>CreateStudioSessionMapping</code> to assign
+         * users to a Studio when you use Amazon Web Services SSO authentication. For
+         * instructions on how to assign users to a Studio when you use IAM authentication,
+         * see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-manage-users.html#emr-studio-assign-users-groups">Assign
+         * a user or group to your EMR Studio</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CreateStudioSessionMapping">AWS
          * API Reference</a></p>
          *
@@ -603,10 +650,14 @@ namespace Model
         virtual Model::CreateStudioSessionMappingOutcomeCallable CreateStudioSessionMappingCallable(const Model::CreateStudioSessionMappingRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Maps a user or group to the Amazon EMR
-         * Studio specified by <code>StudioId</code>, and applies a session policy to
-         * refine Studio permissions for that user or group.</p><p><h3>See Also:</h3>   <a
+         * <p>Maps a user or group to the Amazon EMR Studio specified by
+         * <code>StudioId</code>, and applies a session policy to refine Studio permissions
+         * for that user or group. Use <code>CreateStudioSessionMapping</code> to assign
+         * users to a Studio when you use Amazon Web Services SSO authentication. For
+         * instructions on how to assign users to a Studio when you use IAM authentication,
+         * see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-manage-users.html#emr-studio-assign-users-groups">Assign
+         * a user or group to your EMR Studio</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/CreateStudioSessionMapping">AWS
          * API Reference</a></p>
          *
@@ -640,18 +691,16 @@ namespace Model
         virtual void DeleteSecurityConfigurationAsync(const Model::DeleteSecurityConfigurationRequest& request, const DeleteSecurityConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Removes an Amazon EMR Studio from the
-         * Studio metadata store.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes an Amazon EMR Studio from the Studio metadata store.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DeleteStudio">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteStudioOutcome DeleteStudio(const Model::DeleteStudioRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Removes an Amazon EMR Studio from the
-         * Studio metadata store.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes an Amazon EMR Studio from the Studio metadata store.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DeleteStudio">AWS
          * API Reference</a></p>
          *
@@ -660,9 +709,8 @@ namespace Model
         virtual Model::DeleteStudioOutcomeCallable DeleteStudioCallable(const Model::DeleteStudioRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Removes an Amazon EMR Studio from the
-         * Studio metadata store.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes an Amazon EMR Studio from the Studio metadata store.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DeleteStudio">AWS
          * API Reference</a></p>
          *
@@ -671,18 +719,16 @@ namespace Model
         virtual void DeleteStudioAsync(const Model::DeleteStudioRequest& request, const DeleteStudioResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Removes a user or group from an Amazon EMR
-         * Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes a user or group from an Amazon EMR Studio.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DeleteStudioSessionMapping">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteStudioSessionMappingOutcome DeleteStudioSessionMapping(const Model::DeleteStudioSessionMappingRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Removes a user or group from an Amazon EMR
-         * Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes a user or group from an Amazon EMR Studio.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DeleteStudioSessionMapping">AWS
          * API Reference</a></p>
          *
@@ -691,9 +737,8 @@ namespace Model
         virtual Model::DeleteStudioSessionMappingOutcomeCallable DeleteStudioSessionMappingCallable(const Model::DeleteStudioSessionMappingRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Removes a user or group from an Amazon EMR
-         * Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes a user or group from an Amazon EMR Studio.</p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DeleteStudioSessionMapping">AWS
          * API Reference</a></p>
          *
@@ -703,7 +748,7 @@ namespace Model
 
         /**
          * <p>Provides cluster-level details including status, hardware and software
-         * configuration, VPC settings, and so on. </p><p><h3>See Also:</h3>   <a
+         * configuration, VPC settings, and so on.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeCluster">AWS
          * API Reference</a></p>
          */
@@ -711,7 +756,7 @@ namespace Model
 
         /**
          * <p>Provides cluster-level details including status, hardware and software
-         * configuration, VPC settings, and so on. </p><p><h3>See Also:</h3>   <a
+         * configuration, VPC settings, and so on.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeCluster">AWS
          * API Reference</a></p>
          *
@@ -721,7 +766,7 @@ namespace Model
 
         /**
          * <p>Provides cluster-level details including status, hardware and software
-         * configuration, VPC settings, and so on. </p><p><h3>See Also:</h3>   <a
+         * configuration, VPC settings, and so on.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeCluster">AWS
          * API Reference</a></p>
          *
@@ -753,6 +798,40 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void DescribeNotebookExecutionAsync(const Model::DescribeNotebookExecutionRequest& request, const DescribeNotebookExecutionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Provides EMR release label details, such as releases available the region
+         * where the API request is run, and the available applications for a specific EMR
+         * release label. Can also list EMR release versions that support a specified
+         * version of Spark.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeReleaseLabel">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeReleaseLabelOutcome DescribeReleaseLabel(const Model::DescribeReleaseLabelRequest& request) const;
+
+        /**
+         * <p>Provides EMR release label details, such as releases available the region
+         * where the API request is run, and the available applications for a specific EMR
+         * release label. Can also list EMR release versions that support a specified
+         * version of Spark.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeReleaseLabel">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeReleaseLabelOutcomeCallable DescribeReleaseLabelCallable(const Model::DescribeReleaseLabelRequest& request) const;
+
+        /**
+         * <p>Provides EMR release label details, such as releases available the region
+         * where the API request is run, and the available applications for a specific EMR
+         * release label. Can also list EMR release versions that support a specified
+         * version of Spark.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeReleaseLabel">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeReleaseLabelAsync(const Model::DescribeReleaseLabelRequest& request, const DescribeReleaseLabelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Provides the details of a security configuration by returning the
@@ -808,20 +887,16 @@ namespace Model
         virtual void DescribeStepAsync(const Model::DescribeStepRequest& request, const DescribeStepResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Returns details for the specified Amazon
-         * EMR Studio including ID, Name, VPC, Studio access URL, and so on.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Returns details for the specified Amazon EMR Studio including ID, Name, VPC,
+         * Studio access URL, and so on.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeStudio">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeStudioOutcome DescribeStudio(const Model::DescribeStudioRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Returns details for the specified Amazon
-         * EMR Studio including ID, Name, VPC, Studio access URL, and so on.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Returns details for the specified Amazon EMR Studio including ID, Name, VPC,
+         * Studio access URL, and so on.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeStudio">AWS
          * API Reference</a></p>
          *
@@ -830,10 +905,8 @@ namespace Model
         virtual Model::DescribeStudioOutcomeCallable DescribeStudioCallable(const Model::DescribeStudioRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Returns details for the specified Amazon
-         * EMR Studio including ID, Name, VPC, Studio access URL, and so on.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Returns details for the specified Amazon EMR Studio including ID, Name, VPC,
+         * Studio access URL, and so on.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/DescribeStudio">AWS
          * API Reference</a></p>
          *
@@ -842,8 +915,36 @@ namespace Model
         virtual void DescribeStudioAsync(const Model::DescribeStudioRequest& request, const DescribeStudioResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Returns the Amazon EMR block public access configuration for your AWS account
-         * in the current Region. For more information see <a
+         * <p>Returns the auto-termination policy for an Amazon EMR cluster.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetAutoTerminationPolicy">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetAutoTerminationPolicyOutcome GetAutoTerminationPolicy(const Model::GetAutoTerminationPolicyRequest& request) const;
+
+        /**
+         * <p>Returns the auto-termination policy for an Amazon EMR cluster.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetAutoTerminationPolicy">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetAutoTerminationPolicyOutcomeCallable GetAutoTerminationPolicyCallable(const Model::GetAutoTerminationPolicyRequest& request) const;
+
+        /**
+         * <p>Returns the auto-termination policy for an Amazon EMR cluster.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetAutoTerminationPolicy">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetAutoTerminationPolicyAsync(const Model::GetAutoTerminationPolicyRequest& request, const GetAutoTerminationPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Returns the Amazon EMR block public access configuration for your Amazon Web
+         * Services account in the current Region. For more information see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure
          * Block Public Access for Amazon EMR</a> in the <i>Amazon EMR Management
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -853,8 +954,8 @@ namespace Model
         virtual Model::GetBlockPublicAccessConfigurationOutcome GetBlockPublicAccessConfiguration(const Model::GetBlockPublicAccessConfigurationRequest& request) const;
 
         /**
-         * <p>Returns the Amazon EMR block public access configuration for your AWS account
-         * in the current Region. For more information see <a
+         * <p>Returns the Amazon EMR block public access configuration for your Amazon Web
+         * Services account in the current Region. For more information see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure
          * Block Public Access for Amazon EMR</a> in the <i>Amazon EMR Management
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -866,8 +967,8 @@ namespace Model
         virtual Model::GetBlockPublicAccessConfigurationOutcomeCallable GetBlockPublicAccessConfigurationCallable(const Model::GetBlockPublicAccessConfigurationRequest& request) const;
 
         /**
-         * <p>Returns the Amazon EMR block public access configuration for your AWS account
-         * in the current Region. For more information see <a
+         * <p>Returns the Amazon EMR block public access configuration for your Amazon Web
+         * Services account in the current Region. For more information see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure
          * Block Public Access for Amazon EMR</a> in the <i>Amazon EMR Management
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -907,18 +1008,16 @@ namespace Model
         virtual void GetManagedScalingPolicyAsync(const Model::GetManagedScalingPolicyRequest& request, const GetManagedScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Fetches mapping details for the specified
-         * Amazon EMR Studio and identity (user or group).</p><p><h3>See Also:</h3>   <a
+         * <p>Fetches mapping details for the specified Amazon EMR Studio and identity
+         * (user or group).</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetStudioSessionMapping">AWS
          * API Reference</a></p>
          */
         virtual Model::GetStudioSessionMappingOutcome GetStudioSessionMapping(const Model::GetStudioSessionMappingRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Fetches mapping details for the specified
-         * Amazon EMR Studio and identity (user or group).</p><p><h3>See Also:</h3>   <a
+         * <p>Fetches mapping details for the specified Amazon EMR Studio and identity
+         * (user or group).</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetStudioSessionMapping">AWS
          * API Reference</a></p>
          *
@@ -927,9 +1026,8 @@ namespace Model
         virtual Model::GetStudioSessionMappingOutcomeCallable GetStudioSessionMappingCallable(const Model::GetStudioSessionMappingRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Fetches mapping details for the specified
-         * Amazon EMR Studio and identity (user or group).</p><p><h3>See Also:</h3>   <a
+         * <p>Fetches mapping details for the specified Amazon EMR Studio and identity
+         * (user or group).</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetStudioSessionMapping">AWS
          * API Reference</a></p>
          *
@@ -966,22 +1064,24 @@ namespace Model
         virtual void ListBootstrapActionsAsync(const Model::ListBootstrapActionsRequest& request, const ListBootstrapActionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Provides the status of all clusters visible to this AWS account. Allows you
-         * to filter the list of clusters based on certain criteria; for example, filtering
-         * by cluster creation date and time or by status. This call returns a maximum of
-         * 50 clusters per call, but returns a marker to track the paging of the cluster
-         * list across multiple ListClusters calls.</p><p><h3>See Also:</h3>   <a
+         * <p>Provides the status of all clusters visible to this Amazon Web Services
+         * account. Allows you to filter the list of clusters based on certain criteria;
+         * for example, filtering by cluster creation date and time or by status. This call
+         * returns a maximum of 50 clusters in unsorted order per call, but returns a
+         * marker to track the paging of the cluster list across multiple ListClusters
+         * calls.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListClusters">AWS
          * API Reference</a></p>
          */
         virtual Model::ListClustersOutcome ListClusters(const Model::ListClustersRequest& request) const;
 
         /**
-         * <p>Provides the status of all clusters visible to this AWS account. Allows you
-         * to filter the list of clusters based on certain criteria; for example, filtering
-         * by cluster creation date and time or by status. This call returns a maximum of
-         * 50 clusters per call, but returns a marker to track the paging of the cluster
-         * list across multiple ListClusters calls.</p><p><h3>See Also:</h3>   <a
+         * <p>Provides the status of all clusters visible to this Amazon Web Services
+         * account. Allows you to filter the list of clusters based on certain criteria;
+         * for example, filtering by cluster creation date and time or by status. This call
+         * returns a maximum of 50 clusters in unsorted order per call, but returns a
+         * marker to track the paging of the cluster list across multiple ListClusters
+         * calls.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListClusters">AWS
          * API Reference</a></p>
          *
@@ -990,11 +1090,12 @@ namespace Model
         virtual Model::ListClustersOutcomeCallable ListClustersCallable(const Model::ListClustersRequest& request) const;
 
         /**
-         * <p>Provides the status of all clusters visible to this AWS account. Allows you
-         * to filter the list of clusters based on certain criteria; for example, filtering
-         * by cluster creation date and time or by status. This call returns a maximum of
-         * 50 clusters per call, but returns a marker to track the paging of the cluster
-         * list across multiple ListClusters calls.</p><p><h3>See Also:</h3>   <a
+         * <p>Provides the status of all clusters visible to this Amazon Web Services
+         * account. Allows you to filter the list of clusters based on certain criteria;
+         * for example, filtering by cluster creation date and time or by status. This call
+         * returns a maximum of 50 clusters in unsorted order per call, but returns a
+         * marker to track the paging of the cluster list across multiple ListClusters
+         * calls.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListClusters">AWS
          * API Reference</a></p>
          *
@@ -1136,6 +1237,34 @@ namespace Model
         virtual void ListNotebookExecutionsAsync(const Model::ListNotebookExecutionsRequest& request, const ListNotebookExecutionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Retrieves release labels of EMR services in the region where the API is
+         * called.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListReleaseLabels">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListReleaseLabelsOutcome ListReleaseLabels(const Model::ListReleaseLabelsRequest& request) const;
+
+        /**
+         * <p>Retrieves release labels of EMR services in the region where the API is
+         * called.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListReleaseLabels">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListReleaseLabelsOutcomeCallable ListReleaseLabelsCallable(const Model::ListReleaseLabelsRequest& request) const;
+
+        /**
+         * <p>Retrieves release labels of EMR services in the region where the API is
+         * called.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListReleaseLabels">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListReleaseLabelsAsync(const Model::ListReleaseLabelsRequest& request, const ListReleaseLabelsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Lists all the security configurations visible to this account, providing
          * their creation dates and times, and their names. This call returns a maximum of
          * 50 clusters per call, but returns a marker to track the paging of the cluster
@@ -1174,8 +1303,11 @@ namespace Model
 
         /**
          * <p>Provides a list of steps for the cluster in reverse order unless you specify
-         * <code>stepIds</code> with the request of filter by <code>StepStates</code>. You
-         * can specify a maximum of ten <code>stepIDs</code>.</p><p><h3>See Also:</h3>   <a
+         * <code>stepIds</code> with the request or filter by <code>StepStates</code>. You
+         * can specify a maximum of 10 <code>stepIDs</code>. The CLI automatically
+         * paginates results to return a list greater than 50 steps. To return more than 50
+         * steps using the CLI, specify a <code>Marker</code>, which is a pagination token
+         * that indicates the next set of steps to retrieve.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListSteps">AWS
          * API Reference</a></p>
          */
@@ -1183,8 +1315,11 @@ namespace Model
 
         /**
          * <p>Provides a list of steps for the cluster in reverse order unless you specify
-         * <code>stepIds</code> with the request of filter by <code>StepStates</code>. You
-         * can specify a maximum of ten <code>stepIDs</code>.</p><p><h3>See Also:</h3>   <a
+         * <code>stepIds</code> with the request or filter by <code>StepStates</code>. You
+         * can specify a maximum of 10 <code>stepIDs</code>. The CLI automatically
+         * paginates results to return a list greater than 50 steps. To return more than 50
+         * steps using the CLI, specify a <code>Marker</code>, which is a pagination token
+         * that indicates the next set of steps to retrieve.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListSteps">AWS
          * API Reference</a></p>
          *
@@ -1194,8 +1329,11 @@ namespace Model
 
         /**
          * <p>Provides a list of steps for the cluster in reverse order unless you specify
-         * <code>stepIds</code> with the request of filter by <code>StepStates</code>. You
-         * can specify a maximum of ten <code>stepIDs</code>.</p><p><h3>See Also:</h3>   <a
+         * <code>stepIds</code> with the request or filter by <code>StepStates</code>. You
+         * can specify a maximum of 10 <code>stepIDs</code>. The CLI automatically
+         * paginates results to return a list greater than 50 steps. To return more than 50
+         * steps using the CLI, specify a <code>Marker</code>, which is a pagination token
+         * that indicates the next set of steps to retrieve.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListSteps">AWS
          * API Reference</a></p>
          *
@@ -1204,20 +1342,16 @@ namespace Model
         virtual void ListStepsAsync(const Model::ListStepsRequest& request, const ListStepsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Returns a list of all user or group
-         * session mappings for the EMR Studio specified by
-         * <code>StudioId</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns a list of all user or group session mappings for the Amazon EMR
+         * Studio specified by <code>StudioId</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListStudioSessionMappings">AWS
          * API Reference</a></p>
          */
         virtual Model::ListStudioSessionMappingsOutcome ListStudioSessionMappings(const Model::ListStudioSessionMappingsRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Returns a list of all user or group
-         * session mappings for the EMR Studio specified by
-         * <code>StudioId</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns a list of all user or group session mappings for the Amazon EMR
+         * Studio specified by <code>StudioId</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListStudioSessionMappings">AWS
          * API Reference</a></p>
          *
@@ -1226,10 +1360,8 @@ namespace Model
         virtual Model::ListStudioSessionMappingsOutcomeCallable ListStudioSessionMappingsCallable(const Model::ListStudioSessionMappingsRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Returns a list of all user or group
-         * session mappings for the EMR Studio specified by
-         * <code>StudioId</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns a list of all user or group session mappings for the Amazon EMR
+         * Studio specified by <code>StudioId</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListStudioSessionMappings">AWS
          * API Reference</a></p>
          *
@@ -1238,20 +1370,18 @@ namespace Model
         virtual void ListStudioSessionMappingsAsync(const Model::ListStudioSessionMappingsRequest& request, const ListStudioSessionMappingsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Returns a list of all Amazon EMR Studios
-         * associated with the AWS account. The list includes details such as ID, Studio
-         * Access URL, and creation time for each Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns a list of all Amazon EMR Studios associated with the Amazon Web
+         * Services account. The list includes details such as ID, Studio Access URL, and
+         * creation time for each Studio.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListStudios">AWS
          * API Reference</a></p>
          */
         virtual Model::ListStudiosOutcome ListStudios(const Model::ListStudiosRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Returns a list of all Amazon EMR Studios
-         * associated with the AWS account. The list includes details such as ID, Studio
-         * Access URL, and creation time for each Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns a list of all Amazon EMR Studios associated with the Amazon Web
+         * Services account. The list includes details such as ID, Studio Access URL, and
+         * creation time for each Studio.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListStudios">AWS
          * API Reference</a></p>
          *
@@ -1260,10 +1390,9 @@ namespace Model
         virtual Model::ListStudiosOutcomeCallable ListStudiosCallable(const Model::ListStudiosRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Returns a list of all Amazon EMR Studios
-         * associated with the AWS account. The list includes details such as ID, Studio
-         * Access URL, and creation time for each Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns a list of all Amazon EMR Studios associated with the Amazon Web
+         * Services account. The list includes details such as ID, Studio Access URL, and
+         * creation time for each Studio.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/ListStudios">AWS
          * API Reference</a></p>
          *
@@ -1405,8 +1534,57 @@ namespace Model
         virtual void PutAutoScalingPolicyAsync(const Model::PutAutoScalingPolicyRequest& request, const PutAutoScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         *  <p>Auto-termination is supported in Amazon EMR versions 5.30.0 and 6.1.0
+         * and later. For more information, see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-auto-termination-policy.html">Using
+         * an auto-termination policy</a>.</p>  <p>Creates or updates an
+         * auto-termination policy for an Amazon EMR cluster. An auto-termination policy
+         * defines the amount of idle time in seconds after which a cluster automatically
+         * terminates. For alternative cluster termination options, see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control
+         * cluster termination</a>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/PutAutoTerminationPolicy">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::PutAutoTerminationPolicyOutcome PutAutoTerminationPolicy(const Model::PutAutoTerminationPolicyRequest& request) const;
+
+        /**
+         *  <p>Auto-termination is supported in Amazon EMR versions 5.30.0 and 6.1.0
+         * and later. For more information, see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-auto-termination-policy.html">Using
+         * an auto-termination policy</a>.</p>  <p>Creates or updates an
+         * auto-termination policy for an Amazon EMR cluster. An auto-termination policy
+         * defines the amount of idle time in seconds after which a cluster automatically
+         * terminates. For alternative cluster termination options, see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control
+         * cluster termination</a>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/PutAutoTerminationPolicy">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::PutAutoTerminationPolicyOutcomeCallable PutAutoTerminationPolicyCallable(const Model::PutAutoTerminationPolicyRequest& request) const;
+
+        /**
+         *  <p>Auto-termination is supported in Amazon EMR versions 5.30.0 and 6.1.0
+         * and later. For more information, see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-auto-termination-policy.html">Using
+         * an auto-termination policy</a>.</p>  <p>Creates or updates an
+         * auto-termination policy for an Amazon EMR cluster. An auto-termination policy
+         * defines the amount of idle time in seconds after which a cluster automatically
+         * terminates. For alternative cluster termination options, see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control
+         * cluster termination</a>.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/PutAutoTerminationPolicy">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void PutAutoTerminationPolicyAsync(const Model::PutAutoTerminationPolicyRequest& request, const PutAutoTerminationPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Creates or updates an Amazon EMR block public access configuration for your
-         * AWS account in the current Region. For more information see <a
+         * Amazon Web Services account in the current Region. For more information see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure
          * Block Public Access for Amazon EMR</a> in the <i>Amazon EMR Management
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -1417,7 +1595,7 @@ namespace Model
 
         /**
          * <p>Creates or updates an Amazon EMR block public access configuration for your
-         * AWS account in the current Region. For more information see <a
+         * Amazon Web Services account in the current Region. For more information see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure
          * Block Public Access for Amazon EMR</a> in the <i>Amazon EMR Management
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -1430,7 +1608,7 @@ namespace Model
 
         /**
          * <p>Creates or updates an Amazon EMR block public access configuration for your
-         * AWS account in the current Region. For more information see <a
+         * Amazon Web Services account in the current Region. For more information see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure
          * Block Public Access for Amazon EMR</a> in the <i>Amazon EMR Management
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -1507,6 +1685,34 @@ namespace Model
         virtual void RemoveAutoScalingPolicyAsync(const Model::RemoveAutoScalingPolicyRequest& request, const RemoveAutoScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Removes an auto-termination policy from an Amazon EMR cluster.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveAutoTerminationPolicy">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::RemoveAutoTerminationPolicyOutcome RemoveAutoTerminationPolicy(const Model::RemoveAutoTerminationPolicyRequest& request) const;
+
+        /**
+         * <p>Removes an auto-termination policy from an Amazon EMR cluster.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveAutoTerminationPolicy">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::RemoveAutoTerminationPolicyOutcomeCallable RemoveAutoTerminationPolicyCallable(const Model::RemoveAutoTerminationPolicyRequest& request) const;
+
+        /**
+         * <p>Removes an auto-termination policy from an Amazon EMR cluster.</p><p><h3>See
+         * Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveAutoTerminationPolicy">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void RemoveAutoTerminationPolicyAsync(const Model::RemoveAutoTerminationPolicyRequest& request, const RemoveAutoTerminationPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p> Removes a managed scaling policy from a specified EMR cluster.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveManagedScalingPolicy">AWS
@@ -1535,9 +1741,10 @@ namespace Model
         virtual void RemoveManagedScalingPolicyAsync(const Model::RemoveManagedScalingPolicyRequest& request, const RemoveManagedScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Removes tags from an Amazon EMR resource. Tags make it easier to associate
-         * clusters in various ways, such as grouping clusters to track your Amazon EMR
-         * resource allocation costs. For more information, see <a
+         * <p>Removes tags from an Amazon EMR resource, such as a cluster or Amazon EMR
+         * Studio. Tags make it easier to associate resources in various ways, such as
+         * grouping clusters to track your Amazon EMR resource allocation costs. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag
          * Clusters</a>. </p> <p>The following example removes the stack tag with value
          * Prod from a cluster:</p><p><h3>See Also:</h3>   <a
@@ -1547,9 +1754,10 @@ namespace Model
         virtual Model::RemoveTagsOutcome RemoveTags(const Model::RemoveTagsRequest& request) const;
 
         /**
-         * <p>Removes tags from an Amazon EMR resource. Tags make it easier to associate
-         * clusters in various ways, such as grouping clusters to track your Amazon EMR
-         * resource allocation costs. For more information, see <a
+         * <p>Removes tags from an Amazon EMR resource, such as a cluster or Amazon EMR
+         * Studio. Tags make it easier to associate resources in various ways, such as
+         * grouping clusters to track your Amazon EMR resource allocation costs. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag
          * Clusters</a>. </p> <p>The following example removes the stack tag with value
          * Prod from a cluster:</p><p><h3>See Also:</h3>   <a
@@ -1561,9 +1769,10 @@ namespace Model
         virtual Model::RemoveTagsOutcomeCallable RemoveTagsCallable(const Model::RemoveTagsRequest& request) const;
 
         /**
-         * <p>Removes tags from an Amazon EMR resource. Tags make it easier to associate
-         * clusters in various ways, such as grouping clusters to track your Amazon EMR
-         * resource allocation costs. For more information, see <a
+         * <p>Removes tags from an Amazon EMR resource, such as a cluster or Amazon EMR
+         * Studio. Tags make it easier to associate resources in various ways, such as
+         * grouping clusters to track your Amazon EMR resource allocation costs. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag
          * Clusters</a>. </p> <p>The following example removes the stack tag with value
          * Prod from a cluster:</p><p><h3>See Also:</h3>   <a
@@ -1739,32 +1948,46 @@ namespace Model
         virtual void SetTerminationProtectionAsync(const Model::SetTerminationProtectionRequest& request, const SetTerminationProtectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Sets the <a>Cluster$VisibleToAllUsers</a> value, which determines whether the
-         * cluster is visible to all IAM users of the AWS account associated with the
-         * cluster. Only the IAM user who created the cluster or the AWS account root user
-         * can call this action. The default value, <code>true</code>, indicates that all
-         * IAM users in the AWS account can perform cluster actions if they have the proper
-         * IAM policy permissions. If set to <code>false</code>, only the IAM user that
-         * created the cluster can perform actions. This action works on running clusters.
-         * You can override the default <code>true</code> setting when you create a cluster
-         * by using the <code>VisibleToAllUsers</code> parameter with
-         * <code>RunJobFlow</code>.</p><p><h3>See Also:</h3>   <a
+         *  <p>The SetVisibleToAllUsers parameter is no longer supported. Your
+         * cluster may be visible to all users in your account. To restrict cluster access
+         * using an IAM policy, see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html">Identity
+         * and Access Management for EMR</a>. </p>  <p>Sets the
+         * <a>Cluster$VisibleToAllUsers</a> value for an EMR cluster. When
+         * <code>true</code>, IAM principals in the Amazon Web Services account can perform
+         * EMR cluster actions that their IAM policies allow. When <code>false</code>, only
+         * the IAM principal that created the cluster and the Amazon Web Services account
+         * root user can perform EMR actions on the cluster, regardless of IAM permissions
+         * policies attached to other IAM principals.</p> <p>This action works on running
+         * clusters. When you create a cluster, use the
+         * <a>RunJobFlowInput$VisibleToAllUsers</a> parameter.</p> <p>For more information,
+         * see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users">Understanding
+         * the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/SetVisibleToAllUsers">AWS
          * API Reference</a></p>
          */
         virtual Model::SetVisibleToAllUsersOutcome SetVisibleToAllUsers(const Model::SetVisibleToAllUsersRequest& request) const;
 
         /**
-         * <p>Sets the <a>Cluster$VisibleToAllUsers</a> value, which determines whether the
-         * cluster is visible to all IAM users of the AWS account associated with the
-         * cluster. Only the IAM user who created the cluster or the AWS account root user
-         * can call this action. The default value, <code>true</code>, indicates that all
-         * IAM users in the AWS account can perform cluster actions if they have the proper
-         * IAM policy permissions. If set to <code>false</code>, only the IAM user that
-         * created the cluster can perform actions. This action works on running clusters.
-         * You can override the default <code>true</code> setting when you create a cluster
-         * by using the <code>VisibleToAllUsers</code> parameter with
-         * <code>RunJobFlow</code>.</p><p><h3>See Also:</h3>   <a
+         *  <p>The SetVisibleToAllUsers parameter is no longer supported. Your
+         * cluster may be visible to all users in your account. To restrict cluster access
+         * using an IAM policy, see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html">Identity
+         * and Access Management for EMR</a>. </p>  <p>Sets the
+         * <a>Cluster$VisibleToAllUsers</a> value for an EMR cluster. When
+         * <code>true</code>, IAM principals in the Amazon Web Services account can perform
+         * EMR cluster actions that their IAM policies allow. When <code>false</code>, only
+         * the IAM principal that created the cluster and the Amazon Web Services account
+         * root user can perform EMR actions on the cluster, regardless of IAM permissions
+         * policies attached to other IAM principals.</p> <p>This action works on running
+         * clusters. When you create a cluster, use the
+         * <a>RunJobFlowInput$VisibleToAllUsers</a> parameter.</p> <p>For more information,
+         * see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users">Understanding
+         * the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/SetVisibleToAllUsers">AWS
          * API Reference</a></p>
          *
@@ -1773,16 +1996,23 @@ namespace Model
         virtual Model::SetVisibleToAllUsersOutcomeCallable SetVisibleToAllUsersCallable(const Model::SetVisibleToAllUsersRequest& request) const;
 
         /**
-         * <p>Sets the <a>Cluster$VisibleToAllUsers</a> value, which determines whether the
-         * cluster is visible to all IAM users of the AWS account associated with the
-         * cluster. Only the IAM user who created the cluster or the AWS account root user
-         * can call this action. The default value, <code>true</code>, indicates that all
-         * IAM users in the AWS account can perform cluster actions if they have the proper
-         * IAM policy permissions. If set to <code>false</code>, only the IAM user that
-         * created the cluster can perform actions. This action works on running clusters.
-         * You can override the default <code>true</code> setting when you create a cluster
-         * by using the <code>VisibleToAllUsers</code> parameter with
-         * <code>RunJobFlow</code>.</p><p><h3>See Also:</h3>   <a
+         *  <p>The SetVisibleToAllUsers parameter is no longer supported. Your
+         * cluster may be visible to all users in your account. To restrict cluster access
+         * using an IAM policy, see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html">Identity
+         * and Access Management for EMR</a>. </p>  <p>Sets the
+         * <a>Cluster$VisibleToAllUsers</a> value for an EMR cluster. When
+         * <code>true</code>, IAM principals in the Amazon Web Services account can perform
+         * EMR cluster actions that their IAM policies allow. When <code>false</code>, only
+         * the IAM principal that created the cluster and the Amazon Web Services account
+         * root user can perform EMR actions on the cluster, regardless of IAM permissions
+         * policies attached to other IAM principals.</p> <p>This action works on running
+         * clusters. When you create a cluster, use the
+         * <a>RunJobFlowInput$VisibleToAllUsers</a> parameter.</p> <p>For more information,
+         * see <a
+         * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users">Understanding
+         * the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/SetVisibleToAllUsers">AWS
          * API Reference</a></p>
          *
@@ -1890,18 +2120,44 @@ namespace Model
         virtual void TerminateJobFlowsAsync(const Model::TerminateJobFlowsRequest& request, const TerminateJobFlowsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Updates the session policy attached to the
-         * user or group for the specified Amazon EMR Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Updates an Amazon EMR Studio configuration, including attributes such as
+         * name, description, and subnets.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/UpdateStudio">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UpdateStudioOutcome UpdateStudio(const Model::UpdateStudioRequest& request) const;
+
+        /**
+         * <p>Updates an Amazon EMR Studio configuration, including attributes such as
+         * name, description, and subnets.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/UpdateStudio">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::UpdateStudioOutcomeCallable UpdateStudioCallable(const Model::UpdateStudioRequest& request) const;
+
+        /**
+         * <p>Updates an Amazon EMR Studio configuration, including attributes such as
+         * name, description, and subnets.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/UpdateStudio">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void UpdateStudioAsync(const Model::UpdateStudioRequest& request, const UpdateStudioResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Updates the session policy attached to the user or group for the specified
+         * Amazon EMR Studio.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/UpdateStudioSessionMapping">AWS
          * API Reference</a></p>
          */
         virtual Model::UpdateStudioSessionMappingOutcome UpdateStudioSessionMapping(const Model::UpdateStudioSessionMappingRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Updates the session policy attached to the
-         * user or group for the specified Amazon EMR Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Updates the session policy attached to the user or group for the specified
+         * Amazon EMR Studio.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/UpdateStudioSessionMapping">AWS
          * API Reference</a></p>
          *
@@ -1910,9 +2166,8 @@ namespace Model
         virtual Model::UpdateStudioSessionMappingOutcomeCallable UpdateStudioSessionMappingCallable(const Model::UpdateStudioSessionMappingRequest& request) const;
 
         /**
-         *  <p>The Amazon EMR Studio APIs are in preview release for Amazon EMR and
-         * are subject to change.</p>  <p>Updates the session policy attached to the
-         * user or group for the specified Amazon EMR Studio.</p><p><h3>See Also:</h3>   <a
+         * <p>Updates the session policy attached to the user or group for the specified
+         * Amazon EMR Studio.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/UpdateStudioSessionMapping">AWS
          * API Reference</a></p>
          *
@@ -1937,9 +2192,11 @@ namespace Model
         void DeleteStudioSessionMappingAsyncHelper(const Model::DeleteStudioSessionMappingRequest& request, const DeleteStudioSessionMappingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeClusterAsyncHelper(const Model::DescribeClusterRequest& request, const DescribeClusterResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeNotebookExecutionAsyncHelper(const Model::DescribeNotebookExecutionRequest& request, const DescribeNotebookExecutionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeReleaseLabelAsyncHelper(const Model::DescribeReleaseLabelRequest& request, const DescribeReleaseLabelResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeSecurityConfigurationAsyncHelper(const Model::DescribeSecurityConfigurationRequest& request, const DescribeSecurityConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeStepAsyncHelper(const Model::DescribeStepRequest& request, const DescribeStepResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeStudioAsyncHelper(const Model::DescribeStudioRequest& request, const DescribeStudioResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetAutoTerminationPolicyAsyncHelper(const Model::GetAutoTerminationPolicyRequest& request, const GetAutoTerminationPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetBlockPublicAccessConfigurationAsyncHelper(const Model::GetBlockPublicAccessConfigurationRequest& request, const GetBlockPublicAccessConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetManagedScalingPolicyAsyncHelper(const Model::GetManagedScalingPolicyRequest& request, const GetManagedScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetStudioSessionMappingAsyncHelper(const Model::GetStudioSessionMappingRequest& request, const GetStudioSessionMappingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -1949,6 +2206,7 @@ namespace Model
         void ListInstanceGroupsAsyncHelper(const Model::ListInstanceGroupsRequest& request, const ListInstanceGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListInstancesAsyncHelper(const Model::ListInstancesRequest& request, const ListInstancesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListNotebookExecutionsAsyncHelper(const Model::ListNotebookExecutionsRequest& request, const ListNotebookExecutionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListReleaseLabelsAsyncHelper(const Model::ListReleaseLabelsRequest& request, const ListReleaseLabelsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListSecurityConfigurationsAsyncHelper(const Model::ListSecurityConfigurationsRequest& request, const ListSecurityConfigurationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListStepsAsyncHelper(const Model::ListStepsRequest& request, const ListStepsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListStudioSessionMappingsAsyncHelper(const Model::ListStudioSessionMappingsRequest& request, const ListStudioSessionMappingsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -1957,9 +2215,11 @@ namespace Model
         void ModifyInstanceFleetAsyncHelper(const Model::ModifyInstanceFleetRequest& request, const ModifyInstanceFleetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ModifyInstanceGroupsAsyncHelper(const Model::ModifyInstanceGroupsRequest& request, const ModifyInstanceGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutAutoScalingPolicyAsyncHelper(const Model::PutAutoScalingPolicyRequest& request, const PutAutoScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void PutAutoTerminationPolicyAsyncHelper(const Model::PutAutoTerminationPolicyRequest& request, const PutAutoTerminationPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutBlockPublicAccessConfigurationAsyncHelper(const Model::PutBlockPublicAccessConfigurationRequest& request, const PutBlockPublicAccessConfigurationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PutManagedScalingPolicyAsyncHelper(const Model::PutManagedScalingPolicyRequest& request, const PutManagedScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RemoveAutoScalingPolicyAsyncHelper(const Model::RemoveAutoScalingPolicyRequest& request, const RemoveAutoScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void RemoveAutoTerminationPolicyAsyncHelper(const Model::RemoveAutoTerminationPolicyRequest& request, const RemoveAutoTerminationPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RemoveManagedScalingPolicyAsyncHelper(const Model::RemoveManagedScalingPolicyRequest& request, const RemoveManagedScalingPolicyResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RemoveTagsAsyncHelper(const Model::RemoveTagsRequest& request, const RemoveTagsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RunJobFlowAsyncHelper(const Model::RunJobFlowRequest& request, const RunJobFlowResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -1968,6 +2228,7 @@ namespace Model
         void StartNotebookExecutionAsyncHelper(const Model::StartNotebookExecutionRequest& request, const StartNotebookExecutionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void StopNotebookExecutionAsyncHelper(const Model::StopNotebookExecutionRequest& request, const StopNotebookExecutionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void TerminateJobFlowsAsyncHelper(const Model::TerminateJobFlowsRequest& request, const TerminateJobFlowsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void UpdateStudioAsyncHelper(const Model::UpdateStudioRequest& request, const UpdateStudioResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateStudioSessionMappingAsyncHelper(const Model::UpdateStudioSessionMappingRequest& request, const UpdateStudioSessionMappingResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
 
       Aws::String m_uri;

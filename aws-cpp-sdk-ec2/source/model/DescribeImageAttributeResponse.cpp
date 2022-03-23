@@ -96,6 +96,16 @@ DescribeImageAttributeResponse& DescribeImageAttributeResponse::operator =(const
     {
       m_sriovNetSupport = sriovNetSupportNode;
     }
+    XmlNode bootModeNode = resultNode.FirstChild("bootMode");
+    if(!bootModeNode.IsNull())
+    {
+      m_bootMode = bootModeNode;
+    }
+    XmlNode lastLaunchedTimeNode = resultNode.FirstChild("lastLaunchedTime");
+    if(!lastLaunchedTimeNode.IsNull())
+    {
+      m_lastLaunchedTime = lastLaunchedTimeNode;
+    }
   }
 
   if (!rootNode.IsNull()) {

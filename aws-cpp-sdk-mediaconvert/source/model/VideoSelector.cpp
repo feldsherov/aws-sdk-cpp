@@ -25,13 +25,17 @@ VideoSelector::VideoSelector() :
     m_colorSpaceHasBeenSet(false),
     m_colorSpaceUsage(ColorSpaceUsage::NOT_SET),
     m_colorSpaceUsageHasBeenSet(false),
+    m_embeddedTimecodeOverride(EmbeddedTimecodeOverride::NOT_SET),
+    m_embeddedTimecodeOverrideHasBeenSet(false),
     m_hdr10MetadataHasBeenSet(false),
     m_pid(0),
     m_pidHasBeenSet(false),
     m_programNumber(0),
     m_programNumberHasBeenSet(false),
     m_rotate(InputRotate::NOT_SET),
-    m_rotateHasBeenSet(false)
+    m_rotateHasBeenSet(false),
+    m_sampleRange(InputSampleRange::NOT_SET),
+    m_sampleRangeHasBeenSet(false)
 {
 }
 
@@ -42,13 +46,17 @@ VideoSelector::VideoSelector(JsonView jsonValue) :
     m_colorSpaceHasBeenSet(false),
     m_colorSpaceUsage(ColorSpaceUsage::NOT_SET),
     m_colorSpaceUsageHasBeenSet(false),
+    m_embeddedTimecodeOverride(EmbeddedTimecodeOverride::NOT_SET),
+    m_embeddedTimecodeOverrideHasBeenSet(false),
     m_hdr10MetadataHasBeenSet(false),
     m_pid(0),
     m_pidHasBeenSet(false),
     m_programNumber(0),
     m_programNumberHasBeenSet(false),
     m_rotate(InputRotate::NOT_SET),
-    m_rotateHasBeenSet(false)
+    m_rotateHasBeenSet(false),
+    m_sampleRange(InputSampleRange::NOT_SET),
+    m_sampleRangeHasBeenSet(false)
 {
   *this = jsonValue;
 }
@@ -74,6 +82,13 @@ VideoSelector& VideoSelector::operator =(JsonView jsonValue)
     m_colorSpaceUsage = ColorSpaceUsageMapper::GetColorSpaceUsageForName(jsonValue.GetString("colorSpaceUsage"));
 
     m_colorSpaceUsageHasBeenSet = true;
+  }
+
+  if(jsonValue.ValueExists("embeddedTimecodeOverride"))
+  {
+    m_embeddedTimecodeOverride = EmbeddedTimecodeOverrideMapper::GetEmbeddedTimecodeOverrideForName(jsonValue.GetString("embeddedTimecodeOverride"));
+
+    m_embeddedTimecodeOverrideHasBeenSet = true;
   }
 
   if(jsonValue.ValueExists("hdr10Metadata"))
@@ -104,6 +119,13 @@ VideoSelector& VideoSelector::operator =(JsonView jsonValue)
     m_rotateHasBeenSet = true;
   }
 
+  if(jsonValue.ValueExists("sampleRange"))
+  {
+    m_sampleRange = InputSampleRangeMapper::GetInputSampleRangeForName(jsonValue.GetString("sampleRange"));
+
+    m_sampleRangeHasBeenSet = true;
+  }
+
   return *this;
 }
 
@@ -124,6 +146,11 @@ JsonValue VideoSelector::Jsonize() const
   if(m_colorSpaceUsageHasBeenSet)
   {
    payload.WithString("colorSpaceUsage", ColorSpaceUsageMapper::GetNameForColorSpaceUsage(m_colorSpaceUsage));
+  }
+
+  if(m_embeddedTimecodeOverrideHasBeenSet)
+  {
+   payload.WithString("embeddedTimecodeOverride", EmbeddedTimecodeOverrideMapper::GetNameForEmbeddedTimecodeOverride(m_embeddedTimecodeOverride));
   }
 
   if(m_hdr10MetadataHasBeenSet)
@@ -147,6 +174,11 @@ JsonValue VideoSelector::Jsonize() const
   if(m_rotateHasBeenSet)
   {
    payload.WithString("rotate", InputRotateMapper::GetNameForInputRotate(m_rotate));
+  }
+
+  if(m_sampleRangeHasBeenSet)
+  {
+   payload.WithString("sampleRange", InputSampleRangeMapper::GetNameForInputSampleRange(m_sampleRange));
   }
 
   return payload;

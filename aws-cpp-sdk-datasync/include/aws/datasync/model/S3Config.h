@@ -24,10 +24,10 @@ namespace Model
 {
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the AWS Identity and Access Management
-   * (IAM) role that is used to access an Amazon S3 bucket.</p> <p>For detailed
-   * information about using such a role, see Creating a Location for Amazon S3 in
-   * the <i>AWS DataSync User Guide</i>.</p><p><h3>See Also:</h3>   <a
+   * <p>The Amazon Resource Name (ARN) of the Identity and Access Management (IAM)
+   * role that is used to access an Amazon S3 bucket.</p> <p>For detailed information
+   * about using such a role, see Creating a Location for Amazon S3 in the
+   * <i>DataSync User Guide</i>.</p><p><h3>See Also:</h3>   <a
    * href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/S3Config">AWS
    * API Reference</a></p>
    */
@@ -41,50 +41,58 @@ namespace Model
 
 
     /**
-     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the
-     * <a>CreateLocationS3</a> operation. </p>
+     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
+     * operation. </p>
      */
     inline const Aws::String& GetBucketAccessRoleArn() const{ return m_bucketAccessRoleArn; }
 
     /**
-     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the
-     * <a>CreateLocationS3</a> operation. </p>
+     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
+     * operation. </p>
      */
     inline bool BucketAccessRoleArnHasBeenSet() const { return m_bucketAccessRoleArnHasBeenSet; }
 
     /**
-     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the
-     * <a>CreateLocationS3</a> operation. </p>
+     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
+     * operation. </p>
      */
     inline void SetBucketAccessRoleArn(const Aws::String& value) { m_bucketAccessRoleArnHasBeenSet = true; m_bucketAccessRoleArn = value; }
 
     /**
-     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the
-     * <a>CreateLocationS3</a> operation. </p>
+     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
+     * operation. </p>
      */
     inline void SetBucketAccessRoleArn(Aws::String&& value) { m_bucketAccessRoleArnHasBeenSet = true; m_bucketAccessRoleArn = std::move(value); }
 
     /**
-     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the
-     * <a>CreateLocationS3</a> operation. </p>
+     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
+     * operation. </p>
      */
     inline void SetBucketAccessRoleArn(const char* value) { m_bucketAccessRoleArnHasBeenSet = true; m_bucketAccessRoleArn.assign(value); }
 
     /**
-     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the
-     * <a>CreateLocationS3</a> operation. </p>
+     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
+     * operation. </p>
      */
     inline S3Config& WithBucketAccessRoleArn(const Aws::String& value) { SetBucketAccessRoleArn(value); return *this;}
 
     /**
-     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the
-     * <a>CreateLocationS3</a> operation. </p>
+     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
+     * operation. </p>
      */
     inline S3Config& WithBucketAccessRoleArn(Aws::String&& value) { SetBucketAccessRoleArn(std::move(value)); return *this;}
 
     /**
-     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the
-     * <a>CreateLocationS3</a> operation. </p>
+     * <p>The Amazon S3 bucket to access. This bucket is used as a parameter in the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html">CreateLocationS3</a>
+     * operation. </p>
      */
     inline S3Config& WithBucketAccessRoleArn(const char* value) { SetBucketAccessRoleArn(value); return *this;}
 

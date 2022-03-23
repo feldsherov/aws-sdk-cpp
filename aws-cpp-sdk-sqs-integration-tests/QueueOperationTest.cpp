@@ -35,6 +35,7 @@
 #include <aws/core/utils/memory/stl/AWSStringStream.h>
 #include <aws/testing/TestingEnvironment.h>
 #include <aws/core/utils/UUID.h>
+#include <aws/core/platform/Environment.h>
 
 using namespace Aws::Http;
 using namespace Aws;
@@ -78,8 +79,8 @@ protected:
     // the entire reason for this function is workaround the memory-allocator being initialized after static variables.
     static Aws::String GetRandomUUID()
     {
-        static const Aws::Utils::UUID m_resourceUUID = Aws::Utils::UUID::RandomUUID();
-        return m_resourceUUID;
+        static const Aws::Utils::UUID resourceUUID = Aws::Utils::UUID::RandomUUID();
+        return resourceUUID;
     }
 
     static ClientConfiguration GetConfig()
@@ -133,6 +134,7 @@ protected:
     {
         ListQueuesRequest listQueueRequest;
         listQueueRequest.WithQueueNamePrefix(BuildResourcePrefix());
+        listQueueRequest.WithMaxResults(10);
 
         ListQueuesOutcome listQueuesOutcome = sqsClient->ListQueues(listQueueRequest);
         ListQueuesResult listQueuesResult = listQueuesOutcome.GetResult();
@@ -148,10 +150,14 @@ protected:
 
     Aws::String GetAwsAccountId()
     {
-        auto cognitoClient = Aws::MakeShared<Aws::CognitoIdentity::CognitoIdentityClient>(ALLOCATION_TAG, GetConfig());
-        auto iamClient = Aws::MakeShared<Aws::IAM::IAMClient>(ALLOCATION_TAG, GetConfig());
-        Aws::AccessManagement::AccessManagementClient accessManagementClient(iamClient, cognitoClient);
-        return accessManagementClient.GetAccountId();
+        auto accountId = Aws::Environment::GetEnv("TEST_ACCOUNT_ID");
+        if (accountId.empty()) {
+            auto cognitoClient = Aws::MakeShared<Aws::CognitoIdentity::CognitoIdentityClient>(ALLOCATION_TAG, GetConfig());
+            auto iamClient = Aws::MakeShared<Aws::IAM::IAMClient>(ALLOCATION_TAG, GetConfig());
+            Aws::AccessManagement::AccessManagementClient accessManagementClient(iamClient, cognitoClient);
+            accountId = accessManagementClient.GetAccountId();
+        }
+        return accountId;
     }
 };
 

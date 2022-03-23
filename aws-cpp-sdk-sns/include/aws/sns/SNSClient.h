@@ -16,25 +16,32 @@
 #include <aws/sns/model/ConfirmSubscriptionResult.h>
 #include <aws/sns/model/CreatePlatformApplicationResult.h>
 #include <aws/sns/model/CreatePlatformEndpointResult.h>
+#include <aws/sns/model/CreateSMSSandboxPhoneNumberResult.h>
 #include <aws/sns/model/CreateTopicResult.h>
+#include <aws/sns/model/DeleteSMSSandboxPhoneNumberResult.h>
 #include <aws/sns/model/GetEndpointAttributesResult.h>
 #include <aws/sns/model/GetPlatformApplicationAttributesResult.h>
 #include <aws/sns/model/GetSMSAttributesResult.h>
+#include <aws/sns/model/GetSMSSandboxAccountStatusResult.h>
 #include <aws/sns/model/GetSubscriptionAttributesResult.h>
 #include <aws/sns/model/GetTopicAttributesResult.h>
 #include <aws/sns/model/ListEndpointsByPlatformApplicationResult.h>
+#include <aws/sns/model/ListOriginationNumbersResult.h>
 #include <aws/sns/model/ListPhoneNumbersOptedOutResult.h>
 #include <aws/sns/model/ListPlatformApplicationsResult.h>
+#include <aws/sns/model/ListSMSSandboxPhoneNumbersResult.h>
 #include <aws/sns/model/ListSubscriptionsResult.h>
 #include <aws/sns/model/ListSubscriptionsByTopicResult.h>
 #include <aws/sns/model/ListTagsForResourceResult.h>
 #include <aws/sns/model/ListTopicsResult.h>
 #include <aws/sns/model/OptInPhoneNumberResult.h>
 #include <aws/sns/model/PublishResult.h>
+#include <aws/sns/model/PublishBatchResult.h>
 #include <aws/sns/model/SetSMSAttributesResult.h>
 #include <aws/sns/model/SubscribeResult.h>
 #include <aws/sns/model/TagResourceResult.h>
 #include <aws/sns/model/UntagResourceResult.h>
+#include <aws/sns/model/VerifySMSSandboxPhoneNumberResult.h>
 #include <aws/core/NoResult.h>
 #include <aws/core/client/AsyncCallerContext.h>
 #include <aws/core/http/HttpTypes.h>
@@ -86,24 +93,30 @@ namespace Model
         class ConfirmSubscriptionRequest;
         class CreatePlatformApplicationRequest;
         class CreatePlatformEndpointRequest;
+        class CreateSMSSandboxPhoneNumberRequest;
         class CreateTopicRequest;
         class DeleteEndpointRequest;
         class DeletePlatformApplicationRequest;
+        class DeleteSMSSandboxPhoneNumberRequest;
         class DeleteTopicRequest;
         class GetEndpointAttributesRequest;
         class GetPlatformApplicationAttributesRequest;
         class GetSMSAttributesRequest;
+        class GetSMSSandboxAccountStatusRequest;
         class GetSubscriptionAttributesRequest;
         class GetTopicAttributesRequest;
         class ListEndpointsByPlatformApplicationRequest;
+        class ListOriginationNumbersRequest;
         class ListPhoneNumbersOptedOutRequest;
         class ListPlatformApplicationsRequest;
+        class ListSMSSandboxPhoneNumbersRequest;
         class ListSubscriptionsRequest;
         class ListSubscriptionsByTopicRequest;
         class ListTagsForResourceRequest;
         class ListTopicsRequest;
         class OptInPhoneNumberRequest;
         class PublishRequest;
+        class PublishBatchRequest;
         class RemovePermissionRequest;
         class SetEndpointAttributesRequest;
         class SetPlatformApplicationAttributesRequest;
@@ -114,30 +127,37 @@ namespace Model
         class TagResourceRequest;
         class UnsubscribeRequest;
         class UntagResourceRequest;
+        class VerifySMSSandboxPhoneNumberRequest;
 
         typedef Aws::Utils::Outcome<Aws::NoResult, SNSError> AddPermissionOutcome;
         typedef Aws::Utils::Outcome<CheckIfPhoneNumberIsOptedOutResult, SNSError> CheckIfPhoneNumberIsOptedOutOutcome;
         typedef Aws::Utils::Outcome<ConfirmSubscriptionResult, SNSError> ConfirmSubscriptionOutcome;
         typedef Aws::Utils::Outcome<CreatePlatformApplicationResult, SNSError> CreatePlatformApplicationOutcome;
         typedef Aws::Utils::Outcome<CreatePlatformEndpointResult, SNSError> CreatePlatformEndpointOutcome;
+        typedef Aws::Utils::Outcome<CreateSMSSandboxPhoneNumberResult, SNSError> CreateSMSSandboxPhoneNumberOutcome;
         typedef Aws::Utils::Outcome<CreateTopicResult, SNSError> CreateTopicOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SNSError> DeleteEndpointOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SNSError> DeletePlatformApplicationOutcome;
+        typedef Aws::Utils::Outcome<DeleteSMSSandboxPhoneNumberResult, SNSError> DeleteSMSSandboxPhoneNumberOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SNSError> DeleteTopicOutcome;
         typedef Aws::Utils::Outcome<GetEndpointAttributesResult, SNSError> GetEndpointAttributesOutcome;
         typedef Aws::Utils::Outcome<GetPlatformApplicationAttributesResult, SNSError> GetPlatformApplicationAttributesOutcome;
         typedef Aws::Utils::Outcome<GetSMSAttributesResult, SNSError> GetSMSAttributesOutcome;
+        typedef Aws::Utils::Outcome<GetSMSSandboxAccountStatusResult, SNSError> GetSMSSandboxAccountStatusOutcome;
         typedef Aws::Utils::Outcome<GetSubscriptionAttributesResult, SNSError> GetSubscriptionAttributesOutcome;
         typedef Aws::Utils::Outcome<GetTopicAttributesResult, SNSError> GetTopicAttributesOutcome;
         typedef Aws::Utils::Outcome<ListEndpointsByPlatformApplicationResult, SNSError> ListEndpointsByPlatformApplicationOutcome;
+        typedef Aws::Utils::Outcome<ListOriginationNumbersResult, SNSError> ListOriginationNumbersOutcome;
         typedef Aws::Utils::Outcome<ListPhoneNumbersOptedOutResult, SNSError> ListPhoneNumbersOptedOutOutcome;
         typedef Aws::Utils::Outcome<ListPlatformApplicationsResult, SNSError> ListPlatformApplicationsOutcome;
+        typedef Aws::Utils::Outcome<ListSMSSandboxPhoneNumbersResult, SNSError> ListSMSSandboxPhoneNumbersOutcome;
         typedef Aws::Utils::Outcome<ListSubscriptionsResult, SNSError> ListSubscriptionsOutcome;
         typedef Aws::Utils::Outcome<ListSubscriptionsByTopicResult, SNSError> ListSubscriptionsByTopicOutcome;
         typedef Aws::Utils::Outcome<ListTagsForResourceResult, SNSError> ListTagsForResourceOutcome;
         typedef Aws::Utils::Outcome<ListTopicsResult, SNSError> ListTopicsOutcome;
         typedef Aws::Utils::Outcome<OptInPhoneNumberResult, SNSError> OptInPhoneNumberOutcome;
         typedef Aws::Utils::Outcome<PublishResult, SNSError> PublishOutcome;
+        typedef Aws::Utils::Outcome<PublishBatchResult, SNSError> PublishBatchOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SNSError> RemovePermissionOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SNSError> SetEndpointAttributesOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SNSError> SetPlatformApplicationAttributesOutcome;
@@ -148,30 +168,37 @@ namespace Model
         typedef Aws::Utils::Outcome<TagResourceResult, SNSError> TagResourceOutcome;
         typedef Aws::Utils::Outcome<Aws::NoResult, SNSError> UnsubscribeOutcome;
         typedef Aws::Utils::Outcome<UntagResourceResult, SNSError> UntagResourceOutcome;
+        typedef Aws::Utils::Outcome<VerifySMSSandboxPhoneNumberResult, SNSError> VerifySMSSandboxPhoneNumberOutcome;
 
         typedef std::future<AddPermissionOutcome> AddPermissionOutcomeCallable;
         typedef std::future<CheckIfPhoneNumberIsOptedOutOutcome> CheckIfPhoneNumberIsOptedOutOutcomeCallable;
         typedef std::future<ConfirmSubscriptionOutcome> ConfirmSubscriptionOutcomeCallable;
         typedef std::future<CreatePlatformApplicationOutcome> CreatePlatformApplicationOutcomeCallable;
         typedef std::future<CreatePlatformEndpointOutcome> CreatePlatformEndpointOutcomeCallable;
+        typedef std::future<CreateSMSSandboxPhoneNumberOutcome> CreateSMSSandboxPhoneNumberOutcomeCallable;
         typedef std::future<CreateTopicOutcome> CreateTopicOutcomeCallable;
         typedef std::future<DeleteEndpointOutcome> DeleteEndpointOutcomeCallable;
         typedef std::future<DeletePlatformApplicationOutcome> DeletePlatformApplicationOutcomeCallable;
+        typedef std::future<DeleteSMSSandboxPhoneNumberOutcome> DeleteSMSSandboxPhoneNumberOutcomeCallable;
         typedef std::future<DeleteTopicOutcome> DeleteTopicOutcomeCallable;
         typedef std::future<GetEndpointAttributesOutcome> GetEndpointAttributesOutcomeCallable;
         typedef std::future<GetPlatformApplicationAttributesOutcome> GetPlatformApplicationAttributesOutcomeCallable;
         typedef std::future<GetSMSAttributesOutcome> GetSMSAttributesOutcomeCallable;
+        typedef std::future<GetSMSSandboxAccountStatusOutcome> GetSMSSandboxAccountStatusOutcomeCallable;
         typedef std::future<GetSubscriptionAttributesOutcome> GetSubscriptionAttributesOutcomeCallable;
         typedef std::future<GetTopicAttributesOutcome> GetTopicAttributesOutcomeCallable;
         typedef std::future<ListEndpointsByPlatformApplicationOutcome> ListEndpointsByPlatformApplicationOutcomeCallable;
+        typedef std::future<ListOriginationNumbersOutcome> ListOriginationNumbersOutcomeCallable;
         typedef std::future<ListPhoneNumbersOptedOutOutcome> ListPhoneNumbersOptedOutOutcomeCallable;
         typedef std::future<ListPlatformApplicationsOutcome> ListPlatformApplicationsOutcomeCallable;
+        typedef std::future<ListSMSSandboxPhoneNumbersOutcome> ListSMSSandboxPhoneNumbersOutcomeCallable;
         typedef std::future<ListSubscriptionsOutcome> ListSubscriptionsOutcomeCallable;
         typedef std::future<ListSubscriptionsByTopicOutcome> ListSubscriptionsByTopicOutcomeCallable;
         typedef std::future<ListTagsForResourceOutcome> ListTagsForResourceOutcomeCallable;
         typedef std::future<ListTopicsOutcome> ListTopicsOutcomeCallable;
         typedef std::future<OptInPhoneNumberOutcome> OptInPhoneNumberOutcomeCallable;
         typedef std::future<PublishOutcome> PublishOutcomeCallable;
+        typedef std::future<PublishBatchOutcome> PublishBatchOutcomeCallable;
         typedef std::future<RemovePermissionOutcome> RemovePermissionOutcomeCallable;
         typedef std::future<SetEndpointAttributesOutcome> SetEndpointAttributesOutcomeCallable;
         typedef std::future<SetPlatformApplicationAttributesOutcome> SetPlatformApplicationAttributesOutcomeCallable;
@@ -182,6 +209,7 @@ namespace Model
         typedef std::future<TagResourceOutcome> TagResourceOutcomeCallable;
         typedef std::future<UnsubscribeOutcome> UnsubscribeOutcomeCallable;
         typedef std::future<UntagResourceOutcome> UntagResourceOutcomeCallable;
+        typedef std::future<VerifySMSSandboxPhoneNumberOutcome> VerifySMSSandboxPhoneNumberOutcomeCallable;
 } // namespace Model
 
   class SNSClient;
@@ -191,24 +219,30 @@ namespace Model
     typedef std::function<void(const SNSClient*, const Model::ConfirmSubscriptionRequest&, const Model::ConfirmSubscriptionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ConfirmSubscriptionResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::CreatePlatformApplicationRequest&, const Model::CreatePlatformApplicationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreatePlatformApplicationResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::CreatePlatformEndpointRequest&, const Model::CreatePlatformEndpointOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreatePlatformEndpointResponseReceivedHandler;
+    typedef std::function<void(const SNSClient*, const Model::CreateSMSSandboxPhoneNumberRequest&, const Model::CreateSMSSandboxPhoneNumberOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateSMSSandboxPhoneNumberResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::CreateTopicRequest&, const Model::CreateTopicOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateTopicResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::DeleteEndpointRequest&, const Model::DeleteEndpointOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteEndpointResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::DeletePlatformApplicationRequest&, const Model::DeletePlatformApplicationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeletePlatformApplicationResponseReceivedHandler;
+    typedef std::function<void(const SNSClient*, const Model::DeleteSMSSandboxPhoneNumberRequest&, const Model::DeleteSMSSandboxPhoneNumberOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteSMSSandboxPhoneNumberResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::DeleteTopicRequest&, const Model::DeleteTopicOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteTopicResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::GetEndpointAttributesRequest&, const Model::GetEndpointAttributesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetEndpointAttributesResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::GetPlatformApplicationAttributesRequest&, const Model::GetPlatformApplicationAttributesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetPlatformApplicationAttributesResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::GetSMSAttributesRequest&, const Model::GetSMSAttributesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetSMSAttributesResponseReceivedHandler;
+    typedef std::function<void(const SNSClient*, const Model::GetSMSSandboxAccountStatusRequest&, const Model::GetSMSSandboxAccountStatusOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetSMSSandboxAccountStatusResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::GetSubscriptionAttributesRequest&, const Model::GetSubscriptionAttributesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetSubscriptionAttributesResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::GetTopicAttributesRequest&, const Model::GetTopicAttributesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetTopicAttributesResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::ListEndpointsByPlatformApplicationRequest&, const Model::ListEndpointsByPlatformApplicationOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListEndpointsByPlatformApplicationResponseReceivedHandler;
+    typedef std::function<void(const SNSClient*, const Model::ListOriginationNumbersRequest&, const Model::ListOriginationNumbersOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListOriginationNumbersResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::ListPhoneNumbersOptedOutRequest&, const Model::ListPhoneNumbersOptedOutOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListPhoneNumbersOptedOutResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::ListPlatformApplicationsRequest&, const Model::ListPlatformApplicationsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListPlatformApplicationsResponseReceivedHandler;
+    typedef std::function<void(const SNSClient*, const Model::ListSMSSandboxPhoneNumbersRequest&, const Model::ListSMSSandboxPhoneNumbersOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListSMSSandboxPhoneNumbersResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::ListSubscriptionsRequest&, const Model::ListSubscriptionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListSubscriptionsResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::ListSubscriptionsByTopicRequest&, const Model::ListSubscriptionsByTopicOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListSubscriptionsByTopicResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::ListTagsForResourceRequest&, const Model::ListTagsForResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListTagsForResourceResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::ListTopicsRequest&, const Model::ListTopicsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListTopicsResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::OptInPhoneNumberRequest&, const Model::OptInPhoneNumberOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > OptInPhoneNumberResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::PublishRequest&, const Model::PublishOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PublishResponseReceivedHandler;
+    typedef std::function<void(const SNSClient*, const Model::PublishBatchRequest&, const Model::PublishBatchOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > PublishBatchResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::RemovePermissionRequest&, const Model::RemovePermissionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RemovePermissionResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::SetEndpointAttributesRequest&, const Model::SetEndpointAttributesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > SetEndpointAttributesResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::SetPlatformApplicationAttributesRequest&, const Model::SetPlatformApplicationAttributesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > SetPlatformApplicationAttributesResponseReceivedHandler;
@@ -219,14 +253,15 @@ namespace Model
     typedef std::function<void(const SNSClient*, const Model::TagResourceRequest&, const Model::TagResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > TagResourceResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::UnsubscribeRequest&, const Model::UnsubscribeOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UnsubscribeResponseReceivedHandler;
     typedef std::function<void(const SNSClient*, const Model::UntagResourceRequest&, const Model::UntagResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UntagResourceResponseReceivedHandler;
+    typedef std::function<void(const SNSClient*, const Model::VerifySMSSandboxPhoneNumberRequest&, const Model::VerifySMSSandboxPhoneNumberOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > VerifySMSSandboxPhoneNumberResponseReceivedHandler;
 
   /**
    * <fullname>Amazon Simple Notification Service</fullname> <p>Amazon Simple
    * Notification Service (Amazon SNS) is a web service that enables you to build
    * distributed web-enabled applications. Applications can use Amazon SNS to easily
    * push real-time notification messages to interested subscribers over multiple
-   * delivery protocols. For more information about this product see <a
-   * href="http://aws.amazon.com/sns/">https://aws.amazon.com/sns</a>. For detailed
+   * delivery protocols. For more information about this product see the <a
+   * href="http://aws.amazon.com/sns/">Amazon SNS product page</a>. For detailed
    * information about Amazon SNS features and their associated API calls, see the <a
    * href="https://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer
    * Guide</a>. </p> <p>For information on the permissions you need to use this API,
@@ -275,7 +310,8 @@ namespace Model
 
         /**
          * <p>Adds a statement to a topic's access control policy, granting access for the
-         * specified AWS accounts to the specified actions.</p><p><h3>See Also:</h3>   <a
+         * specified Amazon Web Services accounts to the specified actions.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/AddPermission">AWS
          * API Reference</a></p>
          */
@@ -283,7 +319,8 @@ namespace Model
 
         /**
          * <p>Adds a statement to a topic's access control policy, granting access for the
-         * specified AWS accounts to the specified actions.</p><p><h3>See Also:</h3>   <a
+         * specified Amazon Web Services accounts to the specified actions.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/AddPermission">AWS
          * API Reference</a></p>
          *
@@ -293,7 +330,8 @@ namespace Model
 
         /**
          * <p>Adds a statement to a topic's access control policy, granting access for the
-         * specified AWS accounts to the specified actions.</p><p><h3>See Also:</h3>   <a
+         * specified Amazon Web Services accounts to the specified actions.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/AddPermission">AWS
          * API Reference</a></p>
          *
@@ -303,10 +341,10 @@ namespace Model
 
         /**
          * <p>Accepts a phone number and indicates whether the phone holder has opted out
-         * of receiving SMS messages from your account. You cannot send SMS messages to a
-         * number that is opted out.</p> <p>To resume sending messages, you can opt in the
-         * number by using the <code>OptInPhoneNumber</code> action.</p><p><h3>See
-         * Also:</h3>   <a
+         * of receiving SMS messages from your Amazon Web Services account. You cannot send
+         * SMS messages to a number that is opted out.</p> <p>To resume sending messages,
+         * you can opt in the number by using the <code>OptInPhoneNumber</code>
+         * action.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CheckIfPhoneNumberIsOptedOut">AWS
          * API Reference</a></p>
          */
@@ -314,10 +352,10 @@ namespace Model
 
         /**
          * <p>Accepts a phone number and indicates whether the phone holder has opted out
-         * of receiving SMS messages from your account. You cannot send SMS messages to a
-         * number that is opted out.</p> <p>To resume sending messages, you can opt in the
-         * number by using the <code>OptInPhoneNumber</code> action.</p><p><h3>See
-         * Also:</h3>   <a
+         * of receiving SMS messages from your Amazon Web Services account. You cannot send
+         * SMS messages to a number that is opted out.</p> <p>To resume sending messages,
+         * you can opt in the number by using the <code>OptInPhoneNumber</code>
+         * action.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CheckIfPhoneNumberIsOptedOut">AWS
          * API Reference</a></p>
          *
@@ -327,10 +365,10 @@ namespace Model
 
         /**
          * <p>Accepts a phone number and indicates whether the phone holder has opted out
-         * of receiving SMS messages from your account. You cannot send SMS messages to a
-         * number that is opted out.</p> <p>To resume sending messages, you can opt in the
-         * number by using the <code>OptInPhoneNumber</code> action.</p><p><h3>See
-         * Also:</h3>   <a
+         * of receiving SMS messages from your Amazon Web Services account. You cannot send
+         * SMS messages to a number that is opted out.</p> <p>To resume sending messages,
+         * you can opt in the number by using the <code>OptInPhoneNumber</code>
+         * action.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CheckIfPhoneNumberIsOptedOut">AWS
          * API Reference</a></p>
          *
@@ -390,9 +428,13 @@ namespace Model
          * <code>PlatformCredential</code> is <code>client secret</code>.</p> </li> <li>
          * <p>For <code>Baidu</code>, <code>PlatformPrincipal</code> is <code>API
          * key</code> and <code>PlatformCredential</code> is <code>secret key</code>.</p>
-         * </li> <li> <p>For <code>APNS</code> and <code>APNS_SANDBOX</code>,
-         * <code>PlatformPrincipal</code> is <code>SSL certificate</code> and
-         * <code>PlatformCredential</code> is <code>private key</code>.</p> </li> <li>
+         * </li> <li> <p>For <code>APNS</code> and <code>APNS_SANDBOX</code> using
+         * certificate credentials, <code>PlatformPrincipal</code> is <code>SSL
+         * certificate</code> and <code>PlatformCredential</code> is <code>private
+         * key</code>.</p> </li> <li> <p>For <code>APNS</code> and
+         * <code>APNS_SANDBOX</code> using token credentials,
+         * <code>PlatformPrincipal</code> is <code>signing key ID</code> and
+         * <code>PlatformCredential</code> is <code>signing key</code>.</p> </li> <li>
          * <p>For <code>GCM</code> (Firebase Cloud Messaging), there is no
          * <code>PlatformPrincipal</code> and the <code>PlatformCredential</code> is
          * <code>API key</code>.</p> </li> <li> <p>For <code>MPNS</code>,
@@ -420,9 +462,13 @@ namespace Model
          * <code>PlatformCredential</code> is <code>client secret</code>.</p> </li> <li>
          * <p>For <code>Baidu</code>, <code>PlatformPrincipal</code> is <code>API
          * key</code> and <code>PlatformCredential</code> is <code>secret key</code>.</p>
-         * </li> <li> <p>For <code>APNS</code> and <code>APNS_SANDBOX</code>,
-         * <code>PlatformPrincipal</code> is <code>SSL certificate</code> and
-         * <code>PlatformCredential</code> is <code>private key</code>.</p> </li> <li>
+         * </li> <li> <p>For <code>APNS</code> and <code>APNS_SANDBOX</code> using
+         * certificate credentials, <code>PlatformPrincipal</code> is <code>SSL
+         * certificate</code> and <code>PlatformCredential</code> is <code>private
+         * key</code>.</p> </li> <li> <p>For <code>APNS</code> and
+         * <code>APNS_SANDBOX</code> using token credentials,
+         * <code>PlatformPrincipal</code> is <code>signing key ID</code> and
+         * <code>PlatformCredential</code> is <code>signing key</code>.</p> </li> <li>
          * <p>For <code>GCM</code> (Firebase Cloud Messaging), there is no
          * <code>PlatformPrincipal</code> and the <code>PlatformCredential</code> is
          * <code>API key</code>.</p> </li> <li> <p>For <code>MPNS</code>,
@@ -452,9 +498,13 @@ namespace Model
          * <code>PlatformCredential</code> is <code>client secret</code>.</p> </li> <li>
          * <p>For <code>Baidu</code>, <code>PlatformPrincipal</code> is <code>API
          * key</code> and <code>PlatformCredential</code> is <code>secret key</code>.</p>
-         * </li> <li> <p>For <code>APNS</code> and <code>APNS_SANDBOX</code>,
-         * <code>PlatformPrincipal</code> is <code>SSL certificate</code> and
-         * <code>PlatformCredential</code> is <code>private key</code>.</p> </li> <li>
+         * </li> <li> <p>For <code>APNS</code> and <code>APNS_SANDBOX</code> using
+         * certificate credentials, <code>PlatformPrincipal</code> is <code>SSL
+         * certificate</code> and <code>PlatformCredential</code> is <code>private
+         * key</code>.</p> </li> <li> <p>For <code>APNS</code> and
+         * <code>APNS_SANDBOX</code> using token credentials,
+         * <code>PlatformPrincipal</code> is <code>signing key ID</code> and
+         * <code>PlatformCredential</code> is <code>signing key</code>.</p> </li> <li>
          * <p>For <code>GCM</code> (Firebase Cloud Messaging), there is no
          * <code>PlatformPrincipal</code> and the <code>PlatformCredential</code> is
          * <code>API key</code>.</p> </li> <li> <p>For <code>MPNS</code>,
@@ -549,12 +599,72 @@ namespace Model
         virtual void CreatePlatformEndpointAsync(const Model::CreatePlatformEndpointRequest& request, const CreatePlatformEndpointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Adds a destination phone number to an Amazon Web Services account in the SMS
+         * sandbox and sends a one-time password (OTP) to that phone number.</p> <p>When
+         * you start using Amazon SNS to send SMS messages, your Amazon Web Services
+         * account is in the <i>SMS sandbox</i>. The SMS sandbox provides a safe
+         * environment for you to try Amazon SNS features without risking your reputation
+         * as an SMS sender. While your Amazon Web Services account is in the SMS sandbox,
+         * you can use all of the features of Amazon SNS. However, you can send SMS
+         * messages only to verified destination phone numbers. For more information,
+         * including how to move out of the sandbox to send messages without restrictions,
+         * see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CreateSMSSandboxPhoneNumber">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::CreateSMSSandboxPhoneNumberOutcome CreateSMSSandboxPhoneNumber(const Model::CreateSMSSandboxPhoneNumberRequest& request) const;
+
+        /**
+         * <p>Adds a destination phone number to an Amazon Web Services account in the SMS
+         * sandbox and sends a one-time password (OTP) to that phone number.</p> <p>When
+         * you start using Amazon SNS to send SMS messages, your Amazon Web Services
+         * account is in the <i>SMS sandbox</i>. The SMS sandbox provides a safe
+         * environment for you to try Amazon SNS features without risking your reputation
+         * as an SMS sender. While your Amazon Web Services account is in the SMS sandbox,
+         * you can use all of the features of Amazon SNS. However, you can send SMS
+         * messages only to verified destination phone numbers. For more information,
+         * including how to move out of the sandbox to send messages without restrictions,
+         * see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CreateSMSSandboxPhoneNumber">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::CreateSMSSandboxPhoneNumberOutcomeCallable CreateSMSSandboxPhoneNumberCallable(const Model::CreateSMSSandboxPhoneNumberRequest& request) const;
+
+        /**
+         * <p>Adds a destination phone number to an Amazon Web Services account in the SMS
+         * sandbox and sends a one-time password (OTP) to that phone number.</p> <p>When
+         * you start using Amazon SNS to send SMS messages, your Amazon Web Services
+         * account is in the <i>SMS sandbox</i>. The SMS sandbox provides a safe
+         * environment for you to try Amazon SNS features without risking your reputation
+         * as an SMS sender. While your Amazon Web Services account is in the SMS sandbox,
+         * you can use all of the features of Amazon SNS. However, you can send SMS
+         * messages only to verified destination phone numbers. For more information,
+         * including how to move out of the sandbox to send messages without restrictions,
+         * see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CreateSMSSandboxPhoneNumber">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void CreateSMSSandboxPhoneNumberAsync(const Model::CreateSMSSandboxPhoneNumberRequest& request, const CreateSMSSandboxPhoneNumberResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Creates a topic to which notifications can be published. Users can create at
          * most 100,000 standard topics (at most 1,000 FIFO topics). For more information,
-         * see <a href="http://aws.amazon.com/sns/">https://aws.amazon.com/sns</a>. This
-         * action is idempotent, so if the requester already owns a topic with the
-         * specified name, that topic's ARN is returned without creating a new
-         * topic.</p><p><h3>See Also:</h3>   <a
+         * see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-create-topic.html">Creating
+         * an Amazon SNS topic</a> in the <i>Amazon SNS Developer Guide</i>. This action is
+         * idempotent, so if the requester already owns a topic with the specified name,
+         * that topic's ARN is returned without creating a new topic.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CreateTopic">AWS API
          * Reference</a></p>
          */
@@ -563,10 +673,12 @@ namespace Model
         /**
          * <p>Creates a topic to which notifications can be published. Users can create at
          * most 100,000 standard topics (at most 1,000 FIFO topics). For more information,
-         * see <a href="http://aws.amazon.com/sns/">https://aws.amazon.com/sns</a>. This
-         * action is idempotent, so if the requester already owns a topic with the
-         * specified name, that topic's ARN is returned without creating a new
-         * topic.</p><p><h3>See Also:</h3>   <a
+         * see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-create-topic.html">Creating
+         * an Amazon SNS topic</a> in the <i>Amazon SNS Developer Guide</i>. This action is
+         * idempotent, so if the requester already owns a topic with the specified name,
+         * that topic's ARN is returned without creating a new topic.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CreateTopic">AWS API
          * Reference</a></p>
          *
@@ -577,10 +689,12 @@ namespace Model
         /**
          * <p>Creates a topic to which notifications can be published. Users can create at
          * most 100,000 standard topics (at most 1,000 FIFO topics). For more information,
-         * see <a href="http://aws.amazon.com/sns/">https://aws.amazon.com/sns</a>. This
-         * action is idempotent, so if the requester already owns a topic with the
-         * specified name, that topic's ARN is returned without creating a new
-         * topic.</p><p><h3>See Also:</h3>   <a
+         * see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-create-topic.html">Creating
+         * an Amazon SNS topic</a> in the <i>Amazon SNS Developer Guide</i>. This action is
+         * idempotent, so if the requester already owns a topic with the specified name,
+         * that topic's ARN is returned without creating a new topic.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CreateTopic">AWS API
          * Reference</a></p>
          *
@@ -664,6 +778,64 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void DeletePlatformApplicationAsync(const Model::DeletePlatformApplicationRequest& request, const DeletePlatformApplicationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Deletes an Amazon Web Services account's verified or pending phone number
+         * from the SMS sandbox.</p> <p>When you start using Amazon SNS to send SMS
+         * messages, your Amazon Web Services account is in the <i>SMS sandbox</i>. The SMS
+         * sandbox provides a safe environment for you to try Amazon SNS features without
+         * risking your reputation as an SMS sender. While your Amazon Web Services account
+         * is in the SMS sandbox, you can use all of the features of Amazon SNS. However,
+         * you can send SMS messages only to verified destination phone numbers. For more
+         * information, including how to move out of the sandbox to send messages without
+         * restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/DeleteSMSSandboxPhoneNumber">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteSMSSandboxPhoneNumberOutcome DeleteSMSSandboxPhoneNumber(const Model::DeleteSMSSandboxPhoneNumberRequest& request) const;
+
+        /**
+         * <p>Deletes an Amazon Web Services account's verified or pending phone number
+         * from the SMS sandbox.</p> <p>When you start using Amazon SNS to send SMS
+         * messages, your Amazon Web Services account is in the <i>SMS sandbox</i>. The SMS
+         * sandbox provides a safe environment for you to try Amazon SNS features without
+         * risking your reputation as an SMS sender. While your Amazon Web Services account
+         * is in the SMS sandbox, you can use all of the features of Amazon SNS. However,
+         * you can send SMS messages only to verified destination phone numbers. For more
+         * information, including how to move out of the sandbox to send messages without
+         * restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/DeleteSMSSandboxPhoneNumber">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DeleteSMSSandboxPhoneNumberOutcomeCallable DeleteSMSSandboxPhoneNumberCallable(const Model::DeleteSMSSandboxPhoneNumberRequest& request) const;
+
+        /**
+         * <p>Deletes an Amazon Web Services account's verified or pending phone number
+         * from the SMS sandbox.</p> <p>When you start using Amazon SNS to send SMS
+         * messages, your Amazon Web Services account is in the <i>SMS sandbox</i>. The SMS
+         * sandbox provides a safe environment for you to try Amazon SNS features without
+         * risking your reputation as an SMS sender. While your Amazon Web Services account
+         * is in the SMS sandbox, you can use all of the features of Amazon SNS. However,
+         * you can send SMS messages only to verified destination phone numbers. For more
+         * information, including how to move out of the sandbox to send messages without
+         * restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/DeleteSMSSandboxPhoneNumber">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DeleteSMSSandboxPhoneNumberAsync(const Model::DeleteSMSSandboxPhoneNumberRequest& request, const DeleteSMSSandboxPhoneNumberResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Deletes a topic and all its subscriptions. Deleting a topic might prevent
@@ -774,18 +946,18 @@ namespace Model
         virtual void GetPlatformApplicationAttributesAsync(const Model::GetPlatformApplicationAttributesRequest& request, const GetPlatformApplicationAttributesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Returns the settings for sending SMS messages from your account.</p> <p>These
-         * settings are set with the <code>SetSMSAttributes</code> action.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Returns the settings for sending SMS messages from your Amazon Web Services
+         * account.</p> <p>These settings are set with the <code>SetSMSAttributes</code>
+         * action.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetSMSAttributes">AWS
          * API Reference</a></p>
          */
         virtual Model::GetSMSAttributesOutcome GetSMSAttributes(const Model::GetSMSAttributesRequest& request) const;
 
         /**
-         * <p>Returns the settings for sending SMS messages from your account.</p> <p>These
-         * settings are set with the <code>SetSMSAttributes</code> action.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Returns the settings for sending SMS messages from your Amazon Web Services
+         * account.</p> <p>These settings are set with the <code>SetSMSAttributes</code>
+         * action.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetSMSAttributes">AWS
          * API Reference</a></p>
          *
@@ -794,15 +966,73 @@ namespace Model
         virtual Model::GetSMSAttributesOutcomeCallable GetSMSAttributesCallable(const Model::GetSMSAttributesRequest& request) const;
 
         /**
-         * <p>Returns the settings for sending SMS messages from your account.</p> <p>These
-         * settings are set with the <code>SetSMSAttributes</code> action.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Returns the settings for sending SMS messages from your Amazon Web Services
+         * account.</p> <p>These settings are set with the <code>SetSMSAttributes</code>
+         * action.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetSMSAttributes">AWS
          * API Reference</a></p>
          *
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void GetSMSAttributesAsync(const Model::GetSMSAttributesRequest& request, const GetSMSAttributesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Retrieves the SMS sandbox status for the calling Amazon Web Services account
+         * in the target Amazon Web Services Region.</p> <p>When you start using Amazon SNS
+         * to send SMS messages, your Amazon Web Services account is in the <i>SMS
+         * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon
+         * SNS features without risking your reputation as an SMS sender. While your Amazon
+         * Web Services account is in the SMS sandbox, you can use all of the features of
+         * Amazon SNS. However, you can send SMS messages only to verified destination
+         * phone numbers. For more information, including how to move out of the sandbox to
+         * send messages without restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetSMSSandboxAccountStatus">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetSMSSandboxAccountStatusOutcome GetSMSSandboxAccountStatus(const Model::GetSMSSandboxAccountStatusRequest& request) const;
+
+        /**
+         * <p>Retrieves the SMS sandbox status for the calling Amazon Web Services account
+         * in the target Amazon Web Services Region.</p> <p>When you start using Amazon SNS
+         * to send SMS messages, your Amazon Web Services account is in the <i>SMS
+         * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon
+         * SNS features without risking your reputation as an SMS sender. While your Amazon
+         * Web Services account is in the SMS sandbox, you can use all of the features of
+         * Amazon SNS. However, you can send SMS messages only to verified destination
+         * phone numbers. For more information, including how to move out of the sandbox to
+         * send messages without restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetSMSSandboxAccountStatus">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetSMSSandboxAccountStatusOutcomeCallable GetSMSSandboxAccountStatusCallable(const Model::GetSMSSandboxAccountStatusRequest& request) const;
+
+        /**
+         * <p>Retrieves the SMS sandbox status for the calling Amazon Web Services account
+         * in the target Amazon Web Services Region.</p> <p>When you start using Amazon SNS
+         * to send SMS messages, your Amazon Web Services account is in the <i>SMS
+         * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon
+         * SNS features without risking your reputation as an SMS sender. While your Amazon
+         * Web Services account is in the SMS sandbox, you can use all of the features of
+         * Amazon SNS. However, you can send SMS messages only to verified destination
+         * phone numbers. For more information, including how to move out of the sandbox to
+         * send messages without restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetSMSSandboxAccountStatus">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetSMSSandboxAccountStatusAsync(const Model::GetSMSSandboxAccountStatusRequest& request, const GetSMSSandboxAccountStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Returns all of the properties of a subscription.</p><p><h3>See Also:</h3>  
@@ -919,6 +1149,43 @@ namespace Model
         virtual void ListEndpointsByPlatformApplicationAsync(const Model::ListEndpointsByPlatformApplicationRequest& request, const ListEndpointsByPlatformApplicationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Lists the calling Amazon Web Services account's dedicated origination numbers
+         * and their metadata. For more information about origination numbers, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/channels-sms-originating-identities-origination-numbers.html">Origination
+         * numbers</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListOriginationNumbers">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListOriginationNumbersOutcome ListOriginationNumbers(const Model::ListOriginationNumbersRequest& request) const;
+
+        /**
+         * <p>Lists the calling Amazon Web Services account's dedicated origination numbers
+         * and their metadata. For more information about origination numbers, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/channels-sms-originating-identities-origination-numbers.html">Origination
+         * numbers</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListOriginationNumbers">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListOriginationNumbersOutcomeCallable ListOriginationNumbersCallable(const Model::ListOriginationNumbersRequest& request) const;
+
+        /**
+         * <p>Lists the calling Amazon Web Services account's dedicated origination numbers
+         * and their metadata. For more information about origination numbers, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/channels-sms-originating-identities-origination-numbers.html">Origination
+         * numbers</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListOriginationNumbers">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListOriginationNumbersAsync(const Model::ListOriginationNumbersRequest& request, const ListOriginationNumbersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Returns a list of phone numbers that are opted out, meaning you cannot send
          * SMS messages to them.</p> <p>The results for
          * <code>ListPhoneNumbersOptedOut</code> are paginated, and each page returns up to
@@ -1021,6 +1288,64 @@ namespace Model
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void ListPlatformApplicationsAsync(const Model::ListPlatformApplicationsRequest& request, const ListPlatformApplicationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Lists the calling Amazon Web Services account's current verified and pending
+         * destination phone numbers in the SMS sandbox.</p> <p>When you start using Amazon
+         * SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS
+         * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon
+         * SNS features without risking your reputation as an SMS sender. While your Amazon
+         * Web Services account is in the SMS sandbox, you can use all of the features of
+         * Amazon SNS. However, you can send SMS messages only to verified destination
+         * phone numbers. For more information, including how to move out of the sandbox to
+         * send messages without restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListSMSSandboxPhoneNumbers">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListSMSSandboxPhoneNumbersOutcome ListSMSSandboxPhoneNumbers(const Model::ListSMSSandboxPhoneNumbersRequest& request) const;
+
+        /**
+         * <p>Lists the calling Amazon Web Services account's current verified and pending
+         * destination phone numbers in the SMS sandbox.</p> <p>When you start using Amazon
+         * SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS
+         * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon
+         * SNS features without risking your reputation as an SMS sender. While your Amazon
+         * Web Services account is in the SMS sandbox, you can use all of the features of
+         * Amazon SNS. However, you can send SMS messages only to verified destination
+         * phone numbers. For more information, including how to move out of the sandbox to
+         * send messages without restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListSMSSandboxPhoneNumbers">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListSMSSandboxPhoneNumbersOutcomeCallable ListSMSSandboxPhoneNumbersCallable(const Model::ListSMSSandboxPhoneNumbersRequest& request) const;
+
+        /**
+         * <p>Lists the calling Amazon Web Services account's current verified and pending
+         * destination phone numbers in the SMS sandbox.</p> <p>When you start using Amazon
+         * SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS
+         * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon
+         * SNS features without risking your reputation as an SMS sender. While your Amazon
+         * Web Services account is in the SMS sandbox, you can use all of the features of
+         * Amazon SNS. However, you can send SMS messages only to verified destination
+         * phone numbers. For more information, including how to move out of the sandbox to
+         * send messages without restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListSMSSandboxPhoneNumbers">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListSMSSandboxPhoneNumbersAsync(const Model::ListSMSSandboxPhoneNumbersRequest& request, const ListSMSSandboxPhoneNumbersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Returns a list of the requester's subscriptions. Each call returns a limited
@@ -1210,17 +1535,17 @@ namespace Model
          * the <code>TargetArn</code>).</p> <p>If you send a message to a topic, Amazon SNS
          * delivers the message to each endpoint that is subscribed to the topic. The
          * format of the message depends on the notification protocol for each subscribed
-         * endpoint.</p> <p>When a <code>messageId</code> is returned, the message has been
-         * saved and Amazon SNS will attempt to deliver it shortly.</p> <p>To use the
-         * <code>Publish</code> action for sending a message to a mobile endpoint, such as
-         * an app on a Kindle device or mobile phone, you must specify the EndpointArn for
-         * the TargetArn parameter. The EndpointArn is returned when making a call with the
-         * <code>CreatePlatformEndpoint</code> action. </p> <p>For more information about
-         * formatting messages, see <a
+         * endpoint.</p> <p>When a <code>messageId</code> is returned, the message is saved
+         * and Amazon SNS immediately delivers it to subscribers.</p> <p>To use the
+         * <code>Publish</code> action for publishing a message to a mobile endpoint, such
+         * as an app on a Kindle device or mobile phone, you must specify the EndpointArn
+         * for the TargetArn parameter. The EndpointArn is returned when making a call with
+         * the <code>CreatePlatformEndpoint</code> action. </p> <p>For more information
+         * about formatting messages, see <a
          * href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-custommessage.html">Send
          * Custom Platform-Specific Payloads in Messages to Mobile Devices</a>. </p>
          *  <p>You can publish messages only to topics and endpoints in the same
-         * AWS Region.</p> <p><h3>See Also:</h3>   <a
+         * Amazon Web Services Region.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Publish">AWS API
          * Reference</a></p>
          */
@@ -1232,17 +1557,17 @@ namespace Model
          * the <code>TargetArn</code>).</p> <p>If you send a message to a topic, Amazon SNS
          * delivers the message to each endpoint that is subscribed to the topic. The
          * format of the message depends on the notification protocol for each subscribed
-         * endpoint.</p> <p>When a <code>messageId</code> is returned, the message has been
-         * saved and Amazon SNS will attempt to deliver it shortly.</p> <p>To use the
-         * <code>Publish</code> action for sending a message to a mobile endpoint, such as
-         * an app on a Kindle device or mobile phone, you must specify the EndpointArn for
-         * the TargetArn parameter. The EndpointArn is returned when making a call with the
-         * <code>CreatePlatformEndpoint</code> action. </p> <p>For more information about
-         * formatting messages, see <a
+         * endpoint.</p> <p>When a <code>messageId</code> is returned, the message is saved
+         * and Amazon SNS immediately delivers it to subscribers.</p> <p>To use the
+         * <code>Publish</code> action for publishing a message to a mobile endpoint, such
+         * as an app on a Kindle device or mobile phone, you must specify the EndpointArn
+         * for the TargetArn parameter. The EndpointArn is returned when making a call with
+         * the <code>CreatePlatformEndpoint</code> action. </p> <p>For more information
+         * about formatting messages, see <a
          * href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-custommessage.html">Send
          * Custom Platform-Specific Payloads in Messages to Mobile Devices</a>. </p>
          *  <p>You can publish messages only to topics and endpoints in the same
-         * AWS Region.</p> <p><h3>See Also:</h3>   <a
+         * Amazon Web Services Region.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Publish">AWS API
          * Reference</a></p>
          *
@@ -1256,23 +1581,102 @@ namespace Model
          * the <code>TargetArn</code>).</p> <p>If you send a message to a topic, Amazon SNS
          * delivers the message to each endpoint that is subscribed to the topic. The
          * format of the message depends on the notification protocol for each subscribed
-         * endpoint.</p> <p>When a <code>messageId</code> is returned, the message has been
-         * saved and Amazon SNS will attempt to deliver it shortly.</p> <p>To use the
-         * <code>Publish</code> action for sending a message to a mobile endpoint, such as
-         * an app on a Kindle device or mobile phone, you must specify the EndpointArn for
-         * the TargetArn parameter. The EndpointArn is returned when making a call with the
-         * <code>CreatePlatformEndpoint</code> action. </p> <p>For more information about
-         * formatting messages, see <a
+         * endpoint.</p> <p>When a <code>messageId</code> is returned, the message is saved
+         * and Amazon SNS immediately delivers it to subscribers.</p> <p>To use the
+         * <code>Publish</code> action for publishing a message to a mobile endpoint, such
+         * as an app on a Kindle device or mobile phone, you must specify the EndpointArn
+         * for the TargetArn parameter. The EndpointArn is returned when making a call with
+         * the <code>CreatePlatformEndpoint</code> action. </p> <p>For more information
+         * about formatting messages, see <a
          * href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-custommessage.html">Send
          * Custom Platform-Specific Payloads in Messages to Mobile Devices</a>. </p>
          *  <p>You can publish messages only to topics and endpoints in the same
-         * AWS Region.</p> <p><h3>See Also:</h3>   <a
+         * Amazon Web Services Region.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Publish">AWS API
          * Reference</a></p>
          *
          * Queues the request into a thread executor and triggers associated callback when operation has finished.
          */
         virtual void PublishAsync(const Model::PublishRequest& request, const PublishResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Publishes up to ten messages to the specified topic. This is a batch version
+         * of <code>Publish</code>. For FIFO topics, multiple messages within a single
+         * batch are published in the order they are sent, and messages are deduplicated
+         * within the batch and across batches for 5 minutes.</p> <p>The result of
+         * publishing each message is reported individually in the response. Because the
+         * batch request can result in a combination of successful and unsuccessful
+         * actions, you should check for batch errors even when the call returns an HTTP
+         * status code of <code>200</code>.</p> <p>The maximum allowed individual message
+         * size and the maximum total payload size (the sum of the individual lengths of
+         * all of the batched messages) are both 256 KB (262,144 bytes). </p> <p>Some
+         * actions take lists of parameters. These lists are specified using the
+         * <code>param.n</code> notation. Values of <code>n</code> are integers starting
+         * from 1. For example, a parameter list with two elements looks like this: </p>
+         * <p>&amp;AttributeName.1=first</p> <p>&amp;AttributeName.2=second</p> <p>If you
+         * send a batch message to a topic, Amazon SNS publishes the batch message to each
+         * endpoint that is subscribed to the topic. The format of the batch message
+         * depends on the notification protocol for each subscribed endpoint.</p> <p>When a
+         * <code>messageId</code> is returned, the batch message is saved and Amazon SNS
+         * immediately delivers the message to subscribers.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/PublishBatch">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::PublishBatchOutcome PublishBatch(const Model::PublishBatchRequest& request) const;
+
+        /**
+         * <p>Publishes up to ten messages to the specified topic. This is a batch version
+         * of <code>Publish</code>. For FIFO topics, multiple messages within a single
+         * batch are published in the order they are sent, and messages are deduplicated
+         * within the batch and across batches for 5 minutes.</p> <p>The result of
+         * publishing each message is reported individually in the response. Because the
+         * batch request can result in a combination of successful and unsuccessful
+         * actions, you should check for batch errors even when the call returns an HTTP
+         * status code of <code>200</code>.</p> <p>The maximum allowed individual message
+         * size and the maximum total payload size (the sum of the individual lengths of
+         * all of the batched messages) are both 256 KB (262,144 bytes). </p> <p>Some
+         * actions take lists of parameters. These lists are specified using the
+         * <code>param.n</code> notation. Values of <code>n</code> are integers starting
+         * from 1. For example, a parameter list with two elements looks like this: </p>
+         * <p>&amp;AttributeName.1=first</p> <p>&amp;AttributeName.2=second</p> <p>If you
+         * send a batch message to a topic, Amazon SNS publishes the batch message to each
+         * endpoint that is subscribed to the topic. The format of the batch message
+         * depends on the notification protocol for each subscribed endpoint.</p> <p>When a
+         * <code>messageId</code> is returned, the batch message is saved and Amazon SNS
+         * immediately delivers the message to subscribers.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/PublishBatch">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::PublishBatchOutcomeCallable PublishBatchCallable(const Model::PublishBatchRequest& request) const;
+
+        /**
+         * <p>Publishes up to ten messages to the specified topic. This is a batch version
+         * of <code>Publish</code>. For FIFO topics, multiple messages within a single
+         * batch are published in the order they are sent, and messages are deduplicated
+         * within the batch and across batches for 5 minutes.</p> <p>The result of
+         * publishing each message is reported individually in the response. Because the
+         * batch request can result in a combination of successful and unsuccessful
+         * actions, you should check for batch errors even when the call returns an HTTP
+         * status code of <code>200</code>.</p> <p>The maximum allowed individual message
+         * size and the maximum total payload size (the sum of the individual lengths of
+         * all of the batched messages) are both 256 KB (262,144 bytes). </p> <p>Some
+         * actions take lists of parameters. These lists are specified using the
+         * <code>param.n</code> notation. Values of <code>n</code> are integers starting
+         * from 1. For example, a parameter list with two elements looks like this: </p>
+         * <p>&amp;AttributeName.1=first</p> <p>&amp;AttributeName.2=second</p> <p>If you
+         * send a batch message to a topic, Amazon SNS publishes the batch message to each
+         * endpoint that is subscribed to the topic. The format of the batch message
+         * depends on the notification protocol for each subscribed endpoint.</p> <p>When a
+         * <code>messageId</code> is returned, the batch message is saved and Amazon SNS
+         * immediately delivers the message to subscribers.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/PublishBatch">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void PublishBatchAsync(const Model::PublishBatchRequest& request, const PublishBatchResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
          * <p>Removes a statement from a topic's access control policy.</p><p><h3>See
@@ -1395,8 +1799,10 @@ namespace Model
          * the <code>MessageAttributes.entry.N</code> parameter. For more information, see
          * <a
          * href="https://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html">Publishing
-         * to a mobile phone</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See
-         * Also:</h3>   <a
+         * to a mobile phone</a> in the <i>Amazon SNS Developer Guide</i>.</p>  <p>To
+         * use this operation, you must grant the Amazon SNS service principal
+         * (<code>sns.amazonaws.com</code>) permission to perform the
+         * <code>s3:ListBucket</code> action. </p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/SetSMSAttributes">AWS
          * API Reference</a></p>
          */
@@ -1409,8 +1815,10 @@ namespace Model
          * the <code>MessageAttributes.entry.N</code> parameter. For more information, see
          * <a
          * href="https://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html">Publishing
-         * to a mobile phone</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See
-         * Also:</h3>   <a
+         * to a mobile phone</a> in the <i>Amazon SNS Developer Guide</i>.</p>  <p>To
+         * use this operation, you must grant the Amazon SNS service principal
+         * (<code>sns.amazonaws.com</code>) permission to perform the
+         * <code>s3:ListBucket</code> action. </p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/SetSMSAttributes">AWS
          * API Reference</a></p>
          *
@@ -1425,8 +1833,10 @@ namespace Model
          * the <code>MessageAttributes.entry.N</code> parameter. For more information, see
          * <a
          * href="https://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html">Publishing
-         * to a mobile phone</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See
-         * Also:</h3>   <a
+         * to a mobile phone</a> in the <i>Amazon SNS Developer Guide</i>.</p>  <p>To
+         * use this operation, you must grant the Amazon SNS service principal
+         * (<code>sns.amazonaws.com</code>) permission to perform the
+         * <code>s3:ListBucket</code> action. </p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/SetSMSAttributes">AWS
          * API Reference</a></p>
          *
@@ -1492,12 +1902,13 @@ namespace Model
 
         /**
          * <p>Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S
-         * or email, or if the endpoint and the topic are not in the same AWS account, the
-         * endpoint owner must run the <code>ConfirmSubscription</code> action to confirm
-         * the subscription.</p> <p>You call the <code>ConfirmSubscription</code> action
-         * with the token from the subscription response. Confirmation tokens are valid for
-         * three days.</p> <p>This action is throttled at 100 transactions per second
-         * (TPS).</p><p><h3>See Also:</h3>   <a
+         * or email, or if the endpoint and the topic are not in the same Amazon Web
+         * Services account, the endpoint owner must run the
+         * <code>ConfirmSubscription</code> action to confirm the subscription.</p> <p>You
+         * call the <code>ConfirmSubscription</code> action with the token from the
+         * subscription response. Confirmation tokens are valid for three days.</p> <p>This
+         * action is throttled at 100 transactions per second (TPS).</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Subscribe">AWS API
          * Reference</a></p>
          */
@@ -1505,12 +1916,13 @@ namespace Model
 
         /**
          * <p>Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S
-         * or email, or if the endpoint and the topic are not in the same AWS account, the
-         * endpoint owner must run the <code>ConfirmSubscription</code> action to confirm
-         * the subscription.</p> <p>You call the <code>ConfirmSubscription</code> action
-         * with the token from the subscription response. Confirmation tokens are valid for
-         * three days.</p> <p>This action is throttled at 100 transactions per second
-         * (TPS).</p><p><h3>See Also:</h3>   <a
+         * or email, or if the endpoint and the topic are not in the same Amazon Web
+         * Services account, the endpoint owner must run the
+         * <code>ConfirmSubscription</code> action to confirm the subscription.</p> <p>You
+         * call the <code>ConfirmSubscription</code> action with the token from the
+         * subscription response. Confirmation tokens are valid for three days.</p> <p>This
+         * action is throttled at 100 transactions per second (TPS).</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Subscribe">AWS API
          * Reference</a></p>
          *
@@ -1520,12 +1932,13 @@ namespace Model
 
         /**
          * <p>Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S
-         * or email, or if the endpoint and the topic are not in the same AWS account, the
-         * endpoint owner must run the <code>ConfirmSubscription</code> action to confirm
-         * the subscription.</p> <p>You call the <code>ConfirmSubscription</code> action
-         * with the token from the subscription response. Confirmation tokens are valid for
-         * three days.</p> <p>This action is throttled at 100 transactions per second
-         * (TPS).</p><p><h3>See Also:</h3>   <a
+         * or email, or if the endpoint and the topic are not in the same Amazon Web
+         * Services account, the endpoint owner must run the
+         * <code>ConfirmSubscription</code> action to confirm the subscription.</p> <p>You
+         * call the <code>ConfirmSubscription</code> action with the token from the
+         * subscription response. Confirmation tokens are valid for three days.</p> <p>This
+         * action is throttled at 100 transactions per second (TPS).</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Subscribe">AWS API
          * Reference</a></p>
          *
@@ -1542,8 +1955,9 @@ namespace Model
          * semantic meaning. Amazon SNS interprets tags as character strings.</p> </li>
          * <li> <p>Tags are case-sensitive.</p> </li> <li> <p>A new tag with a key
          * identical to that of an existing tag overwrites the existing tag.</p> </li> <li>
-         * <p>Tagging actions are limited to 10 TPS per AWS account, per AWS region. If
-         * your application requires a higher throughput, file a <a
+         * <p>Tagging actions are limited to 10 TPS per Amazon Web Services account, per
+         * Amazon Web Services Region. If your application requires a higher throughput,
+         * file a <a
          * href="https://console.aws.amazon.com/support/home#/case/create?issueType=technical">technical
          * support request</a>.</p> </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/TagResource">AWS API
@@ -1560,8 +1974,9 @@ namespace Model
          * semantic meaning. Amazon SNS interprets tags as character strings.</p> </li>
          * <li> <p>Tags are case-sensitive.</p> </li> <li> <p>A new tag with a key
          * identical to that of an existing tag overwrites the existing tag.</p> </li> <li>
-         * <p>Tagging actions are limited to 10 TPS per AWS account, per AWS region. If
-         * your application requires a higher throughput, file a <a
+         * <p>Tagging actions are limited to 10 TPS per Amazon Web Services account, per
+         * Amazon Web Services Region. If your application requires a higher throughput,
+         * file a <a
          * href="https://console.aws.amazon.com/support/home#/case/create?issueType=technical">technical
          * support request</a>.</p> </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/TagResource">AWS API
@@ -1580,8 +1995,9 @@ namespace Model
          * semantic meaning. Amazon SNS interprets tags as character strings.</p> </li>
          * <li> <p>Tags are case-sensitive.</p> </li> <li> <p>A new tag with a key
          * identical to that of an existing tag overwrites the existing tag.</p> </li> <li>
-         * <p>Tagging actions are limited to 10 TPS per AWS account, per AWS region. If
-         * your application requires a higher throughput, file a <a
+         * <p>Tagging actions are limited to 10 TPS per Amazon Web Services account, per
+         * Amazon Web Services Region. If your application requires a higher throughput,
+         * file a <a
          * href="https://console.aws.amazon.com/support/home#/case/create?issueType=technical">technical
          * support request</a>.</p> </li> </ul><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/TagResource">AWS API
@@ -1594,10 +2010,10 @@ namespace Model
         /**
          * <p>Deletes a subscription. If the subscription requires authentication for
          * deletion, only the owner of the subscription or the topic's owner can
-         * unsubscribe, and an AWS signature is required. If the <code>Unsubscribe</code>
-         * call does not require authentication and the requester is not the subscription
-         * owner, a final cancellation message is delivered to the endpoint, so that the
-         * endpoint owner can easily resubscribe to the topic if the
+         * unsubscribe, and an Amazon Web Services signature is required. If the
+         * <code>Unsubscribe</code> call does not require authentication and the requester
+         * is not the subscription owner, a final cancellation message is delivered to the
+         * endpoint, so that the endpoint owner can easily resubscribe to the topic if the
          * <code>Unsubscribe</code> request was unintended.</p> <p>This action is throttled
          * at 100 transactions per second (TPS).</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Unsubscribe">AWS API
@@ -1608,10 +2024,10 @@ namespace Model
         /**
          * <p>Deletes a subscription. If the subscription requires authentication for
          * deletion, only the owner of the subscription or the topic's owner can
-         * unsubscribe, and an AWS signature is required. If the <code>Unsubscribe</code>
-         * call does not require authentication and the requester is not the subscription
-         * owner, a final cancellation message is delivered to the endpoint, so that the
-         * endpoint owner can easily resubscribe to the topic if the
+         * unsubscribe, and an Amazon Web Services signature is required. If the
+         * <code>Unsubscribe</code> call does not require authentication and the requester
+         * is not the subscription owner, a final cancellation message is delivered to the
+         * endpoint, so that the endpoint owner can easily resubscribe to the topic if the
          * <code>Unsubscribe</code> request was unintended.</p> <p>This action is throttled
          * at 100 transactions per second (TPS).</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Unsubscribe">AWS API
@@ -1624,10 +2040,10 @@ namespace Model
         /**
          * <p>Deletes a subscription. If the subscription requires authentication for
          * deletion, only the owner of the subscription or the topic's owner can
-         * unsubscribe, and an AWS signature is required. If the <code>Unsubscribe</code>
-         * call does not require authentication and the requester is not the subscription
-         * owner, a final cancellation message is delivered to the endpoint, so that the
-         * endpoint owner can easily resubscribe to the topic if the
+         * unsubscribe, and an Amazon Web Services signature is required. If the
+         * <code>Unsubscribe</code> call does not require authentication and the requester
+         * is not the subscription owner, a final cancellation message is delivered to the
+         * endpoint, so that the endpoint owner can easily resubscribe to the topic if the
          * <code>Unsubscribe</code> request was unintended.</p> <p>This action is throttled
          * at 100 transactions per second (TPS).</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Unsubscribe">AWS API
@@ -1668,6 +2084,64 @@ namespace Model
          */
         virtual void UntagResourceAsync(const Model::UntagResourceRequest& request, const UntagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
+        /**
+         * <p>Verifies a destination phone number with a one-time password (OTP) for the
+         * calling Amazon Web Services account.</p> <p>When you start using Amazon SNS to
+         * send SMS messages, your Amazon Web Services account is in the <i>SMS
+         * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon
+         * SNS features without risking your reputation as an SMS sender. While your Amazon
+         * Web Services account is in the SMS sandbox, you can use all of the features of
+         * Amazon SNS. However, you can send SMS messages only to verified destination
+         * phone numbers. For more information, including how to move out of the sandbox to
+         * send messages without restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/VerifySMSSandboxPhoneNumber">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::VerifySMSSandboxPhoneNumberOutcome VerifySMSSandboxPhoneNumber(const Model::VerifySMSSandboxPhoneNumberRequest& request) const;
+
+        /**
+         * <p>Verifies a destination phone number with a one-time password (OTP) for the
+         * calling Amazon Web Services account.</p> <p>When you start using Amazon SNS to
+         * send SMS messages, your Amazon Web Services account is in the <i>SMS
+         * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon
+         * SNS features without risking your reputation as an SMS sender. While your Amazon
+         * Web Services account is in the SMS sandbox, you can use all of the features of
+         * Amazon SNS. However, you can send SMS messages only to verified destination
+         * phone numbers. For more information, including how to move out of the sandbox to
+         * send messages without restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/VerifySMSSandboxPhoneNumber">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::VerifySMSSandboxPhoneNumberOutcomeCallable VerifySMSSandboxPhoneNumberCallable(const Model::VerifySMSSandboxPhoneNumberRequest& request) const;
+
+        /**
+         * <p>Verifies a destination phone number with a one-time password (OTP) for the
+         * calling Amazon Web Services account.</p> <p>When you start using Amazon SNS to
+         * send SMS messages, your Amazon Web Services account is in the <i>SMS
+         * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon
+         * SNS features without risking your reputation as an SMS sender. While your Amazon
+         * Web Services account is in the SMS sandbox, you can use all of the features of
+         * Amazon SNS. However, you can send SMS messages only to verified destination
+         * phone numbers. For more information, including how to move out of the sandbox to
+         * send messages without restrictions, see <a
+         * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+         * sandbox</a> in the <i>Amazon SNS Developer Guide</i>.</p><p><h3>See Also:</h3>  
+         * <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/VerifySMSSandboxPhoneNumber">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void VerifySMSSandboxPhoneNumberAsync(const Model::VerifySMSSandboxPhoneNumberRequest& request, const VerifySMSSandboxPhoneNumberResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
 
         void OverrideEndpoint(const Aws::String& endpoint);
   private:
@@ -1677,24 +2151,30 @@ namespace Model
         void ConfirmSubscriptionAsyncHelper(const Model::ConfirmSubscriptionRequest& request, const ConfirmSubscriptionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreatePlatformApplicationAsyncHelper(const Model::CreatePlatformApplicationRequest& request, const CreatePlatformApplicationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreatePlatformEndpointAsyncHelper(const Model::CreatePlatformEndpointRequest& request, const CreatePlatformEndpointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void CreateSMSSandboxPhoneNumberAsyncHelper(const Model::CreateSMSSandboxPhoneNumberRequest& request, const CreateSMSSandboxPhoneNumberResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateTopicAsyncHelper(const Model::CreateTopicRequest& request, const CreateTopicResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteEndpointAsyncHelper(const Model::DeleteEndpointRequest& request, const DeleteEndpointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeletePlatformApplicationAsyncHelper(const Model::DeletePlatformApplicationRequest& request, const DeletePlatformApplicationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DeleteSMSSandboxPhoneNumberAsyncHelper(const Model::DeleteSMSSandboxPhoneNumberRequest& request, const DeleteSMSSandboxPhoneNumberResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteTopicAsyncHelper(const Model::DeleteTopicRequest& request, const DeleteTopicResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetEndpointAttributesAsyncHelper(const Model::GetEndpointAttributesRequest& request, const GetEndpointAttributesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetPlatformApplicationAttributesAsyncHelper(const Model::GetPlatformApplicationAttributesRequest& request, const GetPlatformApplicationAttributesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetSMSAttributesAsyncHelper(const Model::GetSMSAttributesRequest& request, const GetSMSAttributesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetSMSSandboxAccountStatusAsyncHelper(const Model::GetSMSSandboxAccountStatusRequest& request, const GetSMSSandboxAccountStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetSubscriptionAttributesAsyncHelper(const Model::GetSubscriptionAttributesRequest& request, const GetSubscriptionAttributesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetTopicAttributesAsyncHelper(const Model::GetTopicAttributesRequest& request, const GetTopicAttributesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListEndpointsByPlatformApplicationAsyncHelper(const Model::ListEndpointsByPlatformApplicationRequest& request, const ListEndpointsByPlatformApplicationResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListOriginationNumbersAsyncHelper(const Model::ListOriginationNumbersRequest& request, const ListOriginationNumbersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListPhoneNumbersOptedOutAsyncHelper(const Model::ListPhoneNumbersOptedOutRequest& request, const ListPhoneNumbersOptedOutResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListPlatformApplicationsAsyncHelper(const Model::ListPlatformApplicationsRequest& request, const ListPlatformApplicationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListSMSSandboxPhoneNumbersAsyncHelper(const Model::ListSMSSandboxPhoneNumbersRequest& request, const ListSMSSandboxPhoneNumbersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListSubscriptionsAsyncHelper(const Model::ListSubscriptionsRequest& request, const ListSubscriptionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListSubscriptionsByTopicAsyncHelper(const Model::ListSubscriptionsByTopicRequest& request, const ListSubscriptionsByTopicResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListTagsForResourceAsyncHelper(const Model::ListTagsForResourceRequest& request, const ListTagsForResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListTopicsAsyncHelper(const Model::ListTopicsRequest& request, const ListTopicsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void OptInPhoneNumberAsyncHelper(const Model::OptInPhoneNumberRequest& request, const OptInPhoneNumberResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void PublishAsyncHelper(const Model::PublishRequest& request, const PublishResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void PublishBatchAsyncHelper(const Model::PublishBatchRequest& request, const PublishBatchResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RemovePermissionAsyncHelper(const Model::RemovePermissionRequest& request, const RemovePermissionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void SetEndpointAttributesAsyncHelper(const Model::SetEndpointAttributesRequest& request, const SetEndpointAttributesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void SetPlatformApplicationAttributesAsyncHelper(const Model::SetPlatformApplicationAttributesRequest& request, const SetPlatformApplicationAttributesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -1705,6 +2185,7 @@ namespace Model
         void TagResourceAsyncHelper(const Model::TagResourceRequest& request, const TagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UnsubscribeAsyncHelper(const Model::UnsubscribeRequest& request, const UnsubscribeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UntagResourceAsyncHelper(const Model::UntagResourceRequest& request, const UntagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void VerifySMSSandboxPhoneNumberAsyncHelper(const Model::VerifySMSSandboxPhoneNumberRequest& request, const VerifySMSSandboxPhoneNumberResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
 
         Aws::String m_uri;
         Aws::String m_configScheme;

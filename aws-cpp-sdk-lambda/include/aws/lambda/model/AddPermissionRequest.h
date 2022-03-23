@@ -250,107 +250,123 @@ namespace Model
 
 
     /**
-     * <p>The AWS service or account that invokes the function. If you specify a
-     * service, use <code>SourceArn</code> or <code>SourceAccount</code> to limit who
-     * can invoke the function through that service.</p>
+     * <p>The Amazon Web Services service or account that invokes the function. If you
+     * specify a service, use <code>SourceArn</code> or <code>SourceAccount</code> to
+     * limit who can invoke the function through that service.</p>
      */
     inline const Aws::String& GetPrincipal() const{ return m_principal; }
 
     /**
-     * <p>The AWS service or account that invokes the function. If you specify a
-     * service, use <code>SourceArn</code> or <code>SourceAccount</code> to limit who
-     * can invoke the function through that service.</p>
+     * <p>The Amazon Web Services service or account that invokes the function. If you
+     * specify a service, use <code>SourceArn</code> or <code>SourceAccount</code> to
+     * limit who can invoke the function through that service.</p>
      */
     inline bool PrincipalHasBeenSet() const { return m_principalHasBeenSet; }
 
     /**
-     * <p>The AWS service or account that invokes the function. If you specify a
-     * service, use <code>SourceArn</code> or <code>SourceAccount</code> to limit who
-     * can invoke the function through that service.</p>
+     * <p>The Amazon Web Services service or account that invokes the function. If you
+     * specify a service, use <code>SourceArn</code> or <code>SourceAccount</code> to
+     * limit who can invoke the function through that service.</p>
      */
     inline void SetPrincipal(const Aws::String& value) { m_principalHasBeenSet = true; m_principal = value; }
 
     /**
-     * <p>The AWS service or account that invokes the function. If you specify a
-     * service, use <code>SourceArn</code> or <code>SourceAccount</code> to limit who
-     * can invoke the function through that service.</p>
+     * <p>The Amazon Web Services service or account that invokes the function. If you
+     * specify a service, use <code>SourceArn</code> or <code>SourceAccount</code> to
+     * limit who can invoke the function through that service.</p>
      */
     inline void SetPrincipal(Aws::String&& value) { m_principalHasBeenSet = true; m_principal = std::move(value); }
 
     /**
-     * <p>The AWS service or account that invokes the function. If you specify a
-     * service, use <code>SourceArn</code> or <code>SourceAccount</code> to limit who
-     * can invoke the function through that service.</p>
+     * <p>The Amazon Web Services service or account that invokes the function. If you
+     * specify a service, use <code>SourceArn</code> or <code>SourceAccount</code> to
+     * limit who can invoke the function through that service.</p>
      */
     inline void SetPrincipal(const char* value) { m_principalHasBeenSet = true; m_principal.assign(value); }
 
     /**
-     * <p>The AWS service or account that invokes the function. If you specify a
-     * service, use <code>SourceArn</code> or <code>SourceAccount</code> to limit who
-     * can invoke the function through that service.</p>
+     * <p>The Amazon Web Services service or account that invokes the function. If you
+     * specify a service, use <code>SourceArn</code> or <code>SourceAccount</code> to
+     * limit who can invoke the function through that service.</p>
      */
     inline AddPermissionRequest& WithPrincipal(const Aws::String& value) { SetPrincipal(value); return *this;}
 
     /**
-     * <p>The AWS service or account that invokes the function. If you specify a
-     * service, use <code>SourceArn</code> or <code>SourceAccount</code> to limit who
-     * can invoke the function through that service.</p>
+     * <p>The Amazon Web Services service or account that invokes the function. If you
+     * specify a service, use <code>SourceArn</code> or <code>SourceAccount</code> to
+     * limit who can invoke the function through that service.</p>
      */
     inline AddPermissionRequest& WithPrincipal(Aws::String&& value) { SetPrincipal(std::move(value)); return *this;}
 
     /**
-     * <p>The AWS service or account that invokes the function. If you specify a
-     * service, use <code>SourceArn</code> or <code>SourceAccount</code> to limit who
-     * can invoke the function through that service.</p>
+     * <p>The Amazon Web Services service or account that invokes the function. If you
+     * specify a service, use <code>SourceArn</code> or <code>SourceAccount</code> to
+     * limit who can invoke the function through that service.</p>
      */
     inline AddPermissionRequest& WithPrincipal(const char* value) { SetPrincipal(value); return *this;}
 
 
     /**
-     * <p>For AWS services, the ARN of the AWS resource that invokes the function. For
-     * example, an Amazon S3 bucket or Amazon SNS topic.</p>
+     * <p>For Amazon Web Services services, the ARN of the Amazon Web Services resource
+     * that invokes the function. For example, an Amazon S3 bucket or Amazon SNS
+     * topic.</p> <p>Note that Lambda configures the comparison using the
+     * <code>StringLike</code> operator.</p>
      */
     inline const Aws::String& GetSourceArn() const{ return m_sourceArn; }
 
     /**
-     * <p>For AWS services, the ARN of the AWS resource that invokes the function. For
-     * example, an Amazon S3 bucket or Amazon SNS topic.</p>
+     * <p>For Amazon Web Services services, the ARN of the Amazon Web Services resource
+     * that invokes the function. For example, an Amazon S3 bucket or Amazon SNS
+     * topic.</p> <p>Note that Lambda configures the comparison using the
+     * <code>StringLike</code> operator.</p>
      */
     inline bool SourceArnHasBeenSet() const { return m_sourceArnHasBeenSet; }
 
     /**
-     * <p>For AWS services, the ARN of the AWS resource that invokes the function. For
-     * example, an Amazon S3 bucket or Amazon SNS topic.</p>
+     * <p>For Amazon Web Services services, the ARN of the Amazon Web Services resource
+     * that invokes the function. For example, an Amazon S3 bucket or Amazon SNS
+     * topic.</p> <p>Note that Lambda configures the comparison using the
+     * <code>StringLike</code> operator.</p>
      */
     inline void SetSourceArn(const Aws::String& value) { m_sourceArnHasBeenSet = true; m_sourceArn = value; }
 
     /**
-     * <p>For AWS services, the ARN of the AWS resource that invokes the function. For
-     * example, an Amazon S3 bucket or Amazon SNS topic.</p>
+     * <p>For Amazon Web Services services, the ARN of the Amazon Web Services resource
+     * that invokes the function. For example, an Amazon S3 bucket or Amazon SNS
+     * topic.</p> <p>Note that Lambda configures the comparison using the
+     * <code>StringLike</code> operator.</p>
      */
     inline void SetSourceArn(Aws::String&& value) { m_sourceArnHasBeenSet = true; m_sourceArn = std::move(value); }
 
     /**
-     * <p>For AWS services, the ARN of the AWS resource that invokes the function. For
-     * example, an Amazon S3 bucket or Amazon SNS topic.</p>
+     * <p>For Amazon Web Services services, the ARN of the Amazon Web Services resource
+     * that invokes the function. For example, an Amazon S3 bucket or Amazon SNS
+     * topic.</p> <p>Note that Lambda configures the comparison using the
+     * <code>StringLike</code> operator.</p>
      */
     inline void SetSourceArn(const char* value) { m_sourceArnHasBeenSet = true; m_sourceArn.assign(value); }
 
     /**
-     * <p>For AWS services, the ARN of the AWS resource that invokes the function. For
-     * example, an Amazon S3 bucket or Amazon SNS topic.</p>
+     * <p>For Amazon Web Services services, the ARN of the Amazon Web Services resource
+     * that invokes the function. For example, an Amazon S3 bucket or Amazon SNS
+     * topic.</p> <p>Note that Lambda configures the comparison using the
+     * <code>StringLike</code> operator.</p>
      */
     inline AddPermissionRequest& WithSourceArn(const Aws::String& value) { SetSourceArn(value); return *this;}
 
     /**
-     * <p>For AWS services, the ARN of the AWS resource that invokes the function. For
-     * example, an Amazon S3 bucket or Amazon SNS topic.</p>
+     * <p>For Amazon Web Services services, the ARN of the Amazon Web Services resource
+     * that invokes the function. For example, an Amazon S3 bucket or Amazon SNS
+     * topic.</p> <p>Note that Lambda configures the comparison using the
+     * <code>StringLike</code> operator.</p>
      */
     inline AddPermissionRequest& WithSourceArn(Aws::String&& value) { SetSourceArn(std::move(value)); return *this;}
 
     /**
-     * <p>For AWS services, the ARN of the AWS resource that invokes the function. For
-     * example, an Amazon S3 bucket or Amazon SNS topic.</p>
+     * <p>For Amazon Web Services services, the ARN of the Amazon Web Services resource
+     * that invokes the function. For example, an Amazon S3 bucket or Amazon SNS
+     * topic.</p> <p>Note that Lambda configures the comparison using the
+     * <code>StringLike</code> operator.</p>
      */
     inline AddPermissionRequest& WithSourceArn(const char* value) { SetSourceArn(value); return *this;}
 
@@ -574,6 +590,55 @@ namespace Model
      */
     inline AddPermissionRequest& WithRevisionId(const char* value) { SetRevisionId(value); return *this;}
 
+
+    /**
+     * <p>The identifier for your organization in Organizations. Use this to grant
+     * permissions to all the Amazon Web Services accounts under this organization.</p>
+     */
+    inline const Aws::String& GetPrincipalOrgID() const{ return m_principalOrgID; }
+
+    /**
+     * <p>The identifier for your organization in Organizations. Use this to grant
+     * permissions to all the Amazon Web Services accounts under this organization.</p>
+     */
+    inline bool PrincipalOrgIDHasBeenSet() const { return m_principalOrgIDHasBeenSet; }
+
+    /**
+     * <p>The identifier for your organization in Organizations. Use this to grant
+     * permissions to all the Amazon Web Services accounts under this organization.</p>
+     */
+    inline void SetPrincipalOrgID(const Aws::String& value) { m_principalOrgIDHasBeenSet = true; m_principalOrgID = value; }
+
+    /**
+     * <p>The identifier for your organization in Organizations. Use this to grant
+     * permissions to all the Amazon Web Services accounts under this organization.</p>
+     */
+    inline void SetPrincipalOrgID(Aws::String&& value) { m_principalOrgIDHasBeenSet = true; m_principalOrgID = std::move(value); }
+
+    /**
+     * <p>The identifier for your organization in Organizations. Use this to grant
+     * permissions to all the Amazon Web Services accounts under this organization.</p>
+     */
+    inline void SetPrincipalOrgID(const char* value) { m_principalOrgIDHasBeenSet = true; m_principalOrgID.assign(value); }
+
+    /**
+     * <p>The identifier for your organization in Organizations. Use this to grant
+     * permissions to all the Amazon Web Services accounts under this organization.</p>
+     */
+    inline AddPermissionRequest& WithPrincipalOrgID(const Aws::String& value) { SetPrincipalOrgID(value); return *this;}
+
+    /**
+     * <p>The identifier for your organization in Organizations. Use this to grant
+     * permissions to all the Amazon Web Services accounts under this organization.</p>
+     */
+    inline AddPermissionRequest& WithPrincipalOrgID(Aws::String&& value) { SetPrincipalOrgID(std::move(value)); return *this;}
+
+    /**
+     * <p>The identifier for your organization in Organizations. Use this to grant
+     * permissions to all the Amazon Web Services accounts under this organization.</p>
+     */
+    inline AddPermissionRequest& WithPrincipalOrgID(const char* value) { SetPrincipalOrgID(value); return *this;}
+
   private:
 
     Aws::String m_functionName;
@@ -602,6 +667,9 @@ namespace Model
 
     Aws::String m_revisionId;
     bool m_revisionIdHasBeenSet;
+
+    Aws::String m_principalOrgID;
+    bool m_principalOrgIDHasBeenSet;
   };
 
 } // namespace Model

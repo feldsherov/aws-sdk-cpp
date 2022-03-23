@@ -19,6 +19,7 @@
 #include <aws/sagemaker/model/TensorBoardOutputConfig.h>
 #include <aws/sagemaker/model/ExperimentConfig.h>
 #include <aws/sagemaker/model/ProfilerConfig.h>
+#include <aws/sagemaker/model/RetryStrategy.h>
 #include <aws/sagemaker/model/Channel.h>
 #include <aws/sagemaker/model/Tag.h>
 #include <aws/sagemaker/model/DebugRuleConfiguration.h>
@@ -51,50 +52,50 @@ namespace Model
 
 
     /**
-     * <p>The name of the training job. The name must be unique within an AWS Region in
-     * an AWS account. </p>
+     * <p>The name of the training job. The name must be unique within an Amazon Web
+     * Services Region in an Amazon Web Services account. </p>
      */
     inline const Aws::String& GetTrainingJobName() const{ return m_trainingJobName; }
 
     /**
-     * <p>The name of the training job. The name must be unique within an AWS Region in
-     * an AWS account. </p>
+     * <p>The name of the training job. The name must be unique within an Amazon Web
+     * Services Region in an Amazon Web Services account. </p>
      */
     inline bool TrainingJobNameHasBeenSet() const { return m_trainingJobNameHasBeenSet; }
 
     /**
-     * <p>The name of the training job. The name must be unique within an AWS Region in
-     * an AWS account. </p>
+     * <p>The name of the training job. The name must be unique within an Amazon Web
+     * Services Region in an Amazon Web Services account. </p>
      */
     inline void SetTrainingJobName(const Aws::String& value) { m_trainingJobNameHasBeenSet = true; m_trainingJobName = value; }
 
     /**
-     * <p>The name of the training job. The name must be unique within an AWS Region in
-     * an AWS account. </p>
+     * <p>The name of the training job. The name must be unique within an Amazon Web
+     * Services Region in an Amazon Web Services account. </p>
      */
     inline void SetTrainingJobName(Aws::String&& value) { m_trainingJobNameHasBeenSet = true; m_trainingJobName = std::move(value); }
 
     /**
-     * <p>The name of the training job. The name must be unique within an AWS Region in
-     * an AWS account. </p>
+     * <p>The name of the training job. The name must be unique within an Amazon Web
+     * Services Region in an Amazon Web Services account. </p>
      */
     inline void SetTrainingJobName(const char* value) { m_trainingJobNameHasBeenSet = true; m_trainingJobName.assign(value); }
 
     /**
-     * <p>The name of the training job. The name must be unique within an AWS Region in
-     * an AWS account. </p>
+     * <p>The name of the training job. The name must be unique within an Amazon Web
+     * Services Region in an Amazon Web Services account. </p>
      */
     inline CreateTrainingJobRequest& WithTrainingJobName(const Aws::String& value) { SetTrainingJobName(value); return *this;}
 
     /**
-     * <p>The name of the training job. The name must be unique within an AWS Region in
-     * an AWS account. </p>
+     * <p>The name of the training job. The name must be unique within an Amazon Web
+     * Services Region in an Amazon Web Services account. </p>
      */
     inline CreateTrainingJobRequest& WithTrainingJobName(Aws::String&& value) { SetTrainingJobName(std::move(value)); return *this;}
 
     /**
-     * <p>The name of the training job. The name must be unique within an AWS Region in
-     * an AWS account. </p>
+     * <p>The name of the training job. The name must be unique within an Amazon Web
+     * Services Region in an Amazon Web Services account. </p>
      */
     inline CreateTrainingJobRequest& WithTrainingJobName(const char* value) { SetTrainingJobName(value); return *this;}
 
@@ -728,135 +729,141 @@ namespace Model
 
 
     /**
-     * <p>Specifies a limit to how long a model training job can run. When the job
-     * reaches the time limit, Amazon SageMaker ends the training job. Use this API to
-     * cap model training costs.</p> <p>To stop a job, Amazon SageMaker sends the
-     * algorithm the <code>SIGTERM</code> signal, which delays job termination for 120
-     * seconds. Algorithms can use this 120-second window to save the model artifacts,
-     * so the results of training are not lost. </p>
+     * <p>Specifies a limit to how long a model training job can run. It also specifies
+     * how long a managed Spot training job has to complete. When the job reaches the
+     * time limit, Amazon SageMaker ends the training job. Use this API to cap model
+     * training costs.</p> <p>To stop a job, Amazon SageMaker sends the algorithm the
+     * <code>SIGTERM</code> signal, which delays job termination for 120 seconds.
+     * Algorithms can use this 120-second window to save the model artifacts, so the
+     * results of training are not lost. </p>
      */
     inline const StoppingCondition& GetStoppingCondition() const{ return m_stoppingCondition; }
 
     /**
-     * <p>Specifies a limit to how long a model training job can run. When the job
-     * reaches the time limit, Amazon SageMaker ends the training job. Use this API to
-     * cap model training costs.</p> <p>To stop a job, Amazon SageMaker sends the
-     * algorithm the <code>SIGTERM</code> signal, which delays job termination for 120
-     * seconds. Algorithms can use this 120-second window to save the model artifacts,
-     * so the results of training are not lost. </p>
+     * <p>Specifies a limit to how long a model training job can run. It also specifies
+     * how long a managed Spot training job has to complete. When the job reaches the
+     * time limit, Amazon SageMaker ends the training job. Use this API to cap model
+     * training costs.</p> <p>To stop a job, Amazon SageMaker sends the algorithm the
+     * <code>SIGTERM</code> signal, which delays job termination for 120 seconds.
+     * Algorithms can use this 120-second window to save the model artifacts, so the
+     * results of training are not lost. </p>
      */
     inline bool StoppingConditionHasBeenSet() const { return m_stoppingConditionHasBeenSet; }
 
     /**
-     * <p>Specifies a limit to how long a model training job can run. When the job
-     * reaches the time limit, Amazon SageMaker ends the training job. Use this API to
-     * cap model training costs.</p> <p>To stop a job, Amazon SageMaker sends the
-     * algorithm the <code>SIGTERM</code> signal, which delays job termination for 120
-     * seconds. Algorithms can use this 120-second window to save the model artifacts,
-     * so the results of training are not lost. </p>
+     * <p>Specifies a limit to how long a model training job can run. It also specifies
+     * how long a managed Spot training job has to complete. When the job reaches the
+     * time limit, Amazon SageMaker ends the training job. Use this API to cap model
+     * training costs.</p> <p>To stop a job, Amazon SageMaker sends the algorithm the
+     * <code>SIGTERM</code> signal, which delays job termination for 120 seconds.
+     * Algorithms can use this 120-second window to save the model artifacts, so the
+     * results of training are not lost. </p>
      */
     inline void SetStoppingCondition(const StoppingCondition& value) { m_stoppingConditionHasBeenSet = true; m_stoppingCondition = value; }
 
     /**
-     * <p>Specifies a limit to how long a model training job can run. When the job
-     * reaches the time limit, Amazon SageMaker ends the training job. Use this API to
-     * cap model training costs.</p> <p>To stop a job, Amazon SageMaker sends the
-     * algorithm the <code>SIGTERM</code> signal, which delays job termination for 120
-     * seconds. Algorithms can use this 120-second window to save the model artifacts,
-     * so the results of training are not lost. </p>
+     * <p>Specifies a limit to how long a model training job can run. It also specifies
+     * how long a managed Spot training job has to complete. When the job reaches the
+     * time limit, Amazon SageMaker ends the training job. Use this API to cap model
+     * training costs.</p> <p>To stop a job, Amazon SageMaker sends the algorithm the
+     * <code>SIGTERM</code> signal, which delays job termination for 120 seconds.
+     * Algorithms can use this 120-second window to save the model artifacts, so the
+     * results of training are not lost. </p>
      */
     inline void SetStoppingCondition(StoppingCondition&& value) { m_stoppingConditionHasBeenSet = true; m_stoppingCondition = std::move(value); }
 
     /**
-     * <p>Specifies a limit to how long a model training job can run. When the job
-     * reaches the time limit, Amazon SageMaker ends the training job. Use this API to
-     * cap model training costs.</p> <p>To stop a job, Amazon SageMaker sends the
-     * algorithm the <code>SIGTERM</code> signal, which delays job termination for 120
-     * seconds. Algorithms can use this 120-second window to save the model artifacts,
-     * so the results of training are not lost. </p>
+     * <p>Specifies a limit to how long a model training job can run. It also specifies
+     * how long a managed Spot training job has to complete. When the job reaches the
+     * time limit, Amazon SageMaker ends the training job. Use this API to cap model
+     * training costs.</p> <p>To stop a job, Amazon SageMaker sends the algorithm the
+     * <code>SIGTERM</code> signal, which delays job termination for 120 seconds.
+     * Algorithms can use this 120-second window to save the model artifacts, so the
+     * results of training are not lost. </p>
      */
     inline CreateTrainingJobRequest& WithStoppingCondition(const StoppingCondition& value) { SetStoppingCondition(value); return *this;}
 
     /**
-     * <p>Specifies a limit to how long a model training job can run. When the job
-     * reaches the time limit, Amazon SageMaker ends the training job. Use this API to
-     * cap model training costs.</p> <p>To stop a job, Amazon SageMaker sends the
-     * algorithm the <code>SIGTERM</code> signal, which delays job termination for 120
-     * seconds. Algorithms can use this 120-second window to save the model artifacts,
-     * so the results of training are not lost. </p>
+     * <p>Specifies a limit to how long a model training job can run. It also specifies
+     * how long a managed Spot training job has to complete. When the job reaches the
+     * time limit, Amazon SageMaker ends the training job. Use this API to cap model
+     * training costs.</p> <p>To stop a job, Amazon SageMaker sends the algorithm the
+     * <code>SIGTERM</code> signal, which delays job termination for 120 seconds.
+     * Algorithms can use this 120-second window to save the model artifacts, so the
+     * results of training are not lost. </p>
      */
     inline CreateTrainingJobRequest& WithStoppingCondition(StoppingCondition&& value) { SetStoppingCondition(std::move(value)); return *this;}
 
 
     /**
-     * <p>An array of key-value pairs. You can use tags to categorize your AWS
-     * resources in different ways, for example, by purpose, owner, or environment. For
-     * more information, see <a
+     * <p>An array of key-value pairs. You can use tags to categorize your Amazon Web
+     * Services resources in different ways, for example, by purpose, owner, or
+     * environment. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
-     * AWS Resources</a>.</p>
+     * Amazon Web Services Resources</a>.</p>
      */
     inline const Aws::Vector<Tag>& GetTags() const{ return m_tags; }
 
     /**
-     * <p>An array of key-value pairs. You can use tags to categorize your AWS
-     * resources in different ways, for example, by purpose, owner, or environment. For
-     * more information, see <a
+     * <p>An array of key-value pairs. You can use tags to categorize your Amazon Web
+     * Services resources in different ways, for example, by purpose, owner, or
+     * environment. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
-     * AWS Resources</a>.</p>
+     * Amazon Web Services Resources</a>.</p>
      */
     inline bool TagsHasBeenSet() const { return m_tagsHasBeenSet; }
 
     /**
-     * <p>An array of key-value pairs. You can use tags to categorize your AWS
-     * resources in different ways, for example, by purpose, owner, or environment. For
-     * more information, see <a
+     * <p>An array of key-value pairs. You can use tags to categorize your Amazon Web
+     * Services resources in different ways, for example, by purpose, owner, or
+     * environment. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
-     * AWS Resources</a>.</p>
+     * Amazon Web Services Resources</a>.</p>
      */
     inline void SetTags(const Aws::Vector<Tag>& value) { m_tagsHasBeenSet = true; m_tags = value; }
 
     /**
-     * <p>An array of key-value pairs. You can use tags to categorize your AWS
-     * resources in different ways, for example, by purpose, owner, or environment. For
-     * more information, see <a
+     * <p>An array of key-value pairs. You can use tags to categorize your Amazon Web
+     * Services resources in different ways, for example, by purpose, owner, or
+     * environment. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
-     * AWS Resources</a>.</p>
+     * Amazon Web Services Resources</a>.</p>
      */
     inline void SetTags(Aws::Vector<Tag>&& value) { m_tagsHasBeenSet = true; m_tags = std::move(value); }
 
     /**
-     * <p>An array of key-value pairs. You can use tags to categorize your AWS
-     * resources in different ways, for example, by purpose, owner, or environment. For
-     * more information, see <a
+     * <p>An array of key-value pairs. You can use tags to categorize your Amazon Web
+     * Services resources in different ways, for example, by purpose, owner, or
+     * environment. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
-     * AWS Resources</a>.</p>
+     * Amazon Web Services Resources</a>.</p>
      */
     inline CreateTrainingJobRequest& WithTags(const Aws::Vector<Tag>& value) { SetTags(value); return *this;}
 
     /**
-     * <p>An array of key-value pairs. You can use tags to categorize your AWS
-     * resources in different ways, for example, by purpose, owner, or environment. For
-     * more information, see <a
+     * <p>An array of key-value pairs. You can use tags to categorize your Amazon Web
+     * Services resources in different ways, for example, by purpose, owner, or
+     * environment. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
-     * AWS Resources</a>.</p>
+     * Amazon Web Services Resources</a>.</p>
      */
     inline CreateTrainingJobRequest& WithTags(Aws::Vector<Tag>&& value) { SetTags(std::move(value)); return *this;}
 
     /**
-     * <p>An array of key-value pairs. You can use tags to categorize your AWS
-     * resources in different ways, for example, by purpose, owner, or environment. For
-     * more information, see <a
+     * <p>An array of key-value pairs. You can use tags to categorize your Amazon Web
+     * Services resources in different ways, for example, by purpose, owner, or
+     * environment. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
-     * AWS Resources</a>.</p>
+     * Amazon Web Services Resources</a>.</p>
      */
     inline CreateTrainingJobRequest& AddTags(const Tag& value) { m_tagsHasBeenSet = true; m_tags.push_back(value); return *this; }
 
     /**
-     * <p>An array of key-value pairs. You can use tags to categorize your AWS
-     * resources in different ways, for example, by purpose, owner, or environment. For
-     * more information, see <a
+     * <p>An array of key-value pairs. You can use tags to categorize your Amazon Web
+     * Services resources in different ways, for example, by purpose, owner, or
+     * environment. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
-     * AWS Resources</a>.</p>
+     * Amazon Web Services Resources</a>.</p>
      */
     inline CreateTrainingJobRequest& AddTags(Tag&& value) { m_tagsHasBeenSet = true; m_tags.push_back(std::move(value)); return *this; }
 
@@ -1214,6 +1221,109 @@ namespace Model
      */
     inline CreateTrainingJobRequest& AddProfilerRuleConfigurations(ProfilerRuleConfiguration&& value) { m_profilerRuleConfigurationsHasBeenSet = true; m_profilerRuleConfigurations.push_back(std::move(value)); return *this; }
 
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline const Aws::Map<Aws::String, Aws::String>& GetEnvironment() const{ return m_environment; }
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline bool EnvironmentHasBeenSet() const { return m_environmentHasBeenSet; }
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline void SetEnvironment(const Aws::Map<Aws::String, Aws::String>& value) { m_environmentHasBeenSet = true; m_environment = value; }
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline void SetEnvironment(Aws::Map<Aws::String, Aws::String>&& value) { m_environmentHasBeenSet = true; m_environment = std::move(value); }
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline CreateTrainingJobRequest& WithEnvironment(const Aws::Map<Aws::String, Aws::String>& value) { SetEnvironment(value); return *this;}
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline CreateTrainingJobRequest& WithEnvironment(Aws::Map<Aws::String, Aws::String>&& value) { SetEnvironment(std::move(value)); return *this;}
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline CreateTrainingJobRequest& AddEnvironment(const Aws::String& key, const Aws::String& value) { m_environmentHasBeenSet = true; m_environment.emplace(key, value); return *this; }
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline CreateTrainingJobRequest& AddEnvironment(Aws::String&& key, const Aws::String& value) { m_environmentHasBeenSet = true; m_environment.emplace(std::move(key), value); return *this; }
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline CreateTrainingJobRequest& AddEnvironment(const Aws::String& key, Aws::String&& value) { m_environmentHasBeenSet = true; m_environment.emplace(key, std::move(value)); return *this; }
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline CreateTrainingJobRequest& AddEnvironment(Aws::String&& key, Aws::String&& value) { m_environmentHasBeenSet = true; m_environment.emplace(std::move(key), std::move(value)); return *this; }
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline CreateTrainingJobRequest& AddEnvironment(const char* key, Aws::String&& value) { m_environmentHasBeenSet = true; m_environment.emplace(key, std::move(value)); return *this; }
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline CreateTrainingJobRequest& AddEnvironment(Aws::String&& key, const char* value) { m_environmentHasBeenSet = true; m_environment.emplace(std::move(key), value); return *this; }
+
+    /**
+     * <p>The environment variables to set in the Docker container.</p>
+     */
+    inline CreateTrainingJobRequest& AddEnvironment(const char* key, const char* value) { m_environmentHasBeenSet = true; m_environment.emplace(key, value); return *this; }
+
+
+    /**
+     * <p>The number of times to retry the job when the job fails due to an
+     * <code>InternalServerError</code>.</p>
+     */
+    inline const RetryStrategy& GetRetryStrategy() const{ return m_retryStrategy; }
+
+    /**
+     * <p>The number of times to retry the job when the job fails due to an
+     * <code>InternalServerError</code>.</p>
+     */
+    inline bool RetryStrategyHasBeenSet() const { return m_retryStrategyHasBeenSet; }
+
+    /**
+     * <p>The number of times to retry the job when the job fails due to an
+     * <code>InternalServerError</code>.</p>
+     */
+    inline void SetRetryStrategy(const RetryStrategy& value) { m_retryStrategyHasBeenSet = true; m_retryStrategy = value; }
+
+    /**
+     * <p>The number of times to retry the job when the job fails due to an
+     * <code>InternalServerError</code>.</p>
+     */
+    inline void SetRetryStrategy(RetryStrategy&& value) { m_retryStrategyHasBeenSet = true; m_retryStrategy = std::move(value); }
+
+    /**
+     * <p>The number of times to retry the job when the job fails due to an
+     * <code>InternalServerError</code>.</p>
+     */
+    inline CreateTrainingJobRequest& WithRetryStrategy(const RetryStrategy& value) { SetRetryStrategy(value); return *this;}
+
+    /**
+     * <p>The number of times to retry the job when the job fails due to an
+     * <code>InternalServerError</code>.</p>
+     */
+    inline CreateTrainingJobRequest& WithRetryStrategy(RetryStrategy&& value) { SetRetryStrategy(std::move(value)); return *this;}
+
   private:
 
     Aws::String m_trainingJobName;
@@ -1275,6 +1385,12 @@ namespace Model
 
     Aws::Vector<ProfilerRuleConfiguration> m_profilerRuleConfigurations;
     bool m_profilerRuleConfigurationsHasBeenSet;
+
+    Aws::Map<Aws::String, Aws::String> m_environment;
+    bool m_environmentHasBeenSet;
+
+    RetryStrategy m_retryStrategy;
+    bool m_retryStrategyHasBeenSet;
   };
 
 } // namespace Model

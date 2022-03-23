@@ -14,6 +14,7 @@
 #include <aws/kendra/model/IndexStatistics.h>
 #include <aws/kendra/model/CapacityUnitsConfiguration.h>
 #include <aws/kendra/model/UserContextPolicy.h>
+#include <aws/kendra/model/UserGroupResolutionConfiguration.h>
 #include <aws/kendra/model/DocumentMetadataConfiguration.h>
 #include <aws/kendra/model/UserTokenConfiguration.h>
 #include <utility>
@@ -189,32 +190,32 @@ namespace Model
 
 
     /**
-     * <p>The identifier of the AWS KMS customer master key (CMK) used to encrypt your
-     * data. Amazon Kendra doesn't support asymmetric CMKs.</p>
+     * <p>The identifier of the KMScustomer master key (CMK) used to encrypt your data.
+     * Amazon Kendra doesn't support asymmetric CMKs.</p>
      */
     inline const ServerSideEncryptionConfiguration& GetServerSideEncryptionConfiguration() const{ return m_serverSideEncryptionConfiguration; }
 
     /**
-     * <p>The identifier of the AWS KMS customer master key (CMK) used to encrypt your
-     * data. Amazon Kendra doesn't support asymmetric CMKs.</p>
+     * <p>The identifier of the KMScustomer master key (CMK) used to encrypt your data.
+     * Amazon Kendra doesn't support asymmetric CMKs.</p>
      */
     inline void SetServerSideEncryptionConfiguration(const ServerSideEncryptionConfiguration& value) { m_serverSideEncryptionConfiguration = value; }
 
     /**
-     * <p>The identifier of the AWS KMS customer master key (CMK) used to encrypt your
-     * data. Amazon Kendra doesn't support asymmetric CMKs.</p>
+     * <p>The identifier of the KMScustomer master key (CMK) used to encrypt your data.
+     * Amazon Kendra doesn't support asymmetric CMKs.</p>
      */
     inline void SetServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration&& value) { m_serverSideEncryptionConfiguration = std::move(value); }
 
     /**
-     * <p>The identifier of the AWS KMS customer master key (CMK) used to encrypt your
-     * data. Amazon Kendra doesn't support asymmetric CMKs.</p>
+     * <p>The identifier of the KMScustomer master key (CMK) used to encrypt your data.
+     * Amazon Kendra doesn't support asymmetric CMKs.</p>
      */
     inline DescribeIndexResult& WithServerSideEncryptionConfiguration(const ServerSideEncryptionConfiguration& value) { SetServerSideEncryptionConfiguration(value); return *this;}
 
     /**
-     * <p>The identifier of the AWS KMS customer master key (CMK) used to encrypt your
-     * data. Amazon Kendra doesn't support asymmetric CMKs.</p>
+     * <p>The identifier of the KMScustomer master key (CMK) used to encrypt your data.
+     * Amazon Kendra doesn't support asymmetric CMKs.</p>
      */
     inline DescribeIndexResult& WithServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration&& value) { SetServerSideEncryptionConfiguration(std::move(value)); return *this;}
 
@@ -466,7 +467,7 @@ namespace Model
 
 
     /**
-     * <p>For enterprise edtion indexes, you can choose to use additional capacity to
+     * <p>For Enterprise edition indexes, you can choose to use additional capacity to
      * meet the needs of your application. This contains the capacity units used for
      * the index. A 0 for the query capacity or the storage capacity indicates that the
      * index is using the default capacity for the index.</p>
@@ -474,7 +475,7 @@ namespace Model
     inline const CapacityUnitsConfiguration& GetCapacityUnits() const{ return m_capacityUnits; }
 
     /**
-     * <p>For enterprise edtion indexes, you can choose to use additional capacity to
+     * <p>For Enterprise edition indexes, you can choose to use additional capacity to
      * meet the needs of your application. This contains the capacity units used for
      * the index. A 0 for the query capacity or the storage capacity indicates that the
      * index is using the default capacity for the index.</p>
@@ -482,7 +483,7 @@ namespace Model
     inline void SetCapacityUnits(const CapacityUnitsConfiguration& value) { m_capacityUnits = value; }
 
     /**
-     * <p>For enterprise edtion indexes, you can choose to use additional capacity to
+     * <p>For Enterprise edition indexes, you can choose to use additional capacity to
      * meet the needs of your application. This contains the capacity units used for
      * the index. A 0 for the query capacity or the storage capacity indicates that the
      * index is using the default capacity for the index.</p>
@@ -490,7 +491,7 @@ namespace Model
     inline void SetCapacityUnits(CapacityUnitsConfiguration&& value) { m_capacityUnits = std::move(value); }
 
     /**
-     * <p>For enterprise edtion indexes, you can choose to use additional capacity to
+     * <p>For Enterprise edition indexes, you can choose to use additional capacity to
      * meet the needs of your application. This contains the capacity units used for
      * the index. A 0 for the query capacity or the storage capacity indicates that the
      * index is using the default capacity for the index.</p>
@@ -498,7 +499,7 @@ namespace Model
     inline DescribeIndexResult& WithCapacityUnits(const CapacityUnitsConfiguration& value) { SetCapacityUnits(value); return *this;}
 
     /**
-     * <p>For enterprise edtion indexes, you can choose to use additional capacity to
+     * <p>For Enterprise edition indexes, you can choose to use additional capacity to
      * meet the needs of your application. This contains the capacity units used for
      * the index. A 0 for the query capacity or the storage capacity indicates that the
      * index is using the default capacity for the index.</p>
@@ -567,6 +568,42 @@ namespace Model
      */
     inline DescribeIndexResult& WithUserContextPolicy(UserContextPolicy&& value) { SetUserContextPolicy(std::move(value)); return *this;}
 
+
+    /**
+     * <p>Shows whether you have enabled the configuration for fetching access levels
+     * of groups and users from an Amazon Web Services Single Sign On identity
+     * source.</p>
+     */
+    inline const UserGroupResolutionConfiguration& GetUserGroupResolutionConfiguration() const{ return m_userGroupResolutionConfiguration; }
+
+    /**
+     * <p>Shows whether you have enabled the configuration for fetching access levels
+     * of groups and users from an Amazon Web Services Single Sign On identity
+     * source.</p>
+     */
+    inline void SetUserGroupResolutionConfiguration(const UserGroupResolutionConfiguration& value) { m_userGroupResolutionConfiguration = value; }
+
+    /**
+     * <p>Shows whether you have enabled the configuration for fetching access levels
+     * of groups and users from an Amazon Web Services Single Sign On identity
+     * source.</p>
+     */
+    inline void SetUserGroupResolutionConfiguration(UserGroupResolutionConfiguration&& value) { m_userGroupResolutionConfiguration = std::move(value); }
+
+    /**
+     * <p>Shows whether you have enabled the configuration for fetching access levels
+     * of groups and users from an Amazon Web Services Single Sign On identity
+     * source.</p>
+     */
+    inline DescribeIndexResult& WithUserGroupResolutionConfiguration(const UserGroupResolutionConfiguration& value) { SetUserGroupResolutionConfiguration(value); return *this;}
+
+    /**
+     * <p>Shows whether you have enabled the configuration for fetching access levels
+     * of groups and users from an Amazon Web Services Single Sign On identity
+     * source.</p>
+     */
+    inline DescribeIndexResult& WithUserGroupResolutionConfiguration(UserGroupResolutionConfiguration&& value) { SetUserGroupResolutionConfiguration(std::move(value)); return *this;}
+
   private:
 
     Aws::String m_name;
@@ -598,6 +635,8 @@ namespace Model
     Aws::Vector<UserTokenConfiguration> m_userTokenConfigurations;
 
     UserContextPolicy m_userContextPolicy;
+
+    UserGroupResolutionConfiguration m_userGroupResolutionConfiguration;
   };
 
 } // namespace Model

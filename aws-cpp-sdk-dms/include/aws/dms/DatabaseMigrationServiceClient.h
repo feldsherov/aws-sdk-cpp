@@ -31,6 +31,7 @@
 #include <aws/dms/model/DescribeApplicableIndividualAssessmentsResult.h>
 #include <aws/dms/model/DescribeCertificatesResult.h>
 #include <aws/dms/model/DescribeConnectionsResult.h>
+#include <aws/dms/model/DescribeEndpointSettingsResult.h>
 #include <aws/dms/model/DescribeEndpointTypesResult.h>
 #include <aws/dms/model/DescribeEndpointsResult.h>
 #include <aws/dms/model/DescribeEventCategoriesResult.h>
@@ -124,6 +125,7 @@ namespace Model
         class DescribeApplicableIndividualAssessmentsRequest;
         class DescribeCertificatesRequest;
         class DescribeConnectionsRequest;
+        class DescribeEndpointSettingsRequest;
         class DescribeEndpointTypesRequest;
         class DescribeEndpointsRequest;
         class DescribeEventCategoriesRequest;
@@ -179,6 +181,7 @@ namespace Model
         typedef Aws::Utils::Outcome<DescribeApplicableIndividualAssessmentsResult, DatabaseMigrationServiceError> DescribeApplicableIndividualAssessmentsOutcome;
         typedef Aws::Utils::Outcome<DescribeCertificatesResult, DatabaseMigrationServiceError> DescribeCertificatesOutcome;
         typedef Aws::Utils::Outcome<DescribeConnectionsResult, DatabaseMigrationServiceError> DescribeConnectionsOutcome;
+        typedef Aws::Utils::Outcome<DescribeEndpointSettingsResult, DatabaseMigrationServiceError> DescribeEndpointSettingsOutcome;
         typedef Aws::Utils::Outcome<DescribeEndpointTypesResult, DatabaseMigrationServiceError> DescribeEndpointTypesOutcome;
         typedef Aws::Utils::Outcome<DescribeEndpointsResult, DatabaseMigrationServiceError> DescribeEndpointsOutcome;
         typedef Aws::Utils::Outcome<DescribeEventCategoriesResult, DatabaseMigrationServiceError> DescribeEventCategoriesOutcome;
@@ -234,6 +237,7 @@ namespace Model
         typedef std::future<DescribeApplicableIndividualAssessmentsOutcome> DescribeApplicableIndividualAssessmentsOutcomeCallable;
         typedef std::future<DescribeCertificatesOutcome> DescribeCertificatesOutcomeCallable;
         typedef std::future<DescribeConnectionsOutcome> DescribeConnectionsOutcomeCallable;
+        typedef std::future<DescribeEndpointSettingsOutcome> DescribeEndpointSettingsOutcomeCallable;
         typedef std::future<DescribeEndpointTypesOutcome> DescribeEndpointTypesOutcomeCallable;
         typedef std::future<DescribeEndpointsOutcome> DescribeEndpointsOutcomeCallable;
         typedef std::future<DescribeEventCategoriesOutcome> DescribeEventCategoriesOutcomeCallable;
@@ -292,6 +296,7 @@ namespace Model
     typedef std::function<void(const DatabaseMigrationServiceClient*, const Model::DescribeApplicableIndividualAssessmentsRequest&, const Model::DescribeApplicableIndividualAssessmentsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeApplicableIndividualAssessmentsResponseReceivedHandler;
     typedef std::function<void(const DatabaseMigrationServiceClient*, const Model::DescribeCertificatesRequest&, const Model::DescribeCertificatesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeCertificatesResponseReceivedHandler;
     typedef std::function<void(const DatabaseMigrationServiceClient*, const Model::DescribeConnectionsRequest&, const Model::DescribeConnectionsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeConnectionsResponseReceivedHandler;
+    typedef std::function<void(const DatabaseMigrationServiceClient*, const Model::DescribeEndpointSettingsRequest&, const Model::DescribeEndpointSettingsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeEndpointSettingsResponseReceivedHandler;
     typedef std::function<void(const DatabaseMigrationServiceClient*, const Model::DescribeEndpointTypesRequest&, const Model::DescribeEndpointTypesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeEndpointTypesResponseReceivedHandler;
     typedef std::function<void(const DatabaseMigrationServiceClient*, const Model::DescribeEndpointsRequest&, const Model::DescribeEndpointsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeEndpointsResponseReceivedHandler;
     typedef std::function<void(const DatabaseMigrationServiceClient*, const Model::DescribeEventCategoriesRequest&, const Model::DescribeEventCategoriesOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DescribeEventCategoriesResponseReceivedHandler;
@@ -328,17 +333,17 @@ namespace Model
     typedef std::function<void(const DatabaseMigrationServiceClient*, const Model::TestConnectionRequest&, const Model::TestConnectionOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > TestConnectionResponseReceivedHandler;
 
   /**
-   * <fullname>AWS Database Migration Service</fullname> <p>AWS Database Migration
-   * Service (AWS DMS) can migrate your data to and from the most widely used
-   * commercial and open-source databases such as Oracle, PostgreSQL, Microsoft SQL
-   * Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL, and SAP Adaptive Server
-   * Enterprise (ASE). The service supports homogeneous migrations such as Oracle to
-   * Oracle, as well as heterogeneous migrations between different database
-   * platforms, such as Oracle to MySQL or SQL Server to PostgreSQL.</p> <p>For more
-   * information about AWS DMS, see <a
-   * href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is AWS
-   * Database Migration Service?</a> in the <i>AWS Database Migration User Guide.</i>
-   * </p>
+   * <fullname>Database Migration Service</fullname> <p>Database Migration Service
+   * (DMS) can migrate your data to and from the most widely used commercial and
+   * open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon
+   * Redshift, MariaDB, Amazon Aurora, MySQL, and SAP Adaptive Server Enterprise
+   * (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as
+   * well as heterogeneous migrations between different database platforms, such as
+   * Oracle to MySQL or SQL Server to PostgreSQL.</p> <p>For more information about
+   * DMS, see <a
+   * href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
+   * Database Migration Service?</a> in the <i>Database Migration Service User
+   * Guide.</i> </p>
    */
   class AWS_DATABASEMIGRATIONSERVICE_API DatabaseMigrationServiceClient : public Aws::Client::AWSJsonClient
   {
@@ -368,7 +373,7 @@ namespace Model
 
 
         /**
-         * <p>Adds metadata tags to an AWS DMS resource, including replication instance,
+         * <p>Adds metadata tags to an DMS resource, including replication instance,
          * endpoint, security group, and migration task. These tags can also be used with
          * cost allocation reporting to track cost associated with DMS resources, or used
          * in a Condition statement in an IAM policy for DMS. For more information, see <a
@@ -380,7 +385,7 @@ namespace Model
         virtual Model::AddTagsToResourceOutcome AddTagsToResource(const Model::AddTagsToResourceRequest& request) const;
 
         /**
-         * <p>Adds metadata tags to an AWS DMS resource, including replication instance,
+         * <p>Adds metadata tags to an DMS resource, including replication instance,
          * endpoint, security group, and migration task. These tags can also be used with
          * cost allocation reporting to track cost associated with DMS resources, or used
          * in a Condition statement in an IAM policy for DMS. For more information, see <a
@@ -394,7 +399,7 @@ namespace Model
         virtual Model::AddTagsToResourceOutcomeCallable AddTagsToResourceCallable(const Model::AddTagsToResourceRequest& request) const;
 
         /**
-         * <p>Adds metadata tags to an AWS DMS resource, including replication instance,
+         * <p>Adds metadata tags to an DMS resource, including replication instance,
          * endpoint, security group, and migration task. These tags can also be used with
          * cost allocation reporting to track cost associated with DMS resources, or used
          * in a Condition statement in an IAM policy for DMS. For more information, see <a
@@ -470,16 +475,26 @@ namespace Model
         virtual void CancelReplicationTaskAssessmentRunAsync(const Model::CancelReplicationTaskAssessmentRunRequest& request, const CancelReplicationTaskAssessmentRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates an endpoint using the provided settings.</p><p><h3>See Also:</h3>  
-         * <a
+         * <p>Creates an endpoint using the provided settings.</p>  <p>For a MySQL
+         * source or target endpoint, don't explicitly specify the database using the
+         * <code>DatabaseName</code> request parameter on the <code>CreateEndpoint</code>
+         * API call. Specifying <code>DatabaseName</code> when you create a MySQL endpoint
+         * replicates all the task tables to this single database. For MySQL endpoints, you
+         * specify the database only when you specify the schema in the table-mapping rules
+         * of the DMS task.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateEndpoint">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateEndpointOutcome CreateEndpoint(const Model::CreateEndpointRequest& request) const;
 
         /**
-         * <p>Creates an endpoint using the provided settings.</p><p><h3>See Also:</h3>  
-         * <a
+         * <p>Creates an endpoint using the provided settings.</p>  <p>For a MySQL
+         * source or target endpoint, don't explicitly specify the database using the
+         * <code>DatabaseName</code> request parameter on the <code>CreateEndpoint</code>
+         * API call. Specifying <code>DatabaseName</code> when you create a MySQL endpoint
+         * replicates all the task tables to this single database. For MySQL endpoints, you
+         * specify the database only when you specify the schema in the table-mapping rules
+         * of the DMS task.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateEndpoint">AWS
          * API Reference</a></p>
          *
@@ -488,8 +503,13 @@ namespace Model
         virtual Model::CreateEndpointOutcomeCallable CreateEndpointCallable(const Model::CreateEndpointRequest& request) const;
 
         /**
-         * <p>Creates an endpoint using the provided settings.</p><p><h3>See Also:</h3>  
-         * <a
+         * <p>Creates an endpoint using the provided settings.</p>  <p>For a MySQL
+         * source or target endpoint, don't explicitly specify the database using the
+         * <code>DatabaseName</code> request parameter on the <code>CreateEndpoint</code>
+         * API call. Specifying <code>DatabaseName</code> when you create a MySQL endpoint
+         * replicates all the task tables to this single database. For MySQL endpoints, you
+         * specify the database only when you specify the schema in the table-mapping rules
+         * of the DMS task.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateEndpoint">AWS
          * API Reference</a></p>
          *
@@ -498,22 +518,22 @@ namespace Model
         virtual void CreateEndpointAsync(const Model::CreateEndpointRequest& request, const CreateEndpointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Creates an AWS DMS event notification subscription. </p> <p>You can specify
-         * the type of source (<code>SourceType</code>) you want to be notified of, provide
-         * a list of AWS DMS source IDs (<code>SourceIds</code>) that triggers the events,
-         * and provide a list of event categories (<code>EventCategories</code>) for events
-         * you want to be notified of. If you specify both the <code>SourceType</code> and
+         * <p> Creates an DMS event notification subscription. </p> <p>You can specify the
+         * type of source (<code>SourceType</code>) you want to be notified of, provide a
+         * list of DMS source IDs (<code>SourceIds</code>) that triggers the events, and
+         * provide a list of event categories (<code>EventCategories</code>) for events you
+         * want to be notified of. If you specify both the <code>SourceType</code> and
          * <code>SourceIds</code>, such as <code>SourceType = replication-instance</code>
          * and <code>SourceIdentifier = my-replinstance</code>, you will be notified of all
          * the replication instance events for the specified source. If you specify a
          * <code>SourceType</code> but don't specify a <code>SourceIdentifier</code>, you
-         * receive notice of the events for that source type for all your AWS DMS sources.
-         * If you don't specify either <code>SourceType</code> nor
+         * receive notice of the events for that source type for all your DMS sources. If
+         * you don't specify either <code>SourceType</code> nor
          * <code>SourceIdentifier</code>, you will be notified of events generated from all
-         * AWS DMS sources belonging to your customer account.</p> <p>For more information
-         * about AWS DMS events, see <a
+         * DMS sources belonging to your customer account.</p> <p>For more information
+         * about DMS events, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
-         * with Events and Notifications</a> in the <i>AWS Database Migration Service User
+         * with Events and Notifications</a> in the <i>Database Migration Service User
          * Guide.</i> </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateEventSubscription">AWS
          * API Reference</a></p>
@@ -521,22 +541,22 @@ namespace Model
         virtual Model::CreateEventSubscriptionOutcome CreateEventSubscription(const Model::CreateEventSubscriptionRequest& request) const;
 
         /**
-         * <p> Creates an AWS DMS event notification subscription. </p> <p>You can specify
-         * the type of source (<code>SourceType</code>) you want to be notified of, provide
-         * a list of AWS DMS source IDs (<code>SourceIds</code>) that triggers the events,
-         * and provide a list of event categories (<code>EventCategories</code>) for events
-         * you want to be notified of. If you specify both the <code>SourceType</code> and
+         * <p> Creates an DMS event notification subscription. </p> <p>You can specify the
+         * type of source (<code>SourceType</code>) you want to be notified of, provide a
+         * list of DMS source IDs (<code>SourceIds</code>) that triggers the events, and
+         * provide a list of event categories (<code>EventCategories</code>) for events you
+         * want to be notified of. If you specify both the <code>SourceType</code> and
          * <code>SourceIds</code>, such as <code>SourceType = replication-instance</code>
          * and <code>SourceIdentifier = my-replinstance</code>, you will be notified of all
          * the replication instance events for the specified source. If you specify a
          * <code>SourceType</code> but don't specify a <code>SourceIdentifier</code>, you
-         * receive notice of the events for that source type for all your AWS DMS sources.
-         * If you don't specify either <code>SourceType</code> nor
+         * receive notice of the events for that source type for all your DMS sources. If
+         * you don't specify either <code>SourceType</code> nor
          * <code>SourceIdentifier</code>, you will be notified of events generated from all
-         * AWS DMS sources belonging to your customer account.</p> <p>For more information
-         * about AWS DMS events, see <a
+         * DMS sources belonging to your customer account.</p> <p>For more information
+         * about DMS events, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
-         * with Events and Notifications</a> in the <i>AWS Database Migration Service User
+         * with Events and Notifications</a> in the <i>Database Migration Service User
          * Guide.</i> </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateEventSubscription">AWS
          * API Reference</a></p>
@@ -546,22 +566,22 @@ namespace Model
         virtual Model::CreateEventSubscriptionOutcomeCallable CreateEventSubscriptionCallable(const Model::CreateEventSubscriptionRequest& request) const;
 
         /**
-         * <p> Creates an AWS DMS event notification subscription. </p> <p>You can specify
-         * the type of source (<code>SourceType</code>) you want to be notified of, provide
-         * a list of AWS DMS source IDs (<code>SourceIds</code>) that triggers the events,
-         * and provide a list of event categories (<code>EventCategories</code>) for events
-         * you want to be notified of. If you specify both the <code>SourceType</code> and
+         * <p> Creates an DMS event notification subscription. </p> <p>You can specify the
+         * type of source (<code>SourceType</code>) you want to be notified of, provide a
+         * list of DMS source IDs (<code>SourceIds</code>) that triggers the events, and
+         * provide a list of event categories (<code>EventCategories</code>) for events you
+         * want to be notified of. If you specify both the <code>SourceType</code> and
          * <code>SourceIds</code>, such as <code>SourceType = replication-instance</code>
          * and <code>SourceIdentifier = my-replinstance</code>, you will be notified of all
          * the replication instance events for the specified source. If you specify a
          * <code>SourceType</code> but don't specify a <code>SourceIdentifier</code>, you
-         * receive notice of the events for that source type for all your AWS DMS sources.
-         * If you don't specify either <code>SourceType</code> nor
+         * receive notice of the events for that source type for all your DMS sources. If
+         * you don't specify either <code>SourceType</code> nor
          * <code>SourceIdentifier</code>, you will be notified of events generated from all
-         * AWS DMS sources belonging to your customer account.</p> <p>For more information
-         * about AWS DMS events, see <a
+         * DMS sources belonging to your customer account.</p> <p>For more information
+         * about DMS events, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
-         * with Events and Notifications</a> in the <i>AWS Database Migration Service User
+         * with Events and Notifications</a> in the <i>Database Migration Service User
          * Guide.</i> </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateEventSubscription">AWS
          * API Reference</a></p>
@@ -571,30 +591,30 @@ namespace Model
         virtual void CreateEventSubscriptionAsync(const Model::CreateEventSubscriptionRequest& request, const CreateEventSubscriptionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates the replication instance using the specified parameters.</p> <p>AWS
-         * DMS requires that your account have certain roles with appropriate permissions
+         * <p>Creates the replication instance using the specified parameters.</p> <p>DMS
+         * requires that your account have certain roles with appropriate permissions
          * before you can create a replication instance. For information on the required
          * roles, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.APIRole">Creating
-         * the IAM Roles to Use With the AWS CLI and AWS DMS API</a>. For information on
-         * the required permissions, see <a
+         * the IAM Roles to Use With the CLI and DMS API</a>. For information on the
+         * required permissions, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.IAMPermissions">IAM
-         * Permissions Needed to Use AWS DMS</a>.</p><p><h3>See Also:</h3>   <a
+         * Permissions Needed to Use DMS</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateReplicationInstance">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateReplicationInstanceOutcome CreateReplicationInstance(const Model::CreateReplicationInstanceRequest& request) const;
 
         /**
-         * <p>Creates the replication instance using the specified parameters.</p> <p>AWS
-         * DMS requires that your account have certain roles with appropriate permissions
+         * <p>Creates the replication instance using the specified parameters.</p> <p>DMS
+         * requires that your account have certain roles with appropriate permissions
          * before you can create a replication instance. For information on the required
          * roles, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.APIRole">Creating
-         * the IAM Roles to Use With the AWS CLI and AWS DMS API</a>. For information on
-         * the required permissions, see <a
+         * the IAM Roles to Use With the CLI and DMS API</a>. For information on the
+         * required permissions, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.IAMPermissions">IAM
-         * Permissions Needed to Use AWS DMS</a>.</p><p><h3>See Also:</h3>   <a
+         * Permissions Needed to Use DMS</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateReplicationInstance">AWS
          * API Reference</a></p>
          *
@@ -603,15 +623,15 @@ namespace Model
         virtual Model::CreateReplicationInstanceOutcomeCallable CreateReplicationInstanceCallable(const Model::CreateReplicationInstanceRequest& request) const;
 
         /**
-         * <p>Creates the replication instance using the specified parameters.</p> <p>AWS
-         * DMS requires that your account have certain roles with appropriate permissions
+         * <p>Creates the replication instance using the specified parameters.</p> <p>DMS
+         * requires that your account have certain roles with appropriate permissions
          * before you can create a replication instance. For information on the required
          * roles, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.APIRole">Creating
-         * the IAM Roles to Use With the AWS CLI and AWS DMS API</a>. For information on
-         * the required permissions, see <a
+         * the IAM Roles to Use With the CLI and DMS API</a>. For information on the
+         * required permissions, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.IAMPermissions">IAM
-         * Permissions Needed to Use AWS DMS</a>.</p><p><h3>See Also:</h3>   <a
+         * Permissions Needed to Use DMS</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateReplicationInstance">AWS
          * API Reference</a></p>
          *
@@ -621,7 +641,10 @@ namespace Model
 
         /**
          * <p>Creates a replication subnet group given a list of the subnet IDs in a
-         * VPC.</p><p><h3>See Also:</h3>   <a
+         * VPC.</p> <p>The VPC needs to have at least one subnet in at least two
+         * availability zones in the Amazon Web Services Region, otherwise the service will
+         * throw a <code>ReplicationSubnetGroupDoesNotCoverEnoughAZs</code>
+         * exception.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateReplicationSubnetGroup">AWS
          * API Reference</a></p>
          */
@@ -629,7 +652,10 @@ namespace Model
 
         /**
          * <p>Creates a replication subnet group given a list of the subnet IDs in a
-         * VPC.</p><p><h3>See Also:</h3>   <a
+         * VPC.</p> <p>The VPC needs to have at least one subnet in at least two
+         * availability zones in the Amazon Web Services Region, otherwise the service will
+         * throw a <code>ReplicationSubnetGroupDoesNotCoverEnoughAZs</code>
+         * exception.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateReplicationSubnetGroup">AWS
          * API Reference</a></p>
          *
@@ -639,7 +665,10 @@ namespace Model
 
         /**
          * <p>Creates a replication subnet group given a list of the subnet IDs in a
-         * VPC.</p><p><h3>See Also:</h3>   <a
+         * VPC.</p> <p>The VPC needs to have at least one subnet in at least two
+         * availability zones in the Amazon Web Services Region, otherwise the service will
+         * throw a <code>ReplicationSubnetGroupDoesNotCoverEnoughAZs</code>
+         * exception.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateReplicationSubnetGroup">AWS
          * API Reference</a></p>
          *
@@ -760,14 +789,14 @@ namespace Model
         virtual void DeleteEndpointAsync(const Model::DeleteEndpointRequest& request, const DeleteEndpointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Deletes an AWS DMS event subscription. </p><p><h3>See Also:</h3>   <a
+         * <p> Deletes an DMS event subscription. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteEventSubscription">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteEventSubscriptionOutcome DeleteEventSubscription(const Model::DeleteEventSubscriptionRequest& request) const;
 
         /**
-         * <p> Deletes an AWS DMS event subscription. </p><p><h3>See Also:</h3>   <a
+         * <p> Deletes an DMS event subscription. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteEventSubscription">AWS
          * API Reference</a></p>
          *
@@ -776,7 +805,7 @@ namespace Model
         virtual Model::DeleteEventSubscriptionOutcomeCallable DeleteEventSubscriptionCallable(const Model::DeleteEventSubscriptionRequest& request) const;
 
         /**
-         * <p> Deletes an AWS DMS event subscription. </p><p><h3>See Also:</h3>   <a
+         * <p> Deletes an DMS event subscription. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteEventSubscription">AWS
          * API Reference</a></p>
          *
@@ -867,7 +896,7 @@ namespace Model
 
         /**
          * <p>Deletes the record of a single premigration assessment run.</p> <p>This
-         * operation removes all metadata that AWS DMS maintains about this assessment run.
+         * operation removes all metadata that DMS maintains about this assessment run.
          * However, the operation leaves untouched all information about this assessment
          * run that is stored in your Amazon S3 bucket.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteReplicationTaskAssessmentRun">AWS
@@ -877,7 +906,7 @@ namespace Model
 
         /**
          * <p>Deletes the record of a single premigration assessment run.</p> <p>This
-         * operation removes all metadata that AWS DMS maintains about this assessment run.
+         * operation removes all metadata that DMS maintains about this assessment run.
          * However, the operation leaves untouched all information about this assessment
          * run that is stored in your Amazon S3 bucket.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteReplicationTaskAssessmentRun">AWS
@@ -889,7 +918,7 @@ namespace Model
 
         /**
          * <p>Deletes the record of a single premigration assessment run.</p> <p>This
-         * operation removes all metadata that AWS DMS maintains about this assessment run.
+         * operation removes all metadata that DMS maintains about this assessment run.
          * However, the operation leaves untouched all information about this assessment
          * run that is stored in your Amazon S3 bucket.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteReplicationTaskAssessmentRun">AWS
@@ -900,8 +929,8 @@ namespace Model
         virtual void DeleteReplicationTaskAssessmentRunAsync(const Model::DeleteReplicationTaskAssessmentRunRequest& request, const DeleteReplicationTaskAssessmentRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Lists all of the AWS DMS attributes for a customer account. These attributes
-         * include AWS DMS quotas for the account and a unique account identifier in a
+         * <p>Lists all of the DMS attributes for a customer account. These attributes
+         * include DMS quotas for the account and a unique account identifier in a
          * particular DMS region. DMS quotas include a list of resource quotas supported by
          * the account, such as the number of replication instances allowed. The
          * description for each resource quota, includes the quota name, current usage
@@ -914,8 +943,8 @@ namespace Model
         virtual Model::DescribeAccountAttributesOutcome DescribeAccountAttributes(const Model::DescribeAccountAttributesRequest& request) const;
 
         /**
-         * <p>Lists all of the AWS DMS attributes for a customer account. These attributes
-         * include AWS DMS quotas for the account and a unique account identifier in a
+         * <p>Lists all of the DMS attributes for a customer account. These attributes
+         * include DMS quotas for the account and a unique account identifier in a
          * particular DMS region. DMS quotas include a list of resource quotas supported by
          * the account, such as the number of replication instances allowed. The
          * description for each resource quota, includes the quota name, current usage
@@ -930,8 +959,8 @@ namespace Model
         virtual Model::DescribeAccountAttributesOutcomeCallable DescribeAccountAttributesCallable(const Model::DescribeAccountAttributesRequest& request) const;
 
         /**
-         * <p>Lists all of the AWS DMS attributes for a customer account. These attributes
-         * include AWS DMS quotas for the account and a unique account identifier in a
+         * <p>Lists all of the DMS attributes for a customer account. These attributes
+         * include DMS quotas for the account and a unique account identifier in a
          * particular DMS region. DMS quotas include a list of resource quotas supported by
          * the account, such as the number of replication instances allowed. The
          * description for each resource quota, includes the quota name, current usage
@@ -1075,6 +1104,34 @@ namespace Model
         virtual void DescribeConnectionsAsync(const Model::DescribeConnectionsRequest& request, const DescribeConnectionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
+         * <p>Returns information about the possible endpoint settings available when you
+         * create an endpoint for a specific database engine.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEndpointSettings">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DescribeEndpointSettingsOutcome DescribeEndpointSettings(const Model::DescribeEndpointSettingsRequest& request) const;
+
+        /**
+         * <p>Returns information about the possible endpoint settings available when you
+         * create an endpoint for a specific database engine.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEndpointSettings">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DescribeEndpointSettingsOutcomeCallable DescribeEndpointSettingsCallable(const Model::DescribeEndpointSettingsRequest& request) const;
+
+        /**
+         * <p>Returns information about the possible endpoint settings available when you
+         * create an endpoint for a specific database engine.</p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEndpointSettings">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DescribeEndpointSettingsAsync(const Model::DescribeEndpointSettingsRequest& request, const DescribeEndpointSettingsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
          * <p>Returns information about the type of endpoints available.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEndpointTypes">AWS
@@ -1135,7 +1192,7 @@ namespace Model
          * specified source type. You can see a list of the event categories and source
          * types in <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
-         * with Events and Notifications</a> in the <i>AWS Database Migration Service User
+         * with Events and Notifications</a> in the <i>Database Migration Service User
          * Guide.</i> </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEventCategories">AWS
          * API Reference</a></p>
@@ -1147,7 +1204,7 @@ namespace Model
          * specified source type. You can see a list of the event categories and source
          * types in <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
-         * with Events and Notifications</a> in the <i>AWS Database Migration Service User
+         * with Events and Notifications</a> in the <i>Database Migration Service User
          * Guide.</i> </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEventCategories">AWS
          * API Reference</a></p>
@@ -1161,7 +1218,7 @@ namespace Model
          * specified source type. You can see a list of the event categories and source
          * types in <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
-         * with Events and Notifications</a> in the <i>AWS Database Migration Service User
+         * with Events and Notifications</a> in the <i>Database Migration Service User
          * Guide.</i> </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEventCategories">AWS
          * API Reference</a></p>
@@ -1212,9 +1269,9 @@ namespace Model
 
         /**
          * <p> Lists events for a given source identifier and source type. You can also
-         * specify a start and end time. For more information on AWS DMS events, see <a
+         * specify a start and end time. For more information on DMS events, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
-         * with Events and Notifications</a> in the <i>AWS Database Migration User
+         * with Events and Notifications</a> in the <i>Database Migration Service User
          * Guide.</i> </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEvents">AWS
          * API Reference</a></p>
@@ -1223,9 +1280,9 @@ namespace Model
 
         /**
          * <p> Lists events for a given source identifier and source type. You can also
-         * specify a start and end time. For more information on AWS DMS events, see <a
+         * specify a start and end time. For more information on DMS events, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
-         * with Events and Notifications</a> in the <i>AWS Database Migration User
+         * with Events and Notifications</a> in the <i>Database Migration Service User
          * Guide.</i> </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEvents">AWS
          * API Reference</a></p>
@@ -1236,9 +1293,9 @@ namespace Model
 
         /**
          * <p> Lists events for a given source identifier and source type. You can also
-         * specify a start and end time. For more information on AWS DMS events, see <a
+         * specify a start and end time. For more information on DMS events, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
-         * with Events and Notifications</a> in the <i>AWS Database Migration User
+         * with Events and Notifications</a> in the <i>Database Migration Service User
          * Guide.</i> </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeEvents">AWS
          * API Reference</a></p>
@@ -1413,16 +1470,24 @@ namespace Model
         virtual void DescribeReplicationSubnetGroupsAsync(const Model::DescribeReplicationSubnetGroupsRequest& request, const DescribeReplicationSubnetGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Returns the task assessment results from Amazon S3. This action always
-         * returns the latest results.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns the task assessment results from the Amazon S3 bucket that DMS
+         * creates in your Amazon Web Services account. This action always returns the
+         * latest results.</p> <p>For more information about DMS task assessments, see <a
+         * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating
+         * a task assessment report</a> in the <i>Database Migration Service User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeReplicationTaskAssessmentResults">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeReplicationTaskAssessmentResultsOutcome DescribeReplicationTaskAssessmentResults(const Model::DescribeReplicationTaskAssessmentResultsRequest& request) const;
 
         /**
-         * <p>Returns the task assessment results from Amazon S3. This action always
-         * returns the latest results.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns the task assessment results from the Amazon S3 bucket that DMS
+         * creates in your Amazon Web Services account. This action always returns the
+         * latest results.</p> <p>For more information about DMS task assessments, see <a
+         * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating
+         * a task assessment report</a> in the <i>Database Migration Service User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeReplicationTaskAssessmentResults">AWS
          * API Reference</a></p>
          *
@@ -1431,8 +1496,12 @@ namespace Model
         virtual Model::DescribeReplicationTaskAssessmentResultsOutcomeCallable DescribeReplicationTaskAssessmentResultsCallable(const Model::DescribeReplicationTaskAssessmentResultsRequest& request) const;
 
         /**
-         * <p>Returns the task assessment results from Amazon S3. This action always
-         * returns the latest results.</p><p><h3>See Also:</h3>   <a
+         * <p>Returns the task assessment results from the Amazon S3 bucket that DMS
+         * creates in your Amazon Web Services account. This action always returns the
+         * latest results.</p> <p>For more information about DMS task assessments, see <a
+         * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating
+         * a task assessment report</a> in the <i>Database Migration Service User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeReplicationTaskAssessmentResults">AWS
          * API Reference</a></p>
          *
@@ -1576,9 +1645,9 @@ namespace Model
         /**
          * <p>Returns table statistics on the database migration task, including table
          * name, rows inserted, rows updated, and rows deleted.</p> <p>Note that the "last
-         * updated" column the DMS console only indicates the time that AWS DMS last
-         * updated the table statistics record for a table. It does not indicate the time
-         * of the last update to the table.</p><p><h3>See Also:</h3>   <a
+         * updated" column the DMS console only indicates the time that DMS last updated
+         * the table statistics record for a table. It does not indicate the time of the
+         * last update to the table.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeTableStatistics">AWS
          * API Reference</a></p>
          */
@@ -1587,9 +1656,9 @@ namespace Model
         /**
          * <p>Returns table statistics on the database migration task, including table
          * name, rows inserted, rows updated, and rows deleted.</p> <p>Note that the "last
-         * updated" column the DMS console only indicates the time that AWS DMS last
-         * updated the table statistics record for a table. It does not indicate the time
-         * of the last update to the table.</p><p><h3>See Also:</h3>   <a
+         * updated" column the DMS console only indicates the time that DMS last updated
+         * the table statistics record for a table. It does not indicate the time of the
+         * last update to the table.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeTableStatistics">AWS
          * API Reference</a></p>
          *
@@ -1600,9 +1669,9 @@ namespace Model
         /**
          * <p>Returns table statistics on the database migration task, including table
          * name, rows inserted, rows updated, and rows deleted.</p> <p>Note that the "last
-         * updated" column the DMS console only indicates the time that AWS DMS last
-         * updated the table statistics record for a table. It does not indicate the time
-         * of the last update to the table.</p><p><h3>See Also:</h3>   <a
+         * updated" column the DMS console only indicates the time that DMS last updated
+         * the table statistics record for a table. It does not indicate the time of the
+         * last update to the table.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeTableStatistics">AWS
          * API Reference</a></p>
          *
@@ -1636,10 +1705,9 @@ namespace Model
         virtual void ImportCertificateAsync(const Model::ImportCertificateRequest& request, const ImportCertificateResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Lists all metadata tags attached to an AWS DMS resource, including
-         * replication instance, endpoint, security group, and migration task. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+         * <p>Lists all metadata tags attached to an DMS resource, including replication
+         * instance, endpoint, security group, and migration task. For more information,
+         * see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
          * <code>Tag</code> </a> data type description.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ListTagsForResource">AWS
          * API Reference</a></p>
@@ -1647,10 +1715,9 @@ namespace Model
         virtual Model::ListTagsForResourceOutcome ListTagsForResource(const Model::ListTagsForResourceRequest& request) const;
 
         /**
-         * <p>Lists all metadata tags attached to an AWS DMS resource, including
-         * replication instance, endpoint, security group, and migration task. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+         * <p>Lists all metadata tags attached to an DMS resource, including replication
+         * instance, endpoint, security group, and migration task. For more information,
+         * see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
          * <code>Tag</code> </a> data type description.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ListTagsForResource">AWS
          * API Reference</a></p>
@@ -1660,10 +1727,9 @@ namespace Model
         virtual Model::ListTagsForResourceOutcomeCallable ListTagsForResourceCallable(const Model::ListTagsForResourceRequest& request) const;
 
         /**
-         * <p>Lists all metadata tags attached to an AWS DMS resource, including
-         * replication instance, endpoint, security group, and migration task. For more
-         * information, see <a
-         * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+         * <p>Lists all metadata tags attached to an DMS resource, including replication
+         * instance, endpoint, security group, and migration task. For more information,
+         * see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
          * <code>Tag</code> </a> data type description.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ListTagsForResource">AWS
          * API Reference</a></p>
@@ -1673,14 +1739,26 @@ namespace Model
         virtual void ListTagsForResourceAsync(const Model::ListTagsForResourceRequest& request, const ListTagsForResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Modifies the specified endpoint.</p><p><h3>See Also:</h3>   <a
+         * <p>Modifies the specified endpoint.</p>  <p>For a MySQL source or target
+         * endpoint, don't explicitly specify the database using the
+         * <code>DatabaseName</code> request parameter on the <code>ModifyEndpoint</code>
+         * API call. Specifying <code>DatabaseName</code> when you modify a MySQL endpoint
+         * replicates all the task tables to this single database. For MySQL endpoints, you
+         * specify the database only when you specify the schema in the table-mapping rules
+         * of the DMS task.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyEndpoint">AWS
          * API Reference</a></p>
          */
         virtual Model::ModifyEndpointOutcome ModifyEndpoint(const Model::ModifyEndpointRequest& request) const;
 
         /**
-         * <p>Modifies the specified endpoint.</p><p><h3>See Also:</h3>   <a
+         * <p>Modifies the specified endpoint.</p>  <p>For a MySQL source or target
+         * endpoint, don't explicitly specify the database using the
+         * <code>DatabaseName</code> request parameter on the <code>ModifyEndpoint</code>
+         * API call. Specifying <code>DatabaseName</code> when you modify a MySQL endpoint
+         * replicates all the task tables to this single database. For MySQL endpoints, you
+         * specify the database only when you specify the schema in the table-mapping rules
+         * of the DMS task.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyEndpoint">AWS
          * API Reference</a></p>
          *
@@ -1689,7 +1767,13 @@ namespace Model
         virtual Model::ModifyEndpointOutcomeCallable ModifyEndpointCallable(const Model::ModifyEndpointRequest& request) const;
 
         /**
-         * <p>Modifies the specified endpoint.</p><p><h3>See Also:</h3>   <a
+         * <p>Modifies the specified endpoint.</p>  <p>For a MySQL source or target
+         * endpoint, don't explicitly specify the database using the
+         * <code>DatabaseName</code> request parameter on the <code>ModifyEndpoint</code>
+         * API call. Specifying <code>DatabaseName</code> when you modify a MySQL endpoint
+         * replicates all the task tables to this single database. For MySQL endpoints, you
+         * specify the database only when you specify the schema in the table-mapping rules
+         * of the DMS task.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyEndpoint">AWS
          * API Reference</a></p>
          *
@@ -1698,7 +1782,7 @@ namespace Model
         virtual void ModifyEndpointAsync(const Model::ModifyEndpointRequest& request, const ModifyEndpointResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Modifies an existing AWS DMS event notification subscription. </p><p><h3>See
+         * <p>Modifies an existing DMS event notification subscription. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyEventSubscription">AWS
          * API Reference</a></p>
@@ -1706,7 +1790,7 @@ namespace Model
         virtual Model::ModifyEventSubscriptionOutcome ModifyEventSubscription(const Model::ModifyEventSubscriptionRequest& request) const;
 
         /**
-         * <p>Modifies an existing AWS DMS event notification subscription. </p><p><h3>See
+         * <p>Modifies an existing DMS event notification subscription. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyEventSubscription">AWS
          * API Reference</a></p>
@@ -1716,7 +1800,7 @@ namespace Model
         virtual Model::ModifyEventSubscriptionOutcomeCallable ModifyEventSubscriptionCallable(const Model::ModifyEventSubscriptionRequest& request) const;
 
         /**
-         * <p>Modifies an existing AWS DMS event notification subscription. </p><p><h3>See
+         * <p>Modifies an existing DMS event notification subscription. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyEventSubscription">AWS
          * API Reference</a></p>
@@ -1790,9 +1874,9 @@ namespace Model
         /**
          * <p>Modifies the specified replication task.</p> <p>You can't modify the task
          * endpoints. The task must be stopped before you can modify it. </p> <p>For more
-         * information about AWS DMS tasks, see <a
+         * information about DMS tasks, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working
-         * with Migration Tasks</a> in the <i>AWS Database Migration Service User
+         * with Migration Tasks</a> in the <i>Database Migration Service User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyReplicationTask">AWS
          * API Reference</a></p>
@@ -1802,9 +1886,9 @@ namespace Model
         /**
          * <p>Modifies the specified replication task.</p> <p>You can't modify the task
          * endpoints. The task must be stopped before you can modify it. </p> <p>For more
-         * information about AWS DMS tasks, see <a
+         * information about DMS tasks, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working
-         * with Migration Tasks</a> in the <i>AWS Database Migration Service User
+         * with Migration Tasks</a> in the <i>Database Migration Service User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyReplicationTask">AWS
          * API Reference</a></p>
@@ -1816,9 +1900,9 @@ namespace Model
         /**
          * <p>Modifies the specified replication task.</p> <p>You can't modify the task
          * endpoints. The task must be stopped before you can modify it. </p> <p>For more
-         * information about AWS DMS tasks, see <a
+         * information about DMS tasks, see <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working
-         * with Migration Tasks</a> in the <i>AWS Database Migration Service User
+         * with Migration Tasks</a> in the <i>Database Migration Service User
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyReplicationTask">AWS
          * API Reference</a></p>
@@ -1830,8 +1914,8 @@ namespace Model
         /**
          * <p>Moves a replication task from its current replication instance to a different
          * target replication instance using the specified parameters. The target
-         * replication instance must be created with the same or later AWS DMS version as
-         * the current replication instance.</p><p><h3>See Also:</h3>   <a
+         * replication instance must be created with the same or later DMS version as the
+         * current replication instance.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/MoveReplicationTask">AWS
          * API Reference</a></p>
          */
@@ -1840,8 +1924,8 @@ namespace Model
         /**
          * <p>Moves a replication task from its current replication instance to a different
          * target replication instance using the specified parameters. The target
-         * replication instance must be created with the same or later AWS DMS version as
-         * the current replication instance.</p><p><h3>See Also:</h3>   <a
+         * replication instance must be created with the same or later DMS version as the
+         * current replication instance.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/MoveReplicationTask">AWS
          * API Reference</a></p>
          *
@@ -1852,8 +1936,8 @@ namespace Model
         /**
          * <p>Moves a replication task from its current replication instance to a different
          * target replication instance using the specified parameters. The target
-         * replication instance must be created with the same or later AWS DMS version as
-         * the current replication instance.</p><p><h3>See Also:</h3>   <a
+         * replication instance must be created with the same or later DMS version as the
+         * current replication instance.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/MoveReplicationTask">AWS
          * API Reference</a></p>
          *
@@ -1927,16 +2011,20 @@ namespace Model
         virtual void RefreshSchemasAsync(const Model::RefreshSchemasRequest& request, const RefreshSchemasResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Reloads the target database table with the source data. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Reloads the target database table with the source data. </p> <p>You can only
+         * use this operation with a task in the <code>RUNNING</code> state, otherwise the
+         * service will throw an <code>InvalidResourceStateFault</code>
+         * exception.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ReloadTables">AWS
          * API Reference</a></p>
          */
         virtual Model::ReloadTablesOutcome ReloadTables(const Model::ReloadTablesRequest& request) const;
 
         /**
-         * <p>Reloads the target database table with the source data. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Reloads the target database table with the source data. </p> <p>You can only
+         * use this operation with a task in the <code>RUNNING</code> state, otherwise the
+         * service will throw an <code>InvalidResourceStateFault</code>
+         * exception.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ReloadTables">AWS
          * API Reference</a></p>
          *
@@ -1945,8 +2033,10 @@ namespace Model
         virtual Model::ReloadTablesOutcomeCallable ReloadTablesCallable(const Model::ReloadTablesRequest& request) const;
 
         /**
-         * <p>Reloads the target database table with the source data. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Reloads the target database table with the source data. </p> <p>You can only
+         * use this operation with a task in the <code>RUNNING</code> state, otherwise the
+         * service will throw an <code>InvalidResourceStateFault</code>
+         * exception.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ReloadTables">AWS
          * API Reference</a></p>
          *
@@ -1955,9 +2045,9 @@ namespace Model
         virtual void ReloadTablesAsync(const Model::ReloadTablesRequest& request, const ReloadTablesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Removes metadata tags from an AWS DMS resource, including replication
-         * instance, endpoint, security group, and migration task. For more information,
-         * see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+         * <p>Removes metadata tags from an DMS resource, including replication instance,
+         * endpoint, security group, and migration task. For more information, see <a
+         * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
          * <code>Tag</code> </a> data type description.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/RemoveTagsFromResource">AWS
          * API Reference</a></p>
@@ -1965,9 +2055,9 @@ namespace Model
         virtual Model::RemoveTagsFromResourceOutcome RemoveTagsFromResource(const Model::RemoveTagsFromResourceRequest& request) const;
 
         /**
-         * <p>Removes metadata tags from an AWS DMS resource, including replication
-         * instance, endpoint, security group, and migration task. For more information,
-         * see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+         * <p>Removes metadata tags from an DMS resource, including replication instance,
+         * endpoint, security group, and migration task. For more information, see <a
+         * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
          * <code>Tag</code> </a> data type description.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/RemoveTagsFromResource">AWS
          * API Reference</a></p>
@@ -1977,9 +2067,9 @@ namespace Model
         virtual Model::RemoveTagsFromResourceOutcomeCallable RemoveTagsFromResourceCallable(const Model::RemoveTagsFromResourceRequest& request) const;
 
         /**
-         * <p>Removes metadata tags from an AWS DMS resource, including replication
-         * instance, endpoint, security group, and migration task. For more information,
-         * see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+         * <p>Removes metadata tags from an DMS resource, including replication instance,
+         * endpoint, security group, and migration task. For more information, see <a
+         * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
          * <code>Tag</code> </a> data type description.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/RemoveTagsFromResource">AWS
          * API Reference</a></p>
@@ -1989,22 +2079,22 @@ namespace Model
         virtual void RemoveTagsFromResourceAsync(const Model::RemoveTagsFromResourceRequest& request, const RemoveTagsFromResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Starts the replication task.</p> <p>For more information about AWS DMS tasks,
-         * see <a
+         * <p>Starts the replication task.</p> <p>For more information about DMS tasks, see
+         * <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working
-         * with Migration Tasks </a> in the <i>AWS Database Migration Service User
-         * Guide.</i> </p><p><h3>See Also:</h3>   <a
+         * with Migration Tasks </a> in the <i>Database Migration Service User Guide.</i>
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartReplicationTask">AWS
          * API Reference</a></p>
          */
         virtual Model::StartReplicationTaskOutcome StartReplicationTask(const Model::StartReplicationTaskRequest& request) const;
 
         /**
-         * <p>Starts the replication task.</p> <p>For more information about AWS DMS tasks,
-         * see <a
+         * <p>Starts the replication task.</p> <p>For more information about DMS tasks, see
+         * <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working
-         * with Migration Tasks </a> in the <i>AWS Database Migration Service User
-         * Guide.</i> </p><p><h3>See Also:</h3>   <a
+         * with Migration Tasks </a> in the <i>Database Migration Service User Guide.</i>
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartReplicationTask">AWS
          * API Reference</a></p>
          *
@@ -2013,11 +2103,11 @@ namespace Model
         virtual Model::StartReplicationTaskOutcomeCallable StartReplicationTaskCallable(const Model::StartReplicationTaskRequest& request) const;
 
         /**
-         * <p>Starts the replication task.</p> <p>For more information about AWS DMS tasks,
-         * see <a
+         * <p>Starts the replication task.</p> <p>For more information about DMS tasks, see
+         * <a
          * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working
-         * with Migration Tasks </a> in the <i>AWS Database Migration Service User
-         * Guide.</i> </p><p><h3>See Also:</h3>   <a
+         * with Migration Tasks </a> in the <i>Database Migration Service User Guide.</i>
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartReplicationTask">AWS
          * API Reference</a></p>
          *
@@ -2027,7 +2117,15 @@ namespace Model
 
         /**
          * <p> Starts the replication task assessment for unsupported data types in the
-         * source database. </p><p><h3>See Also:</h3>   <a
+         * source database. </p> <p>You can only use this operation for a task if the
+         * following conditions are true:</p> <ul> <li> <p>The task must be in the
+         * <code>stopped</code> state.</p> </li> <li> <p>The task must have successful
+         * connections to the source and target.</p> </li> </ul> <p>If either of these
+         * conditions are not met, an <code>InvalidResourceStateFault</code> error will
+         * result. </p> <p>For information about DMS task assessments, see <a
+         * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating
+         * a task assessment report</a> in the <i>Database Migration Service User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartReplicationTaskAssessment">AWS
          * API Reference</a></p>
          */
@@ -2035,7 +2133,15 @@ namespace Model
 
         /**
          * <p> Starts the replication task assessment for unsupported data types in the
-         * source database. </p><p><h3>See Also:</h3>   <a
+         * source database. </p> <p>You can only use this operation for a task if the
+         * following conditions are true:</p> <ul> <li> <p>The task must be in the
+         * <code>stopped</code> state.</p> </li> <li> <p>The task must have successful
+         * connections to the source and target.</p> </li> </ul> <p>If either of these
+         * conditions are not met, an <code>InvalidResourceStateFault</code> error will
+         * result. </p> <p>For information about DMS task assessments, see <a
+         * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating
+         * a task assessment report</a> in the <i>Database Migration Service User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartReplicationTaskAssessment">AWS
          * API Reference</a></p>
          *
@@ -2045,7 +2151,15 @@ namespace Model
 
         /**
          * <p> Starts the replication task assessment for unsupported data types in the
-         * source database. </p><p><h3>See Also:</h3>   <a
+         * source database. </p> <p>You can only use this operation for a task if the
+         * following conditions are true:</p> <ul> <li> <p>The task must be in the
+         * <code>stopped</code> state.</p> </li> <li> <p>The task must have successful
+         * connections to the source and target.</p> </li> </ul> <p>If either of these
+         * conditions are not met, an <code>InvalidResourceStateFault</code> error will
+         * result. </p> <p>For information about DMS task assessments, see <a
+         * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating
+         * a task assessment report</a> in the <i>Database Migration Service User
+         * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartReplicationTaskAssessment">AWS
          * API Reference</a></p>
          *
@@ -2176,6 +2290,7 @@ namespace Model
         void DescribeApplicableIndividualAssessmentsAsyncHelper(const Model::DescribeApplicableIndividualAssessmentsRequest& request, const DescribeApplicableIndividualAssessmentsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeCertificatesAsyncHelper(const Model::DescribeCertificatesRequest& request, const DescribeCertificatesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeConnectionsAsyncHelper(const Model::DescribeConnectionsRequest& request, const DescribeConnectionsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DescribeEndpointSettingsAsyncHelper(const Model::DescribeEndpointSettingsRequest& request, const DescribeEndpointSettingsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeEndpointTypesAsyncHelper(const Model::DescribeEndpointTypesRequest& request, const DescribeEndpointTypesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeEndpointsAsyncHelper(const Model::DescribeEndpointsRequest& request, const DescribeEndpointsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DescribeEventCategoriesAsyncHelper(const Model::DescribeEventCategoriesRequest& request, const DescribeEventCategoriesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

@@ -23,6 +23,7 @@
 #include <aws/auditmanager/model/CreateControlResult.h>
 #include <aws/auditmanager/model/DeleteAssessmentResult.h>
 #include <aws/auditmanager/model/DeleteAssessmentFrameworkResult.h>
+#include <aws/auditmanager/model/DeleteAssessmentFrameworkShareResult.h>
 #include <aws/auditmanager/model/DeleteAssessmentReportResult.h>
 #include <aws/auditmanager/model/DeleteControlResult.h>
 #include <aws/auditmanager/model/DeregisterAccountResult.h>
@@ -40,24 +41,33 @@
 #include <aws/auditmanager/model/GetEvidenceFolderResult.h>
 #include <aws/auditmanager/model/GetEvidenceFoldersByAssessmentResult.h>
 #include <aws/auditmanager/model/GetEvidenceFoldersByAssessmentControlResult.h>
+#include <aws/auditmanager/model/GetInsightsResult.h>
+#include <aws/auditmanager/model/GetInsightsByAssessmentResult.h>
 #include <aws/auditmanager/model/GetOrganizationAdminAccountResult.h>
 #include <aws/auditmanager/model/GetServicesInScopeResult.h>
 #include <aws/auditmanager/model/GetSettingsResult.h>
+#include <aws/auditmanager/model/ListAssessmentControlInsightsByControlDomainResult.h>
+#include <aws/auditmanager/model/ListAssessmentFrameworkShareRequestsResult.h>
 #include <aws/auditmanager/model/ListAssessmentFrameworksResult.h>
 #include <aws/auditmanager/model/ListAssessmentReportsResult.h>
 #include <aws/auditmanager/model/ListAssessmentsResult.h>
+#include <aws/auditmanager/model/ListControlDomainInsightsResult.h>
+#include <aws/auditmanager/model/ListControlDomainInsightsByAssessmentResult.h>
+#include <aws/auditmanager/model/ListControlInsightsByControlDomainResult.h>
 #include <aws/auditmanager/model/ListControlsResult.h>
 #include <aws/auditmanager/model/ListKeywordsForDataSourceResult.h>
 #include <aws/auditmanager/model/ListNotificationsResult.h>
 #include <aws/auditmanager/model/ListTagsForResourceResult.h>
 #include <aws/auditmanager/model/RegisterAccountResult.h>
 #include <aws/auditmanager/model/RegisterOrganizationAdminAccountResult.h>
+#include <aws/auditmanager/model/StartAssessmentFrameworkShareResult.h>
 #include <aws/auditmanager/model/TagResourceResult.h>
 #include <aws/auditmanager/model/UntagResourceResult.h>
 #include <aws/auditmanager/model/UpdateAssessmentResult.h>
 #include <aws/auditmanager/model/UpdateAssessmentControlResult.h>
 #include <aws/auditmanager/model/UpdateAssessmentControlSetStatusResult.h>
 #include <aws/auditmanager/model/UpdateAssessmentFrameworkResult.h>
+#include <aws/auditmanager/model/UpdateAssessmentFrameworkShareResult.h>
 #include <aws/auditmanager/model/UpdateAssessmentStatusResult.h>
 #include <aws/auditmanager/model/UpdateControlResult.h>
 #include <aws/auditmanager/model/UpdateSettingsResult.h>
@@ -113,6 +123,7 @@ namespace Model
         class CreateControlRequest;
         class DeleteAssessmentRequest;
         class DeleteAssessmentFrameworkRequest;
+        class DeleteAssessmentFrameworkShareRequest;
         class DeleteAssessmentReportRequest;
         class DeleteControlRequest;
         class DeregisterAccountRequest;
@@ -130,24 +141,33 @@ namespace Model
         class GetEvidenceFolderRequest;
         class GetEvidenceFoldersByAssessmentRequest;
         class GetEvidenceFoldersByAssessmentControlRequest;
+        class GetInsightsRequest;
+        class GetInsightsByAssessmentRequest;
         class GetOrganizationAdminAccountRequest;
         class GetServicesInScopeRequest;
         class GetSettingsRequest;
+        class ListAssessmentControlInsightsByControlDomainRequest;
+        class ListAssessmentFrameworkShareRequestsRequest;
         class ListAssessmentFrameworksRequest;
         class ListAssessmentReportsRequest;
         class ListAssessmentsRequest;
+        class ListControlDomainInsightsRequest;
+        class ListControlDomainInsightsByAssessmentRequest;
+        class ListControlInsightsByControlDomainRequest;
         class ListControlsRequest;
         class ListKeywordsForDataSourceRequest;
         class ListNotificationsRequest;
         class ListTagsForResourceRequest;
         class RegisterAccountRequest;
         class RegisterOrganizationAdminAccountRequest;
+        class StartAssessmentFrameworkShareRequest;
         class TagResourceRequest;
         class UntagResourceRequest;
         class UpdateAssessmentRequest;
         class UpdateAssessmentControlRequest;
         class UpdateAssessmentControlSetStatusRequest;
         class UpdateAssessmentFrameworkRequest;
+        class UpdateAssessmentFrameworkShareRequest;
         class UpdateAssessmentStatusRequest;
         class UpdateControlRequest;
         class UpdateSettingsRequest;
@@ -165,6 +185,7 @@ namespace Model
         typedef Aws::Utils::Outcome<CreateControlResult, AuditManagerError> CreateControlOutcome;
         typedef Aws::Utils::Outcome<DeleteAssessmentResult, AuditManagerError> DeleteAssessmentOutcome;
         typedef Aws::Utils::Outcome<DeleteAssessmentFrameworkResult, AuditManagerError> DeleteAssessmentFrameworkOutcome;
+        typedef Aws::Utils::Outcome<DeleteAssessmentFrameworkShareResult, AuditManagerError> DeleteAssessmentFrameworkShareOutcome;
         typedef Aws::Utils::Outcome<DeleteAssessmentReportResult, AuditManagerError> DeleteAssessmentReportOutcome;
         typedef Aws::Utils::Outcome<DeleteControlResult, AuditManagerError> DeleteControlOutcome;
         typedef Aws::Utils::Outcome<DeregisterAccountResult, AuditManagerError> DeregisterAccountOutcome;
@@ -182,24 +203,33 @@ namespace Model
         typedef Aws::Utils::Outcome<GetEvidenceFolderResult, AuditManagerError> GetEvidenceFolderOutcome;
         typedef Aws::Utils::Outcome<GetEvidenceFoldersByAssessmentResult, AuditManagerError> GetEvidenceFoldersByAssessmentOutcome;
         typedef Aws::Utils::Outcome<GetEvidenceFoldersByAssessmentControlResult, AuditManagerError> GetEvidenceFoldersByAssessmentControlOutcome;
+        typedef Aws::Utils::Outcome<GetInsightsResult, AuditManagerError> GetInsightsOutcome;
+        typedef Aws::Utils::Outcome<GetInsightsByAssessmentResult, AuditManagerError> GetInsightsByAssessmentOutcome;
         typedef Aws::Utils::Outcome<GetOrganizationAdminAccountResult, AuditManagerError> GetOrganizationAdminAccountOutcome;
         typedef Aws::Utils::Outcome<GetServicesInScopeResult, AuditManagerError> GetServicesInScopeOutcome;
         typedef Aws::Utils::Outcome<GetSettingsResult, AuditManagerError> GetSettingsOutcome;
+        typedef Aws::Utils::Outcome<ListAssessmentControlInsightsByControlDomainResult, AuditManagerError> ListAssessmentControlInsightsByControlDomainOutcome;
+        typedef Aws::Utils::Outcome<ListAssessmentFrameworkShareRequestsResult, AuditManagerError> ListAssessmentFrameworkShareRequestsOutcome;
         typedef Aws::Utils::Outcome<ListAssessmentFrameworksResult, AuditManagerError> ListAssessmentFrameworksOutcome;
         typedef Aws::Utils::Outcome<ListAssessmentReportsResult, AuditManagerError> ListAssessmentReportsOutcome;
         typedef Aws::Utils::Outcome<ListAssessmentsResult, AuditManagerError> ListAssessmentsOutcome;
+        typedef Aws::Utils::Outcome<ListControlDomainInsightsResult, AuditManagerError> ListControlDomainInsightsOutcome;
+        typedef Aws::Utils::Outcome<ListControlDomainInsightsByAssessmentResult, AuditManagerError> ListControlDomainInsightsByAssessmentOutcome;
+        typedef Aws::Utils::Outcome<ListControlInsightsByControlDomainResult, AuditManagerError> ListControlInsightsByControlDomainOutcome;
         typedef Aws::Utils::Outcome<ListControlsResult, AuditManagerError> ListControlsOutcome;
         typedef Aws::Utils::Outcome<ListKeywordsForDataSourceResult, AuditManagerError> ListKeywordsForDataSourceOutcome;
         typedef Aws::Utils::Outcome<ListNotificationsResult, AuditManagerError> ListNotificationsOutcome;
         typedef Aws::Utils::Outcome<ListTagsForResourceResult, AuditManagerError> ListTagsForResourceOutcome;
         typedef Aws::Utils::Outcome<RegisterAccountResult, AuditManagerError> RegisterAccountOutcome;
         typedef Aws::Utils::Outcome<RegisterOrganizationAdminAccountResult, AuditManagerError> RegisterOrganizationAdminAccountOutcome;
+        typedef Aws::Utils::Outcome<StartAssessmentFrameworkShareResult, AuditManagerError> StartAssessmentFrameworkShareOutcome;
         typedef Aws::Utils::Outcome<TagResourceResult, AuditManagerError> TagResourceOutcome;
         typedef Aws::Utils::Outcome<UntagResourceResult, AuditManagerError> UntagResourceOutcome;
         typedef Aws::Utils::Outcome<UpdateAssessmentResult, AuditManagerError> UpdateAssessmentOutcome;
         typedef Aws::Utils::Outcome<UpdateAssessmentControlResult, AuditManagerError> UpdateAssessmentControlOutcome;
         typedef Aws::Utils::Outcome<UpdateAssessmentControlSetStatusResult, AuditManagerError> UpdateAssessmentControlSetStatusOutcome;
         typedef Aws::Utils::Outcome<UpdateAssessmentFrameworkResult, AuditManagerError> UpdateAssessmentFrameworkOutcome;
+        typedef Aws::Utils::Outcome<UpdateAssessmentFrameworkShareResult, AuditManagerError> UpdateAssessmentFrameworkShareOutcome;
         typedef Aws::Utils::Outcome<UpdateAssessmentStatusResult, AuditManagerError> UpdateAssessmentStatusOutcome;
         typedef Aws::Utils::Outcome<UpdateControlResult, AuditManagerError> UpdateControlOutcome;
         typedef Aws::Utils::Outcome<UpdateSettingsResult, AuditManagerError> UpdateSettingsOutcome;
@@ -217,6 +247,7 @@ namespace Model
         typedef std::future<CreateControlOutcome> CreateControlOutcomeCallable;
         typedef std::future<DeleteAssessmentOutcome> DeleteAssessmentOutcomeCallable;
         typedef std::future<DeleteAssessmentFrameworkOutcome> DeleteAssessmentFrameworkOutcomeCallable;
+        typedef std::future<DeleteAssessmentFrameworkShareOutcome> DeleteAssessmentFrameworkShareOutcomeCallable;
         typedef std::future<DeleteAssessmentReportOutcome> DeleteAssessmentReportOutcomeCallable;
         typedef std::future<DeleteControlOutcome> DeleteControlOutcomeCallable;
         typedef std::future<DeregisterAccountOutcome> DeregisterAccountOutcomeCallable;
@@ -234,24 +265,33 @@ namespace Model
         typedef std::future<GetEvidenceFolderOutcome> GetEvidenceFolderOutcomeCallable;
         typedef std::future<GetEvidenceFoldersByAssessmentOutcome> GetEvidenceFoldersByAssessmentOutcomeCallable;
         typedef std::future<GetEvidenceFoldersByAssessmentControlOutcome> GetEvidenceFoldersByAssessmentControlOutcomeCallable;
+        typedef std::future<GetInsightsOutcome> GetInsightsOutcomeCallable;
+        typedef std::future<GetInsightsByAssessmentOutcome> GetInsightsByAssessmentOutcomeCallable;
         typedef std::future<GetOrganizationAdminAccountOutcome> GetOrganizationAdminAccountOutcomeCallable;
         typedef std::future<GetServicesInScopeOutcome> GetServicesInScopeOutcomeCallable;
         typedef std::future<GetSettingsOutcome> GetSettingsOutcomeCallable;
+        typedef std::future<ListAssessmentControlInsightsByControlDomainOutcome> ListAssessmentControlInsightsByControlDomainOutcomeCallable;
+        typedef std::future<ListAssessmentFrameworkShareRequestsOutcome> ListAssessmentFrameworkShareRequestsOutcomeCallable;
         typedef std::future<ListAssessmentFrameworksOutcome> ListAssessmentFrameworksOutcomeCallable;
         typedef std::future<ListAssessmentReportsOutcome> ListAssessmentReportsOutcomeCallable;
         typedef std::future<ListAssessmentsOutcome> ListAssessmentsOutcomeCallable;
+        typedef std::future<ListControlDomainInsightsOutcome> ListControlDomainInsightsOutcomeCallable;
+        typedef std::future<ListControlDomainInsightsByAssessmentOutcome> ListControlDomainInsightsByAssessmentOutcomeCallable;
+        typedef std::future<ListControlInsightsByControlDomainOutcome> ListControlInsightsByControlDomainOutcomeCallable;
         typedef std::future<ListControlsOutcome> ListControlsOutcomeCallable;
         typedef std::future<ListKeywordsForDataSourceOutcome> ListKeywordsForDataSourceOutcomeCallable;
         typedef std::future<ListNotificationsOutcome> ListNotificationsOutcomeCallable;
         typedef std::future<ListTagsForResourceOutcome> ListTagsForResourceOutcomeCallable;
         typedef std::future<RegisterAccountOutcome> RegisterAccountOutcomeCallable;
         typedef std::future<RegisterOrganizationAdminAccountOutcome> RegisterOrganizationAdminAccountOutcomeCallable;
+        typedef std::future<StartAssessmentFrameworkShareOutcome> StartAssessmentFrameworkShareOutcomeCallable;
         typedef std::future<TagResourceOutcome> TagResourceOutcomeCallable;
         typedef std::future<UntagResourceOutcome> UntagResourceOutcomeCallable;
         typedef std::future<UpdateAssessmentOutcome> UpdateAssessmentOutcomeCallable;
         typedef std::future<UpdateAssessmentControlOutcome> UpdateAssessmentControlOutcomeCallable;
         typedef std::future<UpdateAssessmentControlSetStatusOutcome> UpdateAssessmentControlSetStatusOutcomeCallable;
         typedef std::future<UpdateAssessmentFrameworkOutcome> UpdateAssessmentFrameworkOutcomeCallable;
+        typedef std::future<UpdateAssessmentFrameworkShareOutcome> UpdateAssessmentFrameworkShareOutcomeCallable;
         typedef std::future<UpdateAssessmentStatusOutcome> UpdateAssessmentStatusOutcomeCallable;
         typedef std::future<UpdateControlOutcome> UpdateControlOutcomeCallable;
         typedef std::future<UpdateSettingsOutcome> UpdateSettingsOutcomeCallable;
@@ -272,6 +312,7 @@ namespace Model
     typedef std::function<void(const AuditManagerClient*, const Model::CreateControlRequest&, const Model::CreateControlOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > CreateControlResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::DeleteAssessmentRequest&, const Model::DeleteAssessmentOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteAssessmentResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::DeleteAssessmentFrameworkRequest&, const Model::DeleteAssessmentFrameworkOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteAssessmentFrameworkResponseReceivedHandler;
+    typedef std::function<void(const AuditManagerClient*, const Model::DeleteAssessmentFrameworkShareRequest&, const Model::DeleteAssessmentFrameworkShareOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteAssessmentFrameworkShareResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::DeleteAssessmentReportRequest&, const Model::DeleteAssessmentReportOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteAssessmentReportResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::DeleteControlRequest&, const Model::DeleteControlOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeleteControlResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::DeregisterAccountRequest&, const Model::DeregisterAccountOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > DeregisterAccountResponseReceivedHandler;
@@ -289,57 +330,65 @@ namespace Model
     typedef std::function<void(const AuditManagerClient*, const Model::GetEvidenceFolderRequest&, const Model::GetEvidenceFolderOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetEvidenceFolderResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::GetEvidenceFoldersByAssessmentRequest&, const Model::GetEvidenceFoldersByAssessmentOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetEvidenceFoldersByAssessmentResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::GetEvidenceFoldersByAssessmentControlRequest&, const Model::GetEvidenceFoldersByAssessmentControlOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetEvidenceFoldersByAssessmentControlResponseReceivedHandler;
+    typedef std::function<void(const AuditManagerClient*, const Model::GetInsightsRequest&, const Model::GetInsightsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetInsightsResponseReceivedHandler;
+    typedef std::function<void(const AuditManagerClient*, const Model::GetInsightsByAssessmentRequest&, const Model::GetInsightsByAssessmentOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetInsightsByAssessmentResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::GetOrganizationAdminAccountRequest&, const Model::GetOrganizationAdminAccountOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetOrganizationAdminAccountResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::GetServicesInScopeRequest&, const Model::GetServicesInScopeOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetServicesInScopeResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::GetSettingsRequest&, const Model::GetSettingsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > GetSettingsResponseReceivedHandler;
+    typedef std::function<void(const AuditManagerClient*, const Model::ListAssessmentControlInsightsByControlDomainRequest&, const Model::ListAssessmentControlInsightsByControlDomainOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAssessmentControlInsightsByControlDomainResponseReceivedHandler;
+    typedef std::function<void(const AuditManagerClient*, const Model::ListAssessmentFrameworkShareRequestsRequest&, const Model::ListAssessmentFrameworkShareRequestsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAssessmentFrameworkShareRequestsResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::ListAssessmentFrameworksRequest&, const Model::ListAssessmentFrameworksOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAssessmentFrameworksResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::ListAssessmentReportsRequest&, const Model::ListAssessmentReportsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAssessmentReportsResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::ListAssessmentsRequest&, const Model::ListAssessmentsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListAssessmentsResponseReceivedHandler;
+    typedef std::function<void(const AuditManagerClient*, const Model::ListControlDomainInsightsRequest&, const Model::ListControlDomainInsightsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListControlDomainInsightsResponseReceivedHandler;
+    typedef std::function<void(const AuditManagerClient*, const Model::ListControlDomainInsightsByAssessmentRequest&, const Model::ListControlDomainInsightsByAssessmentOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListControlDomainInsightsByAssessmentResponseReceivedHandler;
+    typedef std::function<void(const AuditManagerClient*, const Model::ListControlInsightsByControlDomainRequest&, const Model::ListControlInsightsByControlDomainOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListControlInsightsByControlDomainResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::ListControlsRequest&, const Model::ListControlsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListControlsResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::ListKeywordsForDataSourceRequest&, const Model::ListKeywordsForDataSourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListKeywordsForDataSourceResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::ListNotificationsRequest&, const Model::ListNotificationsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListNotificationsResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::ListTagsForResourceRequest&, const Model::ListTagsForResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ListTagsForResourceResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::RegisterAccountRequest&, const Model::RegisterAccountOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RegisterAccountResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::RegisterOrganizationAdminAccountRequest&, const Model::RegisterOrganizationAdminAccountOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > RegisterOrganizationAdminAccountResponseReceivedHandler;
+    typedef std::function<void(const AuditManagerClient*, const Model::StartAssessmentFrameworkShareRequest&, const Model::StartAssessmentFrameworkShareOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > StartAssessmentFrameworkShareResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::TagResourceRequest&, const Model::TagResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > TagResourceResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::UntagResourceRequest&, const Model::UntagResourceOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UntagResourceResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::UpdateAssessmentRequest&, const Model::UpdateAssessmentOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateAssessmentResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::UpdateAssessmentControlRequest&, const Model::UpdateAssessmentControlOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateAssessmentControlResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::UpdateAssessmentControlSetStatusRequest&, const Model::UpdateAssessmentControlSetStatusOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateAssessmentControlSetStatusResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::UpdateAssessmentFrameworkRequest&, const Model::UpdateAssessmentFrameworkOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateAssessmentFrameworkResponseReceivedHandler;
+    typedef std::function<void(const AuditManagerClient*, const Model::UpdateAssessmentFrameworkShareRequest&, const Model::UpdateAssessmentFrameworkShareOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateAssessmentFrameworkShareResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::UpdateAssessmentStatusRequest&, const Model::UpdateAssessmentStatusOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateAssessmentStatusResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::UpdateControlRequest&, const Model::UpdateControlOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateControlResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::UpdateSettingsRequest&, const Model::UpdateSettingsOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > UpdateSettingsResponseReceivedHandler;
     typedef std::function<void(const AuditManagerClient*, const Model::ValidateAssessmentReportIntegrityRequest&, const Model::ValidateAssessmentReportIntegrityOutcome&, const std::shared_ptr<const Aws::Client::AsyncCallerContext>&) > ValidateAssessmentReportIntegrityResponseReceivedHandler;
 
   /**
-   * <p>Welcome to the AWS Audit Manager API reference. This guide is for developers
-   * who need detailed information about the AWS Audit Manager API operations, data
-   * types, and errors. </p> <p>AWS Audit Manager is a service that provides
-   * automated evidence collection so that you can continuously audit your AWS usage,
-   * and assess the effectiveness of your controls to better manage risk and simplify
-   * compliance.</p> <p>AWS Audit Manager provides pre-built frameworks that
+   * <p>Welcome to the Audit Manager API reference. This guide is for developers who
+   * need detailed information about the Audit Manager API operations, data types,
+   * and errors. </p> <p>Audit Manager is a service that provides automated evidence
+   * collection so that you can continually audit your Amazon Web Services usage. You
+   * can use it to assess the effectiveness of your controls, manage risk, and
+   * simplify compliance.</p> <p>Audit Manager provides prebuilt frameworks that
    * structure and automate assessments for a given compliance standard. Frameworks
-   * include a pre-built collection of controls with descriptions and testing
-   * procedures, which are grouped according to the requirements of the specified
-   * compliance standard or regulation. You can also customize frameworks and
-   * controls to support internal audits with unique requirements. </p> <p>Use the
-   * following links to get started with the AWS Audit Manager API:</p> <ul> <li> <p>
+   * include a prebuilt collection of controls with descriptions and testing
+   * procedures. These controls are grouped according to the requirements of the
+   * specified compliance standard or regulation. You can also customize frameworks
+   * and controls to support internal audits with specific requirements. </p> <p>Use
+   * the following links to get started with the Audit Manager API:</p> <ul> <li> <p>
    * <a
    * href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_Operations.html">Actions</a>:
-   * An alphabetical list of all AWS Audit Manager API operations.</p> </li> <li> <p>
-   * <a
+   * An alphabetical list of all Audit Manager API operations.</p> </li> <li> <p> <a
    * href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_Types.html">Data
-   * types</a>: An alphabetical list of all AWS Audit Manager data types.</p> </li>
-   * <li> <p> <a
+   * types</a>: An alphabetical list of all Audit Manager data types.</p> </li> <li>
+   * <p> <a
    * href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/CommonParameters.html">Common
    * parameters</a>: Parameters that all Query operations can use.</p> </li> <li> <p>
    * <a
    * href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/CommonErrors.html">Common
    * errors</a>: Client and server errors that all operations can return.</p> </li>
-   * </ul> <p>If you're new to AWS Audit Manager, we recommend that you review the <a
+   * </ul> <p>If you're new to Audit Manager, we recommend that you review the <a
    * href="https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html">
-   * AWS Audit Manager User Guide</a>.</p>
+   * Audit Manager User Guide</a>.</p>
    */
   class AWS_AUDITMANAGER_API AuditManagerClient : public Aws::Client::AWSJsonClient
   {
@@ -369,16 +418,16 @@ namespace Model
 
 
         /**
-         * <p> Associates an evidence folder to the specified assessment report in AWS
-         * Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Associates an evidence folder to an assessment report in a Audit Manager
+         * assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssociateAssessmentReportEvidenceFolder">AWS
          * API Reference</a></p>
          */
         virtual Model::AssociateAssessmentReportEvidenceFolderOutcome AssociateAssessmentReportEvidenceFolder(const Model::AssociateAssessmentReportEvidenceFolderRequest& request) const;
 
         /**
-         * <p> Associates an evidence folder to the specified assessment report in AWS
-         * Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Associates an evidence folder to an assessment report in a Audit Manager
+         * assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssociateAssessmentReportEvidenceFolder">AWS
          * API Reference</a></p>
          *
@@ -387,8 +436,8 @@ namespace Model
         virtual Model::AssociateAssessmentReportEvidenceFolderOutcomeCallable AssociateAssessmentReportEvidenceFolderCallable(const Model::AssociateAssessmentReportEvidenceFolderRequest& request) const;
 
         /**
-         * <p> Associates an evidence folder to the specified assessment report in AWS
-         * Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Associates an evidence folder to an assessment report in a Audit Manager
+         * assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssociateAssessmentReportEvidenceFolder">AWS
          * API Reference</a></p>
          *
@@ -397,16 +446,16 @@ namespace Model
         virtual void AssociateAssessmentReportEvidenceFolderAsync(const Model::AssociateAssessmentReportEvidenceFolderRequest& request, const AssociateAssessmentReportEvidenceFolderResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Associates a list of evidence to an assessment report in an AWS Audit
-         * Manager assessment. </p><p><h3>See Also:</h3>   <a
+         * <p> Associates a list of evidence to an assessment report in an Audit Manager
+         * assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchAssociateAssessmentReportEvidence">AWS
          * API Reference</a></p>
          */
         virtual Model::BatchAssociateAssessmentReportEvidenceOutcome BatchAssociateAssessmentReportEvidence(const Model::BatchAssociateAssessmentReportEvidenceRequest& request) const;
 
         /**
-         * <p> Associates a list of evidence to an assessment report in an AWS Audit
-         * Manager assessment. </p><p><h3>See Also:</h3>   <a
+         * <p> Associates a list of evidence to an assessment report in an Audit Manager
+         * assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchAssociateAssessmentReportEvidence">AWS
          * API Reference</a></p>
          *
@@ -415,8 +464,8 @@ namespace Model
         virtual Model::BatchAssociateAssessmentReportEvidenceOutcomeCallable BatchAssociateAssessmentReportEvidenceCallable(const Model::BatchAssociateAssessmentReportEvidenceRequest& request) const;
 
         /**
-         * <p> Associates a list of evidence to an assessment report in an AWS Audit
-         * Manager assessment. </p><p><h3>See Also:</h3>   <a
+         * <p> Associates a list of evidence to an assessment report in an Audit Manager
+         * assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchAssociateAssessmentReportEvidence">AWS
          * API Reference</a></p>
          *
@@ -425,16 +474,16 @@ namespace Model
         virtual void BatchAssociateAssessmentReportEvidenceAsync(const Model::BatchAssociateAssessmentReportEvidenceRequest& request, const BatchAssociateAssessmentReportEvidenceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Create a batch of delegations for a specified assessment in AWS Audit
-         * Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Creates a batch of delegations for an assessment in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchCreateDelegationByAssessment">AWS
          * API Reference</a></p>
          */
         virtual Model::BatchCreateDelegationByAssessmentOutcome BatchCreateDelegationByAssessment(const Model::BatchCreateDelegationByAssessmentRequest& request) const;
 
         /**
-         * <p> Create a batch of delegations for a specified assessment in AWS Audit
-         * Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Creates a batch of delegations for an assessment in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchCreateDelegationByAssessment">AWS
          * API Reference</a></p>
          *
@@ -443,8 +492,8 @@ namespace Model
         virtual Model::BatchCreateDelegationByAssessmentOutcomeCallable BatchCreateDelegationByAssessmentCallable(const Model::BatchCreateDelegationByAssessmentRequest& request) const;
 
         /**
-         * <p> Create a batch of delegations for a specified assessment in AWS Audit
-         * Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Creates a batch of delegations for an assessment in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchCreateDelegationByAssessment">AWS
          * API Reference</a></p>
          *
@@ -453,7 +502,7 @@ namespace Model
         virtual void BatchCreateDelegationByAssessmentAsync(const Model::BatchCreateDelegationByAssessmentRequest& request, const BatchCreateDelegationByAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Deletes the delegations in the specified AWS Audit Manager assessment.
+         * <p> Deletes a batch of delegations for an assessment in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchDeleteDelegationByAssessment">AWS
          * API Reference</a></p>
@@ -461,7 +510,7 @@ namespace Model
         virtual Model::BatchDeleteDelegationByAssessmentOutcome BatchDeleteDelegationByAssessment(const Model::BatchDeleteDelegationByAssessmentRequest& request) const;
 
         /**
-         * <p> Deletes the delegations in the specified AWS Audit Manager assessment.
+         * <p> Deletes a batch of delegations for an assessment in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchDeleteDelegationByAssessment">AWS
          * API Reference</a></p>
@@ -471,7 +520,7 @@ namespace Model
         virtual Model::BatchDeleteDelegationByAssessmentOutcomeCallable BatchDeleteDelegationByAssessmentCallable(const Model::BatchDeleteDelegationByAssessmentRequest& request) const;
 
         /**
-         * <p> Deletes the delegations in the specified AWS Audit Manager assessment.
+         * <p> Deletes a batch of delegations for an assessment in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchDeleteDelegationByAssessment">AWS
          * API Reference</a></p>
@@ -481,16 +530,16 @@ namespace Model
         virtual void BatchDeleteDelegationByAssessmentAsync(const Model::BatchDeleteDelegationByAssessmentRequest& request, const BatchDeleteDelegationByAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Disassociates a list of evidence from the specified assessment report in AWS
-         * Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Disassociates a list of evidence from an assessment report in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchDisassociateAssessmentReportEvidence">AWS
          * API Reference</a></p>
          */
         virtual Model::BatchDisassociateAssessmentReportEvidenceOutcome BatchDisassociateAssessmentReportEvidence(const Model::BatchDisassociateAssessmentReportEvidenceRequest& request) const;
 
         /**
-         * <p> Disassociates a list of evidence from the specified assessment report in AWS
-         * Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Disassociates a list of evidence from an assessment report in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchDisassociateAssessmentReportEvidence">AWS
          * API Reference</a></p>
          *
@@ -499,8 +548,8 @@ namespace Model
         virtual Model::BatchDisassociateAssessmentReportEvidenceOutcomeCallable BatchDisassociateAssessmentReportEvidenceCallable(const Model::BatchDisassociateAssessmentReportEvidenceRequest& request) const;
 
         /**
-         * <p> Disassociates a list of evidence from the specified assessment report in AWS
-         * Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Disassociates a list of evidence from an assessment report in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchDisassociateAssessmentReportEvidence">AWS
          * API Reference</a></p>
          *
@@ -509,16 +558,16 @@ namespace Model
         virtual void BatchDisassociateAssessmentReportEvidenceAsync(const Model::BatchDisassociateAssessmentReportEvidenceRequest& request, const BatchDisassociateAssessmentReportEvidenceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Uploads one or more pieces of evidence to the specified control in the
-         * assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Uploads one or more pieces of evidence to a control in an Audit Manager
+         * assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchImportEvidenceToAssessmentControl">AWS
          * API Reference</a></p>
          */
         virtual Model::BatchImportEvidenceToAssessmentControlOutcome BatchImportEvidenceToAssessmentControl(const Model::BatchImportEvidenceToAssessmentControlRequest& request) const;
 
         /**
-         * <p> Uploads one or more pieces of evidence to the specified control in the
-         * assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Uploads one or more pieces of evidence to a control in an Audit Manager
+         * assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchImportEvidenceToAssessmentControl">AWS
          * API Reference</a></p>
          *
@@ -527,8 +576,8 @@ namespace Model
         virtual Model::BatchImportEvidenceToAssessmentControlOutcomeCallable BatchImportEvidenceToAssessmentControlCallable(const Model::BatchImportEvidenceToAssessmentControlRequest& request) const;
 
         /**
-         * <p> Uploads one or more pieces of evidence to the specified control in the
-         * assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Uploads one or more pieces of evidence to a control in an Audit Manager
+         * assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchImportEvidenceToAssessmentControl">AWS
          * API Reference</a></p>
          *
@@ -537,14 +586,14 @@ namespace Model
         virtual void BatchImportEvidenceToAssessmentControlAsync(const Model::BatchImportEvidenceToAssessmentControlRequest& request, const BatchImportEvidenceToAssessmentControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Creates an assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Creates an assessment in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessment">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateAssessmentOutcome CreateAssessment(const Model::CreateAssessmentRequest& request) const;
 
         /**
-         * <p> Creates an assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Creates an assessment in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessment">AWS
          * API Reference</a></p>
          *
@@ -553,7 +602,7 @@ namespace Model
         virtual Model::CreateAssessmentOutcomeCallable CreateAssessmentCallable(const Model::CreateAssessmentRequest& request) const;
 
         /**
-         * <p> Creates an assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Creates an assessment in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessment">AWS
          * API Reference</a></p>
          *
@@ -562,16 +611,14 @@ namespace Model
         virtual void CreateAssessmentAsync(const Model::CreateAssessmentRequest& request, const CreateAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Creates a custom framework in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Creates a custom framework in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessmentFramework">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateAssessmentFrameworkOutcome CreateAssessmentFramework(const Model::CreateAssessmentFrameworkRequest& request) const;
 
         /**
-         * <p> Creates a custom framework in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Creates a custom framework in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessmentFramework">AWS
          * API Reference</a></p>
          *
@@ -580,8 +627,7 @@ namespace Model
         virtual Model::CreateAssessmentFrameworkOutcomeCallable CreateAssessmentFrameworkCallable(const Model::CreateAssessmentFrameworkRequest& request) const;
 
         /**
-         * <p> Creates a custom framework in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Creates a custom framework in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessmentFramework">AWS
          * API Reference</a></p>
          *
@@ -618,7 +664,7 @@ namespace Model
         virtual void CreateAssessmentReportAsync(const Model::CreateAssessmentReportRequest& request, const CreateAssessmentReportResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Creates a new custom control in AWS Audit Manager. </p><p><h3>See Also:</h3>
+         * <p> Creates a new custom control in Audit Manager. </p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateControl">AWS
          * API Reference</a></p>
@@ -626,7 +672,7 @@ namespace Model
         virtual Model::CreateControlOutcome CreateControl(const Model::CreateControlRequest& request) const;
 
         /**
-         * <p> Creates a new custom control in AWS Audit Manager. </p><p><h3>See Also:</h3>
+         * <p> Creates a new custom control in Audit Manager. </p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateControl">AWS
          * API Reference</a></p>
@@ -636,7 +682,7 @@ namespace Model
         virtual Model::CreateControlOutcomeCallable CreateControlCallable(const Model::CreateControlRequest& request) const;
 
         /**
-         * <p> Creates a new custom control in AWS Audit Manager. </p><p><h3>See Also:</h3>
+         * <p> Creates a new custom control in Audit Manager. </p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateControl">AWS
          * API Reference</a></p>
@@ -646,14 +692,14 @@ namespace Model
         virtual void CreateControlAsync(const Model::CreateControlRequest& request, const CreateControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Deletes an assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Deletes an assessment in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessment">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteAssessmentOutcome DeleteAssessment(const Model::DeleteAssessmentRequest& request) const;
 
         /**
-         * <p> Deletes an assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Deletes an assessment in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessment">AWS
          * API Reference</a></p>
          *
@@ -662,7 +708,7 @@ namespace Model
         virtual Model::DeleteAssessmentOutcomeCallable DeleteAssessmentCallable(const Model::DeleteAssessmentRequest& request) const;
 
         /**
-         * <p> Deletes an assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Deletes an assessment in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessment">AWS
          * API Reference</a></p>
          *
@@ -671,16 +717,14 @@ namespace Model
         virtual void DeleteAssessmentAsync(const Model::DeleteAssessmentRequest& request, const DeleteAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Deletes a custom framework in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Deletes a custom framework in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentFramework">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteAssessmentFrameworkOutcome DeleteAssessmentFramework(const Model::DeleteAssessmentFrameworkRequest& request) const;
 
         /**
-         * <p> Deletes a custom framework in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Deletes a custom framework in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentFramework">AWS
          * API Reference</a></p>
          *
@@ -689,8 +733,7 @@ namespace Model
         virtual Model::DeleteAssessmentFrameworkOutcomeCallable DeleteAssessmentFrameworkCallable(const Model::DeleteAssessmentFrameworkRequest& request) const;
 
         /**
-         * <p> Deletes a custom framework in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Deletes a custom framework in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentFramework">AWS
          * API Reference</a></p>
          *
@@ -699,7 +742,35 @@ namespace Model
         virtual void DeleteAssessmentFrameworkAsync(const Model::DeleteAssessmentFrameworkRequest& request, const DeleteAssessmentFrameworkResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Deletes an assessment report from an assessment in AWS Audit Manager.
+         * <p> Deletes a share request for a custom framework in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentFrameworkShare">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::DeleteAssessmentFrameworkShareOutcome DeleteAssessmentFrameworkShare(const Model::DeleteAssessmentFrameworkShareRequest& request) const;
+
+        /**
+         * <p> Deletes a share request for a custom framework in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentFrameworkShare">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::DeleteAssessmentFrameworkShareOutcomeCallable DeleteAssessmentFrameworkShareCallable(const Model::DeleteAssessmentFrameworkShareRequest& request) const;
+
+        /**
+         * <p> Deletes a share request for a custom framework in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentFrameworkShare">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void DeleteAssessmentFrameworkShareAsync(const Model::DeleteAssessmentFrameworkShareRequest& request, const DeleteAssessmentFrameworkShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p> Deletes an assessment report from an assessment in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentReport">AWS
          * API Reference</a></p>
@@ -707,7 +778,7 @@ namespace Model
         virtual Model::DeleteAssessmentReportOutcome DeleteAssessmentReport(const Model::DeleteAssessmentReportRequest& request) const;
 
         /**
-         * <p> Deletes an assessment report from an assessment in AWS Audit Manager.
+         * <p> Deletes an assessment report from an assessment in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentReport">AWS
          * API Reference</a></p>
@@ -717,7 +788,7 @@ namespace Model
         virtual Model::DeleteAssessmentReportOutcomeCallable DeleteAssessmentReportCallable(const Model::DeleteAssessmentReportRequest& request) const;
 
         /**
-         * <p> Deletes an assessment report from an assessment in AWS Audit Manager.
+         * <p> Deletes an assessment report from an assessment in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentReport">AWS
          * API Reference</a></p>
@@ -727,16 +798,14 @@ namespace Model
         virtual void DeleteAssessmentReportAsync(const Model::DeleteAssessmentReportRequest& request, const DeleteAssessmentReportResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Deletes a custom control in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Deletes a custom control in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteControl">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteControlOutcome DeleteControl(const Model::DeleteControlRequest& request) const;
 
         /**
-         * <p> Deletes a custom control in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Deletes a custom control in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteControl">AWS
          * API Reference</a></p>
          *
@@ -745,8 +814,7 @@ namespace Model
         virtual Model::DeleteControlOutcomeCallable DeleteControlCallable(const Model::DeleteControlRequest& request) const;
 
         /**
-         * <p> Deletes a custom control in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Deletes a custom control in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteControl">AWS
          * API Reference</a></p>
          *
@@ -755,14 +823,14 @@ namespace Model
         virtual void DeleteControlAsync(const Model::DeleteControlRequest& request, const DeleteControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Deregisters an account in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Deregisters an account in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeregisterAccount">AWS
          * API Reference</a></p>
          */
         virtual Model::DeregisterAccountOutcome DeregisterAccount(const Model::DeregisterAccountRequest& request) const;
 
         /**
-         * <p> Deregisters an account in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Deregisters an account in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeregisterAccount">AWS
          * API Reference</a></p>
          *
@@ -771,7 +839,7 @@ namespace Model
         virtual Model::DeregisterAccountOutcomeCallable DeregisterAccountCallable(const Model::DeregisterAccountRequest& request) const;
 
         /**
-         * <p> Deregisters an account in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Deregisters an account in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeregisterAccount">AWS
          * API Reference</a></p>
          *
@@ -780,16 +848,26 @@ namespace Model
         virtual void DeregisterAccountAsync(const Model::DeregisterAccountRequest& request, const DeregisterAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Deregisters the delegated AWS administrator account from the AWS
-         * organization. </p><p><h3>See Also:</h3>   <a
+         * <p>Removes the specified member Amazon Web Services account as a delegated
+         * administrator for Audit Manager. </p>  <p>When you remove a delegated
+         * administrator from your Audit Manager settings, you continue to have access to
+         * the evidence that you previously collected under that account. This is also the
+         * case when you deregister a delegated administrator from Audit Manager. However,
+         * Audit Manager will stop collecting and attaching evidence to that delegated
+         * administrator account moving forward.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeregisterOrganizationAdminAccount">AWS
          * API Reference</a></p>
          */
         virtual Model::DeregisterOrganizationAdminAccountOutcome DeregisterOrganizationAdminAccount(const Model::DeregisterOrganizationAdminAccountRequest& request) const;
 
         /**
-         * <p> Deregisters the delegated AWS administrator account from the AWS
-         * organization. </p><p><h3>See Also:</h3>   <a
+         * <p>Removes the specified member Amazon Web Services account as a delegated
+         * administrator for Audit Manager. </p>  <p>When you remove a delegated
+         * administrator from your Audit Manager settings, you continue to have access to
+         * the evidence that you previously collected under that account. This is also the
+         * case when you deregister a delegated administrator from Audit Manager. However,
+         * Audit Manager will stop collecting and attaching evidence to that delegated
+         * administrator account moving forward.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeregisterOrganizationAdminAccount">AWS
          * API Reference</a></p>
          *
@@ -798,8 +876,13 @@ namespace Model
         virtual Model::DeregisterOrganizationAdminAccountOutcomeCallable DeregisterOrganizationAdminAccountCallable(const Model::DeregisterOrganizationAdminAccountRequest& request) const;
 
         /**
-         * <p> Deregisters the delegated AWS administrator account from the AWS
-         * organization. </p><p><h3>See Also:</h3>   <a
+         * <p>Removes the specified member Amazon Web Services account as a delegated
+         * administrator for Audit Manager. </p>  <p>When you remove a delegated
+         * administrator from your Audit Manager settings, you continue to have access to
+         * the evidence that you previously collected under that account. This is also the
+         * case when you deregister a delegated administrator from Audit Manager. However,
+         * Audit Manager will stop collecting and attaching evidence to that delegated
+         * administrator account moving forward.</p> <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeregisterOrganizationAdminAccount">AWS
          * API Reference</a></p>
          *
@@ -808,7 +891,7 @@ namespace Model
         virtual void DeregisterOrganizationAdminAccountAsync(const Model::DeregisterOrganizationAdminAccountRequest& request, const DeregisterOrganizationAdminAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Disassociates an evidence folder from the specified assessment report in AWS
+         * <p> Disassociates an evidence folder from the specified assessment report in
          * Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DisassociateAssessmentReportEvidenceFolder">AWS
          * API Reference</a></p>
@@ -816,7 +899,7 @@ namespace Model
         virtual Model::DisassociateAssessmentReportEvidenceFolderOutcome DisassociateAssessmentReportEvidenceFolder(const Model::DisassociateAssessmentReportEvidenceFolderRequest& request) const;
 
         /**
-         * <p> Disassociates an evidence folder from the specified assessment report in AWS
+         * <p> Disassociates an evidence folder from the specified assessment report in
          * Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DisassociateAssessmentReportEvidenceFolder">AWS
          * API Reference</a></p>
@@ -826,7 +909,7 @@ namespace Model
         virtual Model::DisassociateAssessmentReportEvidenceFolderOutcomeCallable DisassociateAssessmentReportEvidenceFolderCallable(const Model::DisassociateAssessmentReportEvidenceFolderRequest& request) const;
 
         /**
-         * <p> Disassociates an evidence folder from the specified assessment report in AWS
+         * <p> Disassociates an evidence folder from the specified assessment report in
          * Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DisassociateAssessmentReportEvidenceFolder">AWS
          * API Reference</a></p>
@@ -836,7 +919,7 @@ namespace Model
         virtual void DisassociateAssessmentReportEvidenceFolderAsync(const Model::DisassociateAssessmentReportEvidenceFolderRequest& request, const DisassociateAssessmentReportEvidenceFolderResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns the registration status of an account in AWS Audit Manager.
+         * <p> Returns the registration status of an account in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAccountStatus">AWS
          * API Reference</a></p>
@@ -844,7 +927,7 @@ namespace Model
         virtual Model::GetAccountStatusOutcome GetAccountStatus(const Model::GetAccountStatusRequest& request) const;
 
         /**
-         * <p> Returns the registration status of an account in AWS Audit Manager.
+         * <p> Returns the registration status of an account in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAccountStatus">AWS
          * API Reference</a></p>
@@ -854,7 +937,7 @@ namespace Model
         virtual Model::GetAccountStatusOutcomeCallable GetAccountStatusCallable(const Model::GetAccountStatusRequest& request) const;
 
         /**
-         * <p> Returns the registration status of an account in AWS Audit Manager.
+         * <p> Returns the registration status of an account in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAccountStatus">AWS
          * API Reference</a></p>
@@ -864,14 +947,14 @@ namespace Model
         virtual void GetAccountStatusAsync(const Model::GetAccountStatusRequest& request, const GetAccountStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns an assessment from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p>Returns an assessment from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessment">AWS
          * API Reference</a></p>
          */
         virtual Model::GetAssessmentOutcome GetAssessment(const Model::GetAssessmentRequest& request) const;
 
         /**
-         * <p> Returns an assessment from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p>Returns an assessment from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessment">AWS
          * API Reference</a></p>
          *
@@ -880,7 +963,7 @@ namespace Model
         virtual Model::GetAssessmentOutcomeCallable GetAssessmentCallable(const Model::GetAssessmentRequest& request) const;
 
         /**
-         * <p> Returns an assessment from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p>Returns an assessment from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessment">AWS
          * API Reference</a></p>
          *
@@ -889,14 +972,14 @@ namespace Model
         virtual void GetAssessmentAsync(const Model::GetAssessmentRequest& request, const GetAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a framework from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p>Returns a framework from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessmentFramework">AWS
          * API Reference</a></p>
          */
         virtual Model::GetAssessmentFrameworkOutcome GetAssessmentFramework(const Model::GetAssessmentFrameworkRequest& request) const;
 
         /**
-         * <p> Returns a framework from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p>Returns a framework from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessmentFramework">AWS
          * API Reference</a></p>
          *
@@ -905,7 +988,7 @@ namespace Model
         virtual Model::GetAssessmentFrameworkOutcomeCallable GetAssessmentFrameworkCallable(const Model::GetAssessmentFrameworkRequest& request) const;
 
         /**
-         * <p> Returns a framework from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p>Returns a framework from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessmentFramework">AWS
          * API Reference</a></p>
          *
@@ -914,16 +997,16 @@ namespace Model
         virtual void GetAssessmentFrameworkAsync(const Model::GetAssessmentFrameworkRequest& request, const GetAssessmentFrameworkResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns the URL of a specified assessment report in AWS Audit Manager.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Returns the URL of an assessment report in Audit Manager. </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessmentReportUrl">AWS
          * API Reference</a></p>
          */
         virtual Model::GetAssessmentReportUrlOutcome GetAssessmentReportUrl(const Model::GetAssessmentReportUrlRequest& request) const;
 
         /**
-         * <p> Returns the URL of a specified assessment report in AWS Audit Manager.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Returns the URL of an assessment report in Audit Manager. </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessmentReportUrl">AWS
          * API Reference</a></p>
          *
@@ -932,8 +1015,8 @@ namespace Model
         virtual Model::GetAssessmentReportUrlOutcomeCallable GetAssessmentReportUrlCallable(const Model::GetAssessmentReportUrlRequest& request) const;
 
         /**
-         * <p> Returns the URL of a specified assessment report in AWS Audit Manager.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Returns the URL of an assessment report in Audit Manager. </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessmentReportUrl">AWS
          * API Reference</a></p>
          *
@@ -942,16 +1025,16 @@ namespace Model
         virtual void GetAssessmentReportUrlAsync(const Model::GetAssessmentReportUrlRequest& request, const GetAssessmentReportUrlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of changelogs from AWS Audit Manager. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Returns a list of changelogs from Audit Manager. </p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetChangeLogs">AWS
          * API Reference</a></p>
          */
         virtual Model::GetChangeLogsOutcome GetChangeLogs(const Model::GetChangeLogsRequest& request) const;
 
         /**
-         * <p> Returns a list of changelogs from AWS Audit Manager. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Returns a list of changelogs from Audit Manager. </p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetChangeLogs">AWS
          * API Reference</a></p>
          *
@@ -960,8 +1043,8 @@ namespace Model
         virtual Model::GetChangeLogsOutcomeCallable GetChangeLogsCallable(const Model::GetChangeLogsRequest& request) const;
 
         /**
-         * <p> Returns a list of changelogs from AWS Audit Manager. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Returns a list of changelogs from Audit Manager. </p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetChangeLogs">AWS
          * API Reference</a></p>
          *
@@ -970,14 +1053,14 @@ namespace Model
         virtual void GetChangeLogsAsync(const Model::GetChangeLogsRequest& request, const GetChangeLogsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a control from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a control from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetControl">AWS
          * API Reference</a></p>
          */
         virtual Model::GetControlOutcome GetControl(const Model::GetControlRequest& request) const;
 
         /**
-         * <p> Returns a control from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a control from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetControl">AWS
          * API Reference</a></p>
          *
@@ -986,7 +1069,7 @@ namespace Model
         virtual Model::GetControlOutcomeCallable GetControlCallable(const Model::GetControlRequest& request) const;
 
         /**
-         * <p> Returns a control from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a control from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetControl">AWS
          * API Reference</a></p>
          *
@@ -1023,14 +1106,14 @@ namespace Model
         virtual void GetDelegationsAsync(const Model::GetDelegationsRequest& request, const GetDelegationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns evidence from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns evidence from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidence">AWS
          * API Reference</a></p>
          */
         virtual Model::GetEvidenceOutcome GetEvidence(const Model::GetEvidenceRequest& request) const;
 
         /**
-         * <p> Returns evidence from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns evidence from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidence">AWS
          * API Reference</a></p>
          *
@@ -1039,7 +1122,7 @@ namespace Model
         virtual Model::GetEvidenceOutcomeCallable GetEvidenceCallable(const Model::GetEvidenceRequest& request) const;
 
         /**
-         * <p> Returns evidence from AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns evidence from Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidence">AWS
          * API Reference</a></p>
          *
@@ -1048,7 +1131,7 @@ namespace Model
         virtual void GetEvidenceAsync(const Model::GetEvidenceRequest& request, const GetEvidenceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns all evidence from a specified evidence folder in AWS Audit Manager.
+         * <p> Returns all evidence from a specified evidence folder in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceByEvidenceFolder">AWS
          * API Reference</a></p>
@@ -1056,7 +1139,7 @@ namespace Model
         virtual Model::GetEvidenceByEvidenceFolderOutcome GetEvidenceByEvidenceFolder(const Model::GetEvidenceByEvidenceFolderRequest& request) const;
 
         /**
-         * <p> Returns all evidence from a specified evidence folder in AWS Audit Manager.
+         * <p> Returns all evidence from a specified evidence folder in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceByEvidenceFolder">AWS
          * API Reference</a></p>
@@ -1066,7 +1149,7 @@ namespace Model
         virtual Model::GetEvidenceByEvidenceFolderOutcomeCallable GetEvidenceByEvidenceFolderCallable(const Model::GetEvidenceByEvidenceFolderRequest& request) const;
 
         /**
-         * <p> Returns all evidence from a specified evidence folder in AWS Audit Manager.
+         * <p> Returns all evidence from a specified evidence folder in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceByEvidenceFolder">AWS
          * API Reference</a></p>
@@ -1076,16 +1159,16 @@ namespace Model
         virtual void GetEvidenceByEvidenceFolderAsync(const Model::GetEvidenceByEvidenceFolderRequest& request, const GetEvidenceByEvidenceFolderResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns an evidence folder from the specified assessment in AWS Audit
-         * Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns an evidence folder from the specified assessment in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFolder">AWS
          * API Reference</a></p>
          */
         virtual Model::GetEvidenceFolderOutcome GetEvidenceFolder(const Model::GetEvidenceFolderRequest& request) const;
 
         /**
-         * <p> Returns an evidence folder from the specified assessment in AWS Audit
-         * Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns an evidence folder from the specified assessment in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFolder">AWS
          * API Reference</a></p>
          *
@@ -1094,8 +1177,8 @@ namespace Model
         virtual Model::GetEvidenceFolderOutcomeCallable GetEvidenceFolderCallable(const Model::GetEvidenceFolderRequest& request) const;
 
         /**
-         * <p> Returns an evidence folder from the specified assessment in AWS Audit
-         * Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns an evidence folder from the specified assessment in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFolder">AWS
          * API Reference</a></p>
          *
@@ -1104,16 +1187,16 @@ namespace Model
         virtual void GetEvidenceFolderAsync(const Model::GetEvidenceFolderRequest& request, const GetEvidenceFolderResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns the evidence folders from a specified assessment in AWS Audit
-         * Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns the evidence folders from a specified assessment in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFoldersByAssessment">AWS
          * API Reference</a></p>
          */
         virtual Model::GetEvidenceFoldersByAssessmentOutcome GetEvidenceFoldersByAssessment(const Model::GetEvidenceFoldersByAssessmentRequest& request) const;
 
         /**
-         * <p> Returns the evidence folders from a specified assessment in AWS Audit
-         * Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns the evidence folders from a specified assessment in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFoldersByAssessment">AWS
          * API Reference</a></p>
          *
@@ -1122,8 +1205,8 @@ namespace Model
         virtual Model::GetEvidenceFoldersByAssessmentOutcomeCallable GetEvidenceFoldersByAssessmentCallable(const Model::GetEvidenceFoldersByAssessmentRequest& request) const;
 
         /**
-         * <p> Returns the evidence folders from a specified assessment in AWS Audit
-         * Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns the evidence folders from a specified assessment in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFoldersByAssessment">AWS
          * API Reference</a></p>
          *
@@ -1132,16 +1215,16 @@ namespace Model
         virtual void GetEvidenceFoldersByAssessmentAsync(const Model::GetEvidenceFoldersByAssessmentRequest& request, const GetEvidenceFoldersByAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of evidence folders associated with a specified control of an
-         * assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a list of evidence folders that are associated with a specified
+         * control of an assessment in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFoldersByAssessmentControl">AWS
          * API Reference</a></p>
          */
         virtual Model::GetEvidenceFoldersByAssessmentControlOutcome GetEvidenceFoldersByAssessmentControl(const Model::GetEvidenceFoldersByAssessmentControlRequest& request) const;
 
         /**
-         * <p> Returns a list of evidence folders associated with a specified control of an
-         * assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a list of evidence folders that are associated with a specified
+         * control of an assessment in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFoldersByAssessmentControl">AWS
          * API Reference</a></p>
          *
@@ -1150,8 +1233,8 @@ namespace Model
         virtual Model::GetEvidenceFoldersByAssessmentControlOutcomeCallable GetEvidenceFoldersByAssessmentControlCallable(const Model::GetEvidenceFoldersByAssessmentControlRequest& request) const;
 
         /**
-         * <p> Returns a list of evidence folders associated with a specified control of an
-         * assessment in AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a list of evidence folders that are associated with a specified
+         * control of an assessment in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetEvidenceFoldersByAssessmentControl">AWS
          * API Reference</a></p>
          *
@@ -1160,16 +1243,72 @@ namespace Model
         virtual void GetEvidenceFoldersByAssessmentControlAsync(const Model::GetEvidenceFoldersByAssessmentControlRequest& request, const GetEvidenceFoldersByAssessmentControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns the name of the delegated AWS administrator account for the AWS
-         * organization. </p><p><h3>See Also:</h3>   <a
+         * <p>Gets the latest analytics data for all your current active assessments.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsights">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetInsightsOutcome GetInsights(const Model::GetInsightsRequest& request) const;
+
+        /**
+         * <p>Gets the latest analytics data for all your current active assessments.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsights">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetInsightsOutcomeCallable GetInsightsCallable(const Model::GetInsightsRequest& request) const;
+
+        /**
+         * <p>Gets the latest analytics data for all your current active assessments.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsights">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetInsightsAsync(const Model::GetInsightsRequest& request, const GetInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Gets the latest analytics data for a specific active assessment.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsightsByAssessment">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::GetInsightsByAssessmentOutcome GetInsightsByAssessment(const Model::GetInsightsByAssessmentRequest& request) const;
+
+        /**
+         * <p>Gets the latest analytics data for a specific active assessment.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsightsByAssessment">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::GetInsightsByAssessmentOutcomeCallable GetInsightsByAssessmentCallable(const Model::GetInsightsByAssessmentRequest& request) const;
+
+        /**
+         * <p>Gets the latest analytics data for a specific active assessment.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsightsByAssessment">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void GetInsightsByAssessmentAsync(const Model::GetInsightsByAssessmentRequest& request, const GetInsightsByAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p> Returns the name of the delegated Amazon Web Services administrator account
+         * for the organization. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetOrganizationAdminAccount">AWS
          * API Reference</a></p>
          */
         virtual Model::GetOrganizationAdminAccountOutcome GetOrganizationAdminAccount(const Model::GetOrganizationAdminAccountRequest& request) const;
 
         /**
-         * <p> Returns the name of the delegated AWS administrator account for the AWS
-         * organization. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns the name of the delegated Amazon Web Services administrator account
+         * for the organization. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetOrganizationAdminAccount">AWS
          * API Reference</a></p>
          *
@@ -1178,8 +1317,8 @@ namespace Model
         virtual Model::GetOrganizationAdminAccountOutcomeCallable GetOrganizationAdminAccountCallable(const Model::GetOrganizationAdminAccountRequest& request) const;
 
         /**
-         * <p> Returns the name of the delegated AWS administrator account for the AWS
-         * organization. </p><p><h3>See Also:</h3>   <a
+         * <p> Returns the name of the delegated Amazon Web Services administrator account
+         * for the organization. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetOrganizationAdminAccount">AWS
          * API Reference</a></p>
          *
@@ -1188,16 +1327,16 @@ namespace Model
         virtual void GetOrganizationAdminAccountAsync(const Model::GetOrganizationAdminAccountRequest& request, const GetOrganizationAdminAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of the in-scope AWS services for the specified assessment.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a list of the in-scope Amazon Web Services services for the
+         * specified assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetServicesInScope">AWS
          * API Reference</a></p>
          */
         virtual Model::GetServicesInScopeOutcome GetServicesInScope(const Model::GetServicesInScopeRequest& request) const;
 
         /**
-         * <p> Returns a list of the in-scope AWS services for the specified assessment.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a list of the in-scope Amazon Web Services services for the
+         * specified assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetServicesInScope">AWS
          * API Reference</a></p>
          *
@@ -1206,8 +1345,8 @@ namespace Model
         virtual Model::GetServicesInScopeOutcomeCallable GetServicesInScopeCallable(const Model::GetServicesInScopeRequest& request) const;
 
         /**
-         * <p> Returns a list of the in-scope AWS services for the specified assessment.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Returns a list of the in-scope Amazon Web Services services for the
+         * specified assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetServicesInScope">AWS
          * API Reference</a></p>
          *
@@ -1216,16 +1355,16 @@ namespace Model
         virtual void GetServicesInScopeAsync(const Model::GetServicesInScopeRequest& request, const GetServicesInScopeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns the settings for the specified AWS account. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Returns the settings for the specified Amazon Web Services account.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetSettings">AWS
          * API Reference</a></p>
          */
         virtual Model::GetSettingsOutcome GetSettings(const Model::GetSettingsRequest& request) const;
 
         /**
-         * <p> Returns the settings for the specified AWS account. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Returns the settings for the specified Amazon Web Services account.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetSettings">AWS
          * API Reference</a></p>
          *
@@ -1234,8 +1373,8 @@ namespace Model
         virtual Model::GetSettingsOutcomeCallable GetSettingsCallable(const Model::GetSettingsRequest& request) const;
 
         /**
-         * <p> Returns the settings for the specified AWS account. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Returns the settings for the specified Amazon Web Services account.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetSettings">AWS
          * API Reference</a></p>
          *
@@ -1244,7 +1383,78 @@ namespace Model
         virtual void GetSettingsAsync(const Model::GetSettingsRequest& request, const GetSettingsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of the frameworks available in the AWS Audit Manager
+         * <p>Lists the latest analytics data for controls within a specific control domain
+         * and a specific active assessment.</p>  <p>Control insights are listed only
+         * if the control belongs to the control domain and assessment that was specified.
+         * Moreover, the control must have collected evidence on the
+         * <code>lastUpdated</code> date of <code>controlInsightsByAssessment</code>. If
+         * neither of these conditions are met, no data is listed for that control. </p>
+         * <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentControlInsightsByControlDomain">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListAssessmentControlInsightsByControlDomainOutcome ListAssessmentControlInsightsByControlDomain(const Model::ListAssessmentControlInsightsByControlDomainRequest& request) const;
+
+        /**
+         * <p>Lists the latest analytics data for controls within a specific control domain
+         * and a specific active assessment.</p>  <p>Control insights are listed only
+         * if the control belongs to the control domain and assessment that was specified.
+         * Moreover, the control must have collected evidence on the
+         * <code>lastUpdated</code> date of <code>controlInsightsByAssessment</code>. If
+         * neither of these conditions are met, no data is listed for that control. </p>
+         * <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentControlInsightsByControlDomain">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListAssessmentControlInsightsByControlDomainOutcomeCallable ListAssessmentControlInsightsByControlDomainCallable(const Model::ListAssessmentControlInsightsByControlDomainRequest& request) const;
+
+        /**
+         * <p>Lists the latest analytics data for controls within a specific control domain
+         * and a specific active assessment.</p>  <p>Control insights are listed only
+         * if the control belongs to the control domain and assessment that was specified.
+         * Moreover, the control must have collected evidence on the
+         * <code>lastUpdated</code> date of <code>controlInsightsByAssessment</code>. If
+         * neither of these conditions are met, no data is listed for that control. </p>
+         * <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentControlInsightsByControlDomain">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListAssessmentControlInsightsByControlDomainAsync(const Model::ListAssessmentControlInsightsByControlDomainRequest& request, const ListAssessmentControlInsightsByControlDomainResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p> Returns a list of sent or received share requests for custom frameworks in
+         * Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentFrameworkShareRequests">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListAssessmentFrameworkShareRequestsOutcome ListAssessmentFrameworkShareRequests(const Model::ListAssessmentFrameworkShareRequestsRequest& request) const;
+
+        /**
+         * <p> Returns a list of sent or received share requests for custom frameworks in
+         * Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentFrameworkShareRequests">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListAssessmentFrameworkShareRequestsOutcomeCallable ListAssessmentFrameworkShareRequestsCallable(const Model::ListAssessmentFrameworkShareRequestsRequest& request) const;
+
+        /**
+         * <p> Returns a list of sent or received share requests for custom frameworks in
+         * Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentFrameworkShareRequests">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListAssessmentFrameworkShareRequestsAsync(const Model::ListAssessmentFrameworkShareRequestsRequest& request, const ListAssessmentFrameworkShareRequestsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p> Returns a list of the frameworks that are available in the Audit Manager
          * framework library. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentFrameworks">AWS
          * API Reference</a></p>
@@ -1252,7 +1462,7 @@ namespace Model
         virtual Model::ListAssessmentFrameworksOutcome ListAssessmentFrameworks(const Model::ListAssessmentFrameworksRequest& request) const;
 
         /**
-         * <p> Returns a list of the frameworks available in the AWS Audit Manager
+         * <p> Returns a list of the frameworks that are available in the Audit Manager
          * framework library. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentFrameworks">AWS
          * API Reference</a></p>
@@ -1262,7 +1472,7 @@ namespace Model
         virtual Model::ListAssessmentFrameworksOutcomeCallable ListAssessmentFrameworksCallable(const Model::ListAssessmentFrameworksRequest& request) const;
 
         /**
-         * <p> Returns a list of the frameworks available in the AWS Audit Manager
+         * <p> Returns a list of the frameworks that are available in the Audit Manager
          * framework library. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentFrameworks">AWS
          * API Reference</a></p>
@@ -1272,7 +1482,7 @@ namespace Model
         virtual void ListAssessmentFrameworksAsync(const Model::ListAssessmentFrameworksRequest& request, const ListAssessmentFrameworksResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of assessment reports created in AWS Audit Manager.
+         * <p> Returns a list of assessment reports created in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentReports">AWS
          * API Reference</a></p>
@@ -1280,7 +1490,7 @@ namespace Model
         virtual Model::ListAssessmentReportsOutcome ListAssessmentReports(const Model::ListAssessmentReportsRequest& request) const;
 
         /**
-         * <p> Returns a list of assessment reports created in AWS Audit Manager.
+         * <p> Returns a list of assessment reports created in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentReports">AWS
          * API Reference</a></p>
@@ -1290,7 +1500,7 @@ namespace Model
         virtual Model::ListAssessmentReportsOutcomeCallable ListAssessmentReportsCallable(const Model::ListAssessmentReportsRequest& request) const;
 
         /**
-         * <p> Returns a list of assessment reports created in AWS Audit Manager.
+         * <p> Returns a list of assessment reports created in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentReports">AWS
          * API Reference</a></p>
@@ -1300,7 +1510,7 @@ namespace Model
         virtual void ListAssessmentReportsAsync(const Model::ListAssessmentReportsRequest& request, const ListAssessmentReportsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of current and past assessments from AWS Audit Manager.
+         * <p> Returns a list of current and past assessments from Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessments">AWS
          * API Reference</a></p>
@@ -1308,7 +1518,7 @@ namespace Model
         virtual Model::ListAssessmentsOutcome ListAssessments(const Model::ListAssessmentsRequest& request) const;
 
         /**
-         * <p> Returns a list of current and past assessments from AWS Audit Manager.
+         * <p> Returns a list of current and past assessments from Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessments">AWS
          * API Reference</a></p>
@@ -1318,7 +1528,7 @@ namespace Model
         virtual Model::ListAssessmentsOutcomeCallable ListAssessmentsCallable(const Model::ListAssessmentsRequest& request) const;
 
         /**
-         * <p> Returns a list of current and past assessments from AWS Audit Manager.
+         * <p> Returns a list of current and past assessments from Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessments">AWS
          * API Reference</a></p>
@@ -1328,7 +1538,124 @@ namespace Model
         virtual void ListAssessmentsAsync(const Model::ListAssessmentsRequest& request, const ListAssessmentsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of controls from AWS Audit Manager. </p><p><h3>See Also:</h3>
+         * <p>Lists the latest analytics data for control domains across all of your active
+         * assessments. </p>  <p>A control domain is listed only if at least one of
+         * the controls within that domain collected evidence on the
+         * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this
+         * condition isn’t met, no data is listed for that control domain.</p>
+         * <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsights">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListControlDomainInsightsOutcome ListControlDomainInsights(const Model::ListControlDomainInsightsRequest& request) const;
+
+        /**
+         * <p>Lists the latest analytics data for control domains across all of your active
+         * assessments. </p>  <p>A control domain is listed only if at least one of
+         * the controls within that domain collected evidence on the
+         * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this
+         * condition isn’t met, no data is listed for that control domain.</p>
+         * <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsights">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListControlDomainInsightsOutcomeCallable ListControlDomainInsightsCallable(const Model::ListControlDomainInsightsRequest& request) const;
+
+        /**
+         * <p>Lists the latest analytics data for control domains across all of your active
+         * assessments. </p>  <p>A control domain is listed only if at least one of
+         * the controls within that domain collected evidence on the
+         * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this
+         * condition isn’t met, no data is listed for that control domain.</p>
+         * <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsights">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListControlDomainInsightsAsync(const Model::ListControlDomainInsightsRequest& request, const ListControlDomainInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Lists analytics data for control domains within a specified active
+         * assessment.</p>  <p>A control domain is listed only if at least one of the
+         * controls within that domain collected evidence on the <code>lastUpdated</code>
+         * date of <code>controlDomainInsights</code>. If this condition isn’t met, no data
+         * is listed for that domain.</p> <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsightsByAssessment">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListControlDomainInsightsByAssessmentOutcome ListControlDomainInsightsByAssessment(const Model::ListControlDomainInsightsByAssessmentRequest& request) const;
+
+        /**
+         * <p>Lists analytics data for control domains within a specified active
+         * assessment.</p>  <p>A control domain is listed only if at least one of the
+         * controls within that domain collected evidence on the <code>lastUpdated</code>
+         * date of <code>controlDomainInsights</code>. If this condition isn’t met, no data
+         * is listed for that domain.</p> <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsightsByAssessment">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListControlDomainInsightsByAssessmentOutcomeCallable ListControlDomainInsightsByAssessmentCallable(const Model::ListControlDomainInsightsByAssessmentRequest& request) const;
+
+        /**
+         * <p>Lists analytics data for control domains within a specified active
+         * assessment.</p>  <p>A control domain is listed only if at least one of the
+         * controls within that domain collected evidence on the <code>lastUpdated</code>
+         * date of <code>controlDomainInsights</code>. If this condition isn’t met, no data
+         * is listed for that domain.</p> <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsightsByAssessment">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListControlDomainInsightsByAssessmentAsync(const Model::ListControlDomainInsightsByAssessmentRequest& request, const ListControlDomainInsightsByAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p>Lists the latest analytics data for controls within a specific control domain
+         * across all active assessments.</p>  <p>Control insights are listed only if
+         * the control belongs to the control domain that was specified and the control
+         * collected evidence on the <code>lastUpdated</code> date of
+         * <code>controlInsightsMetadata</code>. If neither of these conditions are met, no
+         * data is listed for that control. </p> <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlInsightsByControlDomain">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::ListControlInsightsByControlDomainOutcome ListControlInsightsByControlDomain(const Model::ListControlInsightsByControlDomainRequest& request) const;
+
+        /**
+         * <p>Lists the latest analytics data for controls within a specific control domain
+         * across all active assessments.</p>  <p>Control insights are listed only if
+         * the control belongs to the control domain that was specified and the control
+         * collected evidence on the <code>lastUpdated</code> date of
+         * <code>controlInsightsMetadata</code>. If neither of these conditions are met, no
+         * data is listed for that control. </p> <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlInsightsByControlDomain">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::ListControlInsightsByControlDomainOutcomeCallable ListControlInsightsByControlDomainCallable(const Model::ListControlInsightsByControlDomainRequest& request) const;
+
+        /**
+         * <p>Lists the latest analytics data for controls within a specific control domain
+         * across all active assessments.</p>  <p>Control insights are listed only if
+         * the control belongs to the control domain that was specified and the control
+         * collected evidence on the <code>lastUpdated</code> date of
+         * <code>controlInsightsMetadata</code>. If neither of these conditions are met, no
+         * data is listed for that control. </p> <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlInsightsByControlDomain">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void ListControlInsightsByControlDomainAsync(const Model::ListControlInsightsByControlDomainRequest& request, const ListControlInsightsByControlDomainResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p> Returns a list of controls from Audit Manager. </p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControls">AWS
          * API Reference</a></p>
@@ -1336,7 +1663,7 @@ namespace Model
         virtual Model::ListControlsOutcome ListControls(const Model::ListControlsRequest& request) const;
 
         /**
-         * <p> Returns a list of controls from AWS Audit Manager. </p><p><h3>See Also:</h3>
+         * <p> Returns a list of controls from Audit Manager. </p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControls">AWS
          * API Reference</a></p>
@@ -1346,7 +1673,7 @@ namespace Model
         virtual Model::ListControlsOutcomeCallable ListControlsCallable(const Model::ListControlsRequest& request) const;
 
         /**
-         * <p> Returns a list of controls from AWS Audit Manager. </p><p><h3>See Also:</h3>
+         * <p> Returns a list of controls from Audit Manager. </p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControls">AWS
          * API Reference</a></p>
@@ -1356,7 +1683,7 @@ namespace Model
         virtual void ListControlsAsync(const Model::ListControlsRequest& request, const ListControlsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of keywords that pre-mapped to the specified control data
+         * <p> Returns a list of keywords that are pre-mapped to the specified control data
          * source. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListKeywordsForDataSource">AWS
          * API Reference</a></p>
@@ -1364,7 +1691,7 @@ namespace Model
         virtual Model::ListKeywordsForDataSourceOutcome ListKeywordsForDataSource(const Model::ListKeywordsForDataSourceRequest& request) const;
 
         /**
-         * <p> Returns a list of keywords that pre-mapped to the specified control data
+         * <p> Returns a list of keywords that are pre-mapped to the specified control data
          * source. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListKeywordsForDataSource">AWS
          * API Reference</a></p>
@@ -1374,7 +1701,7 @@ namespace Model
         virtual Model::ListKeywordsForDataSourceOutcomeCallable ListKeywordsForDataSourceCallable(const Model::ListKeywordsForDataSourceRequest& request) const;
 
         /**
-         * <p> Returns a list of keywords that pre-mapped to the specified control data
+         * <p> Returns a list of keywords that are pre-mapped to the specified control data
          * source. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListKeywordsForDataSource">AWS
          * API Reference</a></p>
@@ -1384,16 +1711,16 @@ namespace Model
         virtual void ListKeywordsForDataSourceAsync(const Model::ListKeywordsForDataSourceRequest& request, const ListKeywordsForDataSourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of all AWS Audit Manager notifications. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Returns a list of all Audit Manager notifications. </p><p><h3>See Also:</h3>
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListNotifications">AWS
          * API Reference</a></p>
          */
         virtual Model::ListNotificationsOutcome ListNotifications(const Model::ListNotificationsRequest& request) const;
 
         /**
-         * <p> Returns a list of all AWS Audit Manager notifications. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Returns a list of all Audit Manager notifications. </p><p><h3>See Also:</h3>
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListNotifications">AWS
          * API Reference</a></p>
          *
@@ -1402,8 +1729,8 @@ namespace Model
         virtual Model::ListNotificationsOutcomeCallable ListNotificationsCallable(const Model::ListNotificationsRequest& request) const;
 
         /**
-         * <p> Returns a list of all AWS Audit Manager notifications. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Returns a list of all Audit Manager notifications. </p><p><h3>See Also:</h3>
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListNotifications">AWS
          * API Reference</a></p>
          *
@@ -1412,7 +1739,7 @@ namespace Model
         virtual void ListNotificationsAsync(const Model::ListNotificationsRequest& request, const ListNotificationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Returns a list of tags for the specified resource in AWS Audit Manager.
+         * <p> Returns a list of tags for the specified resource in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListTagsForResource">AWS
          * API Reference</a></p>
@@ -1420,7 +1747,7 @@ namespace Model
         virtual Model::ListTagsForResourceOutcome ListTagsForResource(const Model::ListTagsForResourceRequest& request) const;
 
         /**
-         * <p> Returns a list of tags for the specified resource in AWS Audit Manager.
+         * <p> Returns a list of tags for the specified resource in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListTagsForResource">AWS
          * API Reference</a></p>
@@ -1430,7 +1757,7 @@ namespace Model
         virtual Model::ListTagsForResourceOutcomeCallable ListTagsForResourceCallable(const Model::ListTagsForResourceRequest& request) const;
 
         /**
-         * <p> Returns a list of tags for the specified resource in AWS Audit Manager.
+         * <p> Returns a list of tags for the specified resource in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListTagsForResource">AWS
          * API Reference</a></p>
@@ -1440,16 +1767,16 @@ namespace Model
         virtual void ListTagsForResourceAsync(const Model::ListTagsForResourceRequest& request, const ListTagsForResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Enables AWS Audit Manager for the specified AWS account. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Enables Audit Manager for the specified Amazon Web Services account.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterAccount">AWS
          * API Reference</a></p>
          */
         virtual Model::RegisterAccountOutcome RegisterAccount(const Model::RegisterAccountRequest& request) const;
 
         /**
-         * <p> Enables AWS Audit Manager for the specified AWS account. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Enables Audit Manager for the specified Amazon Web Services account.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterAccount">AWS
          * API Reference</a></p>
          *
@@ -1458,8 +1785,8 @@ namespace Model
         virtual Model::RegisterAccountOutcomeCallable RegisterAccountCallable(const Model::RegisterAccountRequest& request) const;
 
         /**
-         * <p> Enables AWS Audit Manager for the specified AWS account. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Enables Audit Manager for the specified Amazon Web Services account.
+         * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterAccount">AWS
          * API Reference</a></p>
          *
@@ -1468,16 +1795,16 @@ namespace Model
         virtual void RegisterAccountAsync(const Model::RegisterAccountRequest& request, const RegisterAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Enables an AWS account within the organization as the delegated
-         * administrator for AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Enables an Amazon Web Services account within the organization as the
+         * delegated administrator for Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterOrganizationAdminAccount">AWS
          * API Reference</a></p>
          */
         virtual Model::RegisterOrganizationAdminAccountOutcome RegisterOrganizationAdminAccount(const Model::RegisterOrganizationAdminAccountRequest& request) const;
 
         /**
-         * <p> Enables an AWS account within the organization as the delegated
-         * administrator for AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Enables an Amazon Web Services account within the organization as the
+         * delegated administrator for Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterOrganizationAdminAccount">AWS
          * API Reference</a></p>
          *
@@ -1486,8 +1813,8 @@ namespace Model
         virtual Model::RegisterOrganizationAdminAccountOutcomeCallable RegisterOrganizationAdminAccountCallable(const Model::RegisterOrganizationAdminAccountRequest& request) const;
 
         /**
-         * <p> Enables an AWS account within the organization as the delegated
-         * administrator for AWS Audit Manager. </p><p><h3>See Also:</h3>   <a
+         * <p> Enables an Amazon Web Services account within the organization as the
+         * delegated administrator for Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterOrganizationAdminAccount">AWS
          * API Reference</a></p>
          *
@@ -1496,16 +1823,78 @@ namespace Model
         virtual void RegisterOrganizationAdminAccountAsync(const Model::RegisterOrganizationAdminAccountRequest& request, const RegisterOrganizationAdminAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Tags the specified resource in AWS Audit Manager. </p><p><h3>See Also:</h3> 
-         * <a
+         * <p> Creates a share request for a custom framework in Audit Manager. </p> <p>The
+         * share request specifies a recipient and notifies them that a custom framework is
+         * available. Recipients have 120 days to accept or decline the request. If no
+         * action is taken, the share request expires.</p>  <p>When you invoke
+         * the <code>StartAssessmentFrameworkShare</code> API, you are about to share a
+         * custom framework with another Amazon Web Services account. You may not share a
+         * custom framework that is derived from a standard framework if the standard
+         * framework is designated as not eligible for sharing by Amazon Web Services,
+         * unless you have obtained permission to do so from the owner of the standard
+         * framework. To learn more about which standard frameworks are eligible for
+         * sharing, see <a
+         * href="https://docs.aws.amazon.com/audit-manager/latest/userguide/share-custom-framework-concepts-and-terminology.html#eligibility">Framework
+         * sharing eligibility</a> in the <i>Audit Manager User Guide</i>.</p>
+         * <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/StartAssessmentFrameworkShare">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::StartAssessmentFrameworkShareOutcome StartAssessmentFrameworkShare(const Model::StartAssessmentFrameworkShareRequest& request) const;
+
+        /**
+         * <p> Creates a share request for a custom framework in Audit Manager. </p> <p>The
+         * share request specifies a recipient and notifies them that a custom framework is
+         * available. Recipients have 120 days to accept or decline the request. If no
+         * action is taken, the share request expires.</p>  <p>When you invoke
+         * the <code>StartAssessmentFrameworkShare</code> API, you are about to share a
+         * custom framework with another Amazon Web Services account. You may not share a
+         * custom framework that is derived from a standard framework if the standard
+         * framework is designated as not eligible for sharing by Amazon Web Services,
+         * unless you have obtained permission to do so from the owner of the standard
+         * framework. To learn more about which standard frameworks are eligible for
+         * sharing, see <a
+         * href="https://docs.aws.amazon.com/audit-manager/latest/userguide/share-custom-framework-concepts-and-terminology.html#eligibility">Framework
+         * sharing eligibility</a> in the <i>Audit Manager User Guide</i>.</p>
+         * <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/StartAssessmentFrameworkShare">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::StartAssessmentFrameworkShareOutcomeCallable StartAssessmentFrameworkShareCallable(const Model::StartAssessmentFrameworkShareRequest& request) const;
+
+        /**
+         * <p> Creates a share request for a custom framework in Audit Manager. </p> <p>The
+         * share request specifies a recipient and notifies them that a custom framework is
+         * available. Recipients have 120 days to accept or decline the request. If no
+         * action is taken, the share request expires.</p>  <p>When you invoke
+         * the <code>StartAssessmentFrameworkShare</code> API, you are about to share a
+         * custom framework with another Amazon Web Services account. You may not share a
+         * custom framework that is derived from a standard framework if the standard
+         * framework is designated as not eligible for sharing by Amazon Web Services,
+         * unless you have obtained permission to do so from the owner of the standard
+         * framework. To learn more about which standard frameworks are eligible for
+         * sharing, see <a
+         * href="https://docs.aws.amazon.com/audit-manager/latest/userguide/share-custom-framework-concepts-and-terminology.html#eligibility">Framework
+         * sharing eligibility</a> in the <i>Audit Manager User Guide</i>.</p>
+         * <p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/StartAssessmentFrameworkShare">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void StartAssessmentFrameworkShareAsync(const Model::StartAssessmentFrameworkShareRequest& request, const StartAssessmentFrameworkShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p> Tags the specified resource in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/TagResource">AWS
          * API Reference</a></p>
          */
         virtual Model::TagResourceOutcome TagResource(const Model::TagResourceRequest& request) const;
 
         /**
-         * <p> Tags the specified resource in AWS Audit Manager. </p><p><h3>See Also:</h3> 
-         * <a
+         * <p> Tags the specified resource in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/TagResource">AWS
          * API Reference</a></p>
          *
@@ -1514,8 +1903,7 @@ namespace Model
         virtual Model::TagResourceOutcomeCallable TagResourceCallable(const Model::TagResourceRequest& request) const;
 
         /**
-         * <p> Tags the specified resource in AWS Audit Manager. </p><p><h3>See Also:</h3> 
-         * <a
+         * <p> Tags the specified resource in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/TagResource">AWS
          * API Reference</a></p>
          *
@@ -1524,16 +1912,16 @@ namespace Model
         virtual void TagResourceAsync(const Model::TagResourceRequest& request, const TagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Removes a tag from a resource in AWS Audit Manager. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Removes a tag from a resource in Audit Manager. </p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UntagResource">AWS
          * API Reference</a></p>
          */
         virtual Model::UntagResourceOutcome UntagResource(const Model::UntagResourceRequest& request) const;
 
         /**
-         * <p> Removes a tag from a resource in AWS Audit Manager. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Removes a tag from a resource in Audit Manager. </p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UntagResource">AWS
          * API Reference</a></p>
          *
@@ -1542,8 +1930,8 @@ namespace Model
         virtual Model::UntagResourceOutcomeCallable UntagResourceCallable(const Model::UntagResourceRequest& request) const;
 
         /**
-         * <p> Removes a tag from a resource in AWS Audit Manager. </p><p><h3>See
-         * Also:</h3>   <a
+         * <p> Removes a tag from a resource in Audit Manager. </p><p><h3>See Also:</h3>  
+         * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UntagResource">AWS
          * API Reference</a></p>
          *
@@ -1552,14 +1940,14 @@ namespace Model
         virtual void UntagResourceAsync(const Model::UntagResourceRequest& request, const UntagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Edits an AWS Audit Manager assessment. </p><p><h3>See Also:</h3>   <a
+         * <p> Edits an Audit Manager assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessment">AWS
          * API Reference</a></p>
          */
         virtual Model::UpdateAssessmentOutcome UpdateAssessment(const Model::UpdateAssessmentRequest& request) const;
 
         /**
-         * <p> Edits an AWS Audit Manager assessment. </p><p><h3>See Also:</h3>   <a
+         * <p> Edits an Audit Manager assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessment">AWS
          * API Reference</a></p>
          *
@@ -1568,7 +1956,7 @@ namespace Model
         virtual Model::UpdateAssessmentOutcomeCallable UpdateAssessmentCallable(const Model::UpdateAssessmentRequest& request) const;
 
         /**
-         * <p> Edits an AWS Audit Manager assessment. </p><p><h3>See Also:</h3>   <a
+         * <p> Edits an Audit Manager assessment. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessment">AWS
          * API Reference</a></p>
          *
@@ -1577,7 +1965,7 @@ namespace Model
         virtual void UpdateAssessmentAsync(const Model::UpdateAssessmentRequest& request, const UpdateAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Updates a control within an assessment in AWS Audit Manager. </p><p><h3>See
+         * <p> Updates a control within an assessment in Audit Manager. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentControl">AWS
          * API Reference</a></p>
@@ -1585,7 +1973,7 @@ namespace Model
         virtual Model::UpdateAssessmentControlOutcome UpdateAssessmentControl(const Model::UpdateAssessmentControlRequest& request) const;
 
         /**
-         * <p> Updates a control within an assessment in AWS Audit Manager. </p><p><h3>See
+         * <p> Updates a control within an assessment in Audit Manager. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentControl">AWS
          * API Reference</a></p>
@@ -1595,7 +1983,7 @@ namespace Model
         virtual Model::UpdateAssessmentControlOutcomeCallable UpdateAssessmentControlCallable(const Model::UpdateAssessmentControlRequest& request) const;
 
         /**
-         * <p> Updates a control within an assessment in AWS Audit Manager. </p><p><h3>See
+         * <p> Updates a control within an assessment in Audit Manager. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentControl">AWS
          * API Reference</a></p>
@@ -1605,7 +1993,7 @@ namespace Model
         virtual void UpdateAssessmentControlAsync(const Model::UpdateAssessmentControlRequest& request, const UpdateAssessmentControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Updates the status of a control set in an AWS Audit Manager assessment.
+         * <p> Updates the status of a control set in an Audit Manager assessment.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentControlSetStatus">AWS
          * API Reference</a></p>
@@ -1613,7 +2001,7 @@ namespace Model
         virtual Model::UpdateAssessmentControlSetStatusOutcome UpdateAssessmentControlSetStatus(const Model::UpdateAssessmentControlSetStatusRequest& request) const;
 
         /**
-         * <p> Updates the status of a control set in an AWS Audit Manager assessment.
+         * <p> Updates the status of a control set in an Audit Manager assessment.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentControlSetStatus">AWS
          * API Reference</a></p>
@@ -1623,7 +2011,7 @@ namespace Model
         virtual Model::UpdateAssessmentControlSetStatusOutcomeCallable UpdateAssessmentControlSetStatusCallable(const Model::UpdateAssessmentControlSetStatusRequest& request) const;
 
         /**
-         * <p> Updates the status of a control set in an AWS Audit Manager assessment.
+         * <p> Updates the status of a control set in an Audit Manager assessment.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentControlSetStatus">AWS
          * API Reference</a></p>
@@ -1633,16 +2021,14 @@ namespace Model
         virtual void UpdateAssessmentControlSetStatusAsync(const Model::UpdateAssessmentControlSetStatusRequest& request, const UpdateAssessmentControlSetStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Updates a custom framework in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Updates a custom framework in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFramework">AWS
          * API Reference</a></p>
          */
         virtual Model::UpdateAssessmentFrameworkOutcome UpdateAssessmentFramework(const Model::UpdateAssessmentFrameworkRequest& request) const;
 
         /**
-         * <p> Updates a custom framework in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Updates a custom framework in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFramework">AWS
          * API Reference</a></p>
          *
@@ -1651,8 +2037,7 @@ namespace Model
         virtual Model::UpdateAssessmentFrameworkOutcomeCallable UpdateAssessmentFrameworkCallable(const Model::UpdateAssessmentFrameworkRequest& request) const;
 
         /**
-         * <p> Updates a custom framework in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Updates a custom framework in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFramework">AWS
          * API Reference</a></p>
          *
@@ -1661,7 +2046,35 @@ namespace Model
         virtual void UpdateAssessmentFrameworkAsync(const Model::UpdateAssessmentFrameworkRequest& request, const UpdateAssessmentFrameworkResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Updates the status of an assessment in AWS Audit Manager. </p><p><h3>See
+         * <p> Updates a share request for a custom framework in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFrameworkShare">AWS
+         * API Reference</a></p>
+         */
+        virtual Model::UpdateAssessmentFrameworkShareOutcome UpdateAssessmentFrameworkShare(const Model::UpdateAssessmentFrameworkShareRequest& request) const;
+
+        /**
+         * <p> Updates a share request for a custom framework in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFrameworkShare">AWS
+         * API Reference</a></p>
+         *
+         * returns a future to the operation so that it can be executed in parallel to other requests.
+         */
+        virtual Model::UpdateAssessmentFrameworkShareOutcomeCallable UpdateAssessmentFrameworkShareCallable(const Model::UpdateAssessmentFrameworkShareRequest& request) const;
+
+        /**
+         * <p> Updates a share request for a custom framework in Audit Manager.
+         * </p><p><h3>See Also:</h3>   <a
+         * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFrameworkShare">AWS
+         * API Reference</a></p>
+         *
+         * Queues the request into a thread executor and triggers associated callback when operation has finished.
+         */
+        virtual void UpdateAssessmentFrameworkShareAsync(const Model::UpdateAssessmentFrameworkShareRequest& request, const UpdateAssessmentFrameworkShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
+
+        /**
+         * <p> Updates the status of an assessment in Audit Manager. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentStatus">AWS
          * API Reference</a></p>
@@ -1669,7 +2082,7 @@ namespace Model
         virtual Model::UpdateAssessmentStatusOutcome UpdateAssessmentStatus(const Model::UpdateAssessmentStatusRequest& request) const;
 
         /**
-         * <p> Updates the status of an assessment in AWS Audit Manager. </p><p><h3>See
+         * <p> Updates the status of an assessment in Audit Manager. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentStatus">AWS
          * API Reference</a></p>
@@ -1679,7 +2092,7 @@ namespace Model
         virtual Model::UpdateAssessmentStatusOutcomeCallable UpdateAssessmentStatusCallable(const Model::UpdateAssessmentStatusRequest& request) const;
 
         /**
-         * <p> Updates the status of an assessment in AWS Audit Manager. </p><p><h3>See
+         * <p> Updates the status of an assessment in Audit Manager. </p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentStatus">AWS
          * API Reference</a></p>
@@ -1689,16 +2102,14 @@ namespace Model
         virtual void UpdateAssessmentStatusAsync(const Model::UpdateAssessmentStatusRequest& request, const UpdateAssessmentStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Updates a custom control in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Updates a custom control in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateControl">AWS
          * API Reference</a></p>
          */
         virtual Model::UpdateControlOutcome UpdateControl(const Model::UpdateControlRequest& request) const;
 
         /**
-         * <p> Updates a custom control in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Updates a custom control in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateControl">AWS
          * API Reference</a></p>
          *
@@ -1707,8 +2118,7 @@ namespace Model
         virtual Model::UpdateControlOutcomeCallable UpdateControlCallable(const Model::UpdateControlRequest& request) const;
 
         /**
-         * <p> Updates a custom control in AWS Audit Manager. </p><p><h3>See Also:</h3>  
-         * <a
+         * <p> Updates a custom control in Audit Manager. </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateControl">AWS
          * API Reference</a></p>
          *
@@ -1717,16 +2127,16 @@ namespace Model
         virtual void UpdateControlAsync(const Model::UpdateControlRequest& request, const UpdateControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Updates AWS Audit Manager settings for the current user account.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Updates Audit Manager settings for the current user account. </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateSettings">AWS
          * API Reference</a></p>
          */
         virtual Model::UpdateSettingsOutcome UpdateSettings(const Model::UpdateSettingsRequest& request) const;
 
         /**
-         * <p> Updates AWS Audit Manager settings for the current user account.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Updates Audit Manager settings for the current user account. </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateSettings">AWS
          * API Reference</a></p>
          *
@@ -1735,8 +2145,8 @@ namespace Model
         virtual Model::UpdateSettingsOutcomeCallable UpdateSettingsCallable(const Model::UpdateSettingsRequest& request) const;
 
         /**
-         * <p> Updates AWS Audit Manager settings for the current user account.
-         * </p><p><h3>See Also:</h3>   <a
+         * <p> Updates Audit Manager settings for the current user account. </p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateSettings">AWS
          * API Reference</a></p>
          *
@@ -1745,7 +2155,7 @@ namespace Model
         virtual void UpdateSettingsAsync(const Model::UpdateSettingsRequest& request, const UpdateSettingsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p> Validates the integrity of an assessment report in AWS Audit Manager.
+         * <p> Validates the integrity of an assessment report in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ValidateAssessmentReportIntegrity">AWS
          * API Reference</a></p>
@@ -1753,7 +2163,7 @@ namespace Model
         virtual Model::ValidateAssessmentReportIntegrityOutcome ValidateAssessmentReportIntegrity(const Model::ValidateAssessmentReportIntegrityRequest& request) const;
 
         /**
-         * <p> Validates the integrity of an assessment report in AWS Audit Manager.
+         * <p> Validates the integrity of an assessment report in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ValidateAssessmentReportIntegrity">AWS
          * API Reference</a></p>
@@ -1763,7 +2173,7 @@ namespace Model
         virtual Model::ValidateAssessmentReportIntegrityOutcomeCallable ValidateAssessmentReportIntegrityCallable(const Model::ValidateAssessmentReportIntegrityRequest& request) const;
 
         /**
-         * <p> Validates the integrity of an assessment report in AWS Audit Manager.
+         * <p> Validates the integrity of an assessment report in Audit Manager.
          * </p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ValidateAssessmentReportIntegrity">AWS
          * API Reference</a></p>
@@ -1788,6 +2198,7 @@ namespace Model
         void CreateControlAsyncHelper(const Model::CreateControlRequest& request, const CreateControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteAssessmentAsyncHelper(const Model::DeleteAssessmentRequest& request, const DeleteAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteAssessmentFrameworkAsyncHelper(const Model::DeleteAssessmentFrameworkRequest& request, const DeleteAssessmentFrameworkResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void DeleteAssessmentFrameworkShareAsyncHelper(const Model::DeleteAssessmentFrameworkShareRequest& request, const DeleteAssessmentFrameworkShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteAssessmentReportAsyncHelper(const Model::DeleteAssessmentReportRequest& request, const DeleteAssessmentReportResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeleteControlAsyncHelper(const Model::DeleteControlRequest& request, const DeleteControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void DeregisterAccountAsyncHelper(const Model::DeregisterAccountRequest& request, const DeregisterAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
@@ -1805,24 +2216,33 @@ namespace Model
         void GetEvidenceFolderAsyncHelper(const Model::GetEvidenceFolderRequest& request, const GetEvidenceFolderResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetEvidenceFoldersByAssessmentAsyncHelper(const Model::GetEvidenceFoldersByAssessmentRequest& request, const GetEvidenceFoldersByAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetEvidenceFoldersByAssessmentControlAsyncHelper(const Model::GetEvidenceFoldersByAssessmentControlRequest& request, const GetEvidenceFoldersByAssessmentControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetInsightsAsyncHelper(const Model::GetInsightsRequest& request, const GetInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void GetInsightsByAssessmentAsyncHelper(const Model::GetInsightsByAssessmentRequest& request, const GetInsightsByAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetOrganizationAdminAccountAsyncHelper(const Model::GetOrganizationAdminAccountRequest& request, const GetOrganizationAdminAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetServicesInScopeAsyncHelper(const Model::GetServicesInScopeRequest& request, const GetServicesInScopeResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void GetSettingsAsyncHelper(const Model::GetSettingsRequest& request, const GetSettingsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListAssessmentControlInsightsByControlDomainAsyncHelper(const Model::ListAssessmentControlInsightsByControlDomainRequest& request, const ListAssessmentControlInsightsByControlDomainResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListAssessmentFrameworkShareRequestsAsyncHelper(const Model::ListAssessmentFrameworkShareRequestsRequest& request, const ListAssessmentFrameworkShareRequestsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListAssessmentFrameworksAsyncHelper(const Model::ListAssessmentFrameworksRequest& request, const ListAssessmentFrameworksResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListAssessmentReportsAsyncHelper(const Model::ListAssessmentReportsRequest& request, const ListAssessmentReportsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListAssessmentsAsyncHelper(const Model::ListAssessmentsRequest& request, const ListAssessmentsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListControlDomainInsightsAsyncHelper(const Model::ListControlDomainInsightsRequest& request, const ListControlDomainInsightsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListControlDomainInsightsByAssessmentAsyncHelper(const Model::ListControlDomainInsightsByAssessmentRequest& request, const ListControlDomainInsightsByAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void ListControlInsightsByControlDomainAsyncHelper(const Model::ListControlInsightsByControlDomainRequest& request, const ListControlInsightsByControlDomainResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListControlsAsyncHelper(const Model::ListControlsRequest& request, const ListControlsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListKeywordsForDataSourceAsyncHelper(const Model::ListKeywordsForDataSourceRequest& request, const ListKeywordsForDataSourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListNotificationsAsyncHelper(const Model::ListNotificationsRequest& request, const ListNotificationsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void ListTagsForResourceAsyncHelper(const Model::ListTagsForResourceRequest& request, const ListTagsForResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RegisterAccountAsyncHelper(const Model::RegisterAccountRequest& request, const RegisterAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void RegisterOrganizationAdminAccountAsyncHelper(const Model::RegisterOrganizationAdminAccountRequest& request, const RegisterOrganizationAdminAccountResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void StartAssessmentFrameworkShareAsyncHelper(const Model::StartAssessmentFrameworkShareRequest& request, const StartAssessmentFrameworkShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void TagResourceAsyncHelper(const Model::TagResourceRequest& request, const TagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UntagResourceAsyncHelper(const Model::UntagResourceRequest& request, const UntagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateAssessmentAsyncHelper(const Model::UpdateAssessmentRequest& request, const UpdateAssessmentResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateAssessmentControlAsyncHelper(const Model::UpdateAssessmentControlRequest& request, const UpdateAssessmentControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateAssessmentControlSetStatusAsyncHelper(const Model::UpdateAssessmentControlSetStatusRequest& request, const UpdateAssessmentControlSetStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateAssessmentFrameworkAsyncHelper(const Model::UpdateAssessmentFrameworkRequest& request, const UpdateAssessmentFrameworkResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
+        void UpdateAssessmentFrameworkShareAsyncHelper(const Model::UpdateAssessmentFrameworkShareRequest& request, const UpdateAssessmentFrameworkShareResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateAssessmentStatusAsyncHelper(const Model::UpdateAssessmentStatusRequest& request, const UpdateAssessmentStatusResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateControlAsyncHelper(const Model::UpdateControlRequest& request, const UpdateControlResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void UpdateSettingsAsyncHelper(const Model::UpdateSettingsRequest& request, const UpdateSettingsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
